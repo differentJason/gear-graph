@@ -33,6 +33,11 @@ items:
   - {id: roland-mc-303, name: Roland MC-303, manufacturer: Roland, model: MC-303, category: groovebox, status: owned}
   - {id: akai-timbre-wolf, name: Akai Timbre Wolf, manufacturer: Akai Professional, model: Timbre Wolf, category: synth, status: owned}
   - {id: sonicware-liven-texture-lab, name: Sonicware Liven Texture Lab, manufacturer: Sonicware, model: Liven Texture Lab, category: synth, status: owned}
+  # added 2026-09-20 while recording routing (mentioned by the owner, absent from Equipment List.md). Names as the owner gave them; not verified.
+  - {id: dreadbox-typhon, name: Dreadbox Typhon, manufacturer: Dreadbox, model: Typhon, category: synth, status: owned, note: "Added 2026-09-20 from the owner's routing answers; name as given, not verified."}
+  - {id: behringer-k2, name: Behringer K2, manufacturer: Behringer, model: K2, category: synth, status: owned, note: "Added 2026-09-20 from the owner's routing answers; name as given, not verified. Swaps with the Donner B1 in the MIDI chain."}
+  - {id: korg-sq-64, name: Korg SQ-64, manufacturer: Korg, model: SQ-64, category: sequencer, status: owned, note: "Added 2026-09-20 from the owner's routing answers; name as given, not verified. Sends CV/gate/trig to the Eurorack."}
+  - {id: arturia-keystep, name: Arturia KeyStep, manufacturer: Arturia, model: KeyStep, category: controller, status: owned, note: "Added 2026-09-20 from the owner's routing answers. The original KeyStep (not Pro/32/37); first entered as 'Beatstep' by mistake and corrected by the owner the same day. Sends CV/gate/trig to the Eurorack."}
 
   # --- drum machines ---
   - {id: behringer-rd-9, name: Behringer RD-9 Rhythm Designer, manufacturer: Behringer, model: RD-9, category: drum-machine, status: owned, slice: true,
@@ -89,7 +94,7 @@ items:
   - {id: erica-pico-mod, name: "Erica Pico Mod", category: eurorack-module, status: owned, note: "Name/maker as written in Equipment List.md; not verified."}
   - {id: tiptop-audio-forbidden-planet-filter, name: "Tiptop Audio Forbidden Planet filter", manufacturer: "Tiptop Audio", category: eurorack-module, status: owned, note: "Name/maker as written in Equipment List.md; not verified."}
   - {id: behringer-1003-dual-envelope-generator, name: "Behringer 1003 Dual Envelope Generator", manufacturer: "Behringer", category: eurorack-module, status: owned, note: "Name/maker as written in Equipment List.md; not verified."}
-  - {id: behringer-space-fx, name: "Behringer Space FX", manufacturer: "Behringer", category: eurorack-module, status: owned, note: "Name/maker as written in Equipment List.md; not verified."}
+  - {id: behringer-space-fx, name: "Behringer Space FX", manufacturer: "Behringer", category: eurorack-module, status: owned, in_use: false, note: "Name/maker as written in Equipment List.md; not verified. Marked unused by the owner 2026-09-20 (it was in use before)."}
   - {id: behringer-four-play-vca, name: "Behringer Four Play VCA", manufacturer: "Behringer", category: eurorack-module, status: owned, note: "Name/maker as written in Equipment List.md; not verified."}
   - {id: after-later-audio-pixie, name: After Later Audio Pixie, manufacturer: After Later Audio, category: eurorack-module, status: owned, note: "One module. Equipment List.md listed it twice by mistake (confirmed by the owner 2026-09-20)."}
   - {id: erica-synths-black-dual-vcf, name: Erica Synths Black Dual VCF, manufacturer: Erica Synths, category: eurorack-module, status: owned, note: "Written 'Erica Fual Black VCF' in Equipment List.md; the owner confirmed the actual name 2026-09-20."}
@@ -101,6 +106,7 @@ items:
   - {id: behringer-cm1a-midi-to-cv, name: "Behringer CM1A MIDI to CV", manufacturer: "Behringer", category: eurorack-module, status: owned, in_use: false, note: "Name/maker as written in Equipment List.md; not verified."}
 
   - {id: cre8audio-niftycase, name: "Cre8audio NiftyCASE", manufacturer: Cre8audio, category: eurorack-case, status: owned, note: "Powered 84 HP Eurorack case with built-in supply and MIDI-to-CV. Added 2026-09-20."}
+  - {id: custom-reel-case, name: "Custom Eurorack case (gutted Sony reel-to-reel)", category: eurorack-case, status: owned, no_spec_page: true, note: "Built by the owner from a gutted Sony reel-to-reel tape deck that no longer worked. Three rows of 84 HP each: one 1U row on top and two 3U rows below. The Behringer CP1A is mounted in it and powers its modules. Recorded 2026-09-20."}
 
 # Explicit removals from the Feb 2025 list (kept so the history is not lost).
 removed:

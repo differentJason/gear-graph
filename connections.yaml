@@ -1,0 +1,119 @@
+# Source of truth for how the gear is WIRED. The graph's connection edges are derived from this file; edit here.
+# Same discipline as inventory.yaml: nothing is recorded that the owner has not stated, and unknown stays unknown.
+#
+# The earlier (Feb 2025) routing notes predate the current setup and were not carried over. This file is filled in by
+# asking the owner about one device at a time, so each entry has a status and a date.
+#
+# ids refer to `id:` values in inventory.yaml. Ports are free text copied from the device's panel (they are checked against
+# the manuals later, see graph/README.md). A port the owner has not named is left out, never guessed.
+#
+# setup:     which physical arrangement a link belongs to (see `setups`). The same device can be wired differently per setup.
+# medium:    audio | midi | usb | clock | cv | gate | power
+# status:    confirmed   = the owner stated it
+#            unconfirmed = proposed, waiting for an answer (never used in conclusions)
+# swappable: true = the owner can swap other gear into this connection; the recorded device is one possible occupant
+#
+# links:            # one entry per physical cable or bus, directional (from -> to). Bidirectional buses (USB) use one entry
+#                   # with `bidirectional: true`.
+#   - {setup: <id>, from: <item-id>, from_port: "<port>", to: <item-id>, to_port: "<port>", medium: audio,
+#      status: confirmed, confirmed: 2026-01-01, note: "optional"}
+#
+# cases:            # each Eurorack case: its rows (format + usable HP), the supply that feeds it, and anything mounted in it
+#   - {setup: <id>, id: <case-item-id>, rows: [{format: 3U, hp: 84}], supply: <supply-item-id>, mounted: [<item-id>]}
+# placements:       # where each Eurorack module physically sits and which supply feeds it. position = left to right (optional)
+#   - {setup: <id>, module: <item-id>, case: <case-item-id>, powered_by: <supply-item-id>, row: <format>, position: 1, status: confirmed}
+#                   # Only FIXED facts are recorded (case, supply, row). Patch cables between modules change every session and are not recorded.
+
+schema_version: 1
+updated: 2026-09-20
+
+setups:
+  - {id: main-studio, name: Main studio, interface: behringer-umc1820, status: confirmed, confirmed: 2026-09-20,
+     note: "Recorded first. The alternate jam-location setup (UMC404HD) is a later pass."}
+
+links:
+  # --- computer ---
+  - {setup: main-studio, from: behringer-umc1820, to: mac-mini-m4, medium: usb, bidirectional: true,
+     status: confirmed, confirmed: 2026-09-20, note: "Normally connected to the Mac Mini M4 (Logic Pro). Ports not named."}
+
+  # --- audio into the UMC1820: the owner's DEFAULT setup. Input 2 is open. Cables are TS or TRS as needed (owner). ---
+  - {setup: main-studio, from: behringer-rd-9, from_port: "MONO", to: behringer-umc1820, to_port: "Input 1", medium: audio,
+     status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, from: elektron-analog-four, from_port: "MAIN OUT L/R", to: behringer-umc1820, to_port: "Input 3/4", medium: audio,
+     status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, from: intellijel-audio-stereo-line-out-jacks-1u, from_port: "L/R (balanced TRS)", to: behringer-umc1820, to_port: "Input 5/6", medium: audio,
+     status: confirmed, confirmed: 2026-09-20, note: "The owner: all Eurorack signals end up in the Intellijel outs, which send L and R balanced TRS to the interface."}
+  - {setup: main-studio, from: elektron-digitakt-mk1, from_port: "main out (L/R)", to: behringer-umc1820, to_port: "Input 7/8", medium: audio,
+     status: confirmed, confirmed: 2026-09-20, note: "Port name is the owner's wording ('main out'); the Digitakt manual is not ingested to check it."}
+
+  # --- inside the Eurorack ---
+  - {setup: main-studio, from: intellijel-stereo-line-out-1u, to: intellijel-audio-stereo-line-out-jacks-1u, medium: audio,
+     status: unconfirmed, note: "Pairing comes from the makers' listings (the two are sold as a pair); the owner has not described the cable between them."}
+
+  # --- MIDI: RD-9 MIDI OUT -> MIDI Thru5 -> five outputs. Confirmed by the owner 2026-09-20 ("yes, exactly that"). Ports not named.
+  #     The owner can change out any of the five outputs, and the K2 and B1 share one slot. ---
+  - {setup: main-studio, from: behringer-rd-9, from_port: "MIDI OUT", to: midi-thru5, medium: midi,
+     status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, from: midi-thru5, to: elektron-analog-four, medium: midi, status: confirmed, confirmed: 2026-09-20, swappable: true}
+  - {setup: main-studio, from: midi-thru5, to: korg-m1, medium: midi, status: confirmed, confirmed: 2026-09-20, swappable: true}
+  - {setup: main-studio, from: midi-thru5, to: elektron-digitakt-mk1, medium: midi, status: confirmed, confirmed: 2026-09-20, swappable: true}
+  - {setup: main-studio, from: midi-thru5, to: dreadbox-typhon, medium: midi, status: confirmed, confirmed: 2026-09-20, swappable: true}
+  - {setup: main-studio, from: midi-thru5, to: behringer-k2, medium: midi, status: confirmed, confirmed: 2026-09-20, swappable: true,
+     note: "Shares the fifth output with the Donner B1: one or the other."}
+  - {setup: main-studio, from: midi-thru5, to: donner-b1, medium: midi, status: confirmed, confirmed: 2026-09-20, swappable: true,
+     note: "Shares the fifth output with the Behringer K2: one or the other."}
+
+  # --- clock: RD-9 SYNC OUT. The destination jacks are not named. The manual's wording for SYNC IN/OUT reads as swapped,
+  #     so the direction (RD-9 is the source) is the owner's statement, not the manual's. ---
+  - {setup: main-studio, from: behringer-rd-9, from_port: "SYNC OUT", to: korg-sq-64, medium: clock, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, from: behringer-rd-9, from_port: "SYNC OUT", to: arturia-keystep, medium: clock, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, from: behringer-rd-9, from_port: "SYNC OUT", to: jakes-clock-and-musical-divider, medium: clock, status: confirmed, confirmed: 2026-09-20,
+     note: "Its clock input; the module divides the clock for the rest of the rack. Jack not named."}
+
+# Statements by the owner that are not yet tied to a specific cable. Kept so they are not lost, and so nothing is inferred:
+# turning them into links needs both ends and the ports.
+open_statements:
+  - {setup: main-studio, confirmed: 2026-09-20, statement: "The RD-9 is the master clock."}
+  - {setup: main-studio, confirmed: 2026-09-20, statement: "Nothing sends MIDI back to the Mac."}
+  - {setup: main-studio, confirmed: 2026-09-20, statement: "Default UMC1820 inputs: 1 RD-9, 2 open, 3/4 Analog Four, 5/6 Eurorack, 7/8 Digitakt. Everything runs straight into the interface; main outs are used on everything, with TS or TRS cables as needed."}
+  - {setup: main-studio, confirmed: 2026-09-20, statement: "Gear not in that default list (for example the Korg M1, Dreadbox Typhon, Behringer K2, Donner B1) is swapped in and out as needed. Where its audio goes when in use is not yet stated."}
+  - {setup: main-studio, confirmed: 2026-09-20, statement: "The Analog Four's CV OUTPUTS A-D are sometimes used as CV tracks into the Eurorack. Which module inputs is not yet stated."}
+  - {setup: main-studio, confirmed: 2026-09-20, statement: "CV / gate / trig sources into the Eurorack: Analog Four MKII, Korg SQ-64, Arturia KeyStep (original), and the Behringer K2 (any of its outs). Each goes into 'various module inputs'; which module inputs is not yet stated."}
+
+cases:
+  - {setup: main-studio, id: cre8audio-niftycase, rows: [{format: 3U, hp: 84}], supply: cre8audio-niftycase, mounted: [],
+     note: "Built-in supply (owner: its modules run from it). 84 HP is the usable area per the maker; the row layout is not recorded."}
+  - {setup: main-studio, id: custom-reel-case, rows: [{format: 1U, hp: 84}, {format: 3U, hp: 84}, {format: 3U, hp: 84}], supply: behringer-cp1a, mounted: [behringer-cp1a],
+     note: "Owner-built from a gutted Sony reel-to-reel deck: a 1U row on top and two 3U rows below. The CP1A (4 HP) is mounted in it."}
+
+placements:
+  # --- NiftyCASE, left to right, as listed by the owner. Powered by its built-in supply. ---
+  - {setup: main-studio, module: ugrids, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 1, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: cre8audio-cellz, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 2, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: ddnipro-qtone, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 3, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: synthrotek-passive-mult, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 4, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: moth-hunter-mods-razcalito, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 5, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: cre8audio-captain-big-o, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 6, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: cre8audio-mr-philter, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 7, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: erica-pico-mod, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 8, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: behringer-961-interface, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 9, status: confirmed, confirmed: 2026-09-20}
+  # --- custom case: 'the rest' (owner). Powered by the CP1A. Which 3U row and position each sits in is not recorded. ---
+  - {setup: main-studio, module: intellijel-quadratt-1u, case: custom-reel-case, powered_by: behringer-cp1a, row: 1U, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: intellijel-stereo-mixer-1u, case: custom-reel-case, powered_by: behringer-cp1a, row: 1U, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: intellijel-stereo-line-out-1u, case: custom-reel-case, powered_by: behringer-cp1a, row: 1U, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: intellijel-audio-stereo-line-out-jacks-1u, case: custom-reel-case, powered_by: behringer-cp1a, row: 1U, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: jakes-clock-and-musical-divider, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: after-later-audio-dice, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: after-later-audio-resonate, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: zlob-fade-lfo, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: antumbra-atom, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: cosmotronic-delta-v, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: tiptop-audio-forbidden-planet-filter, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: behringer-1003-dual-envelope-generator, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: behringer-four-play-vca, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: after-later-audio-pixie, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: erica-synths-black-dual-vcf, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
+  - {setup: main-studio, module: behringer-cp1a, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20, note: "The supply itself, mounted in the custom case."}
+
+# Modules marked unused by the owner are deliberately not placed: Jake's kick, Jake's snare/hats, Synthrotek Atari Punk Console, Mosaic Quantizer,
+# Behringer CM1A MIDI to CV, and (since 2026-09-20) the Behringer Space FX.
