@@ -71,7 +71,7 @@ The site is built from committed data only (no manual text). To build it locally
 python tools/build_public.py && mkdocs build --strict -f public/mkdocs.yml
 ```
 
-It includes charts and diagrams (pipeline, coverage, evidence quality, power budget, what the checks caught, retrieval
+It includes charts and diagrams (pipeline, coverage, evidence quality, power budget, the knowledge graph's schema, wiring and rack layout, what the checks caught, retrieval
 results) generated as inline SVG, with a text description and data table beside each.
 
 ## Known limitations

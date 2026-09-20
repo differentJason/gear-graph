@@ -472,6 +472,7 @@
   "manufacturer": "Cre8audio",
   "name": "Cre8audio NiftyCASE",
   "role": "supply",
+  "rows": "3U:84",
   "status": "owned",
   "type": "item",
   "visibility": "public"
@@ -481,6 +482,7 @@
   "id": "item:custom-reel-case",
   "in_use": true,
   "name": "Custom Eurorack case (gutted Sony reel-to-reel)",
+  "rows": "1U:84,3U:84,3U:84",
   "status": "owned",
   "type": "item",
   "visibility": "public"

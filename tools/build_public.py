@@ -15,6 +15,7 @@ import yaml
 
 import build_eurorack
 import viz
+import viz_graph
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "public"
@@ -61,7 +62,7 @@ def main():
     shutil.copytree(ROOT / "docs" / "about", DOCS / "about")
     eu = build_eurorack.build(items, DOCS)
     (DOCS / "stylesheets").mkdir()
-    (DOCS / "stylesheets" / "viz.css").write_text(viz.CSS, encoding="utf-8")
+    (DOCS / "stylesheets" / "viz.css").write_text(viz.CSS + viz_graph.CSS, encoding="utf-8")
 
     manual_devices = {m["device"] for m in man}
     n_sections = sum(m["sections"] for m in snap["manuals"])
@@ -84,6 +85,7 @@ documentation. Source code: [{REPO.split('github.com/')[1]}]({REPO}).
 - [Inventory coverage](visuals/coverage.md): what is documented, and how well
 - [How well each spec is supported](visuals/trust.md): every Eurorack number, with the evidence behind it
 - [Power budget](visuals/power.md): will the supplies cover the modules?
+- [Knowledge graph](visuals/graph.md): what it holds, how the studio is wired, where each module is mounted
 - [What the checks caught](visuals/checks.md): 11 real defects and which check found each
 - [Retrieval results](visuals/retrieval.md): what indexing choices helped a keyword search
 - [Inventory](inventory.md) and [Eurorack modules](eurorack/index.md)
@@ -188,7 +190,7 @@ Click into any module from the [Eurorack overview](../eurorack/index.md) to see 
 # Power budget
 
 The question: *will each power supply cover the modules it feeds?* The sums are computed over the
-knowledge graph (documented in the repository's `graph/README.md`), using where each module is mounted and which supply feeds it.
+[knowledge graph](graph.md), using where each module is mounted and which supply feeds it.
 
 {fig(viz.power_chart(eu['budget']), "Bars are milliamps. The +5V total is a lower bound because some modules do not state a +5V figure.")}
 
@@ -207,6 +209,72 @@ knowledge graph (documented in the repository's `graph/README.md`), using where 
   not change how many sources agreed. Zero-draw figures for passive modules are inferred, not sourced.
 
 The full per-module table is on the [power budget page](../eurorack/power-budget.md).
+""")
+
+    # ---------- knowledge graph ----------
+    gr = viz_graph.Graph(ROOT)
+    vt, et = gr.counts()
+    cell = lambda x: "-" if x in (None, "") else str(x).replace("|", "/")
+    short = viz_graph.short
+    conn = sorted(gr.edges("CONNECTS", setup="main-studio"), key=lambda e: (e["medium"], gr.v[e["src"]]["name"], gr.v[e["dst"]]["name"]))
+    conn_rows = "\n".join(f"| {short(gr.v[e['src']])} | {cell(e.get('from_port'))} | {short(gr.v[e['dst']])} | {cell(e.get('to_port'))} | "
+                          f"{viz_graph.MEDIUM[e['medium']]} | {e['status']}{', swappable' if e.get('swappable') else ''} |" for e in conn)
+    rack_rows = []
+    for case in sorted((v for v in gr.v.values() if v["type"] == "item" and v.get("rows")), key=lambda v: v["name"]):
+        mods = viz_graph.rack_modules(gr, case["id"])
+        for m in sorted(mods, key=lambda m: (m["position"] or 99, m["short"].lower())):
+            sup = "" if m["role"] == "supply" else f"{m['p12']} mA ({m['p12_status']}{', owner-attested' if m['attested'] else ''})" if m["p12"] is not None else "not stated"
+            rack_rows.append(f"| {m['short']} | {case['name']} | {m['row'] or m['fmt']} | {m['hp']} | {sup or 'power supply'} |")
+    page("visuals/graph.md", "Knowledge graph", f"""
+# Knowledge graph
+
+The graph is **derived** from the files in this repository (the inventory, the recorded wiring, the Eurorack evidence,
+the test questions) and can be rebuilt at any time; nothing is edited in it. The [power budget](power.md) is computed
+over it. Below: what it holds, how the studio is wired, and where each Eurorack module is mounted.
+
+## What is in it
+
+{fig(viz_graph.schema_diagram(gr), "Boxes are kinds of node with their counts; arrows are kinds of relationship. Dashed arrows and the yellow box are local-only: they come from the manufacturers' copyrighted manuals, so they are not in the public graph.")}
+
+| Node type | Count |
+|---|---|
+""" + "\n".join(f"| {k} | {n} |" for k, n in sorted(vt.items())) + """
+
+| Relationship | Count |
+|---|---|
+""" + "\n".join(f"| {k} | {n} |" for k, n in sorted(et.items())) + f"""
+
+## How the studio is wired
+
+Only what the owner has stated is recorded. A solid line is confirmed; a dashed line is proposed and waiting for an
+answer. Port names are printed inside the boxes, level with their cable. This is the main-studio setup; the alternate
+jam-location setup is not recorded yet.
+
+{fig(viz_graph.routing_diagram(gr, {"audio", "usb"}, "Audio and computer", "ra", layering="alap"), "Default inputs on the audio interface: 1 drum machine, 2 open, 3/4 Analog Four, 5/6 Eurorack, 7/8 Digitakt. Other gear is swapped in as needed.")}
+
+{fig(viz_graph.routing_diagram(gr, {"midi", "clock"}, "MIDI and clock", "rb"), "The drum machine is the master clock. Any device on the MIDI Thru box can be swapped; the Behringer K2 and the Donner B1 share one output.")}
+
+| From | Port | To | Port | Medium | Status |
+|---|---|---|---|---|---|
+{conn_rows}
+
+## Where each module is mounted
+
+{fig(viz_graph.rack_diagram(gr), "Block width is proportional to HP; shading is the +12V draw. The custom case's 3U rows are drawn in name order because the row and position of each module are not recorded.")}
+
+| Module | Case | Row | HP | +12V draw |
+|---|---|---|---|---|
+""" + "\n".join(rack_rows) + """
+
+## How to read it, and what it leaves out
+
+- **Eurorack patch cables are not recorded.** They change every session, so the graph holds only what stays put:
+  which case, which supply, the clock input and the output stage.
+- **Ports are the owner's words** and are not yet checked against each device's manual.
+- **The graph inherits the trust levels of its sources.** A single-source spec stays single-source here; see
+  [how well each spec is supported](trust.md).
+- **Relationships exist only where they were stated.** A device with no line drawn has no recorded connection; that
+  means "not recorded", not "not connected".
 """)
 
     # ---------- checks ----------
@@ -295,7 +363,7 @@ More: [evaluation](../about/evaluation.md). Questions that never found a page: {
     # ---------- config ----------
     nav = [{"Home": "index.md"},
            {"Visual explanations": [{"How the pipeline works": "visuals/pipeline.md"}, {"Inventory coverage": "visuals/coverage.md"},
-                                    {"How well each spec is supported": "visuals/trust.md"}, {"Power budget": "visuals/power.md"},
+                                    {"How well each spec is supported": "visuals/trust.md"}, {"Power budget": "visuals/power.md"}, {"Knowledge graph": "visuals/graph.md"},
                                     {"What the checks caught": "visuals/checks.md"}, {"Retrieval results": "visuals/retrieval.md"}]},
            {"Inventory": "inventory.md"}, {"Eurorack": eu["nav"]},
            {"About the project": [{t: f"about/{f}"} for f, t in [("index.md", "Overview"), ("architecture.md", "Architecture"),

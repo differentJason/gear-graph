@@ -51,7 +51,7 @@ VSCHEMA = StructType([StructField(n, t, True) for n, t in [
     ("category", StringType()), ("manufacturer", StringType()), ("status", StringType()), ("in_use", BooleanType()),
     ("format", StringType()), ("role", StringType()), ("field", StringType()), ("value", DoubleType()),
     ("tier", StringType()), ("url", StringType()), ("http", StringType()), ("doc_type", StringType()), ("version", StringType()),
-    ("attested", StringType())]])
+    ("attested", StringType()), ("rows", StringType())]])
 ESCHEMA = StructType([StructField(n, t, True) for n, t in [
     ("src", StringType()), ("dst", StringType()), ("rel", StringType()), ("visibility", StringType()),
     ("setup", StringType()), ("medium", StringType()), ("from_port", StringType()), ("to_port", StringType()),
@@ -98,11 +98,12 @@ def collect():
     man = yaml.safe_load((ROOT / "tools" / "manifest.yaml").read_text())["manuals"]
     vocab = yaml.safe_load((ROOT / "VOCAB.yaml").read_text())["tags"]
     b = Builder()
+    case_rows = {k["id"]: ",".join(f"{r['format']}:{r['hp']}" for r in k["rows"]) for k in conn.get("cases", [])}   # e.g. "1U:84,3U:84,3U:84"
 
     # ---- items, manufacturers, categories ----
     for i in inv:
         b.vertex(f"item:{i['id']}", "item", i["name"], category=i["category"], manufacturer=i.get("manufacturer"), status=i["status"],
-                 in_use=i.get("in_use", True), format=i.get("format"), role=ov.get(i["id"], {}).get("role"))
+                 in_use=i.get("in_use", True), format=i.get("format"), role=ov.get(i["id"], {}).get("role"), rows=case_rows.get(i["id"]))
         b.ensure(f"cat:{i['category']}", "category", i["category"])
         b.edge(f"item:{i['id']}", f"cat:{i['category']}", "IN_CATEGORY")
         if i.get("manufacturer"):

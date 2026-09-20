@@ -24,7 +24,7 @@ Vertices: `id`, `type`, `name`, `visibility`, plus sparse property columns. Edge
 
 | Vertex `type` | Source | Visibility |
 |---|---|---|
-| `item` (device, module, supply, case, software) | `inventory.yaml` | public |
+| `item` (device, module, supply, case, software; a case also carries `rows`, e.g. `1U:84,3U:84,3U:84`) | `inventory.yaml`, `connections.yaml` | public |
 | `manufacturer`, `category` | `inventory.yaml` | public |
 | `spec` (one item + one field, with `value`, evidence `status`, and `attested` if the owner has attested it) | `eurorack/` | public |
 | `source` (a URL with a `tier`: official / retailer / community) | `eurorack/sources.yaml` | public |
@@ -66,7 +66,7 @@ Pages CI reads the committed snapshot and never runs Spark.
    case capacity. Still to add: check that every named port appears in that device's manual text, with misses reported.
 3. **Graph checks in the validator style**: done in `build_graph.py` (unique ids, no dangling edge endpoints, no private node in the public export, leak scan over `graph/public/`). Not done: orphan-vertex report.
 4. **Query tests**: like `evals/golden.jsonl`, a small set of questions with known answers, run against the graph.
-5. **Visualisation** on the public site from the committed snapshot.
+5. ~~**Visualisation** on the public site from the committed snapshot.~~ Done: `tools/viz_graph.py` draws three views (schema, wiring, rack) on the public `visuals/graph.md` page from `graph/public/*.json` only.
 
 ## Questions the graph should be able to answer (acceptance tests)
 
