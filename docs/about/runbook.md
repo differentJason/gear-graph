@@ -24,6 +24,25 @@ All commands run from the repository root with the project's virtual environment
 Normal order after any change: convert or fetch, then `build_site`, then `validate`, `check_coverage`,
 `mkdocs build --strict`. Anything under `docs/` marked GENERATED is rewritten by the build.
 
+## The knowledge graph and the power budget
+
+The graph runs in a separate environment (`.venv-graph`, needs a JDK; see `graph/README.md`). The power budget is
+computed there and the site build only reads the result:
+
+```bash
+.venv/bin/python tools/validate_connections.py       # is connections.yaml consistent with the inventory? (no Spark needed)
+.venv-graph/bin/python tools/build_graph.py          # build the graph, write graph/public/*.json and the budget snapshot
+.venv/bin/python tools/build_site.py                 # renders the budget page from that snapshot
+```
+
+Run `build_graph.py` **before** `build_site.py` whenever placements (`connections.yaml`), specs, overrides,
+`eurorack/attestations.yaml` or an item's `in_use` flag change. If you forget, `build_site.py` stops with
+"budget.json is STALE" instead of publishing an out-of-date budget. Comment-only edits do not count as a change.
+Commit the refreshed `graph/public/*.json` with the change that caused it.
+
+To record wiring, edit `connections.yaml`: one entry per cable, a `status`, and a date. Record only what has been
+stated; put anything vaguer under `open_statements`.
+
 ## Publish the site
 
 The public site is built from committed data only (no manuals), so it can be rebuilt anywhere:

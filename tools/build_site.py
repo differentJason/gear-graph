@@ -161,10 +161,11 @@ def main():
           f"| Devices with pages | {sum(1 for i in items if i.get('slice'))} |",
           f"| Eurorack modules with spec pages | {eu['count']} ({eu['consumers']} counted as consumers in the budget) |",
           "| Eurorack field status | " + ", ".join(f"{n} {s}" for s, n in sorted(eu['tally'].items(), key=lambda x: -x[1])) + " |", "",
-          "## Power budget snapshot", "", "Draw is the sum of published figures for every in-use module; capacity is the sum of all recorded supplies "
-          "(" + ", ".join(eu["supplies"]) + "). See the [power budget](../eurorack/power-budget.md) for per-supply comparisons and caveats.", "",
-          "| Rail | Total draw (mA) | Combined capacity (mA) | Modules with no figure |", "|---|---|---|---|"]
-    st += [f"| {rail} | {v['draw_ma']} | {v['capacity_ma']} | {v['modules_without_figure']} |" for rail, v in eu["budget"].items()]
+          "## Power budget snapshot", "", "Computed by the knowledge graph: each supply's draw is the sum of published figures for the modules it feeds "
+          "(placement is recorded in `connections.yaml`). See the [power budget](../eurorack/power-budget.md) for the caveats.", "",
+          "| Supply | Rail | Draw (mA) | Capacity (mA) | Load | Modules with no figure |", "|---|---|---|---|---|---|"]
+    st += [f"| {s['name']} | {rail} | {s['rails'][rail]['draw_ma']} | {s['rails'][rail]['capacity_ma']} | {s['rails'][rail]['pct']}% | "
+           f"{len(s['rails'][rail]['modules_without_figure'])} |" for s in eu["budget"] for rail in ("+12V", "-12V", "+5V")]
     (ROOT / "data").mkdir(exist_ok=True)
     (ROOT / "data" / "snapshot.json").write_text(json.dumps({
         "manuals": [{"id": m["id"], "title": m["title"], "doc_type": m["doc_type"], "device": m["device"], "sections": len(sections.get(m["id"], []))}

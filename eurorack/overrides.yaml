@@ -65,9 +65,7 @@ intellijel-stereo-line-out-1u:
   function: "Stereo line-out stage with 1/8 inch L/R inputs and level control (1U format); feeds the Jacks module"
 intellijel-audio-stereo-line-out-jacks-1u:
   function: "Balanced 1/4 inch TRS L/R output jacks (1U format); pairs with the Stereo Line Out 1U"
-  ma_p12: {value: 0, status: inferred, basis: "Jacks-only panel; ModularGrid lists no power draw. Inferred, not stated by a source."}
-  ma_m12: {value: 0, status: inferred, basis: "Same as +12V."}
-  ma_p5:  {value: 0, status: inferred, basis: "Same as +12V."}
+  notes: "An earlier version of this file inferred 0 mA for this module (jacks-only panel, no draw listed). The owner said on 2026-09-20 that the Intellijel units do draw a small amount and that the figure will be supplied later, so the inference was removed. The draw is treated as missing (not zero) until then."
 
 jakes-clock-and-musical-divider:
   function: "Clock with an 8-bit binary divider (/2 to /256) and clock-thru output"

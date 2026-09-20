@@ -177,7 +177,7 @@ counts as **confirmed** only when two independent sources agree. The chart shows
 - **Confirmed** (C) means two sources agree: a maker's page or datasheet plus ModularGrid (After Later, Antumbra, Jake's), or
   ModularGrid plus a retailer listing (the Behringer modules). Agreement between two non-maker sources is a weaker guarantee
   than agreement with the maker.
-- **Inferred** (I) values are zero-draw assumptions for passive or jacks-only modules, each with its reasoning on the module page.
+- **Inferred** (I) values are zero-draw assumptions for passive modules, each with its reasoning on the module page.
 - **Not stated** (-) usually means the source does not list a +5V figure or a depth.
 
 Click into any module from the [Eurorack overview](../eurorack/index.md) to see its evidence table.
@@ -187,23 +187,24 @@ Click into any module from the [Eurorack overview](../eurorack/index.md) to see 
     page("visuals/power.md", "Power budget", f"""
 # Power budget
 
-The question: *will the power supplies cover the modules?* The answer depends on assumptions that the chart makes
-visible.
+The question: *will each power supply cover the modules it feeds?* The sums are computed over the
+knowledge graph (documented in the repository's `graph/README.md`), using where each module is mounted and which supply feeds it.
 
-{fig(viz.power_chart(eu['budget'], eu['supplies']), "Bars are milliamps. The +5V total is a lower bound because some modules do not state a +5V figure.")}
+{fig(viz.power_chart(eu['budget']), "Bars are milliamps. The +5V total is a lower bound because some modules do not state a +5V figure.")}
 
 ## How to read it
 
-- **Total draw** is the sum of published figures for every module marked in use ({eu['consumers']} modules).
-- Each supply is compared with the **whole** load, because which module is powered by which supply is not recorded.
-  The combined bar is the best case, where the load could be split perfectly.
+- **Draw** is the sum of published figures for the modules that supply feeds, not for the whole rack.
+- Placement (which case, which supply) is recorded by the owner and validated: modules must fit their case's rows.
 - Case figures are labelled **peak** by the maker; continuous capacity may be lower.
 
 ## Caveats
 
 - A paper budget from published figures, not a measurement.
 - Most figures are single-source (see [how well each spec is supported](trust.md)).
-- It assumes every in-use module is installed at once.
+- It assumes every in-use module is running at once.
+- The owner sourced the module draw values from the manufacturers and attests them; that is recorded separately and does
+  not change how many sources agreed. Zero-draw figures for passive modules are inferred, not sourced.
 
 The full per-module table is on the [power budget page](../eurorack/power-budget.md).
 """)

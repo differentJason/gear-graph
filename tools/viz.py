@@ -20,38 +20,37 @@ def _t(x, y, s, cls="t", anchor="start", extra=""):
     return f'<text x="{x}" y="{y}" class="{cls}" text-anchor="{anchor}" {extra}>{escape(str(s))}</text>'
 
 
-def power_chart(budget, supply_names):
-    """budget: {rail: {draw_ma, capacity_ma, modules_without_figure, per_supply: {name: cap}}}"""
-    left, right, top = 190, 130, 20
-    plot_w, group_h = 720 - left - right, 128
-    rows = ["Total draw"] + [f"{n} alone" for n in supply_names] + ["All supplies combined"]
+def power_chart(supplies):
+    """supplies: [{name, kind, rails: {rail: {capacity_ma, draw_ma, pct, modules_counted, modules_without_figure}}}]
+    as computed by the knowledge graph (graph/public/budget.json). Each supply is compared with the modules it feeds."""
+    left, right, top = 240, 150, 20
+    plot_w = 720 - left - right
     body, y = [], top
-    for rail, v in budget.items():
-        caps = [v["per_supply"][n] or 0 for n in supply_names]
-        vals = [v["draw_ma"]] + caps + [v["capacity_ma"]]
-        scale = plot_w / (max(vals) * 1.05)
-        lower = " (lower bound)" if v["modules_without_figure"] else ""
+    for rail in ("+12V", "-12V", "+5V"):
         body.append(_t(8, y + 14, f"{rail} rail", "tb"))
         yy = y + 26
-        for i, (label, val) in enumerate(zip(rows, vals)):
-            bar_w = max(val * scale, 0.5)
-            if i == 0:
-                cls, txt = "bar-draw", f"{val} mA{lower}"
-            else:
-                pct = f"{100 * v['draw_ma'] / val:.0f}%" if val else "-"
-                cls = "bar-over" if val and v["draw_ma"] > val else "bar-ok"
-                txt = f"{val} mA  (draw = {pct})"
-            body.append(_t(left - 8, yy + 13, label, "tm", "end"))
-            body.append(f'<rect x="{left}" y="{yy}" width="{bar_w:.1f}" height="18" class="{cls}"/>')
-            body.append(_t(left + bar_w + 6, yy + 13, txt, "t"))
+        scale = plot_w / (max(x for s in supplies for x in (s["rails"][rail]["draw_ma"], s["rails"][rail]["capacity_ma"] or 0)) * 1.05)
+        for s in supplies:
+            r = s["rails"][rail]
+            cap = r["capacity_ma"] or 0
+            lower = " (lower bound)" if r["modules_without_figure"] else ""
+            body.append(_t(left - 8, yy + 13, f"{s['name']}: draw", "tm", "end"))
+            body.append(f'<rect x="{left}" y="{yy}" width="{max(r["draw_ma"] * scale, 0.5):.1f}" height="18" class="bar-draw"/>')
+            body.append(_t(left + max(r["draw_ma"] * scale, 0.5) + 6, yy + 13, f"{r['draw_ma']} mA{lower}", "t"))
             yy += 22
-        y += group_h
+            cls = "bar-over" if r["draw_ma"] > cap else "bar-ok"
+            body.append(_t(left - 8, yy + 13, f"capacity ({s['kind']})", "tm", "end"))
+            body.append(f'<rect x="{left}" y="{yy}" width="{max(cap * scale, 0.5):.1f}" height="18" class="{cls}"/>')
+            body.append(_t(left + max(cap * scale, 0.5) + 6, yy + 13, f"{cap} mA  (load {r['pct']}%)" if r["pct"] is not None else f"{cap} mA", "t"))
+            yy += 26
+        y = yy + 8
     h = y + 36
-    legend = (f'<rect x="8" y="{h - 26}" width="14" height="10" class="bar-draw"/>' + _t(28, h - 17, "draw (sum of published figures)", "tm")
+    legend = (f'<rect x="8" y="{h - 26}" width="14" height="10" class="bar-draw"/>' + _t(28, h - 17, "draw of the modules this supply feeds", "tm")
               + f'<rect x="250" y="{h - 26}" width="14" height="10" class="bar-ok"/>' + _t(270, h - 17, "capacity covers the draw", "tm")
               + f'<rect x="450" y="{h - 26}" width="14" height="10" class="bar-over"/>' + _t(470, h - 17, "draw exceeds capacity", "tm"))
-    desc = "; ".join(f"{r}: draw {v['draw_ma']} mA against capacities " + ", ".join(f"{n} {v['per_supply'][n]} mA" for n in supply_names) + f", combined {v['capacity_ma']} mA" for r, v in budget.items())
-    return _svg(720, h, "Power draw against supply capacity, per rail", desc, "".join(body) + legend)
+    desc = "; ".join(f"{s['name']} feeds {len(s['modules'])} modules: " +
+                     ", ".join(f"{rail} {r['draw_ma']} of {r['capacity_ma']} mA ({r['pct']}%)" for rail, r in s["rails"].items()) for s in supplies)
+    return _svg(720, h, "Power draw against capacity, per supply and rail", desc, "".join(body) + legend)
 
 
 def trust_heatmap(matrix, fields):

@@ -15,7 +15,7 @@ Written so a reader can judge how far to trust the project. Current counts are o
   is shared by five products, and its spec tables list several models side by side; only the UMC404HD parts apply.
 - **The MPK mini quick start was matched to the MK3 by content**, not by its own label (see D6 in the
   [decision log](decisions.md)). It is a judgment call.
-- **No routing or wiring data.** How devices connect in the studio has not been confirmed, so none is recorded.
+- **Wiring is recorded for the main studio only**, and only what the owner stated (`connections.yaml`). The alternate jam-location setup is not recorded, Eurorack patch cables are deliberately not recorded (they change every session), and where swapped-in gear plugs in is not stated.
 - **Software manuals are not ingested** (Logic Pro, Bitwig): far larger, and out of scope for the first slices.
 - **Eurorack modules have specs, not manuals.** Operating instructions for most modules are not in the knowledge base.
 
@@ -28,15 +28,13 @@ Written so a reader can judge how far to trust the project. Current counts are o
 ## Eurorack specifications
 
 - **Most values are single-source**, usually ModularGrid (user-maintained). The two-source rule is the exception, not
-  the norm. Each page shows which is which.
+  the norm. Each page shows which is which. The owner has attested the module draw values as correct (sourced from the manufacturers; D20), which is recorded separately and does not change the source count.
 - **"Function" descriptions come from listing text** surfaced by web search, not from manuals.
-- **Some figures are inferred** (passive or jacks-only modules at 0 mA), labelled as such.
+- **Some figures are inferred** (two passive modules at 0 mA), labelled as such. An inferred zero for a jacks-only Intellijel module was removed when the owner said the Intellijel units do draw a small amount; that draw is treated as missing until it is found.
 - **+5V and depth are often not stated**, so the +5V total is a lower bound.
 - **Draw figures are published maximums or typical values**, not measurements. The NiftyCASE labels its rail outputs
   "peak"; a footnote explaining that was not found on its page.
-- **The budget assumes every in-use module is installed at once.** Which module sits in which case, and which supply
-  feeds it, is not recorded. The modules also total more width than the recorded case space, so at least one more
-  case or rack exists.
+- **The budget assumes every in-use module is running at once.** Placement is recorded, so each supply is compared with the modules it feeds; which 3U row and position each module occupies in the custom case is not recorded.
 - **The Behringer Space FX has conflicting figures** in the wild; only one source could be parsed.
 - **Three matches are closest-listing matches** the owner confirmed (Pico MODulator, Skew Fade LFO, Black Dual VCF
   listing); the owner's list wording differed slightly.
@@ -56,7 +54,7 @@ Written so a reader can judge how far to trust the project. Current counts are o
 
 ## Open questions
 
-- Which modules are actually installed together, in which case, on which supply?
-- Where is the additional case or rack that holds the modules beyond the NiftyCASE's 84 HP?
+- Where does swapped-in gear (Korg M1, Dreadbox Typhon, Behringer K2, Donner B1) plug in for audio?
+- What does the alternate jam-location setup look like?
 - Should Eurorack modules get golden questions and be added to the retrieval corpus?
 - Would a plain-language summary or aliases per page fix the vocabulary-mismatch misses?

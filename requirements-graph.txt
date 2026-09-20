@@ -1,0 +1,12 @@
+# Graph tooling only. NOT needed to build the site; keep it out of .venv.
+#   python3 -m venv .venv-graph && .venv-graph/bin/pip install -r requirements-graph.txt
+# Also needs a JDK (17 or 21). Tested: OpenJDK 21, Python 3.12, 2026-09-20.
+#
+# Use `graphframes-py`. The package named plain `graphframes` on PyPI is a 2018 stub (0.6) and is not this project.
+# The JVM half of GraphFrames is fetched from Maven Central on first run (see GRAPHFRAMES_JAR in graph/check_env.py).
+pyspark==4.2.0
+graphframes-py==0.12.2
+# The graphframes wheel imports these but does not declare them:
+numpy
+typing_extensions
+pyyaml

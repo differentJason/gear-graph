@@ -10,7 +10,7 @@ content_status: generated
 
 27 modules have spec pages. Every number keeps the source it came from; see each module's *Evidence* table.
 
-Field status across all modules: 86 single, 32 confirmed, 9 inferred, 7 missing, 1 override.
+Field status across all modules: 86 single, 32 confirmed, 10 missing, 6 inferred, 1 override.
 
 See the [power budget](power-budget.md).
 
@@ -33,7 +33,7 @@ See the [power budget](power-budget.md).
 | [DDNIPRO qTone Eurorack Dual Channel Quantiser Module](ddnipro-qtone.md) | 3U | 6 | 45 | 22 | 0 | single |
 | [Erica Pico Mod](erica-pico-mod.md) | 3U | 3 | 28 | 5 | 0 | single |
 | [Erica Synths Black Dual VCF](erica-synths-black-dual-vcf.md) | 3U | 18 | 40 | 36 | 0 | single |
-| [Intellijel Audio Stereo Line Out Jacks 1U](intellijel-audio-stereo-line-out-jacks-1u.md) | 1U | 8 | 0 | 0 | 0 | inferred |
+| [Intellijel Audio Stereo Line Out Jacks 1U](intellijel-audio-stereo-line-out-jacks-1u.md) | 1U | 8 | - | - | - | missing |
 | [Intellijel Quadratt 1U](intellijel-quadratt-1u.md) | 1U | 28 | 24 | 23 | 0 | single |
 | [Intellijel Stereo Line Out 1U](intellijel-stereo-line-out-1u.md) | 1U | 8 | 19 | 12 | - | single |
 | [Intellijel Stereo Mixer 1U](intellijel-stereo-mixer-1u.md) | 1U | 16 | 17 | 23 | - | single |
@@ -46,6 +46,7 @@ See the [power budget](power-budget.md).
 
 ## Marked unused
 
+- Behringer Space FX
 - Jake's kick 6HP
 - Jake's snare/hats 6HP
 - Synthrotek Atari Punk Console 4HP

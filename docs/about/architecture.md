@@ -67,8 +67,8 @@ source; `conflict` = sources disagree; `override` / `inferred` = a human decisio
 
 ## Design principles
 
-1. **Markdown with metadata is the source of truth.** No graph database (an explicit owner decision); relationships
-   are plain fields, so a graph could be derived later.
+1. **Markdown and YAML with metadata are the source of truth.** Relationships are plain fields, so the knowledge graph
+   (decision D18) is *derived* from them and can be rebuilt; it is never edited by hand.
 2. **Derived files are reproducible.** Delete `docs/manuals/` and regenerate it from the PDFs and manifest.
 3. **Provenance travels with the content.** Every section carries where it came from and a hash of the exact PDF.
 4. **Evidence before interpretation.** Numbers are stored with their raw source lines first; decisions are layered

@@ -5,7 +5,7 @@ module: behringer-space-fx
 manufacturer: Behringer
 category: eurorack-module
 format: 3U
-in_use: true
+in_use: false
 function: Stereo multi-effects engine (reverbs, delays, modulation)
 role: module
 specs:
@@ -30,7 +30,7 @@ content_status: generated
 
 **Function:** Stereo multi-effects engine (reverbs, delays, modulation). *(Description from ModularGrid/retailer text; not verified against a manual.)*
 
-> Name/maker as written in Equipment List.md; not verified.
+> Name/maker as written in Equipment List.md; not verified. Marked unused by the owner 2026-09-20 (it was in use before).
 
 > Sources disagree on power in the wild: ModularGrid lists 90 mA / 25 mA, while other listings quote 100 mA / 30 mA and 41 mm depth (ModularGrid says 30 mm). Only ModularGrid could be parsed.
 

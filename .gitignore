@@ -15,13 +15,20 @@ tools/local_extras.py
 
 # --- environment and build output ---
 .venv/
+.venv-graph/
 site/
 __pycache__/
 *.pyc
+
+# --- graph build: full output includes nodes derived from manual text, so it stays local.
+#     Only graph/public/ (built from committed data, no manual text) may be committed. ---
+graph/out/
+spark-warehouse/
+metastore_db/
 
 # --- anything private lives outside the repository; these patterns are a second safety net ---
 private/
 *.private.md
 
-# --- generated public site (rebuilt by CI) ---
-public/
+# --- generated public site (rebuilt by CI). Anchored to the root: graph/public/ is a committed snapshot ---
+/public/

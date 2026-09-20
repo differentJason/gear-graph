@@ -12,15 +12,15 @@ specs:
   hp: 8
   depth_mm: 34
   power_ma:
-    +12V: 0
-    -12V: 0
-    +5V: 0
+    +12V: null
+    -12V: null
+    +5V: null
 spec_status:
   hp: single
   depth_mm: single
-  ma_p12: inferred
-  ma_m12: inferred
-  ma_p5: inferred
+  ma_p12: missing
+  ma_m12: missing
+  ma_p5: missing
 identified_as: Owner confirmed (same screenshot; listing title 'Intellijel Audio Stereo Line Out Jacks 1U'); ModularGrid calls it 'Stereo Line Out JACKS 1U'. Pairs with the Stereo Line Out 1U. 1U (Intellijel format) module.
 content_status: generated
 ---
@@ -35,15 +35,17 @@ content_status: generated
 
 > The balanced 1/4" TRS L/R jacks half of the pair; works with the Stereo Line Out 1U. the owner confirmed 2026-09-20 that the modules in his screenshot are the ones he bought.
 
+> An earlier version of this file inferred 0 mA for this module (jacks-only panel, no draw listed). The owner said on 2026-09-20 that the Intellijel units do draw a small amount and that the figure will be supplied later, so the inference was removed. The draw is treated as missing (not zero) until then.
+
 ## Specifications
 
 | Field | Value | Status | Basis |
 |---|---|---|---|
 | Width (HP) | 8 | single | community: 8 |
 | Depth (mm) | 34 | single | community: 34 |
-| +12V (mA) | 0 | inferred | Jacks-only panel; ModularGrid lists no power draw. Inferred, not stated by a source. |
-| -12V (mA) | 0 | inferred | Same as +12V. |
-| +5V (mA) | 0 | inferred | Same as +12V. |
+| +12V (mA) | - | missing | no source stated it |
+| -12V (mA) | - | missing | no source stated it |
+| +5V (mA) | - | missing | no source stated it |
 
 *confirmed = two or more sources agree; single = one source only; inferred/override = a decision with the reasoning shown; missing = not stated in any source that could be read.*
 

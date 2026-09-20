@@ -27,9 +27,12 @@ them are git-ignored). Anyone re-creating the manual pages needs to obtain the m
 | Path | What |
 |---|---|
 | `inventory.yaml` | Source of truth for the gear and its status |
+| `connections.yaml` | Source of truth for how the gear is wired and which case/supply each module sits in |
 | `tools/manifest.yaml` | One entry per source PDF: page range, split rules |
 | `VOCAB.yaml` | Controlled tag vocabulary |
 | `eurorack/sources.yaml`, `eurorack/overrides.yaml`, `eurorack/evidence/` | Where Eurorack specs come from, the human decisions on top, and the raw evidence |
+| `eurorack/attestations.yaml` | Owner statements that a class of values is correct, kept beside the evidence |
+| `graph/`, `tools/build_graph.py` | Knowledge graph (PySpark + GraphFrames), derived from the files above; computes the power budget. See `graph/README.md` |
 | `docs/about/` | Project documentation |
 | `docs/eurorack/` | Generated Eurorack module pages and the power budget |
 | `evals/golden.jsonl` | Test questions with the pages that answer them |
