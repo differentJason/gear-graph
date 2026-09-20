@@ -7,6 +7,7 @@ Inputs : inventory.yaml, tools/manifest.yaml, docs/manuals/*/NN-*.md (frontmatte
 Outputs: docs/index.md, docs/inventory.md, docs/devices/*.md, docs/topics/*.md, docs/llms.txt, mkdocs.yml
 Nothing here is hand-edited; change the inputs and re-run.
 """
+import json
 import re
 from collections import defaultdict
 from pathlib import Path
@@ -164,6 +165,11 @@ def main():
           "(" + ", ".join(eu["supplies"]) + "). See the [power budget](../eurorack/power-budget.md) for per-supply comparisons and caveats.", "",
           "| Rail | Total draw (mA) | Combined capacity (mA) | Modules with no figure |", "|---|---|---|---|"]
     st += [f"| {rail} | {v['draw_ma']} | {v['capacity_ma']} | {v['modules_without_figure']} |" for rail, v in eu["budget"].items()]
+    (ROOT / "data").mkdir(exist_ok=True)
+    (ROOT / "data" / "snapshot.json").write_text(json.dumps({
+        "manuals": [{"id": m["id"], "title": m["title"], "doc_type": m["doc_type"], "device": m["device"], "sections": len(sections.get(m["id"], []))}
+                    for m in man if m["id"] in sections],
+        "inventory_items": len(items)}, indent=1))
     write(DOCS / "about" / "status.md", {"title": "Current status", "doc_type": "project-status", "content_status": "generated"}, "\n".join(st))
 
     # ---- home page ----

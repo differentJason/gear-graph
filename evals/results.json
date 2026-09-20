@@ -1,0 +1,120 @@
+{
+ "date": "2026-09-20",
+ "retriever": "BM25 keyword baseline",
+ "answerable_questions": 17,
+ "golden_questions": 22,
+ "variants": [
+  {
+   "label": "Baseline",
+   "hit1": 0.41,
+   "hit3": 0.71,
+   "hit5": 0.82,
+   "mrr": 0.575
+  },
+  {
+   "label": "+ manufacturer / model / device",
+   "hit1": 0.59,
+   "hit3": 0.82,
+   "hit5": 0.88,
+   "mrr": 0.711
+  },
+  {
+   "label": "+ also tags",
+   "hit1": 0.59,
+   "hit3": 0.82,
+   "hit5": 0.88,
+   "mrr": 0.701
+  }
+ ],
+ "first_hit_rank": {
+  "d01": [
+   4,
+   1,
+   1
+  ],
+  "d02": [
+   1,
+   1,
+   1
+  ],
+  "d03": [
+   5,
+   2,
+   3
+  ],
+  "d04": [
+   1,
+   1,
+   1
+  ],
+  "a01": [
+   2,
+   1,
+   1
+  ],
+  "a02": [
+   null,
+   null,
+   null
+  ],
+  "a03": [
+   3,
+   4,
+   4
+  ],
+  "a04": [
+   1,
+   1,
+   1
+  ],
+  "p01": [
+   1,
+   1,
+   1
+  ],
+  "p02": [
+   2,
+   2,
+   2
+  ],
+  "r01": [
+   null,
+   null,
+   null
+  ],
+  "r02": [
+   1,
+   1,
+   1
+  ],
+  "r03": [
+   null,
+   3,
+   3
+  ],
+  "m01": [
+   1,
+   1,
+   1
+  ],
+  "m02": [
+   2,
+   1,
+   1
+  ],
+  "b01": [
+   2,
+   2,
+   2
+  ],
+  "b02": [
+   1,
+   1,
+   1
+  ]
+ },
+ "notes": {
+  "a02": "label too strict: several pages legitimately answer it",
+  "r01": "vocabulary mismatch: the question says 'back', the manual says 'rear panel'"
+ }
+}

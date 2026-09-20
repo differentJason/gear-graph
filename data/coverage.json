@@ -1,0 +1,27 @@
+[
+ {
+  "id": "elektron-analog-four-mkii-manual",
+  "unique_word_recall": 0.999078,
+  "occurrence_recall": 0.987026
+ },
+ {
+  "id": "akai-apc20-quick-start",
+  "unique_word_recall": 1.0,
+  "occurrence_recall": 1.0
+ },
+ {
+  "id": "donner-b1-manual",
+  "unique_word_recall": 0.996485,
+  "occurrence_recall": 0.997073
+ },
+ {
+  "id": "behringer-rd-9-manual",
+  "unique_word_recall": 0.996434,
+  "occurrence_recall": 0.986592
+ },
+ {
+  "id": "behringer-umc404hd-quick-start",
+  "unique_word_recall": 0.989189,
+  "occurrence_recall": 0.960276
+ }
+]

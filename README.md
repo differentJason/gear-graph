@@ -60,6 +60,17 @@ See the [runbook](docs/about/runbook.md) for adding a manual or a Eurorack modul
 Small sample; treat as leads, not conclusions. Keyword search cannot bridge synonyms ("back" vs "rear panel") and
 cannot say "I don't know". Details and caveats: [evaluation](docs/about/evaluation.md).
 
+## Site
+
+The site is built from committed data only (no manual text). To build it locally:
+
+```bash
+python tools/build_public.py && mkdocs build --strict -f public/mkdocs.yml
+```
+
+It includes charts and diagrams (pipeline, coverage, evidence quality, power budget, what the checks caught, retrieval
+results) generated as inline SVG, with a text description and data table beside each.
+
 ## Known limitations
 
 Tags are keyword rules; three of the six manuals are quick starts; most Eurorack figures come from a single

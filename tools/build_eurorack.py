@@ -87,7 +87,7 @@ def build(items, docs):
                 name = "Usable case area (HP)"
             src = "; ".join(f"{t}: {v}" for t, _, v, _ in r["seen"]) or "no source stated it"
             b.append(f"| {name} | {fmt(r)} | {r['status']} | {r['basis'] or src} |")
-        b += ["", "*confirmed = two or more sources agree; single = one source only; inferred/override = a decision with the reasoning shown; missing = not stated anywhere I could read.*", "",
+        b += ["", "*confirmed = two or more sources agree; single = one source only; inferred/override = a decision with the reasoning shown; missing = not stated in any source that could be read.*", "",
               "## Evidence: the exact lines each number came from", "", "| Field | Source | Value | Line | Page |", "|---|---|---|---|---|"]
         for f, label in FIELDS:
             for tier, url, val, line in res[f]["seen"]:
@@ -173,5 +173,8 @@ def build(items, docs):
         budget[lab.split()[0]] = {"draw_ma": sum(v for v in vals if v is not None), "capacity_ma": sum(cap_of(m, f) or 0 for m in supplies),
                                   "modules_without_figure": sum(1 for v in vals if v is None),
                                   "per_supply": {m["item"]["name"]: cap_of(m, f) for m in supplies}}
-    return {"nav": nav, "llms": llms, "cards": cards, "count": len(mods), "consumers": len(consumers),
+    matrix = [{"id": k, "name": m["item"]["name"], "format": m["item"].get("format", "3U"),
+               "statuses": {f: m["res"][f]["status"] for f, _ in FIELDS}, "values": {f: m["res"][f]["value"] for f, _ in FIELDS}}
+              for k, m in sorted(mods.items(), key=lambda kv: kv[1]["item"]["name"].lower())]
+    return {"matrix": matrix, "fields": FIELDS, "nav": nav, "llms": llms, "cards": cards, "count": len(mods), "consumers": len(consumers),
             "tally": dict(tally), "budget": budget, "supplies": [m["item"]["name"] for m in supplies]}

@@ -47,7 +47,7 @@ content_status: generated
 | -12V (mA) | 0 | confirmed | official: 0; community: 0 |
 | +5V (mA) | 0 | confirmed | official: 0; community: 0 |
 
-*confirmed = two or more sources agree; single = one source only; inferred/override = a decision with the reasoning shown; missing = not stated anywhere I could read.*
+*confirmed = two or more sources agree; single = one source only; inferred/override = a decision with the reasoning shown; missing = not stated in any source that could be read.*
 
 ## Evidence: the exact lines each number came from
 

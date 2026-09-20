@@ -24,6 +24,20 @@ All commands run from the repository root with the project's virtual environment
 Normal order after any change: convert or fetch, then `build_site`, then `validate`, `check_coverage`,
 `mkdocs build --strict`. Anything under `docs/` marked GENERATED is rewritten by the build.
 
+## Publish the site
+
+The public site is built from committed data only (no manuals), so it can be rebuilt anywhere:
+
+```bash
+python tools/build_public.py                       # writes public/docs and public/mkdocs.yml
+mkdocs build --strict -f public/mkdocs.yml         # strict build into public/site
+mkdocs serve -f public/mkdocs.yml                  # preview
+```
+
+The site is not deployed anywhere yet. Charts are generated as inline SVG by `tools/viz.py`; numbers that come from local-only inputs are kept in
+`data/snapshot.json`, `data/coverage.json` and `evals/results.json`, and are refreshed by `build_site.py` and
+`check_coverage.py`. Re-run those, and commit the JSON, when the underlying data changes.
+
 ## Add a manual
 
 1. Put the official PDF in `sources/` (git-ignored). If you downloaded it by hand, note that in `source_note`.

@@ -44,7 +44,7 @@ content_status: generated
 | -12V (mA supplied) | 1000 | confirmed | community: 1000; retailer: 1000 |
 | +5V (mA supplied) | 500 | confirmed | community: 500; retailer: 500 |
 
-*confirmed = two or more sources agree; single = one source only; inferred/override = a decision with the reasoning shown; missing = not stated anywhere I could read.*
+*confirmed = two or more sources agree; single = one source only; inferred/override = a decision with the reasoning shown; missing = not stated in any source that could be read.*
 
 ## Evidence: the exact lines each number came from
 

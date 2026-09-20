@@ -1,0 +1,107 @@
+{
+ "detectors": [
+  [
+   "coverage",
+   "Coverage check"
+  ],
+  [
+   "warning",
+   "Converter warning"
+  ],
+  [
+   "spot",
+   "Spot check vs source"
+  ],
+  [
+   "reading",
+   "Reading the output"
+  ],
+  [
+   "evidence",
+   "Evidence lines / flags"
+  ],
+  [
+   "crash",
+   "Crash"
+  ]
+ ],
+ "failures": [
+  {
+   "id": 1,
+   "title": "Cleanup deleted real instructions (a factory-reset procedure)",
+   "caught_by": "coverage",
+   "how": "Coverage check showed 97.5% recall; missing words named the culprit",
+   "fix": "Keep figure text; drop only pure noise"
+  },
+  {
+   "id": 2,
+   "title": "Assumed headings appear in outline order (multi-column pages)",
+   "caught_by": "warning",
+   "how": "Converter warnings: six headings 'not located'",
+   "fix": "Locate each heading in its own page window"
+  },
+  {
+   "id": 3,
+   "title": "Hidden control characters in outline titles",
+   "caught_by": "warning",
+   "how": "Same warnings",
+   "fix": "Strip control characters"
+  },
+  {
+   "id": 4,
+   "title": "Page-number footer leaked into a section; empty stub chapters",
+   "caught_by": "spot",
+   "how": "Spot check against the PDF",
+   "fix": "Strip page numbers; skip title-only stubs"
+  },
+  {
+   "id": 5,
+   "title": "A download was for a different product (Play mk3 vs MK3)",
+   "caught_by": "reading",
+   "how": "Reading the document's own title",
+   "fix": "Not ingested; correct file matched by content"
+  },
+  {
+   "id": 6,
+   "title": "Other-language text leaked into English sections",
+   "caught_by": "reading",
+   "how": "Reading the converted output",
+   "fix": "Crop to the English column; cut at first non-English heading"
+  },
+  {
+   "id": 7,
+   "title": "Running page headers used as section titles",
+   "caught_by": "reading",
+   "how": "Reading the converted output",
+   "fix": "Explicit heading patterns per manual"
+  },
+  {
+   "id": 8,
+   "title": "Spec parser misread numbers (1,000 mA as 0; wrong rail; a row size as a width)",
+   "caught_by": "evidence",
+   "how": "Wrong-looking numbers, the disagree flag, raw evidence lines",
+   "fix": "Line-anchored, sign-aware patterns; override with reasoning"
+  },
+  {
+   "id": 9,
+   "title": "A non-UTF-8 page crashed the fetcher",
+   "caught_by": "crash",
+   "how": "The crash",
+   "fix": "Tolerant decoding"
+  },
+  {
+   "id": 10,
+   "title": "A fix silently did not apply; the table looked fresh",
+   "caught_by": "reading",
+   "how": "A value that should have changed still read 0",
+   "fix": "Confirm changes took effect; regression diff"
+  },
+  {
+   "id": 11,
+   "title": "Tags that match everywhere carry no information",
+   "caught_by": "reading",
+   "how": "Reading tag frequencies",
+   "fix": "Heading-only tags; drop the bare word 'gate'"
+  }
+ ]
+}

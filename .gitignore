@@ -22,3 +22,6 @@ __pycache__/
 # --- anything private lives outside the repository; these patterns are a second safety net ---
 private/
 *.private.md
+
+# --- generated public site (rebuilt by CI) ---
+public/

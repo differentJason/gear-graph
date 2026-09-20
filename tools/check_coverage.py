@@ -26,7 +26,7 @@ def body(path):
 
 def main():
     manifest = yaml.safe_load((ROOT / "tools" / "manifest.yaml").read_text())["manuals"]
-    failed = False
+    failed, results = False, []
     for m in manifest:
         pdf, out = ROOT / m["pdf"], ROOT / "docs" / "manuals" / m["id"]
         if not pdf.exists() or not out.exists():
@@ -51,8 +51,11 @@ def main():
         missing = sorted(((a[t] - b[t], t) for t in a if b[t] < a[t]), reverse=True)[:12]
         flag = "" if min(uniq, occ) >= 0.95 else "   <-- BELOW 95%"
         failed |= bool(flag)
+        results.append({"id": m["id"], "unique_word_recall": round(uniq, 6), "occurrence_recall": round(occ, 6)})
         print(f"{m['id']}: unique-word recall {uniq:.1%}, occurrence recall {occ:.1%}{flag}")
         print("   most-missing:", ", ".join(f"{t}(-{n})" for n, t in missing))
+    (ROOT / "data").mkdir(exist_ok=True)
+    (ROOT / "data" / "coverage.json").write_text(__import__("json").dumps(results, indent=1))
     sys.exit(1 if failed else 0)
 
 

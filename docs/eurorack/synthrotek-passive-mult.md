@@ -42,7 +42,7 @@ content_status: generated
 | -12V (mA) | 0 | inferred | Same as +12V. |
 | +5V (mA) | 0 | inferred | Same as +12V. |
 
-*confirmed = two or more sources agree; single = one source only; inferred/override = a decision with the reasoning shown; missing = not stated anywhere I could read.*
+*confirmed = two or more sources agree; single = one source only; inferred/override = a decision with the reasoning shown; missing = not stated in any source that could be read.*
 
 ## Evidence: the exact lines each number came from
 
