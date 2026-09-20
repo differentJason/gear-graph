@@ -1,0 +1,114 @@
+{
+ "id": "behringer-cp1a",
+ "fetched": "2026-09-20",
+ "match_note": null,
+ "sources": [
+  {
+   "tier": "community",
+   "url": "https://modulargrid.net/e/behringer-cp1-a",
+   "http": "200",
+   "values": {
+    "hp": 4,
+    "hp_line": "4 HP",
+    "depth_mm": 39,
+    "depth_mm_line": "39 mm deep",
+    "ma_p12": 1000,
+    "ma_p12_line": "• Eurorack specs: 4 HP, 1000 mA +12 V, 1000 mA -12 V, 500 mA +5 V",
+    "ma_m12": 1000,
+    "ma_m12_line": "• Eurorack specs: 4 HP, 1000 mA +12 V, 1000 mA -12 V, 500 mA +5 V",
+    "ma_p5": 500,
+    "ma_p5_line": "• Eurorack specs: 4 HP, 1000 mA +12 V, 1000 mA -12 V, 500 mA +5 V"
+   }
+  },
+  {
+   "tier": "retailer",
+   "url": "https://www.perfectcircuit.com/behringer-cp1a.html",
+   "http": "403",
+   "values": {}
+  },
+  {
+   "tier": "retailer",
+   "url": "https://www.sweetwater.com/store/detail/BehrCP1A--behringer-cp1a-power-supply-module-for-eurorack-system",
+   "http": "403",
+   "values": {}
+  },
+  {
+   "tier": "retailer",
+   "url": "https://www.altomusic.com/products/behringer-cp1a-high-performance-power-supply-module-for-eurorack",
+   "http": "200",
+   "values": {
+    "hp": 84,
+    "hp_line": "The Behringer CP1A has enough juice to handle up to 10 modules (a complete 84HP row) with 1000mA/35 watts DC power in a slim, easy-mounting Eurorack size. Expec",
+    "ma_p12": 1000,
+    "ma_p12_line": "Eurorack specs: 4 HP, 1000 mA +12 V, 1000 mA -12 V, 500 mA +5 V",
+    "ma_m12": 1000,
+    "ma_m12_line": "Eurorack specs: 4 HP, 1000 mA +12 V, 1000 mA -12 V, 500 mA +5 V",
+    "ma_p5": 500,
+    "ma_p5_line": "Eurorack specs: 4 HP, 1000 mA +12 V, 1000 mA -12 V, 500 mA +5 V"
+   }
+  }
+ ],
+ "agreement": {
+  "hp": {
+   "status": "DISAGREE",
+   "values": [
+    [
+     "community",
+     4
+    ],
+    [
+     "retailer",
+     84
+    ]
+   ]
+  },
+  "depth_mm": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     39
+    ]
+   ]
+  },
+  "ma_p12": {
+   "status": "agree",
+   "values": [
+    [
+     "community",
+     1000
+    ],
+    [
+     "retailer",
+     1000
+    ]
+   ]
+  },
+  "ma_m12": {
+   "status": "agree",
+   "values": [
+    [
+     "community",
+     1000
+    ],
+    [
+     "retailer",
+     1000
+    ]
+   ]
+  },
+  "ma_p5": {
+   "status": "agree",
+   "values": [
+    [
+     "community",
+     500
+    ],
+    [
+     "retailer",
+     500
+    ]
+   ]
+  }
+ }
+}

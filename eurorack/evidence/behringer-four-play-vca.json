@@ -1,0 +1,108 @@
+{
+ "id": "behringer-four-play-vca",
+ "fetched": "2026-09-20",
+ "match_note": null,
+ "sources": [
+  {
+   "tier": "community",
+   "url": "https://modulargrid.net/e/behringer-four-play",
+   "http": "200",
+   "values": {
+    "hp": 12,
+    "hp_line": "12 HP",
+    "depth_mm": 41,
+    "depth_mm_line": "41 mm deep",
+    "ma_p12": 100,
+    "ma_p12_line": "100 mA +12V",
+    "ma_m12": 100,
+    "ma_m12_line": "100 mA -12V",
+    "ma_p5": 0,
+    "ma_p5_line": "0 mA 5V"
+   }
+  },
+  {
+   "tier": "retailer",
+   "url": "https://www.perfectcircuit.com/behringer-four-play.html",
+   "http": "403",
+   "values": {}
+  },
+  {
+   "tier": "retailer",
+   "url": "https://www.altomusic.com/products/behringer-four-play-quad-vca-and-mixer-eurorack-module",
+   "http": "200",
+   "values": {
+    "hp": 12,
+    "hp_line": "Eurorack specs: 12 HP, 100 mA +12V, 100 mA -12V",
+    "ma_p12": 100,
+    "ma_p12_line": "Eurorack specs: 12 HP, 100 mA +12V, 100 mA -12V",
+    "ma_m12": 100,
+    "ma_m12_line": "Eurorack specs: 12 HP, 100 mA +12V, 100 mA -12V"
+   }
+  },
+  {
+   "tier": "retailer",
+   "url": "https://www.long-mcquade.com/405197/Keyboards/Synthesizers-Drum-Machines/Behringer/Four-Play-Quad-VCA-and-Mixer-Module.htm",
+   "http": "200",
+   "values": {}
+  }
+ ],
+ "agreement": {
+  "hp": {
+   "status": "agree",
+   "values": [
+    [
+     "community",
+     12
+    ],
+    [
+     "retailer",
+     12
+    ]
+   ]
+  },
+  "depth_mm": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     41
+    ]
+   ]
+  },
+  "ma_p12": {
+   "status": "agree",
+   "values": [
+    [
+     "community",
+     100
+    ],
+    [
+     "retailer",
+     100
+    ]
+   ]
+  },
+  "ma_m12": {
+   "status": "agree",
+   "values": [
+    [
+     "community",
+     100
+    ],
+    [
+     "retailer",
+     100
+    ]
+   ]
+  },
+  "ma_p5": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     0
+    ]
+   ]
+  }
+ }
+}

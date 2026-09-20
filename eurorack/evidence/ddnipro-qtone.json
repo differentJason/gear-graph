@@ -1,0 +1,71 @@
+{
+ "id": "ddnipro-qtone",
+ "fetched": "2026-09-20",
+ "match_note": null,
+ "sources": [
+  {
+   "tier": "community",
+   "url": "https://modulargrid.net/e/dnipro-modular-qtone",
+   "http": "200",
+   "values": {
+    "hp": 6,
+    "hp_line": "6 HP",
+    "depth_mm": 42,
+    "depth_mm_line": "42 mm deep",
+    "ma_p12": 45,
+    "ma_p12_line": "45 mA +12V",
+    "ma_m12": 22,
+    "ma_m12_line": "22 mA -12V",
+    "ma_p5": 0,
+    "ma_p5_line": "0 mA 5V"
+   }
+  }
+ ],
+ "agreement": {
+  "hp": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     6
+    ]
+   ]
+  },
+  "depth_mm": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     42
+    ]
+   ]
+  },
+  "ma_p12": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     45
+    ]
+   ]
+  },
+  "ma_m12": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     22
+    ]
+   ]
+  },
+  "ma_p5": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     0
+    ]
+   ]
+  }
+ }
+}

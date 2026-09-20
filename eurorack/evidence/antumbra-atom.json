@@ -1,0 +1,102 @@
+{
+ "id": "antumbra-atom",
+ "fetched": "2026-09-20",
+ "match_note": null,
+ "sources": [
+  {
+   "tier": "official",
+   "url": "https://antumbra.eu/redesign/atom",
+   "http": "200",
+   "values": {
+    "hp": 18,
+    "hp_line": "18HP",
+    "ma_p12": 130,
+    "ma_p12_line": "+12V: 130mA",
+    "ma_m12": 10,
+    "ma_m12_line": "-12V: 10mA",
+    "ma_p5": 0,
+    "ma_p5_line": "+5V: 0mA"
+   }
+  },
+  {
+   "tier": "community",
+   "url": "https://modulargrid.net/e/antumbra-atom",
+   "http": "200",
+   "values": {
+    "hp": 18,
+    "hp_line": "18 HP",
+    "depth_mm": 33,
+    "depth_mm_line": "33 mm deep",
+    "ma_p12": 130,
+    "ma_p12_line": "130 mA +12V",
+    "ma_m12": 10,
+    "ma_m12_line": "10 mA -12V",
+    "ma_p5": 0,
+    "ma_p5_line": "0 mA 5V"
+   }
+  }
+ ],
+ "agreement": {
+  "hp": {
+   "status": "agree",
+   "values": [
+    [
+     "official",
+     18
+    ],
+    [
+     "community",
+     18
+    ]
+   ]
+  },
+  "depth_mm": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     33
+    ]
+   ]
+  },
+  "ma_p12": {
+   "status": "agree",
+   "values": [
+    [
+     "official",
+     130
+    ],
+    [
+     "community",
+     130
+    ]
+   ]
+  },
+  "ma_m12": {
+   "status": "agree",
+   "values": [
+    [
+     "official",
+     10
+    ],
+    [
+     "community",
+     10
+    ]
+   ]
+  },
+  "ma_p5": {
+   "status": "agree",
+   "values": [
+    [
+     "official",
+     0
+    ],
+    [
+     "community",
+     0
+    ]
+   ]
+  }
+ }
+}

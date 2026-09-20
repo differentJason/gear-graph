@@ -1,0 +1,83 @@
+# Human decisions layered on top of the fetched evidence (eurorack/evidence/*.json).
+# `function` lines come from ModularGrid / retailer descriptions surfaced by web search: short and NOT verified against manuals.
+# A field override (value + basis) is shown on the module page as "inferred" or "override" with its reasoning.
+# `role: supply` marks a power supply: its rail numbers are CAPACITY, not draw.
+
+behringer-cp1a:
+  role: supply
+  connections: 14
+  function: "Eurorack power supply: +12V, -12V and +5V rails"
+  notes: "ModularGrid: ships with two flying bus board ribbons, each with 7 power connections for modules (14 total). How your case distributes power is not recorded."
+  hp: {value: 4, status: override, basis: "ModularGrid says '4 HP' and gives module dimensions '129 x 20 x 52 mm (4HP)'. The retailer's '84HP' is the row size the supply can power ('a complete 84HP row'), not the module's width."}
+
+behringer-961-interface:
+  function: "Trigger converter: V-trig / S-trig conversion and audio-to-trigger"
+behringer-1003-dual-envelope-generator:
+  function: "Dual ADSR envelope generator (ARP 2500 style)"
+behringer-space-fx:
+  function: "Stereo multi-effects engine (reverbs, delays, modulation)"
+  notes: "Sources disagree on power in the wild: ModularGrid lists 90 mA / 25 mA, while other listings quote 100 mA / 30 mA and 41 mm depth (ModularGrid says 30 mm). Only ModularGrid could be parsed."
+behringer-four-play-vca:
+  function: "Quad VCA and mixer"
+
+after-later-audio-dice:
+  function: "Random sampler (clone of Mutable Instruments Marbles)"
+after-later-audio-resonate:
+  function: "Resonator (clone of Mutable Instruments Rings)"
+ugrids:
+  function: "Topographic drum sequencer (micro version of Mutable Instruments Grids)"
+after-later-audio-pixie:
+  function: "Macro-oscillator (clone of Mutable Instruments Plaits)"
+antumbra-atom:
+  function: "Modal synthesis voice (smaller redesign of Mutable Instruments Elements); DIY build"
+
+cre8audio-cellz:
+  function: "Dual CV generator with 16 touch pads (controller / sequencer)"
+cre8audio-captain-big-o:
+  function: "Analog VCO with waveshaping (Cre8audio x Pittsburgh Modular)"
+cre8audio-mr-philter:
+  function: "Filter + VCA + envelope generator"
+erica-synths-black-dual-vcf:
+  function: "Dual multimode filter with spectrum analyser"
+erica-pico-mod:
+  function: "Envelope generator + VCA (Pico MODulator)"
+tiptop-audio-forbidden-planet-filter:
+  function: "Multimode filter (high-pass, band-pass, low-pass)"
+cosmotronic-delta-v:
+  function: "Dual function generator (envelope / LFO / slew) with per-channel VCA"
+ddnipro-qtone:
+  function: "Dual-channel quantizer with 16 user-defined scales"
+zlob-fade-lfo:
+  function: "LFO with skew and voltage-controlled crossfade between sine and square (Skew Fade LFO)"
+
+synthrotek-passive-mult:
+  function: "Passive multiple: 2x 1-to-3 or one 1-to-6"
+  ma_p12: {value: 0, status: inferred, basis: "Passive multiple: no active circuitry, and ModularGrid lists no power draw. Inferred, not stated by a source."}
+  ma_m12: {value: 0, status: inferred, basis: "Same as +12V."}
+  ma_p5:  {value: 0, status: inferred, basis: "Same as +12V."}
+moth-hunter-mods-razcalito:
+  function: "Random-style CV / color-cycling effect module (described as passive)"
+  ma_p12: {value: 0, status: inferred, basis: "Described on ModularGrid as a 'passive' module needing only an incoming control voltage; no power draw listed. Inferred, not stated by a source."}
+  ma_m12: {value: 0, status: inferred, basis: "Same as +12V."}
+  ma_p5:  {value: 0, status: inferred, basis: "Same as +12V."}
+
+intellijel-stereo-line-out-1u:
+  function: "Stereo line-out stage with 1/8 inch L/R inputs and level control (1U format); feeds the Jacks module"
+intellijel-audio-stereo-line-out-jacks-1u:
+  function: "Balanced 1/4 inch TRS L/R output jacks (1U format); pairs with the Stereo Line Out 1U"
+  ma_p12: {value: 0, status: inferred, basis: "Jacks-only panel; ModularGrid lists no power draw. Inferred, not stated by a source."}
+  ma_m12: {value: 0, status: inferred, basis: "Same as +12V."}
+  ma_p5:  {value: 0, status: inferred, basis: "Same as +12V."}
+
+jakes-clock-and-musical-divider:
+  function: "Clock with an 8-bit binary divider (/2 to /256) and clock-thru output"
+  notes: "Official datasheet (Rev C, V3.1, 2022-11-20) supplied by the owner: current draw is a MAX of 90 mA on +12V, 0 on +5V and -12V; panel 40.3 x 128.5 mm (8HP x 3U); depth 15 mm; power via 10-pin shrouded IDC (Doepfer standard). The maker's product page itself has no specs."
+intellijel-quadratt-1u:
+  function: "Quad attenuator / attenuverter / mixer and DC voltage source (1U format)"
+intellijel-stereo-mixer-1u:
+  function: "Stereo audio mixer (1U format)"
+cre8audio-niftycase:
+  role: supply
+  connections: 10
+  function: "Powered 84 HP Eurorack case with MIDI-to-CV, a built-in switching supply and a 10-gang flying bus"
+  notes: "Official page: up to 10 modules on the 10-gang flying bus; MIDI in via USB and 5-pin DIN. The three rail figures are labelled 'peak output' with a ** footnote I could not find on the page, so treat them as peak, not continuous. The 'width' below is the case's usable area, not a module."

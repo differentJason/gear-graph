@@ -1,0 +1,64 @@
+{
+ "id": "intellijel-stereo-line-out-1u",
+ "fetched": "2026-09-20",
+ "match_note": "Owner confirmed these are the modules he bought (screenshot of a shop listing). 1U (Intellijel format) module.",
+ "sources": [
+  {
+   "tier": "community",
+   "url": "https://modulargrid.net/e/intellijel-stereo-line-out-1u",
+   "http": "200",
+   "values": {
+    "hp": 8,
+    "hp_line": "8 HP",
+    "depth_mm": 29,
+    "depth_mm_line": "29 mm deep",
+    "ma_p12": 19,
+    "ma_p12_line": "19 mA +12V",
+    "ma_m12": 12,
+    "ma_m12_line": "12 mA -12V"
+   }
+  }
+ ],
+ "agreement": {
+  "hp": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     8
+    ]
+   ]
+  },
+  "depth_mm": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     29
+    ]
+   ]
+  },
+  "ma_p12": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     19
+    ]
+   ]
+  },
+  "ma_m12": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     12
+    ]
+   ]
+  },
+  "ma_p5": {
+   "status": "none",
+   "values": []
+  }
+ }
+}

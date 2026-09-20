@@ -1,0 +1,102 @@
+{
+ "id": "after-later-audio-pixie",
+ "fetched": "2026-09-20",
+ "match_note": null,
+ "sources": [
+  {
+   "tier": "official",
+   "url": "https://afterlateraudio.com/products/pixie",
+   "http": "200",
+   "values": {
+    "hp": 12,
+    "hp_line": "Width: 12hp",
+    "ma_p12": 50,
+    "ma_p12_line": "12V: 50mA",
+    "ma_m12": 5,
+    "ma_m12_line": "-12V: 5mA"
+   }
+  },
+  {
+   "tier": "community",
+   "url": "https://modulargrid.net/e/after-later-audio-pixie",
+   "http": "200",
+   "values": {
+    "hp": 12,
+    "hp_line": "12 HP",
+    "depth_mm": 25,
+    "depth_mm_line": "25 mm deep",
+    "ma_p12": 50,
+    "ma_p12_line": "50 mA +12V",
+    "ma_m12": 5,
+    "ma_m12_line": "5 mA -12V",
+    "ma_p5": 0,
+    "ma_p5_line": "0 mA 5V"
+   }
+  },
+  {
+   "tier": "retailer",
+   "url": "https://www.perfectcircuit.com/after-later-pixie.html",
+   "http": "403",
+   "values": {}
+  }
+ ],
+ "agreement": {
+  "hp": {
+   "status": "agree",
+   "values": [
+    [
+     "official",
+     12
+    ],
+    [
+     "community",
+     12
+    ]
+   ]
+  },
+  "depth_mm": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     25
+    ]
+   ]
+  },
+  "ma_p12": {
+   "status": "agree",
+   "values": [
+    [
+     "official",
+     50
+    ],
+    [
+     "community",
+     50
+    ]
+   ]
+  },
+  "ma_m12": {
+   "status": "agree",
+   "values": [
+    [
+     "official",
+     5
+    ],
+    [
+     "community",
+     5
+    ]
+   ]
+  },
+  "ma_p5": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     0
+    ]
+   ]
+  }
+ }
+}

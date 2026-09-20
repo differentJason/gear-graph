@@ -1,0 +1,71 @@
+{
+ "id": "cre8audio-captain-big-o",
+ "fetched": "2026-09-20",
+ "match_note": "ModularGrid spells it Capt'n Big-O",
+ "sources": [
+  {
+   "tier": "community",
+   "url": "https://modulargrid.net/e/cre8audio-capt-n-big-o",
+   "http": "200",
+   "values": {
+    "hp": 14,
+    "hp_line": "14 HP",
+    "depth_mm": 26,
+    "depth_mm_line": "Depth = 26mm",
+    "ma_p12": 120,
+    "ma_p12_line": "120 mA +12V",
+    "ma_m12": 108,
+    "ma_m12_line": "108 mA -12V",
+    "ma_p5": 0,
+    "ma_p5_line": "0 mA 5V"
+   }
+  }
+ ],
+ "agreement": {
+  "hp": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     14
+    ]
+   ]
+  },
+  "depth_mm": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     26
+    ]
+   ]
+  },
+  "ma_p12": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     120
+    ]
+   ]
+  },
+  "ma_m12": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     108
+    ]
+   ]
+  },
+  "ma_p5": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     0
+    ]
+   ]
+  }
+ }
+}

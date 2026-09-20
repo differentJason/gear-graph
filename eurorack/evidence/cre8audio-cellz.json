@@ -1,0 +1,71 @@
+{
+ "id": "cre8audio-cellz",
+ "fetched": "2026-09-20",
+ "match_note": null,
+ "sources": [
+  {
+   "tier": "community",
+   "url": "https://modulargrid.net/e/cre8audio-cellz",
+   "http": "200",
+   "values": {
+    "hp": 12,
+    "hp_line": "12 HP",
+    "depth_mm": 30,
+    "depth_mm_line": "30 mm deep",
+    "ma_p12": 3,
+    "ma_p12_line": "3 mA +12V",
+    "ma_m12": 2,
+    "ma_m12_line": "2 mA -12V",
+    "ma_p5": 27,
+    "ma_p5_line": "27 mA 5V"
+   }
+  }
+ ],
+ "agreement": {
+  "hp": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     12
+    ]
+   ]
+  },
+  "depth_mm": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     30
+    ]
+   ]
+  },
+  "ma_p12": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     3
+    ]
+   ]
+  },
+  "ma_m12": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     2
+    ]
+   ]
+  },
+  "ma_p5": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     27
+    ]
+   ]
+  }
+ }
+}

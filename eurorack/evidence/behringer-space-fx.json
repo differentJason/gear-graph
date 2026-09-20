@@ -1,0 +1,96 @@
+{
+ "id": "behringer-space-fx",
+ "fetched": "2026-09-20",
+ "match_note": null,
+ "sources": [
+  {
+   "tier": "community",
+   "url": "https://modulargrid.net/e/behringer-space-fx",
+   "http": "200",
+   "values": {
+    "hp": 14,
+    "hp_line": "14 HP",
+    "depth_mm": 30,
+    "depth_mm_line": "30 mm deep",
+    "ma_p12": 90,
+    "ma_p12_line": "90 mA +12V",
+    "ma_m12": 25,
+    "ma_m12_line": "25 mA -12V",
+    "ma_p5": 0,
+    "ma_p5_line": "0 mA 5V"
+   }
+  },
+  {
+   "tier": "retailer",
+   "url": "https://www.perfectcircuit.com/behringer-space-fx.html",
+   "http": "403",
+   "values": {}
+  },
+  {
+   "tier": "retailer",
+   "url": "https://www.andertons.co.uk/behringer-space-fx-24-bit-stereo-multi-effects-engine-eurorack-module/",
+   "http": "200",
+   "values": {
+    "hp": 14,
+    "hp_line": "Unit Size: 71 x 129 x 41 mm / 2.8 x 5.08 x 1.6\" 14 hp"
+   }
+  },
+  {
+   "tier": "retailer",
+   "url": "https://www.riffsandlicks.com.au/behringer-space-fx-multi-fx-engine-eurorack-module",
+   "http": "403",
+   "values": {}
+  }
+ ],
+ "agreement": {
+  "hp": {
+   "status": "agree",
+   "values": [
+    [
+     "community",
+     14
+    ],
+    [
+     "retailer",
+     14
+    ]
+   ]
+  },
+  "depth_mm": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     30
+    ]
+   ]
+  },
+  "ma_p12": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     90
+    ]
+   ]
+  },
+  "ma_m12": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     25
+    ]
+   ]
+  },
+  "ma_p5": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     0
+    ]
+   ]
+  }
+ }
+}

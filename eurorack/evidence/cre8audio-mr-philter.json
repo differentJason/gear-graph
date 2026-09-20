@@ -1,0 +1,71 @@
+{
+ "id": "cre8audio-mr-philter",
+ "fetched": "2026-09-20",
+ "match_note": "ModularGrid spells it Mr. Phil Ter",
+ "sources": [
+  {
+   "tier": "community",
+   "url": "https://modulargrid.net/e/cre8audio-mr-phil-ter",
+   "http": "200",
+   "values": {
+    "hp": 12,
+    "hp_line": "12 HP",
+    "depth_mm": 26,
+    "depth_mm_line": "Depth = 26mm",
+    "ma_p12": 33,
+    "ma_p12_line": "33 mA +12V",
+    "ma_m12": 36,
+    "ma_m12_line": "36 mA -12V",
+    "ma_p5": 22,
+    "ma_p5_line": "22 mA 5V"
+   }
+  }
+ ],
+ "agreement": {
+  "hp": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     12
+    ]
+   ]
+  },
+  "depth_mm": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     26
+    ]
+   ]
+  },
+  "ma_p12": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     33
+    ]
+   ]
+  },
+  "ma_m12": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     36
+    ]
+   ]
+  },
+  "ma_p5": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     22
+    ]
+   ]
+  }
+ }
+}

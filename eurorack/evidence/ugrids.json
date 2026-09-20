@@ -1,0 +1,95 @@
+{
+ "id": "ugrids",
+ "fetched": "2026-09-20",
+ "match_note": null,
+ "sources": [
+  {
+   "tier": "official",
+   "url": "https://afterlateraudio.com/products/ugrids",
+   "http": "200",
+   "values": {
+    "hp": 8,
+    "hp_line": "Width: 8hp",
+    "ma_p12": 25,
+    "ma_p12_line": "12V: 25mA",
+    "ma_m12": 1,
+    "ma_m12_line": "-12V: 1mA"
+   }
+  },
+  {
+   "tier": "community",
+   "url": "https://modulargrid.net/e/after-later-audio-ugrids",
+   "http": "200",
+   "values": {
+    "hp": 8,
+    "hp_line": "8 HP",
+    "ma_p12": 25,
+    "ma_p12_line": "25 mA +12V",
+    "ma_m12": 1,
+    "ma_m12_line": "1 mA -12V",
+    "ma_p5": 0,
+    "ma_p5_line": "0 mA 5V"
+   }
+  },
+  {
+   "tier": "retailer",
+   "url": "https://www.perfectcircuit.com/after-later-ugrids.html",
+   "http": "403",
+   "values": {}
+  }
+ ],
+ "agreement": {
+  "hp": {
+   "status": "agree",
+   "values": [
+    [
+     "official",
+     8
+    ],
+    [
+     "community",
+     8
+    ]
+   ]
+  },
+  "depth_mm": {
+   "status": "none",
+   "values": []
+  },
+  "ma_p12": {
+   "status": "agree",
+   "values": [
+    [
+     "official",
+     25
+    ],
+    [
+     "community",
+     25
+    ]
+   ]
+  },
+  "ma_m12": {
+   "status": "agree",
+   "values": [
+    [
+     "official",
+     1
+    ],
+    [
+     "community",
+     1
+    ]
+   ]
+  },
+  "ma_p5": {
+   "status": "single",
+   "values": [
+    [
+     "community",
+     0
+    ]
+   ]
+  }
+ }
+}

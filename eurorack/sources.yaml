@@ -1,0 +1,126 @@
+# Where each Eurorack module's specs are read from. tools/fetch_specs.py fetches every URL here and records the
+# extracted numbers plus the raw lines they came from (eurorack/evidence/<id>.json).
+#
+# tier: official  = the manufacturer's own page
+#       retailer  = a shop's spec listing (usually copies the maker's numbers)
+#       community = ModularGrid (user-maintained database)
+# A value is treated as CONFIRMED only when two independent sources agree. Anything else is flagged.
+#
+# Modules NOT listed here could not be identified confidently yet (see inventory.yaml questions).
+modules:
+  behringer-cp1a:
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/behringer-cp1-a"}
+      - {tier: retailer,  url: "https://www.perfectcircuit.com/behringer-cp1a.html"}
+      - {tier: retailer,  url: "https://www.sweetwater.com/store/detail/BehrCP1A--behringer-cp1a-power-supply-module-for-eurorack-system"}
+      - {tier: retailer,  url: "https://www.altomusic.com/products/behringer-cp1a-high-performance-power-supply-module-for-eurorack"}
+  behringer-961-interface:
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/behringer-961"}
+      - {tier: retailer,  url: "https://www.analoguehaven.com/behringer/961/"}
+  behringer-1003-dual-envelope-generator:
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/behringer-1003"}
+      - {tier: retailer,  url: "https://www.perfectcircuit.com/behringer-1003-dual-envelope-generator.html"}
+      - {tier: retailer,  url: "https://www.altomusic.com/products/behringer-1003-dual-envelope-generator-eurorack-module"}
+      - {tier: retailer,  url: "https://www.long-mcquade.com/377088/Keyboards/Synthesizers-Drum-Machines/Behringer/DUAL-ENVELOPE-GENERATOR-MODULE-1003-Legendary-2500-Series-Dual-Envelope-Generator-Module-for-Eurorack.htm"}
+  behringer-space-fx:
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/behringer-space-fx"}
+      - {tier: retailer,  url: "https://www.perfectcircuit.com/behringer-space-fx.html"}
+      - {tier: retailer,  url: "https://www.andertons.co.uk/behringer-space-fx-24-bit-stereo-multi-effects-engine-eurorack-module/"}
+      - {tier: retailer,  url: "https://www.riffsandlicks.com.au/behringer-space-fx-multi-fx-engine-eurorack-module"}
+  behringer-four-play-vca:
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/behringer-four-play"}
+      - {tier: retailer,  url: "https://www.perfectcircuit.com/behringer-four-play.html"}
+      - {tier: retailer,  url: "https://www.altomusic.com/products/behringer-four-play-quad-vca-and-mixer-eurorack-module"}
+      - {tier: retailer,  url: "https://www.long-mcquade.com/405197/Keyboards/Synthesizers-Drum-Machines/Behringer/Four-Play-Quad-VCA-and-Mixer-Module.htm"}
+  after-later-audio-dice:
+    sources:
+      - {tier: official,  url: "https://afterlateraudio.com/products/dice"}
+      - {tier: community, url: "https://modulargrid.net/e/after-later-audio-dice"}
+  after-later-audio-resonate:
+    sources:
+      - {tier: official,  url: "https://afterlateraudio.com/products/resonate"}
+      - {tier: community, url: "https://modulargrid.net/e/after-later-audio-resonate"}
+      - {tier: retailer,  url: "https://www.perfectcircuit.com/after-later-resonate.html"}
+  ugrids:
+    sources:
+      - {tier: official,  url: "https://afterlateraudio.com/products/ugrids"}
+      - {tier: community, url: "https://modulargrid.net/e/after-later-audio-ugrids"}
+      - {tier: retailer,  url: "https://www.perfectcircuit.com/after-later-ugrids.html"}
+  after-later-audio-pixie:
+    sources:
+      - {tier: official,  url: "https://afterlateraudio.com/products/pixie"}
+      - {tier: community, url: "https://modulargrid.net/e/after-later-audio-pixie"}
+      - {tier: retailer,  url: "https://www.perfectcircuit.com/after-later-pixie.html"}
+  antumbra-atom:
+    sources:
+      - {tier: official,  url: "https://antumbra.eu/redesign/atom"}
+      - {tier: community, url: "https://modulargrid.net/e/antumbra-atom"}
+  cre8audio-cellz:
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/cre8audio-cellz"}
+  cre8audio-captain-big-o:
+    match_note: "ModularGrid spells it Capt'n Big-O"
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/cre8audio-capt-n-big-o"}
+  cre8audio-mr-philter:
+    match_note: "ModularGrid spells it Mr. Phil Ter"
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/cre8audio-mr-phil-ter"}
+  erica-synths-black-dual-vcf:
+    match_note: "Owner confirmed this match 2026-09-20. ModularGrid page is titled 'Erica Synths Dual VCF'; confirm it is the Black series module"
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/erica-synths-dual-vcf"}
+  erica-pico-mod:
+    match_note: "Owner confirmed this match 2026-09-20. Closest match is Erica Synths Pico MODulator (envelope + VCA). Owner wrote 'Erica Pico Mod'."
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/erica-synths-pico-modulator"}
+  tiptop-audio-forbidden-planet-filter:
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/tiptop-audio-forbidden-planet"}
+  synthrotek-passive-mult:
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/synthrotek-passive-mult"}
+  moth-hunter-mods-razcalito:
+    match_note: "ModularGrid lists it under 'Other/unknown'."
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/other-unknown-razcalito"}
+  cosmotronic-delta-v:
+    match_note: "ModularGrid also has rev 1 and Silver variants; this is the standard listing."
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/cosmotronic-delta-v"}
+  ddnipro-qtone:
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/dnipro-modular-qtone"}
+  zlob-fade-lfo:
+    match_note: "Owner confirmed this match 2026-09-20. Closest match is Złob Skew Fade LFO. Owner wrote 'Złob Fade LFO'."
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/zlob-skew-fade-lfo"}
+  intellijel-stereo-line-out-1u:
+    match_note: "Owner confirmed these are the modules he bought (screenshot of a shop listing). 1U (Intellijel format) module."
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/intellijel-stereo-line-out-1u"}
+  intellijel-audio-stereo-line-out-jacks-1u:
+    match_note: "Owner confirmed (same screenshot; listing title 'Intellijel Audio Stereo Line Out Jacks 1U'); ModularGrid calls it 'Stereo Line Out JACKS 1U'. Pairs with the Stereo Line Out 1U. 1U (Intellijel format) module."
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/intellijel-stereo-line-out-jacks-1u"}
+  jakes-clock-and-musical-divider:
+    match_note: "Maker confirmed by the owner. The product page has no spec text; the maker's datasheet (Rev C, V3.1, 2022-11-20) was supplied by the owner and is the official source."
+    sources:
+      - {tier: official,  url: "https://jakescustomshop.com/Modules/CLKandMusic/JCS%20Clock%20and%20Musical%20Divider%20Datasheet.pdf"}
+      - {tier: community, url: "https://modulargrid.net/e/jake-s-custom-shop-jcs-clock-and-musical-divider"}
+  intellijel-quadratt-1u:
+    match_note: "Owner confirmed the 1U (Intellijel format) version."
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/intellijel-quadratt-1u"}
+  intellijel-stereo-mixer-1u:
+    match_note: "Identified by the owner from a Perfect Circuit listing (that page returns HTTP 403 to my fetcher, so ModularGrid is used). Written 'dual mono line mixer' in the equipment list."
+    sources:
+      - {tier: community, url: "https://modulargrid.net/e/intellijel-stereo-mixer-1u"}
+  cre8audio-niftycase:
+    match_note: "Case with built-in supply. Rail figures on the page are labelled 'peak output'."
+    sources:
+      - {tier: official, url: "https://www.cre8audio.com/niftycase"}

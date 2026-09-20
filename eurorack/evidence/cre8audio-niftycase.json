@@ -1,0 +1,71 @@
+{
+ "id": "cre8audio-niftycase",
+ "fetched": "2026-09-20",
+ "match_note": "Case with built-in supply. Rail figures on the page are labelled 'peak output'.",
+ "sources": [
+  {
+   "tier": "official",
+   "url": "https://www.cre8audio.com/niftycase",
+   "http": "200",
+   "values": {
+    "hp": 84,
+    "hp_line": "NiftyCASE - Affordable Powered 84hp Eurorack Modular Synthesizer Case with MIDI to CV Conversion - Cre8audio",
+    "depth_mm": 55,
+    "depth_mm_line": "Internal depth = 55mm",
+    "ma_p12": 1500,
+    "ma_p12_line": "+12V - 1500mA peak output**",
+    "ma_m12": 500,
+    "ma_m12_line": "As is, you can plug up to 10 modules into NiftyCASE's 10 gang flying bus that provides a peak 1500mA of +12v, 500mA -12v, and 500mA +5v, covering all industry s",
+    "ma_p5": 500,
+    "ma_p5_line": "As is, you can plug up to 10 modules into NiftyCASE's 10 gang flying bus that provides a peak 1500mA of +12v, 500mA -12v, and 500mA +5v, covering all industry s"
+   }
+  }
+ ],
+ "agreement": {
+  "hp": {
+   "status": "single",
+   "values": [
+    [
+     "official",
+     84
+    ]
+   ]
+  },
+  "depth_mm": {
+   "status": "single",
+   "values": [
+    [
+     "official",
+     55
+    ]
+   ]
+  },
+  "ma_p12": {
+   "status": "single",
+   "values": [
+    [
+     "official",
+     1500
+    ]
+   ]
+  },
+  "ma_m12": {
+   "status": "single",
+   "values": [
+    [
+     "official",
+     500
+    ]
+   ]
+  },
+  "ma_p5": {
+   "status": "single",
+   "values": [
+    [
+     "official",
+     500
+    ]
+   ]
+  }
+ }
+}
