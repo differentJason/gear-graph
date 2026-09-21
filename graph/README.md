@@ -65,17 +65,17 @@ Pages CI reads the committed snapshot and never runs Spark.
 2. **Routing layer**: `connections.yaml` filled for the main studio; `tools/validate_connections.py` checks ids, statuses, placement and
    case capacity. Still to add: check that every named port appears in that device's manual text, with misses reported.
 3. **Graph checks in the validator style**: done in `build_graph.py` (unique ids, no dangling edge endpoints, no private node in the public export, leak scan over `graph/public/`). Not done: orphan-vertex report.
-4. **Query tests**: like `evals/golden.jsonl`, a small set of questions with known answers, run against the graph.
+4. ~~**Query tests**: like `evals/golden.jsonl`, a small set of questions with known answers, run against the graph.~~ Done: `evals/graph_golden.yaml` and `tools/query_graph.py`; each answer is checked by hand-written expectation or by an independent implementation over the raw files.
 5. ~~**Visualisation** on the public site from the committed snapshot.~~ Done: `tools/viz_graph.py` draws three views (schema, wiring, rack) on the public `visuals/graph.md` page from `graph/public/*.json` only.
 
 ## Questions the graph should be able to answer (acceptance tests)
 
-1. What is downstream of the RD-9, and by which medium (audio, MIDI, clock)?
+1. What is downstream of the RD-9, and by which medium (audio, MIDI, clock)? (**done**: q1, q2)
 2. Which modules draw from the same supply, and what is each supply's load? (**done**: this is how the power budget is computed)
-3. Which specs rest on one community source only? (`spec` with one `SOURCED_FROM` edge, tier = community)
-4. Which items have no recorded connection? (degree 0; the honest answer is "not recorded", not "unconnected")
-5. Everything that receives clock, directly or through other devices (BFS from the clock source).
-6. Which manual section describes the port on this cable? (private-only)
+3. Which specs rest on one community source only? (`spec` with one `SOURCED_FROM` edge, tier = community) (**done**: q5)
+4. Which items have no recorded connection? (the honest answer is "not recorded", not "unconnected") (**done**: q6)
+5. Everything that receives clock, directly or through other devices (GraphFrames `shortestPaths` on the reversed graph). (**done**: q2)
+6. Which manual section describes the port on this cable? (private-only; partly done: `validate_connections.py` checks that each named port appears in the device's manual text)
 
 ## Known limits, to be stated in the docs when the graph lands
 

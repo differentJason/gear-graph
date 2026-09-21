@@ -6,7 +6,8 @@
 Errors : unknown ids/setups/media/statuses, a confirmed link with no date, a module placed twice or not at all, a placement
          whose supply is not its case's supply, a case row that is over capacity.
 Warnings: unconfirmed links (they are excluded from conclusions), missing HP figures, unused modules that are placed.
-Not checked yet: that each named port appears in the device's manual (planned; see graph/README.md).
+Ports  : when the converted manuals are present (local only), each named port is looked up in that device's manual text. A port that is
+         not found is a WARNING (the manual may word it differently); devices with no ingested manual are reported as unchecked.
 """
 import re
 import sys
@@ -18,6 +19,11 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 MEDIA = {"audio", "midi", "usb", "clock", "cv", "gate", "power"}
 STATUSES = {"confirmed", "unconfirmed"}
+
+
+def norm(s):
+    """Lower-case, straighten quotes, collapse whitespace, so 'MAIN OUT L/R' matches however the manual wraps it."""
+    return " ".join(s.lower().replace("\u201c", '"').replace("\u201d", '"').replace("\u2019", "'").split())
 
 
 def spec_hp():
@@ -114,6 +120,32 @@ def main():
             if i["category"] == "eurorack-module" and mid in hp and i.get("in_use", True) is not False and (setup, mid) not in placed:
                 err(f"module {mid} is in use but not placed in setup {setup}")
 
+    checked = found = unchecked = 0
+    manuals = ROOT / "docs" / "manuals"
+    if manuals.exists():
+        by_device = defaultdict(list)
+        for m in yaml.safe_load((ROOT / "tools" / "manifest.yaml").read_text())["manuals"]:
+            by_device[m["device"]].append(m["id"])
+
+        def text(device):
+            return norm(" ".join(f.read_text(encoding="utf-8") for mid in by_device[device] for f in (manuals / mid).glob("*.md")))
+
+        cache = {}
+        for l in c.get("links", []):
+            if l.get("status") != "confirmed":
+                continue
+            for dev, port in ((l["from"], l.get("from_port")), (l["to"], l.get("to_port"))):
+                if not port:
+                    continue
+                if dev not in by_device:
+                    unchecked += 1
+                    continue
+                cache.setdefault(dev, text(dev))
+                checked += 1
+                if norm(port) in cache[dev]:
+                    found += 1
+                else:
+                    warn(f"port {port!r} on {dev} was not found in its manual text")
     for w in warnings:
         print("WARNING", w)
     for e in errors:
@@ -121,6 +153,10 @@ def main():
     for (setup, case, fmt), used in sorted(load.items()):
         cap = sum(r["hp"] for r in cases[case]["rows"] if r["format"] == fmt)
         print(f"  {case} [{fmt}]: {used}/{cap} HP")
+    if manuals.exists():
+        print(f"  ports: {found} of {checked} found in the device manuals; {unchecked} on devices with no ingested manual (not checked)")
+    else:
+        print("  ports: not checked (docs/manuals/ is local-only and not present)")
     print(f"checked {len(c.get('links', []))} links, {len(c.get('placements', []))} placements, {len(cases)} cases: "
           f"{len(errors)} error(s), {len(warnings)} warning(s)")
     sys.exit(1 if errors else 0)

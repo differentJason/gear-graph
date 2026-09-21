@@ -36,6 +36,7 @@ them are git-ignored). Anyone re-creating the manual pages needs to obtain the m
 | `docs/about/` | Project documentation |
 | `docs/eurorack/` | Generated Eurorack module pages and the power budget |
 | `evals/golden.jsonl` | Test questions with the pages that answer them |
+| `evals/graph_golden.yaml` | Questions asked of the knowledge graph, with the answers worked out by hand |
 
 ## Pipeline
 

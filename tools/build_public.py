@@ -6,6 +6,7 @@
 
 Inputs (all committed): inventory.yaml, tools/manifest.yaml, eurorack/*, docs/about/*, data/*.json, evals/results.json.
 """
+import hashlib
 import json
 import shutil
 from collections import Counter, OrderedDict
@@ -213,6 +214,11 @@ The full per-module table is on the [power budget page](../eurorack/power-budget
 
     # ---------- knowledge graph ----------
     gr = viz_graph.Graph(ROOT)
+    pub = ROOT / "graph" / "public"
+    ans = json.loads((pub / "answers.json").read_text())
+    if ans["graph_sha256"] != hashlib.sha256((pub / "vertices.json").read_bytes() + (pub / "edges.json").read_bytes()).hexdigest():
+        raise SystemExit("graph/public/answers.json is STALE (the graph snapshot changed). Run: .venv-graph/bin/python tools/query_graph.py")
+    ask_rows = "\n".join(f"| {a['question']} | " + "<br>".join(a["answer"]) + f" | {' and '.join(sorted(a['checks'])) or '-'} |" for a in ans["answers"])
     vt, et = gr.counts()
     cell = lambda x: "-" if x in (None, "") else str(x).replace("|", "/")
     short = viz_graph.short
@@ -266,11 +272,21 @@ jam-location setup is not recorded yet.
 |---|---|---|---|---|
 """ + "\n".join(rack_rows) + """
 
+## Questions the graph answers
+
+Each answer is computed from the graph above and checked: **hand** means the expected answer was worked out by hand from the
+recorded wiring; **cross** means separate code that reads the raw files (no graph) reached the same answer. An empty answer
+means *not recorded*, which is not the same as *not connected*.
+
+| Question | Answer | Checked by |
+|---|---|---|
+""" + ask_rows + """
+
 ## How to read it, and what it leaves out
 
 - **Eurorack patch cables are not recorded.** They change every session, so the graph holds only what stays put:
   which case, which supply, the clock input and the output stage.
-- **Ports are the owner's words** and are not yet checked against each device's manual.
+- **Ports are the owner's words.** Where a device's manual is available to the author, each port name is looked up in its text; devices with no ingested manual (the audio interface, the Digitakt, the Eurorack output module) are unchecked.
 - **The graph inherits the trust levels of its sources.** A single-source spec stays single-source here; see
   [how well each spec is supported](trust.md).
 - **Relationships exist only where they were stated.** A device with no line drawn has no recorded connection; that

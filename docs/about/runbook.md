@@ -35,6 +35,14 @@ computed there and the site build only reads the result:
 .venv/bin/python tools/build_site.py                 # renders the budget page from that snapshot
 ```
 
+```bash
+.venv-graph/bin/python tools/query_graph.py          # ask the graph its questions and check every answer (writes graph/public/answers.json)
+```
+
+`query_graph.py` runs the questions in `evals/graph_golden.yaml` against the committed snapshot. Each answer is checked against a hand-written
+expectation or against separate code that reads the raw files, and it exits non-zero on any mismatch. Re-run it after `build_graph.py`;
+`build_public.py` refuses `answers.json` if the snapshot changed since.
+
 Run `build_graph.py` **before** `build_site.py` whenever placements (`connections.yaml`), specs, overrides,
 `eurorack/attestations.yaml` or an item's `in_use` flag change. If you forget, `build_site.py` stops with
 "budget.json is STALE" instead of publishing an out-of-date budget. Comment-only edits do not count as a change.
