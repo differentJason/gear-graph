@@ -1,0 +1,50 @@
+
+.viz { margin: 1.2rem 0; overflow-x: auto; }
+.viz-svg { width: 100%; height: auto; max-width: 900px; font-family: inherit; }
+.viz-svg .t  { fill: var(--md-default-fg-color); font-size: 12.5px; }
+.viz-svg .tb { fill: var(--md-default-fg-color); font-size: 12.5px; font-weight: 700; }
+.viz-svg .tm { fill: var(--md-default-fg-color--light); font-size: 11.5px; }
+.viz-svg .tiny { fill: var(--md-default-fg-color--light); font-size: 10.5px; }
+.viz-svg .cell { fill: #111; font-size: 11px; font-weight: 700; }
+.viz-svg .bt { fill: #111; font-size: 12.5px; font-weight: 700; }
+.viz-svg .bm { fill: #222; font-size: 11.5px; }
+.viz-svg .grid { stroke: var(--md-default-fg-color--lightest); stroke-width: 1; }
+.viz-svg .zebra { fill: var(--md-default-fg-color--lightest); opacity: .35; }
+.viz-svg .edge { stroke: var(--md-default-fg-color--light); stroke-width: 1.6; fill: none; }
+.viz-svg .arrowhead { fill: var(--md-default-fg-color--light); }
+.viz-svg .dot { fill: #0072B2; }
+.viz-svg .bar-draw { fill: #56606b; }
+.viz-svg .bar-ok { fill: #009E73; }
+.viz-svg .bar-over { fill: #D55E00; }
+.viz-svg .st-confirmed { fill: #66d1b0; }
+.viz-svg .st-single { fill: #9ad3f3; }
+.viz-svg .st-inferred { fill: #e7b6d2; }
+.viz-svg .st-override { fill: #f3c76b; }
+.viz-svg .st-missing { fill: #cfcfcf; }
+.viz-svg .st-conflict { fill: #f0906b; }
+.viz-svg .v0 { fill: #7a8794; }
+.viz-svg .v1 { fill: #0072B2; }
+.viz-svg .v2 { fill: #56B4E9; }
+.viz-svg .cv-manual { fill: #66d1b0; }
+.viz-svg .cv-spec { fill: #9ad3f3; }
+.viz-svg .cv-none { fill: #cfcfcf; }
+.viz-svg rect[class^="b-"] { stroke: var(--md-default-fg-color--light); stroke-width: 1.2; }
+.viz-svg .b-local { fill: #f3c76b; stroke-dasharray: 5 3; }
+.viz-svg .b-tool { fill: #9ad3f3; }
+.viz-svg .b-data { fill: #66d1b0; }
+.viz-svg .b-out { fill: #e7b6d2; }
+.viz-svg .b-gate { fill: transparent; stroke-dasharray: 3 3; }
+.viz-note { font-size: .9em; color: var(--md-default-fg-color--light); }
+
+.viz-svg { --m-audio: #2a78d6; --m-usb: #eda100; --m-midi: #eb6834; --m-clock: #1baf7a; }
+[data-md-color-scheme="slate"] .viz-svg { --m-audio: #3987e5; --m-usb: #c98500; --m-midi: #d95926; --m-clock: #199e70; }
+.viz-svg .ln { fill: none; stroke-width: 2.2; stroke-linecap: round; }
+.viz-svg .ln-audio { stroke: var(--m-audio); } .viz-svg .ln-usb { stroke: var(--m-usb); stroke-width: 3; }
+.viz-svg .ln-midi { stroke: var(--m-midi); }   .viz-svg .ln-clock { stroke: var(--m-clock); }
+.viz-svg .ln-none { stroke: var(--md-default-fg-color--light); }
+.viz-svg .mk-audio { fill: var(--m-audio); } .viz-svg .mk-usb { fill: var(--m-usb); }
+.viz-svg .mk-midi { fill: var(--m-midi); }   .viz-svg .mk-clock { fill: var(--m-clock); }
+.viz-svg .elabel { fill: var(--md-default-fg-color--light); font-size: 10.5px; paint-order: stroke; stroke: var(--md-default-bg-color); stroke-width: 3px; }
+.viz-svg .edge.dashed { stroke-dasharray: 6 4; }
+.viz-svg .port { fill: #222; font-size: 10.5px; font-weight: 600; }
+.viz-svg .rackbg { fill: var(--md-default-fg-color--lightest); }

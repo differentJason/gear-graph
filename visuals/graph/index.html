@@ -1,0 +1,2469 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A machine-readable studio gear knowledge base, explained with charts">
+      
+      
+      
+        <link rel="canonical" href="https://differentjason.github.io/gear-graph/visuals/graph/">
+      
+      
+        <link rel="prev" href="../power/">
+      
+      
+        <link rel="next" href="../checks/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Knowledge graph - Gear Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/viz.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#knowledge-graph" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Gear Knowledge Base" class="md-header__button md-logo" aria-label="Gear Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gear Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Knowledge graph
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/differentJason/gear-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    differentJason/gear-graph
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Gear Knowledge Base" class="md-nav__button md-logo" aria-label="Gear Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Gear Knowledge Base
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/differentJason/gear-graph" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    differentJason/gear-graph
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual explanations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Visual explanations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How the pipeline works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coverage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory coverage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trust/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How well each spec is supported
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../power/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Power budget
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge graph
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowledge graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-in-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is in it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-studio-is-wired" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the studio is wired
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-each-module-is-mounted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where each module is mounted
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions-the-graph-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions the graph answers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-read-it-and-what-it-leaves-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to read it, and what it leaves out
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What the checks caught
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../retrieval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Retrieval results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eurorack
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Eurorack
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/power-budget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Power budget
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/after-later-audio-dice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    After Later Audio Dice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/after-later-audio-pixie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    After Later Audio Pixie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/after-later-audio-resonate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    After Later Audio Resonate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/antumbra-atom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Antumbra Atom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/behringer-1003-dual-envelope-generator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Behringer 1003 Dual Envelope Generator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/behringer-961-interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Behringer 961 Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/behringer-cp1a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Behringer CP1A power supply
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/behringer-four-play-vca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Behringer Four Play VCA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/behringer-space-fx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Behringer Space FX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/cosmotronic-delta-v/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cosmotronic Delta-V
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/cre8audio-captain-big-o/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cre8audio Captain Big-O
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/cre8audio-cellz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cre8audio Cellz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/cre8audio-mr-philter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cre8audio Mr. PhilTer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/cre8audio-niftycase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cre8audio NiftyCASE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/ddnipro-qtone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDNIPRO qTone Eurorack Dual Channel Quantiser Module
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/erica-pico-mod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Erica Pico Mod
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/erica-synths-black-dual-vcf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Erica Synths Black Dual VCF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/intellijel-audio-stereo-line-out-jacks-1u/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intellijel Audio Stereo Line Out Jacks 1U
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/intellijel-quadratt-1u/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intellijel Quadratt 1U
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/intellijel-stereo-line-out-1u/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intellijel Stereo Line Out 1U
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/intellijel-stereo-mixer-1u/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intellijel Stereo Mixer 1U
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/jakes-clock-and-musical-divider/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jake's Custom Shop Clock and Musical Divider
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/moth-hunter-mods-razcalito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moth Hunter Mods Razcalito
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/synthrotek-passive-mult/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Synthrotek passive mult
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/tiptop-audio-forbidden-planet-filter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tiptop Audio Forbidden Planet filter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/ugrids/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    uGrids
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eurorack/zlob-fade-lfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Złob Fade LFO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About the project
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About the project
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/verification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How correctness is checked
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Retrieval evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/decisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decision log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/runbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Runbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/limitations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limitations and open questions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Current status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-in-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is in it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-studio-is-wired" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the studio is wired
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-each-module-is-mounted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where each module is mounted
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions-the-graph-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions the graph answers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-read-it-and-what-it-leaves-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to read it, and what it leaves out
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="knowledge-graph">Knowledge graph</h1>
+<p>The graph is <strong>derived</strong> from the files in this repository (the inventory, the recorded wiring, the Eurorack evidence,
+the test questions) and can be rebuilt at any time; nothing is edited in it. The <a href="../power/">power budget</a> is computed
+over it. Below: what it holds, how the studio is wired, and where each Eurorack module is mounted.</p>
+<h2 id="what-is-in-it">What is in it</h2>
+<div class="viz"><svg class="viz-svg" viewBox="0 0 900 410" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg"><title id="t">Structure of the knowledge graph</title><desc id="d">Node types and relationships. category 26; item 76; manual 6; manufacturer 32; question 22; source 49; spec 135; tag 18. Relationships: CONNECTS 16; CONSULTED 49; HAS_MANUAL 6; HAS_SPEC 135; INSTALLED_IN 25; IN_CATEGORY 76; MADE_BY 68; POWERED_BY 24; SOURCED_FROM 153. Section nodes exist only on the author&#x27;s machine.</desc><defs><marker id="sc-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 z" class="arrowhead"/></marker></defs><path d="M175.0 170 L175.0 66" class="edge" marker-end="url(#sc-ar)"/><text x="183.0" y="118.0" class="elabel" text-anchor="start" >MADE_BY 68</text><path d="M175.0 216 L175.0 320" class="edge" marker-end="url(#sc-ar)"/><text x="183.0" y="268.0" class="elabel" text-anchor="start" >IN_CATEGORY 76</text><path d="M240 193.0 L350 193.0" class="edge" marker-end="url(#sc-ar)"/><text x="295.0" y="185.0" class="elabel" text-anchor="middle" >HAS_SPEC 135</text><path d="M415.0 216 L415.0 320" class="edge" marker-end="url(#sc-ar)"/><text x="423.0" y="268.0" class="elabel" text-anchor="start" >SOURCED_FROM 153</text><path d="M240 193.0 L350 43.0" class="edge" marker-end="url(#sc-ar)"/><text x="311.0" y="114.0" class="elabel" text-anchor="start" >HAS_MANUAL 6</text><path d="M480 43.0 L590 43.0" class="edge dashed" marker-end="url(#sc-ar)"/><text x="535.0" y="35.0" class="elabel" text-anchor="middle" >HAS_SECTION (local)</text><path d="M720 43.0 L825.0 170" class="edge dashed" marker-end="url(#sc-ar)"/><text x="778.5" y="106.5" class="elabel" text-anchor="start" >TAGGED (local)</text><path d="M655.0 170 L655.0 66" class="edge dashed" marker-end="url(#sc-ar)"/><text x="663.0" y="118.0" class="elabel" text-anchor="start" >EXPECTS (local)</text><path d="M240 208 L350 338" class="edge" marker-end="url(#sc-ar)"/><text x="326" y="288" class="elabel" text-anchor="start" >CONSULTED 49</text><path d="M110 185 C52 168 52 226 110 209" class="edge" marker-end="url(#sc-ar)"/><text x="8" y="100" class="tb" text-anchor="start" >item → item</text><text x="8" y="118" class="elabel" text-anchor="start" >CONNECTS 16</text><text x="8" y="133" class="elabel" text-anchor="start" >INSTALLED_IN 25</text><text x="8" y="148" class="elabel" text-anchor="start" >POWERED_BY 24</text><g><title>manufacturer: 32 nodes in the public graph</title><rect x="110" y="20" width="130" height="46" rx="6" class="b-tool"/><text x="175.0" y="40" class="bt" text-anchor="middle" >manufacturer</text><text x="175.0" y="56" class="bm" text-anchor="middle" >32 nodes</text></g><g><title>item: 76 nodes in the public graph</title><rect x="110" y="170" width="130" height="46" rx="6" class="b-tool"/><text x="175.0" y="190" class="bt" text-anchor="middle" >item</text><text x="175.0" y="206" class="bm" text-anchor="middle" >76 nodes</text></g><g><title>category: 26 nodes in the public graph</title><rect x="110" y="320" width="130" height="46" rx="6" class="b-tool"/><text x="175.0" y="340" class="bt" text-anchor="middle" >category</text><text x="175.0" y="356" class="bm" text-anchor="middle" >26 nodes</text></g><g><title>manual: 6 nodes in the public graph</title><rect x="350" y="20" width="130" height="46" rx="6" class="b-tool"/><text x="415.0" y="40" class="bt" text-anchor="middle" >manual</text><text x="415.0" y="56" class="bm" text-anchor="middle" >6 nodes</text></g><g><title>spec: 135 nodes in the public graph</title><rect x="350" y="170" width="130" height="46" rx="6" class="b-tool"/><text x="415.0" y="190" class="bt" text-anchor="middle" >spec</text><text x="415.0" y="206" class="bm" text-anchor="middle" >135 nodes</text></g><g><title>source: 49 nodes in the public graph</title><rect x="350" y="320" width="130" height="46" rx="6" class="b-tool"/><text x="415.0" y="340" class="bt" text-anchor="middle" >source</text><text x="415.0" y="356" class="bm" text-anchor="middle" >49 nodes</text></g><g><title>section: local only. Derived from the manufacturers' copyrighted manuals, so it is not in the public graph.</title><rect x="590" y="20" width="130" height="46" rx="6" class="b-local"/><text x="655.0" y="40" class="bt" text-anchor="middle" >section</text><text x="655.0" y="56" class="bm" text-anchor="middle" >local only</text></g><g><title>question: 22 nodes in the public graph</title><rect x="590" y="170" width="130" height="46" rx="6" class="b-tool"/><text x="655.0" y="190" class="bt" text-anchor="middle" >question</text><text x="655.0" y="206" class="bm" text-anchor="middle" >22 nodes</text></g><g><title>tag: 18 nodes in the public graph</title><rect x="760" y="170" width="130" height="46" rx="6" class="b-tool"/><text x="825.0" y="190" class="bt" text-anchor="middle" >tag</text><text x="825.0" y="206" class="bm" text-anchor="middle" >18 nodes</text></g><rect x="8" y="384" width="14" height="10" class="b-tool"/><text x="28" y="393" class="tm" text-anchor="start" >in the public graph (count of nodes)</text><rect x="280" y="384" width="14" height="10" class="b-local"/><text x="300" y="393" class="tm" text-anchor="start" >local only (derived from copyrighted manuals); dashed arrows touch it</text></svg></div>
+
+<p class="viz-note">Boxes are kinds of node with their counts; arrows are kinds of relationship. Dashed arrows and the yellow box are local-only: they come from the manufacturers' copyrighted manuals, so they are not in the public graph.</p>
+
+<table>
+<thead>
+<tr>
+<th>Node type</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category</td>
+<td>26</td>
+</tr>
+<tr>
+<td>item</td>
+<td>76</td>
+</tr>
+<tr>
+<td>manual</td>
+<td>6</td>
+</tr>
+<tr>
+<td>manufacturer</td>
+<td>32</td>
+</tr>
+<tr>
+<td>question</td>
+<td>22</td>
+</tr>
+<tr>
+<td>source</td>
+<td>49</td>
+</tr>
+<tr>
+<td>spec</td>
+<td>135</td>
+</tr>
+<tr>
+<td>tag</td>
+<td>18</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Relationship</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CONNECTS</td>
+<td>16</td>
+</tr>
+<tr>
+<td>CONSULTED</td>
+<td>49</td>
+</tr>
+<tr>
+<td>HAS_MANUAL</td>
+<td>6</td>
+</tr>
+<tr>
+<td>HAS_SPEC</td>
+<td>135</td>
+</tr>
+<tr>
+<td>INSTALLED_IN</td>
+<td>25</td>
+</tr>
+<tr>
+<td>IN_CATEGORY</td>
+<td>76</td>
+</tr>
+<tr>
+<td>MADE_BY</td>
+<td>68</td>
+</tr>
+<tr>
+<td>POWERED_BY</td>
+<td>24</td>
+</tr>
+<tr>
+<td>SOURCED_FROM</td>
+<td>153</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-the-studio-is-wired">How the studio is wired</h2>
+<p>Only what the owner has stated is recorded. A solid line is confirmed; a dashed line is proposed and waiting for an
+answer. Port names are printed inside the boxes, level with their cable. This is the main-studio setup; the alternate
+jam-location setup is not recorded yet.</p>
+<div class="viz"><svg class="viz-svg" viewBox="0 0 900 316" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg"><title id="t">Audio and computer</title><desc id="d">Audio and computer. RD-9 Rhythm Designer to UMC1820 by Audio (confirmed); UMC1820 to Mac Mini M4 by USB (two-way) (confirmed); Analog Four MKII to UMC1820 by Audio (confirmed); Digitakt Mk1 to UMC1820 by Audio (confirmed); Audio Stereo Line Out Jacks to UMC1820 by Audio (confirmed); Stereo Line Out to Audio Stereo Line Out Jacks by Audio (unconfirmed)</desc><defs><marker id="ra-audio" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 z" class="mk-audio"/></marker><marker id="ra-usb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 z" class="mk-usb"/></marker><marker id="ra-midi" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 z" class="mk-midi"/></marker><marker id="ra-clock" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 z" class="mk-clock"/></marker></defs><text x="8" y="18" class="tb" text-anchor="start" >Audio and computer</text><path d="M424.0 66.0 C450.0 66.0 450.0 139.0 476.0 139.0" class="ln ln-audio" marker-end="url(#ra-audio)"><title>Behringer RD-9 Rhythm Designer → Behringer UMC1820: Audio, MONO → Input 1 (confirmed)</title></path><path d="M652.0 153.0 C678.0 153.0 678.0 153.0 704.0 153.0" class="ln ln-usb" marker-end="url(#ra-usb)" marker-start="url(#ra-usb)"><title>Behringer UMC1820 → Mac Mini M4: USB (two-way) (confirmed)</title></path><path d="M424.0 126.0 C450.0 126.0 450.0 155.0 476.0 155.0" class="ln ln-audio" marker-end="url(#ra-audio)"><title>Elektron Analog Four MKII → Behringer UMC1820: Audio, MAIN OUT L/R → Input 3/4 (confirmed)</title></path><path d="M424.0 260.0 C450.0 260.0 450.0 187.0 476.0 187.0" class="ln ln-audio" marker-end="url(#ra-audio)"><title>Elektron Digitakt Mk1 → Behringer UMC1820: Audio, main out (L/R) → Input 7/8 (confirmed)</title></path><path d="M424.0 200.0 C450.0 200.0 450.0 171.0 476.0 171.0" class="ln ln-audio" marker-end="url(#ra-audio)"><title>Intellijel Audio Stereo Line Out Jacks 1U → Behringer UMC1820: Audio, L/R (balanced TRS) → Input 5/6 (confirmed)</title></path><path d="M196.0 153.0 C222.0 153.0 222.0 183.0 248.0 183.0" class="ln ln-audio" marker-end="url(#ra-audio)" stroke-dasharray="7 4"><title>Intellijel Stereo Line Out 1U → Intellijel Audio Stereo Line Out Jacks 1U: Audio (unconfirmed)</title></path><g><title>Intellijel Stereo Line Out 1U</title><rect x="20.0" y="133.0" width="176" height="40" rx="6" class="b-tool"/><text x="108.0" y="149.0" class="bt" text-anchor="middle" >Stereo Line Out</text></g><g><title>Behringer RD-9 Rhythm Designer</title><rect x="248.0" y="34.0" width="176" height="44" rx="6" class="b-tool"/><text x="336.0" y="50.0" class="bt" text-anchor="middle" >RD-9 Rhythm Designer</text></g><g><title>Elektron Analog Four MKII</title><rect x="248.0" y="94.0" width="176" height="44" rx="6" class="b-tool"/><text x="336.0" y="110.0" class="bt" text-anchor="middle" >Analog Four MKII</text></g><g><title>Intellijel Audio Stereo Line Out Jacks 1U</title><rect x="248.0" y="154.0" width="176" height="58" rx="6" class="b-tool"/><text x="336.0" y="170.0" class="bt" text-anchor="middle" >Audio Stereo Line Out</text><text x="336.0" y="184.0" class="bt" text-anchor="middle" >Jacks</text></g><g><title>Elektron Digitakt Mk1</title><rect x="248.0" y="228.0" width="176" height="44" rx="6" class="b-tool"/><text x="336.0" y="244.0" class="bt" text-anchor="middle" >Digitakt Mk1</text></g><g><title>Behringer UMC1820</title><rect x="476.0" y="107.0" width="176" height="92" rx="6" class="b-tool"/><text x="564.0" y="123.0" class="bt" text-anchor="middle" >UMC1820</text></g><g><title>Mac Mini M4</title><rect x="704.0" y="133.0" width="176" height="40" rx="6" class="b-tool"/><text x="792.0" y="149.0" class="bt" text-anchor="middle" >Mac Mini M4</text></g><text x="483.0" y="143.0" class="port" text-anchor="start" >Input 1</text><text x="417.0" y="70.0" class="port" text-anchor="end" >MONO</text><text x="483.0" y="159.0" class="port" text-anchor="start" >Input 3/4</text><text x="417.0" y="130.0" class="port" text-anchor="end" >MAIN OUT L/R</text><text x="483.0" y="191.0" class="port" text-anchor="start" >Input 7/8</text><text x="417.0" y="264.0" class="port" text-anchor="end" >main out (L/R)</text><text x="483.0" y="175.0" class="port" text-anchor="start" >Input 5/6</text><text x="417.0" y="204.0" class="port" text-anchor="end" >L/R (balanced TRS)</text><line x1="8" y1="300" x2="34" y2="300" class="ln ln-audio"/><text x="40" y="304" class="tm" text-anchor="start" >Audio</text><line x1="93.0" y1="300" x2="119.0" y2="300" class="ln ln-usb"/><text x="125.0" y="304" class="tm" text-anchor="start" >USB (two-way)</text><line x1="230.8" y1="300" x2="256.8" y2="300" class="ln ln-none" stroke-dasharray="7 4"/><text x="262.8" y="304" class="tm" text-anchor="start" >dashed = not yet confirmed by the owner</text></svg></div>
+
+<p class="viz-note">Default inputs on the audio interface: 1 drum machine, 2 open, 3/4 Analog Four, 5/6 Eurorack, 7/8 Digitakt. Other gear is swapped in as needed.</p>
+
+<div class="viz"><svg class="viz-svg" viewBox="0 0 900 422" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg"><title id="t">MIDI and clock</title><desc id="d">MIDI and clock. RD-9 Rhythm Designer to KeyStep by Clock / sync (confirmed); RD-9 Rhythm Designer to Clock and Musical Divider by Clock / sync (confirmed); RD-9 Rhythm Designer to SQ-64 by Clock / sync (confirmed); RD-9 Rhythm Designer to MIDI Thru5 by MIDI (confirmed); MIDI Thru5 to K2 by MIDI (confirmed); MIDI Thru5 to Essential B1 by MIDI (confirmed); MIDI Thru5 to Typhon by MIDI (confirmed); MIDI Thru5 to Analog Four MKII by MIDI (confirmed); MIDI Thru5 to Digitakt Mk1 by MIDI (confirmed); MIDI Thru5 to M1 (1993) by MIDI (confirmed)</desc><defs><marker id="rb-audio" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 z" class="mk-audio"/></marker><marker id="rb-usb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 z" class="mk-usb"/></marker><marker id="rb-midi" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 z" class="mk-midi"/></marker><marker id="rb-clock" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 z" class="mk-clock"/></marker></defs><text x="8" y="18" class="tb" text-anchor="start" >MIDI and clock</text><path d="M196.0 192.0 C279.0 192.0 279.0 77.0 362.0 77.0" class="ln ln-clock" marker-end="url(#rb-clock)"><title>Behringer RD-9 Rhythm Designer → Arturia KeyStep: Clock / sync, SYNC OUT (confirmed)</title></path><path d="M196.0 208.0 C279.0 208.0 279.0 136.0 362.0 136.0" class="ln ln-clock" marker-end="url(#rb-clock)"><title>Behringer RD-9 Rhythm Designer → Jake&#x27;s Custom Shop Clock and Musical Divider: Clock / sync, SYNC OUT (confirmed)</title></path><path d="M196.0 224.0 C279.0 224.0 279.0 195.0 362.0 195.0" class="ln ln-clock" marker-end="url(#rb-clock)"><title>Behringer RD-9 Rhythm Designer → Korg SQ-64: Clock / sync, SYNC OUT (confirmed)</title></path><path d="M196.0 240.0 C279.0 240.0 279.0 293.0 362.0 293.0" class="ln ln-midi" marker-end="url(#rb-midi)"><title>Behringer RD-9 Rhythm Designer → MIDI Thru5: MIDI, MIDI OUT (confirmed)</title></path><path d="M538.0 263.0 C621.0 263.0 621.0 56.0 704.0 56.0" class="ln ln-midi" marker-end="url(#rb-midi)"><title>MIDI Thru5 → Behringer K2: MIDI (confirmed, swappable)</title></path><path d="M538.0 279.0 C621.0 279.0 621.0 116.0 704.0 116.0" class="ln ln-midi" marker-end="url(#rb-midi)"><title>MIDI Thru5 → Donner Essential B1: MIDI (confirmed, swappable)</title></path><path d="M538.0 295.0 C621.0 295.0 621.0 176.0 704.0 176.0" class="ln ln-midi" marker-end="url(#rb-midi)"><title>MIDI Thru5 → Dreadbox Typhon: MIDI (confirmed, swappable)</title></path><path d="M538.0 311.0 C621.0 311.0 621.0 236.0 704.0 236.0" class="ln ln-midi" marker-end="url(#rb-midi)"><title>MIDI Thru5 → Elektron Analog Four MKII: MIDI (confirmed, swappable)</title></path><path d="M538.0 327.0 C621.0 327.0 621.0 296.0 704.0 296.0" class="ln ln-midi" marker-end="url(#rb-midi)"><title>MIDI Thru5 → Elektron Digitakt Mk1: MIDI (confirmed, swappable)</title></path><path d="M538.0 343.0 C621.0 343.0 621.0 356.0 704.0 356.0" class="ln ln-midi" marker-end="url(#rb-midi)"><title>MIDI Thru5 → Korg M1 (1993): MIDI (confirmed, swappable)</title></path><g><title>Behringer RD-9 Rhythm Designer</title><rect x="20.0" y="160.0" width="176" height="92" rx="6" class="b-tool"/><text x="108.0" y="176.0" class="bt" text-anchor="middle" >RD-9 Rhythm Designer</text></g><g><title>Arturia KeyStep</title><rect x="362.0" y="57.0" width="176" height="40" rx="6" class="b-tool"/><text x="450.0" y="73.0" class="bt" text-anchor="middle" >KeyStep</text></g><g><title>Jake&#x27;s Custom Shop Clock and Musical Divider</title><rect x="362.0" y="113.0" width="176" height="46" rx="6" class="b-tool"/><text x="450.0" y="129.0" class="bt" text-anchor="middle" >Clock and Musical</text><text x="450.0" y="143.0" class="bt" text-anchor="middle" >Divider</text></g><g><title>Korg SQ-64</title><rect x="362.0" y="175.0" width="176" height="40" rx="6" class="b-tool"/><text x="450.0" y="191.0" class="bt" text-anchor="middle" >SQ-64</text></g><g><title>MIDI Thru5</title><rect x="362.0" y="231.0" width="176" height="124" rx="6" class="b-tool"/><text x="450.0" y="247.0" class="bt" text-anchor="middle" >MIDI Thru5</text></g><g><title>Behringer K2</title><rect x="704.0" y="34.0" width="176" height="44" rx="6" class="b-tool"/><text x="792.0" y="50.0" class="bt" text-anchor="middle" >K2</text><text x="792.0" y="63.0" class="bm" text-anchor="middle" >swappable</text></g><g><title>Donner Essential B1</title><rect x="704.0" y="94.0" width="176" height="44" rx="6" class="b-tool"/><text x="792.0" y="110.0" class="bt" text-anchor="middle" >Essential B1</text><text x="792.0" y="123.0" class="bm" text-anchor="middle" >swappable</text></g><g><title>Dreadbox Typhon</title><rect x="704.0" y="154.0" width="176" height="44" rx="6" class="b-tool"/><text x="792.0" y="170.0" class="bt" text-anchor="middle" >Typhon</text><text x="792.0" y="183.0" class="bm" text-anchor="middle" >swappable</text></g><g><title>Elektron Analog Four MKII</title><rect x="704.0" y="214.0" width="176" height="44" rx="6" class="b-tool"/><text x="792.0" y="230.0" class="bt" text-anchor="middle" >Analog Four MKII</text><text x="792.0" y="243.0" class="bm" text-anchor="middle" >swappable</text></g><g><title>Elektron Digitakt Mk1</title><rect x="704.0" y="274.0" width="176" height="44" rx="6" class="b-tool"/><text x="792.0" y="290.0" class="bt" text-anchor="middle" >Digitakt Mk1</text><text x="792.0" y="303.0" class="bm" text-anchor="middle" >swappable</text></g><g><title>Korg M1 (1993)</title><rect x="704.0" y="334.0" width="176" height="44" rx="6" class="b-tool"/><text x="792.0" y="350.0" class="bt" text-anchor="middle" >M1 (1993)</text><text x="792.0" y="363.0" class="bm" text-anchor="middle" >swappable</text></g><text x="189.0" y="212.0" class="port" text-anchor="end" >SYNC OUT</text><text x="189.0" y="244.0" class="port" text-anchor="end" >MIDI OUT</text><line x1="8" y1="406" x2="34" y2="406" class="ln ln-midi"/><text x="40" y="410" class="tm" text-anchor="start" >MIDI</text><line x1="86.4" y1="406" x2="112.4" y2="406" class="ln ln-clock"/><text x="118.4" y="410" class="tm" text-anchor="start" >Clock / sync</text></svg></div>
+
+<p class="viz-note">The drum machine is the master clock. Any device on the MIDI Thru box can be swapped; the Behringer K2 and the Donner B1 share one output.</p>
+
+<table>
+<thead>
+<tr>
+<th>From</th>
+<th>Port</th>
+<th>To</th>
+<th>Port</th>
+<th>Medium</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RD-9 Rhythm Designer</td>
+<td>MONO</td>
+<td>UMC1820</td>
+<td>Input 1</td>
+<td>Audio</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>Analog Four MKII</td>
+<td>MAIN OUT L/R</td>
+<td>UMC1820</td>
+<td>Input 3/4</td>
+<td>Audio</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>Digitakt Mk1</td>
+<td>main out (L/R)</td>
+<td>UMC1820</td>
+<td>Input 7/8</td>
+<td>Audio</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>Audio Stereo Line Out Jacks</td>
+<td>L/R (balanced TRS)</td>
+<td>UMC1820</td>
+<td>Input 5/6</td>
+<td>Audio</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>Stereo Line Out</td>
+<td>-</td>
+<td>Audio Stereo Line Out Jacks</td>
+<td>-</td>
+<td>Audio</td>
+<td>unconfirmed</td>
+</tr>
+<tr>
+<td>RD-9 Rhythm Designer</td>
+<td>SYNC OUT</td>
+<td>KeyStep</td>
+<td>-</td>
+<td>Clock / sync</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>RD-9 Rhythm Designer</td>
+<td>SYNC OUT</td>
+<td>Clock and Musical Divider</td>
+<td>-</td>
+<td>Clock / sync</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>RD-9 Rhythm Designer</td>
+<td>SYNC OUT</td>
+<td>SQ-64</td>
+<td>-</td>
+<td>Clock / sync</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>RD-9 Rhythm Designer</td>
+<td>MIDI OUT</td>
+<td>MIDI Thru5</td>
+<td>-</td>
+<td>MIDI</td>
+<td>confirmed</td>
+</tr>
+<tr>
+<td>MIDI Thru5</td>
+<td>-</td>
+<td>K2</td>
+<td>-</td>
+<td>MIDI</td>
+<td>confirmed, swappable</td>
+</tr>
+<tr>
+<td>MIDI Thru5</td>
+<td>-</td>
+<td>Essential B1</td>
+<td>-</td>
+<td>MIDI</td>
+<td>confirmed, swappable</td>
+</tr>
+<tr>
+<td>MIDI Thru5</td>
+<td>-</td>
+<td>Typhon</td>
+<td>-</td>
+<td>MIDI</td>
+<td>confirmed, swappable</td>
+</tr>
+<tr>
+<td>MIDI Thru5</td>
+<td>-</td>
+<td>Analog Four MKII</td>
+<td>-</td>
+<td>MIDI</td>
+<td>confirmed, swappable</td>
+</tr>
+<tr>
+<td>MIDI Thru5</td>
+<td>-</td>
+<td>Digitakt Mk1</td>
+<td>-</td>
+<td>MIDI</td>
+<td>confirmed, swappable</td>
+</tr>
+<tr>
+<td>MIDI Thru5</td>
+<td>-</td>
+<td>M1 (1993)</td>
+<td>-</td>
+<td>MIDI</td>
+<td>confirmed, swappable</td>
+</tr>
+<tr>
+<td>UMC1820</td>
+<td>-</td>
+<td>Mac Mini M4</td>
+<td>-</td>
+<td>USB (two-way)</td>
+<td>confirmed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="where-each-module-is-mounted">Where each module is mounted</h2>
+<div class="viz"><svg class="viz-svg" viewBox="0 0 900 588" role="img" aria-labelledby="t d" xmlns="http://www.w3.org/2000/svg"><title id="t">Where each Eurorack module is mounted</title><desc id="d">Cre8audio NiftyCASE: 961 Interface 21 HP, Captain Big-O 14 HP, Cellz 12 HP, Mr. PhilTer 12 HP, qTone Eurorack Dual Channel Quantiser Module 6 HP, Erica Pico Mod 3 HP, Razcalito 4 HP, passive mult 2 HP, uGrids 8 HP; Custom Eurorack case (gutted Sony reel-to-reel): Dice 18 HP, Pixie 12 HP, Resonate 14 HP, Atom 18 HP, 1003 Dual Envelope Generator 16 HP, CP1A power supply 4 HP, Four Play VCA 12 HP, Cosmotronic Delta-V 10 HP, Black Dual VCF 18 HP, Audio Stereo Line Out Jacks 8 HP, Quadratt 28 HP, Stereo Line Out 8 HP, Stereo Mixer 16 HP, Clock and Musical Divider 8 HP, Forbidden Planet filter 8 HP, Złob Fade LFO 3 HP</desc><text x="46" y="20" class="tb" text-anchor="start" >Cre8audio NiftyCASE</text><text x="191" y="20" class="tm" text-anchor="start" >· built-in supply · 82 HP placed in 84 HP of rows</text><rect x="46" y="30" width="781.2" height="118" rx="4" class="rackbg"/><text x="40" y="93.0" class="tm" text-anchor="end" >3U</text><g><title>uGrids: 8 HP; +12V 25 mA (confirmed, owner-attested)</title><rect x="46.0" y="30" width="72.4" height="118" rx="3" class="blk " style="fill:#adcdf3"/><text x="82.2" y="93.0" class="bm" text-anchor="middle" >uGrids</text></g><g><title>Cre8audio Cellz: 12 HP; +12V 3 mA (single, owner-attested)</title><rect x="120.4" y="30" width="109.6" height="118" rx="3" class="blk " style="fill:#bad5f5"/><text x="175.20000000000002" y="93.0" class="bm" text-anchor="middle" >Cellz</text></g><g><title>DDNIPRO qTone Eurorack Dual Channel Quantiser Module: 6 HP; +12V 45 mA (single, owner-attested)</title><rect x="232.0" y="30" width="53.8" height="118" rx="3" class="blk " style="fill:#a1c5f2"/><text x="262.9" y="89.0" class="bm" text-anchor="middle" transform="rotate(-90 262.9 89.0)">qTone Eurorack…</text></g><g><title>Synthrotek passive mult: 2 HP; +12V 0 mA (inferred)</title><rect x="287.8" y="30" width="16.6" height="118" rx="3" class="blk " style="fill:#bcd6f5"/><text x="300.1" y="89.0" class="bm" text-anchor="middle" transform="rotate(-90 300.1 89.0)">passive mult</text></g><g><title>Moth Hunter Mods Razcalito: 4 HP; +12V 0 mA (inferred)</title><rect x="306.4" y="30" width="35.2" height="118" rx="3" class="blk " style="fill:#bcd6f5"/><text x="328.0" y="89.0" class="bm" text-anchor="middle" transform="rotate(-90 328.0 89.0)">Razcalito</text></g><g><title>Cre8audio Captain Big-O: 14 HP; +12V 120 mA (single, owner-attested)</title><rect x="343.6" y="30" width="128.2" height="118" rx="3" class="blk " style="fill:#74aaed"/><text x="407.70000000000005" y="93.0" class="bm" text-anchor="middle" >Captain Big-O</text></g><g><title>Cre8audio Mr. PhilTer: 12 HP; +12V 33 mA (single, owner-attested)</title><rect x="473.8" y="30" width="109.6" height="118" rx="3" class="blk " style="fill:#a8caf3"/><text x="528.6" y="93.0" class="bm" text-anchor="middle" >Mr. PhilTer</text></g><g><title>Erica Pico Mod: 3 HP; +12V 28 mA (single, owner-attested)</title><rect x="585.4" y="30" width="25.9" height="118" rx="3" class="blk " style="fill:#abccf3"/><text x="602.4" y="89.0" class="bm" text-anchor="middle" transform="rotate(-90 602.4 89.0)">Erica Pico Mod</text></g><g><title>Behringer 961 Interface: 21 HP; +12V 50 mA (confirmed, owner-attested)</title><rect x="613.3" y="30" width="193.3" height="118" rx="3" class="blk " style="fill:#9ec4f2"/><text x="709.95" y="93.0" class="bm" text-anchor="middle" >961 Interface</text></g><text x="46" y="184" class="tb" text-anchor="start" >Custom Eurorack case (gutted Sony reel-to-reel)</text><text x="387" y="184" class="tm" text-anchor="start" >· fed by Behringer CP1A power supply · 201 HP placed in 252 HP of rows</text><rect x="46" y="194" width="781.2" height="46" rx="4" class="rackbg"/><text x="40" y="221.0" class="tm" text-anchor="end" >1U</text><g><title>Intellijel Audio Stereo Line Out Jacks 1U: 8 HP; +12V draw not stated</title><rect x="46.0" y="194" width="72.4" height="46" rx="3" class="blk st-missing"/><text x="82.2" y="208.0" class="bm" text-anchor="middle" >Audio</text><text x="82.2" y="221.0" class="bm" text-anchor="middle" >Stereo Line</text><text x="82.2" y="234.0" class="bm" text-anchor="middle" >Out Jacks</text></g><g><title>Intellijel Quadratt 1U: 28 HP; +12V 24 mA (single, owner-attested)</title><rect x="120.4" y="194" width="258.4" height="46" rx="3" class="blk " style="fill:#aecdf3"/><text x="249.60000000000002" y="221.0" class="bm" text-anchor="middle" >Quadratt</text></g><g><title>Intellijel Stereo Line Out 1U: 8 HP; +12V 19 mA (single, owner-attested)</title><rect x="380.8" y="194" width="72.4" height="46" rx="3" class="blk " style="fill:#b1cff4"/><text x="417.0" y="214.5" class="bm" text-anchor="middle" >Stereo Line</text><text x="417.0" y="227.5" class="bm" text-anchor="middle" >Out</text></g><g><title>Intellijel Stereo Mixer 1U: 16 HP; +12V 17 mA (single, owner-attested)</title><rect x="455.2" y="194" width="146.8" height="46" rx="3" class="blk " style="fill:#b2d0f4"/><text x="528.6" y="221.0" class="bm" text-anchor="middle" >Stereo Mixer</text></g><rect x="46" y="246" width="781.2" height="118" rx="4" class="rackbg"/><text x="40" y="309.0" class="tm" text-anchor="end" >3U</text><g><title>Behringer 1003 Dual Envelope Generator: 16 HP; +12V 40 mA (confirmed, owner-attested)</title><rect x="46.0" y="246" width="146.8" height="118" rx="3" class="blk " style="fill:#a4c7f2"/><text x="119.4" y="302.5" class="bm" text-anchor="middle" >1003 Dual Envelope</text><text x="119.4" y="315.5" class="bm" text-anchor="middle" >Generator</text></g><g><title>Antumbra Atom: 18 HP; +12V 130 mA (confirmed, owner-attested)</title><rect x="194.8" y="246" width="165.4" height="118" rx="3" class="blk " style="fill:#6ea6ec"/><text x="277.5" y="309.0" class="bm" text-anchor="middle" >Atom</text></g><g><title>Erica Synths Black Dual VCF: 18 HP; +12V 40 mA (single, owner-attested)</title><rect x="362.2" y="246" width="165.4" height="118" rx="3" class="blk " style="fill:#a4c7f2"/><text x="444.90000000000003" y="309.0" class="bm" text-anchor="middle" >Black Dual VCF</text></g><g><title>Jake&#x27;s Custom Shop Clock and Musical Divider: 8 HP; +12V 90 mA (confirmed, owner-attested)</title><rect x="529.6" y="246" width="72.4" height="118" rx="3" class="blk " style="fill:#86b5ef"/><text x="565.8000000000001" y="296.0" class="bm" text-anchor="middle" >Clock and</text><text x="565.8000000000001" y="309.0" class="bm" text-anchor="middle" >Musical</text><text x="565.8000000000001" y="322.0" class="bm" text-anchor="middle" >Divider</text></g><g><title>Cosmotronic Delta-V: 10 HP; +12V 70 mA (single, owner-attested)</title><rect x="604.0" y="246" width="91.0" height="118" rx="3" class="blk " style="fill:#92bcf0"/><text x="649.5" y="302.5" class="bm" text-anchor="middle" >Cosmotronic</text><text x="649.5" y="315.5" class="bm" text-anchor="middle" >Delta-V</text></g><g><title>Behringer CP1A power supply: 4 HP; +12V 1000 mA (confirmed); power supply</title><rect x="697.0" y="246" width="35.2" height="118" rx="3" class="blk b-out"/><text x="714.6" y="309.0" class="bm" text-anchor="middle" >PSU</text></g><rect x="46" y="370" width="781.2" height="118" rx="4" class="rackbg"/><text x="40" y="433.0" class="tm" text-anchor="end" >3U</text><g><title>After Later Audio Dice: 18 HP; +12V 80 mA (confirmed, owner-attested)</title><rect x="46.0" y="370" width="165.4" height="118" rx="3" class="blk " style="fill:#8cb8ef"/><text x="128.7" y="433.0" class="bm" text-anchor="middle" >Dice</text></g><g><title>Tiptop Audio Forbidden Planet filter: 8 HP; +12V 10 mA (single, owner-attested)</title><rect x="213.4" y="370" width="72.4" height="118" rx="3" class="blk " style="fill:#b6d2f4"/><text x="249.60000000000002" y="420.0" class="bm" text-anchor="middle" >Forbidden</text><text x="249.60000000000002" y="433.0" class="bm" text-anchor="middle" >Planet</text><text x="249.60000000000002" y="446.0" class="bm" text-anchor="middle" >filter</text></g><g><title>Behringer Four Play VCA: 12 HP; +12V 100 mA (confirmed, owner-attested)</title><rect x="287.8" y="370" width="109.6" height="118" rx="3" class="blk " style="fill:#80b1ee"/><text x="342.6" y="433.0" class="bm" text-anchor="middle" >Four Play VCA</text></g><g><title>After Later Audio Pixie: 12 HP; +12V 50 mA (confirmed, owner-attested)</title><rect x="399.4" y="370" width="109.6" height="118" rx="3" class="blk " style="fill:#9ec4f2"/><text x="454.20000000000005" y="433.0" class="bm" text-anchor="middle" >Pixie</text></g><g><title>After Later Audio Resonate: 14 HP; +12V 110 mA (single, owner-attested)</title><rect x="511.0" y="370" width="128.2" height="118" rx="3" class="blk " style="fill:#7aaded"/><text x="575.1" y="433.0" class="bm" text-anchor="middle" >Resonate</text></g><g><title>Złob Fade LFO: 3 HP; +12V 15 mA (single, owner-attested)</title><rect x="641.2" y="370" width="25.9" height="118" rx="3" class="blk " style="fill:#b3d0f4"/><text x="658.2" y="429.0" class="bm" text-anchor="middle" transform="rotate(-90 658.2 429.0)">Złob Fade LFO</text></g><text x="46" y="502" class="tiny" text-anchor="start" >Row and position within the 3U rows are not recorded: modules are drawn in name order, wrapped at each row&#x27;s width.</text><defs><linearGradient id="rack-ramp" x1="0" x2="1"><stop offset="0" stop-color="#bcd6f5"/><stop offset="1" stop-color="#6ea6ec"/></linearGradient></defs><text x="46" y="544" class="tm" text-anchor="start" >+12V draw</text><rect x="112" y="534" width="130" height="12" rx="2" fill="url(#rack-ramp)"/><text x="112" y="560" class="tiny" text-anchor="start" >0 mA</text><text x="242" y="560" class="tiny" text-anchor="end" >130 mA</text><rect x="282" y="534" width="26" height="12" rx="2" class="st-missing"/><text x="314" y="544" class="tm" text-anchor="start" >no figure stated</text><rect x="432" y="534" width="26" height="12" rx="2" class="b-out"/><text x="464" y="544" class="tm" text-anchor="start" >power supply mounted in the case</text><text x="112" y="576" class="tiny" text-anchor="start" >Block width is proportional to HP. 1U-format modules sit in their own row. The NiftyCASE row is its usable area per the maker.</text></svg></div>
+
+<p class="viz-note">Block width is proportional to HP; shading is the +12V draw. The custom case's 3U rows are drawn in name order because the row and position of each module are not recorded.</p>
+
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Case</th>
+<th>Row</th>
+<th>HP</th>
+<th>+12V draw</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uGrids</td>
+<td>Cre8audio NiftyCASE</td>
+<td>3U</td>
+<td>8</td>
+<td>25 mA (confirmed, owner-attested)</td>
+</tr>
+<tr>
+<td>Cellz</td>
+<td>Cre8audio NiftyCASE</td>
+<td>3U</td>
+<td>12</td>
+<td>3 mA (single, owner-attested)</td>
+</tr>
+<tr>
+<td>qTone Eurorack Dual Channel Quantiser Module</td>
+<td>Cre8audio NiftyCASE</td>
+<td>3U</td>
+<td>6</td>
+<td>45 mA (single, owner-attested)</td>
+</tr>
+<tr>
+<td>passive mult</td>
+<td>Cre8audio NiftyCASE</td>
+<td>3U</td>
+<td>2</td>
+<td>0 mA (inferred)</td>
+</tr>
+<tr>
+<td>Razcalito</td>
+<td>Cre8audio NiftyCASE</td>
+<td>3U</td>
+<td>4</td>
+<td>0 mA (inferred)</td>
+</tr>
+<tr>
+<td>Captain Big-O</td>
+<td>Cre8audio NiftyCASE</td>
+<td>3U</td>
+<td>14</td>
+<td>120 mA (single, owner-attested)</td>
+</tr>
+<tr>
+<td>Mr. PhilTer</td>
+<td>Cre8audio NiftyCASE</td>
+<td>3U</td>
+<td>12</td>
+<td>33 mA (single, owner-attested)</td>
+</tr>
+<tr>
+<td>Erica Pico Mod</td>
+<td>Cre8audio NiftyCASE</td>
+<td>3U</td>
+<td>3</td>
+<td>28 mA (single, owner-attested)</td>
+</tr>
+<tr>
+<td>961 Interface</td>
+<td>Cre8audio NiftyCASE</td>
+<td>3U</td>
+<td>21</td>
+<td>50 mA (confirmed, owner-attested)</td>
+</tr>
+<tr>
+<td>1003 Dual Envelope Generator</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>3U</td>
+<td>16</td>
+<td>40 mA (confirmed, owner-attested)</td>
+</tr>
+<tr>
+<td>Atom</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>3U</td>
+<td>18</td>
+<td>130 mA (confirmed, owner-attested)</td>
+</tr>
+<tr>
+<td>Audio Stereo Line Out Jacks</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>1U</td>
+<td>8</td>
+<td>not stated</td>
+</tr>
+<tr>
+<td>Black Dual VCF</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>3U</td>
+<td>18</td>
+<td>40 mA (single, owner-attested)</td>
+</tr>
+<tr>
+<td>Clock and Musical Divider</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>3U</td>
+<td>8</td>
+<td>90 mA (confirmed, owner-attested)</td>
+</tr>
+<tr>
+<td>Cosmotronic Delta-V</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>3U</td>
+<td>10</td>
+<td>70 mA (single, owner-attested)</td>
+</tr>
+<tr>
+<td>CP1A power supply</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>3U</td>
+<td>4</td>
+<td>power supply</td>
+</tr>
+<tr>
+<td>Dice</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>3U</td>
+<td>18</td>
+<td>80 mA (confirmed, owner-attested)</td>
+</tr>
+<tr>
+<td>Forbidden Planet filter</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>3U</td>
+<td>8</td>
+<td>10 mA (single, owner-attested)</td>
+</tr>
+<tr>
+<td>Four Play VCA</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>3U</td>
+<td>12</td>
+<td>100 mA (confirmed, owner-attested)</td>
+</tr>
+<tr>
+<td>Pixie</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>3U</td>
+<td>12</td>
+<td>50 mA (confirmed, owner-attested)</td>
+</tr>
+<tr>
+<td>Quadratt</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>1U</td>
+<td>28</td>
+<td>24 mA (single, owner-attested)</td>
+</tr>
+<tr>
+<td>Resonate</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>3U</td>
+<td>14</td>
+<td>110 mA (single, owner-attested)</td>
+</tr>
+<tr>
+<td>Stereo Line Out</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>1U</td>
+<td>8</td>
+<td>19 mA (single, owner-attested)</td>
+</tr>
+<tr>
+<td>Stereo Mixer</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>1U</td>
+<td>16</td>
+<td>17 mA (single, owner-attested)</td>
+</tr>
+<tr>
+<td>Złob Fade LFO</td>
+<td>Custom Eurorack case (gutted Sony reel-to-reel)</td>
+<td>3U</td>
+<td>3</td>
+<td>15 mA (single, owner-attested)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="questions-the-graph-answers">Questions the graph answers</h2>
+<p>Each answer is computed from the graph above and checked: <strong>hand</strong> means the expected answer was worked out by hand from the
+recorded wiring; <strong>cross</strong> means separate code that reads the raw files (no graph) reached the same answer. An empty answer
+means <em>not recorded</em>, which is not the same as <em>not connected</em>.</p>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Answer</th>
+<th>Checked by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What does the RD-9 feed directly, and by which medium?</td>
+<td>audio: Behringer UMC1820<br>clock: Arturia KeyStep, Jake's Custom Shop Clock and Musical Divider, Korg SQ-64<br>midi: MIDI Thru5</td>
+<td>hand</td>
+</tr>
+<tr>
+<td>Which devices receive clock or MIDI from the RD-9, directly or through other devices?</td>
+<td>10 devices<br>directly: Arturia KeyStep, Jake's Custom Shop Clock and Musical Divider, Korg SQ-64, MIDI Thru5<br>through one other device: Behringer K2, Donner Essential B1, Dreadbox Typhon, Elektron Analog Four MKII, Elektron Digitakt Mk1, Korg M1 (1993)</td>
+<td>hand</td>
+</tr>
+<tr>
+<td>What does the Digitakt feed?</td>
+<td>audio: Behringer UMC1820</td>
+<td>hand</td>
+</tr>
+<tr>
+<td>What does the Korg M1 feed?</td>
+<td>nothing recorded (not the same as nothing connected)</td>
+<td>hand</td>
+</tr>
+<tr>
+<td>How many spec values rest on a single source, and of what kind?</td>
+<td>81 of 135 spec values: one community source<br>32 of 135 spec values: two or more sources<br>17 of 135 spec values: no source (override, inferred or missing)<br>5 of 135 spec values: one official source<br>42 of the single-source values are attested correct by the owner</td>
+<td>cross</td>
+</tr>
+<tr>
+<td>Which items have no recorded connection, by category?</td>
+<td>37 items have no confirmed connection, placement or supply link<br>amp: 3<br>audio-interface: 1<br>bass: 1<br>computer: 1<br>controller: 2<br>di-preamp: 2<br>drum-machine: 2<br>eurorack-module: 6<br>groovebox: 1<br>guitar: 1<br>headphones: 1<br>monitors: 1<br>pedal-distortion: 2<br>pedal-eq: 1<br>pedal-modulation: 2<br>pedal-synth: 1<br>pedal-time: 3<br>pedal-utility: 1<br>pedal-wah: 1<br>software: 2<br>synth: 2</td>
+<td>cross</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-to-read-it-and-what-it-leaves-out">How to read it, and what it leaves out</h2>
+<ul>
+<li><strong>Eurorack patch cables are not recorded.</strong> They change every session, so the graph holds only what stays put:
+  which case, which supply, the clock input and the output stage.</li>
+<li><strong>Ports are the owner's words.</strong> Where a device's manual is available to the author, each port name is looked up in its text; devices with no ingested manual (the audio interface, the Digitakt, the Eurorack output module) are unchecked.</li>
+<li><strong>The graph inherits the trust levels of its sources.</strong> A single-source spec stays single-source here; see
+  <a href="../trust/">how well each spec is supported</a>.</li>
+<li><strong>Relationships exist only where they were stated.</strong> A device with no line drawn has no recorded connection; that
+  means "not recorded", not "not connected".</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
