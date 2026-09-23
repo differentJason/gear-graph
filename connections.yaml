@@ -25,7 +25,7 @@
 #                   # Only FIXED facts are recorded (case, supply, row). Patch cables between modules change every session and are not recorded.
 
 schema_version: 1
-updated: 2026-09-20
+updated: 2026-09-23
 
 setups:
   - {id: main-studio, name: Main studio, interface: behringer-umc1820, status: confirmed, confirmed: 2026-09-20,
@@ -52,19 +52,26 @@ links:
 
   # --- MIDI: RD-9 MIDI OUT -> MIDI Thru5 -> five outputs. Confirmed by the owner 2026-09-20 ("yes, exactly that"). Ports not named.
   #     The owner can change out any of the five outputs, and the K2 and B1 share one slot. ---
-  - {setup: main-studio, from: behringer-rd-9, from_port: "MIDI OUT", to: midi-thru5, medium: midi,
-     status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, from: midi-thru5, to: elektron-analog-four, medium: midi, status: confirmed, confirmed: 2026-09-20, swappable: true}
+  # MIDI chain revised by the owner 2026-09-23: RD-9 -> Digitakt -> Thru5, Analog Four moved to the Digitakt's THRU,
+  # freed Thru5 output feeds the UMC1820's MIDI IN (to Logic over the existing USB link). Replaces the 2026-09-20
+  # RD-9 -> Thru5 fan-out, in which the Digitakt and Analog Four were on Thru5 outputs.
+  - {setup: main-studio, from: behringer-rd-9, from_port: "MIDI OUT", to: elektron-digitakt-mk1, to_port: "MIDI IN", medium: midi,
+     status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, from: elektron-digitakt-mk1, from_port: "MIDI OUT/SYNC A", to: midi-thru5, medium: midi,
+     status: confirmed, confirmed: 2026-09-23,
+     note: "OUT, not THRU: the Thru5 gets the Digitakt's own clock/transport (following the RD-9) plus its MIDI tracks. The RD-9's ch 10 notes stop at the Digitakt."}
+  - {setup: main-studio, from: elektron-digitakt-mk1, from_port: "MIDI THRU/SYNC B", to: elektron-analog-four, medium: midi,
+     status: confirmed, confirmed: 2026-09-23,
+     note: "THRU forwards the RD-9's stream unchanged (clock, transport, ch 10 notes), so the Analog Four is clocked by the RD-9 one hop earlier than the Thru5 synths."}
   - {setup: main-studio, from: midi-thru5, to: korg-m1, medium: midi, status: confirmed, confirmed: 2026-09-20, swappable: true}
-  - {setup: main-studio, from: midi-thru5, to: elektron-digitakt-mk1, medium: midi, status: confirmed, confirmed: 2026-09-20, swappable: true}
   - {setup: main-studio, from: midi-thru5, to: dreadbox-typhon, medium: midi, status: confirmed, confirmed: 2026-09-20, swappable: true}
   - {setup: main-studio, from: midi-thru5, to: behringer-k2, medium: midi, status: confirmed, confirmed: 2026-09-20, swappable: true,
-     note: "Shares the fifth output with the Donner B1: one or the other."}
+     note: "Shares one Thru5 output with the Donner B1: one or the other."}
   - {setup: main-studio, from: midi-thru5, to: donner-b1, medium: midi, status: confirmed, confirmed: 2026-09-20, swappable: true,
-     note: "Shares the fifth output with the Behringer K2: one or the other."}
+     note: "Shares one Thru5 output with the Behringer K2: one or the other."}
+  - {setup: main-studio, from: midi-thru5, to: behringer-umc1820, to_port: "MIDI IN", medium: midi, status: confirmed, confirmed: 2026-09-23,
+     note: "Owner 2026-09-23: reaches Logic Pro on the Mac Mini over the UMC1820's existing USB link. One Thru5 output is still free."}
 
-  # --- clock: RD-9 SYNC OUT. The destination jacks are not named. The manual's wording for SYNC IN/OUT reads as swapped,
-  #     so the direction (RD-9 is the source) is the owner's statement, not the manual's. ---
   - {setup: main-studio, from: behringer-rd-9, from_port: "SYNC OUT", to: korg-sq-64, medium: clock, status: confirmed, confirmed: 2026-09-20}
   - {setup: main-studio, from: behringer-rd-9, from_port: "SYNC OUT", to: arturia-keystep, medium: clock, status: confirmed, confirmed: 2026-09-20}
   - {setup: main-studio, from: behringer-rd-9, from_port: "SYNC OUT", to: jakes-clock-and-musical-divider, medium: clock, status: confirmed, confirmed: 2026-09-20,
@@ -74,7 +81,7 @@ links:
 # turning them into links needs both ends and the ports.
 open_statements:
   - {setup: main-studio, confirmed: 2026-09-20, statement: "The RD-9 is the master clock."}
-  - {setup: main-studio, confirmed: 2026-09-20, statement: "Nothing sends MIDI back to the Mac."}
+  - {setup: main-studio, confirmed: 2026-09-23, statement: "The Mac receives MIDI through the UMC1820 MIDI IN (fed by a Thru5 output, i.e. the Digitakt's MIDI OUT stream). Nothing sends MIDI from the Mac to the gear. Replaces the 2026-09-20 statement 'Nothing sends MIDI back to the Mac.'"}
   - {setup: main-studio, confirmed: 2026-09-20, statement: "Default UMC1820 inputs: 1 RD-9, 2 open, 3/4 Analog Four, 5/6 Eurorack, 7/8 Digitakt. Everything runs straight into the interface; main outs are used on everything, with TS or TRS cables as needed."}
   - {setup: main-studio, confirmed: 2026-09-20, statement: "Gear not in that default list (for example the Korg M1, Dreadbox Typhon, Behringer K2, Donner B1) is swapped in and out as needed. Where its audio goes when in use is not yet stated."}
   - {setup: main-studio, confirmed: 2026-09-20, statement: "The Analog Four's CV OUTPUTS A-D are sometimes used as CV tracks into the Eurorack. Which module inputs is not yet stated."}
