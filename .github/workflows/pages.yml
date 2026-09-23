@@ -26,7 +26,7 @@ jobs:
         run: pip install mkdocs mkdocs-material pyyaml
       - name: Generate the public site sources
         run: python tools/build_public.py
-      - name: Build (strict: any broken link fails)
+      - name: "Build (strict: any broken link fails)"
         run: mkdocs build --strict -f public/mkdocs.yml
       - uses: actions/upload-pages-artifact@v3
         with:
