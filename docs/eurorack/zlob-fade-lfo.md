@@ -32,7 +32,7 @@ content_status: generated
 
 > **Identification:** Owner confirmed this match 2026-09-20. Closest match is Złob Skew Fade LFO. Owner wrote 'Złob Fade LFO'.
 
-> Name/maker as written in Equipment List.md; not verified.
+> Name/maker as written in Equipment List.md; not verified. FLAG (2026-09-23, assistant, not owner-confirmed): an image search found the maker (zlobmodular.com) calls this product the 'Skew-Fade LFO', not 'Fade LFO' -- likely the same module under its full name.
 
 ## Specifications
 

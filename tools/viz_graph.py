@@ -12,7 +12,7 @@ one-hue ramp; every diagram has a legend, a title element per mark, and a table 
 """
 import json
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from html import escape
 from pathlib import Path
 
@@ -140,15 +140,59 @@ def schema_diagram(g):
     return _svg(900, h_total, "Structure of the knowledge graph", desc, "".join(body) + legend)
 
 
+# ------------------------------------------------------------------------------------------ composition
+def category_chart(g):
+    """Horizontal bar chart of item counts per category, computed from the graph's IN_CATEGORY edges
+    (item -> category), not from re-reading inventory.yaml -- this is a view of the graph, not the source file."""
+    counts = Counter(g.v[e["dst"]]["name"] for e in g.edges("IN_CATEGORY"))
+    rows = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+    left, row_h, top, plot_w = 220, 22, 16, 460
+    mx = max(counts.values())
+    scale = plot_w / mx
+    body = []
+    for i, (label, n) in enumerate(rows):
+        y = top + i * row_h
+        body.append(_t(left - 10, y + 15, label, "t", "end"))
+        wv = max(n * scale, 2)
+        body.append(f'<rect x="{left}" y="{y}" width="{wv:.1f}" height="16" class="cat-bar">'
+                    f'<title>{escape(label)}: {n} item{"s" if n != 1 else ""}</title></rect>')
+        body.append(_t(left + wv + 6, y + 14, str(n), "tm"))
+    h = top + len(rows) * row_h + 10
+    desc = ("How many items the graph has in each category, from its IN_CATEGORY edges: "
+            + "; ".join(f"{l} {n}" for l, n in rows))
+    return _svg(left + plot_w + 60, h, "Items by category", desc, "".join(body))
+
+
 # ------------------------------------------------------------------------------------------ routing
 def _natural(s):
     return [int(x) if x.isdigit() else x for x in re.split(r"(\d+)", s or "")]
 
 
-def routing_diagram(g, media, panel_title, uid, setup="main-studio", layering="asap"):
+def _reach_dist(edges, root_vid):
+    """Hop count from root_vid to every vertex reachable over these (already-filtered) edges, confirmed only --
+    same rule as query_graph.py's reach(): only confirmed connections count. BFS, not a graph library, since this
+    module has no Spark dependency."""
+    conf = [e for e in edges if e["status"] == "confirmed"]
+    dist, frontier = {root_vid: 0}, [root_vid]
+    while frontier:
+        nxt = []
+        for n in frontier:
+            for e in conf:
+                if e["src"] == n and e["dst"] not in dist:
+                    dist[e["dst"]] = dist[n] + 1
+                    nxt.append(e["dst"])
+        frontier = nxt
+    return dist
+
+
+def routing_diagram(g, media, panel_title, uid, setup="main-studio", layering="asap", root=None):
     """Layered left-to-right wiring diagram. Port names sit INSIDE the device boxes, level with their cable, so labels
-    never collide. layering='alap' pushes sources right, next to what they feed (good when many sources feed one sink)."""
+    never collide. layering='alap' pushes sources right, next to what they feed (good when many sources feed one sink).
+    root: an inventory id (bare, no 'item:' prefix). When given, each box is captioned with its hop distance from
+    root over confirmed edges only -- turns a `reach` query's answer into a picture instead of just a table."""
     edges = [e for e in g.edges("CONNECTS", setup=setup) if e["medium"] in media]
+    root_vid = f"item:{root}" if root else None
+    dist = _reach_dist(edges, root_vid) if root_vid else {}
     order = []
     for e in sorted(edges, key=lambda e: (e["src"], e["dst"])):
         for k in (e["src"], e["dst"]):
@@ -181,13 +225,30 @@ def routing_diagram(g, media, panel_title, uid, setup="main-studio", layering="a
     def swappable(n):
         return bool(pred[n]) and all(e.get("swappable") for e in pred[n])
 
+    def midi_caption(n):
+        if "midi" not in media:
+            return ""
+        v = g.v[n]
+        parts = []
+        if v.get("midi_in_ch"):
+            parts.append(f"IN {v['midi_in_ch']}")
+        if v.get("midi_out_ch"):
+            parts.append(f"OUT {v['midi_out_ch']}")
+        return " · ".join(parts)
+
+    def hop_caption(n):
+        if not root_vid or n not in dist:
+            return ""
+        return "root" if dist[n] == 0 else f"{dist[n]} hop" + ("s" if dist[n] != 1 else "")
+
     bw, gap, top = 176, 16, 34
     geo = {}
     for n in order:
         v = g.v[n]
         name = short(v)
         lines = _wrap(name, 22, 2) or [_fit(name, 22)]
-        head = 6 + 14 * len(lines) + (12 if swappable(n) else 0) + 4
+        head = (6 + 14 * len(lines) + (12 if swappable(n) else 0) + (12 if midi_caption(n) else 0)
+                + (12 if hop_caption(n) else 0) + 4)
         in_lab, out_lab = any(e.get("to_port") for e in pred[n]), any(e.get("from_port") for e in succ[n])
         rows = max(len(pred[n]) if in_lab or len(pred[n]) > 1 else 0, len(succ[n]) if out_lab or len(succ[n]) > 1 else 0)
         geo[n] = {"lines": lines, "head": head, "h": max(40, head + 16 * rows + 4) if rows else max(40, head + 8), "in_lab": in_lab, "out_lab": out_lab}
@@ -244,9 +305,22 @@ def routing_diagram(g, media, panel_title, uid, setup="main-studio", layering="a
                 ports.append(_t(x1 - 7, sum(ys) / len(ys) + 4, e["from_port"], "port", "end"))
     for n, (x, y) in pos.items():
         v, gm = g.v[n], geo[n]
-        body.append(f'<g><title>{escape(v["name"])}</title><rect x="{x}" y="{y}" width="{bw}" height="{gm["h"]}" rx="6" class="b-tool"/>'
+        capy = y + 6 + 14 * len(gm["lines"]) + 9
+        captions = ""
+        if swappable(n):
+            captions += _t(x + bw / 2, capy, "swappable", "bm", "middle")
+            capy += 12
+        mc = midi_caption(n)
+        if mc:
+            captions += _t(x + bw / 2, capy, mc, "bm", "middle")
+            capy += 12
+        hc = hop_caption(n)
+        if hc:
+            captions += _t(x + bw / 2, capy, hc, "bm", "middle")
+        box_cls = "b-tool b-root" if n == root_vid else "b-tool"
+        body.append(f'<g><title>{escape(v["name"])}</title><rect x="{x}" y="{y}" width="{bw}" height="{gm["h"]}" rx="6" class="{box_cls}"/>'
                     + "".join(_t(x + bw / 2, y + 6 + 14 * i + 10, ln, "bt", "middle") for i, ln in enumerate(gm["lines"]))
-                    + (_t(x + bw / 2, y + 6 + 14 * len(gm["lines"]) + 9, "swappable", "bm", "middle") if swappable(n) else "") + "</g>")
+                    + captions + "</g>")
     body += ports
     h = top + plot_h + 44
     used = [m for m in MEDIUM if any(e["medium"] == m for e in edges)]
@@ -372,4 +446,6 @@ CSS = """
 .viz-svg .edge.dashed { stroke-dasharray: 6 4; }
 .viz-svg .port { fill: #222; font-size: 10.5px; font-weight: 600; }
 .viz-svg .rackbg { fill: var(--md-default-fg-color--lightest); }
+.viz-svg .b-root { stroke: #0072B2; stroke-width: 3; }
+.viz-svg .cat-bar { fill: #9ad3f3; }
 """

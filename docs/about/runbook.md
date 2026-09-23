@@ -16,6 +16,7 @@ All commands run from the repository root with the project's virtual environment
 .venv/bin/python tools/fetch_specs.py [id ...]      # Eurorack: fetch sources, extract numbers + raw lines
 .venv/bin/python tools/build_site.py                # inventory, devices, topics, Eurorack, budget, status, llms.txt, nav
 .venv/bin/python tools/validate.py                  # structure, tags, links, hashes
+.venv/bin/python tools/validate_images.py           # is image_manifest.yaml consistent with inventory.yaml and images/? (local-only, no Spark needed)
 .venv/bin/python tools/check_coverage.py            # did conversion lose text?
 .venv/bin/mkdocs build --strict                     # strict build; fails on broken links
 .venv/bin/mkdocs serve                              # preview at http://127.0.0.1:8000
@@ -31,6 +32,7 @@ computed there and the site build only reads the result:
 
 ```bash
 .venv/bin/python tools/validate_connections.py       # is connections.yaml consistent with the inventory? (no Spark needed)
+.venv/bin/python tools/validate_midi.py              # is midi_channels.yaml consistent with the inventory and connections.yaml? (no Spark needed)
 .venv-graph/bin/python tools/build_graph.py          # build the graph, write graph/public/*.json and the budget snapshot
 .venv/bin/python tools/build_site.py                 # renders the budget page from that snapshot
 ```
@@ -44,12 +46,15 @@ expectation or against separate code that reads the raw files, and it exits non-
 `build_public.py` refuses `answers.json` if the snapshot changed since.
 
 Run `build_graph.py` **before** `build_site.py` whenever placements (`connections.yaml`), specs, overrides,
-`eurorack/attestations.yaml` or an item's `in_use` flag change. If you forget, `build_site.py` stops with
-"budget.json is STALE" instead of publishing an out-of-date budget. Comment-only edits do not count as a change.
-Commit the refreshed `graph/public/*.json` with the change that caused it.
+`eurorack/attestations.yaml`, `midi_channels.yaml`, or an item's `in_use` flag change. If you forget, `build_site.py`
+stops with "budget.json is STALE" instead of publishing an out-of-date budget. Comment-only edits do not count as a
+change. Commit the refreshed `graph/public/*.json` with the change that caused it.
 
 To record wiring, edit `connections.yaml`: one entry per cable, a `status`, and a date. Record only what has been
 stated; put anything vaguer under `open_statements`.
+
+To record a device's intended MIDI channel, edit `midi_channels.yaml`: one entry per device per setup, a `status`,
+and a date. Run `validate_midi.py` after.
 
 ## Publish the site
 
@@ -103,6 +108,7 @@ The site is not deployed anywhere yet. Charts are generated as inline SVG by `to
 
 ## File map
 
-`inventory.yaml` (gear) - `tools/` (all code) - `tools/manifest.yaml` (manual settings) - `VOCAB.yaml` (tags) -
-`sources/` (PDFs, ignored) - `eurorack/{sources,overrides}.yaml`, `eurorack/evidence/` (spec inputs) -
-`docs/` (the site; mostly generated) - `evals/golden.jsonl` (test questions) - `mkdocs.yml` (generated).
+`inventory.yaml` (gear) - `connections.yaml` (wiring) - `midi_channels.yaml` (intended MIDI channel settings) -
+`tools/` (all code) - `tools/manifest.yaml` (manual settings) - `VOCAB.yaml` (tags) -
+`sources/` (PDFs, ignored) - `images/` (gear photos, ignored) - `eurorack/{sources,overrides}.yaml`, `eurorack/evidence/` (spec inputs) -
+`docs/` (the site; mostly generated) - `evals/golden.jsonl`, `evals/graph_golden.yaml` (test questions) - `mkdocs.yml` (generated).

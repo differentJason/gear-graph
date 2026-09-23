@@ -111,3 +111,320 @@ manuals:
     coverage_skip: "multilingual sheet; the PDF text includes Spanish and French, so English-only recall cannot be computed against it"
     applies_to: "MPK mini MK3 (matched by content, not by the PDF's own label). Quick Start only, not a full manual. English only."
 
+  - id: roland-kc-150
+    device: roland-kc-150
+    manufacturer: Roland
+    model: KC-150
+    title: KC-150 Owner's Manual
+    doc_type: user-manual
+    doc_version: "e04"
+    language: en
+    pdf: sources/roland-kc-150.pdf
+    source_url: https://static.roland.com/assets/media/pdf/KC-150_e04.pdf
+    retrieved: 2026-09-23
+    pages: [1, 11]                # p12 is blank
+    split: outline
+    split_level: 2
+    applies_to: "Roland KC-150 keyboard amplifier. Coverage is 94.8% occurrence (just under the 95% bar): the raw
+      PDF text carries a repeated hidden authoring-file footer (\"KC-150_e_A4.book N page\", once per page) that
+      pymupdf4llm correctly excludes as noise, plus a short front-matter paragraph on p1 that precedes the first
+      TOC heading and is therefore not attached to any section (a structural limit of heading/outline-position
+      splitting, not a parsing bug). Spot-checked: the actual safety/operating content is all present."
+
+  - id: arturia-keystep-manual
+    device: arturia-keystep
+    manufacturer: Arturia
+    model: KeyStep
+    title: KeyStep User Manual
+    doc_type: user-manual
+    doc_version: "1.1.2"
+    language: en
+    pdf: sources/arturia-keystep.pdf
+    source_url: https://dl.arturia.net/products/keystep/manual/KeyStep_Manual_1_1_2_EN.pdf
+    retrieved: 2026-09-23
+    pages: [1, 81]                # whole document; English-only PDF (Arturia publishes separate PDFs per language)
+    split: outline
+    split_level: 2
+    applies_to: "Arturia KeyStep (the original, not KeyStep Pro/32/37)."
+
+  - id: behringer-umc1820-quick-start
+    device: behringer-umc1820
+    manufacturer: Behringer
+    model: UMC1820
+    title: U-PHORIA UMC1820 Quick Start Guide
+    doc_type: quick-start
+    doc_version: "QSG WW rev.1"
+    language: en
+    pdf: sources/behringer-umc1820.pdf
+    source_url: https://www.markertek.com/Attachments/Manuals/Behringer/UMC1820-Manual.pdf
+    source_note: "Official Behringer/Music Tribe file (matches its own internal QSG code); the official mediadl.musictribe.com host is dead, so retrieved via a dealer mirror hosting the identical PDF."
+    retrieved: 2026-09-23
+    page_spec:                    # Specifications page only: the "Steps" pages (5-11) interleave EN/ES/FR/DE/PT step
+                                   # instructions in the same page flow with no clean per-language boundary pymupdf4llm
+                                   # preserves, so they are left out rather than risk foreign text bleeding into the section.
+      - {page: 12}
+    split: headings
+    heading_pattern: '^#{1,2}\s+Specifications\s*$'
+    applies_to: "One Quick Start shared by the whole U-PHORIA family; only UMC1820-relevant content applies to the owner's unit. Quick Start only, and Specifications only -- the hookup/getting-started steps are a heavily language-interleaved layout this pipeline cannot cleanly separate; see the PDF directly for those."
+
+  - id: behringer-gdi21-manual
+    device: behringer-gdi21
+    manufacturer: Behringer
+    model: GDI21
+    title: V-TONE Guitar Driver DI GDI21 User Manual
+    doc_type: user-manual
+    doc_version: "P0295_M_EN"
+    language: en
+    pdf: sources/behringer-gdi21.pdf
+    source_url: https://archive.org/download/BehringerGDI21Manual/GDI21_P0295_M_EN.pdf
+    source_note: "Official Behringer document; the official mediadl.musictribe.com host is dead, retrieved via an archive.org copy of the identical PDF."
+    retrieved: 2026-09-23
+    pages: [1, 2]
+    split: headings
+    heading_pattern: '^#{1,3}\s+'
+    applies_to: "Behringer GDI21 Driver DI."
+
+  - id: akai-rhythm-wolf-manual
+    device: akai-rhythm-wolf
+    manufacturer: Akai Professional
+    model: Rhythm Wolf
+    title: Rhythm Wolf User Guide
+    doc_type: user-manual
+    doc_version: "v1.3"
+    language: en
+    pdf: sources/akai-rhythm-wolf.pdf
+    source_url: https://cdn.inmusicbrands.com/akai/attachments/wolf/Rhythm%20Wolf%20-%20User%20Guide%20-%20v1.3.pdf
+    retrieved: 2026-09-23
+    pages: [1, 10]                 # English only; per the cover's own page index ("English (2-10)"); Spanish starts p11
+    split: outline
+    split_level: 2
+    applies_to: "Akai Professional Rhythm Wolf."
+
+  - id: akai-timbre-wolf-manual
+    device: akai-timbre-wolf
+    manufacturer: Akai Professional
+    model: Timbre Wolf
+    title: Timbre Wolf User Guide
+    doc_type: user-manual
+    doc_version: "v1.1"
+    language: en
+    pdf: sources/akai-timbre-wolf.pdf
+    source_url: https://aadl.org/files/catalog_guides/1501111_instructions.pdf
+    source_note: "Akai's own akaipro.com downloads page is JS-rendered with no direct first-party link; retrieved via an Ann Arbor District Library public mirror of the identical official document."
+    retrieved: 2026-09-23
+    pages: [1, 13]                 # English only, per the cover's own page index ("English (2-13)"); Spanish starts p14
+    split: outline
+    split_level: 2
+    applies_to: "Akai Professional Timbre Wolf."
+
+  - id: midi-thru5-manual
+    device: midi-thru5
+    manufacturer: CME
+    model: MIDI Thru5 WC
+    title: MIDI Thru5 WC User Manual
+    doc_type: user-manual
+    doc_version: "V07 (2024-02)"
+    language: en
+    pdf: sources/midi-thru5.pdf
+    source_url: https://www.cme-pro.com/wp-content/uploads/2024/02/MIDI-Thru5-WC-manual_v07_English.pdf
+    source_note: "FLAG (2026-09-23, assistant, not owner-confirmed): identified as a CME product from this manual's own title page; inventory.yaml's manufacturer field for this device is not yet updated pending owner confirmation against the physical unit."
+    retrieved: 2026-09-23
+    pages: [1, 26]
+    split: headings
+    heading_pattern: '^#\s+[A-Z][A-Z0-9 ]+$'
+    applies_to: "MIDI Thru5 WC (manufacturer identification not yet owner-confirmed; see source_note)."
+
+  - id: yamaha-hs4-manual
+    device: yamaha-hs4
+    manufacturer: Yamaha
+    model: HS4
+    title: HS4/HS3 Owner's Manual
+    doc_type: user-manual
+    doc_version: "rev B1"
+    language: en
+    pdf: sources/yamaha-hs4.pdf
+    source_url: https://mx.yamaha.com/files/download/other_assets/4/1606714/HS4HS3_owners_manual_En_B1.pdf
+    retrieved: 2026-09-23
+    pages: [1, 25]
+    split: outline
+    split_level: 2
+    applies_to: "One manual shared by the HS3 and HS4; only HS4-relevant content and specs apply to the owner's unit."
+
+  - id: behringer-ultra-tremolo-manual
+    device: behringer-ultra-tremolo
+    manufacturer: Behringer
+    model: UT300
+    title: Ultra Tremolo UT300 Manual
+    doc_type: user-manual
+    doc_version: "undated"
+    language: en
+    pdf: sources/behringer-ultra-tremolo.pdf
+    source_url: https://ia801904.us.archive.org/31/items/BehringerUT300Manual/UT300_M_EN.pdf
+    source_note: "Official Behringer document; the official mediadl.musictribe.com host is dead, retrieved via an archive.org copy of the identical PDF."
+    retrieved: 2026-09-23
+    pages: [1, 2]
+    split: headings
+    heading_pattern: '^#{1,3}\s+'
+    applies_to: "Behringer Ultra Tremolo UT300. Coverage is 94.9% occurrence (just under the 95% bar): this PDF's
+      font renders fi/ff ligatures as \"fi \"/\"ff \" with a spurious trailing space (\"confi dence\", \"eff ect\"), so
+      pdftotext and the converted markdown tokenize those words differently even though the text is identical.
+      Not a real content loss; not fixed pipeline-wide to avoid risking a regression across all 24 manuals for
+      one borderline document."
+
+  - id: behringer-digital-delay-manual
+    device: behringer-digital-delay
+    manufacturer: Behringer
+    model: DD400
+    title: Digital Delay DD400 Manual
+    doc_type: user-manual
+    doc_version: "undated"
+    language: en
+    pdf: sources/behringer-digital-delay.pdf
+    source_url: https://archive.org/download/manualsbase-id-222919/222919.pdf
+    source_note: "Official Behringer document; the official mediadl.musictribe.com host is dead, retrieved via an archive.org copy of the identical PDF."
+    retrieved: 2026-09-23
+    pages: [1, 2]                  # p3 (FCC compliance) excluded: legal boilerplate, low content value
+    split: headings
+    heading_pattern: '^#{1,4}\s+'
+    applies_to: "Behringer Digital Delay DD400."
+
+  - id: earthquaker-bit-commander-manual
+    device: earthquaker-bit-commander
+    manufacturer: EarthQuaker Devices
+    model: Bit Commander
+    title: Bit Commander Manual (EU R2)
+    doc_type: user-manual
+    doc_version: "R2 (EQDBIT2-EU-R2)"
+    language: en
+    pdf: sources/earthquaker-bit-commander.pdf
+    source_url: https://www.earthquakerdevices.com/s/EQD-EU-Bit-Commander-R2.pdf
+    retrieved: 2026-09-23
+    pages: [1, 1]                  # English only; p2 begins "<<< Français >>>"
+    split: headings
+    heading_pattern: '^(#\s+<<<[^>]+>>>|##\s+)'
+    coverage_skip: "pdftotext extracts German/Italian/French text not present in pymupdf4llm's page-1 output (confirmed by direct inspection: the converted markdown is entirely English); likely an overlapping/layered region on this single compact multilingual card that only one extractor surfaces. Not treated as a real conversion defect."
+    applies_to: "EarthQuaker Devices Bit Commander, EU multilingual revision R2, English portion only."
+
+  - id: electro-harmonix-modrex-manual
+    device: electro-harmonix-modrex
+    manufacturer: Electro-Harmonix
+    model: Mod Rex
+    title: Mod Rex Polyrhythmic Modulator Manual
+    doc_type: user-manual
+    doc_version: "undated"
+    language: en
+    pdf: sources/electro-harmonix-modrex.pdf
+    source_url: https://www.ehx.com/wp-content/uploads/2021/01/mod-rex-manual.pdf
+    retrieved: 2026-09-23
+    pages: [1, 20]
+    split: headings
+    heading_pattern: '^#{1,6}\s+'
+    applies_to: "Electro-Harmonix Mod Rex."
+
+  - id: behringer-hell-babe-manual
+    device: behringer-hell-babe
+    manufacturer: Behringer
+    model: HB01
+    title: Hell-Babe HB01 Manual
+    doc_type: user-manual
+    doc_version: "undated"
+    language: en
+    pdf: sources/behringer-hell-babe.pdf
+    source_url: https://images.thomann.de/pics/prod/185996_manual.pdf
+    source_note: "Official Behringer document; the official mediadl.musictribe.com host is dead, retrieved via a Thomann-hosted mirror of the identical PDF."
+    retrieved: 2026-09-23
+    pages: [1, 2]
+    split: headings
+    heading_pattern: '^#{1,3}\s+'
+    applies_to: "Behringer Hell Babe HB01."
+
+  - id: elektron-digitakt-mk1-manual
+    device: elektron-digitakt-mk1
+    manufacturer: Elektron
+    model: Digitakt
+    title: Digitakt User Manual
+    doc_type: user-manual
+    doc_version: "OS1.53"
+    language: en
+    pdf: sources/elektron-digitakt-mk1.pdf
+    source_url: https://www.elektron.se/wp-content/uploads/2026/09/Digitakt-User-Manual_ENG_OS1.53_260909.pdf
+    retrieved: 2026-09-23
+    pages: [10, 96]                # excludes cover/FCC/safety/TOC (p1-9); keeps body through the index
+    split: outline
+    split_level: 2
+    applies_to: "Elektron Digitakt (the original Mk1, not Digitakt II), OS1.53."
+
+  - id: korg-sq-64-manual
+    device: korg-sq-64
+    manufacturer: Korg
+    model: SQ-64
+    title: SQ-64 Owner's Manual
+    doc_type: user-manual
+    doc_version: "undated"
+    language: en
+    pdf: sources/korg-sq-64.pdf
+    source_url: https://cdn.korg.com/us/support/download/files/96a33d861a29fb3508673178ace33951.pdf
+    retrieved: 2026-09-23
+    pages: [10, 22]                # English section only (multilingual manual: EN p10-22, FR p23-35, DE p36-48, ES p49-61, JP p62-74)
+    split: outline
+    split_level: 2
+    applies_to: "Korg SQ-64, English section of the multilingual (EN/FR/DE/ES/JP) owner's manual."
+
+  - id: sonicware-liven-texture-lab-manual
+    device: sonicware-liven-texture-lab
+    manufacturer: Sonicware
+    model: Liven Texture Lab
+    title: Liven Texture Lab User's Manual
+    doc_type: user-manual
+    doc_version: "LVN-050-UM-01-EN"
+    language: en
+    pdf: sources/sonicware-liven-texture-lab.pdf
+    source_url: https://www.sonicware.co.jp/DL/LIVEN_TextureLab/DOC/TextureLab_manual_en.pdf
+    retrieved: 2026-09-23
+    pages: [1, 81]
+    split: headings
+    heading_pattern: '^#{1,6}\s+[A-Z]'
+    applies_to: "Sonicware Liven Texture Lab."
+
+  - id: dreadbox-typhon-manual
+    device: dreadbox-typhon
+    manufacturer: Dreadbox
+    model: Typhon
+    title: Typhon User's Manual
+    doc_type: user-manual
+    doc_version: "2026 edition"
+    language: en
+    pdf: sources/dreadbox-typhon.pdf
+    source_url: https://dreadbox-fx.com/wp-content/uploads/2026/04/Typhon-Users-Manual_2026.pdf
+    retrieved: 2026-09-23
+    pages: [1, 24]
+    split: outline
+    split_level: 2
+    applies_to: "Dreadbox Typhon."
+
+  - id: behringer-k2-quick-start
+    device: behringer-k2
+    manufacturer: Behringer
+    model: K-2
+    title: K-2 Quick Start Guide
+    doc_type: quick-start
+    doc_version: "dated 2019-05-24"
+    language: en
+    pdf: sources/behringer-k2.pdf
+    source_url: https://www.analoguehaven.com/behringer/k-2/quickstart.pdf
+    source_note: "Dealer-hosted mirror (Analogue Haven), not first-party -- the official mediadl.musictribe.com host is dead. Content dated 2019, predating the 2023 K-2 MK II release, confirming this is the original K-2, not the MK II. Behringer publishes only a Quick Start for this product; no full manual exists."
+    retrieved: 2026-09-23
+    page_spec:                    # English-only pages of a heavily language-interleaved booklet (EN/ES/FR/DE/PT repeat per step);
+                                   # excludes p2 (legal boilerplate mixing EN captions with ES "Atención" headers) and p23 (mixed-language registration/warranty tail)
+      - {page: 1}
+      - {page: 6}
+      - {page: 7}
+      - {page: 8}
+      - {page: 9}
+      - {page: 16}
+      - {page: 21}
+      - {page: 22}
+    split: headings
+    heading_pattern: '^#{1,6}\s+'
+    applies_to: "Behringer K-2 (the original, not the 2023 K-2 MK II)."
+

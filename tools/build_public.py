@@ -252,6 +252,8 @@ over it. Below: what it holds, how the studio is wired, and where each Eurorack 
 |---|---|
 """ + "\n".join(f"| {k} | {n} |" for k, n in sorted(et.items())) + f"""
 
+{fig(viz_graph.category_chart(gr), "Item counts per category, computed from the graph's IN_CATEGORY edges.")}
+
 ## How the studio is wired
 
 Only what the owner has stated is recorded. A solid line is confirmed; a dashed line is proposed and waiting for an
@@ -265,6 +267,14 @@ jam-location setup is not recorded yet.
 | From | Port | To | Port | Medium | Status |
 |---|---|---|---|---|---|
 {conn_rows}
+
+## How far the clock and MIDI reach
+
+The same wiring, viewed from one device: every box is captioned with its hop distance from the RD-9 over *confirmed*
+links only, the same rule the graph's `reach` query uses (see "Questions the graph answers" below). This is q2 as a
+picture instead of a table.
+
+{fig(viz_graph.routing_diagram(gr, {"midi", "clock"}, "MIDI and clock, distance from the RD-9", "rc", root="behringer-rd-9"), "The RD-9 is outlined as the root. One hop: MIDI Thru5, Arturia KeyStep, Jake's Clock and Musical Divider, Korg SQ-64. Two hops, through the Thru5: Analog Four, Korg M1, Digitakt, Dreadbox Typhon, Behringer K2, Donner B1.")}
 
 ## Where each module is mounted
 

@@ -51,7 +51,9 @@ VSCHEMA = StructType([StructField(n, t, True) for n, t in [
     ("category", StringType()), ("manufacturer", StringType()), ("status", StringType()), ("in_use", BooleanType()),
     ("format", StringType()), ("role", StringType()), ("field", StringType()), ("value", DoubleType()),
     ("tier", StringType()), ("url", StringType()), ("http", StringType()), ("doc_type", StringType()), ("version", StringType()),
-    ("attested", StringType()), ("rows", StringType())]])
+    ("attested", StringType()), ("rows", StringType()),
+    ("midi_in_ch", StringType()), ("midi_out_ch", StringType()), ("midi_thru_pass", BooleanType()),
+    ("midi_status", StringType()), ("midi_confirmed", StringType())]])
 ESCHEMA = StructType([StructField(n, t, True) for n, t in [
     ("src", StringType()), ("dst", StringType()), ("rel", StringType()), ("visibility", StringType()),
     ("setup", StringType()), ("medium", StringType()), ("from_port", StringType()), ("to_port", StringType()),
@@ -93,6 +95,7 @@ def collect():
     """Read every source file and return a populated Builder."""
     inv = yaml.safe_load((ROOT / "inventory.yaml").read_text())["items"]
     conn = yaml.safe_load((ROOT / "connections.yaml").read_text())
+    midi = yaml.safe_load((ROOT / "midi_channels.yaml").read_text()) or {}
     ov = yaml.safe_load((ROOT / "eurorack" / "overrides.yaml").read_text()) or {}
     att = yaml.safe_load((ROOT / "eurorack" / "attestations.yaml").read_text()) or []
     man = yaml.safe_load((ROOT / "tools" / "manifest.yaml").read_text())["manuals"]
@@ -100,10 +103,29 @@ def collect():
     b = Builder()
     case_rows = {k["id"]: ",".join(f"{r['format']}:{r['hp']}" for r in k["rows"]) for k in conn.get("cases", [])}   # e.g. "1U:84,3U:84,3U:84"
 
+    # ---- midi_channels.yaml: one item vertex holds at most one setup's worth of MIDI settings today (there is only
+    # one setup, main-studio); a second setup with its own MIDI needs would need this to become a per-(setup, item)
+    # fact instead, see graph/README.md's "Known limits". ----
+    have = {i["id"] for i in inv}
+    midi_by_device = {}
+    for c in midi.get("channels", []):
+        if c["device"] not in have:
+            b.notes.append(f"midi_channels.yaml: device {c['device']} is not in the inventory; skipped")
+            continue
+        if c["device"] in midi_by_device:
+            b.notes.append(f"midi_channels.yaml: device {c['device']} has more than one setup's entry; "
+                            "only the first was used (see graph/README.md known limits)")
+            continue
+        midi_by_device[c["device"]] = c
+
     # ---- items, manufacturers, categories ----
     for i in inv:
+        mc = midi_by_device.get(i["id"], {})
         b.vertex(f"item:{i['id']}", "item", i["name"], category=i["category"], manufacturer=i.get("manufacturer"), status=i["status"],
-                 in_use=i.get("in_use", True), format=i.get("format"), role=ov.get(i["id"], {}).get("role"), rows=case_rows.get(i["id"]))
+                 in_use=i.get("in_use", True), format=i.get("format"), role=ov.get(i["id"], {}).get("role"), rows=case_rows.get(i["id"]),
+                 midi_in_ch=str(mc["in"]) if "in" in mc else None, midi_out_ch=str(mc["out"]) if "out" in mc else None,
+                 midi_thru_pass=mc.get("thru_pass_enabled"), midi_status=mc.get("status"),
+                 midi_confirmed=str(mc["confirmed"]) if mc.get("confirmed") else None)
         b.ensure(f"cat:{i['category']}", "category", i["category"])
         b.edge(f"item:{i['id']}", f"cat:{i['category']}", "IN_CATEGORY")
         if i.get("manufacturer"):

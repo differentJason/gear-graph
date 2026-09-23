@@ -57,3 +57,11 @@ questions:
     question: "Which items have no recorded connection, by category?"
     query: unrecorded
     note: "Checked against connections.yaml, not against the graph itself. 'No recorded connection' is not 'not connected'."
+
+  - id: q7
+    question: "Do any devices fed MIDI through a shared fan-out share the same recorded IN channel?"
+    query: midi_conflicts
+    note: "Checked against connections.yaml + midi_channels.yaml, not against the graph itself. midi_channels.yaml
+           starts empty, so today's honest answer is: no conflicts, and every device downstream of the MIDI Thru5
+           fan-out has 'not recorded' for its channel -- not the same as 'no conflict'. This will become a
+           meaningful check once the owner records real channel settings."

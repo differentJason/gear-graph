@@ -41,6 +41,132 @@
    "doc_type": "quick-start",
    "device": "akai-mpk-mini-mk3",
    "sections": 7
+  },
+  {
+   "id": "roland-kc-150",
+   "title": "KC-150 Owner's Manual",
+   "doc_type": "user-manual",
+   "device": "roland-kc-150",
+   "sections": 11
+  },
+  {
+   "id": "arturia-keystep-manual",
+   "title": "KeyStep User Manual",
+   "doc_type": "user-manual",
+   "device": "arturia-keystep",
+   "sections": 57
+  },
+  {
+   "id": "behringer-umc1820-quick-start",
+   "title": "U-PHORIA UMC1820 Quick Start Guide",
+   "doc_type": "quick-start",
+   "device": "behringer-umc1820",
+   "sections": 1
+  },
+  {
+   "id": "behringer-gdi21-manual",
+   "title": "V-TONE Guitar Driver DI GDI21 User Manual",
+   "doc_type": "user-manual",
+   "device": "behringer-gdi21",
+   "sections": 7
+  },
+  {
+   "id": "akai-rhythm-wolf-manual",
+   "title": "Rhythm Wolf User Guide",
+   "doc_type": "user-manual",
+   "device": "akai-rhythm-wolf",
+   "sections": 7
+  },
+  {
+   "id": "akai-timbre-wolf-manual",
+   "title": "Timbre Wolf User Guide",
+   "doc_type": "user-manual",
+   "device": "akai-timbre-wolf",
+   "sections": 8
+  },
+  {
+   "id": "midi-thru5-manual",
+   "title": "MIDI Thru5 WC User Manual",
+   "doc_type": "user-manual",
+   "device": "midi-thru5",
+   "sections": 9
+  },
+  {
+   "id": "yamaha-hs4-manual",
+   "title": "HS4/HS3 Owner's Manual",
+   "doc_type": "user-manual",
+   "device": "yamaha-hs4",
+   "sections": 23
+  },
+  {
+   "id": "behringer-ultra-tremolo-manual",
+   "title": "Ultra Tremolo UT300 Manual",
+   "doc_type": "user-manual",
+   "device": "behringer-ultra-tremolo",
+   "sections": 5
+  },
+  {
+   "id": "behringer-digital-delay-manual",
+   "title": "Digital Delay DD400 Manual",
+   "doc_type": "user-manual",
+   "device": "behringer-digital-delay",
+   "sections": 6
+  },
+  {
+   "id": "earthquaker-bit-commander-manual",
+   "title": "Bit Commander Manual (EU R2)",
+   "doc_type": "user-manual",
+   "device": "earthquaker-bit-commander",
+   "sections": 7
+  },
+  {
+   "id": "electro-harmonix-modrex-manual",
+   "title": "Mod Rex Polyrhythmic Modulator Manual",
+   "doc_type": "user-manual",
+   "device": "electro-harmonix-modrex",
+   "sections": 35
+  },
+  {
+   "id": "behringer-hell-babe-manual",
+   "title": "Hell-Babe HB01 Manual",
+   "doc_type": "user-manual",
+   "device": "behringer-hell-babe",
+   "sections": 5
+  },
+  {
+   "id": "elektron-digitakt-mk1-manual",
+   "title": "Digitakt User Manual",
+   "doc_type": "user-manual",
+   "device": "elektron-digitakt-mk1",
+   "sections": 122
+  },
+  {
+   "id": "korg-sq-64-manual",
+   "title": "SQ-64 Owner's Manual",
+   "doc_type": "user-manual",
+   "device": "korg-sq-64",
+   "sections": 10
+  },
+  {
+   "id": "sonicware-liven-texture-lab-manual",
+   "title": "Liven Texture Lab User's Manual",
+   "doc_type": "user-manual",
+   "device": "sonicware-liven-texture-lab",
+   "sections": 182
+  },
+  {
+   "id": "dreadbox-typhon-manual",
+   "title": "Typhon User's Manual",
+   "doc_type": "user-manual",
+   "device": "dreadbox-typhon",
+   "sections": 13
+  },
+  {
+   "id": "behringer-k2-quick-start",
+   "title": "K-2 Quick Start Guide",
+   "doc_type": "quick-start",
+   "device": "behringer-k2",
+   "sections": 43
   }
  ],
  "inventory_items": 76

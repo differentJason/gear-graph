@@ -93,6 +93,17 @@
     "cross": "pass"
    },
    "note": "Checked against connections.yaml, not against the graph itself. 'No recorded connection' is not 'not connected'."
+  },
+  {
+   "id": "q7",
+   "question": "Do any devices fed MIDI through a shared fan-out share the same recorded IN channel?",
+   "answer": [
+    "MIDI Thru5: no midi_in_ch recorded for Behringer K2, Donner Essential B1, Dreadbox Typhon, Elektron Analog Four MKII, Elektron Digitakt Mk1, Korg M1 (1993) (not recorded is not the same as no conflict)"
+   ],
+   "checks": {
+    "cross": "pass"
+   },
+   "note": "Checked against connections.yaml + midi_channels.yaml, not against the graph itself. midi_channels.yaml starts empty, so today's honest answer is: no conflicts, and every device downstream of the MIDI Thru5 fan-out has 'not recorded' for its channel -- not the same as 'no conflict'. This will become a meaningful check once the owner records real channel settings."
   }
  ]
 }

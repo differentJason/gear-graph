@@ -16,8 +16,8 @@ items:
 
   # --- interface & monitoring ---
   - {id: behringer-umc404hd, name: Behringer U-PHORIA UMC404HD, manufacturer: Behringer, model: UMC404HD, category: audio-interface, status: owned, slice: true, role: "Alternate interface for another jamming location."}
-  - {id: behringer-umc1820, name: Behringer UMC1820, manufacturer: Behringer, model: UMC1820, category: audio-interface, status: owned, role: "Main interface."}
-  - {id: yamaha-hs4, name: Yamaha HS4 (pair), manufacturer: Yamaha, model: HS4, category: monitors, status: owned}
+  - {id: behringer-umc1820, slice: true, name: Behringer UMC1820, manufacturer: Behringer, model: UMC1820, category: audio-interface, status: owned, role: "Main interface."}
+  - {id: yamaha-hs4, slice: true, name: Yamaha HS4 (pair), manufacturer: Yamaha, model: HS4, category: monitors, status: owned}
   - {id: akg-open-back-headphones, name: AKG open-back headphones, manufacturer: AKG, category: headphones, status: owned, note: "Model not specified."}
 
   # --- controllers ---
@@ -28,48 +28,53 @@ items:
   - {id: elektron-analog-four, name: Elektron Analog Four MKII, manufacturer: Elektron, model: Analog Four MKII, category: synth, status: owned, slice: true,
      revision: MKII, note: "Confirmed MKII by the owner 2026-09-20; matches the ingested OS 1.55 manual."}
   - {id: donner-b1, name: Donner Essential B1, manufacturer: Donner, model: Essential B1, category: synth, status: owned, slice: true, note: "Analog bass synthesizer and sequencer."}
-  - {id: elektron-digitakt-mk1, name: Elektron Digitakt Mk1, manufacturer: Elektron, model: Digitakt, category: sampler-drum-machine, status: owned}
+  - {id: elektron-digitakt-mk1, slice: true, name: Elektron Digitakt Mk1, manufacturer: Elektron, model: Digitakt, category: sampler-drum-machine, status: owned}
   - {id: korg-m1, name: Korg M1 (1993), manufacturer: Korg, model: M1, category: synth, status: owned}
   - {id: roland-mc-303, name: Roland MC-303, manufacturer: Roland, model: MC-303, category: groovebox, status: owned}
-  - {id: akai-timbre-wolf, name: Akai Timbre Wolf, manufacturer: Akai Professional, model: Timbre Wolf, category: synth, status: owned}
-  - {id: sonicware-liven-texture-lab, name: Sonicware Liven Texture Lab, manufacturer: Sonicware, model: Liven Texture Lab, category: synth, status: owned}
+  - {id: akai-timbre-wolf, slice: true, name: Akai Timbre Wolf, manufacturer: Akai Professional, model: Timbre Wolf, category: synth, status: owned}
+  - {id: sonicware-liven-texture-lab, slice: true, name: Sonicware Liven Texture Lab, manufacturer: Sonicware, model: Liven Texture Lab, category: synth, status: owned}
   # added 2026-09-20 while recording routing (mentioned by the owner, absent from Equipment List.md). Names as the owner gave them; not verified.
-  - {id: dreadbox-typhon, name: Dreadbox Typhon, manufacturer: Dreadbox, model: Typhon, category: synth, status: owned, note: "Added 2026-09-20 from the owner's routing answers; name as given, not verified."}
-  - {id: behringer-k2, name: Behringer K2, manufacturer: Behringer, model: K2, category: synth, status: owned, note: "Added 2026-09-20 from the owner's routing answers; name as given, not verified. Swaps with the Donner B1 in the MIDI chain."}
-  - {id: korg-sq-64, name: Korg SQ-64, manufacturer: Korg, model: SQ-64, category: sequencer, status: owned, note: "Added 2026-09-20 from the owner's routing answers; name as given, not verified. Sends CV/gate/trig to the Eurorack."}
-  - {id: arturia-keystep, name: Arturia KeyStep, manufacturer: Arturia, model: KeyStep, category: controller, status: owned, note: "Added 2026-09-20 from the owner's routing answers. The original KeyStep (not Pro/32/37); first entered as 'Beatstep' by mistake and corrected by the owner the same day. Sends CV/gate/trig to the Eurorack."}
+  - {id: dreadbox-typhon, slice: true, name: Dreadbox Typhon, manufacturer: Dreadbox, model: Typhon, category: synth, status: owned, note: "Added 2026-09-20 from the owner's routing answers; name as given, not verified."}
+  - {id: behringer-k2, slice: true, name: Behringer K2, manufacturer: Behringer, model: K2, category: synth, status: owned, note: "Added 2026-09-20 from the owner's routing answers; name as given, not verified. Swaps with the Donner B1 in the MIDI chain."}
+  - {id: korg-sq-64, slice: true, name: Korg SQ-64, manufacturer: Korg, model: SQ-64, category: sequencer, status: owned, note: "Added 2026-09-20 from the owner's routing answers; name as given, not verified. Sends CV/gate/trig to the Eurorack."}
+  - {id: arturia-keystep, slice: true, name: Arturia KeyStep, manufacturer: Arturia, model: KeyStep, category: controller, status: owned, note: "Added 2026-09-20 from the owner's routing answers. The original KeyStep (not Pro/32/37); first entered as 'Beatstep' by mistake and corrected by the owner the same day. Sends CV/gate/trig to the Eurorack."}
 
   # --- drum machines ---
   - {id: behringer-rd-9, name: Behringer RD-9 Rhythm Designer, manufacturer: Behringer, model: RD-9, category: drum-machine, status: owned, slice: true,
      role: "Main drum machine for everything.", note: "Owner-downloaded manual ingested 2026-09-20."}
   - {id: roland-tr-505, name: Roland TR-505, manufacturer: Roland, model: TR-505, category: drum-machine, status: owned}
-  - {id: akai-rhythm-wolf, name: Akai Rhythm Wolf, manufacturer: Akai Professional, model: Rhythm Wolf, category: drum-machine, status: owned}
+  - {id: akai-rhythm-wolf, slice: true, name: Akai Rhythm Wolf, manufacturer: Akai Professional, model: Rhythm Wolf, category: drum-machine, status: owned}
 
   # --- MIDI ---
-  - {id: midi-thru5, name: MIDI Thru5, category: midi-utility, status: owned, note: "1-in/5-out MIDI thru box. Equipment List.md wrote 'MIDI Thru5 WC'; the owner believes WC is a typo, so the name is kept as MIDI Thru5."}
+  - {id: midi-thru5, slice: true, name: MIDI Thru5, category: midi-utility, status: owned, note: "1-in/5-out MIDI thru box. Equipment List.md wrote 'MIDI Thru5 WC'; the owner believes WC is a typo, so the name is kept as MIDI Thru5.
+     FLAG (2026-09-23, assistant, not owner-confirmed): a manual search found an official CME product literally named 'MIDI Thru5 WC' (WC = its Bluetooth-MIDI variant) at cme-pro.com, matching the original 'WC' spelling exactly -- it may not be a typo after all, and the manufacturer may be CME rather than unknown. Owner should confirm against the physical unit before this is treated as fact."}
   # --- guitars, bass, amps ---
   - {id: schecter-ultra-iii, name: Schecter Ultra III, manufacturer: Schecter, category: guitar, status: owned}
-  - {id: fender-mustang-bass, name: Fender Mustang Bass, manufacturer: Fender, category: bass, status: owned}
-  - {id: laney-150w-bass-amp, name: Laney 150W bass amp, manufacturer: Laney, category: amp, status: owned}
-  - {id: roland-kc-150, name: Roland KC-150, manufacturer: Roland, category: amp, status: owned}
+  - {id: fender-mustang-bass, name: Fender Mustang Bass, manufacturer: Fender, category: bass, status: owned,
+     note: "FLAG (2026-09-23, assistant): a manual/image search could not confirm which Mustang Bass variant this is (e.g. Player Mustang Bass PJ vs. Vintera vs. American Vintage reissue) -- no model-specific manual exists for any variant, and Fender only publishes one generic bass-guitar owner's manual. Owner input needed to narrow it down."}
+  - {id: laney-150w-bass-amp, name: Laney 150W bass amp, manufacturer: Laney, category: amp, status: owned,
+     note: "FLAG (2026-09-23, assistant): a manual/image search could not confirm the exact model. Candidates that are all marketed near 150W: Laney RBW200 (Richter series, current), Laney G150 (older 4x10 combo, discontinued), Laney RB4 (165W, close but not exact). Owner should check the amp's badge/back panel before a manual is fetched."}
+  - {id: roland-kc-150, slice: true, name: Roland KC-150, manufacturer: Roland, category: amp, status: owned}
   - {id: roland-kc-100, name: Roland KC-100, manufacturer: Roland, category: amp, status: owned}
 
   # --- DI / preamp ---
   - {id: tc-electronic-combo-deluxe-65, name: TC Electronic Combo Deluxe '65, manufacturer: TC Electronic, category: di-preamp, status: owned}
-  - {id: behringer-gdi21, name: Behringer GDI21 Driver DI, manufacturer: Behringer, category: di-preamp, status: owned}
+  - {id: behringer-gdi21, slice: true, name: Behringer GDI21 Driver DI, manufacturer: Behringer, category: di-preamp, status: owned}
 
   # --- pedals ---
-  - {id: behringer-hell-babe, name: Behringer Hell Babe, manufacturer: Behringer, category: pedal-wah, status: owned}
-  - {id: behringer-ultra-tremolo, name: Behringer Ultra Tremolo, manufacturer: Behringer, category: pedal-modulation, status: owned}
+  - {id: behringer-hell-babe, slice: true, name: Behringer Hell Babe, manufacturer: Behringer, category: pedal-wah, status: owned}
+  - {id: behringer-ultra-tremolo, slice: true, name: Behringer Ultra Tremolo, manufacturer: Behringer, category: pedal-modulation, status: owned}
   - {id: proco-rat, name: ProCo Rat, manufacturer: ProCo, category: pedal-distortion, status: owned}
-  - {id: behringer-ultra-fuzz, name: Behringer Ultra Fuzz, manufacturer: Behringer, category: pedal-distortion, status: owned}
+  - {id: behringer-ultra-fuzz, name: Behringer Ultra Fuzz, manufacturer: Behringer, category: pedal-distortion, status: owned,
+     note: "FLAG (2026-09-23, assistant, not owner-confirmed): a manual/image search identified this as model UZ400 (discontinued; no official page remains). Not added as `model:` until confirmed against the unit."}
   - {id: sonicake-tonegroup-10-band-eq, name: Sonicake ToneGroup 10-band EQ, manufacturer: Sonicake, category: pedal-eq, status: owned}
   - {id: sonicake-levitate, name: Sonicake Levitate reverb/delay, manufacturer: Sonicake, category: pedal-time, status: owned}
   - {id: deadbeat-echolation-station, name: Deadbeat Echolation Station, manufacturer: Deadbeat, category: pedal-time, status: owned}
-  - {id: behringer-digital-delay, name: Behringer Digital Delay, manufacturer: Behringer, category: pedal-time, status: owned}
-  - {id: behringer-chromatic-tuner, name: Behringer Chromatic Tuner, manufacturer: Behringer, category: pedal-utility, status: owned}
-  - {id: electro-harmonix-modrex, name: Electro-Harmonix ModRex, manufacturer: Electro-Harmonix, category: pedal-modulation, status: owned, note: "Written 'ElectroHarmonix ModRex' in Equipment List.md."}
-  - {id: earthquaker-bit-commander, name: EarthQuaker Bit Commander, manufacturer: EarthQuaker Devices, category: pedal-synth, status: owned}
+  - {id: behringer-digital-delay, slice: true, name: Behringer Digital Delay, manufacturer: Behringer, category: pedal-time, status: owned}
+  - {id: behringer-chromatic-tuner, name: Behringer Chromatic Tuner, manufacturer: Behringer, category: pedal-utility, status: owned,
+     note: "FLAG (2026-09-23, assistant, not owner-confirmed): a manual/image search identified this as model TU100. Behringer's CT100 is a cable tester, not a tuner, so CT100 would be the wrong model to search for. Not added as `model:` until confirmed against the unit."}
+  - {id: electro-harmonix-modrex, slice: true, name: Electro-Harmonix ModRex, manufacturer: Electro-Harmonix, category: pedal-modulation, status: owned, note: "Written 'ElectroHarmonix ModRex' in Equipment List.md."}
+  - {id: earthquaker-bit-commander, slice: true, name: EarthQuaker Bit Commander, manufacturer: EarthQuaker Devices, category: pedal-synth, status: owned}
 
   # --- eurorack (from the owner's equipment list) ---
   - {id: behringer-cp1a, name: "Behringer CP1A power supply", manufacturer: "Behringer", category: eurorack-power, status: owned, note: "Power supply. Written 'cp1A' in the list."}
@@ -77,7 +82,8 @@ items:
   - {id: after-later-audio-dice, name: "After Later Audio Dice", manufacturer: "After Later Audio", category: eurorack-module, status: owned, note: "Name/maker as written in Equipment List.md; not verified."}
   - {id: after-later-audio-resonate, name: "After Later Audio Resonate", manufacturer: "After Later Audio", category: eurorack-module, status: owned, note: "Name/maker as written in Equipment List.md; not verified."}
   - {id: ugrids, name: uGrids, manufacturer: After Later Audio, category: eurorack-module, status: owned, note: "Maker (After Later Audio) confirmed by the owner 2026-09-20."}
-  - {id: zlob-fade-lfo, name: "Złob Fade LFO", category: eurorack-module, status: owned, note: "Name/maker as written in Equipment List.md; not verified."}
+  - {id: zlob-fade-lfo, name: "Złob Fade LFO", category: eurorack-module, status: owned, note: "Name/maker as written in Equipment List.md; not verified.
+     FLAG (2026-09-23, assistant, not owner-confirmed): an image search found the maker (zlobmodular.com) calls this product the 'Skew-Fade LFO', not 'Fade LFO' -- likely the same module under its full name."}
   - {id: moth-hunter-mods-razcalito, name: "Moth Hunter Mods Razcalito", manufacturer: "Moth Hunter Mods", category: eurorack-module, status: owned, note: "Name/maker as written in Equipment List.md; not verified."}
   - {id: synthrotek-passive-mult, name: "Synthrotek passive mult", manufacturer: "Synthrotek", category: eurorack-module, status: owned, note: "Name/maker as written in Equipment List.md; not verified."}
   - {id: cre8audio-cellz, name: "Cre8audio Cellz", manufacturer: "Cre8audio", category: eurorack-module, status: owned, note: "Name/maker as written in Equipment List.md; not verified."}
@@ -99,8 +105,10 @@ items:
   - {id: after-later-audio-pixie, name: After Later Audio Pixie, manufacturer: After Later Audio, category: eurorack-module, status: owned, note: "One module. Equipment List.md listed it twice by mistake (confirmed by the owner 2026-09-20)."}
   - {id: erica-synths-black-dual-vcf, name: Erica Synths Black Dual VCF, manufacturer: Erica Synths, category: eurorack-module, status: owned, note: "Written 'Erica Fual Black VCF' in Equipment List.md; the owner confirmed the actual name 2026-09-20."}
   # eurorack marked UNUSED in the list
-  - {id: jakes-kick-6hp, name: "Jake's kick 6HP", manufacturer: "Jake's Custom Shop", category: eurorack-module, status: owned, in_use: false, note: "Name/maker as written in Equipment List.md; not verified."}
-  - {id: jakes-snare-hats-6hp, name: "Jake's snare/hats 6HP", manufacturer: "Jake's Custom Shop", category: eurorack-module, status: owned, in_use: false, note: "Name/maker as written in Equipment List.md; not verified."}
+  - {id: jakes-kick-6hp, name: "Jake's kick 6HP", manufacturer: "Jake's Custom Shop", category: eurorack-module, status: owned, in_use: false, note: "Name/maker as written in Equipment List.md; not verified.
+     FLAG (2026-09-23, assistant, not owner-confirmed): an image search found the maker's own product page (jakescustomshop.com) but it does not state an HP width, so the '6HP' in this id/name is unverified against the maker's own listing."}
+  - {id: jakes-snare-hats-6hp, name: "Jake's snare/hats 6HP", manufacturer: "Jake's Custom Shop", category: eurorack-module, status: owned, in_use: false, note: "Name/maker as written in Equipment List.md; not verified.
+     FLAG (2026-09-23, assistant, not owner-confirmed): an image search found the maker's own product page (jakescustomshop.com), which does not state an HP width; a secondary source described this module family as 8HP, not 6HP. Worth checking against the physical module."}
   - {id: synthrotek-atari-punk-console-4hp, name: "Synthrotek Atari Punk Console 4HP", manufacturer: "Synthrotek", category: eurorack-module, status: owned, in_use: false, note: "Name/maker as written in Equipment List.md; not verified."}
   - {id: mosaic-quantizer, name: "Mosaic Quantizer", category: eurorack-module, status: owned, in_use: false, note: "Name/maker as written in Equipment List.md; not verified."}
   - {id: behringer-cm1a-midi-to-cv, name: "Behringer CM1A MIDI to CV", manufacturer: "Behringer", category: eurorack-module, status: owned, in_use: false, note: "Name/maker as written in Equipment List.md; not verified."}

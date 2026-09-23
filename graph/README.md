@@ -3,9 +3,9 @@
 Status: **builder written (`tools/build_graph.py`); the power budget is computed from the graph.** Remaining plan items are below. Decision D18 in
 [`docs/about/decisions.md`](../docs/about/decisions.md).
 
-The graph is **derived**. `inventory.yaml`, `connections.yaml`, `eurorack/`, `tools/manifest.yaml`, `VOCAB.yaml`,
-`evals/golden.jsonl` and the converted manual sections are the sources; the graph is rebuilt from them and never edited
-by hand, like `docs/eurorack/`.
+The graph is **derived**. `inventory.yaml`, `connections.yaml`, `midi_channels.yaml`, `eurorack/`, `tools/manifest.yaml`,
+`VOCAB.yaml`, `evals/golden.jsonl` and the converted manual sections are the sources; the graph is rebuilt from them
+and never edited by hand, like `docs/eurorack/`.
 
 ## Environment
 
@@ -24,7 +24,7 @@ Vertices: `id`, `type`, `name`, `visibility`, plus sparse property columns. Edge
 
 | Vertex `type` | Source | Visibility |
 |---|---|---|
-| `item` (device, module, supply, case, software; a case also carries `rows`, e.g. `1U:84,3U:84,3U:84`) | `inventory.yaml`, `connections.yaml` | public |
+| `item` (device, module, supply, case, software; a case also carries `rows`, e.g. `1U:84,3U:84,3U:84`; an item with a recorded MIDI setting also carries `midi_in_ch`, `midi_out_ch`, `midi_thru_pass`, `midi_status`, `midi_confirmed`) | `inventory.yaml`, `connections.yaml`, `midi_channels.yaml` | public |
 | `manufacturer`, `category` | `inventory.yaml` | public |
 | `spec` (one item + one field, with `value`, evidence `status`, and `attested` if the owner has attested it) | `eurorack/` | public |
 | `source` (a URL with a `tier`: official / retailer / community) | `eurorack/sources.yaml` | public |
@@ -66,7 +66,7 @@ Pages CI reads the committed snapshot and never runs Spark.
    case capacity. Still to add: check that every named port appears in that device's manual text, with misses reported.
 3. **Graph checks in the validator style**: done in `build_graph.py` (unique ids, no dangling edge endpoints, no private node in the public export, leak scan over `graph/public/`). Not done: orphan-vertex report.
 4. ~~**Query tests**: like `evals/golden.jsonl`, a small set of questions with known answers, run against the graph.~~ Done: `evals/graph_golden.yaml` and `tools/query_graph.py`; each answer is checked by hand-written expectation or by an independent implementation over the raw files.
-5. ~~**Visualisation** on the public site from the committed snapshot.~~ Done: `tools/viz_graph.py` draws three views (schema, wiring, rack) on the public `visuals/graph.md` page from `graph/public/*.json` only.
+5. ~~**Visualisation** on the public site from the committed snapshot.~~ Done: `tools/viz_graph.py` draws five views (schema, category composition, wiring, a hop-distance "reach" panel, rack) on the public `visuals/graph.md` page from `graph/public/*.json` only. The reach panel (`routing_diagram(..., root=<id>)`) computes hop distance over confirmed edges with a plain BFS, no Spark -- the same rule `query_graph.py`'s `reach()` uses, so the picture and q2's table agree by construction, not by re-checking.
 
 ## Questions the graph should be able to answer (acceptance tests)
 
@@ -76,9 +76,21 @@ Pages CI reads the committed snapshot and never runs Spark.
 4. Which items have no recorded connection? (the honest answer is "not recorded", not "unconnected") (**done**: q6)
 5. Everything that receives clock, directly or through other devices (GraphFrames `shortestPaths` on the reversed graph). (**done**: q2)
 6. Which manual section describes the port on this cable? (private-only; partly done: `validate_connections.py` checks that each named port appears in the device's manual text)
+7. Do any devices fed MIDI through a shared fan-out share the same recorded IN channel? (**done**: q7, `midi_conflicts`)
 
 ## Known limits, to be stated in the docs when the graph lands
 
 - Only **confirmed** connections count in conclusions; `unconfirmed` ones are drawn differently and excluded from queries.
 - The graph inherits the source data's trust levels; it cannot make a single-source spec more certain.
 - Tags are keyword rules, so `TAGGED` edges are only as good as those rules.
+- MIDI channel settings (`midi_channels.yaml`) are recorded **per device**, not per internal parameter: a device with
+  several independent MIDI channels (e.g. Elektron's per-track/AUTO/PERF/program-change channels) has only its
+  single most relevant live-performance channel recorded, named in that entry's `role:` field. The graph cannot
+  answer "what channel does track 3 listen on."
+- A "thru channel" is not tracked, because for this rack's gear it is not a coherent concept: a hardware MIDI thru
+  jack re-sends every byte unchanged (no channel), and where a device does have a soft-thru toggle (Donner B1) it is
+  an on/off routing choice, not a channel. `midi_channels.yaml` records `thru_pass_enabled: true/false` instead.
+- `midi_in_ch`/`midi_out_ch` are stored as one item-vertex property each, so a device can carry at most one setup's
+  worth of MIDI settings today. There is currently only one setup (`main-studio`); if a second setup ever needs its
+  own MIDI channels for the same device, this would need to become a per-(setup, item) fact, the way `CONNECTS`
+  already is.

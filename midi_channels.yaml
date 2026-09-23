@@ -1,0 +1,36 @@
+# Source of truth for the MIDI channel each device should be SET TO for live performance -- a device SETTING the
+# owner wants recorded and recalled, never inferred from a manual. Same discipline as connections.yaml: nothing is
+# recorded that the owner has not stated, everything carries a status and (once confirmed) a date, unknown stays
+# unknown.
+#
+# ids refer to `id:` values in inventory.yaml. `setup` refers to `setups:` in connections.yaml -- the same studio
+# arrangement the device's cables are recorded for. A device can want a different channel in a different setup.
+#
+# in:                channel the device should RECEIVE on. One of 1-16, "omni" (listens on every channel), or "off"
+#                     (ignores incoming MIDI). Omit if the device has no MIDI IN, or the owner has not decided yet.
+#                     Vocabulary is normalized to this project's own terms even where a device's own panel says
+#                     something else (e.g. the RD-9 manual's "All"/"Out" become "omni" here), the same way
+#                     connections.yaml normalizes port wiring into a fixed `medium` enum.
+# out:               channel the device should TRANSMIT on. One of 1-16, or "off". Omit if no MIDI OUT / not decided.
+# thru_pass_enabled: true/false. Whether the device forwards MIDI it receives back out (a soft-thru toggle, e.g. the
+#                     Donner B1's MIDI SOFT THROUGH). Most gear's hardware MIDI THRU jack (if it has one) is a dumb,
+#                     unfiltered passthrough with no channel or on/off concept, so this field is only meaningful for
+#                     devices with an actual soft-thru setting -- omit it otherwise. See decisions.md D22 for why
+#                     this project does not track a "thru channel": for this rack's gear, "thru" is not
+#                     channel-based (a MIDI thru box re-sends every byte unchanged; the Analog Four's THRU PORT
+#                     FUNCTIONALITY selects a sync format, not a channel).
+# role:              free text naming which of the device's internal MIDI parameters this channel maps to, for any
+#                     device with more than one MIDI-channel concept (e.g. Elektron's AUTO CHANNEL vs. its per-track
+#                     channels). Required whenever that's the case, so a future reader knows exactly which menu item
+#                     this is without re-deriving it from the manual.
+# status/confirmed:  same meaning as connections.yaml. `unconfirmed` entries are excluded from conclusions
+#                     (validate_midi.py and query_graph.py's midi_conflicts query both honor this).
+#
+# This file starts EMPTY on purpose: the assistant that built this schema does not know what channel the owner
+# actually wants each device set to, and fabricating a "confirmed" answer would violate the rule above. Fill it in
+# the same way connections.yaml was filled in -- one device at a time, stating only what is actually true.
+
+schema_version: 1
+updated: 2026-09-23
+
+channels: []

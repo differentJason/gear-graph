@@ -79,6 +79,32 @@ def source_support(g):
     return out, attested_single, len(rows)
 
 
+def midi_conflicts(g):
+    """Fan-out points on the confirmed MIDI graph: items with 2+ outgoing confirmed CONNECTS edges, medium=midi.
+    For each, group the downstream devices by their recorded midi_in_ch. 2+ devices sharing a non-null channel is a
+    conflict (they would all respond to the same messages from that fan-out). A downstream device with no recorded
+    midi_in_ch is reported separately: not recorded is not the same as no conflict."""
+    midi_edges = (g.find("(a)-[e]->(b)").filter("e.rel = 'CONNECTS' AND e.status = 'confirmed' AND e.medium = 'midi'")
+                  .select(F.col("a.id").alias("src"), F.col("b.id").alias("dst"), F.col("b.midi_in_ch").alias("ch")).collect())
+    by_src = defaultdict(list)
+    for r in midi_edges:
+        by_src[r["src"]].append((r["dst"], r["ch"]))
+    conflicts, unrecorded_ch = {}, {}
+    for src, downstream in by_src.items():
+        if len(downstream) < 2:
+            continue
+        groups = defaultdict(list)
+        for dst, ch in downstream:
+            groups[ch].append(bare(dst))
+        fan = bare(src)
+        dup = {ch: sorted(v) for ch, v in groups.items() if ch is not None and len(v) > 1}
+        if dup:
+            conflicts[fan] = dup
+        if groups.get(None):
+            unrecorded_ch[fan] = sorted(groups[None])
+    return conflicts, unrecorded_ch
+
+
 def unrecorded(g):
     """Items with no confirmed connection, placement or supply link, grouped by category. 'Not recorded' is not 'not connected'."""
     touched = (g.edges.filter(F.col("rel").isin(ROUTING)).filter(F.col("status") == "confirmed")
@@ -109,6 +135,33 @@ def cross_source_support():
             seen = [s["tier"] for s in rec["sources"] if field in s["values"]] if field not in ov.get(f.stem, {}) else []
             out["no source (override, inferred or missing)" if not seen else f"one {seen[0]} source" if len(seen) == 1 else "two or more sources"] += 1
     return out, n_specs
+
+
+def cross_midi_conflicts():
+    """From connections.yaml + midi_channels.yaml only: no graph."""
+    c = yaml.safe_load((ROOT / "connections.yaml").read_text())
+    m = yaml.safe_load((ROOT / "midi_channels.yaml").read_text()) or {}
+    ch_by_device = {}
+    for rec in m.get("channels", []):
+        if rec["device"] not in ch_by_device:
+            ch_by_device[rec["device"]] = rec.get("in")
+    by_src = defaultdict(list)
+    for l in c["links"]:
+        if l["status"] == "confirmed" and l["medium"] == "midi":
+            by_src[l["from"]].append((l["to"], ch_by_device.get(l["to"])))
+    conflicts, unrecorded_ch = {}, {}
+    for src, downstream in by_src.items():
+        if len(downstream) < 2:
+            continue
+        groups = defaultdict(list)
+        for dst, ch in downstream:
+            groups[ch].append(dst)
+        dup = {ch: sorted(v) for ch, v in groups.items() if ch is not None and len(v) > 1}
+        if dup:
+            conflicts[src] = dup
+        if groups.get(None):
+            unrecorded_ch[src] = sorted(groups[None])
+    return conflicts, unrecorded_ch
 
 
 def cross_unrecorded():
@@ -172,6 +225,16 @@ def main():
             record(qid, q["question"], dict(res), lines, cross=dict(cross), note=q.get("note"))
             if total != cross_total:
                 failures.append(f"{qid}: graph has {total} specs, raw files have {cross_total}")
+        elif kind == "midi_conflicts":
+            conflicts, unrec = midi_conflicts(g)
+            cross_conflicts, cross_unrec = cross_midi_conflicts()
+            res = {"conflicts": conflicts, "unrecorded": unrec}
+            cross = {"conflicts": cross_conflicts, "unrecorded": cross_unrec}
+            lines = ([f"conflict at {nm(src)}: channel {ch} shared by {', '.join(nm(x) for x in v)}"
+                      for src, dup in conflicts.items() for ch, v in dup.items()]
+                     + [f"{nm(src)}: no midi_in_ch recorded for {', '.join(nm(x) for x in v)} (not recorded is not the same as no conflict)"
+                        for src, v in unrec.items()]) or ["no fan-out point has 2+ downstream devices with a recorded channel yet"]
+            record(qid, q["question"], res, lines, cross=cross, note=q.get("note"))
         elif kind == "unrecorded":
             res = unrecorded(g)
             cross = cross_unrecorded()

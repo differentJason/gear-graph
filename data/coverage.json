@@ -23,5 +23,90 @@
   "id": "behringer-umc404hd-quick-start",
   "unique_word_recall": 0.989189,
   "occurrence_recall": 0.960276
+ },
+ {
+  "id": "roland-kc-150",
+  "unique_word_recall": 0.963345,
+  "occurrence_recall": 0.948047
+ },
+ {
+  "id": "arturia-keystep-manual",
+  "unique_word_recall": 0.992853,
+  "occurrence_recall": 0.970111
+ },
+ {
+  "id": "behringer-umc1820-quick-start",
+  "unique_word_recall": 0.968504,
+  "occurrence_recall": 0.964286
+ },
+ {
+  "id": "behringer-gdi21-manual",
+  "unique_word_recall": 0.997175,
+  "occurrence_recall": 0.993092
+ },
+ {
+  "id": "akai-rhythm-wolf-manual",
+  "unique_word_recall": 0.977324,
+  "occurrence_recall": 0.991754
+ },
+ {
+  "id": "akai-timbre-wolf-manual",
+  "unique_word_recall": 0.980545,
+  "occurrence_recall": 0.994601
+ },
+ {
+  "id": "midi-thru5-manual",
+  "unique_word_recall": 1.0,
+  "occurrence_recall": 0.998901
+ },
+ {
+  "id": "yamaha-hs4-manual",
+  "unique_word_recall": 0.991961,
+  "occurrence_recall": 0.986535
+ },
+ {
+  "id": "behringer-ultra-tremolo-manual",
+  "unique_word_recall": 0.976959,
+  "occurrence_recall": 0.949045
+ },
+ {
+  "id": "behringer-digital-delay-manual",
+  "unique_word_recall": 0.977465,
+  "occurrence_recall": 0.980287
+ },
+ {
+  "id": "electro-harmonix-modrex-manual",
+  "unique_word_recall": 1.0,
+  "occurrence_recall": 1.0
+ },
+ {
+  "id": "behringer-hell-babe-manual",
+  "unique_word_recall": 1.0,
+  "occurrence_recall": 0.997633
+ },
+ {
+  "id": "elektron-digitakt-mk1-manual",
+  "unique_word_recall": 0.999463,
+  "occurrence_recall": 0.986273
+ },
+ {
+  "id": "korg-sq-64-manual",
+  "unique_word_recall": 0.998062,
+  "occurrence_recall": 0.992785
+ },
+ {
+  "id": "sonicware-liven-texture-lab-manual",
+  "unique_word_recall": 0.971264,
+  "occurrence_recall": 0.961999
+ },
+ {
+  "id": "dreadbox-typhon-manual",
+  "unique_word_recall": 0.997838,
+  "occurrence_recall": 0.990066
+ },
+ {
+  "id": "behringer-k2-quick-start",
+  "unique_word_recall": 0.990698,
+  "occurrence_recall": 0.963777
  }
 ]
