@@ -29,8 +29,8 @@ items:
      revision: MKII, note: "Confirmed MKII by the owner 2026-09-20; matches the ingested OS 1.55 manual."}
   - {id: donner-b1, name: Donner Essential B1, manufacturer: Donner, model: Essential B1, category: synth, status: owned, slice: true, note: "Analog bass synthesizer and sequencer."}
   - {id: elektron-digitakt-mk1, slice: true, name: Elektron Digitakt Mk1, manufacturer: Elektron, model: Digitakt, category: sampler-drum-machine, status: owned}
-  - {id: korg-m1, name: Korg M1 (1993), manufacturer: Korg, model: M1, category: synth, status: owned}
-  - {id: roland-mc-303, name: Roland MC-303, manufacturer: Roland, model: MC-303, category: groovebox, status: owned}
+  - {id: korg-m1, slice: true, name: Korg M1 (1993), manufacturer: Korg, model: M1, category: synth, status: owned}
+  - {id: roland-mc-303, slice: true, name: Roland MC-303, manufacturer: Roland, model: MC-303, category: groovebox, status: owned}
   - {id: akai-timbre-wolf, slice: true, name: Akai Timbre Wolf, manufacturer: Akai Professional, model: Timbre Wolf, category: synth, status: owned}
   - {id: sonicware-liven-texture-lab, slice: true, name: Sonicware Liven Texture Lab, manufacturer: Sonicware, model: Liven Texture Lab, category: synth, status: owned}
   # added 2026-09-20 while recording routing (mentioned by the owner, absent from Equipment List.md). Names as the owner gave them; not verified.
@@ -42,7 +42,7 @@ items:
   # --- drum machines ---
   - {id: behringer-rd-9, name: Behringer RD-9 Rhythm Designer, manufacturer: Behringer, model: RD-9, category: drum-machine, status: owned, slice: true,
      role: "Main drum machine for everything.", note: "Owner-downloaded manual ingested 2026-09-20."}
-  - {id: roland-tr-505, name: Roland TR-505, manufacturer: Roland, model: TR-505, category: drum-machine, status: owned}
+  - {id: roland-tr-505, slice: true, name: Roland TR-505, manufacturer: Roland, model: TR-505, category: drum-machine, status: owned}
   - {id: akai-rhythm-wolf, slice: true, name: Akai Rhythm Wolf, manufacturer: Akai Professional, model: Rhythm Wolf, category: drum-machine, status: owned}
 
   # --- MIDI ---
@@ -55,7 +55,7 @@ items:
   - {id: laney-150w-bass-amp, name: Laney 150W bass amp, manufacturer: Laney, category: amp, status: owned,
      note: "FLAG (2026-09-23, assistant): a manual/image search could not confirm the exact model. Candidates that are all marketed near 150W: Laney RBW200 (Richter series, current), Laney G150 (older 4x10 combo, discontinued), Laney RB4 (165W, close but not exact). Owner should check the amp's badge/back panel before a manual is fetched."}
   - {id: roland-kc-150, slice: true, name: Roland KC-150, manufacturer: Roland, category: amp, status: owned}
-  - {id: roland-kc-100, name: Roland KC-100, manufacturer: Roland, category: amp, status: owned}
+  - {id: roland-kc-100, slice: true, name: Roland KC-100, manufacturer: Roland, category: amp, status: owned}
 
   # --- DI / preamp ---
   - {id: tc-electronic-combo-deluxe-65, name: TC Electronic Combo Deluxe '65, manufacturer: TC Electronic, category: di-preamp, status: owned}

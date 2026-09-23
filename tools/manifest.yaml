@@ -931,3 +931,82 @@ manuals:
     split: headings
     heading_pattern: ^#{1,6}\s+
     applies_to: Mosaic Quantizer, a 1U tile (Intellijel 1U format, 20HP wide) -- not a 3U module.
+
+  # ---- Scanned manuals made searchable with OCR (ocrmypdf 15.2, tesseract eng) on 2026-09-23. `pdf` is the OCR copy;
+  #      the untouched official scan sits beside it (same name without .ocr) and matches the source_url file byte for byte.
+  - id: korg-m1-manual
+    device: korg-m1
+    manufacturer: Korg
+    model: M1
+    title: M1 Owner's Manual
+    doc_type: user-manual
+    doc_version: original M1 owner's manual (scan)
+    language: en
+    pdf: sources/korg-m1.ocr.pdf
+    source_url: https://cdn.korg.com/us/support/download/files/e223761dc7dee38a7c3c76983ddf2ea1.pdf
+    source_note: Official scan (sources/korg-m1.pdf, sha256 6882c3cb2e62f4ef..., identical to the file at source_url, verified 2026-09-23); OCR'd locally with ocrmypdf 2026-09-23. OCR text, not the maker's text layer.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 138
+    split: headings
+    heading_pattern: '^#{1,6}\s+(?=[^\n]*[A-Za-z]{5,})'   # OCR: skip junk headings with no real word
+    figure_text: all              # OCR'd scan: keep table lines (see convert_manual.figure_text)
+    applies_to: "Korg M1 (the owner's unit is from 1993). Scanned original manual; text is OCR, so expect recognition errors. Word coverage is about 80-94%: the losses are in the index, contents and dense lists/tables (tone, pattern and parameter lists), not the instruction text."
+  - id: roland-mc-303-manual
+    device: roland-mc-303
+    manufacturer: Roland
+    model: MC-303
+    title: MC-303 Owner's Manual
+    doc_type: user-manual
+    doc_version: original MC-303 owner's manual (scan)
+    language: en
+    pdf: sources/roland-mc-303.ocr.pdf
+    source_url: https://static.roland.com/assets/media/pdf/MC-303_OM.pdf
+    source_note: Official scan (sources/roland-mc-303.pdf, sha256 923f8271cb6c4567..., identical to the file at source_url, verified 2026-09-23); OCR'd locally with ocrmypdf 2026-09-23. OCR text, not the maker's text layer.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 130
+    split: headings
+    figure_text: all              # OCR'd scan: keep table lines (see convert_manual.figure_text)
+    applies_to: "Roland MC-303 Groovebox. Scanned original manual; text is OCR, so expect recognition errors. Word coverage is about 80-94%: the losses are in the index, contents and dense lists/tables (tone, pattern and parameter lists), not the instruction text."
+    heading_pattern: '^#{1,6}\s+(?=[^\n]*[A-Za-z]{5,})'   # OCR: skip junk headings with no real word
+  - id: roland-tr-505-manual
+    device: roland-tr-505
+    manufacturer: Roland
+    model: TR-505
+    title: TR-505 Owner's Manual
+    doc_type: user-manual
+    doc_version: original TR-505 owner's manual (scan)
+    language: en
+    pdf: sources/roland-tr-505.ocr.pdf
+    source_url: https://static.roland.com/assets/media/pdf/TR-505_OM.pdf
+    source_note: Official scan (sources/roland-tr-505.pdf, sha256 831520f694ee520c..., identical to the file at source_url, verified 2026-09-23); OCR'd locally with ocrmypdf 2026-09-23. OCR text, not the maker's text layer.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 72
+    split: headings
+    figure_text: all              # OCR'd scan: keep table lines (see convert_manual.figure_text)
+    applies_to: "Roland TR-505 Rhythm Composer. Scanned original manual; text is OCR, so expect recognition errors. Word coverage is about 80-94%: the losses are in the index, contents and dense lists/tables (tone, pattern and parameter lists), not the instruction text."
+    heading_pattern: '^#{1,6}\s+(?=[^\n]*[A-Za-z]{5,})'   # OCR: skip junk headings with no real word
+  - id: roland-kc-100-manual
+    device: roland-kc-100
+    manufacturer: Roland
+    model: KC-100
+    title: KC-100 Owner's Manual
+    doc_type: user-manual
+    doc_version: original KC-100 owner's manual (scan)
+    language: en
+    pdf: sources/roland-kc-100.ocr.pdf
+    source_url: https://static.roland.com/assets/media/pdf/KC-100_OM.pdf
+    source_note: Official scan (sources/roland-kc-100.pdf, sha256 894f1bd7639be323..., identical to the file at source_url, verified 2026-09-23); OCR'd locally with ocrmypdf 2026-09-23. OCR text, not the maker's text layer.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 10
+    split: headings
+    figure_text: all              # OCR'd scan: keep table lines (see convert_manual.figure_text)
+    applies_to: "Roland KC-100 keyboard amplifier. Scanned original manual; text is OCR, so expect recognition errors."
+    heading_pattern: '^#{1,6}\s+(?=[^\n]*[A-Za-z]{5,})'   # OCR: skip junk headings with no real word

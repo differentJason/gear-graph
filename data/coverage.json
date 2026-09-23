@@ -248,5 +248,25 @@
   "id": "mosaic-quantizer-manual",
   "unique_word_recall": 0.997416,
   "occurrence_recall": 0.983678
+ },
+ {
+  "id": "korg-m1-manual",
+  "unique_word_recall": 0.868132,
+  "occurrence_recall": 0.785167
+ },
+ {
+  "id": "roland-mc-303-manual",
+  "unique_word_recall": 0.796099,
+  "occurrence_recall": 0.844079
+ },
+ {
+  "id": "roland-tr-505-manual",
+  "unique_word_recall": 0.888511,
+  "occurrence_recall": 0.93809
+ },
+ {
+  "id": "roland-kc-100-manual",
+  "unique_word_recall": 0.997171,
+  "occurrence_recall": 0.992366
  }
 ]

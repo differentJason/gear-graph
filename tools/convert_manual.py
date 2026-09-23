@@ -34,19 +34,24 @@ def slugify(s, maxlen=60):
     return (s[:maxlen].rstrip("-")) or "section"
 
 
-def figure_text(m):
+def figure_text(m, keep_all=False):
     """Text embedded in diagrams. Often noise (note names, numbering) but sometimes real instructions
-    (e.g. a factory-reset procedure printed beside a keyboard diagram), so keep the wordy lines only."""
+    (e.g. a factory-reset procedure printed beside a keyboard diagram), so keep the wordy lines only.
+    keep_all (manifest `figure_text: all`): on an OCR'd scan every page is an image, so parameter tables land
+    here too; keep every line that has any word in it."""
     if re.search(r"\((ES|FR|DE|PT|IT|NL|PL|SE)\)\s", m.group(1)):        # other-language block on a multilingual page
         return ""
     lines = [re.sub(r"\s+", " ", l).strip() for l in re.split(r"<br>|\n", m.group(1))]
-    keep = [l for l in lines if len(re.findall(r"[A-Za-z]{3,}", l)) >= 2]
+    need = 1 if keep_all else 2
+    keep = [l for l in lines if len(re.findall(r"[A-Za-z]{3,}", l)) >= need]
     return ("\n\n> **Figure text (from a diagram in the PDF):** " + " / ".join(keep) + "\n\n") if keep else ""
 
 
-def clean_page(md):
+def clean_page(md, ocr=False):
     md = re.sub("[\u200b\u200c\u200d\ufeff]", "", md)                        # zero-width chars (Intellijel PDFs put one between every word)
-    md = re.sub(r"<!-- Start of picture text -->(.*?)<!-- End of picture text -->", figure_text, md, flags=re.S)
+    md = re.sub(r"<!-- Start of picture text -->(.*?)<!-- End of picture text -->", lambda m: figure_text(m, ocr), md, flags=re.S)
+    if ocr:
+        md = md.replace("](", "] (")                                            # OCR brackets+parens are not links
     md = re.sub(r"</?(mark|u|sub|sup)>", "", md)                              # inline styling tags from the PDF
     md = re.sub(r"^(#{1,6})\s*\*\*(.*?)\*\*\s*$", r"\1 \2", md, flags=re.M)   # "## **X**" -> "## X"
     md = re.sub(r"^\s*\*\*\d{1,3}\*\*\s*$", "", md, flags=re.M)                # bare page-number footers
@@ -80,7 +85,7 @@ def load_pages(entry):
     text = ""
     drop = [re.compile(rx) for rx in entry.get("drop_lines", [])]   # per-manual leftovers (running headers, stray captions)
     for n, ch in zip(numbers, chunks):
-        page = clean_page(ch["text"])
+        page = clean_page(ch["text"], ocr=entry.get("figure_text") == "all")
         if drop:
             page = "\n".join(l for l in page.split("\n") if not any(rx.search(l) for rx in drop))
         text += MARK.format(n) + "\n" + page + "\n\n"

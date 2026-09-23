@@ -46,5 +46,10 @@ def markdown(setup="main-studio"):
         if c.get("status") != "confirmed":
             note = "**unconfirmed.** " + note
         out.append(f"| {ch} | {name} | {cell(c.get('in'))} | {cell(c.get('out'))} | {note} |")
+    loose = [c for c in rows if not isinstance(c.get("in"), int) and not isinstance(c.get("out"), int)
+             and c["device"] not in RESERVED.values()]
+    if loose:
+        out += ["", "**Not on a fixed channel**", ""]
+        out += [f"- **{names.get(c['device'], c['device'])}** ({c.get('in', 'no channel')}): {c.get('note', '')}" for c in loose]
     out += ["", "Generated from `midi_channels.yaml`. Channel 10 is the RD-9's drums; nothing else listens on it."]
     return "\n".join(out)

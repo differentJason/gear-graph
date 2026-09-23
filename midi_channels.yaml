@@ -40,7 +40,7 @@ channels:
   # what it replaced (connections.yaml open_statements). Channels were chosen by the assistant at the owner's request
   # and accepted by the owner ("I will set all as assigned"). Readable table: docs/midi-channels.md (generated).
   #
-  #  1 K2 | 2 Typhon | 3 M1 | 4 B1 | 5-8 Timbre Wolf (voice 1-4) | 9 Liven | 10 RD-9 | 11 TR-505 | 12 MC-303
+  #  1 K2 | 2 Typhon | 3 M1 | 4 B1 | 5-8 Timbre Wolf (voice 1-4) | 9 Liven | 10 RD-9 | 11 TR-505 | 12 spare (MC-303 is omni; see its entry)
   # 13 Analog Four | 14 Digitakt | 15 Rhythm Wolf (if settable) | 16 spare
   - {setup: main-studio, device: behringer-k2, in: 1, status: confirmed, confirmed: 2026-09-23,
      note: "Rear-panel MIDI channel switches. MIDI IN/THRU only, no MIDI OUT, so no out channel. Played by a Digitakt MIDI track set to 1."}
@@ -49,7 +49,7 @@ channels:
   - {setup: main-studio, device: dreadbox-typhon, in: 2, status: confirmed, confirmed: 2026-09-23,
      note: "Global Settings > MIDI CHANNELS > INPUT = 2 (never ALL). MASTER CLOCK = External. The manual's menu lists only an input channel."}
   - {setup: main-studio, device: korg-m1, in: 3, out: 3, status: confirmed, confirmed: 2026-09-23,
-     note: "Global MIDI channel. No Korg M1 manual is ingested here, so the menu path is not verified."}
+     note: "Set in GLOBAL mode, F5-1 (Global MIDI channel) -- verified in the OCR'd owner's manual 2026-09-23. In Combination/Multi use, each Timbre also has its own receive channel (Combination F2-1 MIDI CH); only Timbres on the Global channel sound from the M1's own keyboard."}
   - {setup: main-studio, device: akai-timbre-wolf, in: 5, out: 5, status: confirmed, confirmed: 2026-09-23, role: "MIDI Ch (Voice 1 channel)",
      note: "Per manual, voices 2-4 answer on the next three channels, so 5-8 are all reserved for it (voice 1 = 5). In Poly/Unison mode only 5 is used, but 6-8 stay reserved."}
   - {setup: main-studio, device: sonicware-liven-texture-lab, in: 9, out: 9, status: confirmed, confirmed: 2026-09-23,
@@ -57,9 +57,9 @@ channels:
   - {setup: main-studio, device: behringer-rd-9, in: 10, out: 10, thru_pass_enabled: false, status: confirmed, confirmed: 2026-09-23,
      note: "Owner: RD-9 sends on 10 and is the master clock (SYNC = INTERNAL). MIDI IN channel: 10 (or 'Out', which follows the out channel). SOFT THRU off -- per the manual it turns MIDI OUT into a second THRU."}
   - {setup: main-studio, device: roland-tr-505, in: 11, out: 11, status: confirmed, confirmed: 2026-09-23,
-     note: "Drum machine, kept off 10 so it never doubles the RD-9. No TR-505 manual is ingested; how to set its channel is not verified."}
-  - {setup: main-studio, device: roland-mc-303, in: 12, out: 12, status: confirmed, confirmed: 2026-09-23, role: "the part you play from outside",
-     note: "The MC-303 is multitimbral; this is the one part triggered from an external source. Its other parts' channels are not planned. No MC-303 manual is ingested, so the settings are not verified."}
+     note: "Verified in the OCR'd owner's manual 2026-09-23: in the MIDI function, set OMNI OFF (Down key) and the receive channel with Up/Down (1-16). The TRANSMIT channel is per drum voice (factory: 10 for every voice) -- set each voice to 11, otherwise it transmits on the RD-9's channel 10. Drum voice key numbers (25-99) are set there too."}
+  - {setup: main-studio, device: roland-mc-303, in: omni, status: confirmed, confirmed: 2026-09-23, role: "normal mode: incoming notes go to the Part chosen with PART SELECT",
+     note: "CORRECTION 2026-09-23 (from the OCR'd owner's manual): the MC-303 has no single settable MIDI channel, so the home channel 12 assigned earlier cannot be set. In normal mode it plays incoming MIDI on ANY channel into the Part selected with PART SELECT (effectively omni). In Sound Module mode each Part has a fixed receive channel (see MIDI Implementation). It TRANSMITS Parts 1-7 on channels 1-7 and the Rhythm Part on channel 10 (fixed). Practical rule: give it its own MIDI line, and don't merge its MIDI OUT into the RD-9/Digitakt chain. Channel 12 is free again. Accepted by the owner 2026-09-23."}
   - {setup: main-studio, device: elektron-analog-four, in: 13, out: 13, status: confirmed, confirmed: 2026-09-23, role: "MIDI CONFIG > CHANNELS > AUTO CHANNEL",
      note: "Fed from the Digitakt THRU (raw RD-9 stream). SYNC: CLOCK + TRANSPORT RECEIVE on, SEND off. No synth-track channel may be 10."}
   - {setup: main-studio, device: elektron-digitakt-mk1, in: 14, out: 14, status: confirmed, confirmed: 2026-09-23, role: "MIDI CONFIG > CHANNELS > AUTO CHANNEL",

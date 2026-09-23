@@ -363,6 +363,34 @@
    "doc_type": "user-manual",
    "device": "mosaic-quantizer",
    "sections": 22
+  },
+  {
+   "id": "korg-m1-manual",
+   "title": "M1 Owner's Manual",
+   "doc_type": "user-manual",
+   "device": "korg-m1",
+   "sections": 235
+  },
+  {
+   "id": "roland-mc-303-manual",
+   "title": "MC-303 Owner's Manual",
+   "doc_type": "user-manual",
+   "device": "roland-mc-303",
+   "sections": 343
+  },
+  {
+   "id": "roland-tr-505-manual",
+   "title": "TR-505 Owner's Manual",
+   "doc_type": "user-manual",
+   "device": "roland-tr-505",
+   "sections": 95
+  },
+  {
+   "id": "roland-kc-100-manual",
+   "title": "KC-100 Owner's Manual",
+   "doc_type": "user-manual",
+   "device": "roland-kc-100",
+   "sections": 20
   }
  ],
  "inventory_items": 76
