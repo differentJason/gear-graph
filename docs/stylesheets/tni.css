@@ -1,0 +1,220 @@
+/* Gear KB theme: tea-stain palette, Bauhaus blue/yellow/red accents, small tilted "collage" marks.
+   Scheme names stay default/slate so viz.css's [data-md-color-scheme="slate"] rules keep working. */
+
+:root {
+  --k-blue:   #1255b8;
+  --k-yellow: #e8c020;
+  --k-red:    #cc2b14;
+  --md-text-font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --md-code-font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+/* light: aged parchment */
+[data-md-color-scheme="default"] {
+  --tni-bg:     #ecdfc4;
+  --tni-bg2:    #f5eeda;
+  --tni-bg3:    #e3d3ac;
+  --tni-border: #cbb589;
+  --tni-text:   #2e2216;
+  --tni-muted:  #7d6a48;
+  --tni-link:   #1255b8;
+}
+/* dark: tea stain. The link blue is lifted from the site's #2a6fd4 to clear 4.5:1 on #1b140d */
+[data-md-color-scheme="slate"] {
+  --tni-bg:     #1b140d;
+  --tni-bg2:    #241b12;
+  --tni-bg3:    #2e2216;
+  --tni-border: #40311f;
+  --tni-text:   #ecdfc4;
+  --tni-muted:  #a4906a;
+  --tni-link:   #5b93e6;
+}
+
+[data-md-color-scheme="default"], [data-md-color-scheme="slate"] {
+  --md-default-bg-color:           var(--tni-bg);
+  --md-default-fg-color:           var(--tni-text);
+  --md-default-fg-color--light:    var(--tni-muted);
+  --md-default-fg-color--lighter:  color-mix(in srgb, var(--tni-muted) 55%, transparent);
+  --md-default-fg-color--lightest: color-mix(in srgb, var(--tni-muted) 22%, transparent);
+  --md-primary-fg-color:           var(--tni-bg);
+  --md-primary-fg-color--light:    var(--tni-bg2);
+  --md-primary-fg-color--dark:     var(--tni-bg3);
+  --md-primary-bg-color:           var(--tni-text);
+  --md-primary-bg-color--light:    var(--tni-muted);
+  --md-accent-fg-color:            var(--k-red);
+  --md-accent-fg-color--transparent: color-mix(in srgb, var(--k-red) 12%, transparent);
+  --md-typeset-color:              var(--tni-text);
+  --md-typeset-a-color:            var(--tni-link);
+  --md-code-bg-color:              var(--tni-bg3);
+  --md-code-fg-color:              var(--tni-text);
+  --md-typeset-table-color:        var(--tni-border);
+  --md-typeset-table-color--light: var(--tni-bg2);
+  --md-footer-bg-color:            var(--tni-bg);
+  --md-footer-bg-color--dark:      var(--tni-bg);
+  --md-footer-fg-color:            var(--tni-muted);
+  --md-footer-fg-color--light:     var(--tni-muted);
+  --md-footer-fg-color--lighter:   var(--tni-muted);
+  --md-shadow-z1: none;
+  --md-shadow-z2: 0 0 0 1px var(--tni-border);
+  --md-shadow-z3: 0 0 0 1px var(--tni-border);
+}
+
+::selection { background: color-mix(in srgb, var(--k-yellow) 45%, transparent); }
+
+/* ---------- header: tri-stripe, uppercase brand ---------- */
+.md-header { box-shadow: none; }
+.md-header::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(to right,
+    var(--k-blue) 0 33.3%, var(--k-yellow) 33.3% 66.6%, var(--k-red) 66.6% 100%);
+}
+.md-header--shadow { box-shadow: 0 1px 0 var(--tni-border); }
+.md-header__title {
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: .75rem;
+}
+
+/* theme toggle echoes the site's tilted round ◐ button */
+.md-header__button[for^="__palette"] {
+  border: 1px solid var(--tni-border);
+  border-radius: 999px;
+  padding: .2rem;
+  margin: 0 .4rem;
+  transform: rotate(-4deg);
+  transition: border-color .15s ease, transform .15s ease;
+}
+.md-header__button[for^="__palette"]:hover { border-color: var(--k-red); opacity: 1; transform: rotate(0deg); }
+.md-header__button[for^="__palette"] svg { width: 1rem; height: 1rem; }
+@media screen and (max-width: 30em) { .md-header__title { letter-spacing: .06em; font-size: .7rem; } }
+
+.md-search__form { background: var(--tni-bg3); border: 1px solid var(--tni-border); border-radius: 6px; box-shadow: none; }
+.md-search__form:hover { background: var(--tni-bg3); border-color: var(--tni-muted); }
+.md-search__input, .md-search__input::placeholder, .md-search__icon { color: var(--tni-text); }
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form { border-radius: 6px 6px 0 0; }
+.md-search__output { background: var(--tni-bg2); }
+.md-search-result__meta { background: var(--tni-bg3); color: var(--tni-muted); }
+.md-search-result mark { color: var(--k-red); }
+
+/* ---------- navigation ---------- */
+.md-nav__title { color: var(--tni-text); font-weight: 800; }
+.md-nav__link { color: var(--tni-muted); }
+.md-nav__item .md-nav__link--active,
+.md-nav__item .md-nav__link--active code { color: var(--tni-text); font-weight: 700; }
+.md-nav__link:is(:focus, :hover), .md-nav__link--active:hover { color: var(--k-red); }
+.md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__link { color: var(--tni-text); font-weight: 800; }
+@media screen and (max-width: 76.2344em) {
+  .md-nav--primary .md-nav__title { background: var(--tni-bg2); }
+  .md-nav--primary .md-nav__title[for="__drawer"] { background: var(--tni-bg); border-top: 4px solid var(--k-yellow); }
+  .md-sidebar--primary { background: var(--tni-bg); }
+}
+
+/* ---------- typography ---------- */
+.md-typeset { line-height: 1.6; }
+.md-typeset h1 {
+  color: var(--tni-text);
+  font-weight: 900;
+  letter-spacing: .02em;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  line-height: 1.15;
+  margin-bottom: 1em;
+}
+.md-typeset h2 { font-weight: 800; font-size: 1.3em; margin-top: 2em; }
+.md-typeset h3 { font-weight: 700; }
+
+/* the collage marks: red tilted square = section, blue tilted dot = subsection.
+   Inline-block rather than flex on the heading, so words around inline <code> keep their spaces. */
+.md-typeset h2::before, .md-typeset h3::before {
+  content: "";
+  display: inline-block;
+  vertical-align: .08em;
+  flex-shrink: 0;
+}
+.md-typeset h2::before {
+  width: .5em; height: .5em;
+  margin-right: .45em;
+  background: var(--k-red);
+  border-radius: 2px;
+  transform: rotate(18deg);
+}
+.md-typeset h3::before {
+  width: .42em; height: .42em;
+  margin-right: .45em;
+  background: var(--k-blue);
+  border-radius: 50%;
+}
+
+.md-typeset a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em;
+                text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); }
+.md-typeset a:is(:hover, :focus) { color: var(--k-red); text-decoration-color: currentColor; }
+.md-typeset .headerlink { text-decoration: none; }
+
+.md-typeset code {
+  border: 1px solid var(--tni-border);
+  border-radius: 4px;
+  padding: .05em .35em;
+  font-size: .82em;
+}
+.md-typeset pre > code { border: none; padding: .8em 1em; }
+.md-typeset pre { border: 1px solid var(--tni-border); border-radius: 6px; }
+
+/* blockquotes read like the site's .dl-note */
+.md-typeset blockquote {
+  border-left: 3px solid var(--k-yellow);
+  background: var(--tni-bg2);
+  color: var(--tni-muted);
+  padding: .6em 1em;
+  border-radius: 0 4px 4px 0;
+}
+
+.md-typeset hr { border-bottom-color: var(--tni-border); }
+
+/* tables sit on the card surface with the site's 3px top edge */
+.md-typeset table:not([class]) {
+  background: var(--tni-bg2);
+  border: 1px solid var(--tni-border);
+  border-top: 3px solid var(--k-blue);
+  border-radius: 8px;
+  font-size: .72rem;
+  box-shadow: none;
+}
+.md-typeset table:not([class]) th { background: var(--tni-bg3); color: var(--tni-text); font-weight: 700; }
+.md-typeset table:not([class]) td { border-top-color: var(--tni-border); }
+.md-typeset table:not([class]) tbody tr:hover { background: color-mix(in srgb, var(--k-yellow) 10%, transparent); box-shadow: none; }
+
+.md-typeset details, .md-typeset .admonition {
+  background: var(--tni-bg2);
+  border: 1px solid var(--tni-border);
+  border-left: 3px solid var(--k-blue);
+  border-radius: 0 6px 6px 0;
+  box-shadow: none;
+}
+
+/* ---------- charts: framed like the site's screenshot figure ---------- */
+.md-typeset .viz {
+  background: var(--tni-bg2);
+  border: 1px solid var(--tni-border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.md-typeset .viz-note { color: var(--tni-muted); font-size: .8em; text-align: center; margin-top: -.4rem; }
+
+/* ---------- footer ---------- */
+.md-footer { border-top: 1px solid var(--tni-border); }
+.md-footer-meta { background: var(--tni-bg); }
+.md-footer__link:is(:hover, :focus) { color: var(--k-red); opacity: 1; }
+.md-source__repository, .md-source__facts { color: var(--tni-muted); }
+
+/* ---------- focus & motion ---------- */
+.md-typeset a:focus-visible, .md-nav__link:focus-visible, .md-header__button:focus-visible {
+  outline: 2px solid var(--k-yellow);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .md-header__button[for^="__palette"] { transition: none; }
+  .md-header__button[for^="__palette"] { transform: none; }
+}
