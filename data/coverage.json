@@ -113,5 +113,140 @@
   "id": "behringer-cm1a-quick-start",
   "unique_word_recall": 0.984293,
   "occurrence_recall": 0.984479
+ },
+ {
+  "id": "after-later-dice-marbles-manual",
+  "unique_word_recall": 0.993432,
+  "occurrence_recall": 0.994304
+ },
+ {
+  "id": "after-later-dice-page",
+  "unique_word_recall": 0.958333,
+  "occurrence_recall": 0.913978
+ },
+ {
+  "id": "after-later-resonate-rings-manual",
+  "unique_word_recall": 0.988506,
+  "occurrence_recall": 0.993114
+ },
+ {
+  "id": "after-later-resonate-page",
+  "unique_word_recall": 0.954545,
+  "occurrence_recall": 0.908046
+ },
+ {
+  "id": "after-later-pixie-plaits-manual",
+  "unique_word_recall": 0.98963,
+  "occurrence_recall": 0.994386
+ },
+ {
+  "id": "after-later-pixie-page",
+  "unique_word_recall": 0.954545,
+  "occurrence_recall": 0.906977
+ },
+ {
+  "id": "ugrids-grids-manual",
+  "unique_word_recall": 0.997015,
+  "occurrence_recall": 0.996011
+ },
+ {
+  "id": "ugrids-page",
+  "unique_word_recall": 0.963855,
+  "occurrence_recall": 0.927273
+ },
+ {
+  "id": "antumbra-atom-elements-manual",
+  "unique_word_recall": 0.991881,
+  "occurrence_recall": 0.994857
+ },
+ {
+  "id": "antumbra-atom-page",
+  "unique_word_recall": 0.891892,
+  "occurrence_recall": 0.875
+ },
+ {
+  "id": "cre8audio-cellz-page",
+  "unique_word_recall": 0.898148,
+  "occurrence_recall": 0.911602
+ },
+ {
+  "id": "cre8audio-captain-big-o-page",
+  "unique_word_recall": 0.949239,
+  "occurrence_recall": 0.956522
+ },
+ {
+  "id": "cre8audio-mr-philter-page",
+  "unique_word_recall": 0.840426,
+  "occurrence_recall": 0.866667
+ },
+ {
+  "id": "cre8audio-niftycase-manual",
+  "unique_word_recall": 0.997525,
+  "occurrence_recall": 0.994978
+ },
+ {
+  "id": "erica-pico-mod-manual",
+  "unique_word_recall": 0.986111,
+  "occurrence_recall": 0.979104
+ },
+ {
+  "id": "erica-black-dual-vcf-manual",
+  "unique_word_recall": 0.983607,
+  "occurrence_recall": 0.962704
+ },
+ {
+  "id": "intellijel-quadratt-1u-manual",
+  "unique_word_recall": 0.987421,
+  "occurrence_recall": 0.98861
+ },
+ {
+  "id": "intellijel-stereo-mixer-1u-manual",
+  "unique_word_recall": 0.991228,
+  "occurrence_recall": 0.993421
+ },
+ {
+  "id": "intellijel-stereo-line-out-1u-manual",
+  "unique_word_recall": 0.967816,
+  "occurrence_recall": 0.951311
+ },
+ {
+  "id": "tiptop-forbidden-planet-manual",
+  "unique_word_recall": 0.978947,
+  "occurrence_recall": 0.96338
+ },
+ {
+  "id": "cosmotronic-delta-v-manual",
+  "unique_word_recall": 0.961749,
+  "occurrence_recall": 0.93125
+ },
+ {
+  "id": "zlob-skew-fade-lfo-page",
+  "unique_word_recall": 0.993243,
+  "occurrence_recall": 0.994709
+ },
+ {
+  "id": "moth-hunter-razcalito-page",
+  "unique_word_recall": 0.954955,
+  "occurrence_recall": 0.926174
+ },
+ {
+  "id": "dnipro-qtone-manual",
+  "unique_word_recall": 0.971831,
+  "occurrence_recall": 0.977186
+ },
+ {
+  "id": "synthrotek-apc-page",
+  "unique_word_recall": 1.0,
+  "occurrence_recall": 1.0
+ },
+ {
+  "id": "synthrotek-apc-assembly",
+  "unique_word_recall": 1.0,
+  "occurrence_recall": 1.0
+ },
+ {
+  "id": "mosaic-quantizer-manual",
+  "unique_word_recall": 0.997416,
+  "occurrence_recall": 0.983678
  }
 ]

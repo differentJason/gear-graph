@@ -45,6 +45,7 @@ def figure_text(m):
 
 
 def clean_page(md):
+    md = re.sub("[\u200b\u200c\u200d\ufeff]", "", md)                        # zero-width chars (Intellijel PDFs put one between every word)
     md = re.sub(r"<!-- Start of picture text -->(.*?)<!-- End of picture text -->", figure_text, md, flags=re.S)
     md = re.sub(r"</?(mark|u|sub|sup)>", "", md)                              # inline styling tags from the PDF
     md = re.sub(r"^(#{1,6})\s*\*\*(.*?)\*\*\s*$", r"\1 \2", md, flags=re.M)   # "## **X**" -> "## X"
@@ -179,6 +180,8 @@ def write_manual(entry, vocab, heading_only):
     doc, text = load_pages(entry)
     if entry["split"] == "outline":
         secs = sections_from_outline(doc, text, entry, warnings)
+    elif entry["split"] == "whole":                            # one section: short docs such as a printed product page
+        secs = [{"title": entry["title"], "level": 1, "at": 0, "path": []}]
     else:
         secs = sections_from_headings(text, entry, warnings)
     if not secs:

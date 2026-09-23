@@ -13,7 +13,9 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
-SECTION_TYPES = {"user-manual", "quick-start"}
+# datasheet = a maker's spec sheet; product-page = a maker's web page printed to PDF (no manual exists);
+# original-design-manual = the manual of the design a clone/redesign copies (e.g. Mutable Instruments for After Later)
+SECTION_TYPES = {"user-manual", "quick-start", "datasheet", "product-page", "original-design-manual"}
 SECTION_REQUIRED = ["title", "doc_id", "device", "manufacturer", "model", "doc_type", "doc_version",
                     "language", "applies_to", "source_url", "retrieved", "source_sha256", "content_status"]
 LINK_RE = re.compile(r"(?<!!)\[[^\]]*\]\(([^)\s]+)\)")

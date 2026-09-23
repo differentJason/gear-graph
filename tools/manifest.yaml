@@ -455,3 +455,479 @@ manuals:
     # markdown headings, plus the "(EN) **Controls**" line, which the PDF sets as bold text rather than a heading
     heading_pattern: '^(#{1,6}\s+|\(EN\)\s+\*\*Controls\*\*\s*$)'
     applies_to: "Behringer CM1A MIDI-to-CV Eurorack module, Quick Start Guide V 4.0. Quick Start only; MIDI channel, pitch-bend range and note range are set in Behringer's SynthTribe app, not on the module."
+
+  # ---- Eurorack modules, batch 1 (2026-09-23). Files fetched by assistant agents from the makers' sites; provenance
+  #      in sources/eurorack/_fetch-report.yaml.txt (local). doc_type product-page / original-design-manual: see validate.py.
+  - id: after-later-dice-marbles-manual
+    device: after-later-audio-dice
+    manufacturer: Mutable Instruments
+    model: Marbles
+    title: Marbles Manual (original design of After Later Audio Dice)
+    doc_type: original-design-manual
+    doc_version: web manual, archived documentation site
+    language: en
+    pdf: sources/eurorack/after-later-audio-dice__original-design.pdf
+    source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/marbles/manual/
+    source_note: Fetched 2026-09-23 by an assistant agent from the Mutable Instruments documentation site; saved as sources/eurorack/after-later-audio-dice__original-design.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 11
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: Original Mutable Instruments Marbles manual (the design this module replicates, per its maker's product page). Controls and behaviour match the original; panel layout, size and power draw may differ -- see the maker's page.
+  - id: after-later-dice-page
+    device: after-later-audio-dice
+    manufacturer: After Later Audio
+    model: Dice
+    title: After Later Audio Dice product page
+    doc_type: product-page
+    doc_version: web page 2026-09-23
+    language: en
+    pdf: sources/eurorack/after-later-audio-dice__webpage.pdf
+    source_url: https://afterlateraudio.com/products/dice
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/after-later-audio-dice__webpage.pdf. Printed from the live page with headless Chromium.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 9
+    split: whole
+    applies_to: Maker's product web page, printed to PDF on 2026-09-23 because no manual is published. Includes shop text (price, stock) that is not documentation.
+  - id: after-later-resonate-rings-manual
+    device: after-later-audio-resonate
+    manufacturer: Mutable Instruments
+    model: Rings
+    title: Rings Manual (original design of After Later Audio Resonate)
+    doc_type: original-design-manual
+    doc_version: web manual, archived documentation site
+    language: en
+    pdf: sources/eurorack/after-later-audio-resonate__original-design.pdf
+    source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/rings/manual/
+    source_note: Fetched 2026-09-23 by an assistant agent from the Mutable Instruments documentation site; saved as sources/eurorack/after-later-audio-resonate__original-design.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 7
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: Original Mutable Instruments Rings manual (the design this module replicates, per its maker's product page). Controls and behaviour match the original; panel layout, size and power draw may differ -- see the maker's page.
+  - id: after-later-resonate-page
+    device: after-later-audio-resonate
+    manufacturer: After Later Audio
+    model: Resonate
+    title: After Later Audio Resonate product page
+    doc_type: product-page
+    doc_version: web page 2026-09-23
+    language: en
+    pdf: sources/eurorack/after-later-audio-resonate__webpage.pdf
+    source_url: https://afterlateraudio.com/products/resonate
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/after-later-audio-resonate__webpage.pdf. Printed from the live page with headless Chromium.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 7
+    split: whole
+    applies_to: Maker's product web page, printed to PDF on 2026-09-23 because no manual is published. Includes shop text (price, stock) that is not documentation.
+  - id: after-later-pixie-plaits-manual
+    device: after-later-audio-pixie
+    manufacturer: Mutable Instruments
+    model: Plaits
+    title: Plaits Manual (original design of After Later Audio Pixie)
+    doc_type: original-design-manual
+    doc_version: web manual, archived documentation site
+    language: en
+    pdf: sources/eurorack/after-later-audio-pixie__original-design.pdf
+    source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/plaits/manual/
+    source_note: Fetched 2026-09-23 by an assistant agent from the Mutable Instruments documentation site; saved as sources/eurorack/after-later-audio-pixie__original-design.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 13
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: Original Mutable Instruments Plaits manual (the design this module replicates, per its maker's product page). Controls and behaviour match the original; panel layout, size and power draw may differ -- see the maker's page.
+  - id: after-later-pixie-page
+    device: after-later-audio-pixie
+    manufacturer: After Later Audio
+    model: Pixie
+    title: After Later Audio Pixie product page
+    doc_type: product-page
+    doc_version: web page 2026-09-23
+    language: en
+    pdf: sources/eurorack/after-later-audio-pixie__webpage.pdf
+    source_url: https://afterlateraudio.com/products/pixie
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/after-later-audio-pixie__webpage.pdf. Printed from the live page with headless Chromium.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 7
+    split: whole
+    applies_to: Maker's product web page, printed to PDF on 2026-09-23 because no manual is published. Includes shop text (price, stock) that is not documentation.
+  - id: ugrids-grids-manual
+    device: ugrids
+    manufacturer: Mutable Instruments
+    model: Grids
+    title: Grids Manual (original design of After Later Audio uGrids)
+    doc_type: original-design-manual
+    doc_version: web manual, archived documentation site
+    language: en
+    pdf: sources/eurorack/ugrids__original-design.pdf
+    source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/grids/manual/
+    source_note: Fetched 2026-09-23 by an assistant agent from the Mutable Instruments documentation site; saved as sources/eurorack/ugrids__original-design.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 6
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: Original Mutable Instruments Grids manual (the design this module replicates, per its maker's product page). Controls and behaviour match the original; panel layout, size and power draw may differ -- see the maker's page.
+  - id: ugrids-page
+    device: ugrids
+    manufacturer: After Later Audio
+    model: uGrids
+    title: After Later Audio uGrids product page
+    doc_type: product-page
+    doc_version: web page 2026-09-23
+    language: en
+    pdf: sources/eurorack/ugrids__webpage.pdf
+    source_url: https://afterlateraudio.com/products/ugrids
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/ugrids__webpage.pdf. Printed from the live page with headless Chromium.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 8
+    split: whole
+    applies_to: Maker's product web page, printed to PDF on 2026-09-23 because no manual is published. Includes shop text (price, stock) that is not documentation.
+  - id: antumbra-atom-elements-manual
+    device: antumbra-atom
+    manufacturer: Mutable Instruments
+    model: Elements
+    title: Elements Manual (original design of Antumbra Atom)
+    doc_type: original-design-manual
+    doc_version: web manual, archived documentation site
+    language: en
+    pdf: sources/eurorack/antumbra-atom__original-design.pdf
+    source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/elements/manual/
+    source_note: Fetched 2026-09-23 by an assistant agent from the Mutable Instruments documentation site; saved as sources/eurorack/antumbra-atom__original-design.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 9
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: Original Mutable Instruments Elements manual (the design this module replicates, per its maker's product page). Controls and behaviour match the original; panel layout, size and power draw may differ -- see the maker's page.
+  - id: antumbra-atom-page
+    device: antumbra-atom
+    manufacturer: Antumbra
+    model: Atom
+    title: Antumbra Atom product page
+    doc_type: product-page
+    doc_version: web page 2026-09-23
+    language: en
+    pdf: sources/eurorack/antumbra-atom__webpage.pdf
+    source_url: https://antumbra.eu/redesign/atom
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/antumbra-atom__webpage.pdf. Printed from the live page with headless Chromium.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 4
+    split: whole
+    applies_to: Maker's page for the Atom (a smaller DIY redesign of Mutable Instruments Elements), printed to PDF on 2026-09-23. The site's loading animation left stray 'LOADING' text.
+  - id: cre8audio-cellz-page
+    device: cre8audio-cellz
+    manufacturer: Cre8audio
+    model: Cellz
+    title: Cre8audio Cellz product page
+    doc_type: product-page
+    doc_version: web page 2026-09-23
+    language: en
+    pdf: sources/eurorack/cre8audio-cellz.pdf
+    source_url: https://www.cre8audio.com/cellz
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/cre8audio-cellz.pdf. Printed from the live page with headless Chromium.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 4
+    split: whole
+    applies_to: Maker's product web page, printed to PDF on 2026-09-23 because no manual is published. Includes shop text (price, stock) that is not documentation.
+  - id: cre8audio-captain-big-o-page
+    device: cre8audio-captain-big-o
+    manufacturer: Cre8audio
+    model: Capt'n Big-O
+    title: Cre8audio Capt'n Big-O product page
+    doc_type: product-page
+    doc_version: web page 2026-09-23
+    language: en
+    pdf: sources/eurorack/cre8audio-captain-big-o.pdf
+    source_url: https://www.cre8audio.com/captnbigo
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/cre8audio-captain-big-o.pdf. Printed from the live page with headless Chromium.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 5
+    split: whole
+    applies_to: Maker's product web page, printed to PDF on 2026-09-23 because no manual is published. Includes shop text (price, stock) that is not documentation.
+  - id: cre8audio-mr-philter-page
+    device: cre8audio-mr-philter
+    manufacturer: Cre8audio
+    model: Mr. Phil Ter
+    title: Cre8audio Mr. Phil Ter product page
+    doc_type: product-page
+    doc_version: web page 2026-09-23
+    language: en
+    pdf: sources/eurorack/cre8audio-mr-philter__webpage.pdf
+    source_url: https://www.cre8audio.com/mrphilter
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/cre8audio-mr-philter__webpage.pdf. Printed from the live page with headless Chromium.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 5
+    split: whole
+    applies_to: Maker's product web page, printed to PDF on 2026-09-23 because no manual is published. Includes shop text (price, stock) that is not documentation.
+  - id: cre8audio-niftycase-manual
+    device: cre8audio-niftycase
+    manufacturer: Cre8audio
+    model: NiftyCASE
+    title: NiftyCASE User Manual
+    doc_type: user-manual
+    doc_version: Updated Sept 18th 2021
+    language: en
+    pdf: sources/eurorack/cre8audio-niftycase.pdf
+    source_url: https://www.cre8audio.com/s/NiftyCASE-User-Manual-x5jp.pdf
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/cre8audio-niftycase.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 16
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: Cre8audio NiftyCASE powered case (built-in supply and MIDI-to-CV), manual updated 2021-09-18.
+  - id: erica-pico-mod-manual
+    device: erica-pico-mod
+    manufacturer: Erica Synths
+    model: Pico Modulator
+    title: Pico MOD Manual
+    doc_type: user-manual
+    doc_version: not stated (listed 2018-04-23)
+    language: en
+    pdf: sources/eurorack/erica-pico-mod.pdf
+    source_url: https://www.ericasynths.lv/service/file/download/product_id/1249/file_id/34/
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/erica-pico-mod.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 3
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: Erica Synths Pico Modulator (Pico MOD), 3HP envelope generator + VCA.
+  - id: erica-black-dual-vcf-manual
+    device: erica-synths-black-dual-vcf
+    manufacturer: Erica Synths
+    model: Black Dual VCF
+    title: Black Dual VCF Manual
+    doc_type: user-manual
+    doc_version: not stated (listed 2018-05-08)
+    language: en
+    pdf: sources/eurorack/erica-synths-black-dual-vcf.pdf
+    source_url: https://www.ericasynths.lv/service/file/download/product_id/268/file_id/94/
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/erica-synths-black-dual-vcf.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 2
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: Erica Synths Black Dual VCF, 18HP.
+  - id: intellijel-quadratt-1u-manual
+    device: intellijel-quadratt-1u
+    manufacturer: Intellijel
+    model: Quadratt 1U
+    title: Quadratt 1U Manual
+    doc_type: user-manual
+    doc_version: Revision 2021.07.27
+    language: en
+    pdf: sources/eurorack/intellijel-quadratt-1u.pdf
+    source_url: https://intellijel.com/downloads/manuals/quadratt-1u_manual_2021.07.26.pdf
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/intellijel-quadratt-1u.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 12
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: Intellijel Quadratt 1U (quad attenuator/attenuverter/mixer, 1U tile).
+  - id: intellijel-stereo-mixer-1u-manual
+    device: intellijel-stereo-mixer-1u
+    manufacturer: Intellijel
+    model: Stereo Mixer 1U
+    title: Stereo Mixer 1U Manual
+    doc_type: user-manual
+    doc_version: Revision 2024.10.15
+    language: en
+    pdf: sources/eurorack/intellijel-stereo-mixer-1u.pdf
+    source_url: https://intellijel.com/downloads/manuals/stereo-mixer-1u_manual_2024.10.15.pdf
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/intellijel-stereo-mixer-1u.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 15
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: Intellijel Stereo Mixer 1U.
+  - id: intellijel-stereo-line-out-1u-manual
+    device: intellijel-stereo-line-out-1u
+    manufacturer: Intellijel
+    model: Stereo Line Out 1U System
+    title: Stereo Line Out 1U System Manual
+    doc_type: user-manual
+    doc_version: Revision 2021.08.16
+    language: en
+    pdf: sources/eurorack/intellijel-stereo-line-out-1u.pdf
+    source_url: https://intellijel.com/downloads/manuals/stereo-line-out-1u_manual_2021.08.16.pdf
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/intellijel-stereo-line-out-1u.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 17
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: 'Intellijel Stereo Line Out 1U System: ONE manual covering both halves the owner has -- the Stereo Line Out 1U (this device) and the balanced 1/4-inch jacks tile (inventory: intellijel-audio-stereo-line-out-jacks-1u; the manual calls it ''Stereo Out Jacks 1U'').'
+  - id: tiptop-forbidden-planet-manual
+    device: tiptop-audio-forbidden-planet-filter
+    manufacturer: Tiptop Audio
+    model: Forbidden Planet
+    title: Forbidden Planet Manual
+    doc_type: user-manual
+    doc_version: not stated
+    language: en
+    pdf: sources/eurorack/tiptop-audio-forbidden-planet-filter.pdf
+    source_url: https://www.tiptopaudio.com/manuals/Tiptop_Audio_forbiddenplanet.pdf
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/tiptop-audio-forbidden-planet-filter.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 3
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: Tiptop Audio Forbidden Planet filter.
+  - id: cosmotronic-delta-v-manual
+    device: cosmotronic-delta-v
+    manufacturer: Cosmotronic
+    model: Delta-V
+    title: Delta-V Manual
+    doc_type: user-manual
+    doc_version: not stated
+    language: en
+    pdf: sources/eurorack/cosmotronic-delta-v.pdf
+    source_url: https://drive.google.com/file/d/1ZQQ_yM4_BL8oFPkfvlo7iMvXO7Cy9Rz5/view
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/cosmotronic-delta-v.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 4
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: Cosmotronic Delta-V, 10HP dual analog function generator with VCAs. Rev 1 and Rev 2 units exist; the manual does not say which it covers, and the owner's revision is not recorded.
+  - id: zlob-skew-fade-lfo-page
+    device: zlob-fade-lfo
+    manufacturer: Zlob Modular
+    model: Skew-Fade LFO
+    title: Zlob Modular Skew-Fade LFO product page
+    doc_type: product-page
+    doc_version: web page 2026-09-23
+    language: en
+    pdf: sources/eurorack/zlob-fade-lfo.pdf
+    source_url: https://zlobmodular.com/product/skew-fade-lfo/
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/zlob-fade-lfo.pdf. Printed from the live page with headless Chromium.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 6
+    split: whole
+    applies_to: Maker's product web page, printed to PDF on 2026-09-23 because no manual is published. Includes shop text (price, stock) that is not documentation.
+  - id: moth-hunter-razcalito-page
+    device: moth-hunter-mods-razcalito
+    manufacturer: Moth Hunter Mods
+    model: Razcalito
+    title: Moth Hunter Mods Razcalito product page
+    doc_type: product-page
+    doc_version: web page 2026-09-23
+    language: en
+    pdf: sources/eurorack/moth-hunter-mods-razcalito.pdf
+    source_url: https://www.mothhuntermods.com/mods/razcalito-random-cv-generator-eurorack-module
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/moth-hunter-mods-razcalito.pdf. Printed from the live page with headless Chromium.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 12
+    split: whole
+    applies_to: Maker's product web page, printed to PDF on 2026-09-23 because no manual is published. Includes shop text (price, stock) that is not documentation.
+  - id: dnipro-qtone-manual
+    device: ddnipro-qtone
+    manufacturer: Dnipro Modular
+    model: qTone
+    title: qTone Manual
+    doc_type: user-manual
+    doc_version: 2.0 (from the filename qTone_manual_20)
+    language: en
+    pdf: sources/eurorack/ddnipro-qtone.pdf
+    source_url: https://www.dnipro-modular.net/s/qTone_manual_20.pdf
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/ddnipro-qtone.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 1
+    split: whole
+    applies_to: Dnipro Modular qTone dual-channel quantiser.
+  - id: synthrotek-apc-page
+    device: synthrotek-atari-punk-console-4hp
+    manufacturer: Synthrotek
+    model: Atari Punk Console (modular)
+    title: Synthrotek Atari Punk Console - Modular product page
+    doc_type: product-page
+    doc_version: web page 2026-09-23
+    language: en
+    pdf: sources/eurorack/synthrotek-atari-punk-console-4hp__webpage.pdf
+    source_url: https://www.synthrotek.com/products/modular-circuits/modular-atari-punk-console/
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/synthrotek-atari-punk-console-4hp__webpage.pdf. Printed from the live page with headless Chromium.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 2
+    split: whole
+    applies_to: Maker's product web page, printed to PDF on 2026-09-23 because no manual is published. Includes shop text (price, stock) that is not documentation.
+  - id: synthrotek-apc-assembly
+    device: synthrotek-atari-punk-console-4hp
+    manufacturer: Synthrotek
+    model: Atari Punk Console (modular)
+    title: Synthrotek Atari Punk Console - Modular assembly instructions
+    doc_type: product-page
+    doc_version: web page 2026-09-23
+    language: en
+    pdf: sources/eurorack/synthrotek-atari-punk-console-4hp__manual.pdf
+    source_url: https://www.synthrotek.com/kit-assembly-instructions/modular-circuit-assembly-instructions/rack-atari-punk-console-assembly-instructions/
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/synthrotek-atari-punk-console-4hp__manual.pdf. Printed from the live page with headless Chromium.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 2
+    split: whole
+    applies_to: Maker's kit assembly instructions web page, printed to PDF on 2026-09-23 (no user manual is published).
+  - id: mosaic-quantizer-manual
+    device: mosaic-quantizer
+    manufacturer: Mosaic
+    model: Quantizer
+    title: Mosaic Quantizer Manual
+    doc_type: user-manual
+    doc_version: not stated
+    language: en
+    pdf: sources/eurorack/mosaic-quantizer.pdf
+    source_url: https://static1.squarespace.com/static/602d6139bc12a57fb971c17a/t/610abef5cf2d30125aa2ac54/1628094197461/Quantizer.pdf
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; saved as sources/eurorack/mosaic-quantizer.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 11
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: Mosaic Quantizer, a 1U tile (Intellijel 1U format, 20HP wide) -- not a 3U module.
