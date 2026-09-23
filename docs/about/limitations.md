@@ -68,4 +68,4 @@ Written so a reader can judge how far to trust the project. Current counts are o
 - Should Eurorack modules get golden questions and be added to the retrieval corpus?
 - Would a plain-language summary or aliases per page fix the vocabulary-mismatch misses?
 - Would expanding queries with the terminology's alternative labels help retrieval? (Not yet measured.)
-- Is the terminology's model right? Owner review of `TERMS.yaml` is pending.
+- Is the terminology's model right? Owner review of `TERMS.yaml` is the planned next step (checklist in [How the terminology was built](terminology.md#next-step-owner-review)).

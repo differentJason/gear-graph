@@ -77,6 +77,24 @@ list**, so treat the model as a draft that passes its checks, not as settled.
   modulates velocity" needed a reader.
 - **A check is only trusted once it has been seen to fail.** Every check here was broken on purpose at least once.
 
+## Next step: owner review
+
+Planned, not yet done. The owner will review `TERMS.yaml`; until then the scheme stays a draft. The review checklist:
+
+1. **Same, kind of, or similar?** For each word pair, is it modelled the way the owner describes the gear? The pairs
+   most worth a second look: *slide* / *glide*, *trig* / *step*, *ratchet* / *retrig* / *roll* / *flam*,
+   *BPM* / *tempo*, *probability* / *trig condition*, *parameter lock* / *automation*.
+2. **Relations.** Read the 48 statements (the table on the Terminology page) and mark any that are wrong, backwards
+   or missing. The domain/range rules cannot catch a wrong fact inside an allowed category (pitfall 8).
+3. **Homographs.** Are *HP*, *gate*, *patch*, *sound*, *pad* and *program* really two-sense words in this gear, and
+   are any missing?
+4. **Gaps.** Terms the owner uses at the rig that are absent, for example *back panel* (the retrieval miss in
+   [Evaluation](evaluation.md)).
+5. **Record the outcome.** Update D23's "who decided" column to say the owner reviewed it, and remove this section
+   (and the matching open question in [Limitations](limitations.md)).
+
+After any edit, rebuild in order: `build_terms` → `build_graph` → `query_graph` → `build_site` → `build_public`.
+
 ## How to change it
 
 Edit `TERMS.yaml`, then run the chain in [the runbook](runbook.md): `build_terms.py` (needs the local manuals to
