@@ -210,6 +210,8 @@
   "id": "item:akai-rhythm-wolf",
   "in_use": true,
   "manufacturer": "Akai Professional",
+  "midi_confirmed": "2026-09-23",
+  "midi_status": "confirmed",
   "name": "Akai Rhythm Wolf",
   "status": "owned",
   "type": "item",
@@ -220,6 +222,10 @@
   "id": "item:akai-timbre-wolf",
   "in_use": true,
   "manufacturer": "Akai Professional",
+  "midi_confirmed": "2026-09-23",
+  "midi_in_ch": "5",
+  "midi_out_ch": "5",
+  "midi_status": "confirmed",
   "name": "Akai Timbre Wolf",
   "status": "owned",
   "type": "item",
@@ -351,6 +357,9 @@
   "id": "item:behringer-k2",
   "in_use": true,
   "manufacturer": "Behringer",
+  "midi_confirmed": "2026-09-23",
+  "midi_in_ch": "1",
+  "midi_status": "confirmed",
   "name": "Behringer K2",
   "status": "owned",
   "type": "item",
@@ -361,6 +370,11 @@
   "id": "item:behringer-rd-9",
   "in_use": true,
   "manufacturer": "Behringer",
+  "midi_confirmed": "2026-09-23",
+  "midi_in_ch": "10",
+  "midi_out_ch": "10",
+  "midi_status": "confirmed",
+  "midi_thru_pass": false,
   "name": "Behringer RD-9 Rhythm Designer",
   "status": "owned",
   "type": "item",
@@ -512,6 +526,10 @@
   "id": "item:donner-b1",
   "in_use": true,
   "manufacturer": "Donner",
+  "midi_confirmed": "2026-09-23",
+  "midi_in_ch": "4",
+  "midi_out_ch": "4",
+  "midi_status": "confirmed",
   "name": "Donner Essential B1",
   "status": "owned",
   "type": "item",
@@ -522,6 +540,9 @@
   "id": "item:dreadbox-typhon",
   "in_use": true,
   "manufacturer": "Dreadbox",
+  "midi_confirmed": "2026-09-23",
+  "midi_in_ch": "2",
+  "midi_status": "confirmed",
   "name": "Dreadbox Typhon",
   "status": "owned",
   "type": "item",
@@ -552,6 +573,10 @@
   "id": "item:elektron-analog-four",
   "in_use": true,
   "manufacturer": "Elektron",
+  "midi_confirmed": "2026-09-23",
+  "midi_in_ch": "13",
+  "midi_out_ch": "13",
+  "midi_status": "confirmed",
   "name": "Elektron Analog Four MKII",
   "status": "owned",
   "type": "item",
@@ -562,6 +587,10 @@
   "id": "item:elektron-digitakt-mk1",
   "in_use": true,
   "manufacturer": "Elektron",
+  "midi_confirmed": "2026-09-23",
+  "midi_in_ch": "14",
+  "midi_out_ch": "14",
+  "midi_status": "confirmed",
   "name": "Elektron Digitakt Mk1",
   "status": "owned",
   "type": "item",
@@ -675,6 +704,10 @@
   "id": "item:korg-m1",
   "in_use": true,
   "manufacturer": "Korg",
+  "midi_confirmed": "2026-09-23",
+  "midi_in_ch": "3",
+  "midi_out_ch": "3",
+  "midi_status": "confirmed",
   "name": "Korg M1 (1993)",
   "status": "owned",
   "type": "item",
@@ -791,6 +824,9 @@
   "id": "item:roland-mc-303",
   "in_use": true,
   "manufacturer": "Roland",
+  "midi_confirmed": "2026-09-23",
+  "midi_in_ch": "omni",
+  "midi_status": "confirmed",
   "name": "Roland MC-303",
   "status": "owned",
   "type": "item",
@@ -801,6 +837,10 @@
   "id": "item:roland-tr-505",
   "in_use": true,
   "manufacturer": "Roland",
+  "midi_confirmed": "2026-09-23",
+  "midi_in_ch": "11",
+  "midi_out_ch": "11",
+  "midi_status": "confirmed",
   "name": "Roland TR-505",
   "status": "owned",
   "type": "item",
@@ -841,6 +881,10 @@
   "id": "item:sonicware-liven-texture-lab",
   "in_use": true,
   "manufacturer": "Sonicware",
+  "midi_confirmed": "2026-09-23",
+  "midi_in_ch": "9",
+  "midi_out_ch": "9",
+  "midi_status": "confirmed",
   "name": "Sonicware Liven Texture Lab",
   "status": "owned",
   "type": "item",
@@ -916,6 +960,54 @@
   "visibility": "public"
  },
  {
+  "doc_type": "original-design-manual",
+  "id": "manual:after-later-dice-marbles-manual",
+  "name": "Marbles Manual (original design of After Later Audio Dice)",
+  "type": "manual",
+  "version": "web manual, archived documentation site",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "product-page",
+  "id": "manual:after-later-dice-page",
+  "name": "After Later Audio Dice product page",
+  "type": "manual",
+  "version": "web page 2026-09-23",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "product-page",
+  "id": "manual:after-later-pixie-page",
+  "name": "After Later Audio Pixie product page",
+  "type": "manual",
+  "version": "web page 2026-09-23",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "original-design-manual",
+  "id": "manual:after-later-pixie-plaits-manual",
+  "name": "Plaits Manual (original design of After Later Audio Pixie)",
+  "type": "manual",
+  "version": "web manual, archived documentation site",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "product-page",
+  "id": "manual:after-later-resonate-page",
+  "name": "After Later Audio Resonate product page",
+  "type": "manual",
+  "version": "web page 2026-09-23",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "original-design-manual",
+  "id": "manual:after-later-resonate-rings-manual",
+  "name": "Rings Manual (original design of After Later Audio Resonate)",
+  "type": "manual",
+  "version": "web manual, archived documentation site",
+  "visibility": "public"
+ },
+ {
   "doc_type": "quick-start",
   "id": "manual:akai-apc20-quick-start",
   "name": "APC20 Quickstart Guide (Rev A)",
@@ -948,11 +1040,35 @@
   "visibility": "public"
  },
  {
+  "doc_type": "original-design-manual",
+  "id": "manual:antumbra-atom-elements-manual",
+  "name": "Elements Manual (original design of Antumbra Atom)",
+  "type": "manual",
+  "version": "web manual, archived documentation site",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "product-page",
+  "id": "manual:antumbra-atom-page",
+  "name": "Antumbra Atom product page",
+  "type": "manual",
+  "version": "web page 2026-09-23",
+  "visibility": "public"
+ },
+ {
   "doc_type": "user-manual",
   "id": "manual:arturia-keystep-manual",
   "name": "KeyStep User Manual",
   "type": "manual",
   "version": "1.1.2",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "quick-start",
+  "id": "manual:behringer-cm1a-quick-start",
+  "name": "CM1A Quick Start Guide",
+  "type": "manual",
+  "version": "V 4.0",
   "visibility": "public"
  },
  {
@@ -1021,6 +1137,54 @@
  },
  {
   "doc_type": "user-manual",
+  "id": "manual:cosmotronic-delta-v-manual",
+  "name": "Delta-V Manual",
+  "type": "manual",
+  "version": "not stated",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "product-page",
+  "id": "manual:cre8audio-captain-big-o-page",
+  "name": "Cre8audio Capt'n Big-O product page",
+  "type": "manual",
+  "version": "web page 2026-09-23",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "product-page",
+  "id": "manual:cre8audio-cellz-page",
+  "name": "Cre8audio Cellz product page",
+  "type": "manual",
+  "version": "web page 2026-09-23",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "product-page",
+  "id": "manual:cre8audio-mr-philter-page",
+  "name": "Cre8audio Mr. Phil Ter product page",
+  "type": "manual",
+  "version": "web page 2026-09-23",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:cre8audio-niftycase-manual",
+  "name": "NiftyCASE User Manual",
+  "type": "manual",
+  "version": "Updated Sept 18th 2021",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:dnipro-qtone-manual",
+  "name": "qTone Manual",
+  "type": "manual",
+  "version": "2.0 (from the filename qTone_manual_20)",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
   "id": "manual:donner-b1-manual",
   "name": "Donner B1 Analog Bass Sequencer User Manual",
   "type": "manual",
@@ -1069,6 +1233,54 @@
  },
  {
   "doc_type": "user-manual",
+  "id": "manual:erica-black-dual-vcf-manual",
+  "name": "Black Dual VCF Manual",
+  "type": "manual",
+  "version": "not stated (listed 2018-05-08)",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:erica-pico-mod-manual",
+  "name": "Pico MOD Manual",
+  "type": "manual",
+  "version": "not stated (listed 2018-04-23)",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:intellijel-quadratt-1u-manual",
+  "name": "Quadratt 1U Manual",
+  "type": "manual",
+  "version": "Revision 2021.07.27",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:intellijel-stereo-line-out-1u-manual",
+  "name": "Stereo Line Out 1U System Manual",
+  "type": "manual",
+  "version": "Revision 2021.08.16",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:intellijel-stereo-mixer-1u-manual",
+  "name": "Stereo Mixer 1U Manual",
+  "type": "manual",
+  "version": "Revision 2024.10.15",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:korg-m1-manual",
+  "name": "M1 Owner's Manual",
+  "type": "manual",
+  "version": "original M1 owner's manual (scan)",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
   "id": "manual:korg-sq-64-manual",
   "name": "SQ-64 Owner's Manual",
   "type": "manual",
@@ -1085,10 +1297,50 @@
  },
  {
   "doc_type": "user-manual",
+  "id": "manual:mosaic-quantizer-manual",
+  "name": "Mosaic Quantizer Manual",
+  "type": "manual",
+  "version": "not stated",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "product-page",
+  "id": "manual:moth-hunter-razcalito-page",
+  "name": "Moth Hunter Mods Razcalito product page",
+  "type": "manual",
+  "version": "web page 2026-09-23",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:roland-kc-100-manual",
+  "name": "KC-100 Owner's Manual",
+  "type": "manual",
+  "version": "original KC-100 owner's manual (scan)",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
   "id": "manual:roland-kc-150",
   "name": "KC-150 Owner's Manual",
   "type": "manual",
   "version": "e04",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:roland-mc-303-manual",
+  "name": "MC-303 Owner's Manual",
+  "type": "manual",
+  "version": "original MC-303 owner's manual (scan)",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:roland-tr-505-manual",
+  "name": "TR-505 Owner's Manual",
+  "type": "manual",
+  "version": "original TR-505 owner's manual (scan)",
   "visibility": "public"
  },
  {
@@ -1100,11 +1352,59 @@
   "visibility": "public"
  },
  {
+  "doc_type": "product-page",
+  "id": "manual:synthrotek-apc-assembly",
+  "name": "Synthrotek Atari Punk Console - Modular assembly instructions",
+  "type": "manual",
+  "version": "web page 2026-09-23",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "product-page",
+  "id": "manual:synthrotek-apc-page",
+  "name": "Synthrotek Atari Punk Console - Modular product page",
+  "type": "manual",
+  "version": "web page 2026-09-23",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:tiptop-forbidden-planet-manual",
+  "name": "Forbidden Planet Manual",
+  "type": "manual",
+  "version": "not stated",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "original-design-manual",
+  "id": "manual:ugrids-grids-manual",
+  "name": "Grids Manual (original design of After Later Audio uGrids)",
+  "type": "manual",
+  "version": "web manual, archived documentation site",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "product-page",
+  "id": "manual:ugrids-page",
+  "name": "After Later Audio uGrids product page",
+  "type": "manual",
+  "version": "web page 2026-09-23",
+  "visibility": "public"
+ },
+ {
   "doc_type": "user-manual",
   "id": "manual:yamaha-hs4-manual",
   "name": "HS4/HS3 Owner's Manual",
   "type": "manual",
   "version": "rev B1",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "product-page",
+  "id": "manual:zlob-skew-fade-lfo-page",
+  "name": "Zlob Modular Skew-Fade LFO product page",
+  "type": "manual",
+  "version": "web page 2026-09-23",
   "visibility": "public"
  },
  {

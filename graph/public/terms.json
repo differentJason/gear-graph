@@ -2,15 +2,24 @@
  "generated_by": "tools/build_terms.py",
  "terms_sha256": "d4a7e798eb5577167500b8b8b50422b9abdee17e6d0a2ea02286b79f3fc4d907",
  "corpus": {
-  "manuals": 24,
-  "sections": 743,
-  "manufacturers": 13,
+  "manuals": 56,
+  "sections": 1639,
+  "manufacturers": 26,
   "manual_manufacturer": {
+   "after-later-dice-marbles-manual": "Mutable Instruments",
+   "after-later-dice-page": "After Later Audio",
+   "after-later-pixie-page": "After Later Audio",
+   "after-later-pixie-plaits-manual": "Mutable Instruments",
+   "after-later-resonate-page": "After Later Audio",
+   "after-later-resonate-rings-manual": "Mutable Instruments",
    "akai-apc20-quick-start": "Akai Professional",
    "akai-mpk-mini-mk3-quick-start": "Akai Professional",
    "akai-rhythm-wolf-manual": "Akai Professional",
    "akai-timbre-wolf-manual": "Akai Professional",
+   "antumbra-atom-elements-manual": "Mutable Instruments",
+   "antumbra-atom-page": "Antumbra",
    "arturia-keystep-manual": "Arturia",
+   "behringer-cm1a-quick-start": "Behringer",
    "behringer-digital-delay-manual": "Behringer",
    "behringer-gdi21-manual": "Behringer",
    "behringer-hell-babe-manual": "Behringer",
@@ -19,17 +28,40 @@
    "behringer-ultra-tremolo-manual": "Behringer",
    "behringer-umc1820-quick-start": "Behringer",
    "behringer-umc404hd-quick-start": "Behringer",
+   "cosmotronic-delta-v-manual": "Cosmotronic",
+   "cre8audio-captain-big-o-page": "Cre8audio",
+   "cre8audio-cellz-page": "Cre8audio",
+   "cre8audio-mr-philter-page": "Cre8audio",
+   "cre8audio-niftycase-manual": "Cre8audio",
+   "dnipro-qtone-manual": "Dnipro Modular",
    "donner-b1-manual": "Donner",
    "dreadbox-typhon-manual": "Dreadbox",
    "earthquaker-bit-commander-manual": "EarthQuaker Devices",
    "electro-harmonix-modrex-manual": "Electro-Harmonix",
    "elektron-analog-four-mkii-manual": "Elektron",
    "elektron-digitakt-mk1-manual": "Elektron",
+   "erica-black-dual-vcf-manual": "Erica Synths",
+   "erica-pico-mod-manual": "Erica Synths",
+   "intellijel-quadratt-1u-manual": "Intellijel",
+   "intellijel-stereo-line-out-1u-manual": "Intellijel",
+   "intellijel-stereo-mixer-1u-manual": "Intellijel",
+   "korg-m1-manual": "Korg",
    "korg-sq-64-manual": "Korg",
    "midi-thru5-manual": "CME",
+   "mosaic-quantizer-manual": "Mosaic",
+   "moth-hunter-razcalito-page": "Moth Hunter Mods",
+   "roland-kc-100-manual": "Roland",
    "roland-kc-150": "Roland",
+   "roland-mc-303-manual": "Roland",
+   "roland-tr-505-manual": "Roland",
    "sonicware-liven-texture-lab-manual": "Sonicware",
-   "yamaha-hs4-manual": "Yamaha"
+   "synthrotek-apc-assembly": "Synthrotek",
+   "synthrotek-apc-page": "Synthrotek",
+   "tiptop-forbidden-planet-manual": "Tiptop Audio",
+   "ugrids-grids-manual": "Mutable Instruments",
+   "ugrids-page": "After Later Audio",
+   "yamaha-hs4-manual": "Yamaha",
+   "zlob-skew-fade-lfo-page": "Zlob Modular"
   }
  },
  "facets": [
@@ -190,12 +222,21 @@
    "grouping": false,
    "labels": {
     "audio signal": {
+     "after-later-resonate-rings-manual": 4,
      "akai-timbre-wolf-manual": 1,
+     "antumbra-atom-elements-manual": 1,
      "behringer-k2-quick-start": 2,
      "behringer-rd-9-manual": 1,
      "behringer-umc404hd-quick-start": 3,
+     "cre8audio-niftycase-manual": 3,
      "donner-b1-manual": 3,
-     "elektron-digitakt-mk1-manual": 4
+     "elektron-digitakt-mk1-manual": 4,
+     "erica-pico-mod-manual": 1,
+     "intellijel-stereo-line-out-1u-manual": 1,
+     "korg-m1-manual": 1,
+     "mosaic-quantizer-manual": 1,
+     "roland-mc-303-manual": 1,
+     "tiptop-forbidden-planet-manual": 1
     }
    }
   },
@@ -219,13 +260,17 @@
      "arturia-keystep-manual": 3,
      "behringer-k2-quick-start": 1,
      "behringer-rd-9-manual": 2,
+     "cre8audio-niftycase-manual": 2,
      "donner-b1-manual": 6,
      "dreadbox-typhon-manual": 1,
      "electro-harmonix-modrex-manual": 2,
      "elektron-analog-four-mkii-manual": 4,
      "elektron-digitakt-mk1-manual": 3,
+     "korg-m1-manual": 2,
      "korg-sq-64-manual": 23,
-     "midi-thru5-manual": 7
+     "midi-thru5-manual": 7,
+     "roland-mc-303-manual": 24,
+     "roland-tr-505-manual": 3
     },
     "MIDI data": {
      "akai-apc20-quick-start": 1,
@@ -236,7 +281,9 @@
      "electro-harmonix-modrex-manual": 2,
      "elektron-analog-four-mkii-manual": 24,
      "elektron-digitakt-mk1-manual": 31,
+     "korg-m1-manual": 11,
      "midi-thru5-manual": 4,
+     "roland-mc-303-manual": 2,
      "sonicware-liven-texture-lab-manual": 3
     }
    }
@@ -257,23 +304,31 @@
    "note": "Note on and note off are one concept here: the pair that starts and ends a note.",
    "labels": {
     "note on": {
+     "after-later-resonate-rings-manual": 1,
      "akai-apc20-quick-start": 1,
      "akai-mpk-mini-mk3-quick-start": 2,
      "akai-timbre-wolf-manual": 1,
      "arturia-keystep-manual": 6,
      "behringer-k2-quick-start": 3,
+     "cre8audio-niftycase-manual": 1,
      "donner-b1-manual": 1,
      "dreadbox-typhon-manual": 1,
      "elektron-analog-four-mkii-manual": 10,
      "elektron-digitakt-mk1-manual": 8,
+     "korg-m1-manual": 1,
+     "roland-mc-303-manual": 24,
+     "roland-tr-505-manual": 2,
      "sonicware-liven-texture-lab-manual": 3
     },
     "note off": {
      "akai-timbre-wolf-manual": 1,
      "arturia-keystep-manual": 3,
      "behringer-k2-quick-start": 2,
+     "cre8audio-niftycase-manual": 1,
      "elektron-analog-four-mkii-manual": 1,
      "elektron-digitakt-mk1-manual": 11,
+     "korg-m1-manual": 1,
+     "roland-mc-303-manual": 10,
      "sonicware-liven-texture-lab-manual": 1
     }
    }
@@ -295,18 +350,25 @@
     "control change": {
      "electro-harmonix-modrex-manual": 4,
      "elektron-digitakt-mk1-manual": 2,
+     "korg-m1-manual": 12,
      "korg-sq-64-manual": 1,
+     "roland-mc-303-manual": 9,
      "sonicware-liven-texture-lab-manual": 4
     },
     "CC": {
      "akai-mpk-mini-mk3-quick-start": 3,
      "akai-timbre-wolf-manual": 1,
+     "antumbra-atom-page": 1,
      "arturia-keystep-manual": 23,
+     "cre8audio-niftycase-manual": 2,
      "dreadbox-typhon-manual": 15,
      "electro-harmonix-modrex-manual": 2,
      "elektron-analog-four-mkii-manual": 75,
      "elektron-digitakt-mk1-manual": 69,
+     "korg-m1-manual": 3,
      "korg-sq-64-manual": 2,
+     "roland-mc-303-manual": 8,
+     "roland-tr-505-manual": 2,
      "sonicware-liven-texture-lab-manual": 1
     }
    }
@@ -325,7 +387,8 @@
    "labels": {
     "NRPN": {
      "elektron-analog-four-mkii-manual": 73,
-     "elektron-digitakt-mk1-manual": 36
+     "elektron-digitakt-mk1-manual": 36,
+     "roland-mc-303-manual": 29
     }
    }
   },
@@ -347,7 +410,9 @@
      "electro-harmonix-modrex-manual": 2,
      "elektron-analog-four-mkii-manual": 11,
      "elektron-digitakt-mk1-manual": 14,
+     "korg-m1-manual": 18,
      "korg-sq-64-manual": 7,
+     "roland-mc-303-manual": 20,
      "sonicware-liven-texture-lab-manual": 7
     }
    }
@@ -367,10 +432,14 @@
     "pitch bend": {
      "akai-timbre-wolf-manual": 1,
      "arturia-keystep-manual": 4,
+     "behringer-cm1a-quick-start": 1,
      "behringer-k2-quick-start": 1,
+     "cre8audio-niftycase-manual": 2,
      "dreadbox-typhon-manual": 1,
      "elektron-analog-four-mkii-manual": 4,
-     "elektron-digitakt-mk1-manual": 4
+     "elektron-digitakt-mk1-manual": 4,
+     "korg-m1-manual": 10,
+     "roland-mc-303-manual": 21
     }
    }
   },
@@ -390,7 +459,9 @@
      "arturia-keystep-manual": 11,
      "dreadbox-typhon-manual": 6,
      "elektron-analog-four-mkii-manual": 2,
-     "elektron-digitakt-mk1-manual": 6
+     "elektron-digitakt-mk1-manual": 6,
+     "korg-m1-manual": 9,
+     "roland-mc-303-manual": 4
     }
    }
   },
@@ -407,18 +478,23 @@
    "grouping": false,
    "labels": {
     "sync": {
+     "after-later-dice-marbles-manual": 1,
      "akai-apc20-quick-start": 1,
      "akai-mpk-mini-mk3-quick-start": 1,
      "akai-rhythm-wolf-manual": 4,
      "akai-timbre-wolf-manual": 4,
      "arturia-keystep-manual": 48,
      "behringer-rd-9-manual": 26,
+     "cre8audio-captain-big-o-page": 1,
      "donner-b1-manual": 11,
      "dreadbox-typhon-manual": 3,
      "electro-harmonix-modrex-manual": 12,
      "elektron-analog-four-mkii-manual": 44,
      "elektron-digitakt-mk1-manual": 15,
+     "korg-m1-manual": 7,
      "korg-sq-64-manual": 7,
+     "roland-mc-303-manual": 8,
+     "roland-tr-505-manual": 14,
      "sonicware-liven-texture-lab-manual": 23
     }
    }
@@ -442,11 +518,14 @@
      "akai-timbre-wolf-manual": 1,
      "arturia-keystep-manual": 3,
      "behringer-rd-9-manual": 1,
+     "cre8audio-niftycase-manual": 3,
      "dreadbox-typhon-manual": 1,
      "electro-harmonix-modrex-manual": 7,
      "elektron-analog-four-mkii-manual": 5,
      "elektron-digitakt-mk1-manual": 3,
+     "korg-m1-manual": 2,
      "midi-thru5-manual": 1,
+     "roland-mc-303-manual": 10,
      "sonicware-liven-texture-lab-manual": 5
     }
    }
@@ -486,24 +565,37 @@
    "note": "An analogue pulse clock (the RD-9's SYNC OUT, Eurorack clocks).",
    "labels": {
     "clock": {
+     "after-later-dice-marbles-manual": 41,
+     "after-later-pixie-plaits-manual": 9,
+     "after-later-resonate-rings-manual": 3,
      "akai-rhythm-wolf-manual": 2,
      "akai-timbre-wolf-manual": 2,
+     "antumbra-atom-elements-manual": 4,
      "arturia-keystep-manual": 35,
      "behringer-k2-quick-start": 1,
      "behringer-rd-9-manual": 23,
+     "cosmotronic-delta-v-manual": 1,
+     "cre8audio-niftycase-manual": 1,
      "donner-b1-manual": 19,
      "dreadbox-typhon-manual": 6,
      "electro-harmonix-modrex-manual": 9,
      "elektron-analog-four-mkii-manual": 13,
      "elektron-digitakt-mk1-manual": 3,
+     "intellijel-stereo-line-out-1u-manual": 3,
+     "korg-m1-manual": 14,
      "korg-sq-64-manual": 3,
      "midi-thru5-manual": 1,
+     "roland-mc-303-manual": 24,
+     "roland-tr-505-manual": 4,
      "sonicware-liven-texture-lab-manual": 37,
+     "tiptop-forbidden-planet-manual": 2,
+     "ugrids-grids-manual": 25,
      "yamaha-hs4-manual": 1
     },
     "clock pulse": {
      "arturia-keystep-manual": 3,
-     "electro-harmonix-modrex-manual": 1
+     "electro-harmonix-modrex-manual": 1,
+     "korg-m1-manual": 2
     }
    }
   },
@@ -523,20 +615,44 @@
    "labels": {
     "control voltage": {
      "arturia-keystep-manual": 6,
+     "behringer-cm1a-quick-start": 1,
      "behringer-k2-quick-start": 1,
      "behringer-rd-9-manual": 1,
+     "cre8audio-cellz-page": 1,
+     "cre8audio-niftycase-manual": 2,
+     "dnipro-qtone-manual": 1,
      "electro-harmonix-modrex-manual": 1,
-     "elektron-analog-four-mkii-manual": 2
+     "elektron-analog-four-mkii-manual": 2,
+     "intellijel-quadratt-1u-manual": 1,
+     "mosaic-quantizer-manual": 1,
+     "moth-hunter-razcalito-page": 1,
+     "synthrotek-apc-page": 1,
+     "ugrids-grids-manual": 1
     },
     "CV": {
+     "after-later-dice-marbles-manual": 6,
+     "after-later-pixie-plaits-manual": 3,
+     "after-later-resonate-rings-manual": 4,
+     "antumbra-atom-elements-manual": 7,
      "arturia-keystep-manual": 41,
+     "behringer-cm1a-quick-start": 18,
      "behringer-k2-quick-start": 3,
      "behringer-rd-9-manual": 1,
+     "cre8audio-cellz-page": 1,
+     "cre8audio-niftycase-manual": 3,
+     "dnipro-qtone-manual": 6,
      "donner-b1-manual": 1,
      "dreadbox-typhon-manual": 10,
      "elektron-analog-four-mkii-manual": 173,
      "elektron-digitakt-mk1-manual": 4,
-     "korg-sq-64-manual": 15
+     "erica-black-dual-vcf-manual": 11,
+     "intellijel-quadratt-1u-manual": 3,
+     "intellijel-stereo-mixer-1u-manual": 1,
+     "korg-sq-64-manual": 15,
+     "moth-hunter-razcalito-page": 3,
+     "synthrotek-apc-page": 1,
+     "tiptop-forbidden-planet-manual": 2,
+     "ugrids-grids-manual": 1
     }
    }
   },
@@ -561,7 +677,12 @@
      "korg-sq-64-manual": 5
     },
     "V/oct": {
-     "elektron-analog-four-mkii-manual": 8
+     "after-later-pixie-plaits-manual": 5,
+     "after-later-resonate-rings-manual": 8,
+     "antumbra-atom-elements-manual": 4,
+     "dnipro-qtone-manual": 1,
+     "elektron-analog-four-mkii-manual": 8,
+     "mosaic-quantizer-manual": 1
     },
     "1V/oct": {
      "korg-sq-64-manual": 1
@@ -582,18 +703,35 @@
    "note": "A short pulse. Also the generic word for 'start' in some manuals, so the count is an upper bound.",
    "labels": {
     "trigger": {
+     "after-later-dice-marbles-manual": 2,
+     "after-later-pixie-plaits-manual": 9,
+     "after-later-resonate-rings-manual": 3,
      "akai-apc20-quick-start": 1,
      "akai-mpk-mini-mk3-quick-start": 1,
      "akai-rhythm-wolf-manual": 3,
      "akai-timbre-wolf-manual": 4,
+     "antumbra-atom-elements-manual": 2,
      "arturia-keystep-manual": 13,
+     "behringer-cm1a-quick-start": 1,
      "behringer-k2-quick-start": 15,
      "behringer-rd-9-manual": 44,
+     "cosmotronic-delta-v-manual": 9,
+     "cre8audio-cellz-page": 1,
+     "cre8audio-mr-philter-page": 1,
+     "cre8audio-niftycase-manual": 5,
+     "dnipro-qtone-manual": 4,
      "donner-b1-manual": 11,
      "dreadbox-typhon-manual": 4,
      "elektron-analog-four-mkii-manual": 4,
      "elektron-digitakt-mk1-manual": 8,
-     "korg-sq-64-manual": 2
+     "erica-pico-mod-manual": 2,
+     "korg-sq-64-manual": 2,
+     "mosaic-quantizer-manual": 5,
+     "roland-mc-303-manual": 1,
+     "roland-tr-505-manual": 1,
+     "tiptop-forbidden-planet-manual": 1,
+     "ugrids-grids-manual": 7,
+     "zlob-skew-fade-lfo-page": 2
     }
    }
   },
@@ -614,6 +752,7 @@
      "arturia-keystep-manual": 1,
      "behringer-rd-9-manual": 1,
      "behringer-umc404hd-quick-start": 1,
+     "cre8audio-niftycase-manual": 1,
      "elektron-analog-four-mkii-manual": 6,
      "elektron-digitakt-mk1-manual": 6
     }
@@ -635,15 +774,20 @@
      "akai-rhythm-wolf-manual": 4,
      "akai-timbre-wolf-manual": 8,
      "arturia-keystep-manual": 1,
+     "behringer-cm1a-quick-start": 3,
      "behringer-k2-quick-start": 8,
      "behringer-rd-9-manual": 14,
      "behringer-umc404hd-quick-start": 2,
+     "cre8audio-niftycase-manual": 4,
      "donner-b1-manual": 12,
      "electro-harmonix-modrex-manual": 3,
      "elektron-analog-four-mkii-manual": 13,
      "elektron-digitakt-mk1-manual": 15,
+     "korg-m1-manual": 10,
      "korg-sq-64-manual": 7,
      "midi-thru5-manual": 8,
+     "roland-mc-303-manual": 15,
+     "roland-tr-505-manual": 2,
      "sonicware-liven-texture-lab-manual": 6
     }
    }
@@ -669,8 +813,11 @@
      "electro-harmonix-modrex-manual": 1,
      "elektron-analog-four-mkii-manual": 13,
      "elektron-digitakt-mk1-manual": 15,
+     "korg-m1-manual": 7,
      "korg-sq-64-manual": 2,
      "midi-thru5-manual": 2,
+     "roland-mc-303-manual": 18,
+     "roland-tr-505-manual": 2,
      "sonicware-liven-texture-lab-manual": 8
     }
    }
@@ -692,10 +839,13 @@
     "MIDI THRU": {
      "akai-timbre-wolf-manual": 3,
      "arturia-keystep-manual": 3,
+     "behringer-cm1a-quick-start": 2,
      "behringer-k2-quick-start": 4,
      "behringer-rd-9-manual": 3,
+     "cre8audio-niftycase-manual": 2,
      "elektron-analog-four-mkii-manual": 3,
      "elektron-digitakt-mk1-manual": 4,
+     "korg-m1-manual": 1,
      "korg-sq-64-manual": 3,
      "midi-thru5-manual": 12
     },
@@ -703,9 +853,13 @@
      "akai-rhythm-wolf-manual": 11,
      "behringer-k2-quick-start": 1,
      "behringer-rd-9-manual": 6,
+     "cre8audio-niftycase-manual": 3,
      "elektron-analog-four-mkii-manual": 2,
      "elektron-digitakt-mk1-manual": 2,
-     "midi-thru5-manual": 2
+     "korg-m1-manual": 1,
+     "midi-thru5-manual": 2,
+     "roland-kc-100-manual": 3,
+     "roland-tr-505-manual": 3
     }
    }
   },
@@ -743,13 +897,16 @@
      "behringer-rd-9-manual": 1,
      "donner-b1-manual": 10,
      "korg-sq-64-manual": 2,
+     "roland-mc-303-manual": 5,
      "sonicware-liven-texture-lab-manual": 4
     },
     "clock out": {
      "behringer-rd-9-manual": 1
     },
     "clock output": {
-     "arturia-keystep-manual": 2
+     "arturia-keystep-manual": 2,
+     "cre8audio-niftycase-manual": 8,
+     "ugrids-grids-manual": 1
     }
    }
   },
@@ -782,9 +939,11 @@
      "behringer-rd-9-manual": 2
     },
     "clock input": {
+     "after-later-dice-marbles-manual": 4,
      "arturia-keystep-manual": 1,
      "behringer-k2-quick-start": 1,
-     "behringer-rd-9-manual": 2
+     "behringer-rd-9-manual": 2,
+     "ugrids-grids-manual": 3
     }
    }
   },
@@ -818,15 +977,23 @@
    "grouping": false,
    "labels": {
     "CV output": {
+     "after-later-dice-marbles-manual": 1,
+     "after-later-pixie-plaits-manual": 1,
+     "after-later-resonate-rings-manual": 2,
+     "antumbra-atom-elements-manual": 1,
      "arturia-keystep-manual": 3,
      "behringer-k2-quick-start": 2,
+     "cre8audio-niftycase-manual": 2,
      "elektron-analog-four-mkii-manual": 5,
-     "korg-sq-64-manual": 4
+     "korg-sq-64-manual": 4,
+     "mosaic-quantizer-manual": 1
     },
     "CV out": {
      "arturia-keystep-manual": 1,
      "behringer-k2-quick-start": 3,
-     "elektron-analog-four-mkii-manual": 1
+     "cosmotronic-delta-v-manual": 1,
+     "elektron-analog-four-mkii-manual": 1,
+     "mosaic-quantizer-manual": 2
     }
    }
   },
@@ -845,12 +1012,26 @@
    "grouping": false,
    "labels": {
     "CV input": {
+     "after-later-dice-marbles-manual": 5,
+     "after-later-pixie-plaits-manual": 20,
+     "after-later-resonate-rings-manual": 9,
+     "antumbra-atom-elements-manual": 14,
      "behringer-k2-quick-start": 2,
-     "elektron-analog-four-mkii-manual": 3
+     "cosmotronic-delta-v-manual": 1,
+     "dnipro-qtone-manual": 7,
+     "elektron-analog-four-mkii-manual": 3,
+     "erica-black-dual-vcf-manual": 2,
+     "intellijel-quadratt-1u-manual": 3,
+     "moth-hunter-razcalito-page": 2,
+     "synthrotek-apc-page": 1,
+     "tiptop-forbidden-planet-manual": 4,
+     "ugrids-grids-manual": 2
     },
     "CV in": {
      "behringer-k2-quick-start": 4,
+     "cosmotronic-delta-v-manual": 2,
      "elektron-analog-four-mkii-manual": 3,
+     "erica-pico-mod-manual": 1,
      "korg-sq-64-manual": 1
     }
    }
@@ -870,9 +1051,13 @@
    "grouping": false,
    "labels": {
     "gate output": {
+     "after-later-dice-marbles-manual": 2,
      "arturia-keystep-manual": 6,
+     "cre8audio-niftycase-manual": 1,
      "elektron-analog-four-mkii-manual": 12,
-     "korg-sq-64-manual": 10
+     "korg-sq-64-manual": 10,
+     "mosaic-quantizer-manual": 3,
+     "ugrids-grids-manual": 1
     },
     "gate out": {
      "akai-timbre-wolf-manual": 1
@@ -937,6 +1122,7 @@
      "elektron-digitakt-mk1-manual": 10
     },
     "main output": {
+     "antumbra-atom-elements-manual": 1,
      "behringer-rd-9-manual": 3,
      "behringer-umc1820-quick-start": 2,
      "elektron-analog-four-mkii-manual": 10,
@@ -971,7 +1157,13 @@
      "dreadbox-typhon-manual": 1,
      "elektron-analog-four-mkii-manual": 5,
      "elektron-digitakt-mk1-manual": 7,
+     "intellijel-stereo-line-out-1u-manual": 9,
+     "intellijel-stereo-mixer-1u-manual": 10,
+     "korg-m1-manual": 3,
+     "roland-kc-100-manual": 5,
      "roland-kc-150": 11,
+     "roland-mc-303-manual": 5,
+     "roland-tr-505-manual": 3,
      "sonicware-liven-texture-lab-manual": 8,
      "yamaha-hs4-manual": 12
     },
@@ -983,8 +1175,12 @@
      "donner-b1-manual": 1,
      "elektron-analog-four-mkii-manual": 2,
      "elektron-digitakt-mk1-manual": 1,
+     "korg-m1-manual": 2,
      "midi-thru5-manual": 1,
-     "roland-kc-150": 5
+     "roland-kc-100-manual": 5,
+     "roland-kc-150": 5,
+     "roland-mc-303-manual": 1,
+     "roland-tr-505-manual": 1
     },
     "headphone output": {
      "behringer-umc1820-quick-start": 2,
@@ -1008,13 +1204,20 @@
    "labels": {
     "line out": {
      "behringer-umc404hd-quick-start": 9,
+     "intellijel-stereo-line-out-1u-manual": 64,
+     "roland-kc-100-manual": 7,
      "roland-kc-150": 10,
      "sonicware-liven-texture-lab-manual": 2,
      "yamaha-hs4-manual": 1
     },
     "line output": {
+     "after-later-dice-marbles-manual": 1,
+     "after-later-pixie-plaits-manual": 1,
+     "after-later-resonate-rings-manual": 1,
+     "antumbra-atom-elements-manual": 1,
      "behringer-umc1820-quick-start": 2,
      "donner-b1-manual": 1,
+     "roland-kc-100-manual": 1,
      "roland-kc-150": 1
     }
    }
@@ -1036,10 +1239,17 @@
    "grouping": false,
    "labels": {
     "audio input": {
+     "after-later-resonate-rings-manual": 3,
+     "antumbra-atom-elements-manual": 1,
      "behringer-rd-9-manual": 2,
+     "cosmotronic-delta-v-manual": 1,
+     "cre8audio-niftycase-manual": 1,
      "dreadbox-typhon-manual": 2,
      "elektron-analog-four-mkii-manual": 8,
      "elektron-digitakt-mk1-manual": 16,
+     "erica-black-dual-vcf-manual": 1,
+     "intellijel-stereo-mixer-1u-manual": 4,
+     "tiptop-forbidden-planet-manual": 2,
      "yamaha-hs4-manual": 1
     },
     "audio in": {
@@ -1073,10 +1283,12 @@
      "akai-rhythm-wolf-manual": 8,
      "akai-timbre-wolf-manual": 8,
      "arturia-keystep-manual": 24,
+     "behringer-cm1a-quick-start": 5,
      "behringer-k2-quick-start": 7,
      "behringer-rd-9-manual": 40,
      "behringer-umc1820-quick-start": 1,
      "behringer-umc404hd-quick-start": 6,
+     "cre8audio-niftycase-manual": 16,
      "donner-b1-manual": 33,
      "dreadbox-typhon-manual": 16,
      "elektron-analog-four-mkii-manual": 61,
@@ -1127,6 +1339,7 @@
      "donner-b1-manual": 2,
      "electro-harmonix-modrex-manual": 5,
      "elektron-analog-four-mkii-manual": 1,
+     "intellijel-stereo-line-out-1u-manual": 7,
      "korg-sq-64-manual": 4,
      "roland-kc-150": 1,
      "yamaha-hs4-manual": 8
@@ -1150,14 +1363,20 @@
      "akai-rhythm-wolf-manual": 4,
      "akai-timbre-wolf-manual": 4,
      "arturia-keystep-manual": 2,
+     "behringer-cm1a-quick-start": 2,
      "behringer-digital-delay-manual": 5,
      "behringer-gdi21-manual": 4,
      "behringer-hell-babe-manual": 6,
      "behringer-k2-quick-start": 7,
      "behringer-rd-9-manual": 1,
      "behringer-ultra-tremolo-manual": 4,
+     "cre8audio-niftycase-manual": 8,
      "donner-b1-manual": 3,
-     "korg-sq-64-manual": 7
+     "korg-m1-manual": 2,
+     "korg-sq-64-manual": 7,
+     "moth-hunter-razcalito-page": 1,
+     "roland-mc-303-manual": 1,
+     "roland-tr-505-manual": 3
     }
    }
   },
@@ -1177,6 +1396,7 @@
      "behringer-gdi21-manual": 2,
      "behringer-umc1820-quick-start": 1,
      "behringer-umc404hd-quick-start": 6,
+     "roland-kc-100-manual": 5,
      "roland-kc-150": 4,
      "yamaha-hs4-manual": 11
     }
@@ -1195,6 +1415,7 @@
    "grouping": false,
    "labels": {
     "5-pin DIN": {
+     "behringer-cm1a-quick-start": 1,
      "behringer-k2-quick-start": 3,
      "behringer-rd-9-manual": 2,
      "behringer-umc1820-quick-start": 1,
@@ -1219,16 +1440,29 @@
    "grouping": false,
    "labels": {
     "oscillator": {
+     "after-later-pixie-plaits-manual": 9,
+     "after-later-resonate-rings-manual": 2,
+     "antumbra-atom-elements-manual": 5,
      "arturia-keystep-manual": 1,
      "behringer-k2-quick-start": 8,
      "behringer-rd-9-manual": 4,
+     "cre8audio-captain-big-o-page": 5,
+     "cre8audio-mr-philter-page": 1,
+     "cre8audio-niftycase-manual": 4,
+     "dnipro-qtone-manual": 1,
      "donner-b1-manual": 3,
      "dreadbox-typhon-manual": 7,
      "earthquaker-bit-commander-manual": 1,
-     "elektron-analog-four-mkii-manual": 120
+     "elektron-analog-four-mkii-manual": 120,
+     "intellijel-quadratt-1u-manual": 4,
+     "korg-m1-manual": 68,
+     "mosaic-quantizer-manual": 5,
+     "synthrotek-apc-page": 1,
+     "tiptop-forbidden-planet-manual": 2
     },
     "osc": {
-     "elektron-analog-four-mkii-manual": 5
+     "elektron-analog-four-mkii-manual": 5,
+     "korg-m1-manual": 46
     }
    }
   },
@@ -1246,9 +1480,13 @@
    "note": "A voltage-controlled oscillator: a KIND of oscillator (narrower), not a synonym. Same for VCF and VCA.",
    "labels": {
     "VCO": {
+     "after-later-pixie-plaits-manual": 2,
      "arturia-keystep-manual": 1,
      "behringer-k2-quick-start": 50,
-     "dreadbox-typhon-manual": 15
+     "cre8audio-captain-big-o-page": 1,
+     "cre8audio-niftycase-manual": 2,
+     "dreadbox-typhon-manual": 15,
+     "ugrids-grids-manual": 1
     }
    }
   },
@@ -1267,6 +1505,7 @@
    "grouping": false,
    "labels": {
     "sub oscillator": {
+     "after-later-pixie-plaits-manual": 1,
      "elektron-analog-four-mkii-manual": 28
     },
     "sub osc": {
@@ -1287,20 +1526,28 @@
    "grouping": false,
    "labels": {
     "filter": {
+     "after-later-pixie-plaits-manual": 13,
+     "after-later-resonate-rings-manual": 9,
      "akai-rhythm-wolf-manual": 9,
      "akai-timbre-wolf-manual": 6,
+     "antumbra-atom-elements-manual": 14,
      "arturia-keystep-manual": 4,
      "behringer-hell-babe-manual": 3,
      "behringer-k2-quick-start": 29,
      "behringer-rd-9-manual": 110,
+     "cre8audio-mr-philter-page": 6,
      "donner-b1-manual": 1,
      "dreadbox-typhon-manual": 37,
      "earthquaker-bit-commander-manual": 2,
      "electro-harmonix-modrex-manual": 41,
      "elektron-analog-four-mkii-manual": 144,
      "elektron-digitakt-mk1-manual": 86,
+     "intellijel-quadratt-1u-manual": 6,
+     "korg-m1-manual": 7,
      "roland-kc-150": 2,
-     "sonicware-liven-texture-lab-manual": 14
+     "roland-mc-303-manual": 24,
+     "sonicware-liven-texture-lab-manual": 14,
+     "tiptop-forbidden-planet-manual": 11
     }
    }
   },
@@ -1322,7 +1569,8 @@
      "behringer-rd-9-manual": 1,
      "donner-b1-manual": 3,
      "dreadbox-typhon-manual": 9,
-     "elektron-analog-four-mkii-manual": 1
+     "elektron-analog-four-mkii-manual": 1,
+     "erica-black-dual-vcf-manual": 15
     }
    }
   },
@@ -1342,15 +1590,20 @@
    "grouping": false,
    "labels": {
     "low-pass": {
+     "after-later-pixie-plaits-manual": 3,
+     "after-later-resonate-rings-manual": 2,
      "akai-rhythm-wolf-manual": 1,
      "akai-timbre-wolf-manual": 2,
      "behringer-k2-quick-start": 13,
      "behringer-rd-9-manual": 3,
+     "cre8audio-mr-philter-page": 1,
      "donner-b1-manual": 2,
      "dreadbox-typhon-manual": 5,
      "electro-harmonix-modrex-manual": 3,
      "elektron-analog-four-mkii-manual": 1,
-     "elektron-digitakt-mk1-manual": 5
+     "elektron-digitakt-mk1-manual": 5,
+     "roland-mc-303-manual": 6,
+     "tiptop-forbidden-planet-manual": 3
     },
     "lowpass": {
      "behringer-k2-quick-start": 3,
@@ -1362,6 +1615,7 @@
      "electro-harmonix-modrex-manual": 14,
      "elektron-analog-four-mkii-manual": 3,
      "elektron-digitakt-mk1-manual": 4,
+     "roland-mc-303-manual": 6,
      "sonicware-liven-texture-lab-manual": 1
     }
    }
@@ -1382,19 +1636,23 @@
    "grouping": false,
    "labels": {
     "high-pass": {
+     "after-later-pixie-plaits-manual": 2,
      "behringer-k2-quick-start": 14,
      "behringer-rd-9-manual": 2,
      "dreadbox-typhon-manual": 6,
      "electro-harmonix-modrex-manual": 2,
      "elektron-digitakt-mk1-manual": 5,
-     "roland-kc-150": 1
+     "roland-kc-150": 1,
+     "tiptop-forbidden-planet-manual": 1
     },
     "highpass": {
      "behringer-k2-quick-start": 2,
      "elektron-analog-four-mkii-manual": 11,
-     "elektron-digitakt-mk1-manual": 5
+     "elektron-digitakt-mk1-manual": 5,
+     "tiptop-forbidden-planet-manual": 1
     },
     "HPF": {
+     "after-later-pixie-plaits-manual": 1,
      "behringer-rd-9-manual": 18,
      "dreadbox-typhon-manual": 1,
      "electro-harmonix-modrex-manual": 7,
@@ -1417,8 +1675,12 @@
    "grouping": false,
    "labels": {
     "band-pass": {
+     "after-later-pixie-plaits-manual": 6,
+     "after-later-resonate-rings-manual": 1,
+     "antumbra-atom-elements-manual": 6,
      "behringer-k2-quick-start": 2,
-     "electro-harmonix-modrex-manual": 2
+     "electro-harmonix-modrex-manual": 2,
+     "tiptop-forbidden-planet-manual": 5
     }
    }
   },
@@ -1440,9 +1702,16 @@
      "arturia-keystep-manual": 2,
      "behringer-k2-quick-start": 2,
      "behringer-rd-9-manual": 1,
+     "cre8audio-mr-philter-page": 1,
      "elektron-analog-four-mkii-manual": 5,
      "elektron-digitakt-mk1-manual": 9,
+     "intellijel-quadratt-1u-manual": 1,
+     "intellijel-stereo-line-out-1u-manual": 1,
+     "korg-m1-manual": 4,
+     "roland-kc-100-manual": 4,
      "roland-kc-150": 4,
+     "roland-mc-303-manual": 1,
+     "roland-tr-505-manual": 4,
      "yamaha-hs4-manual": 2
     }
    }
@@ -1460,10 +1729,17 @@
    "grouping": false,
    "labels": {
     "VCA": {
+     "after-later-pixie-plaits-manual": 5,
+     "antumbra-atom-elements-manual": 2,
      "arturia-keystep-manual": 2,
      "behringer-k2-quick-start": 13,
+     "cosmotronic-delta-v-manual": 10,
+     "cre8audio-captain-big-o-page": 2,
+     "cre8audio-mr-philter-page": 7,
+     "cre8audio-niftycase-manual": 1,
      "dreadbox-typhon-manual": 20,
-     "elektron-analog-four-mkii-manual": 2
+     "elektron-analog-four-mkii-manual": 2,
+     "erica-pico-mod-manual": 5
     }
    }
   },
@@ -1480,10 +1756,13 @@
    "grouping": true,
    "labels": {
     "modulation source": {
+     "after-later-dice-marbles-manual": 1,
+     "antumbra-atom-elements-manual": 1,
      "arturia-keystep-manual": 4,
      "behringer-k2-quick-start": 2,
      "dreadbox-typhon-manual": 9,
-     "elektron-analog-four-mkii-manual": 1
+     "elektron-analog-four-mkii-manual": 1,
+     "ugrids-grids-manual": 1
     }
    }
   },
@@ -1503,28 +1782,48 @@
    "grouping": false,
    "labels": {
     "envelope": {
+     "after-later-pixie-plaits-manual": 4,
      "akai-rhythm-wolf-manual": 8,
      "akai-timbre-wolf-manual": 8,
+     "antumbra-atom-elements-manual": 10,
      "arturia-keystep-manual": 1,
      "behringer-k2-quick-start": 17,
      "behringer-rd-9-manual": 5,
+     "cosmotronic-delta-v-manual": 10,
+     "cre8audio-mr-philter-page": 1,
+     "cre8audio-niftycase-manual": 1,
      "donner-b1-manual": 3,
      "dreadbox-typhon-manual": 15,
      "earthquaker-bit-commander-manual": 1,
      "elektron-analog-four-mkii-manual": 128,
      "elektron-digitakt-mk1-manual": 38,
-     "korg-sq-64-manual": 1
+     "erica-pico-mod-manual": 7,
+     "intellijel-quadratt-1u-manual": 4,
+     "korg-m1-manual": 1,
+     "korg-sq-64-manual": 1,
+     "moth-hunter-razcalito-page": 1,
+     "roland-mc-303-manual": 39,
+     "tiptop-forbidden-planet-manual": 5,
+     "ugrids-grids-manual": 1
     },
     "EG": {
      "behringer-k2-quick-start": 10,
      "dreadbox-typhon-manual": 17,
+     "erica-pico-mod-manual": 1,
+     "korg-m1-manual": 83,
      "korg-sq-64-manual": 1,
+     "roland-mc-303-manual": 1,
+     "roland-tr-505-manual": 3,
      "sonicware-liven-texture-lab-manual": 1
     },
     "envelope generator": {
+     "after-later-pixie-plaits-manual": 2,
      "behringer-k2-quick-start": 20,
+     "cre8audio-mr-philter-page": 2,
      "dreadbox-typhon-manual": 1,
-     "sonicware-liven-texture-lab-manual": 2
+     "erica-pico-mod-manual": 1,
+     "sonicware-liven-texture-lab-manual": 2,
+     "tiptop-forbidden-planet-manual": 1
     }
    }
   },
@@ -1541,7 +1840,9 @@
    "grouping": false,
    "labels": {
     "ADSR": {
-     "dreadbox-typhon-manual": 6
+     "antumbra-atom-elements-manual": 1,
+     "dreadbox-typhon-manual": 6,
+     "intellijel-quadratt-1u-manual": 1
     }
    }
   },
@@ -1562,19 +1863,32 @@
    "note": "Polyhierarchy: an oscillator by construction, a modulation source by use.",
    "labels": {
     "LFO": {
+     "antumbra-atom-elements-manual": 1,
      "behringer-k2-quick-start": 2,
      "behringer-rd-9-manual": 1,
      "behringer-ultra-tremolo-manual": 1,
+     "cosmotronic-delta-v-manual": 5,
+     "cre8audio-captain-big-o-page": 1,
+     "cre8audio-cellz-page": 1,
+     "dnipro-qtone-manual": 2,
      "dreadbox-typhon-manual": 13,
      "electro-harmonix-modrex-manual": 21,
      "elektron-analog-four-mkii-manual": 71,
      "elektron-digitakt-mk1-manual": 87,
-     "sonicware-liven-texture-lab-manual": 6
+     "intellijel-quadratt-1u-manual": 7,
+     "korg-m1-manual": 1,
+     "mosaic-quantizer-manual": 1,
+     "roland-mc-303-manual": 94,
+     "sonicware-liven-texture-lab-manual": 6,
+     "tiptop-forbidden-planet-manual": 3,
+     "zlob-skew-fade-lfo-page": 4
     },
     "low frequency oscillator": {
      "behringer-k2-quick-start": 1,
      "dreadbox-typhon-manual": 1,
-     "elektron-digitakt-mk1-manual": 4
+     "elektron-digitakt-mk1-manual": 4,
+     "roland-mc-303-manual": 1,
+     "zlob-skew-fade-lfo-page": 1
     }
    }
   },
@@ -1591,6 +1905,7 @@
    "grouping": false,
    "labels": {
     "cutoff": {
+     "after-later-pixie-plaits-manual": 3,
      "akai-rhythm-wolf-manual": 3,
      "akai-timbre-wolf-manual": 3,
      "behringer-k2-quick-start": 35,
@@ -1600,7 +1915,12 @@
      "electro-harmonix-modrex-manual": 4,
      "elektron-analog-four-mkii-manual": 31,
      "elektron-digitakt-mk1-manual": 11,
-     "sonicware-liven-texture-lab-manual": 5
+     "erica-black-dual-vcf-manual": 7,
+     "intellijel-quadratt-1u-manual": 1,
+     "korg-m1-manual": 49,
+     "roland-mc-303-manual": 27,
+     "sonicware-liven-texture-lab-manual": 5,
+     "tiptop-forbidden-planet-manual": 6
     }
    }
   },
@@ -1620,22 +1940,32 @@
    "note": "'Emphasis' is the Roland-lineage name for the same control.",
    "labels": {
     "resonance": {
+     "after-later-pixie-plaits-manual": 2,
+     "after-later-resonate-rings-manual": 1,
      "akai-rhythm-wolf-manual": 1,
      "akai-timbre-wolf-manual": 1,
+     "antumbra-atom-elements-manual": 4,
      "behringer-k2-quick-start": 2,
      "behringer-rd-9-manual": 8,
+     "cre8audio-mr-philter-page": 2,
      "donner-b1-manual": 1,
      "dreadbox-typhon-manual": 3,
      "electro-harmonix-modrex-manual": 4,
      "elektron-analog-four-mkii-manual": 40,
      "elektron-digitakt-mk1-manual": 5,
-     "sonicware-liven-texture-lab-manual": 4
+     "erica-black-dual-vcf-manual": 5,
+     "intellijel-quadratt-1u-manual": 6,
+     "roland-mc-303-manual": 18,
+     "sonicware-liven-texture-lab-manual": 4,
+     "tiptop-forbidden-planet-manual": 6
     },
     "emphasis": {
      "behringer-k2-quick-start": 3,
      "behringer-rd-9-manual": 3,
      "donner-b1-manual": 1,
-     "electro-harmonix-modrex-manual": 1
+     "electro-harmonix-modrex-manual": 1,
+     "korg-m1-manual": 2,
+     "roland-mc-303-manual": 1
     }
    }
   },
@@ -1677,26 +2007,50 @@
    "grouping": false,
    "labels": {
     "waveform": {
+     "after-later-pixie-plaits-manual": 17,
+     "after-later-resonate-rings-manual": 3,
+     "antumbra-atom-elements-manual": 3,
      "behringer-k2-quick-start": 16,
      "behringer-rd-9-manual": 1,
      "behringer-ultra-tremolo-manual": 1,
+     "cre8audio-captain-big-o-page": 3,
      "dreadbox-typhon-manual": 8,
      "elektron-analog-four-mkii-manual": 81,
      "elektron-digitakt-mk1-manual": 21,
-     "sonicware-liven-texture-lab-manual": 6
+     "korg-m1-manual": 29,
+     "roland-mc-303-manual": 6,
+     "sonicware-liven-texture-lab-manual": 6,
+     "synthrotek-apc-page": 1,
+     "zlob-skew-fade-lfo-page": 4
     },
     "wave": {
+     "after-later-dice-page": 1,
+     "after-later-pixie-page": 1,
+     "after-later-pixie-plaits-manual": 8,
+     "after-later-resonate-page": 1,
+     "after-later-resonate-rings-manual": 2,
      "akai-rhythm-wolf-manual": 2,
+     "antumbra-atom-elements-manual": 1,
      "behringer-rd-9-manual": 5,
      "behringer-ultra-tremolo-manual": 1,
+     "cre8audio-captain-big-o-page": 4,
+     "cre8audio-mr-philter-page": 1,
      "donner-b1-manual": 7,
      "dreadbox-typhon-manual": 12,
      "earthquaker-bit-commander-manual": 1,
      "electro-harmonix-modrex-manual": 1,
      "elektron-analog-four-mkii-manual": 12,
      "elektron-digitakt-mk1-manual": 10,
+     "intellijel-quadratt-1u-manual": 3,
+     "intellijel-stereo-line-out-1u-manual": 2,
+     "korg-m1-manual": 9,
      "midi-thru5-manual": 1,
-     "sonicware-liven-texture-lab-manual": 22
+     "roland-mc-303-manual": 7,
+     "sonicware-liven-texture-lab-manual": 22,
+     "synthrotek-apc-page": 2,
+     "tiptop-forbidden-planet-manual": 3,
+     "ugrids-page": 1,
+     "zlob-skew-fade-lfo-page": 2
     }
    }
   },
@@ -1715,18 +2069,27 @@
    "grouping": false,
    "labels": {
     "sawtooth": {
+     "after-later-pixie-plaits-manual": 2,
      "akai-rhythm-wolf-manual": 1,
      "behringer-k2-quick-start": 13,
      "electro-harmonix-modrex-manual": 7,
      "elektron-analog-four-mkii-manual": 9,
      "elektron-digitakt-mk1-manual": 2,
+     "roland-mc-303-manual": 1,
      "sonicware-liven-texture-lab-manual": 2
     },
     "saw": {
+     "after-later-pixie-plaits-manual": 3,
+     "cre8audio-captain-big-o-page": 1,
      "donner-b1-manual": 1,
      "dreadbox-typhon-manual": 4,
      "elektron-analog-four-mkii-manual": 1,
-     "sonicware-liven-texture-lab-manual": 2
+     "korg-m1-manual": 2,
+     "roland-mc-303-manual": 5,
+     "roland-tr-505-manual": 1,
+     "sonicware-liven-texture-lab-manual": 2,
+     "tiptop-forbidden-planet-manual": 1,
+     "zlob-skew-fade-lfo-page": 1
     }
    }
   },
@@ -1743,17 +2106,27 @@
    "grouping": false,
    "labels": {
     "square": {
+     "after-later-pixie-plaits-manual": 7,
+     "after-later-resonate-rings-manual": 2,
      "akai-rhythm-wolf-manual": 1,
+     "antumbra-atom-elements-manual": 2,
      "arturia-keystep-manual": 1,
      "behringer-k2-quick-start": 9,
      "behringer-ultra-tremolo-manual": 1,
+     "cre8audio-captain-big-o-page": 1,
      "donner-b1-manual": 1,
      "dreadbox-typhon-manual": 1,
      "earthquaker-bit-commander-manual": 1,
      "electro-harmonix-modrex-manual": 2,
      "elektron-analog-four-mkii-manual": 9,
      "elektron-digitakt-mk1-manual": 4,
-     "sonicware-liven-texture-lab-manual": 1
+     "intellijel-quadratt-1u-manual": 2,
+     "korg-m1-manual": 4,
+     "roland-mc-303-manual": 5,
+     "sonicware-liven-texture-lab-manual": 1,
+     "synthrotek-apc-page": 2,
+     "ugrids-grids-manual": 1,
+     "zlob-skew-fade-lfo-page": 4
     }
    }
   },
@@ -1770,15 +2143,22 @@
    "grouping": false,
    "labels": {
     "triangle": {
+     "after-later-pixie-plaits-manual": 3,
      "behringer-k2-quick-start": 4,
      "behringer-ultra-tremolo-manual": 1,
+     "cre8audio-captain-big-o-page": 1,
      "dreadbox-typhon-manual": 3,
      "electro-harmonix-modrex-manual": 3,
      "elektron-analog-four-mkii-manual": 7,
      "elektron-digitakt-mk1-manual": 2,
+     "intellijel-quadratt-1u-manual": 1,
+     "korg-m1-manual": 5,
+     "roland-kc-100-manual": 3,
      "roland-kc-150": 3,
+     "roland-mc-303-manual": 7,
      "sonicware-liven-texture-lab-manual": 1,
-     "yamaha-hs4-manual": 2
+     "yamaha-hs4-manual": 2,
+     "zlob-skew-fade-lfo-page": 2
     }
    }
   },
@@ -1795,10 +2175,19 @@
    "grouping": false,
    "labels": {
     "sine": {
+     "after-later-pixie-plaits-manual": 9,
      "behringer-rd-9-manual": 1,
+     "cre8audio-captain-big-o-page": 2,
+     "cre8audio-mr-philter-page": 1,
      "elektron-analog-four-mkii-manual": 2,
      "elektron-digitakt-mk1-manual": 2,
-     "sonicware-liven-texture-lab-manual": 2
+     "intellijel-stereo-line-out-1u-manual": 2,
+     "korg-m1-manual": 1,
+     "roland-mc-303-manual": 6,
+     "roland-tr-505-manual": 3,
+     "sonicware-liven-texture-lab-manual": 2,
+     "tiptop-forbidden-planet-manual": 2,
+     "zlob-skew-fade-lfo-page": 2
     }
    }
   },
@@ -1816,7 +2205,10 @@
    "labels": {
     "pulse width": {
      "behringer-k2-quick-start": 4,
-     "elektron-analog-four-mkii-manual": 5
+     "elektron-analog-four-mkii-manual": 5,
+     "synthrotek-apc-page": 1,
+     "ugrids-grids-manual": 1,
+     "zlob-skew-fade-lfo-page": 1
     }
    }
   },
@@ -1834,6 +2226,7 @@
    "labels": {
     "detune": {
      "elektron-analog-four-mkii-manual": 10,
+     "korg-m1-manual": 14,
      "sonicware-liven-texture-lab-manual": 1
     }
    }
@@ -1866,13 +2259,19 @@
    "grouping": false,
    "labels": {
     "attack": {
+     "after-later-pixie-plaits-manual": 1,
      "akai-rhythm-wolf-manual": 2,
      "arturia-keystep-manual": 1,
      "behringer-k2-quick-start": 10,
      "behringer-rd-9-manual": 16,
+     "cosmotronic-delta-v-manual": 5,
      "dreadbox-typhon-manual": 3,
      "elektron-analog-four-mkii-manual": 25,
      "elektron-digitakt-mk1-manual": 18,
+     "erica-pico-mod-manual": 2,
+     "intellijel-quadratt-1u-manual": 1,
+     "korg-m1-manual": 19,
+     "roland-mc-303-manual": 20,
      "sonicware-liven-texture-lab-manual": 8
     }
    }
@@ -1890,14 +2289,22 @@
    "grouping": false,
    "labels": {
     "decay": {
+     "after-later-pixie-plaits-manual": 7,
+     "after-later-resonate-rings-manual": 2,
      "akai-rhythm-wolf-manual": 8,
      "akai-timbre-wolf-manual": 1,
+     "antumbra-atom-elements-manual": 1,
      "behringer-k2-quick-start": 5,
      "behringer-rd-9-manual": 16,
+     "cosmotronic-delta-v-manual": 5,
      "donner-b1-manual": 2,
      "dreadbox-typhon-manual": 5,
      "elektron-analog-four-mkii-manual": 30,
-     "elektron-digitakt-mk1-manual": 18
+     "elektron-digitakt-mk1-manual": 18,
+     "erica-pico-mod-manual": 2,
+     "intellijel-quadratt-1u-manual": 2,
+     "korg-m1-manual": 13,
+     "roland-mc-303-manual": 15
     }
    }
   },
@@ -1916,14 +2323,18 @@
     "sustain": {
      "akai-mpk-mini-mk3-quick-start": 3,
      "akai-rhythm-wolf-manual": 1,
+     "antumbra-atom-elements-manual": 1,
      "arturia-keystep-manual": 30,
      "behringer-gdi21-manual": 1,
      "behringer-k2-quick-start": 3,
      "behringer-rd-9-manual": 14,
+     "cosmotronic-delta-v-manual": 1,
      "dreadbox-typhon-manual": 4,
      "earthquaker-bit-commander-manual": 1,
      "elektron-analog-four-mkii-manual": 15,
-     "elektron-digitakt-mk1-manual": 4
+     "elektron-digitakt-mk1-manual": 4,
+     "korg-m1-manual": 5,
+     "roland-mc-303-manual": 5
     }
    }
   },
@@ -1941,20 +2352,28 @@
    "note": "Also 'firmware release' and 'release the key' in some manuals, so the count is an upper bound.",
    "labels": {
     "release": {
+     "after-later-resonate-rings-manual": 2,
      "akai-rhythm-wolf-manual": 8,
      "akai-timbre-wolf-manual": 12,
      "arturia-keystep-manual": 15,
      "behringer-digital-delay-manual": 1,
      "behringer-k2-quick-start": 8,
      "behringer-rd-9-manual": 4,
+     "cre8audio-niftycase-manual": 1,
      "donner-b1-manual": 2,
      "dreadbox-typhon-manual": 4,
      "electro-harmonix-modrex-manual": 11,
      "elektron-analog-four-mkii-manual": 30,
      "elektron-digitakt-mk1-manual": 19,
+     "erica-pico-mod-manual": 2,
+     "intellijel-quadratt-1u-manual": 1,
+     "korg-m1-manual": 21,
      "korg-sq-64-manual": 3,
      "midi-thru5-manual": 3,
-     "sonicware-liven-texture-lab-manual": 7
+     "mosaic-quantizer-manual": 1,
+     "roland-mc-303-manual": 27,
+     "sonicware-liven-texture-lab-manual": 7,
+     "zlob-skew-fade-lfo-page": 1
     }
    }
   },
@@ -1975,14 +2394,19 @@
     "glide": {
      "akai-timbre-wolf-manual": 2,
      "behringer-k2-quick-start": 1,
+     "dnipro-qtone-manual": 1,
      "dreadbox-typhon-manual": 4,
      "elektron-analog-four-mkii-manual": 1,
+     "mosaic-quantizer-manual": 1,
+     "roland-mc-303-manual": 2,
      "sonicware-liven-texture-lab-manual": 5
     },
     "portamento": {
      "behringer-k2-quick-start": 3,
+     "dnipro-qtone-manual": 1,
      "dreadbox-typhon-manual": 1,
-     "elektron-analog-four-mkii-manual": 7
+     "elektron-analog-four-mkii-manual": 7,
+     "roland-mc-303-manual": 66
     }
    }
   },
@@ -2008,7 +2432,10 @@
      "dreadbox-typhon-manual": 14,
      "elektron-analog-four-mkii-manual": 25,
      "elektron-digitakt-mk1-manual": 23,
+     "korg-m1-manual": 63,
      "korg-sq-64-manual": 1,
+     "roland-mc-303-manual": 61,
+     "roland-tr-505-manual": 2,
      "sonicware-liven-texture-lab-manual": 4
     }
    }
@@ -2037,8 +2464,12 @@
      "electro-harmonix-modrex-manual": 76,
      "elektron-analog-four-mkii-manual": 48,
      "elektron-digitakt-mk1-manual": 58,
+     "korg-m1-manual": 23,
      "korg-sq-64-manual": 11,
-     "sonicware-liven-texture-lab-manual": 13
+     "roland-mc-303-manual": 59,
+     "roland-tr-505-manual": 28,
+     "sonicware-liven-texture-lab-manual": 13,
+     "ugrids-grids-manual": 3
     }
    }
   },
@@ -2058,6 +2489,7 @@
    "note": "The unit tempo is expressed in; close to tempo, not the same.",
    "labels": {
     "BPM": {
+     "after-later-dice-marbles-manual": 1,
      "akai-mpk-mini-mk3-quick-start": 1,
      "akai-rhythm-wolf-manual": 1,
      "akai-timbre-wolf-manual": 1,
@@ -2068,7 +2500,9 @@
      "electro-harmonix-modrex-manual": 7,
      "elektron-analog-four-mkii-manual": 21,
      "elektron-digitakt-mk1-manual": 24,
-     "sonicware-liven-texture-lab-manual": 23
+     "roland-mc-303-manual": 7,
+     "sonicware-liven-texture-lab-manual": 23,
+     "ugrids-grids-manual": 2
     }
    }
   },
@@ -2089,17 +2523,23 @@
     "swing": {
      "akai-rhythm-wolf-manual": 4,
      "akai-timbre-wolf-manual": 4,
+     "antumbra-atom-elements-manual": 1,
      "arturia-keystep-manual": 25,
      "behringer-rd-9-manual": 29,
      "dreadbox-typhon-manual": 3,
      "elektron-analog-four-mkii-manual": 5,
      "elektron-digitakt-mk1-manual": 12,
      "korg-sq-64-manual": 8,
-     "sonicware-liven-texture-lab-manual": 3
+     "roland-mc-303-manual": 5,
+     "roland-tr-505-manual": 1,
+     "sonicware-liven-texture-lab-manual": 3,
+     "ugrids-grids-manual": 8
     },
     "shuffle": {
      "arturia-keystep-manual": 2,
-     "behringer-rd-9-manual": 2
+     "behringer-rd-9-manual": 2,
+     "roland-mc-303-manual": 29,
+     "roland-tr-505-manual": 12
     }
    }
   },
@@ -2119,13 +2559,17 @@
    "note": "How long a step's note is held. Not the gate SIGNAL: see the 'gate' homograph.",
    "labels": {
     "gate length": {
+     "after-later-dice-marbles-manual": 2,
      "arturia-keystep-manual": 4,
      "donner-b1-manual": 47,
      "dreadbox-typhon-manual": 1,
-     "elektron-analog-four-mkii-manual": 12
+     "elektron-analog-four-mkii-manual": 12,
+     "erica-pico-mod-manual": 1,
+     "ugrids-grids-manual": 1
     },
     "gate time": {
      "arturia-keystep-manual": 7,
+     "roland-mc-303-manual": 28,
      "sonicware-liven-texture-lab-manual": 1
     }
    }
@@ -2180,12 +2624,15 @@
    "grouping": false,
    "labels": {
     "delay time": {
+     "after-later-resonate-rings-manual": 1,
      "behringer-digital-delay-manual": 6,
      "behringer-k2-quick-start": 2,
      "donner-b1-manual": 2,
      "dreadbox-typhon-manual": 7,
      "elektron-analog-four-mkii-manual": 1,
      "elektron-digitakt-mk1-manual": 4,
+     "korg-m1-manual": 2,
+     "roland-mc-303-manual": 11,
      "sonicware-liven-texture-lab-manual": 1
     }
    }
@@ -2203,12 +2650,17 @@
    "grouping": false,
    "labels": {
     "feedback": {
+     "after-later-pixie-plaits-manual": 1,
      "behringer-digital-delay-manual": 2,
      "donner-b1-manual": 4,
      "dreadbox-typhon-manual": 9,
      "electro-harmonix-modrex-manual": 6,
      "elektron-analog-four-mkii-manual": 14,
      "elektron-digitakt-mk1-manual": 3,
+     "erica-black-dual-vcf-manual": 2,
+     "erica-pico-mod-manual": 1,
+     "korg-m1-manual": 28,
+     "roland-mc-303-manual": 9,
      "sonicware-liven-texture-lab-manual": 3
     }
    }
@@ -2243,6 +2695,7 @@
    "grouping": false,
    "labels": {
     "delay": {
+     "after-later-resonate-rings-manual": 2,
      "behringer-digital-delay-manual": 11,
      "behringer-rd-9-manual": 2,
      "behringer-umc404hd-quick-start": 1,
@@ -2250,6 +2703,8 @@
      "dreadbox-typhon-manual": 10,
      "elektron-analog-four-mkii-manual": 43,
      "elektron-digitakt-mk1-manual": 56,
+     "korg-m1-manual": 65,
+     "roland-mc-303-manual": 72,
      "sonicware-liven-texture-lab-manual": 2
     }
    }
@@ -2267,11 +2722,14 @@
    "grouping": false,
    "labels": {
     "reverb": {
+     "antumbra-atom-elements-manual": 1,
      "behringer-hell-babe-manual": 1,
      "behringer-rd-9-manual": 3,
      "dreadbox-typhon-manual": 16,
      "elektron-analog-four-mkii-manual": 35,
      "elektron-digitakt-mk1-manual": 45,
+     "korg-m1-manual": 7,
+     "roland-mc-303-manual": 83,
      "sonicware-liven-texture-lab-manual": 18
     }
    }
@@ -2289,7 +2747,8 @@
    "grouping": true,
    "labels": {
     "modulation effect": {
-     "electro-harmonix-modrex-manual": 2
+     "electro-harmonix-modrex-manual": 2,
+     "korg-m1-manual": 1
     }
    }
   },
@@ -2310,7 +2769,9 @@
      "dreadbox-typhon-manual": 5,
      "electro-harmonix-modrex-manual": 5,
      "elektron-analog-four-mkii-manual": 32,
-     "elektron-digitakt-mk1-manual": 1
+     "elektron-digitakt-mk1-manual": 1,
+     "korg-m1-manual": 22,
+     "roland-mc-303-manual": 84
     }
    }
   },
@@ -2328,7 +2789,9 @@
    "labels": {
     "tremolo": {
      "behringer-ultra-tremolo-manual": 8,
-     "electro-harmonix-modrex-manual": 10
+     "electro-harmonix-modrex-manual": 10,
+     "korg-m1-manual": 10,
+     "roland-mc-303-manual": 5
     }
    }
   },
@@ -2352,7 +2815,9 @@
      "donner-b1-manual": 3,
      "dreadbox-typhon-manual": 6,
      "elektron-analog-four-mkii-manual": 3,
-     "elektron-digitakt-mk1-manual": 1
+     "elektron-digitakt-mk1-manual": 1,
+     "korg-m1-manual": 10,
+     "roland-mc-303-manual": 1
     }
    }
   },
@@ -2369,12 +2834,15 @@
    "grouping": false,
    "labels": {
     "overdrive": {
+     "after-later-pixie-plaits-manual": 1,
      "akai-rhythm-wolf-manual": 1,
      "akai-timbre-wolf-manual": 1,
      "behringer-gdi21-manual": 1,
      "behringer-hell-babe-manual": 1,
      "elektron-analog-four-mkii-manual": 13,
-     "elektron-digitakt-mk1-manual": 6
+     "elektron-digitakt-mk1-manual": 6,
+     "intellijel-stereo-mixer-1u-manual": 1,
+     "korg-m1-manual": 8
     }
    }
   },
@@ -2410,18 +2878,30 @@
    "grouping": false,
    "labels": {
     "sequencer": {
+     "after-later-dice-marbles-manual": 1,
+     "after-later-resonate-rings-manual": 1,
      "akai-rhythm-wolf-manual": 4,
      "akai-timbre-wolf-manual": 17,
      "arturia-keystep-manual": 70,
      "behringer-k2-quick-start": 1,
      "behringer-rd-9-manual": 49,
+     "cosmotronic-delta-v-manual": 1,
+     "cre8audio-cellz-page": 1,
+     "cre8audio-niftycase-manual": 4,
+     "dnipro-qtone-manual": 1,
      "donner-b1-manual": 25,
      "dreadbox-typhon-manual": 48,
      "electro-harmonix-modrex-manual": 1,
      "elektron-analog-four-mkii-manual": 113,
      "elektron-digitakt-mk1-manual": 89,
+     "korg-m1-manual": 58,
      "korg-sq-64-manual": 13,
-     "sonicware-liven-texture-lab-manual": 9
+     "roland-kc-100-manual": 3,
+     "roland-mc-303-manual": 69,
+     "roland-tr-505-manual": 4,
+     "sonicware-liven-texture-lab-manual": 9,
+     "synthrotek-apc-page": 1,
+     "ugrids-grids-manual": 7
     }
    }
   },
@@ -2445,13 +2925,17 @@
      "donner-b1-manual": 19,
      "elektron-analog-four-mkii-manual": 25,
      "korg-sq-64-manual": 2,
+     "mosaic-quantizer-manual": 2,
+     "roland-mc-303-manual": 9,
      "sonicware-liven-texture-lab-manual": 4
     },
     "arp": {
      "arturia-keystep-manual": 87,
+     "dnipro-qtone-manual": 13,
      "donner-b1-manual": 4,
      "elektron-analog-four-mkii-manual": 9,
      "korg-sq-64-manual": 1,
+     "mosaic-quantizer-manual": 2,
      "sonicware-liven-texture-lab-manual": 2
     }
    }
@@ -2469,16 +2953,25 @@
    "grouping": false,
    "labels": {
     "pattern": {
+     "after-later-dice-marbles-manual": 6,
+     "after-later-resonate-rings-manual": 1,
      "akai-rhythm-wolf-manual": 46,
      "akai-timbre-wolf-manual": 69,
+     "antumbra-atom-elements-manual": 1,
      "arturia-keystep-manual": 29,
      "behringer-rd-9-manual": 293,
      "donner-b1-manual": 50,
      "dreadbox-typhon-manual": 4,
      "elektron-analog-four-mkii-manual": 358,
      "elektron-digitakt-mk1-manual": 348,
+     "korg-m1-manual": 161,
      "korg-sq-64-manual": 40,
-     "sonicware-liven-texture-lab-manual": 104
+     "mosaic-quantizer-manual": 1,
+     "moth-hunter-razcalito-page": 1,
+     "roland-mc-303-manual": 611,
+     "roland-tr-505-manual": 200,
+     "sonicware-liven-texture-lab-manual": 104,
+     "ugrids-grids-manual": 26
     }
    }
   },
@@ -2495,20 +2988,32 @@
    "grouping": false,
    "labels": {
     "step": {
+     "after-later-dice-marbles-manual": 15,
+     "after-later-resonate-rings-manual": 2,
      "akai-rhythm-wolf-manual": 82,
      "akai-timbre-wolf-manual": 97,
      "arturia-keystep-manual": 104,
+     "behringer-cm1a-quick-start": 1,
      "behringer-k2-quick-start": 6,
      "behringer-rd-9-manual": 354,
      "behringer-umc404hd-quick-start": 4,
+     "cre8audio-niftycase-manual": 10,
      "donner-b1-manual": 88,
      "dreadbox-typhon-manual": 81,
      "electro-harmonix-modrex-manual": 1,
      "elektron-analog-four-mkii-manual": 88,
      "elektron-digitakt-mk1-manual": 89,
+     "korg-m1-manual": 85,
      "korg-sq-64-manual": 66,
      "midi-thru5-manual": 2,
+     "mosaic-quantizer-manual": 5,
+     "roland-kc-100-manual": 1,
+     "roland-mc-303-manual": 83,
+     "roland-tr-505-manual": 101,
      "sonicware-liven-texture-lab-manual": 117,
+     "synthrotek-apc-page": 1,
+     "tiptop-forbidden-planet-manual": 1,
+     "ugrids-grids-manual": 5,
      "yamaha-hs4-manual": 2
     }
    }
@@ -2529,15 +3034,21 @@
    "note": "Elektron's word for an event placed on a step. Other manuals say 'step' for both the slot and its note.",
    "labels": {
     "trig": {
+     "after-later-pixie-plaits-manual": 6,
      "akai-rhythm-wolf-manual": 2,
      "akai-timbre-wolf-manual": 2,
      "arturia-keystep-manual": 5,
+     "behringer-cm1a-quick-start": 17,
      "behringer-k2-quick-start": 5,
      "behringer-rd-9-manual": 4,
+     "dnipro-qtone-manual": 5,
      "donner-b1-manual": 1,
      "elektron-analog-four-mkii-manual": 408,
      "elektron-digitakt-mk1-manual": 440,
-     "korg-sq-64-manual": 11
+     "erica-pico-mod-manual": 1,
+     "korg-sq-64-manual": 11,
+     "mosaic-quantizer-manual": 3,
+     "ugrids-grids-manual": 3
     }
    }
   },
@@ -2558,6 +3069,9 @@
      "electro-harmonix-modrex-manual": 2,
      "elektron-analog-four-mkii-manual": 150,
      "elektron-digitakt-mk1-manual": 129,
+     "korg-m1-manual": 139,
+     "roland-mc-303-manual": 177,
+     "roland-tr-505-manual": 10,
      "sonicware-liven-texture-lab-manual": 1
     }
    }
@@ -2575,14 +3089,21 @@
    "grouping": false,
    "labels": {
     "chain": {
+     "after-later-dice-marbles-manual": 1,
+     "after-later-pixie-plaits-manual": 2,
+     "after-later-resonate-rings-manual": 1,
+     "antumbra-atom-elements-manual": 1,
      "behringer-k2-quick-start": 5,
      "behringer-rd-9-manual": 26,
+     "cre8audio-niftycase-manual": 1,
      "dreadbox-typhon-manual": 2,
      "earthquaker-bit-commander-manual": 2,
      "elektron-analog-four-mkii-manual": 82,
      "elektron-digitakt-mk1-manual": 23,
+     "intellijel-stereo-mixer-1u-manual": 14,
      "korg-sq-64-manual": 15,
      "midi-thru5-manual": 3,
+     "roland-tr-505-manual": 6,
      "sonicware-liven-texture-lab-manual": 11
     }
    }
@@ -2615,9 +3136,14 @@
    "grouping": false,
    "labels": {
     "accent": {
+     "after-later-pixie-plaits-manual": 2,
      "behringer-rd-9-manual": 37,
+     "cosmotronic-delta-v-manual": 1,
      "donner-b1-manual": 40,
-     "elektron-analog-four-mkii-manual": 15
+     "elektron-analog-four-mkii-manual": 15,
+     "roland-mc-303-manual": 18,
+     "roland-tr-505-manual": 44,
+     "ugrids-grids-manual": 4
     }
    }
   },
@@ -2638,12 +3164,15 @@
    "labels": {
     "slide": {
      "arturia-keystep-manual": 1,
+     "behringer-cm1a-quick-start": 1,
      "behringer-rd-9-manual": 1,
      "donner-b1-manual": 24,
      "dreadbox-typhon-manual": 1,
      "elektron-analog-four-mkii-manual": 54,
      "korg-sq-64-manual": 2,
-     "midi-thru5-manual": 1
+     "midi-thru5-manual": 1,
+     "mosaic-quantizer-manual": 1,
+     "roland-mc-303-manual": 7
     }
    }
   },
@@ -2665,7 +3194,10 @@
      "arturia-keystep-manual": 26,
      "donner-b1-manual": 4,
      "dreadbox-typhon-manual": 4,
+     "korg-m1-manual": 20,
      "korg-sq-64-manual": 2,
+     "roland-mc-303-manual": 5,
+     "roland-tr-505-manual": 7,
      "sonicware-liven-texture-lab-manual": 1
     }
    }
@@ -2685,6 +3217,7 @@
    "grouping": false,
    "labels": {
     "probability": {
+     "after-later-dice-marbles-manual": 5,
      "behringer-rd-9-manual": 32,
      "dreadbox-typhon-manual": 1,
      "elektron-analog-four-mkii-manual": 5,
@@ -2838,6 +3371,7 @@
     "retrigger": {
      "akai-mpk-mini-mk3-quick-start": 1,
      "akai-timbre-wolf-manual": 2,
+     "cosmotronic-delta-v-manual": 4,
      "sonicware-liven-texture-lab-manual": 3
     }
    }
@@ -2856,7 +3390,8 @@
    "labels": {
     "roll": {
      "arturia-keystep-manual": 5,
-     "behringer-rd-9-manual": 2
+     "behringer-rd-9-manual": 2,
+     "ugrids-grids-manual": 1
     }
    }
   },
@@ -2898,7 +3433,9 @@
      "donner-b1-manual": 4,
      "elektron-analog-four-mkii-manual": 50,
      "elektron-digitakt-mk1-manual": 57,
+     "korg-m1-manual": 7,
      "korg-sq-64-manual": 3,
+     "roland-mc-303-manual": 53,
      "sonicware-liven-texture-lab-manual": 4
     }
    }
@@ -2918,10 +3455,15 @@
     "fill": {
      "akai-rhythm-wolf-manual": 30,
      "akai-timbre-wolf-manual": 54,
+     "antumbra-atom-elements-manual": 1,
      "behringer-rd-9-manual": 19,
      "elektron-analog-four-mkii-manual": 26,
      "elektron-digitakt-mk1-manual": 29,
-     "korg-sq-64-manual": 1
+     "korg-m1-manual": 3,
+     "korg-sq-64-manual": 1,
+     "roland-mc-303-manual": 4,
+     "roland-tr-505-manual": 10,
+     "ugrids-grids-manual": 4
     }
    }
   },
@@ -2959,14 +3501,19 @@
    "grouping": false,
    "labels": {
     "bank": {
+     "after-later-pixie-plaits-manual": 13,
      "akai-apc20-quick-start": 2,
      "akai-mpk-mini-mk3-quick-start": 5,
+     "antumbra-atom-elements-manual": 3,
      "behringer-rd-9-manual": 5,
+     "dnipro-qtone-manual": 1,
      "dreadbox-typhon-manual": 12,
      "electro-harmonix-modrex-manual": 7,
      "elektron-analog-four-mkii-manual": 46,
      "elektron-digitakt-mk1-manual": 68,
+     "korg-m1-manual": 36,
      "midi-thru5-manual": 3,
+     "roland-mc-303-manual": 66,
      "sonicware-liven-texture-lab-manual": 7
     }
    }
@@ -2984,13 +3531,18 @@
    "grouping": false,
    "labels": {
     "preset": {
+     "after-later-dice-marbles-manual": 1,
+     "antumbra-atom-elements-manual": 1,
      "arturia-keystep-manual": 1,
      "donner-b1-manual": 2,
      "dreadbox-typhon-manual": 23,
      "electro-harmonix-modrex-manual": 112,
      "elektron-analog-four-mkii-manual": 5,
      "elektron-digitakt-mk1-manual": 5,
+     "korg-m1-manual": 6,
      "korg-sq-64-manual": 2,
+     "roland-mc-303-manual": 30,
+     "roland-tr-505-manual": 12,
      "sonicware-liven-texture-lab-manual": 2
     }
    }
@@ -3011,7 +3563,13 @@
      "arturia-keystep-manual": 1,
      "elektron-analog-four-mkii-manual": 165,
      "elektron-digitakt-mk1-manual": 19,
-     "sonicware-liven-texture-lab-manual": 2
+     "korg-m1-manual": 34,
+     "roland-mc-303-manual": 3,
+     "roland-tr-505-manual": 1,
+     "sonicware-liven-texture-lab-manual": 2,
+     "synthrotek-apc-assembly": 3,
+     "synthrotek-apc-page": 1,
+     "zlob-skew-fade-lfo-page": 2
     }
    }
   },
@@ -3028,15 +3586,22 @@
    "grouping": false,
    "labels": {
     "sample": {
+     "after-later-dice-marbles-manual": 3,
+     "after-later-pixie-plaits-manual": 1,
      "akai-apc20-quick-start": 1,
      "akai-mpk-mini-mk3-quick-start": 1,
+     "antumbra-atom-elements-manual": 2,
      "behringer-gdi21-manual": 1,
      "behringer-k2-quick-start": 5,
      "behringer-umc1820-quick-start": 1,
      "behringer-umc404hd-quick-start": 1,
+     "dnipro-qtone-manual": 1,
      "dreadbox-typhon-manual": 1,
      "elektron-analog-four-mkii-manual": 2,
      "elektron-digitakt-mk1-manual": 311,
+     "intellijel-quadratt-1u-manual": 1,
+     "roland-mc-303-manual": 10,
+     "roland-tr-505-manual": 2,
      "sonicware-liven-texture-lab-manual": 49
     }
    }
@@ -3054,21 +3619,31 @@
    "grouping": false,
    "labels": {
     "keyboard": {
+     "after-later-dice-marbles-manual": 1,
+     "after-later-pixie-plaits-manual": 1,
+     "after-later-resonate-rings-manual": 4,
      "akai-mpk-mini-mk3-quick-start": 5,
      "akai-rhythm-wolf-manual": 3,
      "akai-timbre-wolf-manual": 22,
+     "antumbra-atom-elements-manual": 4,
      "arturia-keystep-manual": 64,
      "behringer-k2-quick-start": 10,
      "behringer-rd-9-manual": 1,
      "behringer-umc404hd-quick-start": 1,
+     "cre8audio-niftycase-manual": 13,
      "donner-b1-manual": 31,
      "dreadbox-typhon-manual": 6,
      "earthquaker-bit-commander-manual": 1,
      "elektron-analog-four-mkii-manual": 84,
      "elektron-digitakt-mk1-manual": 34,
+     "korg-m1-manual": 46,
      "korg-sq-64-manual": 18,
      "midi-thru5-manual": 1,
+     "mosaic-quantizer-manual": 2,
+     "roland-kc-100-manual": 4,
      "roland-kc-150": 5,
+     "roland-mc-303-manual": 179,
+     "roland-tr-505-manual": 4,
      "sonicware-liven-texture-lab-manual": 24
     }
    }
@@ -3090,14 +3665,17 @@
     "mod wheel": {
      "akai-mpk-mini-mk3-quick-start": 1,
      "arturia-keystep-manual": 2,
+     "cre8audio-niftycase-manual": 1,
      "dreadbox-typhon-manual": 4,
      "elektron-analog-four-mkii-manual": 1,
      "elektron-digitakt-mk1-manual": 2
     },
     "modulation wheel": {
+     "cre8audio-niftycase-manual": 1,
      "dreadbox-typhon-manual": 2,
      "elektron-analog-four-mkii-manual": 2,
-     "elektron-digitakt-mk1-manual": 1
+     "elektron-digitakt-mk1-manual": 1,
+     "korg-m1-manual": 1
     }
    }
   },
@@ -3116,7 +3694,8 @@
     "expression pedal": {
      "behringer-k2-quick-start": 2,
      "electro-harmonix-modrex-manual": 11,
-     "elektron-analog-four-mkii-manual": 7
+     "elektron-analog-four-mkii-manual": 7,
+     "roland-mc-303-manual": 1
     }
    }
   },
@@ -3140,7 +3719,8 @@
      "behringer-gdi21-manual": 1,
      "behringer-k2-quick-start": 2,
      "behringer-ultra-tremolo-manual": 1,
-     "electro-harmonix-modrex-manual": 8
+     "electro-harmonix-modrex-manual": 8,
+     "korg-m1-manual": 26
     },
     "foot switch": {
      "electro-harmonix-modrex-manual": 2
@@ -3166,7 +3746,8 @@
      "donner-b1-manual": 1,
      "electro-harmonix-modrex-manual": 9,
      "elektron-analog-four-mkii-manual": 2,
-     "elektron-digitakt-mk1-manual": 2
+     "elektron-digitakt-mk1-manual": 2,
+     "ugrids-grids-manual": 5
     }
    }
   }
@@ -3421,9 +4002,18 @@
     "horizontal pitch, the Eurorack panel width unit (this site's module specs)"
    ],
    "counts": {
+    "after-later-pixie-plaits-manual": 2,
+    "after-later-resonate-rings-manual": 1,
+    "antumbra-atom-elements-manual": 1,
+    "behringer-cm1a-quick-start": 2,
+    "cre8audio-mr-philter-page": 1,
     "dreadbox-typhon-manual": 2,
     "elektron-analog-four-mkii-manual": 7,
-    "elektron-digitakt-mk1-manual": 1
+    "elektron-digitakt-mk1-manual": 1,
+    "erica-black-dual-vcf-manual": 2,
+    "roland-mc-303-manual": 1,
+    "tiptop-forbidden-planet-manual": 2,
+    "ugrids-grids-manual": 1
    }
   },
   {
@@ -3433,15 +4023,27 @@
     "gate length/time: how long a sequencer step's note lasts"
    ],
    "counts": {
+    "after-later-dice-marbles-manual": 5,
+    "after-later-pixie-plaits-manual": 2,
     "akai-rhythm-wolf-manual": 9,
     "akai-timbre-wolf-manual": 13,
+    "antumbra-atom-elements-manual": 4,
     "arturia-keystep-manual": 61,
     "behringer-rd-9-manual": 2,
+    "cosmotronic-delta-v-manual": 4,
+    "cre8audio-mr-philter-page": 1,
+    "cre8audio-niftycase-manual": 2,
     "donner-b1-manual": 2,
     "dreadbox-typhon-manual": 4,
     "elektron-analog-four-mkii-manual": 13,
     "elektron-digitakt-mk1-manual": 1,
-    "korg-sq-64-manual": 18
+    "erica-pico-mod-manual": 4,
+    "korg-sq-64-manual": 18,
+    "mosaic-quantizer-manual": 4,
+    "moth-hunter-razcalito-page": 1,
+    "roland-mc-303-manual": 3,
+    "roland-tr-505-manual": 1,
+    "ugrids-grids-manual": 3
    }
   },
   {
@@ -3451,11 +4053,22 @@
     "a patch cable, or the act of wiring one"
    ],
    "counts": {
+    "after-later-dice-marbles-manual": 3,
+    "after-later-pixie-plaits-manual": 1,
+    "after-later-resonate-rings-manual": 3,
+    "antumbra-atom-elements-manual": 1,
     "arturia-keystep-manual": 2,
     "behringer-k2-quick-start": 2,
+    "cosmotronic-delta-v-manual": 2,
+    "cre8audio-niftycase-manual": 4,
     "dreadbox-typhon-manual": 1,
     "elektron-analog-four-mkii-manual": 2,
-    "korg-sq-64-manual": 1
+    "erica-black-dual-vcf-manual": 1,
+    "erica-pico-mod-manual": 2,
+    "intellijel-quadratt-1u-manual": 1,
+    "intellijel-stereo-mixer-1u-manual": 1,
+    "korg-sq-64-manual": 1,
+    "mosaic-quantizer-manual": 1
    }
   },
   {
@@ -3465,8 +4078,12 @@
     "sound in the everyday sense"
    ],
    "counts": {
+    "after-later-dice-marbles-manual": 3,
+    "after-later-pixie-plaits-manual": 11,
+    "after-later-resonate-rings-manual": 13,
     "akai-rhythm-wolf-manual": 9,
     "akai-timbre-wolf-manual": 2,
+    "antumbra-atom-elements-manual": 37,
     "arturia-keystep-manual": 10,
     "behringer-digital-delay-manual": 2,
     "behringer-gdi21-manual": 3,
@@ -3474,16 +4091,27 @@
     "behringer-k2-quick-start": 6,
     "behringer-rd-9-manual": 40,
     "behringer-ultra-tremolo-manual": 2,
+    "cosmotronic-delta-v-manual": 1,
+    "cre8audio-captain-big-o-page": 1,
+    "cre8audio-mr-philter-page": 1,
+    "cre8audio-niftycase-manual": 2,
     "donner-b1-manual": 6,
     "dreadbox-typhon-manual": 12,
     "earthquaker-bit-commander-manual": 2,
     "electro-harmonix-modrex-manual": 2,
     "elektron-analog-four-mkii-manual": 362,
     "elektron-digitakt-mk1-manual": 321,
+    "intellijel-quadratt-1u-manual": 2,
+    "korg-m1-manual": 195,
     "korg-sq-64-manual": 4,
     "midi-thru5-manual": 1,
+    "roland-kc-100-manual": 2,
     "roland-kc-150": 14,
+    "roland-mc-303-manual": 223,
+    "roland-tr-505-manual": 22,
     "sonicware-liven-texture-lab-manual": 40,
+    "tiptop-forbidden-planet-manual": 5,
+    "ugrids-grids-manual": 2,
     "yamaha-hs4-manual": 12
    }
   },
@@ -3501,8 +4129,11 @@
     "behringer-k2-quick-start": 1,
     "behringer-rd-9-manual": 1,
     "behringer-umc404hd-quick-start": 3,
+    "cre8audio-cellz-page": 2,
     "elektron-analog-four-mkii-manual": 20,
     "korg-sq-64-manual": 50,
+    "roland-mc-303-manual": 176,
+    "roland-tr-505-manual": 1,
     "sonicware-liven-texture-lab-manual": 3,
     "yamaha-hs4-manual": 2
    }
@@ -3514,14 +4145,18 @@
     "to program a sequence (the verb)"
    ],
    "counts": {
+    "after-later-dice-marbles-manual": 2,
     "akai-apc20-quick-start": 1,
     "akai-mpk-mini-mk3-quick-start": 4,
     "arturia-keystep-manual": 4,
     "behringer-rd-9-manual": 5,
     "electro-harmonix-modrex-manual": 2,
     "elektron-digitakt-mk1-manual": 4,
+    "korg-m1-manual": 387,
     "korg-sq-64-manual": 3,
     "midi-thru5-manual": 1,
+    "roland-mc-303-manual": 7,
+    "roland-tr-505-manual": 8,
     "sonicware-liven-texture-lab-manual": 2,
     "yamaha-hs4-manual": 1
    }

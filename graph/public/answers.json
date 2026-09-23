@@ -1,6 +1,6 @@
 {
  "generated_by": "tools/query_graph.py",
- "graph_sha256": "6e964ecfb7861337ce3df22691cc3cf80debe927faed979777fb3ac09f287fe4",
+ "graph_sha256": "45c41fa45ea01dbda08071865397b3262fbbddd767c797688ee0e1a307a63f34",
  "answers": [
   {
    "id": "q1",
@@ -8,7 +8,7 @@
    "answer": [
     "audio: Behringer UMC1820",
     "clock: Arturia KeyStep, Jake's Custom Shop Clock and Musical Divider, Korg SQ-64",
-    "midi: MIDI Thru5"
+    "midi: Elektron Digitakt Mk1"
    ],
    "checks": {
     "hand": "pass"
@@ -18,9 +18,9 @@
    "id": "q2",
    "question": "Which devices receive clock or MIDI from the RD-9, directly or through other devices?",
    "answer": [
-    "10 devices",
-    "directly: Arturia KeyStep, Jake's Custom Shop Clock and Musical Divider, Korg SQ-64, MIDI Thru5",
-    "through one other device: Behringer K2, Donner Essential B1, Dreadbox Typhon, Elektron Analog Four MKII, Elektron Digitakt Mk1, Korg M1 (1993)"
+    "11 devices",
+    "directly: Arturia KeyStep, Elektron Digitakt Mk1, Jake's Custom Shop Clock and Musical Divider, Korg SQ-64",
+    "through one other device: Elektron Analog Four MKII, MIDI Thru5"
    ],
    "checks": {
     "hand": "pass"
@@ -30,7 +30,8 @@
    "id": "q3",
    "question": "What does the Digitakt feed?",
    "answer": [
-    "audio: Behringer UMC1820"
+    "audio: Behringer UMC1820",
+    "midi: Elektron Analog Four MKII, MIDI Thru5"
    ],
    "checks": {
     "hand": "pass"
@@ -98,7 +99,8 @@
    "id": "q7",
    "question": "Do any devices fed MIDI through a shared fan-out share the same recorded IN channel?",
    "answer": [
-    "MIDI Thru5: no midi_in_ch recorded for Behringer K2, Donner Essential B1, Dreadbox Typhon, Elektron Analog Four MKII, Elektron Digitakt Mk1, Korg M1 (1993) (not recorded is not the same as no conflict)"
+    "Elektron Digitakt Mk1: no midi_in_ch recorded for MIDI Thru5 (not recorded is not the same as no conflict)",
+    "MIDI Thru5: no midi_in_ch recorded for Behringer UMC1820 (not recorded is not the same as no conflict)"
    ],
    "checks": {
     "cross": "pass"
@@ -109,12 +111,12 @@
    "id": "q8",
    "question": "Which concepts do different manufacturers name differently in their manuals?",
    "answer": [
-    "21 concepts are named differently by different manufacturers",
-    "envelope: 'EG' (Dreadbox); 'EG = envelope (tie)' (Korg); 'envelope' (Akai Professional, Arturia, Behringer, Donner, EarthQuaker Devices, Elektron); 'envelope generator' (Sonicware)",
-    "high-pass: 'HPF' (Behringer, Electro-Harmonix, Sonicware); 'high-pass' (Dreadbox, Roland); 'highpass' (Elektron)",
-    "control-change: 'CC' (Akai Professional, Arturia, Dreadbox, Elektron, Korg); 'control change' (Electro-Harmonix, Sonicware)",
-    "waveform: 'wave' (Akai Professional, Donner, Dreadbox, EarthQuaker Devices, Electro-Harmonix, Sonicware, maker not recorded); 'waveform' (Behringer, Elektron)",
-    "audio-in: 'audio input' (Behringer, Dreadbox, Elektron, Yamaha); 'line in' (Sonicware)"
+    "27 concepts are named differently by different manufacturers",
+    "envelope: 'EG' (Dreadbox, Korg); 'envelope' (After Later Audio, Akai Professional, Antumbra, Arturia, Behringer, Donner, EarthQuaker Devices, Elektron, Intellijel, Moth Hunter Mods, Roland, Tiptop Audio, maker not recorded); 'envelope = envelope generator (tie)' (Cre8audio); 'envelope generator' (Sonicware)",
+    "high-pass: 'HPF' (Behringer, Electro-Harmonix, Sonicware); 'high-pass' (After Later Audio, Dreadbox, Roland); 'high-pass = highpass (tie)' (Tiptop Audio); 'highpass' (Elektron)",
+    "control-change: 'CC' (Akai Professional, Antumbra, Arturia, Cre8audio, Dreadbox, Elektron, Roland); 'control change' (Electro-Harmonix, Korg, Sonicware)",
+    "waveform: 'wave' (Akai Professional, Cre8audio, Donner, Dreadbox, EarthQuaker Devices, Electro-Harmonix, Intellijel, Roland, Sonicware, Synthrotek, Tiptop Audio); 'waveform' (After Later Audio, Antumbra, Behringer, Elektron, Korg, maker not recorded)",
+    "audio-in: 'audio input' (After Later Audio, Antumbra, Behringer, Cre8audio, Dreadbox, Elektron, Erica Synths, Intellijel, Tiptop Audio, Yamaha, maker not recorded); 'line in' (Sonicware)"
    ],
    "checks": {
     "cross": "pass"
@@ -125,6 +127,7 @@
    "id": "q9",
    "question": "Which devices' manuals describe the filter cutoff and something that can modulate it, including narrower kinds of modulator?",
    "answer": [
+    "After Later Audio Pixie: envelope",
     "Akai Rhythm Wolf: envelope",
     "Akai Timbre Wolf: envelope",
     "Behringer K2: envelope, lfo",
@@ -134,7 +137,11 @@
     "Electro-Harmonix ModRex: lfo",
     "Elektron Analog Four MKII: envelope, lfo",
     "Elektron Digitakt Mk1: envelope, lfo",
+    "Intellijel Quadratt 1U: adsr, envelope, lfo",
+    "Korg M1 (1993): envelope, lfo",
+    "Roland MC-303: envelope, lfo",
     "Sonicware Liven Texture Lab: envelope, lfo",
+    "Tiptop Audio Forbidden Planet filter: envelope, lfo",
     "counted through the hierarchy (narrower kinds): adsr"
    ],
    "checks": {

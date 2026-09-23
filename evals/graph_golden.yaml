@@ -6,39 +6,23 @@ questions:
     question: "What does the RD-9 feed directly, and by which medium?"
     query: feeds
     item: behringer-rd-9
-    expected:
-      audio: [behringer-umc1820]
-      clock: [arturia-keystep, jakes-clock-and-musical-divider, korg-sq-64]
-      midi: [midi-thru5]
-    basis: "connections.yaml: MONO -> UMC1820 input 1; SYNC OUT -> SQ-64, KeyStep, Jake's clock; MIDI OUT -> MIDI Thru5."
+    expected: {audio: [behringer-umc1820], clock: [arturia-keystep, jakes-clock-and-musical-divider, korg-sq-64], midi: [elektron-digitakt-mk1]}
+    basis: "connections.yaml (2026-09-23): MONO -> UMC1820 input 1; SYNC OUT -> SQ-64, KeyStep, Jake's clock; MIDI OUT -> Digitakt MIDI IN (was -> MIDI Thru5 before the 2026-09-23 rewiring)."
 
   - id: q2
     question: "Which devices receive clock or MIDI from the RD-9, directly or through other devices?"
     query: reach
     item: behringer-rd-9
     media: [midi, clock]
-    expected:
-      # one hop
-      arturia-keystep: 1
-      jakes-clock-and-musical-divider: 1
-      korg-sq-64: 1
-      midi-thru5: 1
-      # two hops, through the MIDI Thru5 (the K2 and the B1 share one output)
-      behringer-k2: 2
-      donner-b1: 2
-      dreadbox-typhon: 2
-      elektron-analog-four: 2
-      elektron-digitakt-mk1: 2
-      korg-m1: 2
-    basis: "connections.yaml: RD-9 -> Thru5 (MIDI) and RD-9 SYNC OUT -> three devices; Thru5 -> Analog Four, M1, Digitakt, Typhon, K2, B1."
+    expected: {arturia-keystep: 1, jakes-clock-and-musical-divider: 1, korg-sq-64: 1, elektron-digitakt-mk1: 1, midi-thru5: 2, elektron-analog-four: 2, behringer-k2: 3, donner-b1: 3, dreadbox-typhon: 3, korg-m1: 3, behringer-umc1820: 3}
+    basis: "connections.yaml (2026-09-23): RD-9 SYNC OUT -> SQ-64, KeyStep, Jake's clock and MIDI OUT -> Digitakt (1 hop); Digitakt OUT -> Thru5 and Digitakt THRU -> Analog Four (2 hops); Thru5 -> M1, Typhon, K2, B1, UMC1820 MIDI IN (3 hops)."
 
   - id: q3
     question: "What does the Digitakt feed?"
     query: feeds
     item: elektron-digitakt-mk1
-    expected:
-      audio: [behringer-umc1820]
-    basis: "Only its audio out to interface inputs 7/8 is recorded. Its MIDI out, if used, was not stated."
+    expected: {audio: [behringer-umc1820], midi: [elektron-analog-four, midi-thru5]}
+    basis: "connections.yaml (2026-09-23): audio out -> interface inputs 7/8; MIDI OUT -> Thru5; MIDI THRU -> Analog Four."
 
   - id: q4
     question: "What does the Korg M1 feed?"
