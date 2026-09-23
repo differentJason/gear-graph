@@ -2,7 +2,7 @@
 title: How correctness is checked
 doc_type: project-doc
 content_status: hand-authored
-updated: 2026-09-20
+updated: 2026-09-23
 ---
 
 # How correctness is checked
@@ -55,3 +55,24 @@ practice: a change that did not take effect looks exactly like a change that did
 Two agreeing sources is a weak guarantee, not proof: retailers usually copy the maker's figures, and ModularGrid is
 user-maintained. The pages therefore show the tier of each source (official, retailer, community) and the raw
 line. A value with a single community source is labelled `single` and is not presented as fact.
+
+## Patterns in these failures
+
+Grouped by kind, because the same kinds recur in any content pipeline:
+
+| Kind of failure | Examples here | What catches it |
+|---|---|---|
+| **Silent loss**: content disappears and nothing errors | 1 (factory-reset procedure deleted), 10 (a fix that never applied) | A completeness measure (coverage recall) and before/after diffs; nothing that looks only at the output's shape |
+| **Layout and order** | 2 (two-column reading order), 6 (other languages leaking in), 7 (running headers used as titles) | Reading the converted output against the page; warnings for "expected but not found" |
+| **Invisible characters and encodings** | 3 (BEL characters in titles), 9 (non-UTF-8 page) | Crashes and match failures; strip or decode defensively at the boundary |
+| **Wrong identity**: the right-looking file for the wrong thing | 5 (a different product's manual) | Comparing the document's own title and content with the object it is meant to describe |
+| **Parsing numbers** | 8 (thousands separators, signs, line breaks) | Storing the raw line beside the value, and a second source that disagrees |
+| **Rules that match too much** | 11 (tags on every page); the terminology's homographs and feature names ([How the terminology was built](terminology.md)) | Looking at frequencies: a label on 90% of pages, or in a manual where it makes no sense, is a rule problem |
+| **Checks that do not check** | two early graph mutation tests were ineffective and had to be redone; one terminology test failed for the wrong reason ("does not exist" instead of the rule it targeted) | Reading the failure *message*, not just the exit code, and confirming the test hits the rule it names |
+
+Three rules follow from these:
+
+- **Measure completeness, not just validity.** A validator proves the structure is right; only a comparison with the
+  source proves nothing was lost.
+- **After every change, confirm the output changed, and only where intended.** Diff all of it, not just the part you meant to change.
+- **Prove each check can fail.** Break the input on purpose and confirm the check fails with the expected message.

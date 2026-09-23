@@ -2,7 +2,7 @@
 title: Runbook
 doc_type: project-doc
 content_status: hand-authored
-updated: 2026-09-20
+updated: 2026-09-23
 ---
 
 # Runbook
@@ -33,6 +33,7 @@ computed there and the site build only reads the result:
 ```bash
 .venv/bin/python tools/validate_connections.py       # is connections.yaml consistent with the inventory? (no Spark needed)
 .venv/bin/python tools/validate_midi.py              # is midi_channels.yaml consistent with the inventory and connections.yaml? (no Spark needed)
+.venv/bin/python tools/build_terms.py                # check TERMS.yaml and recount labels in the manuals (writes graph/public/terms.json)
 .venv-graph/bin/python tools/build_graph.py          # build the graph, write graph/public/*.json and the budget snapshot
 .venv/bin/python tools/build_site.py                 # renders the budget page from that snapshot
 ```
@@ -44,6 +45,9 @@ computed there and the site build only reads the result:
 `query_graph.py` runs the questions in `evals/graph_golden.yaml` against the committed snapshot. Each answer is checked against a hand-written
 expectation or against separate code that reads the raw files, and it exits non-zero on any mismatch. Re-run it after `build_graph.py`;
 `build_public.py` refuses `answers.json` if the snapshot changed since.
+
+After editing `TERMS.yaml`, run `build_terms.py` first: `build_graph.py` and `build_public.py` stop with "terms.json is STALE"
+otherwise. `build_terms.py --check` checks the rules without the manuals but cannot recount.
 
 Run `build_graph.py` **before** `build_site.py` whenever placements (`connections.yaml`), specs, overrides,
 `eurorack/attestations.yaml`, `midi_channels.yaml`, or an item's `in_use` flag change. If you forget, `build_site.py`
@@ -105,6 +109,26 @@ The site is not deployed anywhere yet. Charts are generated as inline SVG by `to
 | A patched tool prints the same result as before | the patch did not apply | check the tool wrote its file; re-run a regression diff |
 | A fetch returns HTTP 403 | the site blocks scripts | use another source tier, or download by hand and record it |
 | Build fails on a link | a page was renamed or removed | fix the link; strict mode caught it |
+
+## Mistakes that are easy to make
+
+Each of these happened at least once while building the project:
+
+- **Running steps out of order.** The graph must be built before the site that reads it, and the terminology before
+  the graph. The builds refuse a stale snapshot ("is STALE") instead of guessing; when you see that, run the step it
+  names rather than working around it.
+- **Forgetting to rebuild a committed snapshot.** 18 manuals were ingested without rebuilding the graph, and the
+  committed snapshot quietly missed them. After adding content, rebuild the whole chain and look at the diff of
+  `graph/public/`: new content should appear there.
+- **Ignore rules that hide more than intended.** An unanchored `public/` line in `.gitignore` also ignored
+  `graph/public/`, which is meant to be committed. It was caught before pushing by listing what git would actually
+  include. Anchor patterns (`/public/`) and check `git status` after editing ignore rules.
+- **Believing a patch applied.** A tool that prints the same table after a "fix" may not have been changed at all.
+  Confirm the file changed and the output moved.
+- **Trusting a number without its source line.** For any surprising figure, open the evidence (Eurorack) or the
+  section text (manuals, terminology counts) before changing code.
+- **Publishing without a leak scan.** Anything pushed is public and permanent. Scan every file about to be committed,
+  and read the hand-written pages yourself; a pattern list only catches what it knows about.
 
 ## File map
 

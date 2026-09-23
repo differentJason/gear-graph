@@ -30,6 +30,7 @@ Vertices: `id`, `type`, `name`, `visibility`, plus sparse property columns. Edge
 | `source` (a URL with a `tier`: official / retailer / community) | `eurorack/sources.yaml` | public |
 | `manual` (title, doc type, version; not its text) | `tools/manifest.yaml` | public |
 | `tag` | `VOCAB.yaml` | public |
+| `term` (a concept or facet from the terminology, with `facet`, `role` = facet/concept/grouping, and `alt` labels) | `TERMS.yaml` via `graph/public/terms.json` | public |
 | `question` | `evals/golden.jsonl` | public |
 | `section` (one manual section) | converted manuals | **private**: derived from copyrighted text |
 
@@ -45,6 +46,10 @@ Vertices: `id`, `type`, `name`, `visibility`, plus sparse property columns. Edge
 | `CONNECTS` | item → item | `setup`, `medium`, `from_port`, `to_port`, `status` (from `connections.yaml`) |
 | `INSTALLED_IN`, `POWERED_BY` | module → case / supply | `setup`, `status` (from `connections.yaml`) |
 | `EXPECTS` | question → section | private (endpoint is private) |
+| `BROADER`, `CLOSE_MATCH` | term → term | taxonomy (is a kind of) and near-synonym |
+| `HAS_PARAMETER`, `MODULATES`, `CARRIES`, `GENERATES`, `SYNCHRONIZES`, `CONTAINS`, `CONTROLS`, `SELECTS`, `SETS` | term → term | the ontology's typed relations; domain/range enforced by `build_terms.py` |
+| `UNDER_TAG` | term → tag | places the flat tag list inside the taxonomy |
+| `USES_TERM` | manual → term | `label`, `value` (how many times that label occurs in that manual; counts only, no text) |
 
 **Visibility rule:** an edge is public only if both endpoints are. The public export is built by filtering, not by
 hand-picking, so a new private node type cannot leak by omission.
@@ -77,6 +82,10 @@ Pages CI reads the committed snapshot and never runs Spark.
 5. Everything that receives clock, directly or through other devices (GraphFrames `shortestPaths` on the reversed graph). (**done**: q2)
 6. Which manual section describes the port on this cable? (private-only; partly done: `validate_connections.py` checks that each named port appears in the device's manual text)
 7. Do any devices fed MIDI through a shared fan-out share the same recorded IN channel? (**done**: q7, `midi_conflicts`)
+8. Which concepts do different makers name differently? (**done**: q8, motif item→manual→term)
+9. Which devices document a modulator of filter cutoff, counting narrower kinds? (**done**: q9, `shortestPaths` over `BROADER`)
+
+How the terminology was built, and the pitfalls met: `docs/about/terminology.md`.
 
 ## Known limits, to be stated in the docs when the graph lands
 
@@ -94,3 +103,18 @@ Pages CI reads the committed snapshot and never runs Spark.
   worth of MIDI settings today. There is currently only one setup (`main-studio`); if a second setup ever needs its
   own MIDI channels for the same device, this would need to become a per-(setup, item) fact, the way `CONNECTS`
   already is.
+
+## Lessons from building the graph
+
+- **A wrong model looks like a wrong number.** The single-supply budget said 119%; the per-supply budget over recorded
+  placement says 80%. Nothing was miscounted: the first model was wrong. When a derived figure alarms you, check the
+  model's assumptions before the arithmetic.
+- **Direction matters in graph algorithms.** `shortestPaths` measures distance *to* the landmarks along edge direction,
+  so "who receives clock from the RD-9" runs on the reversed edges, and "what inherits from envelope" runs on `BROADER`
+  edges (child to parent) as they are.
+- **Check answers against something that is not the graph** (D21). Each query has a hand-written expectation or a
+  separate implementation over the raw files, and each check was broken on purpose to prove it can fail.
+- **Draw from the same rule you query with.** The reach picture and q2 use the same hop-distance rule, so they agree
+  by construction instead of needing a second check.
+- **Privacy by construction.** Edge visibility is derived from its endpoints, and the public export filters rather
+  than selects, so a new private node type cannot leak by being forgotten.

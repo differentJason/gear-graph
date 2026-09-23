@@ -2,7 +2,7 @@
 title: Limitations and open questions
 doc_type: project-doc
 content_status: hand-authored
-updated: 2026-09-20
+updated: 2026-09-23
 ---
 
 # Limitations and open questions
@@ -39,6 +39,15 @@ Written so a reader can judge how far to trust the project. Current counts are o
 - **Three matches are closest-listing matches** the owner confirmed (Pico MODulator, Skew Fade LFO, Black Dual VCF
   listing); the owner's list wording differed slightly.
 
+## Terminology
+
+- **Counts are string matches, not meanings.** Whole words with plurals folded; everyday words (*release*, *step*,
+  *trigger*) are over-counted, and only the pitfalls that were spotted have been fixed (see
+  [How the terminology was built](terminology.md)).
+- **The concept scheme has not been reviewed by the owner.** It passes its consistency and grounding checks, which
+  shows it is coherent and used in the manuals, not that it is the best model.
+- **Only manual vocabulary is covered.** Eurorack modules have no manuals here, so their vocabulary is absent.
+
 ## Evaluation
 
 - **The golden set is small** (22 questions, 17 answerable), and one label is known to be too strict.
@@ -58,3 +67,5 @@ Written so a reader can judge how far to trust the project. Current counts are o
 - What does the alternate jam-location setup look like?
 - Should Eurorack modules get golden questions and be added to the retrieval corpus?
 - Would a plain-language summary or aliases per page fix the vocabulary-mismatch misses?
+- Would expanding queries with the terminology's alternative labels help retrieval? (Not yet measured.)
+- Is the terminology's model right? Owner review of `TERMS.yaml` is pending.

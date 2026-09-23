@@ -2,7 +2,7 @@
 title: Retrieval evaluation
 doc_type: project-doc
 content_status: hand-authored
-updated: 2026-09-20
+updated: 2026-09-23
 ---
 
 # Retrieval evaluation
@@ -56,6 +56,24 @@ if the right page is never retrieved.
 - The answer-quality stage (groundedness, relevance, correctness, abstention judged by a language model) is written but
   has only been run against a fake model to test the plumbing. No claim is made about answer quality.
 - The Eurorack pages have no golden questions yet (a natural first one: "will the supplies cover everything?").
+
+## Pitfalls in measuring retrieval
+
+What this evaluation ran into, and what it suggests for any retrieval test:
+
+- **Small numbers move a lot.** With 17 questions, one question is about 6 points of hit@k. A change that moves one
+  or two questions is a lead, not a result. Report how many questions moved in each direction, not just the average.
+- **Change one thing per run.** Each variant above changes one indexing choice, which is why "metadata helped, tags did
+  not" can be said at all.
+- **The labels can be wrong.** One miss was a too-strict expected answer. It was recorded and left unedited, because
+  editing labels after seeing results makes a test flatter the system.
+- **Unanswerable questions are part of the test.** A retriever always returns *something*, often with a confident
+  score; without questions whose correct answer is "not here", that failure mode stays invisible.
+- **Vocabulary mismatch is a content problem.** The "back" vs "rear panel" miss cannot be fixed by the ranking
+  function. The terminology layer ([How the terminology was built](terminology.md)) records exactly this kind of
+  synonym (for example *EG* = *envelope*, *phones* = *headphone*), so expanding queries with its alternative labels is
+  a natural experiment. **It has not been run**, so no improvement is claimed; note that "back" is not yet in the
+  terminology at all.
 
 ## Re-running
 

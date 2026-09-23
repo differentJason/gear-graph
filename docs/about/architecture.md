@@ -2,7 +2,7 @@
 title: Architecture
 doc_type: project-doc
 content_status: hand-authored
-updated: 2026-09-20
+updated: 2026-09-23
 ---
 
 # Architecture
@@ -77,3 +77,18 @@ source; `conflict` = sources disagree; `override` / `inferred` = a human decisio
    a lower bound.
 6. **Build strictly.** The site is built with `mkdocs build --strict`, so a broken link fails the build instead of
    shipping.
+
+## Lessons from the design
+
+Each principle above earned its place through something that happened while building this project:
+
+| Principle | What showed why it matters |
+|---|---|
+| Derived, rebuildable outputs | The first power budget modelled "one supply for everything" and reported a 119% overload. Once placement was recorded and the graph recomputed the budget per supply, the real figure was 80%. Because the budget is derived, correcting the model fixed every page at once. |
+| Evidence before interpretation | Spec-parser misreadings (`1,000 mA` read as `0`, `+12V` and `-12V` confused across a line break) were diagnosable only because the raw source line was stored next to the number |
+| Unknown stays unknown | An inferred 0 mA for an Intellijel module was a guess. When the owner said those units do draw current, the value became *missing*, and the budget now says it is a lower bound instead of showing a false total. |
+| Stale inputs refuse to load | Derived snapshots (`budget.json`, `answers.json`, `terms.json`) carry a digest of their inputs, and the builds refuse a stale one. Without that check, the committed graph snapshot silently missed 18 newly ingested manuals until a rebuild exposed it. |
+| Public by filtering, not by picking | The public graph is everything *not* marked private, so a new private node type cannot leak through being forgotten. The same idea keeps manual text out: counts are published, text never is. |
+
+General rule: **put the judgement in data, and the mechanics in code.** Page ranges, split rules, overrides,
+attestations and the terminology are all YAML a person can read and change; the code only applies them.
