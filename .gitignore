@@ -7,6 +7,7 @@ docs/devices/
 docs/inventory.md
 docs/index.md
 docs/llms.txt
+docs/midi-channels.md
 
 # --- generated config and local-only additions ---
 mkdocs.yml

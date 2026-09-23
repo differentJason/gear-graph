@@ -4,7 +4,7 @@
     .venv/bin/python tools/build_site.py
 
 Inputs : inventory.yaml, tools/manifest.yaml, docs/manuals/*/NN-*.md (frontmatter), VOCAB.yaml
-Outputs: docs/index.md, docs/inventory.md, docs/devices/*.md, docs/topics/*.md, docs/llms.txt, mkdocs.yml
+Outputs: docs/index.md, docs/inventory.md, docs/midi-channels.md, docs/devices/*.md, docs/topics/*.md, docs/llms.txt, mkdocs.yml
 Nothing here is hand-edited; change the inputs and re-run.
 """
 import json
@@ -15,6 +15,7 @@ from pathlib import Path
 import yaml
 
 from build_eurorack import build as build_eurorack
+from midi_reference import markdown as midi_reference
 from site_theme import EXTRA_CSS, THEME, versioned
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -174,11 +175,14 @@ def main():
         "inventory_items": len(items)}, indent=1))
     write(DOCS / "about" / "status.md", {"title": "Current status", "doc_type": "project-status", "content_status": "generated"}, "\n".join(st))
 
+    write(DOCS / "midi-channels.md", {"title": "MIDI channels", "doc_type": "midi-reference", "content_status": "generated"}, midi_reference())
+
     # ---- home page ----
     total_secs = sum(len(v) for v in sections.values())
     write(DOCS / "index.md", {"title": "Gear Knowledge Base", "doc_type": "home", "content_status": "generated"},
           f"# Gear Knowledge Base\n\nPersonal, agent-readable notes on studio gear, built from manufacturer manuals.\n\n"
           f"- [Inventory](inventory.md): every piece of gear, its status, and whether its manual is ingested\n"
+          f"- [MIDI channels](midi-channels.md): every instrument's permanent home channel\n"
           f"- [Topics](topics/index.md): find sections across devices (midi, usb, sync-clock, ...)\n"
           f"- [Eurorack](eurorack/index.md): module specs with their sources, and a [power budget](eurorack/power-budget.md)\n"
           f"- Devices in the first slice: " + ", ".join(f"[{i['name']}](devices/{i['id']}.md)" for i in items if i.get('slice')) + "\n\n"
@@ -200,7 +204,7 @@ def main():
     (DOCS / "llms.txt").write_text("\n".join(L), encoding="utf-8")
 
     # ---- mkdocs.yml ----
-    nav = [{"Home": "index.md"}, {"Inventory": "inventory.md"},
+    nav = [{"Home": "index.md"}, {"Inventory": "inventory.md"}, {"MIDI channels": "midi-channels.md"},
            {"Devices": [{i["name"]: f"devices/{i['id']}.md"} for i in items if i.get("slice")]}]
     for m in man:
         if m["id"] in sections:

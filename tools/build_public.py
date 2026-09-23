@@ -15,6 +15,7 @@ from pathlib import Path
 import yaml
 
 import build_eurorack
+from midi_reference import markdown as midi_reference
 import viz
 import viz_graph
 import viz_terms
@@ -527,13 +528,14 @@ More: [evaluation](../about/evaluation.md). Questions that never found a page: {
     if inv.get("removed"):
         parts += ["## Removed", ""] + [f"- {r['name']}: {r['reason']}" for r in inv["removed"]]
     page("inventory.md", "Inventory", "\n".join(parts))
+    page("midi-channels.md", "MIDI channels", midi_reference())
 
     # ---------- config ----------
     nav = [{"Home": "index.md"},
            {"Visual explanations": [{"How the pipeline works": "visuals/pipeline.md"}, {"Inventory coverage": "visuals/coverage.md"},
                                     {"How well each spec is supported": "visuals/trust.md"}, {"Power budget": "visuals/power.md"}, {"Knowledge graph": "visuals/graph.md"}, {"Terminology": "visuals/terms.md"},
                                     {"What the checks caught": "visuals/checks.md"}, {"Retrieval results": "visuals/retrieval.md"}]},
-           {"Inventory": "inventory.md"}, {"Eurorack": eu["nav"]},
+           {"Inventory": "inventory.md"}, {"MIDI channels": "midi-channels.md"}, {"Eurorack": eu["nav"]},
            {"About the project": [{t: f"about/{f}"} for f, t in [("index.md", "Overview"), ("architecture.md", "Architecture"),
                                                                  ("verification.md", "How correctness is checked"), ("evaluation.md", "Retrieval evaluation"),
                                                                  ("decisions.md", "Decision log"), ("runbook.md", "Runbook"),

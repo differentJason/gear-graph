@@ -34,21 +34,35 @@ schema_version: 1
 updated: 2026-09-23
 
 channels:
-  # Standard main-studio map (2026-09-23). Chain: RD-9 MIDI OUT -> Digitakt IN; Digitakt THRU -> Analog Four;
-  # Digitakt OUT -> Thru5 -> bass slot, Typhon, M1, UMC1820 (Logic). Channel plan: 1 bass slot (K2/B1 share a Thru5
-  # output), 2 Typhon, 3 M1 (all played by Digitakt MIDI tracks), 10 RD-9 drums, 13 Analog Four auto, 14 Digitakt
-  # auto. The RD-9 is the only clock source; the Digitakt re-sends it. Nothing listens on 10.
-  - {setup: main-studio, device: behringer-rd-9, out: 10, thru_pass_enabled: false, status: confirmed, confirmed: 2026-09-23,
-     note: "Owner: RD-9 sends on channel 10 and is the master clock (SYNC = INTERNAL). SOFT THRU must stay off -- the manual says it turns MIDI OUT into a second THRU, which would stop the RD-9's own clock/notes reaching the Thru5. thru_pass_enabled: false is the assistant's inference from that, not separately stated by the owner."}
-  - {setup: main-studio, device: behringer-k2, in: 1, status: unconfirmed,
-     note: "Assistant proposal. Set with the rear-panel MIDI channel switches (quick start). Shares Thru5 output 5 with the Donner B1, so both use ch 1 and a swap needs no re-config. The K2 has no sequencer and ignores clock, so on this chain it is only played by whatever sends on ch 1 (nothing today) or via CV."}
-  - {setup: main-studio, device: donner-b1, in: 1, out: 1, status: unconfirmed,
-     note: "Assistant proposal. Set by holding STEP 1 at power-on (sets IN and OUT together, per manual). Same slot as the K2 (they swap on Thru5 output 5). For clock: boot holding D#2 (DIN) or leave clock source on Automatic."}
-  - {setup: main-studio, device: dreadbox-typhon, in: 2, status: unconfirmed,
-     note: "Assistant proposal. Global Settings > MIDI CHANNELS > INPUT = 2 (not ALL, or it would play the RD-9's ch 10 notes). MASTER CLOCK = External so its sequencer/LFO/delay sync follow the RD-9."}
-  - {setup: main-studio, device: korg-m1, in: 3, status: unconfirmed,
-     note: "Assistant proposal. Global MIDI channel 3. No Korg M1 manual is ingested in this repo, so the menu path and whether its sequencer follows external clock are not verified here."}
-  - {setup: main-studio, device: elektron-analog-four, in: 13, status: unconfirmed, role: "MIDI CONFIG > CHANNELS > AUTO CHANNEL",
-     note: "Assistant proposal. Fed from the Digitakt THRU, i.e. the raw RD-9 stream. SYNC menu: CLOCK RECEIVE + TRANSPORT RECEIVE on, CLOCK SEND + TRANSPORT SEND off. Make sure no synth-track channel is 10, or the RD-9's pattern will play it."}
-  - {setup: main-studio, device: elektron-digitakt-mk1, in: 14, status: unconfirmed, role: "MIDI CONFIG > CHANNELS > AUTO CHANNEL",
-     note: "Assistant proposal. Sits between the RD-9 and the Thru5, so: CLOCK RECEIVE + TRANSPORT RECEIVE on (RD-9 is master) AND CLOCK SEND + TRANSPORT SEND on (it re-sends clock down its MIDI OUT). PORT CONFIG: INPUT FROM = MIDI, OUTPUT TO = MIDI, OUT PORT FUNCTIONALITY = MIDI. MIDI track output channels: 1 bass slot, 2 Typhon, 3 M1. No audio track channel may be 10 unless you want the RD-9's pattern to trigger it."}
+  # PERMANENT HOME CHANNELS (owner, 2026-09-23): every MIDI-capable instrument keeps one channel for good, whether or
+  # not it is currently wired. Swapping gear changes the TRIGGER SOURCE's output channel (e.g. a Digitakt MIDI
+  # track), never the instrument's own setting. Audio follows the slot: swapped-in gear takes the interface input of
+  # what it replaced (connections.yaml open_statements). Channels were chosen by the assistant at the owner's request
+  # and accepted by the owner ("I will set all as assigned"). Readable table: docs/midi-channels.md (generated).
+  #
+  #  1 K2 | 2 Typhon | 3 M1 | 4 B1 | 5-8 Timbre Wolf (voice 1-4) | 9 Liven | 10 RD-9 | 11 TR-505 | 12 MC-303
+  # 13 Analog Four | 14 Digitakt | 15 Rhythm Wolf (if settable) | 16 spare
+  - {setup: main-studio, device: behringer-k2, in: 1, status: confirmed, confirmed: 2026-09-23,
+     note: "Rear-panel MIDI channel switches. MIDI IN/THRU only, no MIDI OUT, so no out channel. Played by a Digitakt MIDI track set to 1."}
+  - {setup: main-studio, device: donner-b1, in: 4, out: 4, status: confirmed, confirmed: 2026-09-23,
+     note: "Hold STEP 4 at power-on (sets in and out together, per manual). Own channel, so swapping K2 -> B1 means pointing the Digitakt track at 4. Clock: hold D#2 at power-on for DIN, or leave Automatic."}
+  - {setup: main-studio, device: dreadbox-typhon, in: 2, status: confirmed, confirmed: 2026-09-23,
+     note: "Global Settings > MIDI CHANNELS > INPUT = 2 (never ALL). MASTER CLOCK = External. The manual's menu lists only an input channel."}
+  - {setup: main-studio, device: korg-m1, in: 3, out: 3, status: confirmed, confirmed: 2026-09-23,
+     note: "Global MIDI channel. No Korg M1 manual is ingested here, so the menu path is not verified."}
+  - {setup: main-studio, device: akai-timbre-wolf, in: 5, out: 5, status: confirmed, confirmed: 2026-09-23, role: "MIDI Ch (Voice 1 channel)",
+     note: "Per manual, voices 2-4 answer on the next three channels, so 5-8 are all reserved for it (voice 1 = 5). In Poly/Unison mode only 5 is used, but 6-8 stay reserved."}
+  - {setup: main-studio, device: sonicware-liven-texture-lab, in: 9, out: 9, status: confirmed, confirmed: 2026-09-23,
+     note: "RX.CH = 9 and TX.CH = 9 in the MIDI settings (manual: ALL / CH.01-16 / NONE)."}
+  - {setup: main-studio, device: behringer-rd-9, in: 10, out: 10, thru_pass_enabled: false, status: confirmed, confirmed: 2026-09-23,
+     note: "Owner: RD-9 sends on 10 and is the master clock (SYNC = INTERNAL). MIDI IN channel: 10 (or 'Out', which follows the out channel). SOFT THRU off -- per the manual it turns MIDI OUT into a second THRU."}
+  - {setup: main-studio, device: roland-tr-505, in: 11, out: 11, status: confirmed, confirmed: 2026-09-23,
+     note: "Drum machine, kept off 10 so it never doubles the RD-9. No TR-505 manual is ingested; how to set its channel is not verified."}
+  - {setup: main-studio, device: roland-mc-303, in: 12, out: 12, status: confirmed, confirmed: 2026-09-23, role: "the part you play from outside",
+     note: "The MC-303 is multitimbral; this is the one part triggered from an external source. Its other parts' channels are not planned. No MC-303 manual is ingested, so the settings are not verified."}
+  - {setup: main-studio, device: elektron-analog-four, in: 13, out: 13, status: confirmed, confirmed: 2026-09-23, role: "MIDI CONFIG > CHANNELS > AUTO CHANNEL",
+     note: "Fed from the Digitakt THRU (raw RD-9 stream). SYNC: CLOCK + TRANSPORT RECEIVE on, SEND off. No synth-track channel may be 10."}
+  - {setup: main-studio, device: elektron-digitakt-mk1, in: 14, out: 14, status: confirmed, confirmed: 2026-09-23, role: "MIDI CONFIG > CHANNELS > AUTO CHANNEL",
+     note: "Middle of the chain: CLOCK + TRANSPORT RECEIVE on AND SEND on. PORT CONFIG: INPUT FROM = MIDI, OUTPUT TO = MIDI, OUT PORT FUNCTIONALITY = MIDI. Audio track channels: none on 10 (OFF if unused). MIDI tracks send on the home channel of whatever they play (1 K2, 2 Typhon, 3 M1, 4 B1, ...)."}
+  - {setup: main-studio, device: akai-rhythm-wolf, status: confirmed, confirmed: 2026-09-23,
+     note: "Channel 15 reserved for it, but no in/out is recorded: the ingested user guide shows no MIDI channel setting (it points to Akai's MIDI implementation chart). If its drum channel turns out to be fixed at 10, it can share a line with the RD-9 only if the RD-9's notes are filtered out."}
