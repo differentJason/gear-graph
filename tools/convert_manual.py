@@ -153,6 +153,7 @@ def sections_from_headings(text, entry, warnings):
         line = text[m.start(): line_end if line_end > 0 else len(text)]
         title = re.sub(r"^(#+\s*|[-*]\s+)|\*\*", "", line).strip()
         title = re.sub(r"^\(EN\)\s*", "", title)
+        title = re.sub(r"^\|?\s*\(EN\)\s*\|", "", title).strip("| ")         # "(EN) Controls" set as a table row
         if norm(title) in skip or not title:
             continue
         seen_titles[norm(title)] = seen_titles.get(norm(title), 0) + 1

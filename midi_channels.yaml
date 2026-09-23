@@ -41,7 +41,7 @@ channels:
   # and accepted by the owner ("I will set all as assigned"). Readable table: docs/midi-channels.md (generated).
   #
   #  1 K2 | 2 Typhon | 3 M1 | 4 B1 | 5-8 Timbre Wolf (voice 1-4) | 9 Liven | 10 RD-9 | 11 TR-505 | 12 spare (MC-303 is omni; see its entry)
-  # 13 Analog Four | 14 Digitakt | 15 Rhythm Wolf (if settable) | 16 spare
+  # 13 Analog Four | 14 Digitakt | 15 spare | 16 spare (Rhythm Wolf: fixed 10 + 1, see its entry)
   - {setup: main-studio, device: behringer-k2, in: 1, status: confirmed, confirmed: 2026-09-23,
      note: "Rear-panel MIDI channel switches. MIDI IN/THRU only, no MIDI OUT, so no out channel. Played by a Digitakt MIDI track set to 1."}
   - {setup: main-studio, device: donner-b1, in: 4, out: 4, status: confirmed, confirmed: 2026-09-23,
@@ -64,5 +64,5 @@ channels:
      note: "Fed from the Digitakt THRU (raw RD-9 stream). SYNC: CLOCK + TRANSPORT RECEIVE on, SEND off. No synth-track channel may be 10."}
   - {setup: main-studio, device: elektron-digitakt-mk1, in: 14, out: 14, status: confirmed, confirmed: 2026-09-23, role: "MIDI CONFIG > CHANNELS > AUTO CHANNEL",
      note: "Middle of the chain: CLOCK + TRANSPORT RECEIVE on AND SEND on. PORT CONFIG: INPUT FROM = MIDI, OUTPUT TO = MIDI, OUT PORT FUNCTIONALITY = MIDI. Audio track channels: none on 10 (OFF if unused). MIDI tracks send on the home channel of whatever they play (1 K2, 2 Typhon, 3 M1, 4 B1, ...)."}
-  - {setup: main-studio, device: akai-rhythm-wolf, status: confirmed, confirmed: 2026-09-23,
-     note: "Channel 15 reserved for it, but no in/out is recorded: the ingested user guide shows no MIDI channel setting (it points to Akai's MIDI implementation chart). If its drum channel turns out to be fixed at 10, it can share a line with the RD-9 only if the RD-9's notes are filtered out."}
+  - {setup: main-studio, device: akai-rhythm-wolf, status: confirmed, confirmed: 2026-09-23, role: "fixed: drum voices on ch 10, bass synth on ch 1",
+     note: "No settable channel. Akai's official MIDI implementation page (Akai Japan, dated 2014-12-24; archived copy at https://web.archive.org/web/20170729082239/http://www.akai-pro.jp:80/rhythm-wolf/data/midi.php, saved as sources/akai-rhythm-wolf-midi-implementation.pdf) lists fixed channels: KICK 36, SNARE 38, PERC 40, HH OPEN 42, HH CLOSE 44 on ch 10; BASS SYNTH note 36 on ch 1; velocities 0/42/84/127. So it CANNOT take home channel 15 (released). Its drums collide with the RD-9 (10) and its bass with the K2 (1): give it its own MIDI line, never the RD-9/Digitakt/Thru5 chain."}

@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parent.parent
 # channels a device occupies beyond its recorded `in` (the Timbre Wolf's voices 2-4 answer on the next three channels)
 EXTRA = {"akai-timbre-wolf": 3}
 # reserved for a device whose channel is not (yet) recorded as settable
-RESERVED = {15: "akai-rhythm-wolf"}
+RESERVED = {}
 
 
 def markdown(setup="main-studio"):
@@ -49,7 +49,7 @@ def markdown(setup="main-studio"):
     loose = [c for c in rows if not isinstance(c.get("in"), int) and not isinstance(c.get("out"), int)
              and c["device"] not in RESERVED.values()]
     if loose:
-        out += ["", "**Not on a fixed channel**", ""]
-        out += [f"- **{names.get(c['device'], c['device'])}** ({c.get('in', 'no channel')}): {c.get('note', '')}" for c in loose]
+        out += ["", "**Not on a home channel of its own** (no settable channel; keep each on its own MIDI line)", ""]
+        out += [f"- **{names.get(c['device'], c['device'])}** ({c.get('in') or c.get('role') or 'no channel'}): {c.get('note', '')}" for c in loose]
     out += ["", "Generated from `midi_channels.yaml`. Channel 10 is the RD-9's drums; nothing else listens on it."]
     return "\n".join(out)

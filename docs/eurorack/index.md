@@ -48,7 +48,7 @@ See the [power budget](power-budget.md).
 
 - Behringer Space FX
 - Jake's kick 6HP
-- Jake's snare/hats 6HP
+- Jake's snare/hats (8HP)
 - Synthrotek Atari Punk Console 4HP
 - Mosaic Quantizer
 - Behringer CM1A MIDI to CV

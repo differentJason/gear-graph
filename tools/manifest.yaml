@@ -1010,3 +1010,181 @@ manuals:
     figure_text: all              # OCR'd scan: keep table lines (see convert_manual.figure_text)
     applies_to: "Roland KC-100 keyboard amplifier. Scanned original manual; text is OCR, so expect recognition errors."
     heading_pattern: '^#{1,6}\s+(?=[^\n]*[A-Za-z]{5,})'   # OCR: skip junk headings with no real word
+
+  # ---- Jake's Custom Shop originals (owner-confirmed models) and the Mr. Phil Ter tuning sheet, 2026-09-23
+  - id: jakes-kick-drum-datasheet
+    device: jakes-kick-6hp
+    manufacturer: Jake's Custom Shop
+    model: Kick Drum
+    title: Kick Drum Datasheet
+    doc_type: datasheet
+    doc_version: Revision A, 2022-08-18
+    language: en
+    pdf: sources/eurorack/jakes-kick-6hp__spec.pdf
+    source_url: https://jakescustomshop.com/Pedalboards/KickDrum/JCS%20Kick%20Drum%20Datasheet.pdf
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker. The owner confirmed 2026-09-23 that the unit is the original Kick Drum, not the later Kick Drum Pro CV.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 2
+    split: whole
+    applies_to: Jake's Custom Shop Kick Drum (original, 6HP; not the Kick Drum Pro CV). Owner-confirmed model 2026-09-23.
+  - id: jakes-snare-hihat-datasheet
+    device: jakes-snare-hats-6hp
+    manufacturer: Jake's Custom Shop
+    model: Snare Drum and High Hat
+    title: Snare Drum and High Hat Datasheet
+    doc_type: datasheet
+    doc_version: Revision A, 2022-11-02
+    language: en
+    pdf: sources/eurorack/jakes-snare-hats-6hp__spec.pdf
+    source_url: https://jakescustomshop.com/Modules/SDHH/JCS%20Snare%20Drum%20and%20High%20Hat%20Datasheet.pdf
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker. The owner confirmed 2026-09-23 that the unit is the original model, not the later Pro CV.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 2
+    split: whole
+    applies_to: 'Jake''s Custom Shop Snare Drum and High Hat, original model, 8HP (40.3 mm) -- owner-confirmed 2026-09-23. The inventory id keeps a legacy ''6hp''.'
+  - id: cre8audio-mr-philter-tuning
+    device: cre8audio-mr-philter
+    manufacturer: Cre8audio
+    model: Mr. Phil Ter
+    title: Mr. Phil Ter User Filter Tuning
+    doc_type: datasheet
+    doc_version: not stated
+    language: en
+    pdf: sources/eurorack/cre8audio-mr-philter__spec.ocr.pdf
+    source_url: https://www.cre8audio.com/s/Mr-Phil-User-Filter-Tuning.pdf
+    source_note: Fetched 2026-09-23 by an assistant agent from the maker; the official one-page sheet is image-only, so `pdf` is a local OCR copy (ocrmypdf 2026-09-23) of sources/eurorack/cre8audio-mr-philter__spec.pdf.
+    retrieved: '2026-09-23'
+    pages:
+    - 1
+    - 1
+    split: whole
+    figure_text: all
+    applies_to: 'Cre8audio Mr. Phil Ter: the maker''s customer filter-calibration (tuning) sheet. OCR text; check numbers against the image.'
+
+  # ---- Behringer Eurorack quick starts (multilingual 2-up spreads): English half-pages only, 2026-09-23
+  - id: behringer-961-quick-start
+    device: behringer-961-interface
+    manufacturer: Behringer
+    model: 961 INTERFACE
+    title: 961 INTERFACE Quick Start Guide
+    doc_type: quick-start
+    doc_version: V 2.0
+    language: en
+    pdf: sources/eurorack/behringer-961-interface.pdf
+    source_url: https://cdn-media.empowertribe.com/c62b014b507c4472ac77dc219d01e8d2/QSG_BE_0720-ABB_961%20INTERFACE_WW.pdf
+    source_note: Official Music Tribe file host (cdn-media.empowertribe.com), linked from the behringer.com product page; fetched 2026-09-23 by an assistant agent.
+    retrieved: '2026-09-23'
+    page_spec:
+    - page: 5
+      clip: [403, 0, 805, 595]
+    - page: 11
+      clip: [0, 0, 403, 595]
+    - page: 16
+      clip: [403, 0, 805, 595]
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: 'Behringer 961 INTERFACE (a clone of the Moog 961 trigger converter; 21 HP), Quick Start Guide V 2.0. English only: Controls, Power Connection + Installation, Specifications.'
+  - id: behringer-1003-quick-start
+    device: behringer-1003-dual-envelope-generator
+    manufacturer: Behringer
+    model: '1003'
+    title: DUAL ENVELOPE GENERATOR MODULE 1003 Quick Start Guide
+    doc_type: quick-start
+    doc_version: V 1.0
+    language: en
+    pdf: sources/eurorack/behringer-1003-dual-envelope-generator.pdf
+    source_url: https://cdn-media.empowertribe.com/49ee6cc77fe2430fa1c334933bbd611e/QSG_BE_0720-ABR_DUAL-ENVELOPE-GENERATOR-MODULE-1003_WW.pdf
+    source_note: Official Music Tribe file host (cdn-media.empowertribe.com), linked from the behringer.com product page; fetched 2026-09-23 by an assistant agent.
+    retrieved: '2026-09-23'
+    page_spec:
+    - page: 3
+      clip: [403, 0, 805, 258]
+    - page: 6
+      clip: [0, 0, 403, 595]
+    - page: 10
+      clip: [403, 0, 805, 595]
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: 'Behringer 1003 Dual Envelope Generator (Behringer''s ''2500 Series'', i.e. ARP 2500-style), Quick Start Guide V 1.0. English only: Controls, Power Connection + Installation, Specifications.'
+  - id: behringer-four-play-quick-start
+    device: behringer-four-play-vca
+    manufacturer: Behringer
+    model: FOUR PLAY
+    title: FOUR PLAY Quick Start Guide
+    doc_type: quick-start
+    doc_version: V 2.0
+    language: en
+    pdf: sources/eurorack/behringer-four-play-vca.pdf
+    source_url: https://cdn-media.empowertribe.com/d2e0e7b8c5e9410e9139314f1f3a41f7/QSG_BE_0720-ACI_FOUR-PLAY_WW.pdf
+    source_note: Official Music Tribe file host (cdn-media.empowertribe.com), linked from the behringer.com product page; fetched 2026-09-23 by an assistant agent.
+    retrieved: '2026-09-23'
+    page_spec:
+    - page: 8
+      clip: [170, 0, 340, 403]
+    - page: 9
+      clip: [0, 0, 170, 403]
+    - page: 9
+      clip: [170, 0, 340, 403]
+    - page: 30
+      clip: [0, 0, 170, 403]
+    - page: 30
+      clip: [170, 0, 340, 403]
+    split: headings
+    heading_pattern: '^(#{1,6}\s+|\|\(EN\)\|\*\*Controls\*\*\|)'   # the (EN) Controls title is a table row in this PDF
+    applies_to: 'Behringer FOUR PLAY quad VCA and mixer, Quick Start Guide V 2.0. English only: Controls, Power Connection, Installation, Specifications.'
+  - id: behringer-space-fx-quick-start
+    device: behringer-space-fx
+    manufacturer: Behringer
+    model: SPACE FX
+    title: SPACE FX Quick Start Guide
+    doc_type: quick-start
+    doc_version: V 2.0 (2024)
+    language: en
+    pdf: sources/eurorack/behringer-space-fx.pdf
+    source_url: https://cdn-media.empowertribe.com/cf8a4fe7a0544197a0dc18d7d1c6c7f0/QSG_BE_0720-ABQ_SPACE%20FX_WW.pdf
+    source_note: Official Music Tribe file host (cdn-media.empowertribe.com), linked from the behringer.com product page; fetched 2026-09-23 by an assistant agent.
+    retrieved: '2026-09-23'
+    page_spec:
+    - page: 6
+      clip: [210, 0, 420, 298]
+    - page: 12
+      clip: [0, 0, 210, 298]
+    - page: 12
+      clip: [210, 0, 420, 298]
+    - page: 24
+      clip: [0, 0, 210, 298]
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: 'Behringer SPACE FX 24-bit stereo multi-effects module, Quick Start Guide V 2.0 (2024 edition). English only: Controls, Power Connection, Installation, Specifications.'
+  - id: behringer-cp1a-quick-start
+    device: behringer-cp1a
+    manufacturer: Behringer
+    model: CP1A
+    title: EURORACK RACK and CP1A Power Supply Quick Start Guide
+    doc_type: quick-start
+    doc_version: V 2.0
+    language: en
+    pdf: sources/eurorack/behringer-cp1a.pdf
+    source_url: https://cdn-media.empowertribe.com/27799b1b9f60423a8544df4c132bbe30/QSG_BE_0720-ABO_CP1A_WW.pdf
+    source_note: Official Music Tribe file host (cdn-media.empowertribe.com), linked from the behringer.com product page; fetched 2026-09-23 by an assistant agent.
+    retrieved: '2026-09-23'
+    page_spec:
+    - page: 12
+      clip: [0, 0, 298, 420]
+    - page: 12
+      clip: [298, 0, 595, 130]      # English kit text only; ES/FR/DE follow below y 130
+    - page: 14
+      clip: [0, 0, 298, 420]
+    - page: 14
+      clip: [298, 0, 595, 420]
+    - page: 15
+      clip: [0, 0, 298, 420]
+    - page: 20
+      clip: [298, 0, 595, 420]
+    split: headings
+    heading_pattern: ^#{1,6}\s+
+    applies_to: Behringer EURORACK RACK kit + CP1A power supply module, Quick Start Guide V 2.0. The owner has the 4 HP CP1A module (not the rack kit); rack-kit content is included only where it shares pages. English only.

@@ -391,6 +391,62 @@
    "doc_type": "user-manual",
    "device": "roland-kc-100",
    "sections": 20
+  },
+  {
+   "id": "jakes-kick-drum-datasheet",
+   "title": "Kick Drum Datasheet",
+   "doc_type": "datasheet",
+   "device": "jakes-kick-6hp",
+   "sections": 1
+  },
+  {
+   "id": "jakes-snare-hihat-datasheet",
+   "title": "Snare Drum and High Hat Datasheet",
+   "doc_type": "datasheet",
+   "device": "jakes-snare-hats-6hp",
+   "sections": 1
+  },
+  {
+   "id": "cre8audio-mr-philter-tuning",
+   "title": "Mr. Phil Ter User Filter Tuning",
+   "doc_type": "datasheet",
+   "device": "cre8audio-mr-philter",
+   "sections": 1
+  },
+  {
+   "id": "behringer-961-quick-start",
+   "title": "961 INTERFACE Quick Start Guide",
+   "doc_type": "quick-start",
+   "device": "behringer-961-interface",
+   "sections": 4
+  },
+  {
+   "id": "behringer-1003-quick-start",
+   "title": "DUAL ENVELOPE GENERATOR MODULE 1003 Quick Start Guide",
+   "doc_type": "quick-start",
+   "device": "behringer-1003-dual-envelope-generator",
+   "sections": 4
+  },
+  {
+   "id": "behringer-four-play-quick-start",
+   "title": "FOUR PLAY Quick Start Guide",
+   "doc_type": "quick-start",
+   "device": "behringer-four-play-vca",
+   "sections": 4
+  },
+  {
+   "id": "behringer-space-fx-quick-start",
+   "title": "SPACE FX Quick Start Guide",
+   "doc_type": "quick-start",
+   "device": "behringer-space-fx",
+   "sections": 4
+  },
+  {
+   "id": "behringer-cp1a-quick-start",
+   "title": "EURORACK RACK and CP1A Power Supply Quick Start Guide",
+   "doc_type": "quick-start",
+   "device": "behringer-cp1a",
+   "sections": 8
   }
  ],
  "inventory_items": 76

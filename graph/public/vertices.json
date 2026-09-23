@@ -444,6 +444,7 @@
   "category": "eurorack-module",
   "id": "item:cosmotronic-delta-v",
   "in_use": true,
+  "manufacturer": "Cosmotronic",
   "name": "Cosmotronic Delta-V",
   "status": "owned",
   "type": "item",
@@ -694,7 +695,7 @@
   "id": "item:jakes-snare-hats-6hp",
   "in_use": false,
   "manufacturer": "Jake's Custom Shop",
-  "name": "Jake's snare/hats 6HP",
+  "name": "Jake's snare/hats (8HP)",
   "status": "owned",
   "type": "item",
   "visibility": "public"
@@ -774,6 +775,7 @@
   "category": "eurorack-module",
   "id": "item:mosaic-quantizer",
   "in_use": false,
+  "manufacturer": "Mosaic",
   "name": "Mosaic Quantizer",
   "status": "owned",
   "type": "item",
@@ -1065,10 +1067,34 @@
  },
  {
   "doc_type": "quick-start",
+  "id": "manual:behringer-1003-quick-start",
+  "name": "DUAL ENVELOPE GENERATOR MODULE 1003 Quick Start Guide",
+  "type": "manual",
+  "version": "V 1.0",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "quick-start",
+  "id": "manual:behringer-961-quick-start",
+  "name": "961 INTERFACE Quick Start Guide",
+  "type": "manual",
+  "version": "V 2.0",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "quick-start",
   "id": "manual:behringer-cm1a-quick-start",
   "name": "CM1A Quick Start Guide",
   "type": "manual",
   "version": "V 4.0",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "quick-start",
+  "id": "manual:behringer-cp1a-quick-start",
+  "name": "EURORACK RACK and CP1A Power Supply Quick Start Guide",
+  "type": "manual",
+  "version": "V 2.0",
   "visibility": "public"
  },
  {
@@ -1077,6 +1103,14 @@
   "name": "Digital Delay DD400 Manual",
   "type": "manual",
   "version": "undated",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "quick-start",
+  "id": "manual:behringer-four-play-quick-start",
+  "name": "FOUR PLAY Quick Start Guide",
+  "type": "manual",
+  "version": "V 2.0",
   "visibility": "public"
  },
  {
@@ -1109,6 +1143,14 @@
   "name": "RD-9 Rhythm Designer User Manual",
   "type": "manual",
   "version": "V 1.0",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "quick-start",
+  "id": "manual:behringer-space-fx-quick-start",
+  "name": "SPACE FX Quick Start Guide",
+  "type": "manual",
+  "version": "V 2.0 (2024)",
   "visibility": "public"
  },
  {
@@ -1165,6 +1207,14 @@
   "name": "Cre8audio Mr. Phil Ter product page",
   "type": "manual",
   "version": "web page 2026-09-23",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "datasheet",
+  "id": "manual:cre8audio-mr-philter-tuning",
+  "name": "Mr. Phil Ter User Filter Tuning",
+  "type": "manual",
+  "version": "not stated",
   "visibility": "public"
  },
  {
@@ -1269,6 +1319,22 @@
   "name": "Stereo Mixer 1U Manual",
   "type": "manual",
   "version": "Revision 2024.10.15",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "datasheet",
+  "id": "manual:jakes-kick-drum-datasheet",
+  "name": "Kick Drum Datasheet",
+  "type": "manual",
+  "version": "Revision A, 2022-08-18",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "datasheet",
+  "id": "manual:jakes-snare-hihat-datasheet",
+  "name": "Snare Drum and High Hat Datasheet",
+  "type": "manual",
+  "version": "Revision A, 2022-11-02",
   "visibility": "public"
  },
  {
@@ -1456,6 +1522,12 @@
   "visibility": "public"
  },
  {
+  "id": "mfr:Cosmotronic",
+  "name": "Cosmotronic",
+  "type": "manufacturer",
+  "visibility": "public"
+ },
+ {
   "id": "mfr:Cre8audio",
   "name": "Cre8audio",
   "type": "manufacturer",
@@ -1536,6 +1608,12 @@
  {
   "id": "mfr:Laney",
   "name": "Laney",
+  "type": "manufacturer",
+  "visibility": "public"
+ },
+ {
+  "id": "mfr:Mosaic",
+  "name": "Mosaic",
   "type": "manufacturer",
   "visibility": "public"
  },

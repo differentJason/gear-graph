@@ -268,5 +268,45 @@
   "id": "roland-kc-100-manual",
   "unique_word_recall": 0.997171,
   "occurrence_recall": 0.992366
+ },
+ {
+  "id": "jakes-kick-drum-datasheet",
+  "unique_word_recall": 1.0,
+  "occurrence_recall": 1.0
+ },
+ {
+  "id": "jakes-snare-hihat-datasheet",
+  "unique_word_recall": 1.0,
+  "occurrence_recall": 0.966667
+ },
+ {
+  "id": "cre8audio-mr-philter-tuning",
+  "unique_word_recall": 1.0,
+  "occurrence_recall": 1.0
+ },
+ {
+  "id": "behringer-961-quick-start",
+  "unique_word_recall": 1.0,
+  "occurrence_recall": 0.992453
+ },
+ {
+  "id": "behringer-1003-quick-start",
+  "unique_word_recall": 0.989189,
+  "occurrence_recall": 0.982759
+ },
+ {
+  "id": "behringer-four-play-quick-start",
+  "unique_word_recall": 0.994595,
+  "occurrence_recall": 0.983092
+ },
+ {
+  "id": "behringer-space-fx-quick-start",
+  "unique_word_recall": 1.0,
+  "occurrence_recall": 0.991202
+ },
+ {
+  "id": "behringer-cp1a-quick-start",
+  "unique_word_recall": 0.99505,
+  "occurrence_recall": 0.978769
  }
 ]

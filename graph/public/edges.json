@@ -488,6 +488,12 @@
   "visibility": "public"
  },
  {
+  "dst": "manual:behringer-1003-quick-start",
+  "rel": "HAS_MANUAL",
+  "src": "item:behringer-1003-dual-envelope-generator",
+  "visibility": "public"
+ },
+ {
   "dst": "spec:behringer-1003-dual-envelope-generator.depth_mm",
   "rel": "HAS_SPEC",
   "src": "item:behringer-1003-dual-envelope-generator",
@@ -558,6 +564,12 @@
   "dst": "src:https://www.analoguehaven.com/behringer/961/",
   "http": "200",
   "rel": "CONSULTED",
+  "src": "item:behringer-961-interface",
+  "visibility": "public"
+ },
+ {
+  "dst": "manual:behringer-961-quick-start",
+  "rel": "HAS_MANUAL",
   "src": "item:behringer-961-interface",
   "visibility": "public"
  },
@@ -680,6 +692,12 @@
   "visibility": "public"
  },
  {
+  "dst": "manual:behringer-cp1a-quick-start",
+  "rel": "HAS_MANUAL",
+  "src": "item:behringer-cp1a",
+  "visibility": "public"
+ },
+ {
   "dst": "spec:behringer-cp1a.depth_mm",
   "rel": "HAS_SPEC",
   "src": "item:behringer-cp1a",
@@ -773,6 +791,12 @@
   "dst": "src:https://www.perfectcircuit.com/behringer-four-play.html",
   "http": "403",
   "rel": "CONSULTED",
+  "src": "item:behringer-four-play-vca",
+  "visibility": "public"
+ },
+ {
+  "dst": "manual:behringer-four-play-quick-start",
+  "rel": "HAS_MANUAL",
   "src": "item:behringer-four-play-vca",
   "visibility": "public"
  },
@@ -995,6 +1019,12 @@
   "visibility": "public"
  },
  {
+  "dst": "manual:behringer-space-fx-quick-start",
+  "rel": "HAS_MANUAL",
+  "src": "item:behringer-space-fx",
+  "visibility": "public"
+ },
+ {
   "dst": "spec:behringer-space-fx.depth_mm",
   "rel": "HAS_SPEC",
   "src": "item:behringer-space-fx",
@@ -1185,6 +1215,12 @@
   "visibility": "public"
  },
  {
+  "dst": "mfr:Cosmotronic",
+  "rel": "MADE_BY",
+  "src": "item:cosmotronic-delta-v",
+  "visibility": "public"
+ },
+ {
   "dst": "item:behringer-cp1a",
   "rel": "POWERED_BY",
   "row": "3U",
@@ -1348,6 +1384,12 @@
  },
  {
   "dst": "manual:cre8audio-mr-philter-page",
+  "rel": "HAS_MANUAL",
+  "src": "item:cre8audio-mr-philter",
+  "visibility": "public"
+ },
+ {
+  "dst": "manual:cre8audio-mr-philter-tuning",
   "rel": "HAS_MANUAL",
   "src": "item:cre8audio-mr-philter",
   "visibility": "public"
@@ -2251,6 +2293,12 @@
   "visibility": "public"
  },
  {
+  "dst": "manual:jakes-kick-drum-datasheet",
+  "rel": "HAS_MANUAL",
+  "src": "item:jakes-kick-6hp",
+  "visibility": "public"
+ },
+ {
   "dst": "cat:eurorack-module",
   "rel": "IN_CATEGORY",
   "src": "item:jakes-kick-6hp",
@@ -2260,6 +2308,12 @@
   "dst": "mfr:Jake's Custom Shop",
   "rel": "MADE_BY",
   "src": "item:jakes-kick-6hp",
+  "visibility": "public"
+ },
+ {
+  "dst": "manual:jakes-snare-hihat-datasheet",
+  "rel": "HAS_MANUAL",
+  "src": "item:jakes-snare-hats-6hp",
   "visibility": "public"
  },
  {
@@ -2425,6 +2479,12 @@
  {
   "dst": "cat:eurorack-module",
   "rel": "IN_CATEGORY",
+  "src": "item:mosaic-quantizer",
+  "visibility": "public"
+ },
+ {
+  "dst": "mfr:Mosaic",
+  "rel": "MADE_BY",
   "src": "item:mosaic-quantizer",
   "visibility": "public"
  },
@@ -5402,6 +5462,166 @@
   "visibility": "public"
  },
  {
+  "dst": "term:attack",
+  "label": "attack",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-1003-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "control voltage",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-1003-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:decay",
+  "label": "decay",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-1003-quick-start",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-1003-quick-start",
+  "value": 14,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope generator",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-1003-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-1003-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:slide",
+  "label": "slide",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-1003-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-1003-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sustain",
+  "label": "sustain",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-1003-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig",
+  "label": "trig",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-1003-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-1003-quick-start",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ts",
+  "label": "TS",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-1003-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-in",
+  "label": "audio in",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-961-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-signal",
+  "label": "audio signal",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-961-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:slide",
+  "label": "slide",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-961-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-961-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig",
+  "label": "trig",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-961-quick-start",
+  "value": 24,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig-out",
+  "label": "trig out",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-961-quick-start",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-961-quick-start",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ts",
+  "label": "TS",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-961-quick-start",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
   "dst": "term:control-voltage",
   "label": "CV",
   "rel": "USES_TERM",
@@ -5498,6 +5718,22 @@
   "visibility": "public"
  },
  {
+  "dst": "term:kit",
+  "label": "kit",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-cp1a-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:slide",
+  "label": "slide",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-cp1a-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
   "dst": "term:delay",
   "label": "delay",
   "rel": "USES_TERM",
@@ -5559,6 +5795,62 @@
   "rel": "USES_TERM",
   "src": "manual:behringer-digital-delay-manual",
   "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "CV",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-four-play-quick-start",
+  "value": 12,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-in",
+  "label": "CV in",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-four-play-quick-start",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-in",
+  "label": "CV input",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-four-play-quick-start",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:slide",
+  "label": "slide",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-four-play-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-four-play-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ts",
+  "label": "TS",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-four-play-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:vca",
+  "label": "VCA",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-four-play-quick-start",
+  "value": 4,
   "visibility": "public"
  },
  {
@@ -6826,6 +7118,22 @@
   "visibility": "public"
  },
  {
+  "dst": "term:slide",
+  "label": "slide",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-space-fx-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-space-fx-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
   "dst": "term:footswitch",
   "label": "footswitch",
   "rel": "USES_TERM",
@@ -7422,6 +7730,102 @@
   "label": "wave",
   "rel": "USES_TERM",
   "src": "manual:cre8audio-mr-philter-page",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-in",
+  "label": "audio input",
+  "rel": "USES_TERM",
+  "src": "manual:cre8audio-mr-philter-tuning",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "CV",
+  "rel": "USES_TERM",
+  "src": "manual:cre8audio-mr-philter-tuning",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cutoff",
+  "label": "cutoff",
+  "rel": "USES_TERM",
+  "src": "manual:cre8audio-mr-philter-tuning",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:distortion",
+  "label": "distortion",
+  "rel": "USES_TERM",
+  "src": "manual:cre8audio-mr-philter-tuning",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:cre8audio-mr-philter-tuning",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:oscillator",
+  "label": "oscillator",
+  "rel": "USES_TERM",
+  "src": "manual:cre8audio-mr-philter-tuning",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sawtooth",
+  "label": "saw",
+  "rel": "USES_TERM",
+  "src": "manual:cre8audio-mr-philter-tuning",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sine",
+  "label": "sine",
+  "rel": "USES_TERM",
+  "src": "manual:cre8audio-mr-philter-tuning",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:square",
+  "label": "square",
+  "rel": "USES_TERM",
+  "src": "manual:cre8audio-mr-philter-tuning",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:cre8audio-mr-philter-tuning",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "wave",
+  "rel": "USES_TERM",
+  "src": "manual:cre8audio-mr-philter-tuning",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "waveform",
+  "rel": "USES_TERM",
+  "src": "manual:cre8audio-mr-philter-tuning",
   "value": 1,
   "visibility": "public"
  },
@@ -11215,6 +11619,78 @@
   "rel": "USES_TERM",
   "src": "manual:intellijel-stereo-mixer-1u-manual",
   "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:decay",
+  "label": "decay",
+  "rel": "USES_TERM",
+  "src": "manual:jakes-kick-drum-datasheet",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:square",
+  "label": "square",
+  "rel": "USES_TERM",
+  "src": "manual:jakes-kick-drum-datasheet",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:jakes-kick-drum-datasheet",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "wave",
+  "rel": "USES_TERM",
+  "src": "manual:jakes-kick-drum-datasheet",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "waveform",
+  "rel": "USES_TERM",
+  "src": "manual:jakes-kick-drum-datasheet",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:jakes-snare-hihat-datasheet",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:decay",
+  "label": "decay",
+  "rel": "USES_TERM",
+  "src": "manual:jakes-snare-hihat-datasheet",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "label": "pattern",
+  "rel": "USES_TERM",
+  "src": "manual:jakes-snare-hihat-datasheet",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:jakes-snare-hihat-datasheet",
+  "value": 3,
   "visibility": "public"
  },
  {

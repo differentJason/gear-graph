@@ -1,6 +1,6 @@
 {
  "generated_by": "tools/query_graph.py",
- "graph_sha256": "45c41fa45ea01dbda08071865397b3262fbbddd767c797688ee0e1a307a63f34",
+ "graph_sha256": "369cfe157cf58c4d8e51e2d6b4185f919c6adcab2ef3a766cacc7fff1a87c3cc",
  "answers": [
   {
    "id": "q1",
@@ -112,11 +112,11 @@
    "question": "Which concepts do different manufacturers name differently in their manuals?",
    "answer": [
     "27 concepts are named differently by different manufacturers",
-    "envelope: 'EG' (Dreadbox, Korg); 'envelope' (After Later Audio, Akai Professional, Antumbra, Arturia, Behringer, Donner, EarthQuaker Devices, Elektron, Intellijel, Moth Hunter Mods, Roland, Tiptop Audio, maker not recorded); 'envelope = envelope generator (tie)' (Cre8audio); 'envelope generator' (Sonicware)",
+    "envelope: 'EG' (Dreadbox, Korg); 'envelope' (After Later Audio, Akai Professional, Antumbra, Arturia, Behringer, Cosmotronic, Donner, EarthQuaker Devices, Elektron, Intellijel, Moth Hunter Mods, Roland, Tiptop Audio, maker not recorded); 'envelope = envelope generator (tie)' (Cre8audio); 'envelope generator' (Sonicware)",
     "high-pass: 'HPF' (Behringer, Electro-Harmonix, Sonicware); 'high-pass' (After Later Audio, Dreadbox, Roland); 'high-pass = highpass (tie)' (Tiptop Audio); 'highpass' (Elektron)",
     "control-change: 'CC' (Akai Professional, Antumbra, Arturia, Cre8audio, Dreadbox, Elektron, Roland); 'control change' (Electro-Harmonix, Korg, Sonicware)",
-    "waveform: 'wave' (Akai Professional, Cre8audio, Donner, Dreadbox, EarthQuaker Devices, Electro-Harmonix, Intellijel, Roland, Sonicware, Synthrotek, Tiptop Audio); 'waveform' (After Later Audio, Antumbra, Behringer, Elektron, Korg, maker not recorded)",
-    "audio-in: 'audio input' (After Later Audio, Antumbra, Behringer, Cre8audio, Dreadbox, Elektron, Erica Synths, Intellijel, Tiptop Audio, Yamaha, maker not recorded); 'line in' (Sonicware)"
+    "waveform: 'wave' (Akai Professional, Cre8audio, Donner, Dreadbox, EarthQuaker Devices, Electro-Harmonix, Intellijel, Roland, Sonicware, Synthrotek, Tiptop Audio); 'wave = waveform (tie)' (Jake's Custom Shop); 'waveform' (After Later Audio, Antumbra, Behringer, Elektron, Korg, maker not recorded)",
+    "audio-in: 'audio in' (Behringer); 'audio input' (After Later Audio, Antumbra, Cosmotronic, Cre8audio, Dreadbox, Elektron, Erica Synths, Intellijel, Tiptop Audio, Yamaha); 'line in' (Sonicware)"
    ],
    "checks": {
     "cross": "pass"
@@ -132,6 +132,7 @@
     "Akai Timbre Wolf: envelope",
     "Behringer K2: envelope, lfo",
     "Behringer RD-9 Rhythm Designer: envelope, lfo",
+    "Cre8audio Mr. PhilTer: envelope",
     "Donner Essential B1: envelope",
     "Dreadbox Typhon: adsr, envelope, lfo",
     "Electro-Harmonix ModRex: lfo",

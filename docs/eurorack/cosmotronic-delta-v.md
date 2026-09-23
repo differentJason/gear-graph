@@ -2,6 +2,7 @@
 title: Cosmotronic Delta-V
 doc_type: eurorack-module
 module: cosmotronic-delta-v
+manufacturer: Cosmotronic
 category: eurorack-module
 format: 3U
 in_use: true
@@ -32,7 +33,7 @@ content_status: generated
 
 > **Identification:** ModularGrid also has rev 1 and Silver variants; this is the standard listing.
 
-> Name/maker as written in Equipment List.md; not verified.
+> Name/maker as written in Equipment List.md. Maker confirmed 2026-09-23 from the official manual (Cosmotronic, The Hague; 10HP dual function generator with VCAs). Hardware revision: the owner thinks Rev 1 but is not sure (2026-09-23); Rev 1 and Rev 2 exist and the manual does not say which it covers.
 
 ## Specifications
 
