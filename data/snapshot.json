@@ -167,6 +167,13 @@
    "doc_type": "quick-start",
    "device": "behringer-k2",
    "sections": 43
+  },
+  {
+   "id": "behringer-cm1a-quick-start",
+   "title": "CM1A Quick Start Guide",
+   "doc_type": "quick-start",
+   "device": "behringer-cm1a-midi-to-cv",
+   "sections": 6
   }
  ],
  "inventory_items": 76

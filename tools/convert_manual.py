@@ -64,9 +64,12 @@ def load_pages(entry):
         for sp in spec:
             work.insert_pdf(doc, from_page=sp["page"] - 1, to_page=sp["page"] - 1)
             if sp.get("clip"):
-                rect = pymupdf.Rect(*sp["clip"])
-                work[-1].set_mediabox(rect)
-                work[-1].set_cropbox(rect)
+                # `clip` is in top-down page coordinates (what get_text reports). set_mediabox takes PDF coordinates
+                # (y measured from the bottom) and resets the cropbox to match, so flip y and set nothing else.
+                # Shrinking the mediabox, not just the cropbox, keeps text outside the clip out of the reading order.
+                x0, y0, x1, y1 = sp["clip"]
+                page_h = work[-1].mediabox.height
+                work[-1].set_mediabox(pymupdf.Rect(x0, page_h - y1, x1, page_h - y0))
         numbers = [sp["page"] for sp in spec]
         chunks = pymupdf4llm.to_markdown(work, page_chunks=True, use_ocr=False)
     else:
@@ -74,8 +77,12 @@ def load_pages(entry):
         numbers = list(range(first, last + 1))
         chunks = pymupdf4llm.to_markdown(doc, pages=[n - 1 for n in numbers], page_chunks=True, use_ocr=False)
     text = ""
+    drop = [re.compile(rx) for rx in entry.get("drop_lines", [])]   # per-manual leftovers (running headers, stray captions)
     for n, ch in zip(numbers, chunks):
-        text += MARK.format(n) + "\n" + clean_page(ch["text"]) + "\n\n"
+        page = clean_page(ch["text"])
+        if drop:
+            page = "\n".join(l for l in page.split("\n") if not any(rx.search(l) for rx in drop))
+        text += MARK.format(n) + "\n" + page + "\n\n"
     if entry.get("stop_at"):                                   # multilingual sheet: English precedes this marker
         m = re.search(entry["stop_at"], text, re.M)
         if m:

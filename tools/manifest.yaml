@@ -428,3 +428,30 @@ manuals:
     heading_pattern: '^#{1,6}\s+'
     applies_to: "Behringer K-2 (the original, not the 2023 K-2 MK II)."
 
+
+  - id: behringer-cm1a-quick-start
+    device: behringer-cm1a-midi-to-cv
+    manufacturer: Behringer
+    model: CM1A
+    title: CM1A Quick Start Guide
+    doc_type: quick-start
+    doc_version: "V 4.0"
+    language: en
+    pdf: sources/behringer-cm1a.pdf
+    source_url: https://www.behringer.com/product.html?modelCode=0720-ABN
+    source_note: "Official Behringer file (internal code QSG_BE_0720-ABN_CM1A_WW, matching Behringer's 0720-ABN product code). Downloaded by the owner and handed over via Google Drive on 2026-09-23; the URL above is where Behringer lists it, not a direct file URL."
+    retrieved: 2026-09-23
+    page_spec:                    # English columns only; the booklet is a two-up multilingual spread.
+      - {page: 8, clip: [180, 32, 340, 245]}     # (EN) Controls, right column above (ES)
+      - {page: 12, clip: [180, 15, 340, 258]}    # (EN) Mode Select + SYNTHTRIBE, right column above (ES)
+      - {page: 17, clip: [0, 15, 170, 402]}      # Power Connection + start of Installation, left column
+      - {page: 17, clip: [180, 20, 340, 128]}    # end of Installation, right column above (ES) Conexión Eléctrica
+      - {page: 25, clip: [0, 19, 340, 402]}      # Specifications (English)
+    split: headings
+    drop_lines:                   # running page headers and one Spanish diagram caption the clips cannot avoid
+      - '^Quick Start Guide$'
+      - '^\*\*\d+\*\* CM1A$'
+      - 'Conexión Eléctrica'
+    # markdown headings, plus the "(EN) **Controls**" line, which the PDF sets as bold text rather than a heading
+    heading_pattern: '^(#{1,6}\s+|\(EN\)\s+\*\*Controls\*\*\s*$)'
+    applies_to: "Behringer CM1A MIDI-to-CV Eurorack module, Quick Start Guide V 4.0. Quick Start only; MIDI channel, pitch-bend range and note range are set in Behringer's SynthTribe app, not on the module."

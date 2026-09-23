@@ -108,5 +108,10 @@
   "id": "behringer-k2-quick-start",
   "unique_word_recall": 0.990698,
   "occurrence_recall": 0.963777
+ },
+ {
+  "id": "behringer-cm1a-quick-start",
+  "unique_word_recall": 0.984293,
+  "occurrence_recall": 0.984479
  }
 ]
