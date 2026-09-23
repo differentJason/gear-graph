@@ -208,7 +208,7 @@ def main():
                         [{sfm["title"]: f"manuals/{m['id']}/{fn}"} for fn, sfm in sections[m["id"]]]})
     about = [("index.md", "Overview"), ("architecture.md", "Architecture"), ("verification.md", "How correctness is checked"),
              ("evaluation.md", "Retrieval evaluation"), ("decisions.md", "Decision log"), ("runbook.md", "Runbook"),
-             ("limitations.md", "Limitations and open questions"), ("status.md", "Current status")]
+             ("terminology.md", "How the terminology was built"), ("limitations.md", "Limitations and open questions"), ("status.md", "Current status")]
     nav.append({"About this project": [{t: f"about/{f}"} for f, t in about]})
     nav.append({"Eurorack": eu["nav"]})
     nav.append({"Topics": ["topics/index.md"] + [f"topics/{t}.md" for t in topic_counts]})

@@ -272,6 +272,12 @@
   "visibility": "public"
  },
  {
+  "dst": "manual:akai-rhythm-wolf-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:akai-rhythm-wolf",
+  "visibility": "public"
+ },
+ {
   "dst": "cat:drum-machine",
   "rel": "IN_CATEGORY",
   "src": "item:akai-rhythm-wolf",
@@ -281,6 +287,12 @@
   "dst": "mfr:Akai Professional",
   "rel": "MADE_BY",
   "src": "item:akai-rhythm-wolf",
+  "visibility": "public"
+ },
+ {
+  "dst": "manual:akai-timbre-wolf-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:akai-timbre-wolf",
   "visibility": "public"
  },
  {
@@ -379,6 +391,12 @@
   "setup": "main-studio",
   "src": "item:antumbra-atom",
   "status": "confirmed",
+  "visibility": "public"
+ },
+ {
+  "dst": "manual:arturia-keystep-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:arturia-keystep",
   "visibility": "public"
  },
  {
@@ -659,6 +677,12 @@
   "visibility": "public"
  },
  {
+  "dst": "manual:behringer-digital-delay-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:behringer-digital-delay",
+  "visibility": "public"
+ },
+ {
   "dst": "cat:pedal-time",
   "rel": "IN_CATEGORY",
   "src": "item:behringer-digital-delay",
@@ -759,6 +783,12 @@
   "visibility": "public"
  },
  {
+  "dst": "manual:behringer-gdi21-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:behringer-gdi21",
+  "visibility": "public"
+ },
+ {
   "dst": "cat:di-preamp",
   "rel": "IN_CATEGORY",
   "src": "item:behringer-gdi21",
@@ -771,6 +801,12 @@
   "visibility": "public"
  },
  {
+  "dst": "manual:behringer-hell-babe-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:behringer-hell-babe",
+  "visibility": "public"
+ },
+ {
   "dst": "cat:pedal-wah",
   "rel": "IN_CATEGORY",
   "src": "item:behringer-hell-babe",
@@ -780,6 +816,12 @@
   "dst": "mfr:Behringer",
   "rel": "MADE_BY",
   "src": "item:behringer-hell-babe",
+  "visibility": "public"
+ },
+ {
+  "dst": "manual:behringer-k2-quick-start",
+  "rel": "HAS_MANUAL",
+  "src": "item:behringer-k2",
   "visibility": "public"
  },
  {
@@ -952,6 +994,12 @@
   "visibility": "public"
  },
  {
+  "dst": "manual:behringer-ultra-tremolo-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:behringer-ultra-tremolo",
+  "visibility": "public"
+ },
+ {
   "dst": "cat:pedal-modulation",
   "rel": "IN_CATEGORY",
   "src": "item:behringer-ultra-tremolo",
@@ -973,6 +1021,12 @@
   "setup": "main-studio",
   "src": "item:behringer-umc1820",
   "status": "confirmed",
+  "visibility": "public"
+ },
+ {
+  "dst": "manual:behringer-umc1820-quick-start",
+  "rel": "HAS_MANUAL",
+  "src": "item:behringer-umc1820",
   "visibility": "public"
  },
  {
@@ -1432,6 +1486,12 @@
   "visibility": "public"
  },
  {
+  "dst": "manual:dreadbox-typhon-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:dreadbox-typhon",
+  "visibility": "public"
+ },
+ {
   "dst": "cat:synth",
   "rel": "IN_CATEGORY",
   "src": "item:dreadbox-typhon",
@@ -1444,6 +1504,12 @@
   "visibility": "public"
  },
  {
+  "dst": "manual:earthquaker-bit-commander-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:earthquaker-bit-commander",
+  "visibility": "public"
+ },
+ {
   "dst": "cat:pedal-synth",
   "rel": "IN_CATEGORY",
   "src": "item:earthquaker-bit-commander",
@@ -1453,6 +1519,12 @@
   "dst": "mfr:EarthQuaker Devices",
   "rel": "MADE_BY",
   "src": "item:earthquaker-bit-commander",
+  "visibility": "public"
+ },
+ {
+  "dst": "manual:electro-harmonix-modrex-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:electro-harmonix-modrex",
   "visibility": "public"
  },
  {
@@ -1508,6 +1580,12 @@
   "src": "item:elektron-digitakt-mk1",
   "status": "confirmed",
   "to_port": "Input 7/8",
+  "visibility": "public"
+ },
+ {
+  "dst": "manual:elektron-digitakt-mk1-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:elektron-digitakt-mk1",
   "visibility": "public"
  },
  {
@@ -2064,6 +2142,12 @@
   "visibility": "public"
  },
  {
+  "dst": "manual:korg-sq-64-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:korg-sq-64",
+  "visibility": "public"
+ },
+ {
   "dst": "cat:sequencer",
   "rel": "IN_CATEGORY",
   "src": "item:korg-sq-64",
@@ -2180,6 +2264,12 @@
   "visibility": "public"
  },
  {
+  "dst": "manual:midi-thru5-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:midi-thru5",
+  "visibility": "public"
+ },
+ {
   "dst": "cat:midi-utility",
   "rel": "IN_CATEGORY",
   "src": "item:midi-thru5",
@@ -2283,6 +2373,12 @@
   "visibility": "public"
  },
  {
+  "dst": "manual:roland-kc-150",
+  "rel": "HAS_MANUAL",
+  "src": "item:roland-kc-150",
+  "visibility": "public"
+ },
+ {
   "dst": "cat:amp",
   "rel": "IN_CATEGORY",
   "src": "item:roland-kc-150",
@@ -2352,6 +2448,12 @@
   "dst": "mfr:Sonicake",
   "rel": "MADE_BY",
   "src": "item:sonicake-tonegroup-10-band-eq",
+  "visibility": "public"
+ },
+ {
+  "dst": "manual:sonicware-liven-texture-lab-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:sonicware-liven-texture-lab",
   "visibility": "public"
  },
  {
@@ -2606,6 +2708,12 @@
   "visibility": "public"
  },
  {
+  "dst": "manual:yamaha-hs4-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:yamaha-hs4",
+  "visibility": "public"
+ },
+ {
   "dst": "cat:monitors",
   "rel": "IN_CATEGORY",
   "src": "item:yamaha-hs4",
@@ -2676,6 +2784,7214 @@
   "setup": "main-studio",
   "src": "item:zlob-fade-lfo",
   "status": "confirmed",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bank",
+  "label": "bank",
+  "rel": "USES_TERM",
+  "src": "manual:akai-apc20-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI data",
+  "rel": "USES_TERM",
+  "src": "manual:akai-apc20-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-port",
+  "label": "MIDI port",
+  "rel": "USES_TERM",
+  "src": "manual:akai-apc20-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mute",
+  "label": "mute",
+  "rel": "USES_TERM",
+  "src": "manual:akai-apc20-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note on",
+  "rel": "USES_TERM",
+  "src": "manual:akai-apc20-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sample",
+  "label": "sample",
+  "rel": "USES_TERM",
+  "src": "manual:akai-apc20-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "label": "sync",
+  "rel": "USES_TERM",
+  "src": "manual:akai-apc20-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:akai-apc20-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:akai-apc20-quick-start",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:arpeggiator",
+  "label": "arpeggiator",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bank",
+  "label": "bank",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bpm",
+  "label": "BPM",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-change",
+  "label": "CC",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mod-wheel",
+  "label": "mod wheel",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note on",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-repeat",
+  "label": "note repeat",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:program-change",
+  "label": "program change",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:retrig",
+  "label": "retrigger",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sample",
+  "label": "sample",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sustain",
+  "label": "sustain",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "label": "sync",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tap-tempo",
+  "label": "tap tempo",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "label": "tempo",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ts",
+  "label": "TS",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:velocity",
+  "label": "velocity",
+  "rel": "USES_TERM",
+  "src": "manual:akai-mpk-mini-mk3-quick-start",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:amplifier",
+  "label": "amplifier",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:attack",
+  "label": "attack",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bpm",
+  "label": "BPM",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cutoff",
+  "label": "cutoff",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:decay",
+  "label": "decay",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:distortion",
+  "label": "distortion",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:fill",
+  "label": "fill",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 30,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "low-pass",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:main-out",
+  "label": "main out",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-clock",
+  "label": "MIDI clock",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-in",
+  "label": "MIDI IN",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI message",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-out",
+  "label": "MIDI OUT",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "thru",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mute",
+  "label": "mute",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:overdrive",
+  "label": "overdrive",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "label": "pattern",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 46,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:resonance",
+  "label": "resonance",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sawtooth",
+  "label": "sawtooth",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencer",
+  "label": "sequencer",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:square",
+  "label": "square",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 82,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sustain",
+  "label": "sustain",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:swing",
+  "label": "swing",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "label": "sync",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "label": "tempo",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tie",
+  "label": "tie",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig",
+  "label": "trig",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig-out",
+  "label": "trig out",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trs",
+  "label": "TRS",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ts",
+  "label": "TS",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:velocity",
+  "label": "velocity",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 13,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "wave",
+  "rel": "USES_TERM",
+  "src": "manual:akai-rhythm-wolf-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:amplifier",
+  "label": "amplifier",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-signal",
+  "label": "audio signal",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bpm",
+  "label": "BPM",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-change",
+  "label": "CC",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cutoff",
+  "label": "cutoff",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:decay",
+  "label": "decay",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:distortion",
+  "label": "distortion",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:fill",
+  "label": "fill",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 54,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:gate-out",
+  "label": "gate out",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:glide",
+  "label": "glide",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "phones",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 22,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "low-pass",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:main-out",
+  "label": "main out",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-clock",
+  "label": "MIDI clock",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-in",
+  "label": "MIDI IN",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI message",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-out",
+  "label": "MIDI OUT",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "MIDI THRU",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mute",
+  "label": "mute",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note off",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note on",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:overdrive",
+  "label": "overdrive",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "label": "pattern",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 69,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pitch-bend",
+  "label": "pitch bend",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 12,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:resonance",
+  "label": "resonance",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:retrig",
+  "label": "retrigger",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencer",
+  "label": "sequencer",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 17,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 97,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:swing",
+  "label": "swing",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "label": "sync",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "label": "tempo",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 23,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tie",
+  "label": "tie",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig",
+  "label": "trig",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig-out",
+  "label": "trig out",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trs",
+  "label": "TRS",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ts",
+  "label": "TS",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:velocity",
+  "label": "velocity",
+  "rel": "USES_TERM",
+  "src": "manual:akai-timbre-wolf-manual",
+  "value": 13,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:aftertouch",
+  "label": "aftertouch",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:amplifier",
+  "label": "amplifier",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:arpeggiator",
+  "label": "arp",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 87,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:arpeggiator",
+  "label": "arpeggiator",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 81,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:attack",
+  "label": "attack",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bpm",
+  "label": "BPM",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 20,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 35,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock pulse",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:connector",
+  "label": "connector type",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-change",
+  "label": "CC",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 23,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "CV",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 41,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "control voltage",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-out",
+  "label": "CV out",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-out",
+  "label": "CV output",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:din-sync",
+  "label": "DIN sync",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:footswitch",
+  "label": "footswitch",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:gate-length",
+  "label": "gate length",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:gate-length",
+  "label": "gate time",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:gate-out",
+  "label": "gate output",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 64,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:kit",
+  "label": "kit",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-clock",
+  "label": "MIDI clock",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-in",
+  "label": "MIDI IN",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI data",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI message",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-port",
+  "label": "MIDI port",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "MIDI THRU",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mod-wheel",
+  "label": "mod wheel",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:modulation-source",
+  "label": "modulation source",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note off",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note on",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:oscillator",
+  "label": "oscillator",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "label": "pattern",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 29,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pitch-bend",
+  "label": "pitch bend",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pitch-cv",
+  "label": "pitch CV",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:preset",
+  "label": "preset",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:project",
+  "label": "project",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 32,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 15,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:roll",
+  "label": "roll",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencer",
+  "label": "sequencer",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 70,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:slide",
+  "label": "slide",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:square",
+  "label": "square",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 104,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sustain",
+  "label": "sustain",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 30,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:swing",
+  "label": "shuffle",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:swing",
+  "label": "swing",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 25,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-in",
+  "label": "clock in",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-in",
+  "label": "clock input",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-in",
+  "label": "sync in",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-out",
+  "label": "clock output",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "label": "sync",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 48,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tap-tempo",
+  "label": "tap tempo",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "label": "tempo",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 33,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tie",
+  "label": "tie",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 26,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig",
+  "label": "trig",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 13,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trs",
+  "label": "TRS",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ts",
+  "label": "TS",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 24,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:vca",
+  "label": "VCA",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:vcf",
+  "label": "VCF",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:vco",
+  "label": "VCO",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:velocity",
+  "label": "velocity",
+  "rel": "USES_TERM",
+  "src": "manual:arturia-keystep-manual",
+  "value": 29,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay",
+  "label": "delay",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-digital-delay-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay-time",
+  "label": "delay time",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-digital-delay-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:feedback",
+  "label": "feedback",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-digital-delay-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:footswitch",
+  "label": "footswitch",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-digital-delay-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-digital-delay-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tap-tempo",
+  "label": "tap tempo",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-digital-delay-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "label": "tempo",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-digital-delay-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ts",
+  "label": "TS",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-digital-delay-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bypass",
+  "label": "bypass",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-gdi21-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:footswitch",
+  "label": "footswitch",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-gdi21-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:overdrive",
+  "label": "overdrive",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-gdi21-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sample",
+  "label": "sample",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-gdi21-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sustain",
+  "label": "sustain",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-gdi21-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ts",
+  "label": "TS",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-gdi21-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:xlr",
+  "label": "XLR",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-gdi21-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bypass",
+  "label": "bypass",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-hell-babe-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chorus",
+  "label": "chorus",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-hell-babe-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:distortion",
+  "label": "distortion",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-hell-babe-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-hell-babe-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:overdrive",
+  "label": "overdrive",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-hell-babe-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:reverb",
+  "label": "reverb",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-hell-babe-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:time-effect",
+  "label": "time-based effect",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-hell-babe-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ts",
+  "label": "TS",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-hell-babe-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:amplifier",
+  "label": "amplifier",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:attack",
+  "label": "attack",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-signal",
+  "label": "audio signal",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:band-pass",
+  "label": "band-pass",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chain",
+  "label": "chain",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "CV",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "control voltage",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cutoff",
+  "label": "cutoff",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 35,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-in",
+  "label": "CV in",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-in",
+  "label": "CV input",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-out",
+  "label": "CV out",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-out",
+  "label": "CV output",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:decay",
+  "label": "decay",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay-time",
+  "label": "delay time",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:din-5",
+  "label": "5-pin DIN",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "EG",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 17,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope generator",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 20,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:expression-pedal",
+  "label": "expression pedal",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 29,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:footswitch",
+  "label": "footswitch",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:glide",
+  "label": "glide",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:glide",
+  "label": "portamento",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "phones",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:high-pass",
+  "label": "high-pass",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 14,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:high-pass",
+  "label": "highpass",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:lfo",
+  "label": "LFO",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:lfo",
+  "label": "low frequency oscillator",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "low-pass",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 13,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "lowpass",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-in",
+  "label": "MIDI IN",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI data",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI message",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-out",
+  "label": "MIDI OUT",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "MIDI THRU",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "thru",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:modulation-source",
+  "label": "modulation source",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note off",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note on",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:oscillator",
+  "label": "oscillator",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pitch-bend",
+  "label": "pitch bend",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pulse-width",
+  "label": "pulse width",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:resonance",
+  "label": "emphasis",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:resonance",
+  "label": "resonance",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sample",
+  "label": "sample",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sawtooth",
+  "label": "sawtooth",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 13,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencer",
+  "label": "sequencer",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:square",
+  "label": "square",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sustain",
+  "label": "sustain",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-in",
+  "label": "clock in",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-in",
+  "label": "clock input",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:triangle",
+  "label": "triangle",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig",
+  "label": "trig",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig-out",
+  "label": "trig out",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 15,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trs",
+  "label": "TRS",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ts",
+  "label": "TS",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:vca",
+  "label": "VCA",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 13,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:vcf",
+  "label": "VCF",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:vco",
+  "label": "VCO",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 50,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "waveform",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-k2-quick-start",
+  "value": 16,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:accent",
+  "label": "accent",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 37,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:amplifier",
+  "label": "amplifier",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:attack",
+  "label": "attack",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 16,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-in",
+  "label": "audio input",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-signal",
+  "label": "audio signal",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:automation",
+  "label": "automation",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 20,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bank",
+  "label": "bank",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bpm",
+  "label": "BPM",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bypass",
+  "label": "bypass",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chain",
+  "label": "chain",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 26,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 23,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:compressor",
+  "label": "compressor",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "CV",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "control voltage",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cutoff",
+  "label": "cutoff",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 13,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:decay",
+  "label": "decay",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 16,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay",
+  "label": "delay",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:din-5",
+  "label": "5-pin DIN",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:distortion",
+  "label": "distortion",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:fill",
+  "label": "fill",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 19,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 110,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:flam",
+  "label": "flam",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 57,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "phones",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:high-pass",
+  "label": "HPF",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 18,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:high-pass",
+  "label": "high-pass",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:lfo",
+  "label": "LFO",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "LPF",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 12,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "low-pass",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:main-out",
+  "label": "main output",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-clock",
+  "label": "MIDI clock",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-in",
+  "label": "MIDI IN",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 14,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI data",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI message",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-out",
+  "label": "MIDI OUT",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-port",
+  "label": "MIDI port",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "MIDI THRU",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "thru",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mute",
+  "label": "mute",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 23,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-repeat",
+  "label": "note repeat",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 29,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:oscillator",
+  "label": "oscillator",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "label": "pattern",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 293,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:probability",
+  "label": "probability",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 32,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:project",
+  "label": "project",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ratchet",
+  "label": "ratchet",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:resonance",
+  "label": "emphasis",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:resonance",
+  "label": "resonance",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:reverb",
+  "label": "reverb",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:roll",
+  "label": "roll",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencer",
+  "label": "sequencer",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 49,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sine",
+  "label": "sine",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:slide",
+  "label": "slide",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:song",
+  "label": "song",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 253,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 354,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sustain",
+  "label": "sustain",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 14,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:swing",
+  "label": "shuffle",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:swing",
+  "label": "swing",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 29,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-in",
+  "label": "clock in",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-in",
+  "label": "clock input",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-in",
+  "label": "sync in",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-out",
+  "label": "clock out",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-out",
+  "label": "sync out",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "label": "sync",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 26,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "label": "tempo",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 35,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig",
+  "label": "trig",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 44,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trs",
+  "label": "TRS",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ts",
+  "label": "TS",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 40,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:vcf",
+  "label": "VCF",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:velocity",
+  "label": "velocity",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "wave",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "waveform",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-rd-9-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:footswitch",
+  "label": "footswitch",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-ultra-tremolo-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:lfo",
+  "label": "LFO",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-ultra-tremolo-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:square",
+  "label": "square",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-ultra-tremolo-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tremolo",
+  "label": "tremolo",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-ultra-tremolo-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:triangle",
+  "label": "triangle",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-ultra-tremolo-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ts",
+  "label": "TS",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-ultra-tremolo-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "wave",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-ultra-tremolo-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "waveform",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-ultra-tremolo-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:din-5",
+  "label": "5-pin DIN",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc1820-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc1820-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone output",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc1820-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:line-out",
+  "label": "line output",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc1820-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:main-out",
+  "label": "main output",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc1820-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mute",
+  "label": "mute",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc1820-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sample",
+  "label": "sample",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc1820-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trs",
+  "label": "TRS",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc1820-quick-start",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc1820-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:xlr",
+  "label": "XLR",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc1820-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-signal",
+  "label": "audio signal",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc404hd-quick-start",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay",
+  "label": "delay",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc404hd-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:din-5",
+  "label": "5-pin DIN",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc404hd-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc404hd-quick-start",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "phones",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc404hd-quick-start",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc404hd-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:line-out",
+  "label": "line out",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc404hd-quick-start",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:main-out",
+  "label": "main out",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc404hd-quick-start",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-in",
+  "label": "MIDI IN",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc404hd-quick-start",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-port",
+  "label": "MIDI port",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc404hd-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sample",
+  "label": "sample",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc404hd-quick-start",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc404hd-quick-start",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trs",
+  "label": "TRS",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc404hd-quick-start",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc404hd-quick-start",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:xlr",
+  "label": "XLR",
+  "rel": "USES_TERM",
+  "src": "manual:behringer-umc404hd-quick-start",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:accent",
+  "label": "accent",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 40,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:arpeggiator",
+  "label": "arp",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:arpeggiator",
+  "label": "arpeggiator",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 19,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-signal",
+  "label": "audio signal",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bpm",
+  "label": "BPM",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 19,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "CV",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cutoff",
+  "label": "cutoff",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:decay",
+  "label": "decay",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay",
+  "label": "delay",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay-time",
+  "label": "delay time",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:din-5",
+  "label": "5-pin DIN",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:distortion",
+  "label": "distortion",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:feedback",
+  "label": "feedback",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:gate-length",
+  "label": "gate length",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 47,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone output",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "phones",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 31,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:line-out",
+  "label": "line output",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "low-pass",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:main-out",
+  "label": "main out",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-in",
+  "label": "MIDI IN",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 12,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI data",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI message",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-out",
+  "label": "MIDI OUT",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mute",
+  "label": "mute",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note on",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:oscillator",
+  "label": "oscillator",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "label": "pattern",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 50,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:preset",
+  "label": "preset",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ratchet",
+  "label": "ratchet",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 28,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:resonance",
+  "label": "emphasis",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:resonance",
+  "label": "resonance",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sawtooth",
+  "label": "saw",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencer",
+  "label": "sequencer",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 25,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:slide",
+  "label": "slide",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 24,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:square",
+  "label": "square",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 88,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-in",
+  "label": "sync in",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 15,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-out",
+  "label": "sync out",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "label": "sync",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tap-tempo",
+  "label": "tap tempo",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "label": "tempo",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 19,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tie",
+  "label": "tie",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig",
+  "label": "trig",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trs",
+  "label": "TRS",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ts",
+  "label": "TS",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 33,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:vcf",
+  "label": "VCF",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:velocity",
+  "label": "velocity",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "wave",
+  "rel": "USES_TERM",
+  "src": "manual:donner-b1-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:adsr",
+  "label": "ADSR",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:aftertouch",
+  "label": "aftertouch",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:attack",
+  "label": "attack",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-in",
+  "label": "audio in",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-in",
+  "label": "audio input",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bank",
+  "label": "bank",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 12,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bpm",
+  "label": "BPM",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 25,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chain",
+  "label": "chain",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chorus",
+  "label": "chorus",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-change",
+  "label": "CC",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 15,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "CV",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cutoff",
+  "label": "cutoff",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 17,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:decay",
+  "label": "decay",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay",
+  "label": "delay",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay-time",
+  "label": "delay time",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:distortion",
+  "label": "distortion",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "EG",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 17,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 15,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope generator",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:feedback",
+  "label": "feedback",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 37,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:gate-length",
+  "label": "gate length",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:glide",
+  "label": "glide",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:glide",
+  "label": "portamento",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:high-pass",
+  "label": "HPF",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:high-pass",
+  "label": "high-pass",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keytrack",
+  "label": "key track",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keytrack",
+  "label": "keytrack",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:lfo",
+  "label": "LFO",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 13,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:lfo",
+  "label": "low frequency oscillator",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "low-pass",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-clock",
+  "label": "MIDI clock",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI message",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mod-wheel",
+  "label": "mod wheel",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mod-wheel",
+  "label": "modulation wheel",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:modulation-source",
+  "label": "modulation source",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note on",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:oscillator",
+  "label": "oscillator",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "label": "pattern",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pitch-bend",
+  "label": "pitch bend",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:preset",
+  "label": "preset",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 23,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:probability",
+  "label": "probability",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:program-change",
+  "label": "program change",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:resonance",
+  "label": "resonance",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:reverb",
+  "label": "reverb",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 16,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sample",
+  "label": "sample",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sawtooth",
+  "label": "saw",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencer",
+  "label": "sequencer",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 48,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:slide",
+  "label": "slide",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:square",
+  "label": "square",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 81,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sustain",
+  "label": "sustain",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:swing",
+  "label": "swing",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "label": "sync",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "label": "tempo",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tie",
+  "label": "tie",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:triangle",
+  "label": "triangle",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 16,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:vca",
+  "label": "VCA",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 20,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:vcf",
+  "label": "VCF",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:vco",
+  "label": "VCO",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 15,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:velocity",
+  "label": "velocity",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 14,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "wave",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 12,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "waveform",
+  "rel": "USES_TERM",
+  "src": "manual:dreadbox-typhon-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chain",
+  "label": "chain",
+  "rel": "USES_TERM",
+  "src": "manual:earthquaker-bit-commander-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:compressor",
+  "label": "compressor",
+  "rel": "USES_TERM",
+  "src": "manual:earthquaker-bit-commander-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope",
+  "rel": "USES_TERM",
+  "src": "manual:earthquaker-bit-commander-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:earthquaker-bit-commander-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:earthquaker-bit-commander-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:oscillator",
+  "label": "oscillator",
+  "rel": "USES_TERM",
+  "src": "manual:earthquaker-bit-commander-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:square",
+  "label": "square",
+  "rel": "USES_TERM",
+  "src": "manual:earthquaker-bit-commander-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sustain",
+  "label": "sustain",
+  "rel": "USES_TERM",
+  "src": "manual:earthquaker-bit-commander-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:true-bypass",
+  "label": "true bypass",
+  "rel": "USES_TERM",
+  "src": "manual:earthquaker-bit-commander-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "wave",
+  "rel": "USES_TERM",
+  "src": "manual:earthquaker-bit-commander-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:band-pass",
+  "label": "band-pass",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bank",
+  "label": "bank",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bpm",
+  "label": "BPM",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bypass",
+  "label": "bypass",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chorus",
+  "label": "chorus",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock pulse",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-change",
+  "label": "CC",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-change",
+  "label": "control change",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "control voltage",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cutoff",
+  "label": "cutoff",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:expression-pedal",
+  "label": "expression pedal",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:feedback",
+  "label": "feedback",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 41,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:footswitch",
+  "label": "foot switch",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:footswitch",
+  "label": "footswitch",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:high-pass",
+  "label": "HPF",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:high-pass",
+  "label": "high-pass",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:lfo",
+  "label": "LFO",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 21,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "LPF",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 14,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "low-pass",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-clock",
+  "label": "MIDI clock",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-in",
+  "label": "MIDI IN",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI data",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI message",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-out",
+  "label": "MIDI OUT",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mod-effect",
+  "label": "modulation effect",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:preset",
+  "label": "preset",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 112,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:program-change",
+  "label": "program change",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:resonance",
+  "label": "emphasis",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:resonance",
+  "label": "resonance",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sawtooth",
+  "label": "sawtooth",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencer",
+  "label": "sequencer",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:song",
+  "label": "song",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:square",
+  "label": "square",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "label": "sync",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 12,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tap-tempo",
+  "label": "tap tempo",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "label": "tempo",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 76,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tremolo",
+  "label": "tremolo",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:triangle",
+  "label": "triangle",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trs",
+  "label": "TRS",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "wave",
+  "rel": "USES_TERM",
+  "src": "manual:electro-harmonix-modrex-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:accent",
+  "label": "accent",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 15,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:aftertouch",
+  "label": "aftertouch",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:amplifier",
+  "label": "amplifier",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:arpeggiator",
+  "label": "arp",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:arpeggiator",
+  "label": "arpeggiator",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 25,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:attack",
+  "label": "attack",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 25,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-in",
+  "label": "audio in",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-in",
+  "label": "audio input",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bank",
+  "label": "bank",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 46,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bpm",
+  "label": "BPM",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 21,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chain",
+  "label": "chain",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 82,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chorus",
+  "label": "chorus",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 32,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 13,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-change",
+  "label": "CC",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 75,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "CV",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 173,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "control voltage",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cutoff",
+  "label": "cutoff",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 31,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-in",
+  "label": "CV in",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-in",
+  "label": "CV input",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-out",
+  "label": "CV out",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-out",
+  "label": "CV output",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:decay",
+  "label": "decay",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 30,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay",
+  "label": "delay",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 43,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay-time",
+  "label": "delay time",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:detune",
+  "label": "detune",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:din-sync",
+  "label": "DIN sync",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:distortion",
+  "label": "distortion",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 128,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:expression-pedal",
+  "label": "expression pedal",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:feedback",
+  "label": "feedback",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 14,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:fill",
+  "label": "fill",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 26,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 144,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:gate-length",
+  "label": "gate length",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 12,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:gate-out",
+  "label": "gate output",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 12,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:glide",
+  "label": "glide",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:glide",
+  "label": "portamento",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "phones",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:high-pass",
+  "label": "HPF",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:high-pass",
+  "label": "highpass",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 84,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keytrack",
+  "label": "keytrack",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:kit",
+  "label": "kit",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 165,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:lfo",
+  "label": "LFO",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 71,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "LPF",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "low-pass",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "lowpass",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:main-out",
+  "label": "main out",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:main-out",
+  "label": "main output",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:micro-timing",
+  "label": "micro timing",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-clock",
+  "label": "MIDI clock",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-in",
+  "label": "MIDI IN",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 13,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI data",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 24,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI message",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-out",
+  "label": "MIDI OUT",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 13,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-port",
+  "label": "MIDI port",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "MIDI THRU",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "thru",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mod-wheel",
+  "label": "mod wheel",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mod-wheel",
+  "label": "modulation wheel",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:modulation-source",
+  "label": "modulation source",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mute",
+  "label": "mute",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 50,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note off",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note on",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:nrpn",
+  "label": "NRPN",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 73,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:oscillator",
+  "label": "osc",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:oscillator",
+  "label": "oscillator",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 120,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:overdrive",
+  "label": "overdrive",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 13,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter-lock",
+  "label": "parameter lock",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 36,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "label": "pattern",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 358,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pitch-bend",
+  "label": "pitch bend",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pitch-cv",
+  "label": "V/oct",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pitch-cv",
+  "label": "pitch CV",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:preset",
+  "label": "preset",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:probability",
+  "label": "probability",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:program-change",
+  "label": "program change",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:project",
+  "label": "project",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 114,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pulse-width",
+  "label": "pulse width",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 30,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:resonance",
+  "label": "resonance",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 40,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:retrig",
+  "label": "retrig",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:reverb",
+  "label": "reverb",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 35,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sample",
+  "label": "sample",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sawtooth",
+  "label": "saw",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sawtooth",
+  "label": "sawtooth",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencer",
+  "label": "sequencer",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 113,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sine",
+  "label": "sine",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:slide",
+  "label": "slide",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 54,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:song",
+  "label": "song",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 150,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:square",
+  "label": "square",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 88,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sub-oscillator",
+  "label": "sub osc",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sub-oscillator",
+  "label": "sub oscillator",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 28,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sustain",
+  "label": "sustain",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 15,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:swing",
+  "label": "swing",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "label": "sync",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 44,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tap-tempo",
+  "label": "tap tempo",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "label": "tempo",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 48,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:triangle",
+  "label": "triangle",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig",
+  "label": "trig",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 408,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig-condition",
+  "label": "conditional trig",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig-condition",
+  "label": "trig condition",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 19,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trs",
+  "label": "TRS",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 61,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:vca",
+  "label": "VCA",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:vcf",
+  "label": "VCF",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:velocity",
+  "label": "velocity",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 25,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "wave",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 12,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "waveform",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-analog-four-mkii-manual",
+  "value": 81,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:aftertouch",
+  "label": "aftertouch",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:amplifier",
+  "label": "amplifier",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:attack",
+  "label": "attack",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 18,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-in",
+  "label": "audio in",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-in",
+  "label": "audio input",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 16,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-signal",
+  "label": "audio signal",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bank",
+  "label": "bank",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 68,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bpm",
+  "label": "BPM",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 24,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chain",
+  "label": "chain",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 23,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chorus",
+  "label": "chorus",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:compressor",
+  "label": "compressor",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 25,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-change",
+  "label": "CC",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 69,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-change",
+  "label": "control change",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "CV",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cutoff",
+  "label": "cutoff",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:decay",
+  "label": "decay",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 18,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay",
+  "label": "delay",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 56,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay-time",
+  "label": "delay time",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:din-sync",
+  "label": "DIN sync",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:distortion",
+  "label": "distortion",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 38,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:feedback",
+  "label": "feedback",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:fill",
+  "label": "fill",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 29,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 86,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "phones",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:high-pass",
+  "label": "HPF",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:high-pass",
+  "label": "high-pass",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:high-pass",
+  "label": "highpass",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 34,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:kit",
+  "label": "kit",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 19,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:lfo",
+  "label": "LFO",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 87,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:lfo",
+  "label": "low frequency oscillator",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "LPF",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "low-pass",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "lowpass",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:main-out",
+  "label": "main out",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:main-out",
+  "label": "main output",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:micro-timing",
+  "label": "micro timing",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 14,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-clock",
+  "label": "MIDI clock",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-in",
+  "label": "MIDI IN",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 15,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI data",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 31,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI message",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-out",
+  "label": "MIDI OUT",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 15,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-port",
+  "label": "MIDI port",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "MIDI THRU",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "thru",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mod-wheel",
+  "label": "mod wheel",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mod-wheel",
+  "label": "modulation wheel",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mute",
+  "label": "mute",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 57,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note off",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note on",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:nrpn",
+  "label": "NRPN",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 36,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:overdrive",
+  "label": "overdrive",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter-lock",
+  "label": "parameter lock",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 50,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "label": "pattern",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 348,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pitch-bend",
+  "label": "pitch bend",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:preset",
+  "label": "preset",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:probability",
+  "label": "probability",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:program-change",
+  "label": "program change",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 14,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:project",
+  "label": "project",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 123,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 19,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:resonance",
+  "label": "resonance",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:retrig",
+  "label": "retrig",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 24,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:reverb",
+  "label": "reverb",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 45,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sample",
+  "label": "sample",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 311,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sawtooth",
+  "label": "sawtooth",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencer",
+  "label": "sequencer",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 89,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sine",
+  "label": "sine",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:song",
+  "label": "song",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 129,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:square",
+  "label": "square",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 89,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sustain",
+  "label": "sustain",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:swing",
+  "label": "swing",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 12,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-in",
+  "label": "sync in",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "label": "sync",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 15,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tap-tempo",
+  "label": "tap tempo",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "label": "tempo",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 58,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:triangle",
+  "label": "triangle",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig",
+  "label": "trig",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 440,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig-condition",
+  "label": "conditional trig",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig-condition",
+  "label": "trig condition",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 28,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 70,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:velocity",
+  "label": "velocity",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 23,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "wave",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "waveform",
+  "rel": "USES_TERM",
+  "src": "manual:elektron-digitakt-mk1-manual",
+  "value": 21,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:arpeggiator",
+  "label": "arp",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:arpeggiator",
+  "label": "arpeggiator",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chain",
+  "label": "chain",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 15,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-change",
+  "label": "CC",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-change",
+  "label": "control change",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "label": "CV",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 15,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-in",
+  "label": "CV in",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-out",
+  "label": "CV output",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "EG",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:fill",
+  "label": "fill",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:gate-out",
+  "label": "gate output",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 18,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-in",
+  "label": "MIDI IN",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI message",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 23,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-out",
+  "label": "MIDI OUT",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "MIDI THRU",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mute",
+  "label": "mute",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "label": "pattern",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 40,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pitch-cv",
+  "label": "1V/oct",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pitch-cv",
+  "label": "pitch CV",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:preset",
+  "label": "preset",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:probability",
+  "label": "probability",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:program-change",
+  "label": "program change",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:project",
+  "label": "project",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 30,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencer",
+  "label": "sequencer",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 13,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:slide",
+  "label": "slide",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 66,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:swing",
+  "label": "swing",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-in",
+  "label": "sync in",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-out",
+  "label": "sync out",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "label": "sync",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "label": "tempo",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tie",
+  "label": "tie",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig",
+  "label": "trig",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig-out",
+  "label": "trig out",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trs",
+  "label": "TRS",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:ts",
+  "label": "TS",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 39,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:velocity",
+  "label": "velocity",
+  "rel": "USES_TERM",
+  "src": "manual:korg-sq-64-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bank",
+  "label": "bank",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chain",
+  "label": "chain",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:din-5",
+  "label": "5-pin DIN",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "phones",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-clock",
+  "label": "MIDI clock",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-in",
+  "label": "MIDI IN",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI data",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI message",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-out",
+  "label": "MIDI OUT",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "MIDI THRU",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 12,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "thru",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:slide",
+  "label": "slide",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 22,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "wave",
+  "rel": "USES_TERM",
+  "src": "manual:midi-thru5-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:amplifier",
+  "label": "amplifier",
+  "rel": "USES_TERM",
+  "src": "manual:roland-kc-150",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:roland-kc-150",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone",
+  "rel": "USES_TERM",
+  "src": "manual:roland-kc-150",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "phones",
+  "rel": "USES_TERM",
+  "src": "manual:roland-kc-150",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:high-pass",
+  "label": "high-pass",
+  "rel": "USES_TERM",
+  "src": "manual:roland-kc-150",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:roland-kc-150",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:line-out",
+  "label": "line out",
+  "rel": "USES_TERM",
+  "src": "manual:roland-kc-150",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:line-out",
+  "label": "line output",
+  "rel": "USES_TERM",
+  "src": "manual:roland-kc-150",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:triangle",
+  "label": "triangle",
+  "rel": "USES_TERM",
+  "src": "manual:roland-kc-150",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trs",
+  "label": "TRS",
+  "rel": "USES_TERM",
+  "src": "manual:roland-kc-150",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:xlr",
+  "label": "XLR",
+  "rel": "USES_TERM",
+  "src": "manual:roland-kc-150",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:arpeggiator",
+  "label": "arp",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:arpeggiator",
+  "label": "arpeggiator",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:attack",
+  "label": "attack",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-in",
+  "label": "line in",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-in",
+  "label": "line input",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bank",
+  "label": "bank",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bpm",
+  "label": "BPM",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 23,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chain",
+  "label": "chain",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 11,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 37,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-change",
+  "label": "CC",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-change",
+  "label": "control change",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cutoff",
+  "label": "cutoff",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay",
+  "label": "delay",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay-time",
+  "label": "delay time",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:detune",
+  "label": "detune",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "EG",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope generator",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:feedback",
+  "label": "feedback",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 14,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:gate-length",
+  "label": "gate time",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:glide",
+  "label": "glide",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:high-pass",
+  "label": "HPF",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 24,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:kit",
+  "label": "kit",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:lfo",
+  "label": "LFO",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:line-out",
+  "label": "line out",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "LPF",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-clock",
+  "label": "MIDI clock",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 5,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-in",
+  "label": "MIDI IN",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI data",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-out",
+  "label": "MIDI OUT",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mute",
+  "label": "mute",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note off",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note on",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter-lock",
+  "label": "parameter lock",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "label": "pattern",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 104,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:preset",
+  "label": "preset",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:probability",
+  "label": "probability",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:program-change",
+  "label": "program change",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 7,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:resonance",
+  "label": "resonance",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:retrig",
+  "label": "retrig",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:retrig",
+  "label": "retrigger",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:reverb",
+  "label": "reverb",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 18,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sample",
+  "label": "sample",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 49,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sawtooth",
+  "label": "saw",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sawtooth",
+  "label": "sawtooth",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencer",
+  "label": "sequencer",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sine",
+  "label": "sine",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:song",
+  "label": "song",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:square",
+  "label": "square",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 117,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:swing",
+  "label": "swing",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-in",
+  "label": "sync in",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-out",
+  "label": "sync out",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "label": "sync",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 23,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "label": "tempo",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 13,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tie",
+  "label": "tie",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:triangle",
+  "label": "triangle",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:velocity",
+  "label": "velocity",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "wave",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 22,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "waveform",
+  "rel": "USES_TERM",
+  "src": "manual:sonicware-liven-texture-lab-manual",
+  "value": 6,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:amplifier",
+  "label": "amplifier",
+  "rel": "USES_TERM",
+  "src": "manual:yamaha-hs4-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-in",
+  "label": "audio input",
+  "rel": "USES_TERM",
+  "src": "manual:yamaha-hs4-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:yamaha-hs4-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone",
+  "rel": "USES_TERM",
+  "src": "manual:yamaha-hs4-manual",
+  "value": 12,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:line-out",
+  "label": "line out",
+  "rel": "USES_TERM",
+  "src": "manual:yamaha-hs4-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:yamaha-hs4-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:triangle",
+  "label": "triangle",
+  "rel": "USES_TERM",
+  "src": "manual:yamaha-hs4-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trs",
+  "label": "TRS",
+  "rel": "USES_TERM",
+  "src": "manual:yamaha-hs4-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:usb-port",
+  "label": "USB",
+  "rel": "USES_TERM",
+  "src": "manual:yamaha-hs4-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:xlr",
+  "label": "XLR",
+  "rel": "USES_TERM",
+  "src": "manual:yamaha-hs4-manual",
+  "value": 11,
   "visibility": "public"
  },
  {
@@ -3900,6 +11216,1782 @@
   "rel": "SOURCED_FROM",
   "src": "spec:zlob-fade-lfo.ma_p5",
   "value": 0,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step-attribute",
+  "rel": "BROADER",
+  "src": "term:accent",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:velocity",
+  "rel": "SETS",
+  "src": "term:accent",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:accent",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "rel": "BROADER",
+  "src": "term:adsr",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:adsr",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "rel": "BROADER",
+  "src": "term:aftertouch",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:midi",
+  "rel": "UNDER_TAG",
+  "src": "term:aftertouch",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:block",
+  "rel": "BROADER",
+  "src": "term:amplifier",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:amplifier",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencer",
+  "rel": "BROADER",
+  "src": "term:arpeggiator",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "rel": "GENERATES",
+  "src": "term:arpeggiator",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:arpeggiator",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope-stage",
+  "rel": "BROADER",
+  "src": "term:attack",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:attack",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-port",
+  "rel": "BROADER",
+  "src": "term:audio-in",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:audio-io",
+  "rel": "UNDER_TAG",
+  "src": "term:audio-in",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:port",
+  "rel": "BROADER",
+  "src": "term:audio-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-signal",
+  "rel": "CARRIES",
+  "src": "term:audio-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:audio-io",
+  "rel": "UNDER_TAG",
+  "src": "term:audio-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:signal",
+  "rel": "BROADER",
+  "src": "term:audio-signal",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:audio-io",
+  "rel": "UNDER_TAG",
+  "src": "term:audio-signal",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencing",
+  "rel": "BROADER",
+  "src": "term:automation",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:automation",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "rel": "BROADER",
+  "src": "term:band-pass",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:band-pass",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:memory",
+  "rel": "BROADER",
+  "src": "term:bank",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "rel": "CONTAINS",
+  "src": "term:bank",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:preset",
+  "rel": "CONTAINS",
+  "src": "term:bank",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:presets-patterns",
+  "rel": "UNDER_TAG",
+  "src": "term:bank",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:bpm",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "rel": "CLOSE_MATCH",
+  "src": "term:bpm",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sync-clock",
+  "rel": "UNDER_TAG",
+  "src": "term:bpm",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:bypass",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:effects",
+  "rel": "UNDER_TAG",
+  "src": "term:bypass",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencing",
+  "rel": "BROADER",
+  "src": "term:chain",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "rel": "CONTAINS",
+  "src": "term:chain",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:chain",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mod-effect",
+  "rel": "BROADER",
+  "src": "term:chorus",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:effects",
+  "rel": "UNDER_TAG",
+  "src": "term:chorus",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "rel": "BROADER",
+  "src": "term:clock-pulse",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sync-clock",
+  "rel": "UNDER_TAG",
+  "src": "term:clock-pulse",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:effect",
+  "rel": "BROADER",
+  "src": "term:compressor",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:effects",
+  "rel": "UNDER_TAG",
+  "src": "term:compressor",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:port",
+  "rel": "BROADER",
+  "src": "term:connector",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:audio-io",
+  "rel": "UNDER_TAG",
+  "src": "term:connector",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "rel": "BROADER",
+  "src": "term:control-change",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:midi",
+  "rel": "UNDER_TAG",
+  "src": "term:control-change",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:signal",
+  "rel": "BROADER",
+  "src": "term:control-voltage",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:cv-gate",
+  "rel": "UNDER_TAG",
+  "src": "term:control-voltage",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:cutoff",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:cutoff",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-port",
+  "rel": "BROADER",
+  "src": "term:cv-in",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:cv-gate",
+  "rel": "UNDER_TAG",
+  "src": "term:cv-in",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-port",
+  "rel": "BROADER",
+  "src": "term:cv-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:cv-gate",
+  "rel": "UNDER_TAG",
+  "src": "term:cv-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:port",
+  "rel": "BROADER",
+  "src": "term:cv-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "rel": "CARRIES",
+  "src": "term:cv-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:cv-gate",
+  "rel": "UNDER_TAG",
+  "src": "term:cv-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope-stage",
+  "rel": "BROADER",
+  "src": "term:decay",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:decay",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:time-effect",
+  "rel": "BROADER",
+  "src": "term:delay",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay-time",
+  "rel": "HAS_PARAMETER",
+  "src": "term:delay",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:feedback",
+  "rel": "HAS_PARAMETER",
+  "src": "term:delay",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:effects",
+  "rel": "UNDER_TAG",
+  "src": "term:delay",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:delay-time",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:effects",
+  "rel": "UNDER_TAG",
+  "src": "term:delay-time",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:detune",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:detune",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:connector",
+  "rel": "BROADER",
+  "src": "term:din-5",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:midi",
+  "rel": "UNDER_TAG",
+  "src": "term:din-5",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "rel": "BROADER",
+  "src": "term:din-sync",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sync-clock",
+  "rel": "UNDER_TAG",
+  "src": "term:din-sync",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:effect",
+  "rel": "BROADER",
+  "src": "term:distortion",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:effects",
+  "rel": "UNDER_TAG",
+  "src": "term:distortion",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bypass",
+  "rel": "HAS_PARAMETER",
+  "src": "term:effect",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:modulation-source",
+  "rel": "BROADER",
+  "src": "term:envelope",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope-stage",
+  "rel": "HAS_PARAMETER",
+  "src": "term:envelope",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cutoff",
+  "rel": "MODULATES",
+  "src": "term:envelope",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:envelope",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:envelope-stage",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:envelope-stage",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:controller",
+  "rel": "BROADER",
+  "src": "term:expression-pedal",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "CONTROLS",
+  "src": "term:expression-pedal",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:cv-gate",
+  "rel": "UNDER_TAG",
+  "src": "term:expression-pedal",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:feedback",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:effects",
+  "rel": "UNDER_TAG",
+  "src": "term:feedback",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencing",
+  "rel": "BROADER",
+  "src": "term:fill",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:fill",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:block",
+  "rel": "BROADER",
+  "src": "term:filter",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cutoff",
+  "rel": "HAS_PARAMETER",
+  "src": "term:filter",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keytrack",
+  "rel": "HAS_PARAMETER",
+  "src": "term:filter",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:resonance",
+  "rel": "HAS_PARAMETER",
+  "src": "term:filter",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:filter",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-repeat",
+  "rel": "BROADER",
+  "src": "term:flam",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:flam",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:controller",
+  "rel": "BROADER",
+  "src": "term:footswitch",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:controls-overview",
+  "rel": "UNDER_TAG",
+  "src": "term:footswitch",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:gate-length",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:gate-length",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-port",
+  "rel": "BROADER",
+  "src": "term:gate-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:cv-gate",
+  "rel": "UNDER_TAG",
+  "src": "term:gate-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:glide",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:glide",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-port",
+  "rel": "BROADER",
+  "src": "term:headphone-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:audio-io",
+  "rel": "UNDER_TAG",
+  "src": "term:headphone-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "rel": "BROADER",
+  "src": "term:high-pass",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:high-pass",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:controller",
+  "rel": "BROADER",
+  "src": "term:keyboard",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:aftertouch",
+  "rel": "GENERATES",
+  "src": "term:keyboard",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "rel": "GENERATES",
+  "src": "term:keyboard",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:controls-overview",
+  "rel": "UNDER_TAG",
+  "src": "term:keyboard",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:keytrack",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:keytrack",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:memory",
+  "rel": "BROADER",
+  "src": "term:kit",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sample",
+  "rel": "CONTAINS",
+  "src": "term:kit",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:presets-patterns",
+  "rel": "UNDER_TAG",
+  "src": "term:kit",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:modulation-source",
+  "rel": "BROADER",
+  "src": "term:lfo",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:oscillator",
+  "rel": "BROADER",
+  "src": "term:lfo",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cutoff",
+  "rel": "MODULATES",
+  "src": "term:lfo",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pulse-width",
+  "rel": "MODULATES",
+  "src": "term:lfo",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:lfo",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-port",
+  "rel": "BROADER",
+  "src": "term:line-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:audio-io",
+  "rel": "UNDER_TAG",
+  "src": "term:line-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "rel": "BROADER",
+  "src": "term:low-pass",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:low-pass",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-port",
+  "rel": "BROADER",
+  "src": "term:main-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:audio-io",
+  "rel": "UNDER_TAG",
+  "src": "term:main-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step-attribute",
+  "rel": "BROADER",
+  "src": "term:micro-timing",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:micro-timing",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "rel": "BROADER",
+  "src": "term:midi-clock",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "rel": "BROADER",
+  "src": "term:midi-clock",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "rel": "HAS_PARAMETER",
+  "src": "term:midi-clock",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sync-clock",
+  "rel": "UNDER_TAG",
+  "src": "term:midi-clock",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-port",
+  "rel": "BROADER",
+  "src": "term:midi-in",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:midi",
+  "rel": "UNDER_TAG",
+  "src": "term:midi-in",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:signal",
+  "rel": "BROADER",
+  "src": "term:midi-message",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:midi",
+  "rel": "UNDER_TAG",
+  "src": "term:midi-message",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-port",
+  "rel": "BROADER",
+  "src": "term:midi-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:midi",
+  "rel": "UNDER_TAG",
+  "src": "term:midi-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:port",
+  "rel": "BROADER",
+  "src": "term:midi-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "rel": "CARRIES",
+  "src": "term:midi-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:midi",
+  "rel": "UNDER_TAG",
+  "src": "term:midi-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-port",
+  "rel": "BROADER",
+  "src": "term:midi-thru",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:midi",
+  "rel": "UNDER_TAG",
+  "src": "term:midi-thru",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:effect",
+  "rel": "BROADER",
+  "src": "term:mod-effect",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:effects",
+  "rel": "UNDER_TAG",
+  "src": "term:mod-effect",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:controller",
+  "rel": "BROADER",
+  "src": "term:mod-wheel",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-change",
+  "rel": "GENERATES",
+  "src": "term:mod-wheel",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:controls-overview",
+  "rel": "UNDER_TAG",
+  "src": "term:mod-wheel",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:block",
+  "rel": "BROADER",
+  "src": "term:modulation-source",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:modulation-source",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencing",
+  "rel": "BROADER",
+  "src": "term:mute",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:mute",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "rel": "BROADER",
+  "src": "term:note-message",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:velocity",
+  "rel": "HAS_PARAMETER",
+  "src": "term:note-message",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:midi",
+  "rel": "UNDER_TAG",
+  "src": "term:note-message",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step-attribute",
+  "rel": "BROADER",
+  "src": "term:note-repeat",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:note-repeat",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "rel": "BROADER",
+  "src": "term:nrpn",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:midi",
+  "rel": "UNDER_TAG",
+  "src": "term:nrpn",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:block",
+  "rel": "BROADER",
+  "src": "term:oscillator",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-signal",
+  "rel": "GENERATES",
+  "src": "term:oscillator",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:detune",
+  "rel": "HAS_PARAMETER",
+  "src": "term:oscillator",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pulse-width",
+  "rel": "HAS_PARAMETER",
+  "src": "term:oscillator",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "rel": "HAS_PARAMETER",
+  "src": "term:oscillator",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:oscillator",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:distortion",
+  "rel": "BROADER",
+  "src": "term:overdrive",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:effects",
+  "rel": "UNDER_TAG",
+  "src": "term:overdrive",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step-attribute",
+  "rel": "BROADER",
+  "src": "term:parameter-lock",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:automation",
+  "rel": "CLOSE_MATCH",
+  "src": "term:parameter-lock",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "SETS",
+  "src": "term:parameter-lock",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:parameter-lock",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencing",
+  "rel": "BROADER",
+  "src": "term:pattern",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "rel": "CONTAINS",
+  "src": "term:pattern",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:pattern",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "rel": "BROADER",
+  "src": "term:pitch-bend",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:midi",
+  "rel": "UNDER_TAG",
+  "src": "term:pitch-bend",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "rel": "BROADER",
+  "src": "term:pitch-cv",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:cv-gate",
+  "rel": "UNDER_TAG",
+  "src": "term:pitch-cv",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:memory",
+  "rel": "BROADER",
+  "src": "term:preset",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:presets-patterns",
+  "rel": "UNDER_TAG",
+  "src": "term:preset",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step-attribute",
+  "rel": "BROADER",
+  "src": "term:probability",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig-condition",
+  "rel": "CLOSE_MATCH",
+  "src": "term:probability",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:probability",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "rel": "BROADER",
+  "src": "term:program-change",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "rel": "SELECTS",
+  "src": "term:program-change",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:preset",
+  "rel": "SELECTS",
+  "src": "term:program-change",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:midi",
+  "rel": "UNDER_TAG",
+  "src": "term:program-change",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:memory",
+  "rel": "BROADER",
+  "src": "term:project",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:kit",
+  "rel": "CONTAINS",
+  "src": "term:project",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "rel": "CONTAINS",
+  "src": "term:project",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:presets-patterns",
+  "rel": "UNDER_TAG",
+  "src": "term:project",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:pulse-width",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:pulse-width",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-repeat",
+  "rel": "BROADER",
+  "src": "term:ratchet",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:retrig",
+  "rel": "CLOSE_MATCH",
+  "src": "term:ratchet",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:roll",
+  "rel": "CLOSE_MATCH",
+  "src": "term:ratchet",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:ratchet",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope-stage",
+  "rel": "BROADER",
+  "src": "term:release",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:release",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:resonance",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:resonance",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-repeat",
+  "rel": "BROADER",
+  "src": "term:retrig",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:roll",
+  "rel": "CLOSE_MATCH",
+  "src": "term:retrig",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:retrig",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:time-effect",
+  "rel": "BROADER",
+  "src": "term:reverb",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:effects",
+  "rel": "UNDER_TAG",
+  "src": "term:reverb",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-repeat",
+  "rel": "BROADER",
+  "src": "term:roll",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:roll",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:memory",
+  "rel": "BROADER",
+  "src": "term:sample",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:presets-patterns",
+  "rel": "UNDER_TAG",
+  "src": "term:sample",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "rel": "BROADER",
+  "src": "term:sawtooth",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:sawtooth",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencing",
+  "rel": "BROADER",
+  "src": "term:sequencer",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "rel": "GENERATES",
+  "src": "term:sequencer",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "rel": "GENERATES",
+  "src": "term:sequencer",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:swing",
+  "rel": "HAS_PARAMETER",
+  "src": "term:sequencer",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "rel": "HAS_PARAMETER",
+  "src": "term:sequencer",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:sequencer",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "rel": "BROADER",
+  "src": "term:sine",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:sine",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step-attribute",
+  "rel": "BROADER",
+  "src": "term:slide",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:glide",
+  "rel": "CLOSE_MATCH",
+  "src": "term:slide",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:glide",
+  "rel": "SETS",
+  "src": "term:slide",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:slide",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencing",
+  "rel": "BROADER",
+  "src": "term:song",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chain",
+  "rel": "CONTAINS",
+  "src": "term:song",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:song",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "rel": "BROADER",
+  "src": "term:square",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:square",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencing",
+  "rel": "BROADER",
+  "src": "term:step",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trig",
+  "rel": "CONTAINS",
+  "src": "term:step",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:gate-length",
+  "rel": "HAS_PARAMETER",
+  "src": "term:step",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:step",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencing",
+  "rel": "BROADER",
+  "src": "term:step-attribute",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:step-attribute",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:oscillator",
+  "rel": "BROADER",
+  "src": "term:sub-oscillator",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:sub-oscillator",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope-stage",
+  "rel": "BROADER",
+  "src": "term:sustain",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:sustain",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:swing",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:swing",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-port",
+  "rel": "BROADER",
+  "src": "term:sync-in",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sync-clock",
+  "rel": "UNDER_TAG",
+  "src": "term:sync-in",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-port",
+  "rel": "BROADER",
+  "src": "term:sync-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sync-clock",
+  "rel": "UNDER_TAG",
+  "src": "term:sync-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:port",
+  "rel": "BROADER",
+  "src": "term:sync-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sync-signal",
+  "rel": "CARRIES",
+  "src": "term:sync-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sync-clock",
+  "rel": "UNDER_TAG",
+  "src": "term:sync-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:signal",
+  "rel": "BROADER",
+  "src": "term:sync-signal",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencer",
+  "rel": "SYNCHRONIZES",
+  "src": "term:sync-signal",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sync-clock",
+  "rel": "UNDER_TAG",
+  "src": "term:sync-signal",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:controller",
+  "rel": "BROADER",
+  "src": "term:tap-tempo",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tempo",
+  "rel": "CONTROLS",
+  "src": "term:tap-tempo",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sync-clock",
+  "rel": "UNDER_TAG",
+  "src": "term:tap-tempo",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:tempo",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sync-clock",
+  "rel": "UNDER_TAG",
+  "src": "term:tempo",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step-attribute",
+  "rel": "BROADER",
+  "src": "term:tie",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:tie",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:effect",
+  "rel": "BROADER",
+  "src": "term:time-effect",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:effects",
+  "rel": "UNDER_TAG",
+  "src": "term:time-effect",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mod-effect",
+  "rel": "BROADER",
+  "src": "term:tremolo",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:effects",
+  "rel": "UNDER_TAG",
+  "src": "term:tremolo",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "rel": "BROADER",
+  "src": "term:triangle",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:triangle",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencing",
+  "rel": "BROADER",
+  "src": "term:trig",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "rel": "CLOSE_MATCH",
+  "src": "term:trig",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:trig",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step-attribute",
+  "rel": "BROADER",
+  "src": "term:trig-condition",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sequencer",
+  "rel": "UNDER_TAG",
+  "src": "term:trig-condition",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:cv-port",
+  "rel": "BROADER",
+  "src": "term:trig-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:cv-gate",
+  "rel": "UNDER_TAG",
+  "src": "term:trig-out",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:control-voltage",
+  "rel": "BROADER",
+  "src": "term:trigger",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:cv-gate",
+  "rel": "UNDER_TAG",
+  "src": "term:trigger",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:connector",
+  "rel": "BROADER",
+  "src": "term:trs",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:audio-io",
+  "rel": "UNDER_TAG",
+  "src": "term:trs",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bypass",
+  "rel": "BROADER",
+  "src": "term:true-bypass",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:effects",
+  "rel": "UNDER_TAG",
+  "src": "term:true-bypass",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:connector",
+  "rel": "BROADER",
+  "src": "term:ts",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:audio-io",
+  "rel": "UNDER_TAG",
+  "src": "term:ts",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:port",
+  "rel": "BROADER",
+  "src": "term:usb-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-signal",
+  "rel": "CARRIES",
+  "src": "term:usb-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "rel": "CARRIES",
+  "src": "term:usb-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:usb",
+  "rel": "UNDER_TAG",
+  "src": "term:usb-port",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:amplifier",
+  "rel": "BROADER",
+  "src": "term:vca",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:vca",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "rel": "BROADER",
+  "src": "term:vcf",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:vcf",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:oscillator",
+  "rel": "BROADER",
+  "src": "term:vco",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:vco",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:velocity",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:midi",
+  "rel": "UNDER_TAG",
+  "src": "term:velocity",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:parameter",
+  "rel": "BROADER",
+  "src": "term:waveform",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:sound-design",
+  "rel": "UNDER_TAG",
+  "src": "term:waveform",
+  "visibility": "public"
+ },
+ {
+  "dst": "term:connector",
+  "rel": "BROADER",
+  "src": "term:xlr",
+  "visibility": "public"
+ },
+ {
+  "dst": "tag:audio-io",
+  "rel": "UNDER_TAG",
+  "src": "term:xlr",
   "visibility": "public"
  }
 ]

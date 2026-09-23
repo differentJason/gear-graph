@@ -1,0 +1,269 @@
+# Terminology: a concept scheme (TAXONOMY) plus typed relations between concepts (ONTOLOGY), over the vocabulary the
+# ingested manuals actually use. Hand-curated, like VOCAB.yaml; tools/build_terms.py checks it and counts every label
+# in the converted manual sections (counts only, never text) into graph/public/terms.json.
+#
+# Model (SKOS-shaped, kept small):
+#   concept   one idea, whatever the manufacturer calls it. `pref` is the label used here; `alt` are labels that mean
+#             EXACTLY the same thing (exactMatch within this scheme): "emphasis" is the resonance control, full stop.
+#   broader   the taxonomy: "VCF" is a kind of filter. A concept may have two parents (polyhierarchy: MIDI clock is both
+#             a MIDI message and a sync signal). Every chain must end at one facet.
+#   close     a near-synonym that is NOT the same concept, so it is kept separate and linked: an Elektron "trig" is an
+#             event placed ON a step, not the step itself; "BPM" is the unit of tempo, not tempo.
+#   facet     a top concept that doubles as a CLASS for the ontology: every concept belongs to exactly one facet.
+#   grouping  a node that organises the tree but is not itself a manual term ("envelope stage"); not required to occur.
+#   tag       the VOCAB.yaml tag this concept sits under, which places the flat tag list inside the taxonomy.
+#
+# Relations are typed and each predicate has a domain and range of facets, which build_terms.py enforces: "carries"
+# only runs from a port to a signal, so "filter carries MIDI" is rejected as a modelling error, not stored.
+#
+# Label matching: case-insensitive, whole words, a trailing s/es allowed, hyphen or space interchangeable. The longest
+# label wins where labels overlap ("sub oscillator" is not also counted as "oscillator"; "gate length" is not "gate").
+# Labels in `homographs` are counted but assigned to no concept, because the manuals use them for two different ideas.
+# A two-letter abbreviation (EG, CC) is not counted when written all-lowercase ('eg' is usually a table fragment).
+# `stop_phrases` are feature names that contain a label word but are not that concept; matched first, never counted.
+
+facets:
+  signal:     {pref: signal,              note: "What travels on a cable or bus."}
+  port:       {pref: port,                note: "A physical jack or connector, and the connector types."}
+  block:      {pref: synthesis block,     note: "A sound-generating or sound-shaping building block."}
+  parameter:  {pref: parameter,           note: "A settable value that belongs to a block, effect or sequencer."}
+  effect:     {pref: effect,              note: "A processor applied to an audio signal."}
+  sequencing: {pref: sequencing,          note: "The step sequencer and what it arranges in time."}
+  memory:     {pref: stored unit,         note: "Something saved and recalled: presets, kits, projects."}
+  controller: {pref: performance control, note: "A physical control a player uses to generate data or change a value."}
+
+predicates:
+  has_parameter: {label: has parameter, domain: [block, effect, sequencing, signal], range: [parameter]}
+  modulates:     {label: modulates,     domain: [block],                               range: [parameter]}
+  carries:       {label: carries,       domain: [port],                                range: [signal]}
+  generates:     {label: generates,     domain: [block, controller, sequencing],       range: [signal]}
+  synchronizes:  {label: synchronizes,  domain: [signal],                              range: [sequencing, parameter]}
+  contains:      {label: contains,      domain: [memory, sequencing],                  range: [memory, sequencing]}
+  controls:      {label: controls,      domain: [controller],                          range: [parameter, block]}
+  selects:       {label: selects,       domain: [signal],                              range: [memory, sequencing]}
+  sets:          {label: sets,          domain: [sequencing],                          range: [parameter]}
+
+concepts:
+  # ---------------------------------------------------------------- signal
+  - {id: audio-signal,    pref: audio signal,     broader: [signal], tag: audio-io}
+  - {id: midi-message,    pref: MIDI message,     alt: [MIDI data], broader: [signal], tag: midi}
+  - {id: note-message,    pref: note on,          alt: [note off], broader: [midi-message], tag: midi,
+     note: "Note on and note off are one concept here: the pair that starts and ends a note."}
+  - {id: control-change,  pref: control change,   alt: [CC], broader: [midi-message], tag: midi}
+  - {id: nrpn,            pref: NRPN,             broader: [midi-message], tag: midi}
+  - {id: program-change,  pref: program change,   broader: [midi-message], tag: midi}
+  - {id: pitch-bend,      pref: pitch bend,       broader: [midi-message], tag: midi}
+  - {id: aftertouch,      pref: aftertouch,       broader: [midi-message], tag: midi}
+  - {id: sync-signal,     pref: sync,             broader: [signal], tag: sync-clock}
+  - {id: midi-clock,      pref: MIDI clock,       broader: [midi-message, sync-signal], tag: sync-clock,
+     note: "Polyhierarchy: a MIDI message by format, a sync signal by purpose."}
+  - {id: din-sync,        pref: DIN sync,         broader: [sync-signal], tag: sync-clock}
+  - {id: clock-pulse,     pref: clock,            alt: [clock pulse], broader: [sync-signal], tag: sync-clock,
+     note: "An analogue pulse clock (the RD-9's SYNC OUT, Eurorack clocks)."}
+  - {id: control-voltage, pref: control voltage,  alt: [CV], broader: [signal], tag: cv-gate}
+  - {id: pitch-cv,        pref: pitch CV,         alt: [V/oct, 1V/oct], broader: [control-voltage], tag: cv-gate}
+  - {id: trigger,         pref: trigger,          broader: [control-voltage], tag: cv-gate,
+     note: "A short pulse. Also the generic word for 'start' in some manuals, so the count is an upper bound."}
+
+  # ---------------------------------------------------------------- port
+  - {id: midi-port,       pref: MIDI port,        grouping: true, broader: [port], tag: midi}
+  - {id: midi-in,         pref: MIDI IN,          broader: [midi-port], tag: midi}
+  - {id: midi-out,        pref: MIDI OUT,         broader: [midi-port], tag: midi}
+  - {id: midi-thru,       pref: MIDI THRU,        alt: [thru], broader: [midi-port], tag: midi}
+  - {id: sync-port,       pref: sync port,        grouping: true, broader: [port], tag: sync-clock}
+  - {id: sync-out,        pref: sync out,         alt: [clock out, clock output], broader: [sync-port], tag: sync-clock}
+  - {id: sync-in,         pref: sync in,          alt: [clock in, clock input], broader: [sync-port], tag: sync-clock}
+  - {id: cv-port,         pref: CV port,          grouping: true, broader: [port], tag: cv-gate}
+  - {id: cv-out,          pref: CV output,        alt: [CV out], broader: [cv-port], tag: cv-gate}
+  - {id: cv-in,           pref: CV input,         alt: [CV in], broader: [cv-port], tag: cv-gate}
+  - {id: gate-out,        pref: gate output,      alt: [gate out], broader: [cv-port], tag: cv-gate}
+  - {id: trig-out,        pref: trig out,         broader: [cv-port], tag: cv-gate}
+  - {id: audio-port,      pref: audio port,       grouping: true, broader: [port], tag: audio-io}
+  - {id: main-out,        pref: main out,         alt: [main output], broader: [audio-port], tag: audio-io}
+  - {id: headphone-out,   pref: headphone,        alt: [phones, headphone output], broader: [audio-port], tag: audio-io}
+  - {id: line-out,        pref: line out,         alt: [line output], broader: [audio-port], tag: audio-io}
+  - {id: audio-in,        pref: audio input,      alt: [audio in, line in, line input], broader: [audio-port], tag: audio-io}
+  - {id: usb-port,        pref: USB,              broader: [port], tag: usb}
+  - {id: connector,       pref: connector type,   grouping: true, broader: [port], tag: audio-io}
+  - {id: trs,             pref: TRS,              broader: [connector], tag: audio-io}
+  - {id: ts,              pref: TS,               broader: [connector], tag: audio-io}
+  - {id: xlr,             pref: XLR,              broader: [connector], tag: audio-io}
+  - {id: din-5,           pref: 5-pin DIN,        broader: [connector], tag: midi}
+
+  # ---------------------------------------------------------------- block
+  - {id: oscillator,      pref: oscillator,       alt: [osc], broader: [block], tag: sound-design}
+  - {id: vco,             pref: VCO,              broader: [oscillator], tag: sound-design,
+     note: "A voltage-controlled oscillator: a KIND of oscillator (narrower), not a synonym. Same for VCF and VCA."}
+  - {id: sub-oscillator,  pref: sub oscillator,   alt: [sub osc], broader: [oscillator], tag: sound-design}
+  - {id: filter,          pref: filter,           broader: [block], tag: sound-design}
+  - {id: vcf,             pref: VCF,              broader: [filter], tag: sound-design}
+  - {id: low-pass,        pref: low-pass,         alt: [lowpass, LPF], broader: [filter], tag: sound-design}
+  - {id: high-pass,       pref: high-pass,        alt: [highpass, HPF], broader: [filter], tag: sound-design}
+  - {id: band-pass,       pref: band-pass,        broader: [filter], tag: sound-design}
+  - {id: amplifier,       pref: amplifier,        broader: [block], tag: sound-design}
+  - {id: vca,             pref: VCA,              broader: [amplifier], tag: sound-design}
+  - {id: modulation-source, pref: modulation source, grouping: true, broader: [block], tag: sound-design}
+  - {id: envelope,        pref: envelope,         alt: [EG, envelope generator], broader: [modulation-source], tag: sound-design}
+  - {id: adsr,            pref: ADSR,             broader: [envelope], tag: sound-design}
+  - {id: lfo,             pref: LFO,              alt: [low frequency oscillator], broader: [modulation-source, oscillator], tag: sound-design,
+     note: "Polyhierarchy: an oscillator by construction, a modulation source by use."}
+
+  # ---------------------------------------------------------------- parameter
+  - {id: cutoff,          pref: cutoff,           broader: [parameter], tag: sound-design}
+  - {id: resonance,       pref: resonance,        alt: [emphasis], broader: [parameter], tag: sound-design,
+     note: "'Emphasis' is the Roland-lineage name for the same control."}
+  - {id: keytrack,        pref: keytrack,         alt: [key track], broader: [parameter], tag: sound-design}
+  - {id: waveform,        pref: waveform,         alt: [wave], broader: [parameter], tag: sound-design}
+  - {id: sawtooth,        pref: sawtooth,         alt: [saw], broader: [waveform], tag: sound-design}
+  - {id: square,          pref: square,           broader: [waveform], tag: sound-design}
+  - {id: triangle,        pref: triangle,         broader: [waveform], tag: sound-design}
+  - {id: sine,            pref: sine,             broader: [waveform], tag: sound-design}
+  - {id: pulse-width,     pref: pulse width,      broader: [parameter], tag: sound-design}
+  - {id: detune,          pref: detune,           broader: [parameter], tag: sound-design}
+  - {id: envelope-stage,  pref: envelope stage,   grouping: true, broader: [parameter], tag: sound-design}
+  - {id: attack,          pref: attack,           broader: [envelope-stage], tag: sound-design}
+  - {id: decay,           pref: decay,            broader: [envelope-stage], tag: sound-design}
+  - {id: sustain,         pref: sustain,          broader: [envelope-stage], tag: sound-design}
+  - {id: release,         pref: release,          broader: [envelope-stage], tag: sound-design,
+     note: "Also 'firmware release' and 'release the key' in some manuals, so the count is an upper bound."}
+  - {id: glide,           pref: glide,            alt: [portamento], broader: [parameter], tag: sound-design}
+  - {id: velocity,        pref: velocity,         broader: [parameter], tag: midi}
+  - {id: tempo,           pref: tempo,            broader: [parameter], tag: sync-clock}
+  - {id: bpm,             pref: BPM,              broader: [parameter], tag: sync-clock, close: [tempo],
+     note: "The unit tempo is expressed in; close to tempo, not the same."}
+  - {id: swing,           pref: swing,            alt: [shuffle], broader: [parameter], tag: sequencer}
+  - {id: gate-length,     pref: gate length,      alt: [gate time], broader: [parameter], tag: sequencer,
+     note: "How long a step's note is held. Not the gate SIGNAL: see the 'gate' homograph."}
+  - {id: bypass,          pref: bypass,           broader: [parameter], tag: effects}
+  - {id: true-bypass,     pref: true bypass,      broader: [bypass], tag: effects}
+  - {id: delay-time,      pref: delay time,       broader: [parameter], tag: effects}
+  - {id: feedback,        pref: feedback,         broader: [parameter], tag: effects}
+
+  # ---------------------------------------------------------------- effect
+  - {id: time-effect,     pref: time-based effect, grouping: true, broader: [effect], tag: effects}
+  - {id: delay,           pref: delay,            broader: [time-effect], tag: effects}
+  - {id: reverb,          pref: reverb,           broader: [time-effect], tag: effects}
+  - {id: mod-effect,      pref: modulation effect, grouping: true, broader: [effect], tag: effects}
+  - {id: chorus,          pref: chorus,           broader: [mod-effect], tag: effects}
+  - {id: tremolo,         pref: tremolo,          broader: [mod-effect], tag: effects}
+  - {id: distortion,      pref: distortion,       broader: [effect], tag: effects}
+  - {id: overdrive,       pref: overdrive,        broader: [distortion], tag: effects}
+  - {id: compressor,      pref: compressor,       broader: [effect], tag: effects}
+
+  # ---------------------------------------------------------------- sequencing
+  - {id: sequencer,       pref: sequencer,        broader: [sequencing], tag: sequencer}
+  - {id: arpeggiator,     pref: arpeggiator,      alt: [arp], broader: [sequencer], tag: sequencer}
+  - {id: pattern,         pref: pattern,          broader: [sequencing], tag: sequencer}
+  - {id: step,            pref: step,             broader: [sequencing], tag: sequencer}
+  - {id: trig,            pref: trig,             broader: [sequencing], tag: sequencer, close: [step],
+     note: "Elektron's word for an event placed on a step. Other manuals say 'step' for both the slot and its note."}
+  - {id: song,            pref: song,             broader: [sequencing], tag: sequencer}
+  - {id: chain,           pref: chain,            broader: [sequencing], tag: sequencer}
+  - {id: step-attribute,  pref: step attribute,   grouping: true, broader: [sequencing], tag: sequencer}
+  - {id: accent,          pref: accent,           broader: [step-attribute], tag: sequencer}
+  - {id: slide,           pref: slide,            broader: [step-attribute], tag: sequencer, close: [glide],
+     note: "A step flag that switches glide on into the next note: close to glide, but it lives in the sequencer."}
+  - {id: tie,             pref: tie,              broader: [step-attribute], tag: sequencer}
+  - {id: probability,     pref: probability,      broader: [step-attribute], tag: sequencer, close: [trig-condition]}
+  - {id: trig-condition,  pref: trig condition,   alt: [conditional trig], broader: [step-attribute], tag: sequencer}
+  - {id: micro-timing,    pref: micro timing,     broader: [step-attribute], tag: sequencer}
+  - {id: parameter-lock,  pref: parameter lock,   broader: [step-attribute], tag: sequencer, close: [automation]}
+  - {id: automation,      pref: automation,       broader: [sequencing], tag: sequencer}
+  - {id: note-repeat,     pref: note repeat,      grouping: true, broader: [step-attribute], tag: sequencer,
+     note: "Four manufacturers' words for repeating a hit inside one step; each is kept as its own concept because
+            they differ in detail, and linked as close matches."}
+  - {id: ratchet,         pref: ratchet,          broader: [note-repeat], tag: sequencer, close: [retrig, roll]}
+  - {id: retrig,          pref: retrig,           alt: [retrigger], broader: [note-repeat], tag: sequencer, close: [roll]}
+  - {id: roll,            pref: roll,             broader: [note-repeat], tag: sequencer}
+  - {id: flam,            pref: flam,             broader: [note-repeat], tag: sequencer}
+  - {id: mute,            pref: mute,             broader: [sequencing], tag: sequencer}
+  - {id: fill,            pref: fill,             broader: [sequencing], tag: sequencer}
+
+  # ---------------------------------------------------------------- memory
+  - {id: project,         pref: project,          broader: [memory], tag: presets-patterns}
+  - {id: bank,            pref: bank,             broader: [memory], tag: presets-patterns}
+  - {id: preset,          pref: preset,           broader: [memory], tag: presets-patterns}
+  - {id: kit,             pref: kit,              broader: [memory], tag: presets-patterns}
+  - {id: sample,          pref: sample,           broader: [memory], tag: presets-patterns}
+
+  # ---------------------------------------------------------------- controller
+  - {id: keyboard,        pref: keyboard,         broader: [controller], tag: controls-overview}
+  - {id: mod-wheel,       pref: mod wheel,        alt: [modulation wheel], broader: [controller], tag: controls-overview}
+  - {id: expression-pedal, pref: expression pedal, broader: [controller], tag: cv-gate}
+  - {id: footswitch,      pref: footswitch,       alt: [foot switch], broader: [controller], tag: controls-overview}
+  - {id: tap-tempo,       pref: tap tempo,        broader: [controller], tag: sync-clock}
+
+relations:
+  # blocks and their parameters
+  - [oscillator, has_parameter, waveform]
+  - [oscillator, has_parameter, pulse-width]
+  - [oscillator, has_parameter, detune]
+  - [filter, has_parameter, cutoff]
+  - [filter, has_parameter, resonance]
+  - [filter, has_parameter, keytrack]
+  - [envelope, has_parameter, envelope-stage]
+  - [delay, has_parameter, delay-time]
+  - [delay, has_parameter, feedback]
+  - [effect, has_parameter, bypass]
+  - [sequencer, has_parameter, tempo]
+  - [sequencer, has_parameter, swing]
+  - [step, has_parameter, gate-length]
+  - [note-message, has_parameter, velocity]
+  # what modulates what
+  - [lfo, modulates, cutoff]
+  - [lfo, modulates, pulse-width]
+  - [envelope, modulates, cutoff]
+  # ports and the signals they carry
+  - [midi-port, carries, midi-message]
+  - [sync-port, carries, sync-signal]
+  - [cv-port, carries, control-voltage]
+  - [audio-port, carries, audio-signal]
+  - [usb-port, carries, midi-message]
+  - [usb-port, carries, audio-signal]
+  # sources of signals
+  - [oscillator, generates, audio-signal]
+  - [keyboard, generates, note-message]
+  - [keyboard, generates, aftertouch]
+  - [mod-wheel, generates, control-change]
+  - [sequencer, generates, note-message]
+  - [sequencer, generates, trigger]
+  - [arpeggiator, generates, note-message]
+  # timing
+  - [sync-signal, synchronizes, sequencer]
+  - [midi-clock, has_parameter, tempo]
+  - [tap-tempo, controls, tempo]
+  - [expression-pedal, controls, parameter]
+  # containment of stored and sequenced units
+  - [project, contains, pattern]
+  - [project, contains, kit]
+  - [bank, contains, pattern]
+  - [bank, contains, preset]
+  - [song, contains, chain]
+  - [chain, contains, pattern]
+  - [pattern, contains, step]
+  - [step, contains, trig]
+  - [kit, contains, sample]
+  # recall and per-step settings
+  - [program-change, selects, pattern]
+  - [program-change, selects, preset]
+  - [parameter-lock, sets, parameter]
+  - [slide, sets, glide]
+  - [accent, sets, velocity]
+
+homographs:
+  - label: HP
+    senses: ["high-pass filter (the Elektron manuals' filter pages)", "horizontal pitch, the Eurorack panel width unit (this site's module specs)"]
+  - label: gate
+    senses: ["the gate SIGNAL (a CV that is high while a note is held)", "gate length/time: how long a sequencer step's note lasts"]
+  - label: patch
+    senses: ["a stored sound (a preset)", "a patch cable, or the act of wiring one"]
+  - label: sound
+    senses: ["Elektron: a stored set of one track's synth parameters (a preset)", "sound in the everyday sense"]
+  - label: pad
+    senses: ["a playing surface you strike (drum and trigger pads)", "an input attenuation switch on the audio interfaces (PAD)"]
+  - label: program
+    senses: ["a stored preset, as in 'program change'", "to program a sequence (the verb)"]
+
+stop_phrases:
+  - phrase: wave designer
+    reason: "The RD-9's transient-shaper section; its name contains 'wave' but it is not a waveform."

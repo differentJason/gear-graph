@@ -933,10 +933,82 @@
  },
  {
   "doc_type": "user-manual",
+  "id": "manual:akai-rhythm-wolf-manual",
+  "name": "Rhythm Wolf User Guide",
+  "type": "manual",
+  "version": "v1.3",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:akai-timbre-wolf-manual",
+  "name": "Timbre Wolf User Guide",
+  "type": "manual",
+  "version": "v1.1",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:arturia-keystep-manual",
+  "name": "KeyStep User Manual",
+  "type": "manual",
+  "version": "1.1.2",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:behringer-digital-delay-manual",
+  "name": "Digital Delay DD400 Manual",
+  "type": "manual",
+  "version": "undated",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:behringer-gdi21-manual",
+  "name": "V-TONE Guitar Driver DI GDI21 User Manual",
+  "type": "manual",
+  "version": "P0295_M_EN",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:behringer-hell-babe-manual",
+  "name": "Hell-Babe HB01 Manual",
+  "type": "manual",
+  "version": "undated",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "quick-start",
+  "id": "manual:behringer-k2-quick-start",
+  "name": "K-2 Quick Start Guide",
+  "type": "manual",
+  "version": "dated 2019-05-24",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
   "id": "manual:behringer-rd-9-manual",
   "name": "RD-9 Rhythm Designer User Manual",
   "type": "manual",
   "version": "V 1.0",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:behringer-ultra-tremolo-manual",
+  "name": "Ultra Tremolo UT300 Manual",
+  "type": "manual",
+  "version": "undated",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "quick-start",
+  "id": "manual:behringer-umc1820-quick-start",
+  "name": "U-PHORIA UMC1820 Quick Start Guide",
+  "type": "manual",
+  "version": "QSG WW rev.1",
   "visibility": "public"
  },
  {
@@ -957,10 +1029,82 @@
  },
  {
   "doc_type": "user-manual",
+  "id": "manual:dreadbox-typhon-manual",
+  "name": "Typhon User's Manual",
+  "type": "manual",
+  "version": "2026 edition",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:earthquaker-bit-commander-manual",
+  "name": "Bit Commander Manual (EU R2)",
+  "type": "manual",
+  "version": "R2 (EQDBIT2-EU-R2)",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:electro-harmonix-modrex-manual",
+  "name": "Mod Rex Polyrhythmic Modulator Manual",
+  "type": "manual",
+  "version": "undated",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
   "id": "manual:elektron-analog-four-mkii-manual",
   "name": "Analog Four MKII User Manual",
   "type": "manual",
   "version": "OS 1.55",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:elektron-digitakt-mk1-manual",
+  "name": "Digitakt User Manual",
+  "type": "manual",
+  "version": "OS1.53",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:korg-sq-64-manual",
+  "name": "SQ-64 Owner's Manual",
+  "type": "manual",
+  "version": "undated",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:midi-thru5-manual",
+  "name": "MIDI Thru5 WC User Manual",
+  "type": "manual",
+  "version": "V07 (2024-02)",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:roland-kc-150",
+  "name": "KC-150 Owner's Manual",
+  "type": "manual",
+  "version": "e04",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:sonicware-liven-texture-lab-manual",
+  "name": "Liven Texture Lab User's Manual",
+  "type": "manual",
+  "version": "LVN-050-UM-01-EN",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:yamaha-hs4-manual",
+  "name": "HS4/HS3 Owner's Manual",
+  "type": "manual",
+  "version": "rev B1",
   "visibility": "public"
  },
  {
@@ -3050,6 +3194,1056 @@
   "id": "tag:usb",
   "name": "usb",
   "type": "tag",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:accent",
+  "name": "accent",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "block",
+  "id": "term:adsr",
+  "name": "ADSR",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "signal",
+  "id": "term:aftertouch",
+  "name": "aftertouch",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "block",
+  "id": "term:amplifier",
+  "name": "amplifier",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "arp",
+  "facet": "sequencing",
+  "id": "term:arpeggiator",
+  "name": "arpeggiator",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:attack",
+  "name": "attack",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "audio in; line in; line input",
+  "facet": "port",
+  "id": "term:audio-in",
+  "name": "audio input",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "port",
+  "id": "term:audio-port",
+  "name": "audio port",
+  "role": "grouping",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "signal",
+  "id": "term:audio-signal",
+  "name": "audio signal",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:automation",
+  "name": "automation",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "block",
+  "id": "term:band-pass",
+  "name": "band-pass",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "memory",
+  "id": "term:bank",
+  "name": "bank",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "block",
+  "id": "term:block",
+  "name": "synthesis block",
+  "role": "facet",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:bpm",
+  "name": "BPM",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:bypass",
+  "name": "bypass",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:chain",
+  "name": "chain",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "effect",
+  "id": "term:chorus",
+  "name": "chorus",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "clock pulse",
+  "facet": "signal",
+  "id": "term:clock-pulse",
+  "name": "clock",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "effect",
+  "id": "term:compressor",
+  "name": "compressor",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "port",
+  "id": "term:connector",
+  "name": "connector type",
+  "role": "grouping",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "CC",
+  "facet": "signal",
+  "id": "term:control-change",
+  "name": "control change",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "CV",
+  "facet": "signal",
+  "id": "term:control-voltage",
+  "name": "control voltage",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "controller",
+  "id": "term:controller",
+  "name": "performance control",
+  "role": "facet",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:cutoff",
+  "name": "cutoff",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "CV in",
+  "facet": "port",
+  "id": "term:cv-in",
+  "name": "CV input",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "CV out",
+  "facet": "port",
+  "id": "term:cv-out",
+  "name": "CV output",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "port",
+  "id": "term:cv-port",
+  "name": "CV port",
+  "role": "grouping",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:decay",
+  "name": "decay",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "effect",
+  "id": "term:delay",
+  "name": "delay",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:delay-time",
+  "name": "delay time",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:detune",
+  "name": "detune",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "port",
+  "id": "term:din-5",
+  "name": "5-pin DIN",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "signal",
+  "id": "term:din-sync",
+  "name": "DIN sync",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "effect",
+  "id": "term:distortion",
+  "name": "distortion",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "effect",
+  "id": "term:effect",
+  "name": "effect",
+  "role": "facet",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "EG; envelope generator",
+  "facet": "block",
+  "id": "term:envelope",
+  "name": "envelope",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:envelope-stage",
+  "name": "envelope stage",
+  "role": "grouping",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "controller",
+  "id": "term:expression-pedal",
+  "name": "expression pedal",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:feedback",
+  "name": "feedback",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:fill",
+  "name": "fill",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "block",
+  "id": "term:filter",
+  "name": "filter",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:flam",
+  "name": "flam",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "foot switch",
+  "facet": "controller",
+  "id": "term:footswitch",
+  "name": "footswitch",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "gate time",
+  "facet": "parameter",
+  "id": "term:gate-length",
+  "name": "gate length",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "gate out",
+  "facet": "port",
+  "id": "term:gate-out",
+  "name": "gate output",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "portamento",
+  "facet": "parameter",
+  "id": "term:glide",
+  "name": "glide",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "phones; headphone output",
+  "facet": "port",
+  "id": "term:headphone-out",
+  "name": "headphone",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "highpass; HPF",
+  "facet": "block",
+  "id": "term:high-pass",
+  "name": "high-pass",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "controller",
+  "id": "term:keyboard",
+  "name": "keyboard",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "key track",
+  "facet": "parameter",
+  "id": "term:keytrack",
+  "name": "keytrack",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "memory",
+  "id": "term:kit",
+  "name": "kit",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "low frequency oscillator",
+  "facet": "block",
+  "id": "term:lfo",
+  "name": "LFO",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "line output",
+  "facet": "port",
+  "id": "term:line-out",
+  "name": "line out",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "lowpass; LPF",
+  "facet": "block",
+  "id": "term:low-pass",
+  "name": "low-pass",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "main output",
+  "facet": "port",
+  "id": "term:main-out",
+  "name": "main out",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "memory",
+  "id": "term:memory",
+  "name": "stored unit",
+  "role": "facet",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:micro-timing",
+  "name": "micro timing",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "signal",
+  "id": "term:midi-clock",
+  "name": "MIDI clock",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "port",
+  "id": "term:midi-in",
+  "name": "MIDI IN",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "MIDI data",
+  "facet": "signal",
+  "id": "term:midi-message",
+  "name": "MIDI message",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "port",
+  "id": "term:midi-out",
+  "name": "MIDI OUT",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "port",
+  "id": "term:midi-port",
+  "name": "MIDI port",
+  "role": "grouping",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "thru",
+  "facet": "port",
+  "id": "term:midi-thru",
+  "name": "MIDI THRU",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "effect",
+  "id": "term:mod-effect",
+  "name": "modulation effect",
+  "role": "grouping",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "modulation wheel",
+  "facet": "controller",
+  "id": "term:mod-wheel",
+  "name": "mod wheel",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "block",
+  "id": "term:modulation-source",
+  "name": "modulation source",
+  "role": "grouping",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:mute",
+  "name": "mute",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "note off",
+  "facet": "signal",
+  "id": "term:note-message",
+  "name": "note on",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:note-repeat",
+  "name": "note repeat",
+  "role": "grouping",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "signal",
+  "id": "term:nrpn",
+  "name": "NRPN",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "osc",
+  "facet": "block",
+  "id": "term:oscillator",
+  "name": "oscillator",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "effect",
+  "id": "term:overdrive",
+  "name": "overdrive",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:parameter",
+  "name": "parameter",
+  "role": "facet",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:parameter-lock",
+  "name": "parameter lock",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:pattern",
+  "name": "pattern",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "signal",
+  "id": "term:pitch-bend",
+  "name": "pitch bend",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "V/oct; 1V/oct",
+  "facet": "signal",
+  "id": "term:pitch-cv",
+  "name": "pitch CV",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "port",
+  "id": "term:port",
+  "name": "port",
+  "role": "facet",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "memory",
+  "id": "term:preset",
+  "name": "preset",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:probability",
+  "name": "probability",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "signal",
+  "id": "term:program-change",
+  "name": "program change",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "memory",
+  "id": "term:project",
+  "name": "project",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:pulse-width",
+  "name": "pulse width",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:ratchet",
+  "name": "ratchet",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:release",
+  "name": "release",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "emphasis",
+  "facet": "parameter",
+  "id": "term:resonance",
+  "name": "resonance",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "retrigger",
+  "facet": "sequencing",
+  "id": "term:retrig",
+  "name": "retrig",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "effect",
+  "id": "term:reverb",
+  "name": "reverb",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:roll",
+  "name": "roll",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "memory",
+  "id": "term:sample",
+  "name": "sample",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "saw",
+  "facet": "parameter",
+  "id": "term:sawtooth",
+  "name": "sawtooth",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:sequencer",
+  "name": "sequencer",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:sequencing",
+  "name": "sequencing",
+  "role": "facet",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "signal",
+  "id": "term:signal",
+  "name": "signal",
+  "role": "facet",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:sine",
+  "name": "sine",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:slide",
+  "name": "slide",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:song",
+  "name": "song",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:square",
+  "name": "square",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:step",
+  "name": "step",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:step-attribute",
+  "name": "step attribute",
+  "role": "grouping",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "sub osc",
+  "facet": "block",
+  "id": "term:sub-oscillator",
+  "name": "sub oscillator",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:sustain",
+  "name": "sustain",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "shuffle",
+  "facet": "parameter",
+  "id": "term:swing",
+  "name": "swing",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "clock in; clock input",
+  "facet": "port",
+  "id": "term:sync-in",
+  "name": "sync in",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "clock out; clock output",
+  "facet": "port",
+  "id": "term:sync-out",
+  "name": "sync out",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "port",
+  "id": "term:sync-port",
+  "name": "sync port",
+  "role": "grouping",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "signal",
+  "id": "term:sync-signal",
+  "name": "sync",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "controller",
+  "id": "term:tap-tempo",
+  "name": "tap tempo",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:tempo",
+  "name": "tempo",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:tie",
+  "name": "tie",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "effect",
+  "id": "term:time-effect",
+  "name": "time-based effect",
+  "role": "grouping",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "effect",
+  "id": "term:tremolo",
+  "name": "tremolo",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:triangle",
+  "name": "triangle",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "sequencing",
+  "id": "term:trig",
+  "name": "trig",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "conditional trig",
+  "facet": "sequencing",
+  "id": "term:trig-condition",
+  "name": "trig condition",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "port",
+  "id": "term:trig-out",
+  "name": "trig out",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "signal",
+  "id": "term:trigger",
+  "name": "trigger",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "port",
+  "id": "term:trs",
+  "name": "TRS",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:true-bypass",
+  "name": "true bypass",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "port",
+  "id": "term:ts",
+  "name": "TS",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "port",
+  "id": "term:usb-port",
+  "name": "USB",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "block",
+  "id": "term:vca",
+  "name": "VCA",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "block",
+  "id": "term:vcf",
+  "name": "VCF",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "block",
+  "id": "term:vco",
+  "name": "VCO",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "parameter",
+  "id": "term:velocity",
+  "name": "velocity",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "alt": "wave",
+  "facet": "parameter",
+  "id": "term:waveform",
+  "name": "waveform",
+  "role": "concept",
+  "type": "term",
+  "visibility": "public"
+ },
+ {
+  "facet": "port",
+  "id": "term:xlr",
+  "name": "XLR",
+  "role": "concept",
+  "type": "term",
   "visibility": "public"
  }
 ]

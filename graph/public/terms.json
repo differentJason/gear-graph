@@ -1,0 +1,3537 @@
+{
+ "generated_by": "tools/build_terms.py",
+ "terms_sha256": "d4a7e798eb5577167500b8b8b50422b9abdee17e6d0a2ea02286b79f3fc4d907",
+ "corpus": {
+  "manuals": 24,
+  "sections": 743,
+  "manufacturers": 13,
+  "manual_manufacturer": {
+   "akai-apc20-quick-start": "Akai Professional",
+   "akai-mpk-mini-mk3-quick-start": "Akai Professional",
+   "akai-rhythm-wolf-manual": "Akai Professional",
+   "akai-timbre-wolf-manual": "Akai Professional",
+   "arturia-keystep-manual": "Arturia",
+   "behringer-digital-delay-manual": "Behringer",
+   "behringer-gdi21-manual": "Behringer",
+   "behringer-hell-babe-manual": "Behringer",
+   "behringer-k2-quick-start": "Behringer",
+   "behringer-rd-9-manual": "Behringer",
+   "behringer-ultra-tremolo-manual": "Behringer",
+   "behringer-umc1820-quick-start": "Behringer",
+   "behringer-umc404hd-quick-start": "Behringer",
+   "donner-b1-manual": "Donner",
+   "dreadbox-typhon-manual": "Dreadbox",
+   "earthquaker-bit-commander-manual": "EarthQuaker Devices",
+   "electro-harmonix-modrex-manual": "Electro-Harmonix",
+   "elektron-analog-four-mkii-manual": "Elektron",
+   "elektron-digitakt-mk1-manual": "Elektron",
+   "korg-sq-64-manual": "Korg",
+   "midi-thru5-manual": "CME",
+   "roland-kc-150": "Roland",
+   "sonicware-liven-texture-lab-manual": "Sonicware",
+   "yamaha-hs4-manual": "Yamaha"
+  }
+ },
+ "facets": [
+  {
+   "id": "signal",
+   "pref": "signal",
+   "note": "What travels on a cable or bus."
+  },
+  {
+   "id": "port",
+   "pref": "port",
+   "note": "A physical jack or connector, and the connector types."
+  },
+  {
+   "id": "block",
+   "pref": "synthesis block",
+   "note": "A sound-generating or sound-shaping building block."
+  },
+  {
+   "id": "parameter",
+   "pref": "parameter",
+   "note": "A settable value that belongs to a block, effect or sequencer."
+  },
+  {
+   "id": "effect",
+   "pref": "effect",
+   "note": "A processor applied to an audio signal."
+  },
+  {
+   "id": "sequencing",
+   "pref": "sequencing",
+   "note": "The step sequencer and what it arranges in time."
+  },
+  {
+   "id": "memory",
+   "pref": "stored unit",
+   "note": "Something saved and recalled: presets, kits, projects."
+  },
+  {
+   "id": "controller",
+   "pref": "performance control",
+   "note": "A physical control a player uses to generate data or change a value."
+  }
+ ],
+ "predicates": [
+  {
+   "id": "has_parameter",
+   "label": "has parameter",
+   "domain": [
+    "block",
+    "effect",
+    "sequencing",
+    "signal"
+   ],
+   "range": [
+    "parameter"
+   ]
+  },
+  {
+   "id": "modulates",
+   "label": "modulates",
+   "domain": [
+    "block"
+   ],
+   "range": [
+    "parameter"
+   ]
+  },
+  {
+   "id": "carries",
+   "label": "carries",
+   "domain": [
+    "port"
+   ],
+   "range": [
+    "signal"
+   ]
+  },
+  {
+   "id": "generates",
+   "label": "generates",
+   "domain": [
+    "block",
+    "controller",
+    "sequencing"
+   ],
+   "range": [
+    "signal"
+   ]
+  },
+  {
+   "id": "synchronizes",
+   "label": "synchronizes",
+   "domain": [
+    "signal"
+   ],
+   "range": [
+    "sequencing",
+    "parameter"
+   ]
+  },
+  {
+   "id": "contains",
+   "label": "contains",
+   "domain": [
+    "memory",
+    "sequencing"
+   ],
+   "range": [
+    "memory",
+    "sequencing"
+   ]
+  },
+  {
+   "id": "controls",
+   "label": "controls",
+   "domain": [
+    "controller"
+   ],
+   "range": [
+    "parameter",
+    "block"
+   ]
+  },
+  {
+   "id": "selects",
+   "label": "selects",
+   "domain": [
+    "signal"
+   ],
+   "range": [
+    "memory",
+    "sequencing"
+   ]
+  },
+  {
+   "id": "sets",
+   "label": "sets",
+   "domain": [
+    "sequencing"
+   ],
+   "range": [
+    "parameter"
+   ]
+  }
+ ],
+ "concepts": [
+  {
+   "id": "audio-signal",
+   "pref": "audio signal",
+   "alt": [],
+   "broader": [
+    "signal"
+   ],
+   "close": [],
+   "facet": "signal",
+   "tag": "audio-io",
+   "grouping": false,
+   "labels": {
+    "audio signal": {
+     "akai-timbre-wolf-manual": 1,
+     "behringer-k2-quick-start": 2,
+     "behringer-rd-9-manual": 1,
+     "behringer-umc404hd-quick-start": 3,
+     "donner-b1-manual": 3,
+     "elektron-digitakt-mk1-manual": 4
+    }
+   }
+  },
+  {
+   "id": "midi-message",
+   "pref": "MIDI message",
+   "alt": [
+    "MIDI data"
+   ],
+   "broader": [
+    "signal"
+   ],
+   "close": [],
+   "facet": "signal",
+   "tag": "midi",
+   "grouping": false,
+   "labels": {
+    "MIDI message": {
+     "akai-rhythm-wolf-manual": 2,
+     "akai-timbre-wolf-manual": 5,
+     "arturia-keystep-manual": 3,
+     "behringer-k2-quick-start": 1,
+     "behringer-rd-9-manual": 2,
+     "donner-b1-manual": 6,
+     "dreadbox-typhon-manual": 1,
+     "electro-harmonix-modrex-manual": 2,
+     "elektron-analog-four-mkii-manual": 4,
+     "elektron-digitakt-mk1-manual": 3,
+     "korg-sq-64-manual": 23,
+     "midi-thru5-manual": 7
+    },
+    "MIDI data": {
+     "akai-apc20-quick-start": 1,
+     "arturia-keystep-manual": 4,
+     "behringer-k2-quick-start": 1,
+     "behringer-rd-9-manual": 2,
+     "donner-b1-manual": 1,
+     "electro-harmonix-modrex-manual": 2,
+     "elektron-analog-four-mkii-manual": 24,
+     "elektron-digitakt-mk1-manual": 31,
+     "midi-thru5-manual": 4,
+     "sonicware-liven-texture-lab-manual": 3
+    }
+   }
+  },
+  {
+   "id": "note-message",
+   "pref": "note on",
+   "alt": [
+    "note off"
+   ],
+   "broader": [
+    "midi-message"
+   ],
+   "close": [],
+   "facet": "signal",
+   "tag": "midi",
+   "grouping": false,
+   "note": "Note on and note off are one concept here: the pair that starts and ends a note.",
+   "labels": {
+    "note on": {
+     "akai-apc20-quick-start": 1,
+     "akai-mpk-mini-mk3-quick-start": 2,
+     "akai-timbre-wolf-manual": 1,
+     "arturia-keystep-manual": 6,
+     "behringer-k2-quick-start": 3,
+     "donner-b1-manual": 1,
+     "dreadbox-typhon-manual": 1,
+     "elektron-analog-four-mkii-manual": 10,
+     "elektron-digitakt-mk1-manual": 8,
+     "sonicware-liven-texture-lab-manual": 3
+    },
+    "note off": {
+     "akai-timbre-wolf-manual": 1,
+     "arturia-keystep-manual": 3,
+     "behringer-k2-quick-start": 2,
+     "elektron-analog-four-mkii-manual": 1,
+     "elektron-digitakt-mk1-manual": 11,
+     "sonicware-liven-texture-lab-manual": 1
+    }
+   }
+  },
+  {
+   "id": "control-change",
+   "pref": "control change",
+   "alt": [
+    "CC"
+   ],
+   "broader": [
+    "midi-message"
+   ],
+   "close": [],
+   "facet": "signal",
+   "tag": "midi",
+   "grouping": false,
+   "labels": {
+    "control change": {
+     "electro-harmonix-modrex-manual": 4,
+     "elektron-digitakt-mk1-manual": 2,
+     "korg-sq-64-manual": 1,
+     "sonicware-liven-texture-lab-manual": 4
+    },
+    "CC": {
+     "akai-mpk-mini-mk3-quick-start": 3,
+     "akai-timbre-wolf-manual": 1,
+     "arturia-keystep-manual": 23,
+     "dreadbox-typhon-manual": 15,
+     "electro-harmonix-modrex-manual": 2,
+     "elektron-analog-four-mkii-manual": 75,
+     "elektron-digitakt-mk1-manual": 69,
+     "korg-sq-64-manual": 2,
+     "sonicware-liven-texture-lab-manual": 1
+    }
+   }
+  },
+  {
+   "id": "nrpn",
+   "pref": "NRPN",
+   "alt": [],
+   "broader": [
+    "midi-message"
+   ],
+   "close": [],
+   "facet": "signal",
+   "tag": "midi",
+   "grouping": false,
+   "labels": {
+    "NRPN": {
+     "elektron-analog-four-mkii-manual": 73,
+     "elektron-digitakt-mk1-manual": 36
+    }
+   }
+  },
+  {
+   "id": "program-change",
+   "pref": "program change",
+   "alt": [],
+   "broader": [
+    "midi-message"
+   ],
+   "close": [],
+   "facet": "signal",
+   "tag": "midi",
+   "grouping": false,
+   "labels": {
+    "program change": {
+     "akai-mpk-mini-mk3-quick-start": 1,
+     "dreadbox-typhon-manual": 2,
+     "electro-harmonix-modrex-manual": 2,
+     "elektron-analog-four-mkii-manual": 11,
+     "elektron-digitakt-mk1-manual": 14,
+     "korg-sq-64-manual": 7,
+     "sonicware-liven-texture-lab-manual": 7
+    }
+   }
+  },
+  {
+   "id": "pitch-bend",
+   "pref": "pitch bend",
+   "alt": [],
+   "broader": [
+    "midi-message"
+   ],
+   "close": [],
+   "facet": "signal",
+   "tag": "midi",
+   "grouping": false,
+   "labels": {
+    "pitch bend": {
+     "akai-timbre-wolf-manual": 1,
+     "arturia-keystep-manual": 4,
+     "behringer-k2-quick-start": 1,
+     "dreadbox-typhon-manual": 1,
+     "elektron-analog-four-mkii-manual": 4,
+     "elektron-digitakt-mk1-manual": 4
+    }
+   }
+  },
+  {
+   "id": "aftertouch",
+   "pref": "aftertouch",
+   "alt": [],
+   "broader": [
+    "midi-message"
+   ],
+   "close": [],
+   "facet": "signal",
+   "tag": "midi",
+   "grouping": false,
+   "labels": {
+    "aftertouch": {
+     "arturia-keystep-manual": 11,
+     "dreadbox-typhon-manual": 6,
+     "elektron-analog-four-mkii-manual": 2,
+     "elektron-digitakt-mk1-manual": 6
+    }
+   }
+  },
+  {
+   "id": "sync-signal",
+   "pref": "sync",
+   "alt": [],
+   "broader": [
+    "signal"
+   ],
+   "close": [],
+   "facet": "signal",
+   "tag": "sync-clock",
+   "grouping": false,
+   "labels": {
+    "sync": {
+     "akai-apc20-quick-start": 1,
+     "akai-mpk-mini-mk3-quick-start": 1,
+     "akai-rhythm-wolf-manual": 4,
+     "akai-timbre-wolf-manual": 4,
+     "arturia-keystep-manual": 48,
+     "behringer-rd-9-manual": 26,
+     "donner-b1-manual": 11,
+     "dreadbox-typhon-manual": 3,
+     "electro-harmonix-modrex-manual": 12,
+     "elektron-analog-four-mkii-manual": 44,
+     "elektron-digitakt-mk1-manual": 15,
+     "korg-sq-64-manual": 7,
+     "sonicware-liven-texture-lab-manual": 23
+    }
+   }
+  },
+  {
+   "id": "midi-clock",
+   "pref": "MIDI clock",
+   "alt": [],
+   "broader": [
+    "midi-message",
+    "sync-signal"
+   ],
+   "close": [],
+   "facet": "signal",
+   "tag": "sync-clock",
+   "grouping": false,
+   "note": "Polyhierarchy: a MIDI message by format, a sync signal by purpose.",
+   "labels": {
+    "MIDI clock": {
+     "akai-rhythm-wolf-manual": 1,
+     "akai-timbre-wolf-manual": 1,
+     "arturia-keystep-manual": 3,
+     "behringer-rd-9-manual": 1,
+     "dreadbox-typhon-manual": 1,
+     "electro-harmonix-modrex-manual": 7,
+     "elektron-analog-four-mkii-manual": 5,
+     "elektron-digitakt-mk1-manual": 3,
+     "midi-thru5-manual": 1,
+     "sonicware-liven-texture-lab-manual": 5
+    }
+   }
+  },
+  {
+   "id": "din-sync",
+   "pref": "DIN sync",
+   "alt": [],
+   "broader": [
+    "sync-signal"
+   ],
+   "close": [],
+   "facet": "signal",
+   "tag": "sync-clock",
+   "grouping": false,
+   "labels": {
+    "DIN sync": {
+     "arturia-keystep-manual": 4,
+     "elektron-analog-four-mkii-manual": 4,
+     "elektron-digitakt-mk1-manual": 4
+    }
+   }
+  },
+  {
+   "id": "clock-pulse",
+   "pref": "clock",
+   "alt": [
+    "clock pulse"
+   ],
+   "broader": [
+    "sync-signal"
+   ],
+   "close": [],
+   "facet": "signal",
+   "tag": "sync-clock",
+   "grouping": false,
+   "note": "An analogue pulse clock (the RD-9's SYNC OUT, Eurorack clocks).",
+   "labels": {
+    "clock": {
+     "akai-rhythm-wolf-manual": 2,
+     "akai-timbre-wolf-manual": 2,
+     "arturia-keystep-manual": 35,
+     "behringer-k2-quick-start": 1,
+     "behringer-rd-9-manual": 23,
+     "donner-b1-manual": 19,
+     "dreadbox-typhon-manual": 6,
+     "electro-harmonix-modrex-manual": 9,
+     "elektron-analog-four-mkii-manual": 13,
+     "elektron-digitakt-mk1-manual": 3,
+     "korg-sq-64-manual": 3,
+     "midi-thru5-manual": 1,
+     "sonicware-liven-texture-lab-manual": 37,
+     "yamaha-hs4-manual": 1
+    },
+    "clock pulse": {
+     "arturia-keystep-manual": 3,
+     "electro-harmonix-modrex-manual": 1
+    }
+   }
+  },
+  {
+   "id": "control-voltage",
+   "pref": "control voltage",
+   "alt": [
+    "CV"
+   ],
+   "broader": [
+    "signal"
+   ],
+   "close": [],
+   "facet": "signal",
+   "tag": "cv-gate",
+   "grouping": false,
+   "labels": {
+    "control voltage": {
+     "arturia-keystep-manual": 6,
+     "behringer-k2-quick-start": 1,
+     "behringer-rd-9-manual": 1,
+     "electro-harmonix-modrex-manual": 1,
+     "elektron-analog-four-mkii-manual": 2
+    },
+    "CV": {
+     "arturia-keystep-manual": 41,
+     "behringer-k2-quick-start": 3,
+     "behringer-rd-9-manual": 1,
+     "donner-b1-manual": 1,
+     "dreadbox-typhon-manual": 10,
+     "elektron-analog-four-mkii-manual": 173,
+     "elektron-digitakt-mk1-manual": 4,
+     "korg-sq-64-manual": 15
+    }
+   }
+  },
+  {
+   "id": "pitch-cv",
+   "pref": "pitch CV",
+   "alt": [
+    "V/oct",
+    "1V/oct"
+   ],
+   "broader": [
+    "control-voltage"
+   ],
+   "close": [],
+   "facet": "signal",
+   "tag": "cv-gate",
+   "grouping": false,
+   "labels": {
+    "pitch CV": {
+     "arturia-keystep-manual": 4,
+     "elektron-analog-four-mkii-manual": 4,
+     "korg-sq-64-manual": 5
+    },
+    "V/oct": {
+     "elektron-analog-four-mkii-manual": 8
+    },
+    "1V/oct": {
+     "korg-sq-64-manual": 1
+    }
+   }
+  },
+  {
+   "id": "trigger",
+   "pref": "trigger",
+   "alt": [],
+   "broader": [
+    "control-voltage"
+   ],
+   "close": [],
+   "facet": "signal",
+   "tag": "cv-gate",
+   "grouping": false,
+   "note": "A short pulse. Also the generic word for 'start' in some manuals, so the count is an upper bound.",
+   "labels": {
+    "trigger": {
+     "akai-apc20-quick-start": 1,
+     "akai-mpk-mini-mk3-quick-start": 1,
+     "akai-rhythm-wolf-manual": 3,
+     "akai-timbre-wolf-manual": 4,
+     "arturia-keystep-manual": 13,
+     "behringer-k2-quick-start": 15,
+     "behringer-rd-9-manual": 44,
+     "donner-b1-manual": 11,
+     "dreadbox-typhon-manual": 4,
+     "elektron-analog-four-mkii-manual": 4,
+     "elektron-digitakt-mk1-manual": 8,
+     "korg-sq-64-manual": 2
+    }
+   }
+  },
+  {
+   "id": "midi-port",
+   "pref": "MIDI port",
+   "alt": [],
+   "broader": [
+    "port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "midi",
+   "grouping": true,
+   "labels": {
+    "MIDI port": {
+     "akai-apc20-quick-start": 1,
+     "arturia-keystep-manual": 1,
+     "behringer-rd-9-manual": 1,
+     "behringer-umc404hd-quick-start": 1,
+     "elektron-analog-four-mkii-manual": 6,
+     "elektron-digitakt-mk1-manual": 6
+    }
+   }
+  },
+  {
+   "id": "midi-in",
+   "pref": "MIDI IN",
+   "alt": [],
+   "broader": [
+    "midi-port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "midi",
+   "grouping": false,
+   "labels": {
+    "MIDI IN": {
+     "akai-rhythm-wolf-manual": 4,
+     "akai-timbre-wolf-manual": 8,
+     "arturia-keystep-manual": 1,
+     "behringer-k2-quick-start": 8,
+     "behringer-rd-9-manual": 14,
+     "behringer-umc404hd-quick-start": 2,
+     "donner-b1-manual": 12,
+     "electro-harmonix-modrex-manual": 3,
+     "elektron-analog-four-mkii-manual": 13,
+     "elektron-digitakt-mk1-manual": 15,
+     "korg-sq-64-manual": 7,
+     "midi-thru5-manual": 8,
+     "sonicware-liven-texture-lab-manual": 6
+    }
+   }
+  },
+  {
+   "id": "midi-out",
+   "pref": "MIDI OUT",
+   "alt": [],
+   "broader": [
+    "midi-port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "midi",
+   "grouping": false,
+   "labels": {
+    "MIDI OUT": {
+     "akai-rhythm-wolf-manual": 11,
+     "akai-timbre-wolf-manual": 7,
+     "behringer-k2-quick-start": 4,
+     "behringer-rd-9-manual": 9,
+     "donner-b1-manual": 8,
+     "electro-harmonix-modrex-manual": 1,
+     "elektron-analog-four-mkii-manual": 13,
+     "elektron-digitakt-mk1-manual": 15,
+     "korg-sq-64-manual": 2,
+     "midi-thru5-manual": 2,
+     "sonicware-liven-texture-lab-manual": 8
+    }
+   }
+  },
+  {
+   "id": "midi-thru",
+   "pref": "MIDI THRU",
+   "alt": [
+    "thru"
+   ],
+   "broader": [
+    "midi-port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "midi",
+   "grouping": false,
+   "labels": {
+    "MIDI THRU": {
+     "akai-timbre-wolf-manual": 3,
+     "arturia-keystep-manual": 3,
+     "behringer-k2-quick-start": 4,
+     "behringer-rd-9-manual": 3,
+     "elektron-analog-four-mkii-manual": 3,
+     "elektron-digitakt-mk1-manual": 4,
+     "korg-sq-64-manual": 3,
+     "midi-thru5-manual": 12
+    },
+    "thru": {
+     "akai-rhythm-wolf-manual": 11,
+     "behringer-k2-quick-start": 1,
+     "behringer-rd-9-manual": 6,
+     "elektron-analog-four-mkii-manual": 2,
+     "elektron-digitakt-mk1-manual": 2,
+     "midi-thru5-manual": 2
+    }
+   }
+  },
+  {
+   "id": "sync-port",
+   "pref": "sync port",
+   "alt": [],
+   "broader": [
+    "port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "sync-clock",
+   "grouping": true,
+   "labels": {
+    "sync port": {}
+   }
+  },
+  {
+   "id": "sync-out",
+   "pref": "sync out",
+   "alt": [
+    "clock out",
+    "clock output"
+   ],
+   "broader": [
+    "sync-port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "sync-clock",
+   "grouping": false,
+   "labels": {
+    "sync out": {
+     "behringer-rd-9-manual": 1,
+     "donner-b1-manual": 10,
+     "korg-sq-64-manual": 2,
+     "sonicware-liven-texture-lab-manual": 4
+    },
+    "clock out": {
+     "behringer-rd-9-manual": 1
+    },
+    "clock output": {
+     "arturia-keystep-manual": 2
+    }
+   }
+  },
+  {
+   "id": "sync-in",
+   "pref": "sync in",
+   "alt": [
+    "clock in",
+    "clock input"
+   ],
+   "broader": [
+    "sync-port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "sync-clock",
+   "grouping": false,
+   "labels": {
+    "sync in": {
+     "arturia-keystep-manual": 3,
+     "behringer-rd-9-manual": 4,
+     "donner-b1-manual": 15,
+     "elektron-digitakt-mk1-manual": 1,
+     "korg-sq-64-manual": 7,
+     "sonicware-liven-texture-lab-manual": 8
+    },
+    "clock in": {
+     "arturia-keystep-manual": 2,
+     "behringer-k2-quick-start": 1,
+     "behringer-rd-9-manual": 2
+    },
+    "clock input": {
+     "arturia-keystep-manual": 1,
+     "behringer-k2-quick-start": 1,
+     "behringer-rd-9-manual": 2
+    }
+   }
+  },
+  {
+   "id": "cv-port",
+   "pref": "CV port",
+   "alt": [],
+   "broader": [
+    "port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "cv-gate",
+   "grouping": true,
+   "labels": {
+    "CV port": {}
+   }
+  },
+  {
+   "id": "cv-out",
+   "pref": "CV output",
+   "alt": [
+    "CV out"
+   ],
+   "broader": [
+    "cv-port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "cv-gate",
+   "grouping": false,
+   "labels": {
+    "CV output": {
+     "arturia-keystep-manual": 3,
+     "behringer-k2-quick-start": 2,
+     "elektron-analog-four-mkii-manual": 5,
+     "korg-sq-64-manual": 4
+    },
+    "CV out": {
+     "arturia-keystep-manual": 1,
+     "behringer-k2-quick-start": 3,
+     "elektron-analog-four-mkii-manual": 1
+    }
+   }
+  },
+  {
+   "id": "cv-in",
+   "pref": "CV input",
+   "alt": [
+    "CV in"
+   ],
+   "broader": [
+    "cv-port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "cv-gate",
+   "grouping": false,
+   "labels": {
+    "CV input": {
+     "behringer-k2-quick-start": 2,
+     "elektron-analog-four-mkii-manual": 3
+    },
+    "CV in": {
+     "behringer-k2-quick-start": 4,
+     "elektron-analog-four-mkii-manual": 3,
+     "korg-sq-64-manual": 1
+    }
+   }
+  },
+  {
+   "id": "gate-out",
+   "pref": "gate output",
+   "alt": [
+    "gate out"
+   ],
+   "broader": [
+    "cv-port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "cv-gate",
+   "grouping": false,
+   "labels": {
+    "gate output": {
+     "arturia-keystep-manual": 6,
+     "elektron-analog-four-mkii-manual": 12,
+     "korg-sq-64-manual": 10
+    },
+    "gate out": {
+     "akai-timbre-wolf-manual": 1
+    }
+   }
+  },
+  {
+   "id": "trig-out",
+   "pref": "trig out",
+   "alt": [],
+   "broader": [
+    "cv-port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "cv-gate",
+   "grouping": false,
+   "labels": {
+    "trig out": {
+     "akai-rhythm-wolf-manual": 3,
+     "akai-timbre-wolf-manual": 3,
+     "behringer-k2-quick-start": 2,
+     "korg-sq-64-manual": 1
+    }
+   }
+  },
+  {
+   "id": "audio-port",
+   "pref": "audio port",
+   "alt": [],
+   "broader": [
+    "port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "audio-io",
+   "grouping": true,
+   "labels": {
+    "audio port": {}
+   }
+  },
+  {
+   "id": "main-out",
+   "pref": "main out",
+   "alt": [
+    "main output"
+   ],
+   "broader": [
+    "audio-port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "audio-io",
+   "grouping": false,
+   "labels": {
+    "main out": {
+     "akai-rhythm-wolf-manual": 6,
+     "akai-timbre-wolf-manual": 5,
+     "behringer-umc404hd-quick-start": 7,
+     "donner-b1-manual": 2,
+     "elektron-analog-four-mkii-manual": 10,
+     "elektron-digitakt-mk1-manual": 10
+    },
+    "main output": {
+     "behringer-rd-9-manual": 3,
+     "behringer-umc1820-quick-start": 2,
+     "elektron-analog-four-mkii-manual": 10,
+     "elektron-digitakt-mk1-manual": 2
+    }
+   }
+  },
+  {
+   "id": "headphone-out",
+   "pref": "headphone",
+   "alt": [
+    "phones",
+    "headphone output"
+   ],
+   "broader": [
+    "audio-port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "audio-io",
+   "grouping": false,
+   "labels": {
+    "headphone": {
+     "akai-rhythm-wolf-manual": 1,
+     "akai-timbre-wolf-manual": 1,
+     "arturia-keystep-manual": 1,
+     "behringer-k2-quick-start": 6,
+     "behringer-rd-9-manual": 4,
+     "behringer-umc1820-quick-start": 1,
+     "behringer-umc404hd-quick-start": 5,
+     "donner-b1-manual": 3,
+     "dreadbox-typhon-manual": 1,
+     "elektron-analog-four-mkii-manual": 5,
+     "elektron-digitakt-mk1-manual": 7,
+     "roland-kc-150": 11,
+     "sonicware-liven-texture-lab-manual": 8,
+     "yamaha-hs4-manual": 12
+    },
+    "phones": {
+     "akai-timbre-wolf-manual": 5,
+     "behringer-k2-quick-start": 1,
+     "behringer-rd-9-manual": 4,
+     "behringer-umc404hd-quick-start": 7,
+     "donner-b1-manual": 1,
+     "elektron-analog-four-mkii-manual": 2,
+     "elektron-digitakt-mk1-manual": 1,
+     "midi-thru5-manual": 1,
+     "roland-kc-150": 5
+    },
+    "headphone output": {
+     "behringer-umc1820-quick-start": 2,
+     "donner-b1-manual": 1
+    }
+   }
+  },
+  {
+   "id": "line-out",
+   "pref": "line out",
+   "alt": [
+    "line output"
+   ],
+   "broader": [
+    "audio-port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "audio-io",
+   "grouping": false,
+   "labels": {
+    "line out": {
+     "behringer-umc404hd-quick-start": 9,
+     "roland-kc-150": 10,
+     "sonicware-liven-texture-lab-manual": 2,
+     "yamaha-hs4-manual": 1
+    },
+    "line output": {
+     "behringer-umc1820-quick-start": 2,
+     "donner-b1-manual": 1,
+     "roland-kc-150": 1
+    }
+   }
+  },
+  {
+   "id": "audio-in",
+   "pref": "audio input",
+   "alt": [
+    "audio in",
+    "line in",
+    "line input"
+   ],
+   "broader": [
+    "audio-port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "audio-io",
+   "grouping": false,
+   "labels": {
+    "audio input": {
+     "behringer-rd-9-manual": 2,
+     "dreadbox-typhon-manual": 2,
+     "elektron-analog-four-mkii-manual": 8,
+     "elektron-digitakt-mk1-manual": 16,
+     "yamaha-hs4-manual": 1
+    },
+    "audio in": {
+     "dreadbox-typhon-manual": 1,
+     "elektron-analog-four-mkii-manual": 1,
+     "elektron-digitakt-mk1-manual": 1
+    },
+    "line in": {
+     "sonicware-liven-texture-lab-manual": 10
+    },
+    "line input": {
+     "sonicware-liven-texture-lab-manual": 4
+    }
+   }
+  },
+  {
+   "id": "usb-port",
+   "pref": "USB",
+   "alt": [],
+   "broader": [
+    "port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "usb",
+   "grouping": false,
+   "labels": {
+    "USB": {
+     "akai-apc20-quick-start": 4,
+     "akai-mpk-mini-mk3-quick-start": 9,
+     "akai-rhythm-wolf-manual": 8,
+     "akai-timbre-wolf-manual": 8,
+     "arturia-keystep-manual": 24,
+     "behringer-k2-quick-start": 7,
+     "behringer-rd-9-manual": 40,
+     "behringer-umc1820-quick-start": 1,
+     "behringer-umc404hd-quick-start": 6,
+     "donner-b1-manual": 33,
+     "dreadbox-typhon-manual": 16,
+     "elektron-analog-four-mkii-manual": 61,
+     "elektron-digitakt-mk1-manual": 70,
+     "korg-sq-64-manual": 39,
+     "midi-thru5-manual": 22,
+     "yamaha-hs4-manual": 2
+    }
+   }
+  },
+  {
+   "id": "connector",
+   "pref": "connector type",
+   "alt": [],
+   "broader": [
+    "port"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "audio-io",
+   "grouping": true,
+   "labels": {
+    "connector type": {
+     "arturia-keystep-manual": 1
+    }
+   }
+  },
+  {
+   "id": "trs",
+   "pref": "TRS",
+   "alt": [],
+   "broader": [
+    "connector"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "audio-io",
+   "grouping": false,
+   "labels": {
+    "TRS": {
+     "akai-rhythm-wolf-manual": 2,
+     "akai-timbre-wolf-manual": 2,
+     "arturia-keystep-manual": 3,
+     "behringer-k2-quick-start": 2,
+     "behringer-rd-9-manual": 7,
+     "behringer-umc1820-quick-start": 4,
+     "behringer-umc404hd-quick-start": 11,
+     "donner-b1-manual": 2,
+     "electro-harmonix-modrex-manual": 5,
+     "elektron-analog-four-mkii-manual": 1,
+     "korg-sq-64-manual": 4,
+     "roland-kc-150": 1,
+     "yamaha-hs4-manual": 8
+    }
+   }
+  },
+  {
+   "id": "ts",
+   "pref": "TS",
+   "alt": [],
+   "broader": [
+    "connector"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "audio-io",
+   "grouping": false,
+   "labels": {
+    "TS": {
+     "akai-mpk-mini-mk3-quick-start": 2,
+     "akai-rhythm-wolf-manual": 4,
+     "akai-timbre-wolf-manual": 4,
+     "arturia-keystep-manual": 2,
+     "behringer-digital-delay-manual": 5,
+     "behringer-gdi21-manual": 4,
+     "behringer-hell-babe-manual": 6,
+     "behringer-k2-quick-start": 7,
+     "behringer-rd-9-manual": 1,
+     "behringer-ultra-tremolo-manual": 4,
+     "donner-b1-manual": 3,
+     "korg-sq-64-manual": 7
+    }
+   }
+  },
+  {
+   "id": "xlr",
+   "pref": "XLR",
+   "alt": [],
+   "broader": [
+    "connector"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "audio-io",
+   "grouping": false,
+   "labels": {
+    "XLR": {
+     "behringer-gdi21-manual": 2,
+     "behringer-umc1820-quick-start": 1,
+     "behringer-umc404hd-quick-start": 6,
+     "roland-kc-150": 4,
+     "yamaha-hs4-manual": 11
+    }
+   }
+  },
+  {
+   "id": "din-5",
+   "pref": "5-pin DIN",
+   "alt": [],
+   "broader": [
+    "connector"
+   ],
+   "close": [],
+   "facet": "port",
+   "tag": "midi",
+   "grouping": false,
+   "labels": {
+    "5-pin DIN": {
+     "behringer-k2-quick-start": 3,
+     "behringer-rd-9-manual": 2,
+     "behringer-umc1820-quick-start": 1,
+     "behringer-umc404hd-quick-start": 1,
+     "donner-b1-manual": 1,
+     "midi-thru5-manual": 1
+    }
+   }
+  },
+  {
+   "id": "oscillator",
+   "pref": "oscillator",
+   "alt": [
+    "osc"
+   ],
+   "broader": [
+    "block"
+   ],
+   "close": [],
+   "facet": "block",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "oscillator": {
+     "arturia-keystep-manual": 1,
+     "behringer-k2-quick-start": 8,
+     "behringer-rd-9-manual": 4,
+     "donner-b1-manual": 3,
+     "dreadbox-typhon-manual": 7,
+     "earthquaker-bit-commander-manual": 1,
+     "elektron-analog-four-mkii-manual": 120
+    },
+    "osc": {
+     "elektron-analog-four-mkii-manual": 5
+    }
+   }
+  },
+  {
+   "id": "vco",
+   "pref": "VCO",
+   "alt": [],
+   "broader": [
+    "oscillator"
+   ],
+   "close": [],
+   "facet": "block",
+   "tag": "sound-design",
+   "grouping": false,
+   "note": "A voltage-controlled oscillator: a KIND of oscillator (narrower), not a synonym. Same for VCF and VCA.",
+   "labels": {
+    "VCO": {
+     "arturia-keystep-manual": 1,
+     "behringer-k2-quick-start": 50,
+     "dreadbox-typhon-manual": 15
+    }
+   }
+  },
+  {
+   "id": "sub-oscillator",
+   "pref": "sub oscillator",
+   "alt": [
+    "sub osc"
+   ],
+   "broader": [
+    "oscillator"
+   ],
+   "close": [],
+   "facet": "block",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "sub oscillator": {
+     "elektron-analog-four-mkii-manual": 28
+    },
+    "sub osc": {
+     "elektron-analog-four-mkii-manual": 4
+    }
+   }
+  },
+  {
+   "id": "filter",
+   "pref": "filter",
+   "alt": [],
+   "broader": [
+    "block"
+   ],
+   "close": [],
+   "facet": "block",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "filter": {
+     "akai-rhythm-wolf-manual": 9,
+     "akai-timbre-wolf-manual": 6,
+     "arturia-keystep-manual": 4,
+     "behringer-hell-babe-manual": 3,
+     "behringer-k2-quick-start": 29,
+     "behringer-rd-9-manual": 110,
+     "donner-b1-manual": 1,
+     "dreadbox-typhon-manual": 37,
+     "earthquaker-bit-commander-manual": 2,
+     "electro-harmonix-modrex-manual": 41,
+     "elektron-analog-four-mkii-manual": 144,
+     "elektron-digitakt-mk1-manual": 86,
+     "roland-kc-150": 2,
+     "sonicware-liven-texture-lab-manual": 14
+    }
+   }
+  },
+  {
+   "id": "vcf",
+   "pref": "VCF",
+   "alt": [],
+   "broader": [
+    "filter"
+   ],
+   "close": [],
+   "facet": "block",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "VCF": {
+     "arturia-keystep-manual": 1,
+     "behringer-k2-quick-start": 6,
+     "behringer-rd-9-manual": 1,
+     "donner-b1-manual": 3,
+     "dreadbox-typhon-manual": 9,
+     "elektron-analog-four-mkii-manual": 1
+    }
+   }
+  },
+  {
+   "id": "low-pass",
+   "pref": "low-pass",
+   "alt": [
+    "lowpass",
+    "LPF"
+   ],
+   "broader": [
+    "filter"
+   ],
+   "close": [],
+   "facet": "block",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "low-pass": {
+     "akai-rhythm-wolf-manual": 1,
+     "akai-timbre-wolf-manual": 2,
+     "behringer-k2-quick-start": 13,
+     "behringer-rd-9-manual": 3,
+     "donner-b1-manual": 2,
+     "dreadbox-typhon-manual": 5,
+     "electro-harmonix-modrex-manual": 3,
+     "elektron-analog-four-mkii-manual": 1,
+     "elektron-digitakt-mk1-manual": 5
+    },
+    "lowpass": {
+     "behringer-k2-quick-start": 3,
+     "elektron-analog-four-mkii-manual": 11,
+     "elektron-digitakt-mk1-manual": 5
+    },
+    "LPF": {
+     "behringer-rd-9-manual": 12,
+     "electro-harmonix-modrex-manual": 14,
+     "elektron-analog-four-mkii-manual": 3,
+     "elektron-digitakt-mk1-manual": 4,
+     "sonicware-liven-texture-lab-manual": 1
+    }
+   }
+  },
+  {
+   "id": "high-pass",
+   "pref": "high-pass",
+   "alt": [
+    "highpass",
+    "HPF"
+   ],
+   "broader": [
+    "filter"
+   ],
+   "close": [],
+   "facet": "block",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "high-pass": {
+     "behringer-k2-quick-start": 14,
+     "behringer-rd-9-manual": 2,
+     "dreadbox-typhon-manual": 6,
+     "electro-harmonix-modrex-manual": 2,
+     "elektron-digitakt-mk1-manual": 5,
+     "roland-kc-150": 1
+    },
+    "highpass": {
+     "behringer-k2-quick-start": 2,
+     "elektron-analog-four-mkii-manual": 11,
+     "elektron-digitakt-mk1-manual": 5
+    },
+    "HPF": {
+     "behringer-rd-9-manual": 18,
+     "dreadbox-typhon-manual": 1,
+     "electro-harmonix-modrex-manual": 7,
+     "elektron-analog-four-mkii-manual": 3,
+     "elektron-digitakt-mk1-manual": 4,
+     "sonicware-liven-texture-lab-manual": 1
+    }
+   }
+  },
+  {
+   "id": "band-pass",
+   "pref": "band-pass",
+   "alt": [],
+   "broader": [
+    "filter"
+   ],
+   "close": [],
+   "facet": "block",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "band-pass": {
+     "behringer-k2-quick-start": 2,
+     "electro-harmonix-modrex-manual": 2
+    }
+   }
+  },
+  {
+   "id": "amplifier",
+   "pref": "amplifier",
+   "alt": [],
+   "broader": [
+    "block"
+   ],
+   "close": [],
+   "facet": "block",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "amplifier": {
+     "akai-rhythm-wolf-manual": 2,
+     "akai-timbre-wolf-manual": 2,
+     "arturia-keystep-manual": 2,
+     "behringer-k2-quick-start": 2,
+     "behringer-rd-9-manual": 1,
+     "elektron-analog-four-mkii-manual": 5,
+     "elektron-digitakt-mk1-manual": 9,
+     "roland-kc-150": 4,
+     "yamaha-hs4-manual": 2
+    }
+   }
+  },
+  {
+   "id": "vca",
+   "pref": "VCA",
+   "alt": [],
+   "broader": [
+    "amplifier"
+   ],
+   "close": [],
+   "facet": "block",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "VCA": {
+     "arturia-keystep-manual": 2,
+     "behringer-k2-quick-start": 13,
+     "dreadbox-typhon-manual": 20,
+     "elektron-analog-four-mkii-manual": 2
+    }
+   }
+  },
+  {
+   "id": "modulation-source",
+   "pref": "modulation source",
+   "alt": [],
+   "broader": [
+    "block"
+   ],
+   "close": [],
+   "facet": "block",
+   "tag": "sound-design",
+   "grouping": true,
+   "labels": {
+    "modulation source": {
+     "arturia-keystep-manual": 4,
+     "behringer-k2-quick-start": 2,
+     "dreadbox-typhon-manual": 9,
+     "elektron-analog-four-mkii-manual": 1
+    }
+   }
+  },
+  {
+   "id": "envelope",
+   "pref": "envelope",
+   "alt": [
+    "EG",
+    "envelope generator"
+   ],
+   "broader": [
+    "modulation-source"
+   ],
+   "close": [],
+   "facet": "block",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "envelope": {
+     "akai-rhythm-wolf-manual": 8,
+     "akai-timbre-wolf-manual": 8,
+     "arturia-keystep-manual": 1,
+     "behringer-k2-quick-start": 17,
+     "behringer-rd-9-manual": 5,
+     "donner-b1-manual": 3,
+     "dreadbox-typhon-manual": 15,
+     "earthquaker-bit-commander-manual": 1,
+     "elektron-analog-four-mkii-manual": 128,
+     "elektron-digitakt-mk1-manual": 38,
+     "korg-sq-64-manual": 1
+    },
+    "EG": {
+     "behringer-k2-quick-start": 10,
+     "dreadbox-typhon-manual": 17,
+     "korg-sq-64-manual": 1,
+     "sonicware-liven-texture-lab-manual": 1
+    },
+    "envelope generator": {
+     "behringer-k2-quick-start": 20,
+     "dreadbox-typhon-manual": 1,
+     "sonicware-liven-texture-lab-manual": 2
+    }
+   }
+  },
+  {
+   "id": "adsr",
+   "pref": "ADSR",
+   "alt": [],
+   "broader": [
+    "envelope"
+   ],
+   "close": [],
+   "facet": "block",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "ADSR": {
+     "dreadbox-typhon-manual": 6
+    }
+   }
+  },
+  {
+   "id": "lfo",
+   "pref": "LFO",
+   "alt": [
+    "low frequency oscillator"
+   ],
+   "broader": [
+    "modulation-source",
+    "oscillator"
+   ],
+   "close": [],
+   "facet": "block",
+   "tag": "sound-design",
+   "grouping": false,
+   "note": "Polyhierarchy: an oscillator by construction, a modulation source by use.",
+   "labels": {
+    "LFO": {
+     "behringer-k2-quick-start": 2,
+     "behringer-rd-9-manual": 1,
+     "behringer-ultra-tremolo-manual": 1,
+     "dreadbox-typhon-manual": 13,
+     "electro-harmonix-modrex-manual": 21,
+     "elektron-analog-four-mkii-manual": 71,
+     "elektron-digitakt-mk1-manual": 87,
+     "sonicware-liven-texture-lab-manual": 6
+    },
+    "low frequency oscillator": {
+     "behringer-k2-quick-start": 1,
+     "dreadbox-typhon-manual": 1,
+     "elektron-digitakt-mk1-manual": 4
+    }
+   }
+  },
+  {
+   "id": "cutoff",
+   "pref": "cutoff",
+   "alt": [],
+   "broader": [
+    "parameter"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "cutoff": {
+     "akai-rhythm-wolf-manual": 3,
+     "akai-timbre-wolf-manual": 3,
+     "behringer-k2-quick-start": 35,
+     "behringer-rd-9-manual": 13,
+     "donner-b1-manual": 5,
+     "dreadbox-typhon-manual": 17,
+     "electro-harmonix-modrex-manual": 4,
+     "elektron-analog-four-mkii-manual": 31,
+     "elektron-digitakt-mk1-manual": 11,
+     "sonicware-liven-texture-lab-manual": 5
+    }
+   }
+  },
+  {
+   "id": "resonance",
+   "pref": "resonance",
+   "alt": [
+    "emphasis"
+   ],
+   "broader": [
+    "parameter"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": false,
+   "note": "'Emphasis' is the Roland-lineage name for the same control.",
+   "labels": {
+    "resonance": {
+     "akai-rhythm-wolf-manual": 1,
+     "akai-timbre-wolf-manual": 1,
+     "behringer-k2-quick-start": 2,
+     "behringer-rd-9-manual": 8,
+     "donner-b1-manual": 1,
+     "dreadbox-typhon-manual": 3,
+     "electro-harmonix-modrex-manual": 4,
+     "elektron-analog-four-mkii-manual": 40,
+     "elektron-digitakt-mk1-manual": 5,
+     "sonicware-liven-texture-lab-manual": 4
+    },
+    "emphasis": {
+     "behringer-k2-quick-start": 3,
+     "behringer-rd-9-manual": 3,
+     "donner-b1-manual": 1,
+     "electro-harmonix-modrex-manual": 1
+    }
+   }
+  },
+  {
+   "id": "keytrack",
+   "pref": "keytrack",
+   "alt": [
+    "key track"
+   ],
+   "broader": [
+    "parameter"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "keytrack": {
+     "dreadbox-typhon-manual": 1,
+     "elektron-analog-four-mkii-manual": 4
+    },
+    "key track": {
+     "dreadbox-typhon-manual": 5
+    }
+   }
+  },
+  {
+   "id": "waveform",
+   "pref": "waveform",
+   "alt": [
+    "wave"
+   ],
+   "broader": [
+    "parameter"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "waveform": {
+     "behringer-k2-quick-start": 16,
+     "behringer-rd-9-manual": 1,
+     "behringer-ultra-tremolo-manual": 1,
+     "dreadbox-typhon-manual": 8,
+     "elektron-analog-four-mkii-manual": 81,
+     "elektron-digitakt-mk1-manual": 21,
+     "sonicware-liven-texture-lab-manual": 6
+    },
+    "wave": {
+     "akai-rhythm-wolf-manual": 2,
+     "behringer-rd-9-manual": 5,
+     "behringer-ultra-tremolo-manual": 1,
+     "donner-b1-manual": 7,
+     "dreadbox-typhon-manual": 12,
+     "earthquaker-bit-commander-manual": 1,
+     "electro-harmonix-modrex-manual": 1,
+     "elektron-analog-four-mkii-manual": 12,
+     "elektron-digitakt-mk1-manual": 10,
+     "midi-thru5-manual": 1,
+     "sonicware-liven-texture-lab-manual": 22
+    }
+   }
+  },
+  {
+   "id": "sawtooth",
+   "pref": "sawtooth",
+   "alt": [
+    "saw"
+   ],
+   "broader": [
+    "waveform"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "sawtooth": {
+     "akai-rhythm-wolf-manual": 1,
+     "behringer-k2-quick-start": 13,
+     "electro-harmonix-modrex-manual": 7,
+     "elektron-analog-four-mkii-manual": 9,
+     "elektron-digitakt-mk1-manual": 2,
+     "sonicware-liven-texture-lab-manual": 2
+    },
+    "saw": {
+     "donner-b1-manual": 1,
+     "dreadbox-typhon-manual": 4,
+     "elektron-analog-four-mkii-manual": 1,
+     "sonicware-liven-texture-lab-manual": 2
+    }
+   }
+  },
+  {
+   "id": "square",
+   "pref": "square",
+   "alt": [],
+   "broader": [
+    "waveform"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "square": {
+     "akai-rhythm-wolf-manual": 1,
+     "arturia-keystep-manual": 1,
+     "behringer-k2-quick-start": 9,
+     "behringer-ultra-tremolo-manual": 1,
+     "donner-b1-manual": 1,
+     "dreadbox-typhon-manual": 1,
+     "earthquaker-bit-commander-manual": 1,
+     "electro-harmonix-modrex-manual": 2,
+     "elektron-analog-four-mkii-manual": 9,
+     "elektron-digitakt-mk1-manual": 4,
+     "sonicware-liven-texture-lab-manual": 1
+    }
+   }
+  },
+  {
+   "id": "triangle",
+   "pref": "triangle",
+   "alt": [],
+   "broader": [
+    "waveform"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "triangle": {
+     "behringer-k2-quick-start": 4,
+     "behringer-ultra-tremolo-manual": 1,
+     "dreadbox-typhon-manual": 3,
+     "electro-harmonix-modrex-manual": 3,
+     "elektron-analog-four-mkii-manual": 7,
+     "elektron-digitakt-mk1-manual": 2,
+     "roland-kc-150": 3,
+     "sonicware-liven-texture-lab-manual": 1,
+     "yamaha-hs4-manual": 2
+    }
+   }
+  },
+  {
+   "id": "sine",
+   "pref": "sine",
+   "alt": [],
+   "broader": [
+    "waveform"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "sine": {
+     "behringer-rd-9-manual": 1,
+     "elektron-analog-four-mkii-manual": 2,
+     "elektron-digitakt-mk1-manual": 2,
+     "sonicware-liven-texture-lab-manual": 2
+    }
+   }
+  },
+  {
+   "id": "pulse-width",
+   "pref": "pulse width",
+   "alt": [],
+   "broader": [
+    "parameter"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "pulse width": {
+     "behringer-k2-quick-start": 4,
+     "elektron-analog-four-mkii-manual": 5
+    }
+   }
+  },
+  {
+   "id": "detune",
+   "pref": "detune",
+   "alt": [],
+   "broader": [
+    "parameter"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "detune": {
+     "elektron-analog-four-mkii-manual": 10,
+     "sonicware-liven-texture-lab-manual": 1
+    }
+   }
+  },
+  {
+   "id": "envelope-stage",
+   "pref": "envelope stage",
+   "alt": [],
+   "broader": [
+    "parameter"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": true,
+   "labels": {
+    "envelope stage": {}
+   }
+  },
+  {
+   "id": "attack",
+   "pref": "attack",
+   "alt": [],
+   "broader": [
+    "envelope-stage"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "attack": {
+     "akai-rhythm-wolf-manual": 2,
+     "arturia-keystep-manual": 1,
+     "behringer-k2-quick-start": 10,
+     "behringer-rd-9-manual": 16,
+     "dreadbox-typhon-manual": 3,
+     "elektron-analog-four-mkii-manual": 25,
+     "elektron-digitakt-mk1-manual": 18,
+     "sonicware-liven-texture-lab-manual": 8
+    }
+   }
+  },
+  {
+   "id": "decay",
+   "pref": "decay",
+   "alt": [],
+   "broader": [
+    "envelope-stage"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "decay": {
+     "akai-rhythm-wolf-manual": 8,
+     "akai-timbre-wolf-manual": 1,
+     "behringer-k2-quick-start": 5,
+     "behringer-rd-9-manual": 16,
+     "donner-b1-manual": 2,
+     "dreadbox-typhon-manual": 5,
+     "elektron-analog-four-mkii-manual": 30,
+     "elektron-digitakt-mk1-manual": 18
+    }
+   }
+  },
+  {
+   "id": "sustain",
+   "pref": "sustain",
+   "alt": [],
+   "broader": [
+    "envelope-stage"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "sustain": {
+     "akai-mpk-mini-mk3-quick-start": 3,
+     "akai-rhythm-wolf-manual": 1,
+     "arturia-keystep-manual": 30,
+     "behringer-gdi21-manual": 1,
+     "behringer-k2-quick-start": 3,
+     "behringer-rd-9-manual": 14,
+     "dreadbox-typhon-manual": 4,
+     "earthquaker-bit-commander-manual": 1,
+     "elektron-analog-four-mkii-manual": 15,
+     "elektron-digitakt-mk1-manual": 4
+    }
+   }
+  },
+  {
+   "id": "release",
+   "pref": "release",
+   "alt": [],
+   "broader": [
+    "envelope-stage"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": false,
+   "note": "Also 'firmware release' and 'release the key' in some manuals, so the count is an upper bound.",
+   "labels": {
+    "release": {
+     "akai-rhythm-wolf-manual": 8,
+     "akai-timbre-wolf-manual": 12,
+     "arturia-keystep-manual": 15,
+     "behringer-digital-delay-manual": 1,
+     "behringer-k2-quick-start": 8,
+     "behringer-rd-9-manual": 4,
+     "donner-b1-manual": 2,
+     "dreadbox-typhon-manual": 4,
+     "electro-harmonix-modrex-manual": 11,
+     "elektron-analog-four-mkii-manual": 30,
+     "elektron-digitakt-mk1-manual": 19,
+     "korg-sq-64-manual": 3,
+     "midi-thru5-manual": 3,
+     "sonicware-liven-texture-lab-manual": 7
+    }
+   }
+  },
+  {
+   "id": "glide",
+   "pref": "glide",
+   "alt": [
+    "portamento"
+   ],
+   "broader": [
+    "parameter"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sound-design",
+   "grouping": false,
+   "labels": {
+    "glide": {
+     "akai-timbre-wolf-manual": 2,
+     "behringer-k2-quick-start": 1,
+     "dreadbox-typhon-manual": 4,
+     "elektron-analog-four-mkii-manual": 1,
+     "sonicware-liven-texture-lab-manual": 5
+    },
+    "portamento": {
+     "behringer-k2-quick-start": 3,
+     "dreadbox-typhon-manual": 1,
+     "elektron-analog-four-mkii-manual": 7
+    }
+   }
+  },
+  {
+   "id": "velocity",
+   "pref": "velocity",
+   "alt": [],
+   "broader": [
+    "parameter"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "midi",
+   "grouping": false,
+   "labels": {
+    "velocity": {
+     "akai-mpk-mini-mk3-quick-start": 5,
+     "akai-rhythm-wolf-manual": 13,
+     "akai-timbre-wolf-manual": 13,
+     "arturia-keystep-manual": 29,
+     "behringer-rd-9-manual": 2,
+     "donner-b1-manual": 6,
+     "dreadbox-typhon-manual": 14,
+     "elektron-analog-four-mkii-manual": 25,
+     "elektron-digitakt-mk1-manual": 23,
+     "korg-sq-64-manual": 1,
+     "sonicware-liven-texture-lab-manual": 4
+    }
+   }
+  },
+  {
+   "id": "tempo",
+   "pref": "tempo",
+   "alt": [],
+   "broader": [
+    "parameter"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sync-clock",
+   "grouping": false,
+   "labels": {
+    "tempo": {
+     "akai-mpk-mini-mk3-quick-start": 2,
+     "akai-rhythm-wolf-manual": 10,
+     "akai-timbre-wolf-manual": 23,
+     "arturia-keystep-manual": 33,
+     "behringer-digital-delay-manual": 6,
+     "behringer-rd-9-manual": 35,
+     "donner-b1-manual": 19,
+     "dreadbox-typhon-manual": 1,
+     "electro-harmonix-modrex-manual": 76,
+     "elektron-analog-four-mkii-manual": 48,
+     "elektron-digitakt-mk1-manual": 58,
+     "korg-sq-64-manual": 11,
+     "sonicware-liven-texture-lab-manual": 13
+    }
+   }
+  },
+  {
+   "id": "bpm",
+   "pref": "BPM",
+   "alt": [],
+   "broader": [
+    "parameter"
+   ],
+   "close": [
+    "tempo"
+   ],
+   "facet": "parameter",
+   "tag": "sync-clock",
+   "grouping": false,
+   "note": "The unit tempo is expressed in; close to tempo, not the same.",
+   "labels": {
+    "BPM": {
+     "akai-mpk-mini-mk3-quick-start": 1,
+     "akai-rhythm-wolf-manual": 1,
+     "akai-timbre-wolf-manual": 1,
+     "arturia-keystep-manual": 20,
+     "behringer-rd-9-manual": 7,
+     "donner-b1-manual": 2,
+     "dreadbox-typhon-manual": 25,
+     "electro-harmonix-modrex-manual": 7,
+     "elektron-analog-four-mkii-manual": 21,
+     "elektron-digitakt-mk1-manual": 24,
+     "sonicware-liven-texture-lab-manual": 23
+    }
+   }
+  },
+  {
+   "id": "swing",
+   "pref": "swing",
+   "alt": [
+    "shuffle"
+   ],
+   "broader": [
+    "parameter"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "swing": {
+     "akai-rhythm-wolf-manual": 4,
+     "akai-timbre-wolf-manual": 4,
+     "arturia-keystep-manual": 25,
+     "behringer-rd-9-manual": 29,
+     "dreadbox-typhon-manual": 3,
+     "elektron-analog-four-mkii-manual": 5,
+     "elektron-digitakt-mk1-manual": 12,
+     "korg-sq-64-manual": 8,
+     "sonicware-liven-texture-lab-manual": 3
+    },
+    "shuffle": {
+     "arturia-keystep-manual": 2,
+     "behringer-rd-9-manual": 2
+    }
+   }
+  },
+  {
+   "id": "gate-length",
+   "pref": "gate length",
+   "alt": [
+    "gate time"
+   ],
+   "broader": [
+    "parameter"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "sequencer",
+   "grouping": false,
+   "note": "How long a step's note is held. Not the gate SIGNAL: see the 'gate' homograph.",
+   "labels": {
+    "gate length": {
+     "arturia-keystep-manual": 4,
+     "donner-b1-manual": 47,
+     "dreadbox-typhon-manual": 1,
+     "elektron-analog-four-mkii-manual": 12
+    },
+    "gate time": {
+     "arturia-keystep-manual": 7,
+     "sonicware-liven-texture-lab-manual": 1
+    }
+   }
+  },
+  {
+   "id": "bypass",
+   "pref": "bypass",
+   "alt": [],
+   "broader": [
+    "parameter"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "effects",
+   "grouping": false,
+   "labels": {
+    "bypass": {
+     "behringer-gdi21-manual": 1,
+     "behringer-hell-babe-manual": 3,
+     "behringer-rd-9-manual": 1,
+     "electro-harmonix-modrex-manual": 8
+    }
+   }
+  },
+  {
+   "id": "true-bypass",
+   "pref": "true bypass",
+   "alt": [],
+   "broader": [
+    "bypass"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "effects",
+   "grouping": false,
+   "labels": {
+    "true bypass": {
+     "earthquaker-bit-commander-manual": 2
+    }
+   }
+  },
+  {
+   "id": "delay-time",
+   "pref": "delay time",
+   "alt": [],
+   "broader": [
+    "parameter"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "effects",
+   "grouping": false,
+   "labels": {
+    "delay time": {
+     "behringer-digital-delay-manual": 6,
+     "behringer-k2-quick-start": 2,
+     "donner-b1-manual": 2,
+     "dreadbox-typhon-manual": 7,
+     "elektron-analog-four-mkii-manual": 1,
+     "elektron-digitakt-mk1-manual": 4,
+     "sonicware-liven-texture-lab-manual": 1
+    }
+   }
+  },
+  {
+   "id": "feedback",
+   "pref": "feedback",
+   "alt": [],
+   "broader": [
+    "parameter"
+   ],
+   "close": [],
+   "facet": "parameter",
+   "tag": "effects",
+   "grouping": false,
+   "labels": {
+    "feedback": {
+     "behringer-digital-delay-manual": 2,
+     "donner-b1-manual": 4,
+     "dreadbox-typhon-manual": 9,
+     "electro-harmonix-modrex-manual": 6,
+     "elektron-analog-four-mkii-manual": 14,
+     "elektron-digitakt-mk1-manual": 3,
+     "sonicware-liven-texture-lab-manual": 3
+    }
+   }
+  },
+  {
+   "id": "time-effect",
+   "pref": "time-based effect",
+   "alt": [],
+   "broader": [
+    "effect"
+   ],
+   "close": [],
+   "facet": "effect",
+   "tag": "effects",
+   "grouping": true,
+   "labels": {
+    "time-based effect": {
+     "behringer-hell-babe-manual": 1
+    }
+   }
+  },
+  {
+   "id": "delay",
+   "pref": "delay",
+   "alt": [],
+   "broader": [
+    "time-effect"
+   ],
+   "close": [],
+   "facet": "effect",
+   "tag": "effects",
+   "grouping": false,
+   "labels": {
+    "delay": {
+     "behringer-digital-delay-manual": 11,
+     "behringer-rd-9-manual": 2,
+     "behringer-umc404hd-quick-start": 1,
+     "donner-b1-manual": 5,
+     "dreadbox-typhon-manual": 10,
+     "elektron-analog-four-mkii-manual": 43,
+     "elektron-digitakt-mk1-manual": 56,
+     "sonicware-liven-texture-lab-manual": 2
+    }
+   }
+  },
+  {
+   "id": "reverb",
+   "pref": "reverb",
+   "alt": [],
+   "broader": [
+    "time-effect"
+   ],
+   "close": [],
+   "facet": "effect",
+   "tag": "effects",
+   "grouping": false,
+   "labels": {
+    "reverb": {
+     "behringer-hell-babe-manual": 1,
+     "behringer-rd-9-manual": 3,
+     "dreadbox-typhon-manual": 16,
+     "elektron-analog-four-mkii-manual": 35,
+     "elektron-digitakt-mk1-manual": 45,
+     "sonicware-liven-texture-lab-manual": 18
+    }
+   }
+  },
+  {
+   "id": "mod-effect",
+   "pref": "modulation effect",
+   "alt": [],
+   "broader": [
+    "effect"
+   ],
+   "close": [],
+   "facet": "effect",
+   "tag": "effects",
+   "grouping": true,
+   "labels": {
+    "modulation effect": {
+     "electro-harmonix-modrex-manual": 2
+    }
+   }
+  },
+  {
+   "id": "chorus",
+   "pref": "chorus",
+   "alt": [],
+   "broader": [
+    "mod-effect"
+   ],
+   "close": [],
+   "facet": "effect",
+   "tag": "effects",
+   "grouping": false,
+   "labels": {
+    "chorus": {
+     "behringer-hell-babe-manual": 1,
+     "dreadbox-typhon-manual": 5,
+     "electro-harmonix-modrex-manual": 5,
+     "elektron-analog-four-mkii-manual": 32,
+     "elektron-digitakt-mk1-manual": 1
+    }
+   }
+  },
+  {
+   "id": "tremolo",
+   "pref": "tremolo",
+   "alt": [],
+   "broader": [
+    "mod-effect"
+   ],
+   "close": [],
+   "facet": "effect",
+   "tag": "effects",
+   "grouping": false,
+   "labels": {
+    "tremolo": {
+     "behringer-ultra-tremolo-manual": 8,
+     "electro-harmonix-modrex-manual": 10
+    }
+   }
+  },
+  {
+   "id": "distortion",
+   "pref": "distortion",
+   "alt": [],
+   "broader": [
+    "effect"
+   ],
+   "close": [],
+   "facet": "effect",
+   "tag": "effects",
+   "grouping": false,
+   "labels": {
+    "distortion": {
+     "akai-rhythm-wolf-manual": 1,
+     "akai-timbre-wolf-manual": 1,
+     "behringer-hell-babe-manual": 1,
+     "behringer-rd-9-manual": 1,
+     "donner-b1-manual": 3,
+     "dreadbox-typhon-manual": 6,
+     "elektron-analog-four-mkii-manual": 3,
+     "elektron-digitakt-mk1-manual": 1
+    }
+   }
+  },
+  {
+   "id": "overdrive",
+   "pref": "overdrive",
+   "alt": [],
+   "broader": [
+    "distortion"
+   ],
+   "close": [],
+   "facet": "effect",
+   "tag": "effects",
+   "grouping": false,
+   "labels": {
+    "overdrive": {
+     "akai-rhythm-wolf-manual": 1,
+     "akai-timbre-wolf-manual": 1,
+     "behringer-gdi21-manual": 1,
+     "behringer-hell-babe-manual": 1,
+     "elektron-analog-four-mkii-manual": 13,
+     "elektron-digitakt-mk1-manual": 6
+    }
+   }
+  },
+  {
+   "id": "compressor",
+   "pref": "compressor",
+   "alt": [],
+   "broader": [
+    "effect"
+   ],
+   "close": [],
+   "facet": "effect",
+   "tag": "effects",
+   "grouping": false,
+   "labels": {
+    "compressor": {
+     "behringer-rd-9-manual": 3,
+     "earthquaker-bit-commander-manual": 1,
+     "elektron-digitakt-mk1-manual": 25
+    }
+   }
+  },
+  {
+   "id": "sequencer",
+   "pref": "sequencer",
+   "alt": [],
+   "broader": [
+    "sequencing"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "sequencer": {
+     "akai-rhythm-wolf-manual": 4,
+     "akai-timbre-wolf-manual": 17,
+     "arturia-keystep-manual": 70,
+     "behringer-k2-quick-start": 1,
+     "behringer-rd-9-manual": 49,
+     "donner-b1-manual": 25,
+     "dreadbox-typhon-manual": 48,
+     "electro-harmonix-modrex-manual": 1,
+     "elektron-analog-four-mkii-manual": 113,
+     "elektron-digitakt-mk1-manual": 89,
+     "korg-sq-64-manual": 13,
+     "sonicware-liven-texture-lab-manual": 9
+    }
+   }
+  },
+  {
+   "id": "arpeggiator",
+   "pref": "arpeggiator",
+   "alt": [
+    "arp"
+   ],
+   "broader": [
+    "sequencer"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "arpeggiator": {
+     "akai-mpk-mini-mk3-quick-start": 6,
+     "arturia-keystep-manual": 81,
+     "donner-b1-manual": 19,
+     "elektron-analog-four-mkii-manual": 25,
+     "korg-sq-64-manual": 2,
+     "sonicware-liven-texture-lab-manual": 4
+    },
+    "arp": {
+     "arturia-keystep-manual": 87,
+     "donner-b1-manual": 4,
+     "elektron-analog-four-mkii-manual": 9,
+     "korg-sq-64-manual": 1,
+     "sonicware-liven-texture-lab-manual": 2
+    }
+   }
+  },
+  {
+   "id": "pattern",
+   "pref": "pattern",
+   "alt": [],
+   "broader": [
+    "sequencing"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "pattern": {
+     "akai-rhythm-wolf-manual": 46,
+     "akai-timbre-wolf-manual": 69,
+     "arturia-keystep-manual": 29,
+     "behringer-rd-9-manual": 293,
+     "donner-b1-manual": 50,
+     "dreadbox-typhon-manual": 4,
+     "elektron-analog-four-mkii-manual": 358,
+     "elektron-digitakt-mk1-manual": 348,
+     "korg-sq-64-manual": 40,
+     "sonicware-liven-texture-lab-manual": 104
+    }
+   }
+  },
+  {
+   "id": "step",
+   "pref": "step",
+   "alt": [],
+   "broader": [
+    "sequencing"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "step": {
+     "akai-rhythm-wolf-manual": 82,
+     "akai-timbre-wolf-manual": 97,
+     "arturia-keystep-manual": 104,
+     "behringer-k2-quick-start": 6,
+     "behringer-rd-9-manual": 354,
+     "behringer-umc404hd-quick-start": 4,
+     "donner-b1-manual": 88,
+     "dreadbox-typhon-manual": 81,
+     "electro-harmonix-modrex-manual": 1,
+     "elektron-analog-four-mkii-manual": 88,
+     "elektron-digitakt-mk1-manual": 89,
+     "korg-sq-64-manual": 66,
+     "midi-thru5-manual": 2,
+     "sonicware-liven-texture-lab-manual": 117,
+     "yamaha-hs4-manual": 2
+    }
+   }
+  },
+  {
+   "id": "trig",
+   "pref": "trig",
+   "alt": [],
+   "broader": [
+    "sequencing"
+   ],
+   "close": [
+    "step"
+   ],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "note": "Elektron's word for an event placed on a step. Other manuals say 'step' for both the slot and its note.",
+   "labels": {
+    "trig": {
+     "akai-rhythm-wolf-manual": 2,
+     "akai-timbre-wolf-manual": 2,
+     "arturia-keystep-manual": 5,
+     "behringer-k2-quick-start": 5,
+     "behringer-rd-9-manual": 4,
+     "donner-b1-manual": 1,
+     "elektron-analog-four-mkii-manual": 408,
+     "elektron-digitakt-mk1-manual": 440,
+     "korg-sq-64-manual": 11
+    }
+   }
+  },
+  {
+   "id": "song",
+   "pref": "song",
+   "alt": [],
+   "broader": [
+    "sequencing"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "song": {
+     "behringer-rd-9-manual": 253,
+     "electro-harmonix-modrex-manual": 2,
+     "elektron-analog-four-mkii-manual": 150,
+     "elektron-digitakt-mk1-manual": 129,
+     "sonicware-liven-texture-lab-manual": 1
+    }
+   }
+  },
+  {
+   "id": "chain",
+   "pref": "chain",
+   "alt": [],
+   "broader": [
+    "sequencing"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "chain": {
+     "behringer-k2-quick-start": 5,
+     "behringer-rd-9-manual": 26,
+     "dreadbox-typhon-manual": 2,
+     "earthquaker-bit-commander-manual": 2,
+     "elektron-analog-four-mkii-manual": 82,
+     "elektron-digitakt-mk1-manual": 23,
+     "korg-sq-64-manual": 15,
+     "midi-thru5-manual": 3,
+     "sonicware-liven-texture-lab-manual": 11
+    }
+   }
+  },
+  {
+   "id": "step-attribute",
+   "pref": "step attribute",
+   "alt": [],
+   "broader": [
+    "sequencing"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": true,
+   "labels": {
+    "step attribute": {}
+   }
+  },
+  {
+   "id": "accent",
+   "pref": "accent",
+   "alt": [],
+   "broader": [
+    "step-attribute"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "accent": {
+     "behringer-rd-9-manual": 37,
+     "donner-b1-manual": 40,
+     "elektron-analog-four-mkii-manual": 15
+    }
+   }
+  },
+  {
+   "id": "slide",
+   "pref": "slide",
+   "alt": [],
+   "broader": [
+    "step-attribute"
+   ],
+   "close": [
+    "glide"
+   ],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "note": "A step flag that switches glide on into the next note: close to glide, but it lives in the sequencer.",
+   "labels": {
+    "slide": {
+     "arturia-keystep-manual": 1,
+     "behringer-rd-9-manual": 1,
+     "donner-b1-manual": 24,
+     "dreadbox-typhon-manual": 1,
+     "elektron-analog-four-mkii-manual": 54,
+     "korg-sq-64-manual": 2,
+     "midi-thru5-manual": 1
+    }
+   }
+  },
+  {
+   "id": "tie",
+   "pref": "tie",
+   "alt": [],
+   "broader": [
+    "step-attribute"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "tie": {
+     "akai-rhythm-wolf-manual": 3,
+     "akai-timbre-wolf-manual": 3,
+     "arturia-keystep-manual": 26,
+     "donner-b1-manual": 4,
+     "dreadbox-typhon-manual": 4,
+     "korg-sq-64-manual": 2,
+     "sonicware-liven-texture-lab-manual": 1
+    }
+   }
+  },
+  {
+   "id": "probability",
+   "pref": "probability",
+   "alt": [],
+   "broader": [
+    "step-attribute"
+   ],
+   "close": [
+    "trig-condition"
+   ],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "probability": {
+     "behringer-rd-9-manual": 32,
+     "dreadbox-typhon-manual": 1,
+     "elektron-analog-four-mkii-manual": 5,
+     "elektron-digitakt-mk1-manual": 10,
+     "korg-sq-64-manual": 7,
+     "sonicware-liven-texture-lab-manual": 1
+    }
+   }
+  },
+  {
+   "id": "trig-condition",
+   "pref": "trig condition",
+   "alt": [
+    "conditional trig"
+   ],
+   "broader": [
+    "step-attribute"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "trig condition": {
+     "elektron-analog-four-mkii-manual": 19,
+     "elektron-digitakt-mk1-manual": 28
+    },
+    "conditional trig": {
+     "elektron-analog-four-mkii-manual": 3,
+     "elektron-digitakt-mk1-manual": 4
+    }
+   }
+  },
+  {
+   "id": "micro-timing",
+   "pref": "micro timing",
+   "alt": [],
+   "broader": [
+    "step-attribute"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "micro timing": {
+     "elektron-analog-four-mkii-manual": 5,
+     "elektron-digitakt-mk1-manual": 14
+    }
+   }
+  },
+  {
+   "id": "parameter-lock",
+   "pref": "parameter lock",
+   "alt": [],
+   "broader": [
+    "step-attribute"
+   ],
+   "close": [
+    "automation"
+   ],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "parameter lock": {
+     "elektron-analog-four-mkii-manual": 36,
+     "elektron-digitakt-mk1-manual": 50,
+     "sonicware-liven-texture-lab-manual": 8
+    }
+   }
+  },
+  {
+   "id": "automation",
+   "pref": "automation",
+   "alt": [],
+   "broader": [
+    "sequencing"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "automation": {
+     "behringer-rd-9-manual": 20
+    }
+   }
+  },
+  {
+   "id": "note-repeat",
+   "pref": "note repeat",
+   "alt": [],
+   "broader": [
+    "step-attribute"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": true,
+   "note": "Four manufacturers' words for repeating a hit inside one step; each is kept as its own concept because they differ in detail, and linked as close matches.",
+   "labels": {
+    "note repeat": {
+     "akai-mpk-mini-mk3-quick-start": 7,
+     "behringer-rd-9-manual": 29
+    }
+   }
+  },
+  {
+   "id": "ratchet",
+   "pref": "ratchet",
+   "alt": [],
+   "broader": [
+    "note-repeat"
+   ],
+   "close": [
+    "retrig",
+    "roll"
+   ],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "ratchet": {
+     "behringer-rd-9-manual": 2,
+     "donner-b1-manual": 28
+    }
+   }
+  },
+  {
+   "id": "retrig",
+   "pref": "retrig",
+   "alt": [
+    "retrigger"
+   ],
+   "broader": [
+    "note-repeat"
+   ],
+   "close": [
+    "roll"
+   ],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "retrig": {
+     "elektron-analog-four-mkii-manual": 1,
+     "elektron-digitakt-mk1-manual": 24,
+     "sonicware-liven-texture-lab-manual": 1
+    },
+    "retrigger": {
+     "akai-mpk-mini-mk3-quick-start": 1,
+     "akai-timbre-wolf-manual": 2,
+     "sonicware-liven-texture-lab-manual": 3
+    }
+   }
+  },
+  {
+   "id": "roll",
+   "pref": "roll",
+   "alt": [],
+   "broader": [
+    "note-repeat"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "roll": {
+     "arturia-keystep-manual": 5,
+     "behringer-rd-9-manual": 2
+    }
+   }
+  },
+  {
+   "id": "flam",
+   "pref": "flam",
+   "alt": [],
+   "broader": [
+    "note-repeat"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "flam": {
+     "behringer-rd-9-manual": 57
+    }
+   }
+  },
+  {
+   "id": "mute",
+   "pref": "mute",
+   "alt": [],
+   "broader": [
+    "sequencing"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "mute": {
+     "akai-apc20-quick-start": 1,
+     "akai-rhythm-wolf-manual": 5,
+     "akai-timbre-wolf-manual": 6,
+     "behringer-rd-9-manual": 23,
+     "behringer-umc1820-quick-start": 1,
+     "donner-b1-manual": 4,
+     "elektron-analog-four-mkii-manual": 50,
+     "elektron-digitakt-mk1-manual": 57,
+     "korg-sq-64-manual": 3,
+     "sonicware-liven-texture-lab-manual": 4
+    }
+   }
+  },
+  {
+   "id": "fill",
+   "pref": "fill",
+   "alt": [],
+   "broader": [
+    "sequencing"
+   ],
+   "close": [],
+   "facet": "sequencing",
+   "tag": "sequencer",
+   "grouping": false,
+   "labels": {
+    "fill": {
+     "akai-rhythm-wolf-manual": 30,
+     "akai-timbre-wolf-manual": 54,
+     "behringer-rd-9-manual": 19,
+     "elektron-analog-four-mkii-manual": 26,
+     "elektron-digitakt-mk1-manual": 29,
+     "korg-sq-64-manual": 1
+    }
+   }
+  },
+  {
+   "id": "project",
+   "pref": "project",
+   "alt": [],
+   "broader": [
+    "memory"
+   ],
+   "close": [],
+   "facet": "memory",
+   "tag": "presets-patterns",
+   "grouping": false,
+   "labels": {
+    "project": {
+     "arturia-keystep-manual": 32,
+     "behringer-rd-9-manual": 3,
+     "elektron-analog-four-mkii-manual": 114,
+     "elektron-digitakt-mk1-manual": 123,
+     "korg-sq-64-manual": 30
+    }
+   }
+  },
+  {
+   "id": "bank",
+   "pref": "bank",
+   "alt": [],
+   "broader": [
+    "memory"
+   ],
+   "close": [],
+   "facet": "memory",
+   "tag": "presets-patterns",
+   "grouping": false,
+   "labels": {
+    "bank": {
+     "akai-apc20-quick-start": 2,
+     "akai-mpk-mini-mk3-quick-start": 5,
+     "behringer-rd-9-manual": 5,
+     "dreadbox-typhon-manual": 12,
+     "electro-harmonix-modrex-manual": 7,
+     "elektron-analog-four-mkii-manual": 46,
+     "elektron-digitakt-mk1-manual": 68,
+     "midi-thru5-manual": 3,
+     "sonicware-liven-texture-lab-manual": 7
+    }
+   }
+  },
+  {
+   "id": "preset",
+   "pref": "preset",
+   "alt": [],
+   "broader": [
+    "memory"
+   ],
+   "close": [],
+   "facet": "memory",
+   "tag": "presets-patterns",
+   "grouping": false,
+   "labels": {
+    "preset": {
+     "arturia-keystep-manual": 1,
+     "donner-b1-manual": 2,
+     "dreadbox-typhon-manual": 23,
+     "electro-harmonix-modrex-manual": 112,
+     "elektron-analog-four-mkii-manual": 5,
+     "elektron-digitakt-mk1-manual": 5,
+     "korg-sq-64-manual": 2,
+     "sonicware-liven-texture-lab-manual": 2
+    }
+   }
+  },
+  {
+   "id": "kit",
+   "pref": "kit",
+   "alt": [],
+   "broader": [
+    "memory"
+   ],
+   "close": [],
+   "facet": "memory",
+   "tag": "presets-patterns",
+   "grouping": false,
+   "labels": {
+    "kit": {
+     "arturia-keystep-manual": 1,
+     "elektron-analog-four-mkii-manual": 165,
+     "elektron-digitakt-mk1-manual": 19,
+     "sonicware-liven-texture-lab-manual": 2
+    }
+   }
+  },
+  {
+   "id": "sample",
+   "pref": "sample",
+   "alt": [],
+   "broader": [
+    "memory"
+   ],
+   "close": [],
+   "facet": "memory",
+   "tag": "presets-patterns",
+   "grouping": false,
+   "labels": {
+    "sample": {
+     "akai-apc20-quick-start": 1,
+     "akai-mpk-mini-mk3-quick-start": 1,
+     "behringer-gdi21-manual": 1,
+     "behringer-k2-quick-start": 5,
+     "behringer-umc1820-quick-start": 1,
+     "behringer-umc404hd-quick-start": 1,
+     "dreadbox-typhon-manual": 1,
+     "elektron-analog-four-mkii-manual": 2,
+     "elektron-digitakt-mk1-manual": 311,
+     "sonicware-liven-texture-lab-manual": 49
+    }
+   }
+  },
+  {
+   "id": "keyboard",
+   "pref": "keyboard",
+   "alt": [],
+   "broader": [
+    "controller"
+   ],
+   "close": [],
+   "facet": "controller",
+   "tag": "controls-overview",
+   "grouping": false,
+   "labels": {
+    "keyboard": {
+     "akai-mpk-mini-mk3-quick-start": 5,
+     "akai-rhythm-wolf-manual": 3,
+     "akai-timbre-wolf-manual": 22,
+     "arturia-keystep-manual": 64,
+     "behringer-k2-quick-start": 10,
+     "behringer-rd-9-manual": 1,
+     "behringer-umc404hd-quick-start": 1,
+     "donner-b1-manual": 31,
+     "dreadbox-typhon-manual": 6,
+     "earthquaker-bit-commander-manual": 1,
+     "elektron-analog-four-mkii-manual": 84,
+     "elektron-digitakt-mk1-manual": 34,
+     "korg-sq-64-manual": 18,
+     "midi-thru5-manual": 1,
+     "roland-kc-150": 5,
+     "sonicware-liven-texture-lab-manual": 24
+    }
+   }
+  },
+  {
+   "id": "mod-wheel",
+   "pref": "mod wheel",
+   "alt": [
+    "modulation wheel"
+   ],
+   "broader": [
+    "controller"
+   ],
+   "close": [],
+   "facet": "controller",
+   "tag": "controls-overview",
+   "grouping": false,
+   "labels": {
+    "mod wheel": {
+     "akai-mpk-mini-mk3-quick-start": 1,
+     "arturia-keystep-manual": 2,
+     "dreadbox-typhon-manual": 4,
+     "elektron-analog-four-mkii-manual": 1,
+     "elektron-digitakt-mk1-manual": 2
+    },
+    "modulation wheel": {
+     "dreadbox-typhon-manual": 2,
+     "elektron-analog-four-mkii-manual": 2,
+     "elektron-digitakt-mk1-manual": 1
+    }
+   }
+  },
+  {
+   "id": "expression-pedal",
+   "pref": "expression pedal",
+   "alt": [],
+   "broader": [
+    "controller"
+   ],
+   "close": [],
+   "facet": "controller",
+   "tag": "cv-gate",
+   "grouping": false,
+   "labels": {
+    "expression pedal": {
+     "behringer-k2-quick-start": 2,
+     "electro-harmonix-modrex-manual": 11,
+     "elektron-analog-four-mkii-manual": 7
+    }
+   }
+  },
+  {
+   "id": "footswitch",
+   "pref": "footswitch",
+   "alt": [
+    "foot switch"
+   ],
+   "broader": [
+    "controller"
+   ],
+   "close": [],
+   "facet": "controller",
+   "tag": "controls-overview",
+   "grouping": false,
+   "labels": {
+    "footswitch": {
+     "arturia-keystep-manual": 5,
+     "behringer-digital-delay-manual": 4,
+     "behringer-gdi21-manual": 1,
+     "behringer-k2-quick-start": 2,
+     "behringer-ultra-tremolo-manual": 1,
+     "electro-harmonix-modrex-manual": 8
+    },
+    "foot switch": {
+     "electro-harmonix-modrex-manual": 2
+    }
+   }
+  },
+  {
+   "id": "tap-tempo",
+   "pref": "tap tempo",
+   "alt": [],
+   "broader": [
+    "controller"
+   ],
+   "close": [],
+   "facet": "controller",
+   "tag": "sync-clock",
+   "grouping": false,
+   "labels": {
+    "tap tempo": {
+     "akai-mpk-mini-mk3-quick-start": 1,
+     "arturia-keystep-manual": 5,
+     "behringer-digital-delay-manual": 1,
+     "donner-b1-manual": 1,
+     "electro-harmonix-modrex-manual": 9,
+     "elektron-analog-four-mkii-manual": 2,
+     "elektron-digitakt-mk1-manual": 2
+    }
+   }
+  }
+ ],
+ "relations": [
+  {
+   "s": "oscillator",
+   "p": "has_parameter",
+   "o": "waveform"
+  },
+  {
+   "s": "oscillator",
+   "p": "has_parameter",
+   "o": "pulse-width"
+  },
+  {
+   "s": "oscillator",
+   "p": "has_parameter",
+   "o": "detune"
+  },
+  {
+   "s": "filter",
+   "p": "has_parameter",
+   "o": "cutoff"
+  },
+  {
+   "s": "filter",
+   "p": "has_parameter",
+   "o": "resonance"
+  },
+  {
+   "s": "filter",
+   "p": "has_parameter",
+   "o": "keytrack"
+  },
+  {
+   "s": "envelope",
+   "p": "has_parameter",
+   "o": "envelope-stage"
+  },
+  {
+   "s": "delay",
+   "p": "has_parameter",
+   "o": "delay-time"
+  },
+  {
+   "s": "delay",
+   "p": "has_parameter",
+   "o": "feedback"
+  },
+  {
+   "s": "effect",
+   "p": "has_parameter",
+   "o": "bypass"
+  },
+  {
+   "s": "sequencer",
+   "p": "has_parameter",
+   "o": "tempo"
+  },
+  {
+   "s": "sequencer",
+   "p": "has_parameter",
+   "o": "swing"
+  },
+  {
+   "s": "step",
+   "p": "has_parameter",
+   "o": "gate-length"
+  },
+  {
+   "s": "note-message",
+   "p": "has_parameter",
+   "o": "velocity"
+  },
+  {
+   "s": "lfo",
+   "p": "modulates",
+   "o": "cutoff"
+  },
+  {
+   "s": "lfo",
+   "p": "modulates",
+   "o": "pulse-width"
+  },
+  {
+   "s": "envelope",
+   "p": "modulates",
+   "o": "cutoff"
+  },
+  {
+   "s": "midi-port",
+   "p": "carries",
+   "o": "midi-message"
+  },
+  {
+   "s": "sync-port",
+   "p": "carries",
+   "o": "sync-signal"
+  },
+  {
+   "s": "cv-port",
+   "p": "carries",
+   "o": "control-voltage"
+  },
+  {
+   "s": "audio-port",
+   "p": "carries",
+   "o": "audio-signal"
+  },
+  {
+   "s": "usb-port",
+   "p": "carries",
+   "o": "midi-message"
+  },
+  {
+   "s": "usb-port",
+   "p": "carries",
+   "o": "audio-signal"
+  },
+  {
+   "s": "oscillator",
+   "p": "generates",
+   "o": "audio-signal"
+  },
+  {
+   "s": "keyboard",
+   "p": "generates",
+   "o": "note-message"
+  },
+  {
+   "s": "keyboard",
+   "p": "generates",
+   "o": "aftertouch"
+  },
+  {
+   "s": "mod-wheel",
+   "p": "generates",
+   "o": "control-change"
+  },
+  {
+   "s": "sequencer",
+   "p": "generates",
+   "o": "note-message"
+  },
+  {
+   "s": "sequencer",
+   "p": "generates",
+   "o": "trigger"
+  },
+  {
+   "s": "arpeggiator",
+   "p": "generates",
+   "o": "note-message"
+  },
+  {
+   "s": "sync-signal",
+   "p": "synchronizes",
+   "o": "sequencer"
+  },
+  {
+   "s": "midi-clock",
+   "p": "has_parameter",
+   "o": "tempo"
+  },
+  {
+   "s": "tap-tempo",
+   "p": "controls",
+   "o": "tempo"
+  },
+  {
+   "s": "expression-pedal",
+   "p": "controls",
+   "o": "parameter"
+  },
+  {
+   "s": "project",
+   "p": "contains",
+   "o": "pattern"
+  },
+  {
+   "s": "project",
+   "p": "contains",
+   "o": "kit"
+  },
+  {
+   "s": "bank",
+   "p": "contains",
+   "o": "pattern"
+  },
+  {
+   "s": "bank",
+   "p": "contains",
+   "o": "preset"
+  },
+  {
+   "s": "song",
+   "p": "contains",
+   "o": "chain"
+  },
+  {
+   "s": "chain",
+   "p": "contains",
+   "o": "pattern"
+  },
+  {
+   "s": "pattern",
+   "p": "contains",
+   "o": "step"
+  },
+  {
+   "s": "step",
+   "p": "contains",
+   "o": "trig"
+  },
+  {
+   "s": "kit",
+   "p": "contains",
+   "o": "sample"
+  },
+  {
+   "s": "program-change",
+   "p": "selects",
+   "o": "pattern"
+  },
+  {
+   "s": "program-change",
+   "p": "selects",
+   "o": "preset"
+  },
+  {
+   "s": "parameter-lock",
+   "p": "sets",
+   "o": "parameter"
+  },
+  {
+   "s": "slide",
+   "p": "sets",
+   "o": "glide"
+  },
+  {
+   "s": "accent",
+   "p": "sets",
+   "o": "velocity"
+  }
+ ],
+ "homographs": [
+  {
+   "label": "HP",
+   "senses": [
+    "high-pass filter (the Elektron manuals' filter pages)",
+    "horizontal pitch, the Eurorack panel width unit (this site's module specs)"
+   ],
+   "counts": {
+    "dreadbox-typhon-manual": 2,
+    "elektron-analog-four-mkii-manual": 7,
+    "elektron-digitakt-mk1-manual": 1
+   }
+  },
+  {
+   "label": "gate",
+   "senses": [
+    "the gate SIGNAL (a CV that is high while a note is held)",
+    "gate length/time: how long a sequencer step's note lasts"
+   ],
+   "counts": {
+    "akai-rhythm-wolf-manual": 9,
+    "akai-timbre-wolf-manual": 13,
+    "arturia-keystep-manual": 61,
+    "behringer-rd-9-manual": 2,
+    "donner-b1-manual": 2,
+    "dreadbox-typhon-manual": 4,
+    "elektron-analog-four-mkii-manual": 13,
+    "elektron-digitakt-mk1-manual": 1,
+    "korg-sq-64-manual": 18
+   }
+  },
+  {
+   "label": "patch",
+   "senses": [
+    "a stored sound (a preset)",
+    "a patch cable, or the act of wiring one"
+   ],
+   "counts": {
+    "arturia-keystep-manual": 2,
+    "behringer-k2-quick-start": 2,
+    "dreadbox-typhon-manual": 1,
+    "elektron-analog-four-mkii-manual": 2,
+    "korg-sq-64-manual": 1
+   }
+  },
+  {
+   "label": "sound",
+   "senses": [
+    "Elektron: a stored set of one track's synth parameters (a preset)",
+    "sound in the everyday sense"
+   ],
+   "counts": {
+    "akai-rhythm-wolf-manual": 9,
+    "akai-timbre-wolf-manual": 2,
+    "arturia-keystep-manual": 10,
+    "behringer-digital-delay-manual": 2,
+    "behringer-gdi21-manual": 3,
+    "behringer-hell-babe-manual": 3,
+    "behringer-k2-quick-start": 6,
+    "behringer-rd-9-manual": 40,
+    "behringer-ultra-tremolo-manual": 2,
+    "donner-b1-manual": 6,
+    "dreadbox-typhon-manual": 12,
+    "earthquaker-bit-commander-manual": 2,
+    "electro-harmonix-modrex-manual": 2,
+    "elektron-analog-four-mkii-manual": 362,
+    "elektron-digitakt-mk1-manual": 321,
+    "korg-sq-64-manual": 4,
+    "midi-thru5-manual": 1,
+    "roland-kc-150": 14,
+    "sonicware-liven-texture-lab-manual": 40,
+    "yamaha-hs4-manual": 12
+   }
+  },
+  {
+   "label": "pad",
+   "senses": [
+    "a playing surface you strike (drum and trigger pads)",
+    "an input attenuation switch on the audio interfaces (PAD)"
+   ],
+   "counts": {
+    "akai-apc20-quick-start": 2,
+    "akai-mpk-mini-mk3-quick-start": 13,
+    "akai-rhythm-wolf-manual": 13,
+    "akai-timbre-wolf-manual": 1,
+    "behringer-k2-quick-start": 1,
+    "behringer-rd-9-manual": 1,
+    "behringer-umc404hd-quick-start": 3,
+    "elektron-analog-four-mkii-manual": 20,
+    "korg-sq-64-manual": 50,
+    "sonicware-liven-texture-lab-manual": 3,
+    "yamaha-hs4-manual": 2
+   }
+  },
+  {
+   "label": "program",
+   "senses": [
+    "a stored preset, as in 'program change'",
+    "to program a sequence (the verb)"
+   ],
+   "counts": {
+    "akai-apc20-quick-start": 1,
+    "akai-mpk-mini-mk3-quick-start": 4,
+    "arturia-keystep-manual": 4,
+    "behringer-rd-9-manual": 5,
+    "electro-harmonix-modrex-manual": 2,
+    "elektron-digitakt-mk1-manual": 4,
+    "korg-sq-64-manual": 3,
+    "midi-thru5-manual": 1,
+    "sonicware-liven-texture-lab-manual": 2,
+    "yamaha-hs4-manual": 1
+   }
+  }
+ ],
+ "stop_phrases": [
+  {
+   "phrase": "wave designer",
+   "reason": "The RD-9's transient-shaper section; its name contains 'wave' but it is not a waveform.",
+   "masked": 21
+  }
+ ]
+}

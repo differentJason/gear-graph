@@ -1,6 +1,6 @@
 {
  "generated_by": "tools/query_graph.py",
- "graph_sha256": "a4f1b4ac39d0c488e063bf1903692ebc18501205117f8d262b3c65f42f4b2be3",
+ "graph_sha256": "6e964ecfb7861337ce3df22691cc3cf80debe927faed979777fb3ac09f287fe4",
  "answers": [
   {
    "id": "q1",
@@ -104,6 +104,43 @@
     "cross": "pass"
    },
    "note": "Checked against connections.yaml + midi_channels.yaml, not against the graph itself. midi_channels.yaml starts empty, so today's honest answer is: no conflicts, and every device downstream of the MIDI Thru5 fan-out has 'not recorded' for its channel -- not the same as 'no conflict'. This will become a meaningful check once the owner records real channel settings."
+  },
+  {
+   "id": "q8",
+   "question": "Which concepts do different manufacturers name differently in their manuals?",
+   "answer": [
+    "21 concepts are named differently by different manufacturers",
+    "envelope: 'EG' (Dreadbox); 'EG = envelope (tie)' (Korg); 'envelope' (Akai Professional, Arturia, Behringer, Donner, EarthQuaker Devices, Elektron); 'envelope generator' (Sonicware)",
+    "high-pass: 'HPF' (Behringer, Electro-Harmonix, Sonicware); 'high-pass' (Dreadbox, Roland); 'highpass' (Elektron)",
+    "control-change: 'CC' (Akai Professional, Arturia, Dreadbox, Elektron, Korg); 'control change' (Electro-Harmonix, Sonicware)",
+    "waveform: 'wave' (Akai Professional, Donner, Dreadbox, EarthQuaker Devices, Electro-Harmonix, Sonicware, maker not recorded); 'waveform' (Behringer, Elektron)",
+    "audio-in: 'audio input' (Behringer, Dreadbox, Elektron, Yamaha); 'line in' (Sonicware)"
+   ],
+   "checks": {
+    "cross": "pass"
+   },
+   "note": "Checked against graph/public/terms.json + the inventory, not against the graph itself. Each manufacturer's word for a concept is the label its manuals use most often. A maker whose manuals use two labels equally often is reported as a tie and decides nothing (Donner uses 'emphasis' and 'resonance' once each, so resonance is NOT reported). Trig and step are separate, close-matched concepts, so they are never compared here."
+  },
+  {
+   "id": "q9",
+   "question": "Which devices' manuals describe the filter cutoff and something that can modulate it, including narrower kinds of modulator?",
+   "answer": [
+    "Akai Rhythm Wolf: envelope",
+    "Akai Timbre Wolf: envelope",
+    "Behringer K2: envelope, lfo",
+    "Behringer RD-9 Rhythm Designer: envelope, lfo",
+    "Donner Essential B1: envelope",
+    "Dreadbox Typhon: adsr, envelope, lfo",
+    "Electro-Harmonix ModRex: lfo",
+    "Elektron Analog Four MKII: envelope, lfo",
+    "Elektron Digitakt Mk1: envelope, lfo",
+    "Sonicware Liven Texture Lab: envelope, lfo",
+    "counted through the hierarchy (narrower kinds): adsr"
+   ],
+   "checks": {
+    "cross": "pass"
+   },
+   "note": "Ontology + taxonomy together: TERMS.yaml states 'LFO modulates cutoff' and 'envelope modulates cutoff'; ADSR inherits it because it is a narrower kind of envelope. Checked against TERMS.yaml + terms.json by separate code, not the graph."
   }
  ]
 }

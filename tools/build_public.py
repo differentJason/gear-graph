@@ -17,6 +17,7 @@ import yaml
 import build_eurorack
 import viz
 import viz_graph
+import viz_terms
 from site_theme import EXTRA_CSS, THEME, versioned
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -64,7 +65,7 @@ def main():
     shutil.copytree(ROOT / "docs" / "about", DOCS / "about")
     eu = build_eurorack.build(items, DOCS)
     (DOCS / "stylesheets").mkdir()
-    (DOCS / "stylesheets" / "viz.css").write_text(viz.CSS + viz_graph.CSS, encoding="utf-8")
+    (DOCS / "stylesheets" / "viz.css").write_text(viz.CSS + viz_graph.CSS + viz_terms.CSS, encoding="utf-8")
     shutil.copy(ROOT / "docs" / "stylesheets" / "tni.css", DOCS / "stylesheets" / "tni.css")
 
     manual_devices = {m["device"] for m in man}
@@ -89,6 +90,7 @@ documentation. Source code: [{REPO.split('github.com/')[1]}]({REPO}).
 - [How well each spec is supported](visuals/trust.md): every Eurorack number, with the evidence behind it
 - [Power budget](visuals/power.md): will the supplies cover the modules?
 - [Knowledge graph](visuals/graph.md): what it holds, how the studio is wired, where each module is mounted
+- [Terminology](visuals/terms.md): a taxonomy and ontology of the words the manuals use, and who says what
 - [What the checks caught](visuals/checks.md): 11 real defects and which check found each
 - [Retrieval results](visuals/retrieval.md): what indexing choices helped a keyword search
 - [Inventory](inventory.md) and [Eurorack modules](eurorack/index.md)
@@ -305,6 +307,144 @@ means *not recorded*, which is not the same as *not connected*.
   means "not recorded", not "not connected".
 """)
 
+    # ---------- terminology ----------
+    tm = viz_terms.Terms(ROOT)
+    if tm.d["terms_sha256"] != hashlib.sha256((ROOT / "TERMS.yaml").read_bytes()).hexdigest():
+        raise SystemExit("graph/public/terms.json is STALE for TERMS.yaml. Run: .venv/bin/python tools/build_terms.py")
+    heat, naming = viz_terms.naming_heatmap(tm, gr)
+    q = {a["id"]: a for a in ans["answers"]}
+    if not q["q8"]["answer"][0].startswith(f"{len(naming)} concepts"):
+        raise SystemExit(f"terminology page and graph q8 disagree: page has {len(naming)} concepts, graph says {q['q8']['answer'][0]!r}")
+    cs = tm.d["concepts"]
+    n_group = sum(1 for c in cs if c["grouping"])
+    n_labels = sum(len(c["labels"]) for c in cs)
+    n_poly = sum(1 for c in cs if len(c["broader"]) > 1)
+    corpus = tm.d["corpus"]
+    naming_table = "\n".join(f"| {c['pref']} | " + "<br>".join(f"**{w}**: {', '.join(sorted(m for m in dom if dom[m] == w))}" for w in sorted({w for w in dom.values() if w}))
+                              + ("<br>*tied*: " + ", ".join(sorted(m for m in dom if dom[m] is None)) if None in dom.values() else "") + " |" for c, _, dom in naming)
+    rel_table = "\n".join(f"| **{p['label']}**<br>{' / '.join(tm.facet[x]['pref'] for x in p['domain'])} → {' / '.join(tm.facet[x]['pref'] for x in p['range'])} | "
+                          + "; ".join(f"{tm.name(r['s'])} → {tm.name(r['o'])}" for r in tm.d["relations"] if r["p"] == p["id"]) + " |" for p in tm.d["predicates"])
+    homo_table = "\n".join(f"| {h['label']} | " + "<br>".join(h["senses"]) + f" | {sum(h['counts'].values())} in {len(h['counts'])} |" for h in tm.d["homographs"])
+    concept_table = "\n".join(
+        f"| {tm.facet[c['facet']]['pref']} | {c['pref']}{' *(grouping)*' if c['grouping'] else ''} | {', '.join(c['alt']) or '-'} | "
+        f"{', '.join(tm.name(b) for b in c['broader'])} | {', '.join(tm.name(x) for x in c['close']) or '-'} | {c['tag']} | "
+        f"{'-' if c['grouping'] and not tm.manuals_using(c['id']) else len(tm.manuals_using(c['id']))} |" for c in cs)
+    page("visuals/terms.md", "Terminology", f"""
+# Terminology: a taxonomy and an ontology of the gear's vocabulary
+
+The manufacturers describe the same ideas in different words: Dreadbox's manual says **EG** where
+Elektron's says **envelope**, Behringer writes **HPF** where Elektron writes **highpass**, and Elektron places **trigs**
+where everyone else talks about **steps**. This page organises that vocabulary
+two ways:
+
+- a **taxonomy** says what kind of thing each concept is (a VCF *is a kind of* filter), arranged as a hierarchy;
+- an **ontology** adds typed relationships between concepts (a filter *has parameter* cutoff, an LFO *modulates* it)
+  with rules about which kinds of concept each relationship may connect.
+
+The concept scheme is written by hand in `TERMS.yaml`; `tools/build_terms.py` checks it and counts where every label
+occurs in the {corpus['manuals']} converted manuals ({corpus['sections']} sections, {corpus['manufacturers']} makers). Only the counts are published, never
+the manual text. The terms are also nodes in the [knowledge graph](graph.md), linked to the manuals that use them.
+
+| Measure | Value |
+|---|---|
+| Facets (top classes) | {len(tm.facet)} |
+| Concepts | {len(cs)} ({n_group} grouping nodes, {n_poly} with two parents) |
+| Labels (preferred + synonyms) | {n_labels} |
+| Typed relations | {len(tm.d['relations'])}, using {len(tm.d['predicates'])} predicates |
+| Concepts named differently by different makers | {len(naming)} |
+| Homographs (one word, two meanings) | {len(tm.d['homographs'])} |
+
+## Taxonomy
+
+Each panel is a facet; indentation means *is a kind of*. The bar shows how many of the {corpus['manuals']} manuals use the concept
+under any of its names. A concept with two parents is listed in full under the first and marked *(also)* under the second:
+MIDI clock is a MIDI message by format and a sync signal by purpose.
+
+{fig(viz_terms.taxonomy_tree(tm), "Hover a concept for its synonyms and notes. Grouping nodes (italic) organise the tree but are not manual terms themselves, so they are not required to occur in the text.")}
+
+Three modelling choices that a flat tag list cannot express:
+
+- **Synonym vs kind vs neighbour.** *Emphasis* is a synonym of resonance (same control, different word), so it is a label
+  on the same concept. *VCF* is a kind of filter, so it is a narrower concept. *Trig* is close to *step* but not the
+  same (an Elektron trig is an event placed on a step), so the two stay separate and are linked as close matches.
+- **Polyhierarchy.** A concept may have two parents when it genuinely belongs in two places (LFO: an oscillator by
+  construction, a modulation source by use).
+- **Facets as classes.** Every concept belongs to exactly one facet, and the facet is its class in the ontology below.
+
+## Ontology
+
+The ontology is small on purpose: {len(tm.d['predicates'])} relation types, each with a *domain* and *range* (which classes it may
+connect). The checker rejects a statement like "filter carries MIDI message", because *carries* only runs from a port to
+a signal. That rule turns a modelling slip into a build failure.
+
+{fig(viz_terms.ontology_diagram(tm), "Boxes are facets; arrows are kinds of relation between them, with how many statements of each kind. Loops are relations inside one class (a song contains chains, a chain contains patterns).")}
+
+One worked example: the filter, the kinds of filter, its parameters, and what modulates them. It reads both ways: the
+taxonomy says ADSR is a kind of envelope, the ontology says an envelope modulates cutoff, so the graph can conclude that
+an ADSR modulates cutoff without anyone writing that down.
+
+{fig(viz_terms.neighbourhood(tm, "filter"), "Each box shows the preferred label and its synonyms. Hollow arrowheads are is-a links (taxonomy); filled arrowheads are typed relations (ontology).")}
+
+| Relation, and the classes it may connect | Statements |
+|---|---|
+{rel_table}
+
+## Same concept, different words
+
+For each concept, which word each manufacturer's manuals use most. Only concepts where makers with a clear favourite
+disagree are shown; a maker whose manuals use two words equally often is marked *tied* and decides nothing.
+
+{fig(heat, "Each row is one label of a concept; each column a manufacturer. Shading is that label's share of the maker's mentions of the concept; the outlined cell is the word that maker uses most.")}
+
+| Concept | Word used most, by maker |
+|---|---|
+{naming_table}
+
+## Questions the terminology answers
+
+Both are graph queries (see the [knowledge graph](graph.md)), each checked against separate code that reads the raw files.
+
+| Question | Answer |
+|---|---|
+""" + "\n".join(f"| {q[k]['question']} | " + "<br>".join(q[k]["answer"]) + " |" for k in ("q8", "q9")) + f"""
+
+## Homographs: one word, two meanings
+
+Some words mean two different things across these manuals. They are counted but assigned to no concept, because a
+count cannot tell the senses apart. Longer labels are matched first, so *gate length* and *gate output* are counted as
+their own concepts and only a bare *gate* lands here.
+
+| Word | Senses | Mentions (in manuals) |
+|---|---|---|
+{homo_table}
+
+## How it is checked
+
+`tools/build_terms.py` fails the build if:
+
+- a `broader` link points nowhere, loops, or a concept reaches zero or two facets;
+- one label belongs to two concepts (after folding case, hyphens and plurals), or a homograph is also a concept label;
+- a close match duplicates a hierarchy link (SKOS keeps the two apart);
+- a relation uses an undeclared predicate, or its subject or object falls outside the predicate's domain or range;
+- **a concept occurs in no manual** (grouping nodes excepted): a term nobody uses is invented.
+
+Each check was tested by breaking `TERMS.yaml` on purpose and confirming the build fails with the expected message.
+
+## Limits
+
+- **Counts are string matches, not meanings.** Whole words, case-insensitive, plurals folded, longest label first. Common
+  words (*release*, *trigger*, *step*) are also used in their everyday sense, so their counts are upper bounds.
+- **The scheme is one person's model.** The concepts were chosen from the manuals by the author with an AI assistant;
+  the checks prove it is consistent and grounded in the text, not that it is the only reasonable model.
+- **Coverage follows the manuals.** Gear without an ingested manual (most Eurorack modules) contributes no vocabulary.
+
+## Every concept
+
+| Facet | Concept | Also called | Kind of | Close to | Tag | Manuals |
+|---|---|---|---|---|---|---|
+{concept_table}
+""")
+
     # ---------- checks ----------
     det = fail["detectors"]
     fr = "\n".join(f"| {f['id']} | {f['title']} | {dict(det)[f['caught_by']]} | {f['how']} | {f['fix']} |" for f in fail["failures"])
@@ -391,13 +531,13 @@ More: [evaluation](../about/evaluation.md). Questions that never found a page: {
     # ---------- config ----------
     nav = [{"Home": "index.md"},
            {"Visual explanations": [{"How the pipeline works": "visuals/pipeline.md"}, {"Inventory coverage": "visuals/coverage.md"},
-                                    {"How well each spec is supported": "visuals/trust.md"}, {"Power budget": "visuals/power.md"}, {"Knowledge graph": "visuals/graph.md"},
+                                    {"How well each spec is supported": "visuals/trust.md"}, {"Power budget": "visuals/power.md"}, {"Knowledge graph": "visuals/graph.md"}, {"Terminology": "visuals/terms.md"},
                                     {"What the checks caught": "visuals/checks.md"}, {"Retrieval results": "visuals/retrieval.md"}]},
            {"Inventory": "inventory.md"}, {"Eurorack": eu["nav"]},
            {"About the project": [{t: f"about/{f}"} for f, t in [("index.md", "Overview"), ("architecture.md", "Architecture"),
                                                                  ("verification.md", "How correctness is checked"), ("evaluation.md", "Retrieval evaluation"),
                                                                  ("decisions.md", "Decision log"), ("runbook.md", "Runbook"),
-                                                                 ("limitations.md", "Limitations and open questions"), ("status.md", "Current status")]]}]
+                                                                 ("terminology.md", "How the terminology was built"), ("limitations.md", "Limitations and open questions"), ("status.md", "Current status")]]}]
     cfg = {"site_name": "Gear Knowledge Base", "site_description": "A machine-readable studio gear knowledge base, explained with charts",
            "site_url": SITE, "repo_url": REPO, "repo_name": "differentJason/gear-graph", "docs_dir": "docs",
            "theme": THEME,

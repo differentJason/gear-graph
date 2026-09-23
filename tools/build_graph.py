@@ -4,7 +4,8 @@
     .venv-graph/bin/python tools/build_graph.py
 
 Inputs : inventory.yaml, connections.yaml, eurorack/{evidence,overrides.yaml}, tools/manifest.yaml, VOCAB.yaml,
-         evals/golden.jsonl, and (local only) the converted manual sections in docs/manuals/.
+         graph/public/terms.json (TERMS.yaml checked and counted by tools/build_terms.py), evals/golden.jsonl,
+         and (local only) the converted manual sections in docs/manuals/.
 Outputs: graph/out/{vertices,edges}.parquet   full graph, includes manual-derived nodes  (git-ignored)
          graph/public/{vertices,edges}.json   public subgraph, a committed snapshot       (no manual-derived nodes)
          graph/public/budget.json             per-supply power load, computed FROM the graph; read by build_eurorack.py
@@ -12,6 +13,7 @@ Outputs: graph/out/{vertices,edges}.parquet   full graph, includes manual-derive
 The graph is derived and rebuildable; nothing here is a source of truth. Schema and rules: graph/README.md.
 Exit code 1 if any integrity or privacy check fails.
 """
+import hashlib
 import json
 import re
 import sys
@@ -53,13 +55,13 @@ VSCHEMA = StructType([StructField(n, t, True) for n, t in [
     ("tier", StringType()), ("url", StringType()), ("http", StringType()), ("doc_type", StringType()), ("version", StringType()),
     ("attested", StringType()), ("rows", StringType()),
     ("midi_in_ch", StringType()), ("midi_out_ch", StringType()), ("midi_thru_pass", BooleanType()),
-    ("midi_status", StringType()), ("midi_confirmed", StringType())]])
+    ("midi_status", StringType()), ("midi_confirmed", StringType()), ("facet", StringType()), ("alt", StringType())]])
 ESCHEMA = StructType([StructField(n, t, True) for n, t in [
     ("src", StringType()), ("dst", StringType()), ("rel", StringType()), ("visibility", StringType()),
     ("setup", StringType()), ("medium", StringType()), ("from_port", StringType()), ("to_port", StringType()),
     ("status", StringType()), ("confirmed", StringType()), ("value", DoubleType()), ("line", StringType()),
     ("swappable", BooleanType()), ("bidirectional", BooleanType()), ("position", IntegerType()), ("row", StringType()),
-    ("http", StringType()), ("note", StringType())]])
+    ("http", StringType()), ("note", StringType()), ("label", StringType())]])
 
 
 class Builder:
@@ -172,6 +174,28 @@ def collect():
                 b.edge(sid, f"tag:{t}", "TAGGED")
     if not any(v["type"] == "section" for v in b.V.values()):
         b.notes.append("docs/manuals/ not present: no section nodes (they are local-only); the public snapshot is unaffected")
+
+    # ---- terminology (TERMS.yaml via terms.json): taxonomy (BROADER), ontology (typed relations), usage (USES_TERM) ----
+    terms_json = ROOT / "graph" / "public" / "terms.json"
+    terms = json.loads(terms_json.read_text())
+    if terms["terms_sha256"] != hashlib.sha256((ROOT / "TERMS.yaml").read_bytes()).hexdigest():
+        raise SystemExit("graph/public/terms.json is STALE for TERMS.yaml. Run: .venv/bin/python tools/build_terms.py")
+    for f in terms["facets"]:
+        b.vertex(f"term:{f['id']}", "term", f["pref"], role="facet", facet=f["id"])
+    for c in terms["concepts"]:
+        b.vertex(f"term:{c['id']}", "term", c["pref"], role="grouping" if c["grouping"] else "concept", facet=c["facet"],
+                 alt="; ".join(c["alt"]) or None)
+        b.edge(f"term:{c['id']}", f"tag:{c['tag']}", "UNDER_TAG")
+        for p in c["broader"]:
+            b.edge(f"term:{c['id']}", f"term:{p}", "BROADER")
+        for x in c["close"]:
+            b.edge(f"term:{c['id']}", f"term:{x}", "CLOSE_MATCH")
+        for label, per_manual in c["labels"].items():
+            for mid, n in per_manual.items():
+                if f"manual:{mid}" in b.V:
+                    b.edge(f"manual:{mid}", f"term:{c['id']}", "USES_TERM", label=label, value=n)
+    for r in terms["relations"]:
+        b.edge(f"term:{r['s']}", f"term:{r['o']}", r["p"].upper())
 
     # ---- evaluation questions ----
     for line in (ROOT / "evals" / "golden.jsonl").read_text().splitlines():
@@ -287,7 +311,7 @@ def main():
     v.write.mode("overwrite").parquet(str(OUT / "vertices.parquet"))
     e.write.mode("overwrite").parquet(str(OUT / "edges.parquet"))
     nv = dump_json(pub_v, PUB / "vertices.json", ["id"])
-    ne = dump_json(pub_e, PUB / "edges.json", ["src", "rel", "dst", "from_port", "to_port"])
+    ne = dump_json(pub_e, PUB / "edges.json", ["src", "rel", "dst", "from_port", "to_port", "label"])
     (PUB / "budget.json").write_text(json.dumps(budget, indent=1, sort_keys=True) + "\n", encoding="utf-8")
 
     pattern = leak_pattern()

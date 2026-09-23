@@ -118,7 +118,85 @@ def unrecorded(g):
     return {k: sorted(v) for k, v in sorted(by.items())}
 
 
+def naming(g):
+    """Concepts that different manufacturers' documentation names differently. For each (concept, manufacturer), the label
+    used most often is that manufacturer's word for it (a tie is reported as a tie and does not count); a concept whose makers
+    have 2+ different clear words is reported.
+    Motif: (item)-[HAS_MANUAL]->(manual)-[USES_TERM]->(term)."""
+    rows = (g.find("(i)-[h]->(m); (m)-[u]->(t)").filter("h.rel = 'HAS_MANUAL' AND u.rel = 'USES_TERM' AND t.role = 'concept'")
+            .groupBy(F.col("t.id").alias("term"), F.col("i.manufacturer").alias("mfr"), F.col("u.label").alias("label"))
+            .agg(F.sum("u.value").alias("n")).collect())
+    return _dominant((bare(r["term"]), r["mfr"], r["label"], r["n"]) for r in rows)
+
+
+def _dominant(rows):
+    per = defaultdict(Counter)
+    for term, mfr, label, n in rows:
+        per[(term, mfr or "maker not recorded")][label] += int(n)
+    words = defaultdict(lambda: defaultdict(list))
+    for (term, mfr), c in per.items():
+        top = max(c.values())
+        tied = sorted(l for l, n in c.items() if n == top)
+        words[term][tied[0] if len(tied) == 1 else " = ".join(tied) + " (tie)"].append(mfr)
+    # only makers with ONE clear most-used word decide whether a concept is named differently; a tie is shown, not counted
+    return {t: {w: sorted(m) for w, m in sorted(ws.items())} for t, ws in sorted(words.items())
+            if len([w for w in ws if not w.endswith("(tie)")]) > 1}
+
+
+def inherits(g, param, predicate="MODULATES"):
+    """Which devices document something that <predicate> <param>, counting narrower kinds of it (inheritance down BROADER)?
+    Direct subjects come from the typed relation; their descendants from GraphFrames shortestPaths over BROADER edges
+    (child -> parent), with the subjects as landmarks. A device qualifies if its manual uses the parameter AND a subject."""
+    subj = [r["src"] for r in g.edges.filter(f"rel = '{predicate}' AND dst = 'term:{param}'").select("src").collect()]
+    tv = g.vertices.filter("type = 'term'")
+    broader = g.edges.filter("rel = 'BROADER'").select("src", "dst", "rel")
+    dist = GraphFrame(tv, broader).shortestPaths(landmarks=subj).select("id", "distances").collect()
+    kinds = {r["id"]: min(r["distances"].values()) for r in dist if r["distances"]}          # subject itself has distance 0
+    uses = (g.find("(i)-[h]->(m); (m)-[u]->(t)").filter("h.rel = 'HAS_MANUAL' AND u.rel = 'USES_TERM'")
+            .select(F.col("i.id").alias("item"), F.col("t.id").alias("term")).distinct().collect())
+    by_item = defaultdict(set)
+    for r in uses:
+        by_item[bare(r["item"])].add(r["term"])
+    out = {it: sorted(bare(t) for t in terms if t in kinds) for it, terms in by_item.items() if f"term:{param}" in terms}
+    inherited = sorted(bare(k) for k, d in kinds.items() if d > 0)
+    return {k: v for k, v in sorted(out.items()) if v}, inherited
+
+
 # ------------------------------------------------------------------------------------------ independent cross-checks
+def cross_naming():
+    """From graph/public/terms.json + inventory.yaml + tools/manifest.yaml only: no graph."""
+    t = json.loads((PUB / "terms.json").read_text())
+    inv = {i["id"]: i for i in yaml.safe_load((ROOT / "inventory.yaml").read_text())["items"]}
+    mfr = {m["id"]: inv[m["device"]].get("manufacturer") for m in yaml.safe_load((ROOT / "tools" / "manifest.yaml").read_text())["manuals"]}
+    return _dominant((c["id"], mfr[mid], label, n) for c in t["concepts"] if not c["grouping"]
+                     for label, per in c["labels"].items() for mid, n in per.items())
+
+
+def cross_inherits(param, predicate="modulates"):
+    """From TERMS.yaml (hierarchy, relations) + terms.json (usage) + tools/manifest.yaml only: no graph."""
+    t = yaml.safe_load((ROOT / "TERMS.yaml").read_text())
+    usage = json.loads((PUB / "terms.json").read_text())
+    kids = defaultdict(set)
+    for c in t["concepts"]:
+        for b in c["broader"]:
+            kids[b].add(c["id"])
+    todo = [s for s, p, o in t["relations"] if p == predicate and o == param]
+    kinds = set()
+    while todo:
+        x = todo.pop()
+        if x not in kinds:
+            kinds.add(x)
+            todo += kids[x]
+    used = defaultdict(set)
+    for c in usage["concepts"]:
+        for per in c["labels"].values():
+            for mid in per:
+                used[mid].add(c["id"])
+    device = {m["id"]: m["device"] for m in yaml.safe_load((ROOT / "tools" / "manifest.yaml").read_text())["manuals"]}
+    by_item = defaultdict(set)
+    for mid, cs in used.items():
+        by_item[device[mid]] |= cs
+    return {it: sorted(cs & kinds) for it, cs in sorted(by_item.items()) if param in cs and cs & kinds}
 def cross_source_support():
     """From the raw evidence files and overrides only: no graph."""
     sys.path.insert(0, str(ROOT / "tools"))
@@ -240,6 +318,17 @@ def main():
             cross = cross_unrecorded()
             lines = [f"{k}: {len(v)}" for k, v in res.items()]
             record(qid, q["question"], res, [f"{sum(len(v) for v in res.values())} items have no confirmed connection, placement or supply link"] + lines, cross=cross, note=q.get("note"))
+        elif kind == "naming":
+            res = naming(g)
+            lines = [f"{len(res)} concepts are named differently by different manufacturers"]
+            for term in q.get("show", []):
+                if term in res:
+                    lines.append(f"{term}: " + "; ".join(f"'{w}' ({', '.join(m)})" for w, m in res[term].items()))
+            record(qid, q["question"], res, lines, cross=cross_naming(), note=q.get("note"))
+        elif kind == "inherits":
+            res, inherited = inherits(g, q["param"])
+            lines = [f"{nm(it)}: {', '.join(v)}" for it, v in res.items()] + [f"counted through the hierarchy (narrower kinds): {', '.join(inherited)}"]
+            record(qid, q["question"], res, lines, cross=cross_inherits(q["param"]), note=q.get("note"))
         else:
             failures.append(f"{qid}: unknown query kind {kind!r}")
 
