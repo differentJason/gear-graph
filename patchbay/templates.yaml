@@ -1,0 +1,34 @@
+# New-session templates. Cables between the listed devices come from gear-kb connections.yaml (setup main-studio),
+# resolved to named jacks by tools/build_data.py. Do not copy KB cables here: list the devices and they are wired.
+# extra_links: cables the KB does NOT record. They are always labelled "NOT recorded in gear-kb" in the app.
+# settings: starting values for a device's settings (same keys as the inspector).
+# Omitting `devices` means "every device with a recorded cable".
+
+templates:
+  recording-session:
+    name: Recording session
+    type: session
+    description: "Main studio into Logic: UMC1820 + Mac Mini, RD-9, Digitakt, Analog Four and the MIDI Thru5, wired per gear-kb."
+    devices: [behringer-umc1820, mac-mini-m4, behringer-rd-9, elektron-digitakt-mk1, elektron-analog-four, midi-thru5]
+    settings:
+      mac-mini-m4: {notes: "Logic Pro (recording sessions, per gear-kb inventory)."}
+      behringer-rd-9: {clock: master}
+    notes: "Recording session in the main studio. The RD-9 is the master clock (gear-kb). Add swapped-in synths from the palette: their MIDI cables from the Thru5 are patched automatically."
+
+  jam-session:
+    name: Jam session
+    type: session
+    description: "Alternate jam location: UMC404HD + the Linux workstation (Bitwig)."
+    devices: [behringer-umc404hd, linux-workstation]
+    extra_links:
+      - {from: behringer-umc404hd, to: linux-workstation, medium: usb, bidirectional: true,
+         note: "Assumed from the gear-kb inventory roles (UMC404HD = interface for the other jamming location; Bitwig runs on the Linux workstation). The jam setup's wiring is not recorded in gear-kb yet."}
+    settings:
+      linux-workstation: {notes: "Bitwig Studio Producer 6.1.1 (per gear-kb inventory)."}
+    notes: "Jam session at the alternate location. Add the gear you bring from the palette."
+
+  studio-default:
+    name: Studio default wiring
+    type: session
+    description: "Every fixed cable recorded in gear-kb for the main studio."
+    notes: "Seeded from gear-kb connections.yaml (setup main-studio): the fixed cables. Add the patch on top."

@@ -1,0 +1,2 @@
+kb_path: ..           # the gear-kb checkout this app reads (never writes); relative paths resolve from patchbay/
+port: 8765

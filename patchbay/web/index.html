@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gear Patchbay</title>
+<link rel="icon" href="icons/_glyph-case.svg">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="bar">
+  <div class="brand">Gear&nbsp;Patchbay</div>
+  <div class="session-title">
+    <span id="type-badge" class="badge">session</span>
+    <span id="session-name">Untitled</span><span id="dirty" hidden title="Unsaved changes">●</span>
+  </div>
+  <nav class="actions">
+    <button data-act="new" title="New session">New</button>
+    <button data-act="open" title="Open a saved session">Open</button>
+    <button data-act="save" class="primary" title="Save (Ctrl+S)">Save</button>
+    <button data-act="saveas" title="Save a copy under a new name">Save as</button>
+    <span class="sep"></span>
+    <button data-act="undo" title="Undo (Ctrl+Z)" aria-label="Undo">↶</button>
+    <button data-act="redo" title="Redo (Ctrl+Shift+Z)" aria-label="Redo">↷</button>
+    <button data-act="fit" title="Fit diagram to view">Fit</button>
+    <button data-act="view-mode" title="Faceplates (panels) or boxes">Boxes</button>
+    <button data-act="photos" title="Use the private product/panel photos instead of the generated faceplates">Photos</button>
+    <span class="sep"></span>
+    <button data-act="export-svg" title="Download the diagram as SVG">SVG</button>
+    <button data-act="export-png" title="Download the diagram as PNG">PNG</button>
+    <button data-act="theme" title="Toggle light/dark" aria-label="Toggle theme">◐</button>
+  </nav>
+</header>
+
+<main class="layout">
+  <aside class="palette" aria-label="Gear">
+    <div class="palette-head">
+      <input id="search" type="search" placeholder="Search gear…" autocomplete="off">
+      <label class="check"><input id="in-use" type="checkbox" checked> In use only</label>
+      <label class="check" title="When you add a device, connect it to gear already on the canvas using the cables recorded in gear-kb"><input id="auto-patch" type="checkbox" checked> Auto-patch from gear-kb</label>
+    </div>
+    <div id="palette-list" class="palette-list"></div>
+    <p class="hint">Drag gear onto the canvas. Drag from a jack to another jack to patch.</p>
+  </aside>
+
+  <section class="stage" id="stage">
+    <svg id="canvas" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="fp-sheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".10"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".12"/></linearGradient>
+        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+          <circle cx="1" cy="1" r="1" class="grid-dot"/>
+        </pattern>
+      </defs>
+      <rect id="grid-bg" x="-50000" y="-50000" width="100000" height="100000" fill="url(#grid)"/>
+      <g id="world">
+        <g id="cables"></g>
+        <g id="nodes"></g>
+        <path id="drag-cable" class="cable-line drag" d=""/>
+      </g>
+    </svg>
+    <div class="legend" id="legend"></div>
+    <div class="zoom" id="zoom">100%</div>
+    <div class="empty" id="empty">
+      <h2>Empty session</h2>
+      <p>Drag gear from the left, or start from a template:</p>
+      <div class="choice" id="empty-actions"></div>
+    </div>
+    <div class="crumbs" id="crumbs" hidden></div>
+    <div class="placing" id="placing" hidden></div>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </section>
+
+  <aside class="inspector" id="inspector" aria-label="Inspector"></aside>
+</main>
+
+<dialog id="modal"><div id="modal-body"></div></dialog>
+
+<script src="faceplate.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

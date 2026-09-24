@@ -35,3 +35,10 @@ private/
 /public/
 
 # images/ IS committed: original illustrations from tools/draw_devices.py (no product photos; see tools/image_manifest.yaml)
+
+# --- patchbay/: personal state from the local app (never published) ---
+patchbay/sessions/*
+!patchbay/sessions/.gitkeep
+patchbay/ports.yaml
+patchbay/panels.yaml
+patchbay/icons/_sheet.html

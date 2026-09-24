@@ -75,6 +75,19 @@ The site is not deployed anywhere yet. Charts are generated as inline SVG by `to
 `data/snapshot.json`, `data/coverage.json` and `evals/results.json`, and are refreshed by `build_site.py` and
 `check_coverage.py`. Re-run those, and commit the JSON, when the underlying data changes.
 
+## Patchbay app
+
+`patchbay/` is a drag-and-drop patch planner that reads this repository (never writes it). After new manuals,
+inventory, wiring or drawings, refresh its data and icons, then rebuild the public site (which publishes it read-only):
+
+```bash
+cd patchbay && make data icons && make test      # data/gear.json + icons/ from the KB; unit tests
+make serve                                       # the full local app (saves sessions/, ports.yaml, panels.yaml -- git-ignored)
+```
+
+The website copy has no server: sessions stay in the visitor's browser and jack editing is off. Jack evidence cites the
+manual section, never its text; icons are `images/` drawings. See `patchbay/README.md`.
+
 ## Add a manual
 
 1. Put the official PDF in `sources/` (git-ignored). If you downloaded it by hand, note that in `source_note`.

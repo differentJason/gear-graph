@@ -1,0 +1,117 @@
+# Device-specific "start state" fields: what to set on the box so each song starts in the right spot.
+# Names, options and ranges are taken from the manuals ingested in gear-kb (cited per device). Values are saved per
+# session node under settings.state.<key>.
+#
+# field types:  text | select (options) | tracks (mute grid: tracks = list of labels; value = list of MUTED labels)
+#               table (rows x cols; value = {row: {col: value}}; a col with options: home_channels lists 1-16 with the
+#               gear whose gear-kb home channel it is)
+# kb:           the studio default recorded in gear-kb midi_channels.yaml ("Fill studio defaults" copies it in)
+# summary:      shown on the canvas node, built from these keys (empty ones are skipped)
+
+devices:
+  elektron-digitakt-mk1:
+    title: Digitakt start state
+    source: "Elektron Digitakt (Mk1) manual, OS1.53: 10.1 patterns, 10.8 SCALE menu, 10.11 SONG mode, 15.5 MIDI CONFIG"
+    summary: [{keys: [bank, pattern], fmt: "{bank}{pattern}"}, {keys: [song], fmt: "Song {song}"}, {keys: [bpm], fmt: "{bpm} BPM"}]
+    sections:
+      - name: Start position
+        fields:
+          - {key: project, label: Project, type: text, ph: "project name"}
+          - {key: play_mode, label: Play from, type: select, options: [PATTERN, CHAIN, SONG]}
+          - {key: bank, label: Bank, type: select, options: [A, B, C, D, E, F, G, H], help: "8 banks x 16 patterns = 128 per project"}
+          - {key: pattern, label: Pattern, type: select, options: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16"]}
+          - {key: chain, label: Chain, type: text, ph: "A01 > A03 > A02"}
+          - {key: song, label: Song slot, type: select, options: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16"], help: "16 songs per project"}
+          - {key: song_row, label: Start at song row, type: text, ph: "01-99"}
+      - name: Tempo & length
+        fields:
+          - {key: bpm, label: BPM, type: text, ph: "pattern BPM", help: "Tempo, swing and length are stored in the pattern"}
+          - {key: swing, label: Swing, type: text, ph: "%"}
+          - {key: scale_mode, label: Scale mode, type: select, options: [PER PATTERN, PER TRACK]}
+          - {key: length, label: LENGTH, type: text, ph: "16/64 steps"}
+          - {key: scale, label: SCALE, type: select, options: [1/8X, 1/4X, 1/2X, 3/4X, 1X, 3/2X, 2X]}
+          - {key: m_len, label: M.LEN (per track), type: text, ph: "steps or INF"}
+          - {key: ch_len, label: CH.LEN (per track), type: text, ph: "OFF or steps"}
+      - name: Track mutes
+        fields:
+          - {key: mutes, type: tracks, label: "Muted at start (audio 1-8, MIDI 9-16)",
+             tracks: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"]}
+      - name: Audio tracks 1-8
+        fields:
+          - {key: audio_tracks, type: table, rows: ["1", "2", "3", "4", "5", "6", "7", "8"],
+             cols: [{key: sound, label: Sound / sample, ph: "kick, hat…"}, {key: machine, label: Machine, ph: "ONESHOT"}]}
+      - name: MIDI tracks 9-16
+        help: "MIDI tracks send on the home channel of what they play (gear-kb): pick the channel, name the part."
+        fields:
+          - {key: midi_tracks, type: table, rows: ["9", "10", "11", "12", "13", "14", "15", "16"],
+             cols: [{key: channel, label: CHAN, options: home_channels}, {key: part, label: Part / notes, ph: ""}]}
+      - name: MIDI CONFIG (global)
+        help: "Machine-wide settings, not per pattern. Check them if the box was used elsewhere."
+        fields:
+          - {key: auto_channel, label: AUTO CHANNEL, type: text, kb: "14"}
+          - {key: clock_receive, label: CLOCK RECEIVE, type: select, options: ["ON", "OFF"], kb: "ON"}
+          - {key: clock_send, label: CLOCK SEND, type: select, options: ["ON", "OFF"], kb: "ON"}
+          - {key: transport_receive, label: TRANSPORT RECEIVE, type: select, options: ["ON", "OFF"], kb: "ON"}
+          - {key: transport_send, label: TRANSPORT SEND, type: select, options: ["ON", "OFF"], kb: "ON"}
+          - {key: prg_ch_receive, label: PRG CH RECEIVE, type: select, options: ["ON", "OFF"]}
+          - {key: prg_ch_send, label: PRG CH SEND, type: select, options: ["ON", "OFF"]}
+          - {key: out_port, label: OUT PORT FUNCTIONALITY, type: select, options: [MIDI, DIN 24, DIN 48], kb: MIDI}
+          - {key: thru_port, label: THRU PORT FUNCTIONALITY, type: select, options: [MIDI, DIN 24, DIN 48]}
+          - {key: input_from, label: INPUT FROM, type: select, options: [DISABLED, MIDI, USB, MIDI+USB], kb: MIDI}
+          - {key: output_to, label: OUTPUT TO, type: select, options: [DISABLED, MIDI, USB, MIDI+USB], kb: MIDI}
+
+  elektron-analog-four:
+    title: Analog Four MKII start state
+    source: "Elektron Analog Four MKII manual, OS 1.55: 9 kits, 9.15 muting, 10.1-10.2 patterns, 10.11 SCALE, 11.2 songs, 12.3 MIDI CONFIG, 12.4 CV CONFIG"
+    summary: [{keys: [bank, pattern], fmt: "{bank}{pattern}"}, {keys: [kit], fmt: "Kit {kit}"}, {keys: [bpm], fmt: "{bpm} BPM"}]
+    sections:
+      - name: Start position
+        fields:
+          - {key: project, label: Project, type: text, ph: "project name"}
+          - {key: play_mode, label: Play from, type: select, options: [PATTERN, CHAIN, SONG]}
+          - {key: bank, label: Bank, type: select, options: [A, B, C, D, E, F, G, H]}
+          - {key: pattern, label: Pattern, type: select, options: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16"]}
+          - {key: kit, label: Kit, type: text, ph: "01-128", help: "Several patterns can share a kit: edits change all of them"}
+          - {key: chain, label: Chain, type: text, ph: "A01 > A03 > A04"}
+          - {key: song, label: Song slot, type: select, options: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16"]}
+          - {key: pattern_mode, label: PATTERN mode, type: select, options: [SEQUENTIAL, DIRECT START, DIRECT JUMP, TEMP JUMP]}
+      - name: Tempo & length
+        fields:
+          - {key: tempo_mode, label: Tempo mode, type: select, options: [PROJECT, PATTERN]}
+          - {key: bpm, label: BPM, type: text}
+          - {key: swing, label: Swing, type: text, ph: "%"}
+          - {key: scale_mode, label: Scale mode, type: select, options: [NORMAL, ADVANCED]}
+          - {key: length, label: Length, type: text, ph: "16/64 steps"}
+          - {key: scale, label: Scale, type: select, options: [1/8X, 1/4X, 1/2X, 3/4X, 1X, 3/2X, 2X]}
+          - {key: len, label: LEN (advanced master), type: text, ph: "steps or INF"}
+          - {key: chng, label: CHNG (advanced master), type: text, ph: "OFF or steps"}
+      - name: Track mutes
+        fields:
+          - {key: mutes, type: tracks, label: "Muted at start (mutes carry over to the next pattern)", tracks: ["1", "2", "3", "4", FX, CV]}
+      - name: Synth tracks 1-4
+        fields:
+          - {key: synth_tracks, type: table, rows: ["1", "2", "3", "4"],
+             cols: [{key: sound, label: Sound, ph: "sound name"}, {key: channel, label: MIDI ch, ph: "track ch"}]}
+      - name: CV A-D (CV CONFIG)
+        help: "Which CV/Gate output drives what in the rack: TYPE per output plus the destination."
+        fields:
+          - {key: cv_outputs, type: table, rows: [A, B, C, D],
+             cols: [{key: type, label: TYPE, options: ["", GROUNDED, PITCH V/OCT, PITCH HZ/V, VALUE LIN, TRIG, GATE, CLOCK]},
+                    {key: dest, label: Goes to, ph: "module · input"}]}
+      - name: Performance
+        fields:
+          - {key: perf_macros, label: Performance macros used, type: text, ph: "macro 1 = filter sweep…", help: "Saved with the kit (10 macros)"}
+      - name: MIDI CONFIG (global)
+        help: "Machine-wide settings, not per pattern."
+        fields:
+          - {key: auto_channel, label: AUTO CHANNEL, type: text, kb: "13"}
+          - {key: clock_receive, label: CLOCK RECEIVE, type: select, options: ["ON", "OFF"], kb: "ON"}
+          - {key: clock_send, label: CLOCK SEND, type: select, options: ["ON", "OFF"], kb: "OFF"}
+          - {key: transport_receive, label: TRANSPORT RECEIVE, type: select, options: ["ON", "OFF"], kb: "ON"}
+          - {key: transport_send, label: TRANSPORT SEND, type: select, options: ["ON", "OFF"], kb: "OFF"}
+          - {key: prg_ch_receive, label: PRG CH RECEIVE, type: select, options: ["ON", "OFF"]}
+          - {key: prg_ch_send, label: PRG CH SEND, type: select, options: ["ON", "OFF"]}
+          - {key: out_port, label: OUT PORT FUNCTIONALITY, type: select, options: [MIDI, DIN 24, DIN 48]}
+          - {key: thru_port, label: THRU PORT FUNCTIONALITY, type: select, options: [MIDI, DIN 24, DIN 48]}
+          - {key: input_from, label: INPUT FROM, type: select, options: [DISABLED, MIDI, USB, MIDI+USB]}
+          - {key: output_to, label: OUTPUT TO, type: select, options: [DISABLED, MIDI, USB, MIDI+USB]}

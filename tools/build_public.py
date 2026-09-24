@@ -530,12 +530,28 @@ More: [evaluation](../about/evaluation.md). Questions that never found a page: {
     page("inventory.md", "Inventory", "\n".join(parts))
     page("midi-channels.md", "MIDI channels", midi_reference())
 
+    # ---------- the patchbay app, published as a static read-only page (GitHub Pages has no server) ----------
+    pb = ROOT / "patchbay"
+    if (pb / "data" / "gear.json").is_file():
+        dst = DOCS / "patchbay"
+        shutil.copytree(pb / "web", dst, dirs_exist_ok=True)
+        shutil.copytree(pb / "icons", dst / "icons", dirs_exist_ok=True, ignore=shutil.ignore_patterns("_sheet.html"))
+        shutil.copy(pb / "data" / "gear.json", dst / "gear.json")
+        page("patchbay-app.md", "Patchbay",
+             "# Patchbay\n\nA drag-and-drop patch planner built on this knowledge base: drop gear on a canvas, patch "
+             "audio/MIDI/clock/CV cables jack to jack (the recorded studio wiring is pre-patched), and open the "
+             "Eurorack as its own rack view with faceplates at true HP width in your case rows.\n\n"
+             "**[Open the patchbay](patchbay/index.html)**\n\n"
+             "On this website it runs without a server: sessions are saved in your browser only, and jack edits are "
+             "off. The full app (saving session files, editing jacks) runs locally from the repository's `patchbay/` "
+             "folder with `make serve`. All faceplates and icons are drawn from data; no product photos are used.")
+
     # ---------- config ----------
     nav = [{"Home": "index.md"},
            {"Visual explanations": [{"How the pipeline works": "visuals/pipeline.md"}, {"Inventory coverage": "visuals/coverage.md"},
                                     {"How well each spec is supported": "visuals/trust.md"}, {"Power budget": "visuals/power.md"}, {"Knowledge graph": "visuals/graph.md"}, {"Terminology": "visuals/terms.md"},
                                     {"What the checks caught": "visuals/checks.md"}, {"Retrieval results": "visuals/retrieval.md"}]},
-           {"Inventory": "inventory.md"}, {"MIDI channels": "midi-channels.md"}, {"Eurorack": eu["nav"]},
+           {"Inventory": "inventory.md"}, {"MIDI channels": "midi-channels.md"}, {"Patchbay": "patchbay-app.md"}, {"Eurorack": eu["nav"]},
            {"About the project": [{t: f"about/{f}"} for f, t in [("index.md", "Overview"), ("architecture.md", "Architecture"),
                                                                  ("verification.md", "How correctness is checked"), ("evaluation.md", "Retrieval evaluation"),
                                                                  ("decisions.md", "Decision log"), ("runbook.md", "Runbook"),

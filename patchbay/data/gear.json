@@ -1,0 +1,7039 @@
+{
+ "generated": "2026-09-23T21:10:32",
+ "kb_commit": "db059af",
+ "media": [
+  "audio",
+  "midi",
+  "clock",
+  "cv",
+  "gate",
+  "usb"
+ ],
+ "groups": [
+  "Synths & drum machines",
+  "Eurorack",
+  "Controllers & sequencers",
+  "Eurorack modules",
+  "Eurorack cases & power",
+  "Interface, monitoring & computer",
+  "MIDI & utility",
+  "Pedals & amps",
+  "Instruments"
+ ],
+ "devices": [
+  {
+   "id": "mac-mini-m4",
+   "name": "Mac Mini M4",
+   "manufacturer": "",
+   "model": "",
+   "category": "computer",
+   "group": "Interface, monitoring & computer",
+   "in_use": true,
+   "role": "",
+   "note": "Runs Logic Pro for recording sessions. Confirmed by the owner 2026-09-20 (computers were not in Equipment List.md).",
+   "icon": "icons/mac-mini-m4.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "USB",
+     "dir": "bidir",
+     "medium": "usb",
+     "source": "default",
+     "evidence": "default for category 'computer' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "linux-workstation",
+   "name": "Linux workstation",
+   "manufacturer": "",
+   "model": "",
+   "category": "computer",
+   "group": "Interface, monitoring & computer",
+   "in_use": true,
+   "role": "",
+   "note": "Runs Bitwig Studio Producer.",
+   "icon": "icons/linux-workstation.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "USB",
+     "dir": "bidir",
+     "medium": "usb",
+     "source": "default",
+     "evidence": "default for category 'computer' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "logic-pro",
+   "name": "Logic Pro",
+   "manufacturer": "Apple",
+   "model": "",
+   "category": "software",
+   "group": "Interface, monitoring & computer",
+   "in_use": true,
+   "role": "",
+   "note": "Used for recording sessions.",
+   "icon": "icons/logic-pro.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Audio In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'software' (not found in the manual)"
+    },
+    {
+     "name": "MIDI In",
+     "dir": "in",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'software' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'software' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "bitwig-studio-producer",
+   "name": "Bitwig Studio Producer",
+   "manufacturer": "Bitwig",
+   "model": "",
+   "category": "software",
+   "group": "Interface, monitoring & computer",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/bitwig-studio-producer.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Audio In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'software' (not found in the manual)"
+    },
+    {
+     "name": "MIDI In",
+     "dir": "in",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'software' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'software' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-umc404hd",
+   "name": "Behringer U-PHORIA UMC404HD",
+   "manufacturer": "Behringer",
+   "model": "UMC404HD",
+   "category": "audio-interface",
+   "group": "Interface, monitoring & computer",
+   "in_use": true,
+   "role": "Alternate interface for another jamming location.",
+   "note": "",
+   "icon": "icons/behringer-umc404hd.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input 1",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'audio-interface' (not found in the manual)"
+    },
+    {
+     "name": "Input 2",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'audio-interface' (not found in the manual)"
+    },
+    {
+     "name": "Main Out L/R",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'audio-interface' (not found in the manual)"
+    },
+    {
+     "name": "Phones",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'audio-interface' (not found in the manual)"
+    },
+    {
+     "name": "MIDI In",
+     "dir": "in",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'audio-interface' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'audio-interface' (not found in the manual)"
+    },
+    {
+     "name": "USB",
+     "dir": "bidir",
+     "medium": "usb",
+     "source": "default",
+     "evidence": "default for category 'audio-interface' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-umc1820",
+   "name": "Behringer UMC1820",
+   "manufacturer": "Behringer",
+   "model": "UMC1820",
+   "category": "audio-interface",
+   "group": "Interface, monitoring & computer",
+   "in_use": true,
+   "role": "Main interface.",
+   "note": "",
+   "icon": "icons/behringer-umc1820.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input 1",
+     "dir": "in",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "audio",
+     "source": "connections"
+    },
+    {
+     "name": "Input 3/4",
+     "dir": "in",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "audio",
+     "source": "connections"
+    },
+    {
+     "name": "Input 5/6",
+     "dir": "in",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "audio",
+     "source": "connections"
+    },
+    {
+     "name": "Input 7/8",
+     "dir": "in",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "audio",
+     "source": "connections"
+    },
+    {
+     "name": "MIDI IN",
+     "dir": "in",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "midi",
+     "source": "connections"
+    },
+    {
+     "name": "Main Out L/R",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'audio-interface' (not found in the manual)"
+    },
+    {
+     "name": "Phones",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'audio-interface' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'audio-interface' (not found in the manual)"
+    },
+    {
+     "name": "USB",
+     "dir": "bidir",
+     "medium": "usb",
+     "source": "default",
+     "evidence": "default for category 'audio-interface' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "yamaha-hs4",
+   "name": "Yamaha HS4 (pair)",
+   "manufacturer": "Yamaha",
+   "model": "HS4",
+   "category": "monitors",
+   "group": "Interface, monitoring & computer",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/yamaha-hs4.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'monitors' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "akg-open-back-headphones",
+   "name": "AKG open-back headphones",
+   "manufacturer": "AKG",
+   "model": "",
+   "category": "headphones",
+   "group": "Interface, monitoring & computer",
+   "in_use": true,
+   "role": "",
+   "note": "Model not specified.",
+   "icon": "icons/akg-open-back-headphones.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'headphones' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "akai-mpk-mini-mk3",
+   "name": "Akai MPK mini MK3",
+   "manufacturer": "Akai Professional",
+   "model": "MPK mini MK3",
+   "category": "controller",
+   "group": "Controllers & sequencers",
+   "in_use": true,
+   "role": "",
+   "note": "Manual is a 2-page Quickstart (v1.3) that says only 'MPK mini'; matched to the MK3 by content (display, Software Manager, no speaker). A Play mk3 guide was also downloaded and deliberately NOT ingested (different product).",
+   "icon": "icons/akai-mpk-mini-mk3.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "USB",
+     "dir": "bidir",
+     "medium": "usb",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    },
+    {
+     "name": "CV Out",
+     "dir": "out",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    },
+    {
+     "name": "Gate Out",
+     "dir": "out",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    },
+    {
+     "name": "Clock In",
+     "dir": "in",
+     "medium": "clock",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "akai-apc20",
+   "name": "Akai APC20",
+   "manufacturer": "Akai Professional",
+   "model": "APC20",
+   "category": "controller",
+   "group": "Controllers & sequencers",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/akai-apc20.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "USB",
+     "dir": "bidir",
+     "evidence": "akai-apc20-quick-start/06-rear-panel-overview.md (bold jack label; manual text is not copied)",
+     "medium": "usb",
+     "source": "manual"
+    },
+    {
+     "name": "MIDI Out",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    },
+    {
+     "name": "CV Out",
+     "dir": "out",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    },
+    {
+     "name": "Gate Out",
+     "dir": "out",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    },
+    {
+     "name": "Clock In",
+     "dir": "in",
+     "medium": "clock",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "elektron-analog-four",
+   "name": "Elektron Analog Four MKII",
+   "manufacturer": "Elektron",
+   "model": "Analog Four MKII",
+   "category": "synth",
+   "group": "Synths & drum machines",
+   "in_use": true,
+   "role": "",
+   "note": "Confirmed MKII by the owner 2026-09-20; matches the ingested OS 1.55 manual.",
+   "icon": "icons/elektron-analog-four.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": {
+    "in": 13,
+    "out": 13,
+    "role": "MIDI CONFIG > CHANNELS > AUTO CHANNEL",
+    "note": "Fed from the Digitakt THRU (raw RD-9 stream). SYNC: CLOCK + TRANSPORT RECEIVE on, SEND off. No synth-track channel may be 10."
+   },
+   "ports": [
+    {
+     "name": "MAIN OUT L/R",
+     "dir": "out",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "audio",
+     "source": "connections"
+    },
+    {
+     "name": "MIDI In",
+     "dir": "in",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'synth' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'synth' (not found in the manual)"
+    }
+   ],
+   "fields": {
+    "title": "Analog Four MKII start state",
+    "source": "Elektron Analog Four MKII manual, OS 1.55: 9 kits, 9.15 muting, 10.1-10.2 patterns, 10.11 SCALE, 11.2 songs, 12.3 MIDI CONFIG, 12.4 CV CONFIG",
+    "summary": [
+     {
+      "keys": [
+       "bank",
+       "pattern"
+      ],
+      "fmt": "{bank}{pattern}"
+     },
+     {
+      "keys": [
+       "kit"
+      ],
+      "fmt": "Kit {kit}"
+     },
+     {
+      "keys": [
+       "bpm"
+      ],
+      "fmt": "{bpm} BPM"
+     }
+    ],
+    "sections": [
+     {
+      "name": "Start position",
+      "fields": [
+       {
+        "key": "project",
+        "label": "Project",
+        "type": "text",
+        "ph": "project name"
+       },
+       {
+        "key": "play_mode",
+        "label": "Play from",
+        "type": "select",
+        "options": [
+         "PATTERN",
+         "CHAIN",
+         "SONG"
+        ]
+       },
+       {
+        "key": "bank",
+        "label": "Bank",
+        "type": "select",
+        "options": [
+         "A",
+         "B",
+         "C",
+         "D",
+         "E",
+         "F",
+         "G",
+         "H"
+        ]
+       },
+       {
+        "key": "pattern",
+        "label": "Pattern",
+        "type": "select",
+        "options": [
+         "01",
+         "02",
+         "03",
+         "04",
+         "05",
+         "06",
+         "07",
+         "08",
+         "09",
+         "10",
+         "11",
+         "12",
+         "13",
+         "14",
+         "15",
+         "16"
+        ]
+       },
+       {
+        "key": "kit",
+        "label": "Kit",
+        "type": "text",
+        "ph": "01-128",
+        "help": "Several patterns can share a kit: edits change all of them"
+       },
+       {
+        "key": "chain",
+        "label": "Chain",
+        "type": "text",
+        "ph": "A01 > A03 > A04"
+       },
+       {
+        "key": "song",
+        "label": "Song slot",
+        "type": "select",
+        "options": [
+         "01",
+         "02",
+         "03",
+         "04",
+         "05",
+         "06",
+         "07",
+         "08",
+         "09",
+         "10",
+         "11",
+         "12",
+         "13",
+         "14",
+         "15",
+         "16"
+        ]
+       },
+       {
+        "key": "pattern_mode",
+        "label": "PATTERN mode",
+        "type": "select",
+        "options": [
+         "SEQUENTIAL",
+         "DIRECT START",
+         "DIRECT JUMP",
+         "TEMP JUMP"
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Tempo & length",
+      "fields": [
+       {
+        "key": "tempo_mode",
+        "label": "Tempo mode",
+        "type": "select",
+        "options": [
+         "PROJECT",
+         "PATTERN"
+        ]
+       },
+       {
+        "key": "bpm",
+        "label": "BPM",
+        "type": "text"
+       },
+       {
+        "key": "swing",
+        "label": "Swing",
+        "type": "text",
+        "ph": "%"
+       },
+       {
+        "key": "scale_mode",
+        "label": "Scale mode",
+        "type": "select",
+        "options": [
+         "NORMAL",
+         "ADVANCED"
+        ]
+       },
+       {
+        "key": "length",
+        "label": "Length",
+        "type": "text",
+        "ph": "16/64 steps"
+       },
+       {
+        "key": "scale",
+        "label": "Scale",
+        "type": "select",
+        "options": [
+         "1/8X",
+         "1/4X",
+         "1/2X",
+         "3/4X",
+         "1X",
+         "3/2X",
+         "2X"
+        ]
+       },
+       {
+        "key": "len",
+        "label": "LEN (advanced master)",
+        "type": "text",
+        "ph": "steps or INF"
+       },
+       {
+        "key": "chng",
+        "label": "CHNG (advanced master)",
+        "type": "text",
+        "ph": "OFF or steps"
+       }
+      ]
+     },
+     {
+      "name": "Track mutes",
+      "fields": [
+       {
+        "key": "mutes",
+        "type": "tracks",
+        "label": "Muted at start (mutes carry over to the next pattern)",
+        "tracks": [
+         "1",
+         "2",
+         "3",
+         "4",
+         "FX",
+         "CV"
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Synth tracks 1-4",
+      "fields": [
+       {
+        "key": "synth_tracks",
+        "type": "table",
+        "rows": [
+         "1",
+         "2",
+         "3",
+         "4"
+        ],
+        "cols": [
+         {
+          "key": "sound",
+          "label": "Sound",
+          "ph": "sound name"
+         },
+         {
+          "key": "channel",
+          "label": "MIDI ch",
+          "ph": "track ch"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "CV A-D (CV CONFIG)",
+      "help": "Which CV/Gate output drives what in the rack: TYPE per output plus the destination.",
+      "fields": [
+       {
+        "key": "cv_outputs",
+        "type": "table",
+        "rows": [
+         "A",
+         "B",
+         "C",
+         "D"
+        ],
+        "cols": [
+         {
+          "key": "type",
+          "label": "TYPE",
+          "options": [
+           "",
+           "GROUNDED",
+           "PITCH V/OCT",
+           "PITCH HZ/V",
+           "VALUE LIN",
+           "TRIG",
+           "GATE",
+           "CLOCK"
+          ]
+         },
+         {
+          "key": "dest",
+          "label": "Goes to",
+          "ph": "module \u00b7 input"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Performance",
+      "fields": [
+       {
+        "key": "perf_macros",
+        "label": "Performance macros used",
+        "type": "text",
+        "ph": "macro 1 = filter sweep\u2026",
+        "help": "Saved with the kit (10 macros)"
+       }
+      ]
+     },
+     {
+      "name": "MIDI CONFIG (global)",
+      "help": "Machine-wide settings, not per pattern.",
+      "fields": [
+       {
+        "key": "auto_channel",
+        "label": "AUTO CHANNEL",
+        "type": "text",
+        "kb": "13"
+       },
+       {
+        "key": "clock_receive",
+        "label": "CLOCK RECEIVE",
+        "type": "select",
+        "options": [
+         "ON",
+         "OFF"
+        ],
+        "kb": "ON"
+       },
+       {
+        "key": "clock_send",
+        "label": "CLOCK SEND",
+        "type": "select",
+        "options": [
+         "ON",
+         "OFF"
+        ],
+        "kb": "OFF"
+       },
+       {
+        "key": "transport_receive",
+        "label": "TRANSPORT RECEIVE",
+        "type": "select",
+        "options": [
+         "ON",
+         "OFF"
+        ],
+        "kb": "ON"
+       },
+       {
+        "key": "transport_send",
+        "label": "TRANSPORT SEND",
+        "type": "select",
+        "options": [
+         "ON",
+         "OFF"
+        ],
+        "kb": "OFF"
+       },
+       {
+        "key": "prg_ch_receive",
+        "label": "PRG CH RECEIVE",
+        "type": "select",
+        "options": [
+         "ON",
+         "OFF"
+        ]
+       },
+       {
+        "key": "prg_ch_send",
+        "label": "PRG CH SEND",
+        "type": "select",
+        "options": [
+         "ON",
+         "OFF"
+        ]
+       },
+       {
+        "key": "out_port",
+        "label": "OUT PORT FUNCTIONALITY",
+        "type": "select",
+        "options": [
+         "MIDI",
+         "DIN 24",
+         "DIN 48"
+        ]
+       },
+       {
+        "key": "thru_port",
+        "label": "THRU PORT FUNCTIONALITY",
+        "type": "select",
+        "options": [
+         "MIDI",
+         "DIN 24",
+         "DIN 48"
+        ]
+       },
+       {
+        "key": "input_from",
+        "label": "INPUT FROM",
+        "type": "select",
+        "options": [
+         "DISABLED",
+         "MIDI",
+         "USB",
+         "MIDI+USB"
+        ]
+       },
+       {
+        "key": "output_to",
+        "label": "OUTPUT TO",
+        "type": "select",
+        "options": [
+         "DISABLED",
+         "MIDI",
+         "USB",
+         "MIDI+USB"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "donner-b1",
+   "name": "Donner Essential B1",
+   "manufacturer": "Donner",
+   "model": "Essential B1",
+   "category": "synth",
+   "group": "Synths & drum machines",
+   "in_use": true,
+   "role": "",
+   "note": "Analog bass synthesizer and sequencer.",
+   "icon": "icons/donner-b1.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": {
+    "in": 4,
+    "out": 4,
+    "note": "Hold STEP 4 at power-on (sets in and out together, per manual). Own channel, so swapping K2 -> B1 means pointing the Digitakt track at 4. Clock: hold D#2 at power-on for DIN, or leave Automatic."
+   },
+   "ports": [
+    {
+     "name": "AUX IN",
+     "dir": "in",
+     "evidence": "donner-b1-manual/02-panel-introduction.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "Headphone output",
+     "dir": "out",
+     "evidence": "donner-b1-manual/02-panel-introduction.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "MAIN OUT",
+     "dir": "out",
+     "evidence": "donner-b1-manual/02-panel-introduction.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "MIDI IN",
+     "dir": "in",
+     "evidence": "donner-b1-manual/02-panel-introduction.md (bold jack label; manual text is not copied)",
+     "medium": "midi",
+     "source": "manual"
+    },
+    {
+     "name": "MIDI OUT",
+     "dir": "out",
+     "evidence": "donner-b1-manual/02-panel-introduction.md (bold jack label; manual text is not copied)",
+     "medium": "midi",
+     "source": "manual"
+    },
+    {
+     "name": "Sync In",
+     "dir": "in",
+     "evidence": "donner-b1-manual/02-panel-introduction.md (bold jack label; manual text is not copied)",
+     "medium": "clock",
+     "source": "manual"
+    },
+    {
+     "name": "Sync In/Out",
+     "dir": "in",
+     "evidence": "donner-b1-manual/14-sync-in-out.md (bold jack label; manual text is not copied)",
+     "medium": "clock",
+     "source": "manual"
+    },
+    {
+     "name": "Sync Out",
+     "dir": "out",
+     "evidence": "donner-b1-manual/02-panel-introduction.md (bold jack label; manual text is not copied)",
+     "medium": "clock",
+     "source": "manual"
+    },
+    {
+     "name": "USB-C",
+     "dir": "bidir",
+     "evidence": "donner-b1-manual/02-panel-introduction.md (bold jack label; manual text is not copied)",
+     "medium": "usb",
+     "source": "manual"
+    }
+   ]
+  },
+  {
+   "id": "elektron-digitakt-mk1",
+   "name": "Elektron Digitakt Mk1",
+   "manufacturer": "Elektron",
+   "model": "Digitakt",
+   "category": "sampler-drum-machine",
+   "group": "Synths & drum machines",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/elektron-digitakt-mk1.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": {
+    "in": 14,
+    "out": 14,
+    "role": "MIDI CONFIG > CHANNELS > AUTO CHANNEL",
+    "note": "Middle of the chain: CLOCK + TRANSPORT RECEIVE on AND SEND on. PORT CONFIG: INPUT FROM = MIDI, OUTPUT TO = MIDI, OUT PORT FUNCTIONALITY = MIDI. Audio track channels: none on 10 (OFF if unused). MIDI tracks send on the home channel of whatever they play (1 K2, 2 Typhon, 3 M1, 4 B1, ...)."
+   },
+   "ports": [
+    {
+     "name": "MIDI IN",
+     "dir": "in",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "midi",
+     "source": "connections"
+    },
+    {
+     "name": "MIDI OUT/SYNC A",
+     "dir": "out",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "midi",
+     "source": "connections"
+    },
+    {
+     "name": "MIDI THRU/SYNC B",
+     "dir": "out",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "midi",
+     "source": "connections"
+    },
+    {
+     "name": "main out (L/R)",
+     "dir": "out",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "audio",
+     "source": "connections"
+    }
+   ],
+   "fields": {
+    "title": "Digitakt start state",
+    "source": "Elektron Digitakt (Mk1) manual, OS1.53: 10.1 patterns, 10.8 SCALE menu, 10.11 SONG mode, 15.5 MIDI CONFIG",
+    "summary": [
+     {
+      "keys": [
+       "bank",
+       "pattern"
+      ],
+      "fmt": "{bank}{pattern}"
+     },
+     {
+      "keys": [
+       "song"
+      ],
+      "fmt": "Song {song}"
+     },
+     {
+      "keys": [
+       "bpm"
+      ],
+      "fmt": "{bpm} BPM"
+     }
+    ],
+    "sections": [
+     {
+      "name": "Start position",
+      "fields": [
+       {
+        "key": "project",
+        "label": "Project",
+        "type": "text",
+        "ph": "project name"
+       },
+       {
+        "key": "play_mode",
+        "label": "Play from",
+        "type": "select",
+        "options": [
+         "PATTERN",
+         "CHAIN",
+         "SONG"
+        ]
+       },
+       {
+        "key": "bank",
+        "label": "Bank",
+        "type": "select",
+        "options": [
+         "A",
+         "B",
+         "C",
+         "D",
+         "E",
+         "F",
+         "G",
+         "H"
+        ],
+        "help": "8 banks x 16 patterns = 128 per project"
+       },
+       {
+        "key": "pattern",
+        "label": "Pattern",
+        "type": "select",
+        "options": [
+         "01",
+         "02",
+         "03",
+         "04",
+         "05",
+         "06",
+         "07",
+         "08",
+         "09",
+         "10",
+         "11",
+         "12",
+         "13",
+         "14",
+         "15",
+         "16"
+        ]
+       },
+       {
+        "key": "chain",
+        "label": "Chain",
+        "type": "text",
+        "ph": "A01 > A03 > A02"
+       },
+       {
+        "key": "song",
+        "label": "Song slot",
+        "type": "select",
+        "options": [
+         "01",
+         "02",
+         "03",
+         "04",
+         "05",
+         "06",
+         "07",
+         "08",
+         "09",
+         "10",
+         "11",
+         "12",
+         "13",
+         "14",
+         "15",
+         "16"
+        ],
+        "help": "16 songs per project"
+       },
+       {
+        "key": "song_row",
+        "label": "Start at song row",
+        "type": "text",
+        "ph": "01-99"
+       }
+      ]
+     },
+     {
+      "name": "Tempo & length",
+      "fields": [
+       {
+        "key": "bpm",
+        "label": "BPM",
+        "type": "text",
+        "ph": "pattern BPM",
+        "help": "Tempo, swing and length are stored in the pattern"
+       },
+       {
+        "key": "swing",
+        "label": "Swing",
+        "type": "text",
+        "ph": "%"
+       },
+       {
+        "key": "scale_mode",
+        "label": "Scale mode",
+        "type": "select",
+        "options": [
+         "PER PATTERN",
+         "PER TRACK"
+        ]
+       },
+       {
+        "key": "length",
+        "label": "LENGTH",
+        "type": "text",
+        "ph": "16/64 steps"
+       },
+       {
+        "key": "scale",
+        "label": "SCALE",
+        "type": "select",
+        "options": [
+         "1/8X",
+         "1/4X",
+         "1/2X",
+         "3/4X",
+         "1X",
+         "3/2X",
+         "2X"
+        ]
+       },
+       {
+        "key": "m_len",
+        "label": "M.LEN (per track)",
+        "type": "text",
+        "ph": "steps or INF"
+       },
+       {
+        "key": "ch_len",
+        "label": "CH.LEN (per track)",
+        "type": "text",
+        "ph": "OFF or steps"
+       }
+      ]
+     },
+     {
+      "name": "Track mutes",
+      "fields": [
+       {
+        "key": "mutes",
+        "type": "tracks",
+        "label": "Muted at start (audio 1-8, MIDI 9-16)",
+        "tracks": [
+         "1",
+         "2",
+         "3",
+         "4",
+         "5",
+         "6",
+         "7",
+         "8",
+         "9",
+         "10",
+         "11",
+         "12",
+         "13",
+         "14",
+         "15",
+         "16"
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Audio tracks 1-8",
+      "fields": [
+       {
+        "key": "audio_tracks",
+        "type": "table",
+        "rows": [
+         "1",
+         "2",
+         "3",
+         "4",
+         "5",
+         "6",
+         "7",
+         "8"
+        ],
+        "cols": [
+         {
+          "key": "sound",
+          "label": "Sound / sample",
+          "ph": "kick, hat\u2026"
+         },
+         {
+          "key": "machine",
+          "label": "Machine",
+          "ph": "ONESHOT"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "MIDI tracks 9-16",
+      "help": "MIDI tracks send on the home channel of what they play (gear-kb): pick the channel, name the part.",
+      "fields": [
+       {
+        "key": "midi_tracks",
+        "type": "table",
+        "rows": [
+         "9",
+         "10",
+         "11",
+         "12",
+         "13",
+         "14",
+         "15",
+         "16"
+        ],
+        "cols": [
+         {
+          "key": "channel",
+          "label": "CHAN",
+          "options": "home_channels"
+         },
+         {
+          "key": "part",
+          "label": "Part / notes",
+          "ph": ""
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "MIDI CONFIG (global)",
+      "help": "Machine-wide settings, not per pattern. Check them if the box was used elsewhere.",
+      "fields": [
+       {
+        "key": "auto_channel",
+        "label": "AUTO CHANNEL",
+        "type": "text",
+        "kb": "14"
+       },
+       {
+        "key": "clock_receive",
+        "label": "CLOCK RECEIVE",
+        "type": "select",
+        "options": [
+         "ON",
+         "OFF"
+        ],
+        "kb": "ON"
+       },
+       {
+        "key": "clock_send",
+        "label": "CLOCK SEND",
+        "type": "select",
+        "options": [
+         "ON",
+         "OFF"
+        ],
+        "kb": "ON"
+       },
+       {
+        "key": "transport_receive",
+        "label": "TRANSPORT RECEIVE",
+        "type": "select",
+        "options": [
+         "ON",
+         "OFF"
+        ],
+        "kb": "ON"
+       },
+       {
+        "key": "transport_send",
+        "label": "TRANSPORT SEND",
+        "type": "select",
+        "options": [
+         "ON",
+         "OFF"
+        ],
+        "kb": "ON"
+       },
+       {
+        "key": "prg_ch_receive",
+        "label": "PRG CH RECEIVE",
+        "type": "select",
+        "options": [
+         "ON",
+         "OFF"
+        ]
+       },
+       {
+        "key": "prg_ch_send",
+        "label": "PRG CH SEND",
+        "type": "select",
+        "options": [
+         "ON",
+         "OFF"
+        ]
+       },
+       {
+        "key": "out_port",
+        "label": "OUT PORT FUNCTIONALITY",
+        "type": "select",
+        "options": [
+         "MIDI",
+         "DIN 24",
+         "DIN 48"
+        ],
+        "kb": "MIDI"
+       },
+       {
+        "key": "thru_port",
+        "label": "THRU PORT FUNCTIONALITY",
+        "type": "select",
+        "options": [
+         "MIDI",
+         "DIN 24",
+         "DIN 48"
+        ]
+       },
+       {
+        "key": "input_from",
+        "label": "INPUT FROM",
+        "type": "select",
+        "options": [
+         "DISABLED",
+         "MIDI",
+         "USB",
+         "MIDI+USB"
+        ],
+        "kb": "MIDI"
+       },
+       {
+        "key": "output_to",
+        "label": "OUTPUT TO",
+        "type": "select",
+        "options": [
+         "DISABLED",
+         "MIDI",
+         "USB",
+         "MIDI+USB"
+        ],
+        "kb": "MIDI"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "korg-m1",
+   "name": "Korg M1 (1993)",
+   "manufacturer": "Korg",
+   "model": "M1",
+   "category": "synth",
+   "group": "Synths & drum machines",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/korg-m1.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": {
+    "in": 3,
+    "out": 3,
+    "note": "Set in GLOBAL mode, F5-1 (Global MIDI channel) -- verified in the OCR'd owner's manual 2026-09-23. In Combination/Multi use, each Timbre also has its own receive channel (Combination F2-1 MIDI CH); only Timbres on the Global channel sound from the M1's own keyboard."
+   },
+   "ports": [
+    {
+     "name": "MIDI OUT",
+     "dir": "out",
+     "evidence": "korg-m1-manual/10-rear-panel.md (bold jack label; manual text is not copied)",
+     "medium": "midi",
+     "source": "manual"
+    },
+    {
+     "name": "MIDI THRU",
+     "dir": "out",
+     "evidence": "korg-m1-manual/10-rear-panel.md (bold jack label; manual text is not copied)",
+     "medium": "midi",
+     "source": "manual"
+    },
+    {
+     "name": "PHONES",
+     "dir": "out",
+     "evidence": "korg-m1-manual/10-rear-panel.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "MIDI In",
+     "dir": "in",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'synth' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "roland-mc-303",
+   "name": "Roland MC-303",
+   "manufacturer": "Roland",
+   "model": "MC-303",
+   "category": "groovebox",
+   "group": "Synths & drum machines",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/roland-mc-303.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": {
+    "in": "omni",
+    "role": "normal mode: incoming notes go to the Part chosen with PART SELECT",
+    "note": "CORRECTION 2026-09-23 (from the OCR'd owner's manual): the MC-303 has no single settable MIDI channel, so the home channel 12 assigned earlier cannot be set. In normal mode it plays incoming MIDI on ANY channel into the Part selected with PART SELECT (effectively omni). In Sound Module mode each Part has a fixed receive channel (see MIDI Implementation). It TRANSMITS Parts 1-7 on channels 1-7 and the Rhythm Part on channel 10 (fixed). Practical rule: give it its own MIDI line, and don't merge its MIDI OUT into the RD-9/Digitakt chain. Channel 12 is free again. Accepted by the owner 2026-09-23."
+   },
+   "ports": [
+    {
+     "name": "MIDI IN",
+     "dir": "in",
+     "evidence": "roland-mc-303-manual/242-midi-in-connector.md (bold jack label; manual text is not copied)",
+     "medium": "midi",
+     "source": "manual"
+    },
+    {
+     "name": "MIDI OUT",
+     "dir": "out",
+     "evidence": "roland-mc-303-manual/241-midi-out-connector.md (bold jack label; manual text is not copied)",
+     "medium": "midi",
+     "source": "manual"
+    },
+    {
+     "name": "MONO",
+     "dir": "out",
+     "evidence": "roland-mc-303-manual/297-mono-controller-number-126.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "OUT",
+     "dir": "out",
+     "evidence": "roland-mc-303-manual/343-re-transmitting-midi-messages-received-at-midi-in-directly-f.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "OUTPUT jacks R/L",
+     "dir": "out",
+     "evidence": "roland-mc-303-manual/50-output-jacks-r-l-mono.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "PHONES",
+     "dir": "out",
+     "evidence": "roland-mc-303-manual/51-phones-jack.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    }
+   ]
+  },
+  {
+   "id": "akai-timbre-wolf",
+   "name": "Akai Timbre Wolf",
+   "manufacturer": "Akai Professional",
+   "model": "Timbre Wolf",
+   "category": "synth",
+   "group": "Synths & drum machines",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/akai-timbre-wolf.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": {
+    "in": 5,
+    "out": 5,
+    "role": "MIDI Ch (Voice 1 channel)",
+    "note": "Per manual, voices 2-4 answer on the next three channels, so 5-8 are all reserved for it (voice 1 = 5). In Poly/Unison mode only 5 is used, but 6-8 stay reserved."
+   },
+   "ports": [
+    {
+     "name": "Audio Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'synth' (not found in the manual)"
+    },
+    {
+     "name": "MIDI In",
+     "dir": "in",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'synth' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'synth' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "sonicware-liven-texture-lab",
+   "name": "Sonicware Liven Texture Lab",
+   "manufacturer": "Sonicware",
+   "model": "Liven Texture Lab",
+   "category": "synth",
+   "group": "Synths & drum machines",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/sonicware-liven-texture-lab.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": {
+    "in": 9,
+    "out": 9,
+    "note": "RX.CH = 9 and TX.CH = 9 in the MIDI settings (manual: ALL / CH.01-16 / NONE)."
+   },
+   "ports": [
+    {
+     "name": "Audio Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'synth' (not found in the manual)"
+    },
+    {
+     "name": "MIDI In",
+     "dir": "in",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'synth' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'synth' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "dreadbox-typhon",
+   "name": "Dreadbox Typhon",
+   "manufacturer": "Dreadbox",
+   "model": "Typhon",
+   "category": "synth",
+   "group": "Synths & drum machines",
+   "in_use": true,
+   "role": "",
+   "note": "Added 2026-09-20 from the owner's routing answers; name as given, not verified.",
+   "icon": "icons/dreadbox-typhon.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": {
+    "in": 2,
+    "note": "Global Settings > MIDI CHANNELS > INPUT = 2 (never ALL). MASTER CLOCK = External. The manual's menu lists only an input channel."
+   },
+   "ports": [
+    {
+     "name": "Audio Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'synth' (not found in the manual)"
+    },
+    {
+     "name": "MIDI In",
+     "dir": "in",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'synth' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'synth' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-k2",
+   "name": "Behringer K2",
+   "manufacturer": "Behringer",
+   "model": "K2",
+   "category": "synth",
+   "group": "Synths & drum machines",
+   "in_use": true,
+   "role": "",
+   "note": "Added 2026-09-20 from the owner's routing answers; name as given, not verified. Swaps with the Donner B1 in the MIDI chain.",
+   "icon": "icons/behringer-k2.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": {
+    "in": 1,
+    "note": "Rear-panel MIDI channel switches. MIDI IN/THRU only, no MIDI OUT, so no out channel. Played by a Digitakt MIDI track set to 1."
+   },
+   "ports": [
+    {
+     "name": "MIDI IN",
+     "dir": "in",
+     "evidence": "behringer-k2-quick-start/12-midi-in-section.md (bold jack label; manual text is not copied)",
+     "medium": "midi",
+     "source": "manual"
+    },
+    {
+     "name": "SIGNAL IN",
+     "dir": "in",
+     "evidence": "behringer-k2-quick-start/17-patchbay-3-5-mm-ts-connections.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "Audio Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'synth' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'synth' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "korg-sq-64",
+   "name": "Korg SQ-64",
+   "manufacturer": "Korg",
+   "model": "SQ-64",
+   "category": "sequencer",
+   "group": "Controllers & sequencers",
+   "in_use": true,
+   "role": "",
+   "note": "Added 2026-09-20 from the owner's routing answers; name as given, not verified. Sends CV/gate/trig to the Eurorack.",
+   "icon": "icons/korg-sq-64.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "MIDI Out",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'sequencer' (not found in the manual)"
+    },
+    {
+     "name": "CV Out",
+     "dir": "out",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'sequencer' (not found in the manual)"
+    },
+    {
+     "name": "Gate Out",
+     "dir": "out",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'sequencer' (not found in the manual)"
+    },
+    {
+     "name": "Clock In",
+     "dir": "in",
+     "medium": "clock",
+     "source": "default",
+     "evidence": "default for category 'sequencer' (not found in the manual)"
+    },
+    {
+     "name": "Clock Out",
+     "dir": "out",
+     "medium": "clock",
+     "source": "default",
+     "evidence": "default for category 'sequencer' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "arturia-keystep",
+   "name": "Arturia KeyStep",
+   "manufacturer": "Arturia",
+   "model": "KeyStep",
+   "category": "controller",
+   "group": "Controllers & sequencers",
+   "in_use": true,
+   "role": "",
+   "note": "Added 2026-09-20 from the owner's routing answers. The original KeyStep (not Pro/32/37); first entered as 'Beatstep' by mistake and corrected by the owner the same day. Sends CV/gate/trig to the Eurorack.",
+   "icon": "icons/arturia-keystep.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "MIDI input/output",
+     "dir": "in",
+     "evidence": "arturia-keystep-manual/16-rear-panel-overview.md (bold jack label; manual text is not copied)",
+     "medium": "midi",
+     "source": "manual"
+    },
+    {
+     "name": "Transposition Input",
+     "dir": "in",
+     "evidence": "arturia-keystep-manual/55-working-with-device-settings.md (bold jack label; manual text is not copied)",
+     "medium": "midi",
+     "source": "manual"
+    },
+    {
+     "name": "USB",
+     "dir": "bidir",
+     "medium": "usb",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    },
+    {
+     "name": "CV Out",
+     "dir": "out",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    },
+    {
+     "name": "Gate Out",
+     "dir": "out",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    },
+    {
+     "name": "Clock In",
+     "dir": "in",
+     "medium": "clock",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-rd-9",
+   "name": "Behringer RD-9 Rhythm Designer",
+   "manufacturer": "Behringer",
+   "model": "RD-9",
+   "category": "drum-machine",
+   "group": "Synths & drum machines",
+   "in_use": true,
+   "role": "Main drum machine for everything.",
+   "note": "Owner-downloaded manual ingested 2026-09-20.",
+   "icon": "icons/behringer-rd-9.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": {
+    "in": 10,
+    "out": 10,
+    "note": "Owner: RD-9 sends on 10 and is the master clock (SYNC = INTERNAL). MIDI IN channel: 10 (or 'Out', which follows the out channel). SOFT THRU off -- per the manual it turns MIDI OUT into a second THRU."
+   },
+   "ports": [
+    {
+     "name": "BASS INDIVIDUAL OUTPUT",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/18-rear-panel-connections.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "CLAP INDIVIDUAL OUTPUT",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/18-rear-panel-connections.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "CRASH INDIVIDUAL OUTPUT",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/18-rear-panel-connections.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "HI HAT INDIVIDUAL OUTPUT",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/18-rear-panel-connections.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "HI TOM INDIVIDUAL OUTPUT",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/18-rear-panel-connections.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "LOW TOM INDIVIDUAL OUTPUT",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/18-rear-panel-connections.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "MID TOM INDIVIDUAL OUTPUT",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/18-rear-panel-connections.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "MIDI IN",
+     "dir": "in",
+     "evidence": "behringer-rd-9-manual/18-rear-panel-connections.md (bold jack label; manual text is not copied)",
+     "medium": "midi",
+     "source": "manual"
+    },
+    {
+     "name": "MIDI OUT",
+     "dir": "out",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "midi",
+     "source": "connections"
+    },
+    {
+     "name": "MIDI THRU",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/18-rear-panel-connections.md (bold jack label; manual text is not copied)",
+     "medium": "midi",
+     "source": "manual"
+    },
+    {
+     "name": "MONO",
+     "dir": "out",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "audio",
+     "source": "connections"
+    },
+    {
+     "name": "PHONES",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/07-volume-section.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "RIDE INDIVIDUAL OUTPUT",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/18-rear-panel-connections.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "RIM SHOT INDIVIDUAL OUTPUT",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/18-rear-panel-connections.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "SEND",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/09-wave-designer.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "SNARE INDIVIDUAL OUTPUT",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/18-rear-panel-connections.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "SUSTAIN",
+     "dir": "in",
+     "evidence": "behringer-rd-9-manual/09-wave-designer.md (bold jack label; manual text is not copied)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "SYNC OUT",
+     "dir": "out",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "clock",
+     "source": "connections"
+    },
+    {
+     "name": "TRIG",
+     "dir": "in",
+     "evidence": "behringer-rd-9-manual/12-sync-section.md (bold jack label; manual text is not copied)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "TRIGGER",
+     "dir": "in",
+     "evidence": "behringer-rd-9-manual/15-step-note-repeat-section.md (bold jack label; manual text is not copied)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "TRIGGER OUT 1 RIM SHOT",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/18-rear-panel-connections.md (bold jack label; manual text is not copied)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "TRIGGER OUT 2 CLAP",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/18-rear-panel-connections.md (bold jack label; manual text is not copied)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "TRIGGER OUT 3 BD ASSIGNABLE",
+     "dir": "out",
+     "evidence": "behringer-rd-9-manual/18-rear-panel-connections.md (bold jack label; manual text is not copied)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "USB",
+     "dir": "bidir",
+     "evidence": "behringer-rd-9-manual/12-sync-section.md (bold jack label; manual text is not copied)",
+     "medium": "usb",
+     "source": "manual"
+    },
+    {
+     "name": "Sync In",
+     "dir": "in",
+     "medium": "clock",
+     "source": "default",
+     "evidence": "default for category 'drum-machine' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "roland-tr-505",
+   "name": "Roland TR-505",
+   "manufacturer": "Roland",
+   "model": "TR-505",
+   "category": "drum-machine",
+   "group": "Synths & drum machines",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/roland-tr-505.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": {
+    "in": 11,
+    "out": 11,
+    "note": "Verified in the OCR'd owner's manual 2026-09-23: in the MIDI function, set OMNI OFF (Down key) and the receive channel with Up/Down (1-16). The TRANSMIT channel is per drum voice (factory: 10 for every voice) -- set each voice to 11, otherwise it transmits on the RD-9's channel 10. Drum voice key numbers (25-99) are set there too."
+   },
+   "ports": [
+    {
+     "name": "Main Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'drum-machine' (not found in the manual)"
+    },
+    {
+     "name": "MIDI In",
+     "dir": "in",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'drum-machine' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'drum-machine' (not found in the manual)"
+    },
+    {
+     "name": "Sync In",
+     "dir": "in",
+     "medium": "clock",
+     "source": "default",
+     "evidence": "default for category 'drum-machine' (not found in the manual)"
+    },
+    {
+     "name": "Sync Out",
+     "dir": "out",
+     "medium": "clock",
+     "source": "default",
+     "evidence": "default for category 'drum-machine' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "akai-rhythm-wolf",
+   "name": "Akai Rhythm Wolf",
+   "manufacturer": "Akai Professional",
+   "model": "Rhythm Wolf",
+   "category": "drum-machine",
+   "group": "Synths & drum machines",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/akai-rhythm-wolf.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": {
+    "role": "fixed: drum voices on ch 10, bass synth on ch 1",
+    "note": "No settable channel. Akai's official MIDI implementation page (Akai Japan, dated 2014-12-24; archived copy at https://web.archive.org/web/20170729082239/http://www.akai-pro.jp:80/rhythm-wolf/data/midi.php, saved as sources/akai-rhythm-wolf-midi-implementation.pdf) lists fixed channels: KICK 36, SNARE 38, PERC 40, HH OPEN 42, HH CLOSE 44 on ch 10; BASS SYNTH note 36 on ch 1; velocities 0/42/84/127. So it CANNOT take home channel 15 (released). Its drums collide with the RD-9 (10) and its bass with the K2 (1): give it its own MIDI line, never the RD-9/Digitakt/Thru5 chain."
+   },
+   "ports": [
+    {
+     "name": "Main Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'drum-machine' (not found in the manual)"
+    },
+    {
+     "name": "MIDI In",
+     "dir": "in",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'drum-machine' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'drum-machine' (not found in the manual)"
+    },
+    {
+     "name": "Sync In",
+     "dir": "in",
+     "medium": "clock",
+     "source": "default",
+     "evidence": "default for category 'drum-machine' (not found in the manual)"
+    },
+    {
+     "name": "Sync Out",
+     "dir": "out",
+     "medium": "clock",
+     "source": "default",
+     "evidence": "default for category 'drum-machine' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "midi-thru5",
+   "name": "MIDI Thru5",
+   "manufacturer": "",
+   "model": "",
+   "category": "midi-utility",
+   "group": "MIDI & utility",
+   "in_use": true,
+   "role": "",
+   "note": "1-in/5-out MIDI thru box. Equipment List.md wrote 'MIDI Thru5 WC'; the owner believes WC is a typo, so the name is kept as MIDI Thru5. FLAG (2026-09-23, assistant, not owner-confirmed): a manual search found an official CME product literally named 'MIDI Thru5 WC' (WC = its Bluetooth-MIDI variant) at cme-pro.com, matching the original 'WC' spelling exactly -- it may not be a typo after all, and the manufacturer may be CME rather than unknown. Owner should confirm against the physical unit before this is treated as fact.",
+   "icon": "icons/midi-thru5.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "MIDI In",
+     "dir": "in",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'midi-utility' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out 1",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'midi-utility' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out 2",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'midi-utility' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out 3",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'midi-utility' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out 4",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'midi-utility' (not found in the manual)"
+    },
+    {
+     "name": "MIDI Out 5",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "default for category 'midi-utility' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "schecter-ultra-iii",
+   "name": "Schecter Ultra III",
+   "manufacturer": "Schecter",
+   "model": "",
+   "category": "guitar",
+   "group": "Instruments",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/schecter-ultra-iii.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Output",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'guitar' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "fender-mustang-bass",
+   "name": "Fender Mustang Bass",
+   "manufacturer": "Fender",
+   "model": "",
+   "category": "bass",
+   "group": "Instruments",
+   "in_use": true,
+   "role": "",
+   "note": "FLAG (2026-09-23, assistant): a manual/image search could not confirm which Mustang Bass variant this is (e.g. Player Mustang Bass PJ vs. Vintera vs. American Vintage reissue) -- no model-specific manual exists for any variant, and Fender only publishes one generic bass-guitar owner's manual. Owner input needed to narrow it down.",
+   "icon": "icons/fender-mustang-bass.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Output",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'bass' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "laney-150w-bass-amp",
+   "name": "Laney 150W bass amp",
+   "manufacturer": "Laney",
+   "model": "",
+   "category": "amp",
+   "group": "Pedals & amps",
+   "in_use": true,
+   "role": "",
+   "note": "FLAG (2026-09-23, assistant): a manual/image search could not confirm the exact model. Candidates that are all marketed near 150W: Laney RBW200 (Richter series, current), Laney G150 (older 4x10 combo, discontinued), Laney RB4 (165W, close but not exact). Owner should check the amp's badge/back panel before a manual is fetched.",
+   "icon": "icons/laney-150w-bass-amp.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'amp' (not found in the manual)"
+    },
+    {
+     "name": "Speaker Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'amp' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "roland-kc-150",
+   "name": "Roland KC-150",
+   "manufacturer": "Roland",
+   "model": "",
+   "category": "amp",
+   "group": "Pedals & amps",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/roland-kc-150.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'amp' (not found in the manual)"
+    },
+    {
+     "name": "Speaker Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'amp' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "roland-kc-100",
+   "name": "Roland KC-100",
+   "manufacturer": "Roland",
+   "model": "",
+   "category": "amp",
+   "group": "Pedals & amps",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/roland-kc-100.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'amp' (not found in the manual)"
+    },
+    {
+     "name": "Speaker Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'amp' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "tc-electronic-combo-deluxe-65",
+   "name": "TC Electronic Combo Deluxe '65",
+   "manufacturer": "TC Electronic",
+   "model": "",
+   "category": "di-preamp",
+   "group": "MIDI & utility",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/tc-electronic-combo-deluxe-65.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'di-preamp' (not found in the manual)"
+    },
+    {
+     "name": "Output",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'di-preamp' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-gdi21",
+   "name": "Behringer GDI21 Driver DI",
+   "manufacturer": "Behringer",
+   "model": "",
+   "category": "di-preamp",
+   "group": "MIDI & utility",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/behringer-gdi21.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'di-preamp' (not found in the manual)"
+    },
+    {
+     "name": "Output",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'di-preamp' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-hell-babe",
+   "name": "Behringer Hell Babe",
+   "manufacturer": "Behringer",
+   "model": "",
+   "category": "pedal-wah",
+   "group": "Pedals & amps",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/behringer-hell-babe.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-wah' (not found in the manual)"
+    },
+    {
+     "name": "Output",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-wah' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-ultra-tremolo",
+   "name": "Behringer Ultra Tremolo",
+   "manufacturer": "Behringer",
+   "model": "",
+   "category": "pedal-modulation",
+   "group": "Pedals & amps",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/behringer-ultra-tremolo.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-modulation' (not found in the manual)"
+    },
+    {
+     "name": "Output",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-modulation' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "proco-rat",
+   "name": "ProCo Rat",
+   "manufacturer": "ProCo",
+   "model": "",
+   "category": "pedal-distortion",
+   "group": "Pedals & amps",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/proco-rat.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-distortion' (not found in the manual)"
+    },
+    {
+     "name": "Output",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-distortion' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-ultra-fuzz",
+   "name": "Behringer Ultra Fuzz",
+   "manufacturer": "Behringer",
+   "model": "",
+   "category": "pedal-distortion",
+   "group": "Pedals & amps",
+   "in_use": true,
+   "role": "",
+   "note": "FLAG (2026-09-23, assistant, not owner-confirmed): a manual/image search identified this as model UZ400 (discontinued; no official page remains). Not added as `model:` until confirmed against the unit.",
+   "icon": "icons/behringer-ultra-fuzz.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-distortion' (not found in the manual)"
+    },
+    {
+     "name": "Output",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-distortion' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "sonicake-tonegroup-10-band-eq",
+   "name": "Sonicake ToneGroup 10-band EQ",
+   "manufacturer": "Sonicake",
+   "model": "",
+   "category": "pedal-eq",
+   "group": "Pedals & amps",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/sonicake-tonegroup-10-band-eq.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-eq' (not found in the manual)"
+    },
+    {
+     "name": "Output",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-eq' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "sonicake-levitate",
+   "name": "Sonicake Levitate reverb/delay",
+   "manufacturer": "Sonicake",
+   "model": "",
+   "category": "pedal-time",
+   "group": "Pedals & amps",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/sonicake-levitate.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-time' (not found in the manual)"
+    },
+    {
+     "name": "Output",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-time' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "deadbeat-echolation-station",
+   "name": "Deadbeat Echolation Station",
+   "manufacturer": "Deadbeat",
+   "model": "",
+   "category": "pedal-time",
+   "group": "Pedals & amps",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/deadbeat-echolation-station.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-time' (not found in the manual)"
+    },
+    {
+     "name": "Output",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-time' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-digital-delay",
+   "name": "Behringer Digital Delay",
+   "manufacturer": "Behringer",
+   "model": "",
+   "category": "pedal-time",
+   "group": "Pedals & amps",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/behringer-digital-delay.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-time' (not found in the manual)"
+    },
+    {
+     "name": "Output",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-time' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-chromatic-tuner",
+   "name": "Behringer Chromatic Tuner",
+   "manufacturer": "Behringer",
+   "model": "",
+   "category": "pedal-utility",
+   "group": "MIDI & utility",
+   "in_use": true,
+   "role": "",
+   "note": "FLAG (2026-09-23, assistant, not owner-confirmed): a manual/image search identified this as model TU100. Behringer's CT100 is a cable tester, not a tuner, so CT100 would be the wrong model to search for. Not added as `model:` until confirmed against the unit.",
+   "icon": "icons/behringer-chromatic-tuner.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-utility' (not found in the manual)"
+    },
+    {
+     "name": "Output",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-utility' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "electro-harmonix-modrex",
+   "name": "Electro-Harmonix ModRex",
+   "manufacturer": "Electro-Harmonix",
+   "model": "",
+   "category": "pedal-modulation",
+   "group": "Pedals & amps",
+   "in_use": true,
+   "role": "",
+   "note": "Written 'ElectroHarmonix ModRex' in Equipment List.md.",
+   "icon": "icons/electro-harmonix-modrex.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "INPUT",
+     "dir": "in",
+     "evidence": "electro-harmonix-modrex-manual/26-input-and-ouput.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "OUTPUT",
+     "dir": "out",
+     "evidence": "electro-harmonix-modrex-manual/26-input-and-ouput.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    }
+   ]
+  },
+  {
+   "id": "earthquaker-bit-commander",
+   "name": "EarthQuaker Bit Commander",
+   "manufacturer": "EarthQuaker Devices",
+   "model": "",
+   "category": "pedal-synth",
+   "group": "Pedals & amps",
+   "in_use": true,
+   "role": "",
+   "note": "",
+   "icon": "icons/earthquaker-bit-commander.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Input",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-synth' (not found in the manual)"
+    },
+    {
+     "name": "Output",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'pedal-synth' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-cp1a",
+   "name": "Behringer CP1A power supply",
+   "manufacturer": "Behringer",
+   "model": "",
+   "category": "eurorack-power",
+   "group": "Eurorack cases & power",
+   "in_use": true,
+   "role": "",
+   "note": "Power supply. Written 'cp1A' in the list.",
+   "icon": "icons/behringer-cp1a.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 39,
+     "status": "single"
+    },
+    "hp": {
+     "value": 4,
+     "status": "override"
+    },
+    "ma_m12": {
+     "value": 1000,
+     "status": "confirmed"
+    },
+    "ma_p12": {
+     "value": 1000,
+     "status": "confirmed"
+    },
+    "ma_p5": {
+     "value": 500,
+     "status": "confirmed"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "3U",
+    "row_index": 3,
+    "position": 1
+   },
+   "hp": 4,
+   "format": "3U",
+   "panel": null,
+   "supply_load": {
+    "+12V": {
+     "draw_ma": 795,
+     "capacity_ma": 1000,
+     "pct": 80
+    },
+    "+5V": {
+     "draw_ma": 0,
+     "capacity_ma": 500,
+     "pct": 0
+    },
+    "-12V": {
+     "draw_ma": 349,
+     "capacity_ma": 1000,
+     "pct": 35
+    }
+   },
+   "midi": null,
+   "ports": []
+  },
+  {
+   "id": "jakes-clock-and-musical-divider",
+   "name": "Jake's Custom Shop Clock and Musical Divider",
+   "manufacturer": "Jake's Custom Shop",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Maker confirmed by the owner 2026-09-20 (small indie maker, jakescustomshop.com). ModularGrid lists it as the JCS Clock and Musical Divider.",
+   "icon": "icons/jakes-clock-and-musical-divider.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 15,
+     "status": "confirmed"
+    },
+    "hp": {
+     "value": 8,
+     "status": "confirmed"
+    },
+    "ma_m12": {
+     "value": 0,
+     "status": "confirmed"
+    },
+    "ma_p12": {
+     "value": 90,
+     "status": "confirmed"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "confirmed"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "3U",
+    "row_index": 2,
+    "position": 1
+   },
+   "hp": 8,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Clock In",
+     "dir": "in",
+     "medium": "clock",
+     "source": "connections",
+     "evidence": "connections.yaml records the cable but not the jack name"
+    }
+   ]
+  },
+  {
+   "id": "after-later-audio-dice",
+   "name": "After Later Audio Dice",
+   "manufacturer": "After Later Audio",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified.",
+   "icon": "icons/after-later-audio-dice.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 25,
+     "status": "single"
+    },
+    "hp": {
+     "value": 18,
+     "status": "confirmed"
+    },
+    "ma_m12": {
+     "value": 20,
+     "status": "confirmed"
+    },
+    "ma_p12": {
+     "value": 80,
+     "status": "confirmed"
+    },
+    "ma_p5": {
+     "value": null,
+     "status": "missing"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "3U",
+    "row_index": 3,
+    "position": 2
+   },
+   "hp": 18,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "CLOCK",
+     "dir": "in",
+     "evidence": "after-later-audio-dice__original-design.pdf (pdftotext)",
+     "medium": "clock",
+     "source": "manual"
+    },
+    {
+     "name": "Gate outputs",
+     "dir": "out",
+     "evidence": "after-later-dice-marbles-manual/03-gate-outputs.md (bold jack label; manual text is not copied)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "after-later-audio-resonate",
+   "name": "After Later Audio Resonate",
+   "manufacturer": "After Later Audio",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified.",
+   "icon": "icons/after-later-audio-resonate.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 25,
+     "status": "single"
+    },
+    "hp": {
+     "value": 14,
+     "status": "confirmed"
+    },
+    "ma_m12": {
+     "value": 5,
+     "status": "confirmed"
+    },
+    "ma_p12": {
+     "value": 110,
+     "status": "single"
+    },
+    "ma_p5": {
+     "value": null,
+     "status": "missing"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "3U",
+    "row_index": 2,
+    "position": 5
+   },
+   "hp": 14,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Audio INPUT",
+     "dir": "in",
+     "evidence": "after-later-resonate-rings-manual/05-controls-inputs-and-outputs.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "IN",
+     "dir": "in",
+     "evidence": "after-later-resonate-rings-manual/04-making-the-right-connections.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "Odd and even audio outputs",
+     "dir": "out",
+     "evidence": "after-later-resonate-rings-manual/05-controls-inputs-and-outputs.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "Resonator parameters CV inputs",
+     "dir": "in",
+     "evidence": "after-later-resonate-rings-manual/05-controls-inputs-and-outputs.md (bold jack label; manual text is not copied)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "Strumming trigger input",
+     "dir": "in",
+     "evidence": "after-later-resonate-rings-manual/05-controls-inputs-and-outputs.md (bold jack label; manual text is not copied)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "V/OCT",
+     "dir": "in",
+     "evidence": "after-later-resonate-rings-manual/04-making-the-right-connections.md (bold jack label; manual text is not copied)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "V/oct CV input",
+     "dir": "in",
+     "evidence": "after-later-resonate-rings-manual/05-controls-inputs-and-outputs.md (bold jack label; manual text is not copied)",
+     "medium": "cv",
+     "source": "manual"
+    }
+   ]
+  },
+  {
+   "id": "ugrids",
+   "name": "uGrids",
+   "manufacturer": "After Later Audio",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Maker (After Later Audio) confirmed by the owner 2026-09-20.",
+   "icon": "icons/ugrids.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": null,
+     "status": "missing"
+    },
+    "hp": {
+     "value": 8,
+     "status": "confirmed"
+    },
+    "ma_m12": {
+     "value": 1,
+     "status": "confirmed"
+    },
+    "ma_p12": {
+     "value": 25,
+     "status": "confirmed"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "single"
+    }
+   },
+   "placement": {
+    "case": "cre8audio-niftycase",
+    "powered_by": "cre8audio-niftycase",
+    "row_index": 1,
+    "position": 1
+   },
+   "hp": 8,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "ACCENT",
+     "dir": "in",
+     "evidence": "ugrids-grids-manual/11-alternate-output-layout.md (bold jack label; manual text is not copied)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "CLOCK",
+     "dir": "in",
+     "evidence": "ugrids-grids-manual/04-inputs-and-outputs.md (bold jack label; manual text is not copied)",
+     "medium": "clock",
+     "source": "manual"
+    },
+    {
+     "name": "RESET",
+     "dir": "in",
+     "evidence": "ugrids-grids-manual/04-inputs-and-outputs.md (bold jack label; manual text is not copied)",
+     "medium": "clock",
+     "source": "manual"
+    },
+    {
+     "name": "TRIG",
+     "dir": "out",
+     "evidence": "ugrids-grids-manual/04-inputs-and-outputs.md (bold jack label; manual text is not copied)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "Trig / Gate output",
+     "dir": "out",
+     "evidence": "ugrids-grids-manual/10-trig-gate-output.md (bold jack label; manual text is not copied)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "zlob-fade-lfo",
+   "name": "Z\u0142ob Fade LFO",
+   "manufacturer": "",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified. FLAG (2026-09-23, assistant, not owner-confirmed): an image search found the maker (zlobmodular.com) calls this product the 'Skew-Fade LFO', not 'Fade LFO' -- likely the same module under its full name.",
+   "icon": "icons/zlob-fade-lfo.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 45,
+     "status": "single"
+    },
+    "hp": {
+     "value": 3,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": 15,
+     "status": "single"
+    },
+    "ma_p12": {
+     "value": 15,
+     "status": "single"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "single"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "3U",
+    "row_index": 2,
+    "position": 3
+   },
+   "hp": 3,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "moth-hunter-mods-razcalito",
+   "name": "Moth Hunter Mods Razcalito",
+   "manufacturer": "Moth Hunter Mods",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified.",
+   "icon": "icons/moth-hunter-mods-razcalito.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 15,
+     "status": "single"
+    },
+    "hp": {
+     "value": 4,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": 0,
+     "status": "inferred"
+    },
+    "ma_p12": {
+     "value": 0,
+     "status": "inferred"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "inferred"
+    }
+   },
+   "placement": {
+    "case": "cre8audio-niftycase",
+    "powered_by": "cre8audio-niftycase",
+    "row_index": 1,
+    "position": 3
+   },
+   "hp": 4,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "synthrotek-passive-mult",
+   "name": "Synthrotek passive mult",
+   "manufacturer": "Synthrotek",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified.",
+   "icon": "icons/synthrotek-passive-mult.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 14,
+     "status": "single"
+    },
+    "hp": {
+     "value": 2,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": 0,
+     "status": "inferred"
+    },
+    "ma_p12": {
+     "value": 0,
+     "status": "inferred"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "inferred"
+    }
+   },
+   "placement": {
+    "case": "cre8audio-niftycase",
+    "powered_by": "cre8audio-niftycase",
+    "row_index": 1,
+    "position": 5
+   },
+   "hp": 2,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "synthrotek-mix",
+   "name": "Synthrotek MIX",
+   "manufacturer": "Synthrotek",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Identified by the owner 2026-09-23 from a photo of the NiftyCASE (it was missing from Equipment List.md). Maker page: 3-channel passive mixer/attenuator/averager, 2HP, no power draw.",
+   "icon": "icons/synthrotek-mix.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": null,
+     "status": "missing"
+    },
+    "hp": {
+     "value": 2,
+     "status": "confirmed"
+    },
+    "ma_m12": {
+     "value": 0,
+     "status": "override"
+    },
+    "ma_p12": {
+     "value": 0,
+     "status": "override"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "override"
+    }
+   },
+   "placement": {
+    "case": "cre8audio-niftycase",
+    "powered_by": "cre8audio-niftycase",
+    "row_index": 1,
+    "position": 8
+   },
+   "hp": 2,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "cre8audio-cellz",
+   "name": "Cre8audio Cellz",
+   "manufacturer": "Cre8audio",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified.",
+   "icon": "icons/cre8audio-cellz.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 30,
+     "status": "single"
+    },
+    "hp": {
+     "value": 12,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": 2,
+     "status": "single"
+    },
+    "ma_p12": {
+     "value": 3,
+     "status": "single"
+    },
+    "ma_p5": {
+     "value": 27,
+     "status": "single"
+    }
+   },
+   "placement": {
+    "case": "cre8audio-niftycase",
+    "powered_by": "cre8audio-niftycase",
+    "row_index": 1,
+    "position": 2
+   },
+   "hp": 12,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-961-interface",
+   "name": "Behringer 961 Interface",
+   "manufacturer": "Behringer",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified.",
+   "icon": "icons/behringer-961-interface.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 35,
+     "status": "single"
+    },
+    "hp": {
+     "value": 21,
+     "status": "confirmed"
+    },
+    "ma_m12": {
+     "value": 0,
+     "status": "single"
+    },
+    "ma_p12": {
+     "value": 50,
+     "status": "confirmed"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "single"
+    }
+   },
+   "placement": {
+    "case": "cre8audio-niftycase",
+    "powered_by": "cre8audio-niftycase",
+    "row_index": 1,
+    "position": 10
+   },
+   "hp": 21,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "AUDIO IN",
+     "dir": "in",
+     "evidence": "behringer-961-interface.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "S-TRIG IN",
+     "dir": "in",
+     "evidence": "behringer-961-interface.pdf (pdftotext)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "S-TRIG OUT",
+     "dir": "out",
+     "evidence": "behringer-961-interface.pdf (pdftotext)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "V-TRIG IN A / B",
+     "dir": "in",
+     "evidence": "behringer-961-interface.pdf (pdftotext)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "V-TRIG IN A/B",
+     "dir": "in",
+     "evidence": "behringer-961-interface.pdf (pdftotext)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "V-TRIG OUT",
+     "dir": "out",
+     "evidence": "behringer-961-interface.pdf (pdftotext)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "intellijel-quadratt-1u",
+   "name": "Intellijel Quadratt 1U",
+   "manufacturer": "Intellijel",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Listed as 'Intellijel Quatratt' in Equipment List.md; the owner confirmed the 1U version on 2026-09-20.",
+   "icon": "icons/intellijel-quadratt-1u.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 29,
+     "status": "single"
+    },
+    "hp": {
+     "value": 28,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": 23,
+     "status": "single"
+    },
+    "ma_p12": {
+     "value": 24,
+     "status": "single"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "single"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "1U",
+    "row_index": 1,
+    "position": 1
+   },
+   "hp": 28,
+   "format": "1U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "IN B . O",
+     "dir": "in",
+     "evidence": "intellijel-quadratt-1u.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "In A",
+     "dir": "in",
+     "evidence": "intellijel-quadratt-1u-manual/17-a-in-a.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "In B",
+     "dir": "in",
+     "evidence": "intellijel-quadratt-1u-manual/18-b-in-b.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "In C",
+     "dir": "in",
+     "evidence": "intellijel-quadratt-1u-manual/19-c-in-c.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "In D",
+     "dir": "in",
+     "evidence": "intellijel-quadratt-1u-manual/20-d-in-d.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "Out A",
+     "dir": "out",
+     "evidence": "intellijel-quadratt-1u-manual/21-e-out-a.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "Out B",
+     "dir": "out",
+     "evidence": "intellijel-quadratt-1u-manual/22-f-out-b.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "Out C",
+     "dir": "out",
+     "evidence": "intellijel-quadratt-1u-manual/23-g-out-c.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "Out D",
+     "dir": "out",
+     "evidence": "intellijel-quadratt-1u-manual/24-h-out-d.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "intellijel-stereo-mixer-1u",
+   "name": "Intellijel Stereo Mixer 1U",
+   "manufacturer": "Intellijel",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Listed as 'Intellijel dual mono line mixer' in Equipment List.md; the owner identified it as the Stereo Mixer 1U (Perfect Circuit listing) on 2026-09-20.",
+   "icon": "icons/intellijel-stereo-mixer-1u.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 25,
+     "status": "single"
+    },
+    "hp": {
+     "value": 16,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": 23,
+     "status": "single"
+    },
+    "ma_p12": {
+     "value": 17,
+     "status": "single"
+    },
+    "ma_p5": {
+     "value": null,
+     "status": "missing"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "1U",
+    "row_index": 1,
+    "position": 2
+   },
+   "hp": 16,
+   "format": "1U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "CHAIN-IN",
+     "dir": "in",
+     "evidence": "intellijel-stereo-mixer-1u-manual/08-back-panel.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "CHAIN-OUT",
+     "dir": "out",
+     "evidence": "intellijel-stereo-mixer-1u-manual/08-back-panel.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "IN 1L",
+     "dir": "in",
+     "evidence": "intellijel-stereo-mixer-1u-manual/07-front-panel.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "IN 1R",
+     "dir": "in",
+     "evidence": "intellijel-stereo-mixer-1u-manual/07-front-panel.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "IN 2L",
+     "dir": "in",
+     "evidence": "intellijel-stereo-mixer-1u-manual/07-front-panel.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "IN 2R",
+     "dir": "in",
+     "evidence": "intellijel-stereo-mixer-1u-manual/07-front-panel.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "Output",
+     "dir": "out",
+     "evidence": "intellijel-stereo-mixer-1u-manual/10-output-connection.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "intellijel-stereo-line-out-1u",
+   "name": "Intellijel Stereo Line Out 1U",
+   "manufacturer": "Intellijel",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "The 1/8\" L/R input half of the pair listed as 'Intellijel 1/8\" in and 1/4\" line outs'. the owner confirmed 2026-09-20 that the modules in his screenshot (a shop listing) are the ones he bought.",
+   "icon": "icons/intellijel-stereo-line-out-1u.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 29,
+     "status": "single"
+    },
+    "hp": {
+     "value": 8,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": 12,
+     "status": "single"
+    },
+    "ma_p12": {
+     "value": 19,
+     "status": "single"
+    },
+    "ma_p5": {
+     "value": null,
+     "status": "missing"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "1U",
+    "row_index": 1,
+    "position": 3
+   },
+   "hp": 8,
+   "format": "1U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "L Input",
+     "dir": "in",
+     "evidence": "intellijel-stereo-line-out-1u-manual/16-b-input-activity-leds.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "LINE OUT",
+     "dir": "out",
+     "evidence": "intellijel-stereo-line-out-1u.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "R Input",
+     "dir": "in",
+     "evidence": "intellijel-stereo-line-out-1u-manual/18-2-r-input.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "Stereo Out",
+     "dir": "out",
+     "evidence": "intellijel-stereo-line-out-1u-manual/21-stereo-out-jacks.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "Stereo Out Jacks 1U",
+     "dir": "out",
+     "evidence": "intellijel-stereo-line-out-1u-manual/04-stereo-out-jacks-1u-module.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "intellijel-audio-stereo-line-out-jacks-1u",
+   "name": "Intellijel Audio Stereo Line Out Jacks 1U",
+   "manufacturer": "Intellijel",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "The balanced 1/4\" TRS L/R jacks half of the pair; works with the Stereo Line Out 1U. the owner confirmed 2026-09-20 that the modules in his screenshot are the ones he bought.",
+   "icon": "icons/intellijel-audio-stereo-line-out-jacks-1u.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 34,
+     "status": "single"
+    },
+    "hp": {
+     "value": 8,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": null,
+     "status": "missing"
+    },
+    "ma_p12": {
+     "value": null,
+     "status": "missing"
+    },
+    "ma_p5": {
+     "value": null,
+     "status": "missing"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "1U",
+    "row_index": 1,
+    "position": 4
+   },
+   "hp": 8,
+   "format": "1U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "L/R (balanced TRS)",
+     "dir": "out",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "audio",
+     "source": "connections"
+    },
+    {
+     "name": "LINE OUT",
+     "dir": "out",
+     "evidence": "intellijel-audio-stereo-line-out-jacks-1u.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "cre8audio-captain-big-o",
+   "name": "Cre8audio Captain Big-O",
+   "manufacturer": "Cre8audio",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified.",
+   "icon": "icons/cre8audio-captain-big-o.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 26,
+     "status": "single"
+    },
+    "hp": {
+     "value": 14,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": 108,
+     "status": "single"
+    },
+    "ma_p12": {
+     "value": 120,
+     "status": "single"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "single"
+    }
+   },
+   "placement": {
+    "case": "cre8audio-niftycase",
+    "powered_by": "cre8audio-niftycase",
+    "row_index": 1,
+    "position": 7
+   },
+   "hp": 14,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "antumbra-atom",
+   "name": "Antumbra Atom",
+   "manufacturer": "Antumbra",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Smaller redesign of the Mutable Instruments Elements (DIY build page, not an operating manual). Specs 18HP, 33mm deep, +12V 130mA / -12V 10mA / +5V 0mA were extracted from the info page by an automated fetch: VERIFY against the page before using for a power budget.",
+   "icon": "icons/antumbra-atom.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 33,
+     "status": "single"
+    },
+    "hp": {
+     "value": 18,
+     "status": "confirmed"
+    },
+    "ma_m12": {
+     "value": 10,
+     "status": "confirmed"
+    },
+    "ma_p12": {
+     "value": 130,
+     "status": "confirmed"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "confirmed"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "3U",
+    "row_index": 3,
+    "position": 3
+   },
+   "hp": 18,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "IN FO",
+     "dir": "in",
+     "evidence": "antumbra-atom__spec.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "ddnipro-qtone",
+   "name": "DDNIPRO qTone Eurorack Dual Channel Quantiser Module",
+   "manufacturer": "DDNIPRO",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Name and maker spelling exactly as given by the owner 2026-09-20 (Equipment List.md had 'Dnipro Q tone'). Not independently verified.",
+   "icon": "icons/ddnipro-qtone.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 42,
+     "status": "single"
+    },
+    "hp": {
+     "value": 6,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": 22,
+     "status": "single"
+    },
+    "ma_p12": {
+     "value": 45,
+     "status": "single"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "single"
+    }
+   },
+   "placement": {
+    "case": "cre8audio-niftycase",
+    "powered_by": "cre8audio-niftycase",
+    "row_index": 1,
+    "position": 6
+   },
+   "hp": 6,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "CV 1",
+     "dir": "in",
+     "evidence": "ddnipro-qtone.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "CV 2",
+     "dir": "in",
+     "evidence": "ddnipro-qtone.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "IN",
+     "dir": "in",
+     "evidence": "ddnipro-qtone.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "OUT",
+     "dir": "out",
+     "evidence": "ddnipro-qtone.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "TRIG",
+     "dir": "in",
+     "evidence": "ddnipro-qtone.pdf (pdftotext)",
+     "medium": "gate",
+     "source": "manual"
+    }
+   ]
+  },
+  {
+   "id": "cre8audio-mr-philter",
+   "name": "Cre8audio Mr. PhilTer",
+   "manufacturer": "Cre8audio",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified.",
+   "icon": "icons/cre8audio-mr-philter.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 26,
+     "status": "single"
+    },
+    "hp": {
+     "value": 12,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": 36,
+     "status": "single"
+    },
+    "ma_p12": {
+     "value": 33,
+     "status": "single"
+    },
+    "ma_p5": {
+     "value": 22,
+     "status": "single"
+    }
+   },
+   "placement": {
+    "case": "cre8audio-niftycase",
+    "powered_by": "cre8audio-niftycase",
+    "row_index": 1,
+    "position": 9
+   },
+   "hp": 12,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "cosmotronic-delta-v",
+   "name": "Cosmotronic Delta-V",
+   "manufacturer": "Cosmotronic",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md. Maker confirmed 2026-09-23 from the official manual (Cosmotronic, The Hague; 10HP dual function generator with VCAs). Hardware revision: the owner thinks Rev 1 but is not sure (2026-09-23); Rev 1 and Rev 2 exist and the manual does not say which it covers.",
+   "icon": "icons/cosmotronic-delta-v.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 20,
+     "status": "single"
+    },
+    "hp": {
+     "value": 10,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": 70,
+     "status": "single"
+    },
+    "ma_p12": {
+     "value": 70,
+     "status": "single"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "single"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "3U",
+    "row_index": 3,
+    "position": 5
+   },
+   "hp": 10,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "CHANNEL 1 OUTPUT",
+     "dir": "out",
+     "evidence": "cosmotronic-delta-v.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "CV IN FOR ATTACK",
+     "dir": "in",
+     "evidence": "cosmotronic-delta-v.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "CV IN FOR DECAY",
+     "dir": "in",
+     "evidence": "cosmotronic-delta-v.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "CV OUT",
+     "dir": "out",
+     "evidence": "cosmotronic-delta-v.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "END OF CYCLE OUT",
+     "dir": "out",
+     "evidence": "cosmotronic-delta-v.pdf (pdftotext)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "ENVELOPE OUT",
+     "dir": "out",
+     "evidence": "cosmotronic-delta-v.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "GATE IN",
+     "dir": "in",
+     "evidence": "cosmotronic-delta-v.pdf (pdftotext)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "OUT 1",
+     "dir": "out",
+     "evidence": "cosmotronic-delta-v.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "OUTPUT",
+     "dir": "out",
+     "evidence": "cosmotronic-delta-v.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "SLEW INPUT",
+     "dir": "in",
+     "evidence": "cosmotronic-delta-v.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "SUM OUT OF 1+2",
+     "dir": "out",
+     "evidence": "cosmotronic-delta-v.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "TRIGGER INPUT",
+     "dir": "in",
+     "evidence": "cosmotronic-delta-v.pdf (pdftotext)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "VCA CV INPUT",
+     "dir": "in",
+     "evidence": "cosmotronic-delta-v.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "VCA IN FOR CHANNEL 1",
+     "dir": "in",
+     "evidence": "cosmotronic-delta-v.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "VCA IN FOR CHANNEL 2",
+     "dir": "in",
+     "evidence": "cosmotronic-delta-v.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    }
+   ]
+  },
+  {
+   "id": "erica-pico-mod",
+   "name": "Erica Pico Mod",
+   "manufacturer": "",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified.",
+   "icon": "icons/erica-pico-mod.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 35,
+     "status": "single"
+    },
+    "hp": {
+     "value": 3,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": 5,
+     "status": "single"
+    },
+    "ma_p12": {
+     "value": 28,
+     "status": "single"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "single"
+    }
+   },
+   "placement": {
+    "case": "cre8audio-niftycase",
+    "powered_by": "cre8audio-niftycase",
+    "row_index": 1,
+    "position": 4
+   },
+   "hp": 3,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "tiptop-audio-forbidden-planet-filter",
+   "name": "Tiptop Audio Forbidden Planet filter",
+   "manufacturer": "Tiptop Audio",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified.",
+   "icon": "icons/tiptop-audio-forbidden-planet-filter.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 30,
+     "status": "single"
+    },
+    "hp": {
+     "value": 8,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": 10,
+     "status": "single"
+    },
+    "ma_p12": {
+     "value": 10,
+     "status": "single"
+    },
+    "ma_p5": {
+     "value": null,
+     "status": "missing"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "3U",
+    "row_index": 2,
+    "position": 4
+   },
+   "hp": 8,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "BP IN",
+     "dir": "in",
+     "evidence": "tiptop-audio-forbidden-planet-filter.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "HP IN",
+     "dir": "in",
+     "evidence": "tiptop-audio-forbidden-planet-filter.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "LP IN",
+     "dir": "in",
+     "evidence": "tiptop-audio-forbidden-planet-filter.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-1003-dual-envelope-generator",
+   "name": "Behringer 1003 Dual Envelope Generator",
+   "manufacturer": "Behringer",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified.",
+   "icon": "icons/behringer-1003-dual-envelope-generator.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 42,
+     "status": "single"
+    },
+    "hp": {
+     "value": 16,
+     "status": "confirmed"
+    },
+    "ma_m12": {
+     "value": 20,
+     "status": "confirmed"
+    },
+    "ma_p12": {
+     "value": 40,
+     "status": "confirmed"
+    },
+    "ma_p5": {
+     "value": null,
+     "status": "missing"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "3U",
+    "row_index": 3,
+    "position": 4
+   },
+   "hp": 16,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "MANUAL GATE",
+     "dir": "in",
+     "evidence": "behringer-1003-dual-envelope-generator.pdf (pdftotext)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "OUT L",
+     "dir": "out",
+     "evidence": "behringer-1003-dual-envelope-generator.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "OUT R",
+     "dir": "out",
+     "evidence": "behringer-1003-dual-envelope-generator.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "TRIG",
+     "dir": "in",
+     "evidence": "behringer-1003-dual-envelope-generator.pdf (pdftotext)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-space-fx",
+   "name": "Behringer Space FX",
+   "manufacturer": "Behringer",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": false,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified. Marked unused by the owner 2026-09-20 (it was in use before).",
+   "icon": "icons/behringer-space-fx.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 30,
+     "status": "single"
+    },
+    "hp": {
+     "value": 14,
+     "status": "confirmed"
+    },
+    "ma_m12": {
+     "value": 25,
+     "status": "single"
+    },
+    "ma_p12": {
+     "value": 90,
+     "status": "single"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "single"
+    }
+   },
+   "placement": null,
+   "hp": 14,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "FX SEND",
+     "dir": "out",
+     "evidence": "behringer-space-fx.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "INPUTS",
+     "dir": "in",
+     "evidence": "behringer-space-fx.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "OUTPUTS",
+     "dir": "out",
+     "evidence": "behringer-space-fx.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-four-play-vca",
+   "name": "Behringer Four Play VCA",
+   "manufacturer": "Behringer",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified.",
+   "icon": "icons/behringer-four-play-vca.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 41,
+     "status": "single"
+    },
+    "hp": {
+     "value": 12,
+     "status": "confirmed"
+    },
+    "ma_m12": {
+     "value": 100,
+     "status": "confirmed"
+    },
+    "ma_p12": {
+     "value": 100,
+     "status": "confirmed"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "single"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "3U",
+    "row_index": 2,
+    "position": 7
+   },
+   "hp": 12,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "CV",
+     "dir": "in",
+     "evidence": "behringer-four-play-vca.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "CV IN",
+     "dir": "in",
+     "evidence": "behringer-four-play-vca.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "INPUTS",
+     "dir": "in",
+     "evidence": "behringer-four-play-vca.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "OUTPUTS",
+     "dir": "out",
+     "evidence": "behringer-four-play-vca.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "after-later-audio-pixie",
+   "name": "After Later Audio Pixie",
+   "manufacturer": "After Later Audio",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "One module. Equipment List.md listed it twice by mistake (confirmed by the owner 2026-09-20).",
+   "icon": "icons/after-later-audio-pixie.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 25,
+     "status": "single"
+    },
+    "hp": {
+     "value": 12,
+     "status": "confirmed"
+    },
+    "ma_m12": {
+     "value": 5,
+     "status": "confirmed"
+    },
+    "ma_p12": {
+     "value": 50,
+     "status": "confirmed"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "single"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "3U",
+    "row_index": 2,
+    "position": 2
+   },
+   "hp": 12,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "CV inputs",
+     "dir": "in",
+     "evidence": "after-later-pixie-plaits-manual/03-inputs-and-outputs.md (bold jack label; manual text is not copied)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "Model selection CV input",
+     "dir": "in",
+     "evidence": "after-later-pixie-plaits-manual/03-inputs-and-outputs.md (bold jack label; manual text is not copied)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "Outputs",
+     "dir": "out",
+     "evidence": "after-later-pixie-plaits-manual/03-inputs-and-outputs.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "Trigger input",
+     "dir": "in",
+     "evidence": "after-later-pixie-plaits-manual/03-inputs-and-outputs.md (bold jack label; manual text is not copied)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "V/Oct CV input",
+     "dir": "in",
+     "evidence": "after-later-pixie-plaits-manual/03-inputs-and-outputs.md (bold jack label; manual text is not copied)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "erica-synths-black-dual-vcf",
+   "name": "Erica Synths Black Dual VCF",
+   "manufacturer": "Erica Synths",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": true,
+   "role": "",
+   "note": "Written 'Erica Fual Black VCF' in Equipment List.md; the owner confirmed the actual name 2026-09-20.",
+   "icon": "icons/erica-synths-black-dual-vcf.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 35,
+     "status": "single"
+    },
+    "hp": {
+     "value": 18,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": 36,
+     "status": "single"
+    },
+    "ma_p12": {
+     "value": 40,
+     "status": "single"
+    },
+    "ma_p5": {
+     "value": 0,
+     "status": "single"
+    }
+   },
+   "placement": {
+    "case": "custom-reel-case",
+    "powered_by": "behringer-cp1a",
+    "row": "3U",
+    "row_index": 2,
+    "position": 6
+   },
+   "hp": 18,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "BP1 OUT",
+     "dir": "out",
+     "evidence": "erica-synths-black-dual-vcf.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "C-OFF1 CV",
+     "dir": "in",
+     "evidence": "erica-synths-black-dual-vcf.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "C1 CV",
+     "dir": "in",
+     "evidence": "erica-synths-black-dual-vcf.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "C2 CV",
+     "dir": "in",
+     "evidence": "erica-synths-black-dual-vcf.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "HP1 OUT",
+     "dir": "out",
+     "evidence": "erica-synths-black-dual-vcf.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "LP1 OUT",
+     "dir": "out",
+     "evidence": "erica-synths-black-dual-vcf.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "R1 CV",
+     "dir": "in",
+     "evidence": "erica-synths-black-dual-vcf.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "R2 CV",
+     "dir": "in",
+     "evidence": "erica-synths-black-dual-vcf.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "RESO1 CV",
+     "dir": "in",
+     "evidence": "erica-synths-black-dual-vcf.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "RESO2 CV C-OFF2 CV",
+     "dir": "in",
+     "evidence": "erica-synths-black-dual-vcf.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "SUM OUT",
+     "dir": "out",
+     "evidence": "erica-synths-black-dual-vcf.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "jakes-kick-6hp",
+   "name": "Jake's kick 6HP",
+   "manufacturer": "Jake's Custom Shop",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": false,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified. FLAG (2026-09-23, assistant, not owner-confirmed): an image search found the maker's own product page (jakescustomshop.com) but it does not state an HP width, so the '6HP' in this id/name is unverified against the maker's own listing. The owner confirmed 2026-09-23 it is the ORIGINAL Kick Drum, not the Kick Drum Pro CV; its datasheet (Rev A, 2022-08-18) gives 6HP, matching the name.",
+   "icon": "icons/jakes-kick-6hp.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": 6,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "AUDIO OUT",
+     "dir": "out",
+     "evidence": "jakes-kick-6hp.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "DECAY CV",
+     "dir": "in",
+     "evidence": "jakes-kick-6hp.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "ENVELOPE OUT",
+     "dir": "out",
+     "evidence": "jakes-kick-6hp.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "OUT",
+     "dir": "out",
+     "evidence": "jakes-kick-6hp__spec.pdf (pdftotext)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "PITCH",
+     "dir": "in",
+     "evidence": "jakes-kick-6hp__spec.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "PITCH CV",
+     "dir": "in",
+     "evidence": "jakes-kick-6hp.pdf (pdftotext)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "TRIGGER",
+     "dir": "in",
+     "evidence": "jakes-kick-6hp__spec.pdf (pdftotext)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "jakes-snare-hats-6hp",
+   "name": "Jake's snare/hats (8HP)",
+   "manufacturer": "Jake's Custom Shop",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": false,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified. FLAG (2026-09-23, assistant, not owner-confirmed): an image search found the maker's own product page (jakescustomshop.com), which does not state an HP width; a secondary source described this module family as 8HP, not 6HP. Worth checking against the physical module. The owner confirmed 2026-09-23 it is the ORIGINAL Snare Drum and High Hat, not the Pro CV; its datasheet (Rev A, 2022-11-02) gives 8HP (40.3 mm), so the '6HP' in the original list was wrong. The owner confirmed 2026-09-23: it is the ORIGINAL Snare Drum and High Hat, 8HP, not in use. The id keeps '6hp' only as a legacy key (other files reference it); the width is 8HP.",
+   "icon": "icons/jakes-snare-hats-6hp.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": 8,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "TRIGGER",
+     "dir": "in",
+     "evidence": "jakes-snare-hats-6hp__spec.pdf (pdftotext)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "synthrotek-atari-punk-console-4hp",
+   "name": "Synthrotek Atari Punk Console 4HP",
+   "manufacturer": "Synthrotek",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": false,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; not verified.",
+   "icon": "icons/synthrotek-atari-punk-console-4hp.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": 4,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "mosaic-quantizer",
+   "name": "Mosaic Quantizer",
+   "manufacturer": "Mosaic",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": false,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md. Identified 2026-09-23 from the official manual: Mosaic (mosaic1u.com) Quantizer, a 1U tile (Intellijel 1U format, 20HP wide), not a 3U module. The owner confirmed 2026-09-23 it is not in use and not mounted.",
+   "icon": "icons/mosaic-quantizer.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": 20,
+   "format": "1U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "CV Out",
+     "dir": "out",
+     "evidence": "mosaic-quantizer-manual/20-cv-out-blue-out.md (bold jack label; manual text is not copied)",
+     "medium": "cv",
+     "source": "manual"
+    },
+    {
+     "name": "Gate Output",
+     "dir": "out",
+     "evidence": "mosaic-quantizer-manual/19-gate-output-purple-out.md (bold jack label; manual text is not copied)",
+     "medium": "gate",
+     "source": "manual"
+    },
+    {
+     "name": "In",
+     "dir": "in",
+     "evidence": "mosaic-quantizer-manual/17-in.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "behringer-cm1a-midi-to-cv",
+   "name": "Behringer CM1A MIDI to CV",
+   "manufacturer": "Behringer",
+   "model": "",
+   "category": "eurorack-module",
+   "group": "Eurorack modules",
+   "in_use": false,
+   "role": "",
+   "note": "Name/maker as written in Equipment List.md; the official Behringer Quick Start Guide V 4.0 (ingested 2026-09-23) confirms the model: CM1A, 6 HP, MIDI IN + THRU, 2 CV + 2 trig outs, MIDI channel set in the SynthTribe app.",
+   "icon": "icons/behringer-cm1a-midi-to-cv.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": 6,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "In",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "CV In",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Gate In",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    },
+    {
+     "name": "Out",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "default for category 'eurorack-module' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "cre8audio-niftycase",
+   "name": "Cre8audio NiftyCASE",
+   "manufacturer": "Cre8audio",
+   "model": "",
+   "category": "eurorack-case",
+   "group": "Eurorack cases & power",
+   "in_use": true,
+   "role": "",
+   "note": "Powered 84 HP Eurorack case with built-in supply and MIDI-to-CV. Added 2026-09-20.",
+   "icon": "icons/cre8audio-niftycase.svg",
+   "icon_kind": "drawn",
+   "specs": {
+    "depth_mm": {
+     "value": 55,
+     "status": "single"
+    },
+    "hp": {
+     "value": 84,
+     "status": "single"
+    },
+    "ma_m12": {
+     "value": 500,
+     "status": "single"
+    },
+    "ma_p12": {
+     "value": 1500,
+     "status": "single"
+    },
+    "ma_p5": {
+     "value": 500,
+     "status": "single"
+    }
+   },
+   "placement": null,
+   "hp": 84,
+   "format": "3U",
+   "panel": null,
+   "supply_load": {
+    "+12V": {
+     "draw_ma": 304,
+     "capacity_ma": 1500,
+     "pct": 20
+    },
+    "+5V": {
+     "draw_ma": 49,
+     "capacity_ma": 500,
+     "pct": 10
+    },
+    "-12V": {
+     "draw_ma": 174,
+     "capacity_ma": 500,
+     "pct": 35
+    }
+   },
+   "midi": null,
+   "ports": [
+    {
+     "name": "Clock output",
+     "dir": "out",
+     "evidence": "cre8audio-niftycase-manual/11-clock-output.md (bold jack label; manual text is not copied)",
+     "medium": "midi",
+     "source": "manual"
+    },
+    {
+     "name": "Midi in",
+     "dir": "in",
+     "evidence": "cre8audio-niftycase-manual/16-midi-in.md (bold jack label; manual text is not copied)",
+     "medium": "midi",
+     "source": "manual"
+    },
+    {
+     "name": "Midi thru",
+     "dir": "out",
+     "evidence": "cre8audio-niftycase-manual/15-midi-thru.md (bold jack label; manual text is not copied)",
+     "medium": "midi",
+     "source": "manual"
+    },
+    {
+     "name": "USB",
+     "dir": "bidir",
+     "evidence": "cre8audio-niftycase.pdf (pdftotext)",
+     "medium": "usb",
+     "source": "manual"
+    }
+   ]
+  },
+  {
+   "id": "custom-reel-case",
+   "name": "Custom Eurorack case (gutted Sony reel-to-reel)",
+   "manufacturer": "",
+   "model": "",
+   "category": "eurorack-case",
+   "group": "Eurorack cases & power",
+   "in_use": true,
+   "role": "",
+   "note": "Built by the owner from a gutted Sony reel-to-reel tape deck that no longer worked. Three rows of 84 HP each: one 1U row on top and two 3U rows below. The Behringer CP1A is mounted in it and powers its modules. Recorded 2026-09-20.",
+   "icon": "icons/custom-reel-case.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": []
+  },
+  {
+   "manufacturer": "",
+   "model": "",
+   "in_use": true,
+   "note": "",
+   "specs": {},
+   "placement": null,
+   "supply_load": null,
+   "midi": null,
+   "virtual": true,
+   "id": "eurorack",
+   "name": "Eurorack",
+   "category": "eurorack",
+   "group": "Eurorack",
+   "icon": "icons/intellijel-audio-stereo-line-out-jacks-1u.svg",
+   "icon_kind": "drawn",
+   "rack": true,
+   "rack_supplies": [
+    {
+     "name": "Behringer CP1A power supply",
+     "rails": {
+      "+12V": {
+       "draw_ma": 795,
+       "capacity_ma": 1000,
+       "pct": 80
+      },
+      "+5V": {
+       "draw_ma": 0,
+       "capacity_ma": 500,
+       "pct": 0
+      },
+      "-12V": {
+       "draw_ma": 349,
+       "capacity_ma": 1000,
+       "pct": 35
+      }
+     }
+    },
+    {
+     "name": "Cre8audio NiftyCASE",
+     "rails": {
+      "+12V": {
+       "draw_ma": 304,
+       "capacity_ma": 1500,
+       "pct": 20
+      },
+      "+5V": {
+       "draw_ma": 49,
+       "capacity_ma": 500,
+       "pct": 10
+      },
+      "-12V": {
+       "draw_ma": 174,
+       "capacity_ma": 500,
+       "pct": 35
+      }
+     }
+    }
+   ],
+   "role": "The whole rack as one device. Open it to patch modules.",
+   "ports": [
+    {
+     "name": "Audio Out L/R",
+     "dir": "out",
+     "medium": "audio",
+     "source": "connections",
+     "evidence": "gear-kb cable at Intellijel Audio Stereo Line Out Jacks 1U \u00b7 L/R (balanced TRS)"
+    },
+    {
+     "name": "Clock In",
+     "dir": "in",
+     "medium": "clock",
+     "source": "connections",
+     "evidence": "gear-kb cable at Jake's Custom Shop Clock and Musical Divider \u00b7 Clock In"
+    },
+    {
+     "name": "CV In 1",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "CV In 2",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "CV In 3",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "CV In 4",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "Gate In 1",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "Gate In 2",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "Gate In 3",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "Gate In 4",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "Audio In 1",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "Audio In 2",
+     "dir": "in",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "MIDI In",
+     "dir": "in",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "CV Out 1",
+     "dir": "out",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "CV Out 2",
+     "dir": "out",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "Gate Out 1",
+     "dir": "out",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    }
+   ]
+  },
+  {
+   "manufacturer": "",
+   "model": "",
+   "in_use": true,
+   "note": "",
+   "specs": {},
+   "placement": null,
+   "supply_load": null,
+   "midi": null,
+   "virtual": true,
+   "id": "eurorack-in",
+   "name": "Rack inputs",
+   "category": "rack-io",
+   "group": null,
+   "role": "Signals entering the rack from outside gear",
+   "icon": "icons/_glyph-case.svg",
+   "icon_kind": "glyph",
+   "ports": [
+    {
+     "name": "Clock In",
+     "dir": "out",
+     "medium": "clock",
+     "source": "connections",
+     "evidence": "gear-kb cable at Jake's Custom Shop Clock and Musical Divider \u00b7 Clock In"
+    },
+    {
+     "name": "CV In 1",
+     "dir": "out",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "CV In 2",
+     "dir": "out",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "CV In 3",
+     "dir": "out",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "CV In 4",
+     "dir": "out",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "Gate In 1",
+     "dir": "out",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "Gate In 2",
+     "dir": "out",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "Gate In 3",
+     "dir": "out",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "Gate In 4",
+     "dir": "out",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "Audio In 1",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "Audio In 2",
+     "dir": "out",
+     "medium": "audio",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "MIDI In",
+     "dir": "out",
+     "medium": "midi",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    }
+   ]
+  },
+  {
+   "manufacturer": "",
+   "model": "",
+   "in_use": true,
+   "note": "",
+   "specs": {},
+   "placement": null,
+   "supply_load": null,
+   "midi": null,
+   "virtual": true,
+   "id": "eurorack-out",
+   "name": "Rack outputs",
+   "category": "rack-io",
+   "group": null,
+   "role": "Signals leaving the rack",
+   "icon": "icons/_glyph-case.svg",
+   "icon_kind": "glyph",
+   "ports": [
+    {
+     "name": "Audio Out L/R",
+     "dir": "in",
+     "medium": "audio",
+     "source": "connections",
+     "evidence": "gear-kb cable at Intellijel Audio Stereo Line Out Jacks 1U \u00b7 L/R (balanced TRS)"
+    },
+    {
+     "name": "CV Out 1",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "CV Out 2",
+     "dir": "in",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    },
+    {
+     "name": "Gate Out 1",
+     "dir": "in",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "general-purpose rack jack (CV/gate sources go to 'various module inputs')"
+    }
+   ]
+  }
+ ],
+ "templates": {
+  "recording-session": {
+   "name": "Recording session",
+   "type": "session",
+   "description": "Main studio into Logic: UMC1820 + Mac Mini, RD-9, Digitakt, Analog Four and the MIDI Thru5, wired per gear-kb.",
+   "notes": "Recording session in the main studio. The RD-9 is the master clock (gear-kb). Add swapped-in synths from the palette: their MIDI cables from the Thru5 are patched automatically.",
+   "nodes": [
+    {
+     "uid": "n-behringer-umc1820",
+     "device": "behringer-umc1820",
+     "x": 960,
+     "y": 40,
+     "settings": {}
+    },
+    {
+     "uid": "n-mac-mini-m4",
+     "device": "mac-mini-m4",
+     "x": 1260,
+     "y": 40,
+     "settings": {
+      "notes": "Logic Pro (recording sessions, per gear-kb inventory)."
+     }
+    },
+    {
+     "uid": "n-behringer-rd-9",
+     "device": "behringer-rd-9",
+     "x": 60,
+     "y": 40,
+     "settings": {
+      "clock": "master"
+     }
+    },
+    {
+     "uid": "n-elektron-digitakt-mk1",
+     "device": "elektron-digitakt-mk1",
+     "x": 360,
+     "y": 40,
+     "settings": {}
+    },
+    {
+     "uid": "n-elektron-analog-four",
+     "device": "elektron-analog-four",
+     "x": 660,
+     "y": 40,
+     "settings": {}
+    },
+    {
+     "uid": "n-midi-thru5",
+     "device": "midi-thru5",
+     "x": 660,
+     "y": 270,
+     "settings": {}
+    }
+   ],
+   "cables": [
+    {
+     "from": {
+      "uid": "n-behringer-umc1820",
+      "port": "USB"
+     },
+     "to": {
+      "uid": "n-mac-mini-m4",
+      "port": "USB"
+     },
+     "medium": "usb",
+     "settings": {
+      "notes": "Normally connected to the Mac Mini M4 (Logic Pro). Ports not named."
+     }
+    },
+    {
+     "from": {
+      "uid": "n-behringer-rd-9",
+      "port": "MONO"
+     },
+     "to": {
+      "uid": "n-behringer-umc1820",
+      "port": "Input 1"
+     },
+     "medium": "audio",
+     "settings": {}
+    },
+    {
+     "from": {
+      "uid": "n-elektron-analog-four",
+      "port": "MAIN OUT L/R"
+     },
+     "to": {
+      "uid": "n-behringer-umc1820",
+      "port": "Input 3/4"
+     },
+     "medium": "audio",
+     "settings": {}
+    },
+    {
+     "from": {
+      "uid": "n-elektron-digitakt-mk1",
+      "port": "main out (L/R)"
+     },
+     "to": {
+      "uid": "n-behringer-umc1820",
+      "port": "Input 7/8"
+     },
+     "medium": "audio",
+     "settings": {
+      "notes": "Port name is the owner's wording ('main out'); the Digitakt manual is not ingested to check it."
+     }
+    },
+    {
+     "from": {
+      "uid": "n-behringer-rd-9",
+      "port": "MIDI OUT"
+     },
+     "to": {
+      "uid": "n-elektron-digitakt-mk1",
+      "port": "MIDI IN"
+     },
+     "medium": "midi",
+     "settings": {}
+    },
+    {
+     "from": {
+      "uid": "n-elektron-digitakt-mk1",
+      "port": "MIDI OUT/SYNC A"
+     },
+     "to": {
+      "uid": "n-midi-thru5",
+      "port": "MIDI In"
+     },
+     "medium": "midi",
+     "settings": {
+      "notes": "OUT, not THRU: the Thru5 gets the Digitakt's own clock/transport (following the RD-9) plus its MIDI tracks. The RD-9's ch 10 notes stop at the Digitakt."
+     }
+    },
+    {
+     "from": {
+      "uid": "n-elektron-digitakt-mk1",
+      "port": "MIDI THRU/SYNC B"
+     },
+     "to": {
+      "uid": "n-elektron-analog-four",
+      "port": "MIDI In"
+     },
+     "medium": "midi",
+     "settings": {
+      "notes": "THRU forwards the RD-9's stream unchanged (clock, transport, ch 10 notes), so the Analog Four is clocked by the RD-9 one hop earlier than the Thru5 synths."
+     }
+    },
+    {
+     "from": {
+      "uid": "n-midi-thru5",
+      "port": "MIDI Out 5"
+     },
+     "to": {
+      "uid": "n-behringer-umc1820",
+      "port": "MIDI IN"
+     },
+     "medium": "midi",
+     "settings": {
+      "notes": "Owner 2026-09-23: reaches Logic Pro on the Mac Mini over the UMC1820's existing USB link. One Thru5 output is still free."
+     }
+    }
+   ]
+  },
+  "jam-session": {
+   "name": "Jam session",
+   "type": "session",
+   "description": "Alternate jam location: UMC404HD + the Linux workstation (Bitwig).",
+   "notes": "Jam session at the alternate location. Add the gear you bring from the palette.",
+   "nodes": [
+    {
+     "uid": "n-behringer-umc404hd",
+     "device": "behringer-umc404hd",
+     "x": 60,
+     "y": 40,
+     "settings": {}
+    },
+    {
+     "uid": "n-linux-workstation",
+     "device": "linux-workstation",
+     "x": 360,
+     "y": 40,
+     "settings": {
+      "notes": "Bitwig Studio Producer 6.1.1 (per gear-kb inventory)."
+     }
+    }
+   ],
+   "cables": [
+    {
+     "from": {
+      "uid": "n-behringer-umc404hd",
+      "port": "USB"
+     },
+     "to": {
+      "uid": "n-linux-workstation",
+      "port": "USB"
+     },
+     "medium": "usb",
+     "settings": {
+      "notes": "NOT recorded in gear-kb. Assumed from the gear-kb inventory roles (UMC404HD = interface for the other jamming location; Bitwig runs on the Linux workstation). The jam setup's wiring is not recorded in gear-kb yet."
+     }
+    }
+   ]
+  },
+  "studio-default": {
+   "name": "Studio default wiring",
+   "type": "session",
+   "description": "Every fixed cable recorded in gear-kb for the main studio.",
+   "notes": "Seeded from gear-kb connections.yaml (setup main-studio): the fixed cables. Add the patch on top.",
+   "nodes": [
+    {
+     "uid": "n-arturia-keystep",
+     "device": "arturia-keystep",
+     "x": 360,
+     "y": 40,
+     "settings": {}
+    },
+    {
+     "uid": "n-behringer-k2",
+     "device": "behringer-k2",
+     "x": 960,
+     "y": 40,
+     "settings": {}
+    },
+    {
+     "uid": "n-behringer-rd-9",
+     "device": "behringer-rd-9",
+     "x": 60,
+     "y": 40,
+     "settings": {}
+    },
+    {
+     "uid": "n-behringer-umc1820",
+     "device": "behringer-umc1820",
+     "x": 960,
+     "y": 270,
+     "settings": {}
+    },
+    {
+     "uid": "n-donner-b1",
+     "device": "donner-b1",
+     "x": 960,
+     "y": 500,
+     "settings": {}
+    },
+    {
+     "uid": "n-dreadbox-typhon",
+     "device": "dreadbox-typhon",
+     "x": 960,
+     "y": 730,
+     "settings": {}
+    },
+    {
+     "uid": "n-elektron-analog-four",
+     "device": "elektron-analog-four",
+     "x": 660,
+     "y": 40,
+     "settings": {}
+    },
+    {
+     "uid": "n-elektron-digitakt-mk1",
+     "device": "elektron-digitakt-mk1",
+     "x": 360,
+     "y": 270,
+     "settings": {}
+    },
+    {
+     "uid": "n-korg-m1",
+     "device": "korg-m1",
+     "x": 960,
+     "y": 960,
+     "settings": {}
+    },
+    {
+     "uid": "n-korg-sq-64",
+     "device": "korg-sq-64",
+     "x": 360,
+     "y": 730,
+     "settings": {}
+    },
+    {
+     "uid": "n-mac-mini-m4",
+     "device": "mac-mini-m4",
+     "x": 1260,
+     "y": 40,
+     "settings": {}
+    },
+    {
+     "uid": "n-midi-thru5",
+     "device": "midi-thru5",
+     "x": 660,
+     "y": 270,
+     "settings": {}
+    },
+    {
+     "uid": "n-eurorack",
+     "device": "eurorack",
+     "x": 360,
+     "y": 500,
+     "settings": {},
+     "rack": {
+      "nodes": [
+       {
+        "uid": "r-eurorack-in",
+        "device": "eurorack-in",
+        "x": 60,
+        "y": 40,
+        "settings": {}
+       },
+       {
+        "uid": "r-intellijel-audio-stereo-line-out-jacks-1u",
+        "device": "intellijel-audio-stereo-line-out-jacks-1u",
+        "x": 360,
+        "y": 40,
+        "settings": {}
+       },
+       {
+        "uid": "r-intellijel-stereo-line-out-1u",
+        "device": "intellijel-stereo-line-out-1u",
+        "x": 60,
+        "y": 270,
+        "settings": {}
+       },
+       {
+        "uid": "r-jakes-clock-and-musical-divider",
+        "device": "jakes-clock-and-musical-divider",
+        "x": 360,
+        "y": 270,
+        "settings": {}
+       },
+       {
+        "uid": "r-eurorack-out",
+        "device": "eurorack-out",
+        "x": 660,
+        "y": 40,
+        "settings": {}
+       }
+      ],
+      "cables": [
+       {
+        "from": {
+         "uid": "r-intellijel-audio-stereo-line-out-jacks-1u",
+         "port": "L/R (balanced TRS)"
+        },
+        "to": {
+         "uid": "r-eurorack-out",
+         "port": "Audio Out L/R"
+        },
+        "medium": "audio",
+        "settings": {
+         "notes": "The owner: all Eurorack signals end up in the Intellijel outs, which send L and R balanced TRS to the interface."
+        }
+       },
+       {
+        "from": {
+         "uid": "r-intellijel-stereo-line-out-1u",
+         "port": "LINE OUT"
+        },
+        "to": {
+         "uid": "r-intellijel-audio-stereo-line-out-jacks-1u",
+         "port": "In"
+        },
+        "medium": "audio",
+        "settings": {
+         "notes": "UNCONFIRMED in gear-kb. Pairing comes from the makers' listings (the two are sold as a pair); the owner has not described the cable between them."
+        }
+       },
+       {
+        "from": {
+         "uid": "r-eurorack-in",
+         "port": "Clock In"
+        },
+        "to": {
+         "uid": "r-jakes-clock-and-musical-divider",
+         "port": "Clock In"
+        },
+        "medium": "clock",
+        "settings": {
+         "notes": "Its clock input; the module divides the clock for the rest of the rack. Jack not named."
+        }
+       }
+      ]
+     }
+    }
+   ],
+   "cables": [
+    {
+     "from": {
+      "uid": "n-behringer-umc1820",
+      "port": "USB"
+     },
+     "to": {
+      "uid": "n-mac-mini-m4",
+      "port": "USB"
+     },
+     "medium": "usb",
+     "settings": {
+      "notes": "Normally connected to the Mac Mini M4 (Logic Pro). Ports not named."
+     }
+    },
+    {
+     "from": {
+      "uid": "n-behringer-rd-9",
+      "port": "MONO"
+     },
+     "to": {
+      "uid": "n-behringer-umc1820",
+      "port": "Input 1"
+     },
+     "medium": "audio",
+     "settings": {}
+    },
+    {
+     "from": {
+      "uid": "n-elektron-analog-four",
+      "port": "MAIN OUT L/R"
+     },
+     "to": {
+      "uid": "n-behringer-umc1820",
+      "port": "Input 3/4"
+     },
+     "medium": "audio",
+     "settings": {}
+    },
+    {
+     "from": {
+      "uid": "n-eurorack",
+      "port": "Audio Out L/R"
+     },
+     "to": {
+      "uid": "n-behringer-umc1820",
+      "port": "Input 5/6"
+     },
+     "medium": "audio",
+     "settings": {
+      "notes": "The owner: all Eurorack signals end up in the Intellijel outs, which send L and R balanced TRS to the interface."
+     }
+    },
+    {
+     "from": {
+      "uid": "n-elektron-digitakt-mk1",
+      "port": "main out (L/R)"
+     },
+     "to": {
+      "uid": "n-behringer-umc1820",
+      "port": "Input 7/8"
+     },
+     "medium": "audio",
+     "settings": {
+      "notes": "Port name is the owner's wording ('main out'); the Digitakt manual is not ingested to check it."
+     }
+    },
+    {
+     "from": {
+      "uid": "n-behringer-rd-9",
+      "port": "MIDI OUT"
+     },
+     "to": {
+      "uid": "n-elektron-digitakt-mk1",
+      "port": "MIDI IN"
+     },
+     "medium": "midi",
+     "settings": {}
+    },
+    {
+     "from": {
+      "uid": "n-elektron-digitakt-mk1",
+      "port": "MIDI OUT/SYNC A"
+     },
+     "to": {
+      "uid": "n-midi-thru5",
+      "port": "MIDI In"
+     },
+     "medium": "midi",
+     "settings": {
+      "notes": "OUT, not THRU: the Thru5 gets the Digitakt's own clock/transport (following the RD-9) plus its MIDI tracks. The RD-9's ch 10 notes stop at the Digitakt."
+     }
+    },
+    {
+     "from": {
+      "uid": "n-elektron-digitakt-mk1",
+      "port": "MIDI THRU/SYNC B"
+     },
+     "to": {
+      "uid": "n-elektron-analog-four",
+      "port": "MIDI In"
+     },
+     "medium": "midi",
+     "settings": {
+      "notes": "THRU forwards the RD-9's stream unchanged (clock, transport, ch 10 notes), so the Analog Four is clocked by the RD-9 one hop earlier than the Thru5 synths."
+     }
+    },
+    {
+     "from": {
+      "uid": "n-midi-thru5",
+      "port": "MIDI Out 1"
+     },
+     "to": {
+      "uid": "n-korg-m1",
+      "port": "MIDI In"
+     },
+     "medium": "midi",
+     "settings": {}
+    },
+    {
+     "from": {
+      "uid": "n-midi-thru5",
+      "port": "MIDI Out 2"
+     },
+     "to": {
+      "uid": "n-dreadbox-typhon",
+      "port": "MIDI In"
+     },
+     "medium": "midi",
+     "settings": {}
+    },
+    {
+     "from": {
+      "uid": "n-midi-thru5",
+      "port": "MIDI Out 3"
+     },
+     "to": {
+      "uid": "n-behringer-k2",
+      "port": "MIDI IN"
+     },
+     "medium": "midi",
+     "settings": {
+      "notes": "Shares one Thru5 output with the Donner B1: one or the other."
+     }
+    },
+    {
+     "from": {
+      "uid": "n-midi-thru5",
+      "port": "MIDI Out 4"
+     },
+     "to": {
+      "uid": "n-donner-b1",
+      "port": "MIDI IN"
+     },
+     "medium": "midi",
+     "settings": {
+      "notes": "Shares one Thru5 output with the Behringer K2: one or the other."
+     }
+    },
+    {
+     "from": {
+      "uid": "n-midi-thru5",
+      "port": "MIDI Out 5"
+     },
+     "to": {
+      "uid": "n-behringer-umc1820",
+      "port": "MIDI IN"
+     },
+     "medium": "midi",
+     "settings": {
+      "notes": "Owner 2026-09-23: reaches Logic Pro on the Mac Mini over the UMC1820's existing USB link. One Thru5 output is still free."
+     }
+    },
+    {
+     "from": {
+      "uid": "n-behringer-rd-9",
+      "port": "SYNC OUT"
+     },
+     "to": {
+      "uid": "n-korg-sq-64",
+      "port": "Clock In"
+     },
+     "medium": "clock",
+     "settings": {}
+    },
+    {
+     "from": {
+      "uid": "n-behringer-rd-9",
+      "port": "SYNC OUT"
+     },
+     "to": {
+      "uid": "n-arturia-keystep",
+      "port": "Clock In"
+     },
+     "medium": "clock",
+     "settings": {}
+    },
+    {
+     "from": {
+      "uid": "n-behringer-rd-9",
+      "port": "SYNC OUT"
+     },
+     "to": {
+      "uid": "n-eurorack",
+      "port": "Clock In"
+     },
+     "medium": "clock",
+     "settings": {
+      "notes": "Its clock input; the module divides the clock for the rest of the rack. Jack not named."
+     }
+    }
+   ]
+  }
+ },
+ "kb_links": [
+  {
+   "from": "behringer-umc1820",
+   "from_port": "USB",
+   "to": "mac-mini-m4",
+   "to_port": "USB",
+   "medium": "usb",
+   "bidirectional": true,
+   "confirmed": true,
+   "swappable": false,
+   "note": "Normally connected to the Mac Mini M4 (Logic Pro). Ports not named."
+  },
+  {
+   "from": "behringer-rd-9",
+   "from_port": "MONO",
+   "to": "behringer-umc1820",
+   "to_port": "Input 1",
+   "medium": "audio",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": false,
+   "note": ""
+  },
+  {
+   "from": "elektron-analog-four",
+   "from_port": "MAIN OUT L/R",
+   "to": "behringer-umc1820",
+   "to_port": "Input 3/4",
+   "medium": "audio",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": false,
+   "note": ""
+  },
+  {
+   "from": "eurorack",
+   "from_port": "Audio Out L/R",
+   "to": "behringer-umc1820",
+   "to_port": "Input 5/6",
+   "medium": "audio",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": false,
+   "note": "The owner: all Eurorack signals end up in the Intellijel outs, which send L and R balanced TRS to the interface."
+  },
+  {
+   "from": "elektron-digitakt-mk1",
+   "from_port": "main out (L/R)",
+   "to": "behringer-umc1820",
+   "to_port": "Input 7/8",
+   "medium": "audio",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": false,
+   "note": "Port name is the owner's wording ('main out'); the Digitakt manual is not ingested to check it."
+  },
+  {
+   "from": "behringer-rd-9",
+   "from_port": "MIDI OUT",
+   "to": "elektron-digitakt-mk1",
+   "to_port": "MIDI IN",
+   "medium": "midi",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": false,
+   "note": ""
+  },
+  {
+   "from": "elektron-digitakt-mk1",
+   "from_port": "MIDI OUT/SYNC A",
+   "to": "midi-thru5",
+   "to_port": "MIDI In",
+   "medium": "midi",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": false,
+   "note": "OUT, not THRU: the Thru5 gets the Digitakt's own clock/transport (following the RD-9) plus its MIDI tracks. The RD-9's ch 10 notes stop at the Digitakt."
+  },
+  {
+   "from": "elektron-digitakt-mk1",
+   "from_port": "MIDI THRU/SYNC B",
+   "to": "elektron-analog-four",
+   "to_port": "MIDI In",
+   "medium": "midi",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": false,
+   "note": "THRU forwards the RD-9's stream unchanged (clock, transport, ch 10 notes), so the Analog Four is clocked by the RD-9 one hop earlier than the Thru5 synths."
+  },
+  {
+   "from": "midi-thru5",
+   "from_port": "MIDI Out 1",
+   "to": "korg-m1",
+   "to_port": "MIDI In",
+   "medium": "midi",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": true,
+   "note": ""
+  },
+  {
+   "from": "midi-thru5",
+   "from_port": "MIDI Out 2",
+   "to": "dreadbox-typhon",
+   "to_port": "MIDI In",
+   "medium": "midi",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": true,
+   "note": ""
+  },
+  {
+   "from": "midi-thru5",
+   "from_port": "MIDI Out 3",
+   "to": "behringer-k2",
+   "to_port": "MIDI IN",
+   "medium": "midi",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": true,
+   "note": "Shares one Thru5 output with the Donner B1: one or the other."
+  },
+  {
+   "from": "midi-thru5",
+   "from_port": "MIDI Out 4",
+   "to": "donner-b1",
+   "to_port": "MIDI IN",
+   "medium": "midi",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": true,
+   "note": "Shares one Thru5 output with the Behringer K2: one or the other."
+  },
+  {
+   "from": "midi-thru5",
+   "from_port": "MIDI Out 5",
+   "to": "behringer-umc1820",
+   "to_port": "MIDI IN",
+   "medium": "midi",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": false,
+   "note": "Owner 2026-09-23: reaches Logic Pro on the Mac Mini over the UMC1820's existing USB link. One Thru5 output is still free."
+  },
+  {
+   "from": "behringer-rd-9",
+   "from_port": "SYNC OUT",
+   "to": "korg-sq-64",
+   "to_port": "Clock In",
+   "medium": "clock",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": false,
+   "note": ""
+  },
+  {
+   "from": "behringer-rd-9",
+   "from_port": "SYNC OUT",
+   "to": "arturia-keystep",
+   "to_port": "Clock In",
+   "medium": "clock",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": false,
+   "note": ""
+  },
+  {
+   "from": "behringer-rd-9",
+   "from_port": "SYNC OUT",
+   "to": "eurorack",
+   "to_port": "Clock In",
+   "medium": "clock",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": false,
+   "note": "Its clock input; the module divides the clock for the rest of the rack. Jack not named."
+  }
+ ],
+ "rack_links": [
+  {
+   "from": "intellijel-audio-stereo-line-out-jacks-1u",
+   "from_port": "L/R (balanced TRS)",
+   "to": "eurorack-out",
+   "to_port": "Audio Out L/R",
+   "medium": "audio",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": false,
+   "note": "The owner: all Eurorack signals end up in the Intellijel outs, which send L and R balanced TRS to the interface."
+  },
+  {
+   "from": "eurorack-in",
+   "from_port": "Clock In",
+   "to": "jakes-clock-and-musical-divider",
+   "to_port": "Clock In",
+   "medium": "clock",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": false,
+   "note": "Its clock input; the module divides the clock for the rest of the rack. Jack not named."
+  }
+ ],
+ "rack_seed": {
+  "nodes": [
+   {
+    "uid": "r-eurorack-in",
+    "device": "eurorack-in",
+    "x": 60,
+    "y": 40,
+    "settings": {}
+   },
+   {
+    "uid": "r-intellijel-audio-stereo-line-out-jacks-1u",
+    "device": "intellijel-audio-stereo-line-out-jacks-1u",
+    "x": 60,
+    "y": 270,
+    "settings": {}
+   },
+   {
+    "uid": "r-jakes-clock-and-musical-divider",
+    "device": "jakes-clock-and-musical-divider",
+    "x": 360,
+    "y": 270,
+    "settings": {}
+   },
+   {
+    "uid": "r-eurorack-out",
+    "device": "eurorack-out",
+    "x": 360,
+    "y": 40,
+    "settings": {}
+   }
+  ],
+  "cables": [
+   {
+    "from": {
+     "uid": "r-intellijel-audio-stereo-line-out-jacks-1u",
+     "port": "L/R (balanced TRS)"
+    },
+    "to": {
+     "uid": "r-eurorack-out",
+     "port": "Audio Out L/R"
+    },
+    "medium": "audio",
+    "settings": {
+     "notes": "The owner: all Eurorack signals end up in the Intellijel outs, which send L and R balanced TRS to the interface."
+    }
+   },
+   {
+    "from": {
+     "uid": "r-eurorack-in",
+     "port": "Clock In"
+    },
+    "to": {
+     "uid": "r-jakes-clock-and-musical-divider",
+     "port": "Clock In"
+    },
+    "medium": "clock",
+    "settings": {
+     "notes": "Its clock input; the module divides the clock for the rest of the rack. Jack not named."
+    }
+   }
+  ]
+ },
+ "cases": [
+  {
+   "id": "cre8audio-niftycase",
+   "name": "Cre8audio NiftyCASE",
+   "rows": [
+    {
+     "format": "3U",
+     "hp": 84
+    }
+   ],
+   "supply": "cre8audio-niftycase"
+  },
+  {
+   "id": "custom-reel-case",
+   "name": "Custom Eurorack case (gutted Sony reel-to-reel)",
+   "rows": [
+    {
+     "format": "1U",
+     "hp": 84
+    },
+    {
+     "format": "3U",
+     "hp": 84
+    },
+    {
+     "format": "3U",
+     "hp": 84
+    }
+   ],
+   "supply": "behringer-cp1a"
+  }
+ ],
+ "open_statements": [
+  "The RD-9 is the master clock.",
+  "The Mac receives MIDI through the UMC1820 MIDI IN (fed by a Thru5 output, i.e. the Digitakt's MIDI OUT stream). Nothing sends MIDI from the Mac to the gear. Replaces the 2026-09-20 statement 'Nothing sends MIDI back to the Mac.'",
+  "Default UMC1820 inputs: 1 RD-9, 2 open, 3/4 Analog Four, 5/6 Eurorack, 7/8 Digitakt. Everything runs straight into the interface; main outs are used on everything, with TS or TRS cables as needed.",
+  "Gear not in that default list (for example the Korg M1, Dreadbox Typhon, Behringer K2, Donner B1) is swapped in and out as needed. Where its audio goes when in use is not yet stated.",
+  "Swap rule: gear swapped in takes the UMC1820 input(s) of the gear it replaces. MIDI does not follow the slot: each instrument keeps its own home channel (midi_channels.yaml), and the trigger source is re-pointed instead.",
+  "The Analog Four's CV OUTPUTS A-D are sometimes used as CV tracks into the Eurorack. Which module inputs is not yet stated.",
+  "CV / gate / trig sources into the Eurorack: Analog Four MKII, Korg SQ-64, Arturia KeyStep (original), and the Behringer K2 (any of its outs). Each goes into 'various module inputs'; which module inputs is not yet stated."
+ ]
+}
