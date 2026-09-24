@@ -1,6 +1,6 @@
 {
  "generated_by": "tools/query_graph.py",
- "graph_sha256": "369cfe157cf58c4d8e51e2d6b4185f919c6adcab2ef3a766cacc7fff1a87c3cc",
+ "graph_sha256": "118d1c5a357f161c9924c931a76fa6b9aad38d22d8c69cc3633643993a32c487",
  "answers": [
   {
    "id": "q1",
@@ -52,10 +52,10 @@
    "id": "q5",
    "question": "How many spec values rest on a single source, and of what kind?",
    "answer": [
-    "81 of 135 spec values: one community source",
-    "32 of 135 spec values: two or more sources",
-    "17 of 135 spec values: no source (override, inferred or missing)",
-    "5 of 135 spec values: one official source",
+    "81 of 140 spec values: one community source",
+    "33 of 140 spec values: two or more sources",
+    "21 of 140 spec values: no source (override, inferred or missing)",
+    "5 of 140 spec values: one official source",
     "42 of the single-source values are attested correct by the owner"
    ],
    "checks": {

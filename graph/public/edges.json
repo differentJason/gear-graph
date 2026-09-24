@@ -57,8 +57,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 2,
   "rel": "INSTALLED_IN",
   "row": "3U",
+  "row_index": 3,
   "setup": "main-studio",
   "src": "item:after-later-audio-dice",
   "status": "confirmed",
@@ -78,8 +80,10 @@
  },
  {
   "dst": "item:behringer-cp1a",
+  "position": 2,
   "rel": "POWERED_BY",
   "row": "3U",
+  "row_index": 3,
   "setup": "main-studio",
   "src": "item:after-later-audio-dice",
   "status": "confirmed",
@@ -150,8 +154,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 2,
   "rel": "INSTALLED_IN",
   "row": "3U",
+  "row_index": 2,
   "setup": "main-studio",
   "src": "item:after-later-audio-pixie",
   "status": "confirmed",
@@ -171,8 +177,10 @@
  },
  {
   "dst": "item:behringer-cp1a",
+  "position": 2,
   "rel": "POWERED_BY",
   "row": "3U",
+  "row_index": 2,
   "setup": "main-studio",
   "src": "item:after-later-audio-pixie",
   "status": "confirmed",
@@ -243,8 +251,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 5,
   "rel": "INSTALLED_IN",
   "row": "3U",
+  "row_index": 2,
   "setup": "main-studio",
   "src": "item:after-later-audio-resonate",
   "status": "confirmed",
@@ -264,8 +274,10 @@
  },
  {
   "dst": "item:behringer-cp1a",
+  "position": 5,
   "rel": "POWERED_BY",
   "row": "3U",
+  "row_index": 2,
   "setup": "main-studio",
   "src": "item:after-later-audio-resonate",
   "status": "confirmed",
@@ -413,8 +425,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 3,
   "rel": "INSTALLED_IN",
   "row": "3U",
+  "row_index": 3,
   "setup": "main-studio",
   "src": "item:antumbra-atom",
   "status": "confirmed",
@@ -434,8 +448,10 @@
  },
  {
   "dst": "item:behringer-cp1a",
+  "position": 3,
   "rel": "POWERED_BY",
   "row": "3U",
+  "row_index": 3,
   "setup": "main-studio",
   "src": "item:antumbra-atom",
   "status": "confirmed",
@@ -525,8 +541,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 4,
   "rel": "INSTALLED_IN",
   "row": "3U",
+  "row_index": 3,
   "setup": "main-studio",
   "src": "item:behringer-1003-dual-envelope-generator",
   "status": "confirmed",
@@ -546,8 +564,10 @@
  },
  {
   "dst": "item:behringer-cp1a",
+  "position": 4,
   "rel": "POWERED_BY",
   "row": "3U",
+  "row_index": 3,
   "setup": "main-studio",
   "src": "item:behringer-1003-dual-envelope-generator",
   "status": "confirmed",
@@ -605,8 +625,9 @@
  },
  {
   "dst": "item:cre8audio-niftycase",
-  "position": 9,
+  "position": 10,
   "rel": "INSTALLED_IN",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:behringer-961-interface",
   "status": "confirmed",
@@ -626,8 +647,9 @@
  },
  {
   "dst": "item:cre8audio-niftycase",
-  "position": 9,
+  "position": 10,
   "rel": "POWERED_BY",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:behringer-961-interface",
   "status": "confirmed",
@@ -729,8 +751,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 1,
   "rel": "INSTALLED_IN",
   "row": "3U",
+  "row_index": 3,
   "setup": "main-studio",
   "src": "item:behringer-cp1a",
   "status": "confirmed",
@@ -832,8 +856,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 7,
   "rel": "INSTALLED_IN",
   "row": "3U",
+  "row_index": 2,
   "setup": "main-studio",
   "src": "item:behringer-four-play-vca",
   "status": "confirmed",
@@ -853,8 +879,10 @@
  },
  {
   "dst": "item:behringer-cp1a",
+  "position": 7,
   "rel": "POWERED_BY",
   "row": "3U",
+  "row_index": 2,
   "setup": "main-studio",
   "src": "item:behringer-four-play-vca",
   "status": "confirmed",
@@ -1201,8 +1229,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 5,
   "rel": "INSTALLED_IN",
   "row": "3U",
+  "row_index": 3,
   "setup": "main-studio",
   "src": "item:cosmotronic-delta-v",
   "status": "confirmed",
@@ -1222,8 +1252,10 @@
  },
  {
   "dst": "item:behringer-cp1a",
+  "position": 5,
   "rel": "POWERED_BY",
   "row": "3U",
+  "row_index": 3,
   "setup": "main-studio",
   "src": "item:cosmotronic-delta-v",
   "status": "confirmed",
@@ -1274,8 +1306,9 @@
  },
  {
   "dst": "item:cre8audio-niftycase",
-  "position": 6,
+  "position": 7,
   "rel": "INSTALLED_IN",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:cre8audio-captain-big-o",
   "status": "confirmed",
@@ -1295,8 +1328,9 @@
  },
  {
   "dst": "item:cre8audio-niftycase",
-  "position": 6,
+  "position": 7,
   "rel": "POWERED_BY",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:cre8audio-captain-big-o",
   "status": "confirmed",
@@ -1349,6 +1383,7 @@
   "dst": "item:cre8audio-niftycase",
   "position": 2,
   "rel": "INSTALLED_IN",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:cre8audio-cellz",
   "status": "confirmed",
@@ -1370,6 +1405,7 @@
   "dst": "item:cre8audio-niftycase",
   "position": 2,
   "rel": "POWERED_BY",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:cre8audio-cellz",
   "status": "confirmed",
@@ -1426,8 +1462,9 @@
  },
  {
   "dst": "item:cre8audio-niftycase",
-  "position": 7,
+  "position": 9,
   "rel": "INSTALLED_IN",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:cre8audio-mr-philter",
   "status": "confirmed",
@@ -1447,8 +1484,9 @@
  },
  {
   "dst": "item:cre8audio-niftycase",
-  "position": 7,
+  "position": 9,
   "rel": "POWERED_BY",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:cre8audio-mr-philter",
   "status": "confirmed",
@@ -1560,8 +1598,9 @@
  },
  {
   "dst": "item:cre8audio-niftycase",
-  "position": 3,
+  "position": 6,
   "rel": "INSTALLED_IN",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:ddnipro-qtone",
   "status": "confirmed",
@@ -1581,8 +1620,9 @@
  },
  {
   "dst": "item:cre8audio-niftycase",
-  "position": 3,
+  "position": 6,
   "rel": "POWERED_BY",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:ddnipro-qtone",
   "status": "confirmed",
@@ -1802,8 +1842,9 @@
  },
  {
   "dst": "item:cre8audio-niftycase",
-  "position": 8,
+  "position": 4,
   "rel": "INSTALLED_IN",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:erica-pico-mod",
   "status": "confirmed",
@@ -1817,8 +1858,9 @@
  },
  {
   "dst": "item:cre8audio-niftycase",
-  "position": 8,
+  "position": 4,
   "rel": "POWERED_BY",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:erica-pico-mod",
   "status": "confirmed",
@@ -1869,8 +1911,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 6,
   "rel": "INSTALLED_IN",
   "row": "3U",
+  "row_index": 2,
   "setup": "main-studio",
   "src": "item:erica-synths-black-dual-vcf",
   "status": "confirmed",
@@ -1890,8 +1934,10 @@
  },
  {
   "dst": "item:behringer-cp1a",
+  "position": 6,
   "rel": "POWERED_BY",
   "row": "3U",
+  "row_index": 2,
   "setup": "main-studio",
   "src": "item:erica-synths-black-dual-vcf",
   "status": "confirmed",
@@ -1961,8 +2007,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 4,
   "rel": "INSTALLED_IN",
   "row": "1U",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:intellijel-audio-stereo-line-out-jacks-1u",
   "status": "confirmed",
@@ -1982,8 +2030,10 @@
  },
  {
   "dst": "item:behringer-cp1a",
+  "position": 4,
   "rel": "POWERED_BY",
   "row": "1U",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:intellijel-audio-stereo-line-out-jacks-1u",
   "status": "confirmed",
@@ -2034,8 +2084,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 1,
   "rel": "INSTALLED_IN",
   "row": "1U",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:intellijel-quadratt-1u",
   "status": "confirmed",
@@ -2055,8 +2107,10 @@
  },
  {
   "dst": "item:behringer-cp1a",
+  "position": 1,
   "rel": "POWERED_BY",
   "row": "1U",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:intellijel-quadratt-1u",
   "status": "confirmed",
@@ -2117,8 +2171,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 3,
   "rel": "INSTALLED_IN",
   "row": "1U",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:intellijel-stereo-line-out-1u",
   "status": "confirmed",
@@ -2138,8 +2194,10 @@
  },
  {
   "dst": "item:behringer-cp1a",
+  "position": 3,
   "rel": "POWERED_BY",
   "row": "1U",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:intellijel-stereo-line-out-1u",
   "status": "confirmed",
@@ -2190,8 +2248,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 2,
   "rel": "INSTALLED_IN",
   "row": "1U",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:intellijel-stereo-mixer-1u",
   "status": "confirmed",
@@ -2211,8 +2271,10 @@
  },
  {
   "dst": "item:behringer-cp1a",
+  "position": 2,
   "rel": "POWERED_BY",
   "row": "1U",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:intellijel-stereo-mixer-1u",
   "status": "confirmed",
@@ -2264,8 +2326,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 1,
   "rel": "INSTALLED_IN",
   "row": "3U",
+  "row_index": 2,
   "setup": "main-studio",
   "src": "item:jakes-clock-and-musical-divider",
   "status": "confirmed",
@@ -2285,8 +2349,10 @@
  },
  {
   "dst": "item:behringer-cp1a",
+  "position": 1,
   "rel": "POWERED_BY",
   "row": "3U",
+  "row_index": 2,
   "setup": "main-studio",
   "src": "item:jakes-clock-and-musical-divider",
   "status": "confirmed",
@@ -2533,8 +2599,9 @@
  },
  {
   "dst": "item:cre8audio-niftycase",
-  "position": 5,
+  "position": 3,
   "rel": "INSTALLED_IN",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:moth-hunter-mods-razcalito",
   "status": "confirmed",
@@ -2554,8 +2621,9 @@
  },
  {
   "dst": "item:cre8audio-niftycase",
-  "position": 5,
+  "position": 3,
   "rel": "POWERED_BY",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:moth-hunter-mods-razcalito",
   "status": "confirmed",
@@ -2724,6 +2792,82 @@
   "visibility": "public"
  },
  {
+  "dst": "src:https://modulargrid.net/e/synthrotek-mix",
+  "http": "200",
+  "rel": "CONSULTED",
+  "src": "item:synthrotek-mix",
+  "visibility": "public"
+ },
+ {
+  "dst": "src:https://www.synthrotek.com/mix-3-channel-passive-mixer-attenuator-averager-in-2hp-released/",
+  "http": "200",
+  "rel": "CONSULTED",
+  "src": "item:synthrotek-mix",
+  "visibility": "public"
+ },
+ {
+  "dst": "spec:synthrotek-mix.depth_mm",
+  "rel": "HAS_SPEC",
+  "src": "item:synthrotek-mix",
+  "visibility": "public"
+ },
+ {
+  "dst": "spec:synthrotek-mix.hp",
+  "rel": "HAS_SPEC",
+  "src": "item:synthrotek-mix",
+  "visibility": "public"
+ },
+ {
+  "dst": "spec:synthrotek-mix.ma_m12",
+  "rel": "HAS_SPEC",
+  "src": "item:synthrotek-mix",
+  "visibility": "public"
+ },
+ {
+  "dst": "spec:synthrotek-mix.ma_p12",
+  "rel": "HAS_SPEC",
+  "src": "item:synthrotek-mix",
+  "visibility": "public"
+ },
+ {
+  "dst": "spec:synthrotek-mix.ma_p5",
+  "rel": "HAS_SPEC",
+  "src": "item:synthrotek-mix",
+  "visibility": "public"
+ },
+ {
+  "dst": "item:cre8audio-niftycase",
+  "position": 8,
+  "rel": "INSTALLED_IN",
+  "row_index": 1,
+  "setup": "main-studio",
+  "src": "item:synthrotek-mix",
+  "status": "confirmed",
+  "visibility": "public"
+ },
+ {
+  "dst": "cat:eurorack-module",
+  "rel": "IN_CATEGORY",
+  "src": "item:synthrotek-mix",
+  "visibility": "public"
+ },
+ {
+  "dst": "mfr:Synthrotek",
+  "rel": "MADE_BY",
+  "src": "item:synthrotek-mix",
+  "visibility": "public"
+ },
+ {
+  "dst": "item:cre8audio-niftycase",
+  "position": 8,
+  "rel": "POWERED_BY",
+  "row_index": 1,
+  "setup": "main-studio",
+  "src": "item:synthrotek-mix",
+  "status": "confirmed",
+  "visibility": "public"
+ },
+ {
   "dst": "src:https://modulargrid.net/e/synthrotek-passive-mult",
   "http": "200",
   "rel": "CONSULTED",
@@ -2762,8 +2906,9 @@
  },
  {
   "dst": "item:cre8audio-niftycase",
-  "position": 4,
+  "position": 5,
   "rel": "INSTALLED_IN",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:synthrotek-passive-mult",
   "status": "confirmed",
@@ -2783,8 +2928,9 @@
  },
  {
   "dst": "item:cre8audio-niftycase",
-  "position": 4,
+  "position": 5,
   "rel": "POWERED_BY",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:synthrotek-passive-mult",
   "status": "confirmed",
@@ -2847,8 +2993,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 4,
   "rel": "INSTALLED_IN",
   "row": "3U",
+  "row_index": 2,
   "setup": "main-studio",
   "src": "item:tiptop-audio-forbidden-planet-filter",
   "status": "confirmed",
@@ -2868,8 +3016,10 @@
  },
  {
   "dst": "item:behringer-cp1a",
+  "position": 4,
   "rel": "POWERED_BY",
   "row": "3U",
+  "row_index": 2,
   "setup": "main-studio",
   "src": "item:tiptop-audio-forbidden-planet-filter",
   "status": "confirmed",
@@ -2942,6 +3092,7 @@
   "dst": "item:cre8audio-niftycase",
   "position": 1,
   "rel": "INSTALLED_IN",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:ugrids",
   "status": "confirmed",
@@ -2963,6 +3114,7 @@
   "dst": "item:cre8audio-niftycase",
   "position": 1,
   "rel": "POWERED_BY",
+  "row_index": 1,
   "setup": "main-studio",
   "src": "item:ugrids",
   "status": "confirmed",
@@ -3031,8 +3183,10 @@
  },
  {
   "dst": "item:custom-reel-case",
+  "position": 3,
   "rel": "INSTALLED_IN",
   "row": "3U",
+  "row_index": 2,
   "setup": "main-studio",
   "src": "item:zlob-fade-lfo",
   "status": "confirmed",
@@ -3046,8 +3200,10 @@
  },
  {
   "dst": "item:behringer-cp1a",
+  "position": 3,
   "rel": "POWERED_BY",
   "row": "3U",
+  "row_index": 2,
   "setup": "main-studio",
   "src": "item:zlob-fade-lfo",
   "status": "confirmed",
@@ -16147,6 +16303,22 @@
   "rel": "SOURCED_FROM",
   "src": "spec:moth-hunter-mods-razcalito.hp",
   "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "src:https://modulargrid.net/e/synthrotek-mix",
+  "line": "2 HP",
+  "rel": "SOURCED_FROM",
+  "src": "spec:synthrotek-mix.hp",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "src:https://www.synthrotek.com/mix-3-channel-passive-mixer-attenuator-averager-in-2hp-released/",
+  "line": "MIX - 2HP Passive Mixer",
+  "rel": "SOURCED_FROM",
+  "src": "spec:synthrotek-mix.hp",
+  "value": 2,
   "visibility": "public"
  },
  {

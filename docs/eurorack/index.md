@@ -8,9 +8,9 @@ content_status: generated
 
 # Eurorack
 
-27 modules have spec pages. Every number keeps the source it came from; see each module's *Evidence* table.
+28 modules have spec pages. Every number keeps the source it came from; see each module's *Evidence* table.
 
-Field status across all modules: 86 single, 32 confirmed, 10 missing, 6 inferred, 1 override.
+Field status across all modules: 86 single, 33 confirmed, 11 missing, 6 inferred, 4 override.
 
 See the [power budget](power-budget.md).
 
@@ -39,6 +39,7 @@ See the [power budget](power-budget.md).
 | [Intellijel Stereo Mixer 1U](intellijel-stereo-mixer-1u.md) | 1U | 16 | 17 | 23 | - | single |
 | [Jake's Custom Shop Clock and Musical Divider](jakes-clock-and-musical-divider.md) | 3U | 8 | 90 | 0 | 0 | confirmed |
 | [Moth Hunter Mods Razcalito](moth-hunter-mods-razcalito.md) | 3U | 4 | 0 | 0 | 0 | inferred |
+| [Synthrotek MIX](synthrotek-mix.md) | 3U | 2 | 0 | 0 | 0 | override |
 | [Synthrotek passive mult](synthrotek-passive-mult.md) | 3U | 2 | 0 | 0 | 0 | inferred |
 | [Tiptop Audio Forbidden Planet filter](tiptop-audio-forbidden-planet-filter.md) | 3U | 8 | 10 | 10 | - | single |
 | [uGrids](ugrids.md) | 3U | 8 | 25 | 1 | 0 | single |

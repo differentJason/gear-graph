@@ -95,33 +95,40 @@ cases:
      note: "Owner-built from a gutted Sony reel-to-reel deck: a 1U row on top and two 3U rows below. The CP1A (4 HP) is mounted in it."}
 
 placements:
-  # --- NiftyCASE, left to right, as listed by the owner. Powered by its built-in supply. ---
-  - {setup: main-studio, module: ugrids, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 1, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: cre8audio-cellz, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 2, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: ddnipro-qtone, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 3, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: synthrotek-passive-mult, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 4, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: moth-hunter-mods-razcalito, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 5, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: cre8audio-captain-big-o, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 6, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: cre8audio-mr-philter, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 7, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: erica-pico-mod, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 8, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: behringer-961-interface, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, position: 9, status: confirmed, confirmed: 2026-09-20}
-  # --- custom case: 'the rest' (owner). Powered by the CP1A. Which 3U row and position each sits in is not recorded. ---
-  - {setup: main-studio, module: intellijel-quadratt-1u, case: custom-reel-case, powered_by: behringer-cp1a, row: 1U, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: intellijel-stereo-mixer-1u, case: custom-reel-case, powered_by: behringer-cp1a, row: 1U, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: intellijel-stereo-line-out-1u, case: custom-reel-case, powered_by: behringer-cp1a, row: 1U, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: intellijel-audio-stereo-line-out-jacks-1u, case: custom-reel-case, powered_by: behringer-cp1a, row: 1U, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: jakes-clock-and-musical-divider, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: after-later-audio-dice, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: after-later-audio-resonate, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: zlob-fade-lfo, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: antumbra-atom, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: cosmotronic-delta-v, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: tiptop-audio-forbidden-planet-filter, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: behringer-1003-dual-envelope-generator, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: behringer-four-play-vca, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: after-later-audio-pixie, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: erica-synths-black-dual-vcf, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20}
-  - {setup: main-studio, module: behringer-cp1a, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, status: confirmed, confirmed: 2026-09-20, note: "The supply itself, mounted in the custom case."}
+  # Positions are left to right within each physical row, read by the assistant from the owner's photos of the cases (2026-09-23). row_index follows the case's `rows` list
+  # (custom-reel-case: 1 = the 1U row on top, 2 = the upper 3U row, 3 = the lower 3U row). Blank panels and empty rail
+  # are not listed; validate_connections.py reports each row's free HP from the modules' spec widths.
+  # NiftyCASE (84 HP), left to right:
+  - {setup: main-studio, module: ugrids, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, row_index: 1, position: 1, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: cre8audio-cellz, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, row_index: 1, position: 2, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: moth-hunter-mods-razcalito, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, row_index: 1, position: 3, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: erica-pico-mod, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, row_index: 1, position: 4, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: synthrotek-passive-mult, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, row_index: 1, position: 5, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: ddnipro-qtone, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, row_index: 1, position: 6, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: cre8audio-captain-big-o, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, row_index: 1, position: 7, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: synthrotek-mix, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, row_index: 1, position: 8, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: cre8audio-mr-philter, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, row_index: 1, position: 9, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: behringer-961-interface, case: cre8audio-niftycase, powered_by: cre8audio-niftycase, row_index: 1, position: 10, status: confirmed, confirmed: 2026-09-23}
+  # custom-reel-case row 1 (1U, 84 HP): empty rail at the left, then:
+  - {setup: main-studio, module: intellijel-quadratt-1u, case: custom-reel-case, powered_by: behringer-cp1a, row: 1U, row_index: 1, position: 1, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: intellijel-stereo-mixer-1u, case: custom-reel-case, powered_by: behringer-cp1a, row: 1U, row_index: 1, position: 2, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: intellijel-stereo-line-out-1u, case: custom-reel-case, powered_by: behringer-cp1a, row: 1U, row_index: 1, position: 3, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: intellijel-audio-stereo-line-out-jacks-1u, case: custom-reel-case, powered_by: behringer-cp1a, row: 1U, row_index: 1, position: 4, status: confirmed, confirmed: 2026-09-23}
+  # custom-reel-case row 2 (3U, 84 HP): a Herzlich Laboratories joke blank panel sits between Forbidden Planet and Resonate;
+  # small open gaps before Resonate and before Four Play.
+  - {setup: main-studio, module: jakes-clock-and-musical-divider, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, row_index: 2, position: 1, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: after-later-audio-pixie, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, row_index: 2, position: 2, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: zlob-fade-lfo, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, row_index: 2, position: 3, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: tiptop-audio-forbidden-planet-filter, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, row_index: 2, position: 4, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: after-later-audio-resonate, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, row_index: 2, position: 5, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: erica-synths-black-dual-vcf, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, row_index: 2, position: 6, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: behringer-four-play-vca, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, row_index: 2, position: 7, status: confirmed, confirmed: 2026-09-23}
+  # custom-reel-case row 3 (3U, 84 HP): empty rail at the right after the Delta-V.
+  - {setup: main-studio, module: behringer-cp1a, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, row_index: 3, position: 1, status: confirmed, confirmed: 2026-09-23, note: "The supply itself, mounted in the custom case."}
+  - {setup: main-studio, module: after-later-audio-dice, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, row_index: 3, position: 2, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: antumbra-atom, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, row_index: 3, position: 3, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: behringer-1003-dual-envelope-generator, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, row_index: 3, position: 4, status: confirmed, confirmed: 2026-09-23}
+  - {setup: main-studio, module: cosmotronic-delta-v, case: custom-reel-case, powered_by: behringer-cp1a, row: 3U, row_index: 3, position: 5, status: confirmed, confirmed: 2026-09-23}
 
 # Modules marked unused by the owner are deliberately not placed: Jake's kick, Jake's snare/hats, Synthrotek Atari Punk Console, Mosaic Quantizer,
 # Behringer CM1A MIDI to CV, and (since 2026-09-20) the Behringer Space FX.

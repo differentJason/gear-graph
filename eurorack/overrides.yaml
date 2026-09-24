@@ -50,6 +50,11 @@ ddnipro-qtone:
 zlob-fade-lfo:
   function: "LFO with skew and voltage-controlled crossfade between sine and square (Skew Fade LFO)"
 
+synthrotek-mix:
+  function: "Passive 3-channel mixer / attenuator / averager"
+  ma_p12: {value: 0, status: override, basis: "Passive module; the maker's page states 'Power consumption: none' (synthrotek.com MIX release post, read 2026-09-23)."}
+  ma_m12: {value: 0, status: override, basis: "Same as +12V."}
+  ma_p5:  {value: 0, status: override, basis: "Same as +12V."}
 synthrotek-passive-mult:
   function: "Passive multiple: 2x 1-to-3 or one 1-to-6"
   ma_p12: {value: 0, status: inferred, basis: "Passive multiple: no active circuitry, and ModularGrid lists no power draw. Inferred, not stated by a source."}

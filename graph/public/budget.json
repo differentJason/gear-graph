@@ -1,6 +1,6 @@
 {
  "generated_by": "tools/build_graph.py",
- "inputs_sha256": "e34b3093462405dfc1b48bd76e74d6101fa2dd5b73c6b215f061f1cb988025aa",
+ "inputs_sha256": "00af955679af20ccbcc6aa58c9878af74e6e72c6d37ea6dfae2ad691ce01e095",
  "setups": {
   "main-studio": {
    "supplies": [
@@ -87,6 +87,7 @@
       "ddnipro-qtone",
       "erica-pico-mod",
       "moth-hunter-mods-razcalito",
+      "synthrotek-mix",
       "synthrotek-passive-mult",
       "ugrids"
      ],
@@ -98,9 +99,10 @@
        "figure_status": {
         "confirmed": 2,
         "inferred": 2,
+        "override": 1,
         "single": 5
        },
-       "modules_counted": 9,
+       "modules_counted": 10,
        "modules_without_figure": [],
        "owner_attested": 7,
        "pct": 20
@@ -110,9 +112,10 @@
        "draw_ma": 49,
        "figure_status": {
         "inferred": 2,
+        "override": 1,
         "single": 7
        },
-       "modules_counted": 9,
+       "modules_counted": 10,
        "modules_without_figure": [],
        "owner_attested": 7,
        "pct": 10
@@ -123,9 +126,10 @@
        "figure_status": {
         "confirmed": 1,
         "inferred": 2,
+        "override": 1,
         "single": 6
        },
-       "modules_counted": 9,
+       "modules_counted": 10,
        "modules_without_figure": [],
        "owner_attested": 7,
        "pct": 35

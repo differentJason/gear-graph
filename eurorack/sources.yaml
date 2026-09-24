@@ -84,6 +84,10 @@ modules:
   synthrotek-passive-mult:
     sources:
       - {tier: community, url: "https://modulargrid.net/e/synthrotek-passive-mult"}
+  synthrotek-mix:
+    sources:
+      - {tier: official,  url: "https://www.synthrotek.com/mix-3-channel-passive-mixer-attenuator-averager-in-2hp-released/"}
+      - {tier: community, url: "https://modulargrid.net/e/synthrotek-mix"}
   moth-hunter-mods-razcalito:
     match_note: "ModularGrid lists it under 'Other/unknown'."
     sources:

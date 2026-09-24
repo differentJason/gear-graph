@@ -77,6 +77,7 @@ def main():
 
     placed = defaultdict(list)                      # (setup, module) -> [case]
     load = defaultdict(int)                         # (setup, case, format) -> HP used
+    row_load, row_pos = defaultdict(int), {}         # (case, row_index) -> HP used; (case, row_index, position) -> module
     for n, p in enumerate(c.get("placements", []), 1):
         tag = f"placement {n} ({p.get('module')})"
         for k in ("module", "case", "powered_by"):
@@ -99,6 +100,20 @@ def main():
             warn(f"{tag}: no HP figure, so it is not counted against the case")
             continue
         load[(p.get("setup"), p["case"], p.get("row", fmt))] += h
+        if p.get("row_index"):                                   # which physical row (1-based, in the case's `rows` order)
+            rows_ = case.get("rows", []) if case else []
+            ri = p["row_index"]
+            if not 1 <= ri <= len(rows_):
+                err(f"{tag}: row_index {ri} but case {p['case']} has {len(rows_)} row(s)")
+            else:
+                if rows_[ri - 1]["format"] != p.get("row", fmt):
+                    err(f"{tag}: row_index {ri} is a {rows_[ri - 1]['format']} row but the module is {p.get('row', fmt)}")
+                row_load[(p["case"], ri)] += h
+                if p.get("position") is not None:
+                    key = (p["case"], ri, p["position"])
+                    if key in row_pos:
+                        err(f"{tag}: position {p['position']} in {p['case']} row {ri} is also taken by {row_pos[key]}")
+                    row_pos[key] = p["module"]
 
     for (setup, mod), where in placed.items():
         if len(where) > 1:
@@ -110,6 +125,9 @@ def main():
         cap = Counter()
         for row in k.get("rows", []):
             cap[row["format"]] += row["hp"]
+        for ri, row in enumerate(k.get("rows", []), 1):
+            if row_load.get((cid, ri), 0) > row["hp"]:
+                err(f"case {cid}: row {ri} ({row['format']}) holds {row['hp']} HP but {row_load[(cid, ri)]} HP is placed in it")
         for (setup, case, fmt), used in sorted(load.items()):
             if case == cid and used > cap.get(fmt, 0):
                 err(f"case {cid}: {fmt} rows hold {cap.get(fmt, 0)} HP but {used} HP is placed in them")
@@ -153,6 +171,9 @@ def main():
     for (setup, case, fmt), used in sorted(load.items()):
         cap = sum(r["hp"] for r in cases[case]["rows"] if r["format"] == fmt)
         print(f"  {case} [{fmt}]: {used}/{cap} HP")
+    for (case, ri), used in sorted(row_load.items()):
+        r = cases[case]["rows"][ri - 1]
+        print(f"  {case} row {ri} ({r['format']}): {used}/{r['hp']} HP placed, {r['hp'] - used} HP blank/free")
     if manuals.exists():
         print(f"  ports: {found} of {checked} found in the device manuals; {unchecked} on devices with no ingested manual (not checked)")
     else:

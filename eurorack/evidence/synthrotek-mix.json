@@ -1,0 +1,56 @@
+{
+ "id": "synthrotek-mix",
+ "fetched": "2026-09-23",
+ "match_note": null,
+ "sources": [
+  {
+   "tier": "official",
+   "url": "https://www.synthrotek.com/mix-3-channel-passive-mixer-attenuator-averager-in-2hp-released/",
+   "http": "200",
+   "values": {
+    "hp": 2,
+    "hp_line": "MIX - 2HP Passive Mixer"
+   }
+  },
+  {
+   "tier": "community",
+   "url": "https://modulargrid.net/e/synthrotek-mix",
+   "http": "200",
+   "values": {
+    "hp": 2,
+    "hp_line": "2 HP"
+   }
+  }
+ ],
+ "agreement": {
+  "hp": {
+   "status": "agree",
+   "values": [
+    [
+     "official",
+     2
+    ],
+    [
+     "community",
+     2
+    ]
+   ]
+  },
+  "depth_mm": {
+   "status": "none",
+   "values": []
+  },
+  "ma_p12": {
+   "status": "none",
+   "values": []
+  },
+  "ma_m12": {
+   "status": "none",
+   "values": []
+  },
+  "ma_p5": {
+   "status": "none",
+   "values": []
+  }
+ }
+}

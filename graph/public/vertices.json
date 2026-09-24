@@ -904,6 +904,16 @@
  },
  {
   "category": "eurorack-module",
+  "id": "item:synthrotek-mix",
+  "in_use": true,
+  "manufacturer": "Synthrotek",
+  "name": "Synthrotek MIX",
+  "status": "owned",
+  "type": "item",
+  "visibility": "public"
+ },
+ {
+  "category": "eurorack-module",
   "id": "item:synthrotek-passive-mult",
   "in_use": true,
   "manufacturer": "Synthrotek",
@@ -2890,6 +2900,50 @@
  },
  {
   "field": "depth_mm",
+  "id": "spec:synthrotek-mix.depth_mm",
+  "name": "Synthrotek MIX Depth (mm)",
+  "status": "missing",
+  "type": "spec",
+  "visibility": "public"
+ },
+ {
+  "field": "hp",
+  "id": "spec:synthrotek-mix.hp",
+  "name": "Synthrotek MIX Width (HP)",
+  "status": "confirmed",
+  "type": "spec",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "field": "ma_m12",
+  "id": "spec:synthrotek-mix.ma_m12",
+  "name": "Synthrotek MIX -12V (mA)",
+  "status": "override",
+  "type": "spec",
+  "value": 0,
+  "visibility": "public"
+ },
+ {
+  "field": "ma_p12",
+  "id": "spec:synthrotek-mix.ma_p12",
+  "name": "Synthrotek MIX +12V (mA)",
+  "status": "override",
+  "type": "spec",
+  "value": 0,
+  "visibility": "public"
+ },
+ {
+  "field": "ma_p5",
+  "id": "spec:synthrotek-mix.ma_p5",
+  "name": "Synthrotek MIX +5V (mA)",
+  "status": "override",
+  "type": "spec",
+  "value": 0,
+  "visibility": "public"
+ },
+ {
+  "field": "depth_mm",
   "id": "spec:synthrotek-passive-mult.depth_mm",
   "name": "Synthrotek passive mult Depth (mm)",
   "status": "single",
@@ -3307,6 +3361,14 @@
   "visibility": "public"
  },
  {
+  "id": "src:https://modulargrid.net/e/synthrotek-mix",
+  "name": "community: modulargrid.net",
+  "tier": "community",
+  "type": "source",
+  "url": "https://modulargrid.net/e/synthrotek-mix",
+  "visibility": "public"
+ },
+ {
   "id": "src:https://modulargrid.net/e/synthrotek-passive-mult",
   "name": "community: modulargrid.net",
   "tier": "community",
@@ -3464,6 +3526,14 @@
   "tier": "retailer",
   "type": "source",
   "url": "https://www.sweetwater.com/store/detail/BehrCP1A--behringer-cp1a-power-supply-module-for-eurorack-system",
+  "visibility": "public"
+ },
+ {
+  "id": "src:https://www.synthrotek.com/mix-3-channel-passive-mixer-attenuator-averager-in-2hp-released/",
+  "name": "official: www.synthrotek.com",
+  "tier": "official",
+  "type": "source",
+  "url": "https://www.synthrotek.com/mix-3-channel-passive-mixer-attenuator-averager-in-2hp-released/",
   "visibility": "public"
  },
  {

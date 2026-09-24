@@ -60,7 +60,7 @@ ESCHEMA = StructType([StructField(n, t, True) for n, t in [
     ("src", StringType()), ("dst", StringType()), ("rel", StringType()), ("visibility", StringType()),
     ("setup", StringType()), ("medium", StringType()), ("from_port", StringType()), ("to_port", StringType()),
     ("status", StringType()), ("confirmed", StringType()), ("value", DoubleType()), ("line", StringType()),
-    ("swappable", BooleanType()), ("bidirectional", BooleanType()), ("position", IntegerType()), ("row", StringType()),
+    ("swappable", BooleanType()), ("bidirectional", BooleanType()), ("position", IntegerType()), ("row", StringType()), ("row_index", IntegerType()),
     ("http", StringType()), ("note", StringType()), ("label", StringType())]])
 
 
@@ -211,7 +211,7 @@ def collect():
                to_port=l.get("to_port"), status=l["status"], confirmed=str(l["confirmed"]) if l.get("confirmed") else None,
                swappable=l.get("swappable"), bidirectional=l.get("bidirectional"), note=l.get("note"))
     for p in conn.get("placements", []):
-        common = dict(setup=p["setup"], status=p["status"], position=p.get("position"), row=p.get("row"))
+        common = dict(setup=p["setup"], status=p["status"], position=p.get("position"), row=p.get("row"), row_index=p.get("row_index"))
         b.edge(f"item:{p['module']}", f"item:{p['case']}", "INSTALLED_IN", **common)
         if p["powered_by"] != p["module"]:               # a supply does not power itself
             b.edge(f"item:{p['module']}", f"item:{p['powered_by']}", "POWERED_BY", **common)

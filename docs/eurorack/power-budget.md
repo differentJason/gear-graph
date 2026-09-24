@@ -15,18 +15,18 @@ Each supply is compared only with the modules it actually feeds. Which module si
 | Behringer CP1A power supply (rated) | +12V | 795 (lower bound) | 1000 | 80% | 15 | 1 |
 | Behringer CP1A power supply (rated) | -12V | 349 (lower bound) | 1000 | 35% | 15 | 1 |
 | Behringer CP1A power supply (rated) | +5V | 0 (lower bound) | 500 | 0% | 15 | 7 |
-| Cre8audio NiftyCASE (peak) | +12V | 304 | 1500 | 20% | 9 | 0 |
-| Cre8audio NiftyCASE (peak) | -12V | 174 | 500 | 35% | 9 | 0 |
-| Cre8audio NiftyCASE (peak) | +5V | 49 | 500 | 10% | 9 | 0 |
+| Cre8audio NiftyCASE (peak) | +12V | 304 | 1500 | 20% | 10 | 0 |
+| Cre8audio NiftyCASE (peak) | -12V | 174 | 500 | 35% | 10 | 0 |
+| Cre8audio NiftyCASE (peak) | +5V | 49 | 500 | 10% | 10 | 0 |
 
 Load is draw as a share of capacity. A rail marked *lower bound* omits modules whose figure no source stated. The NiftyCASE figures are labelled *peak* by the maker; its continuous capacity may be lower.
 
 ## What each supply feeds
 
 - **Behringer CP1A power supply**: [After Later Audio Dice](after-later-audio-dice.md), [After Later Audio Pixie](after-later-audio-pixie.md), [After Later Audio Resonate](after-later-audio-resonate.md), [Antumbra Atom](antumbra-atom.md), [Behringer 1003 Dual Envelope Generator](behringer-1003-dual-envelope-generator.md), [Behringer Four Play VCA](behringer-four-play-vca.md), [Cosmotronic Delta-V](cosmotronic-delta-v.md), [Erica Synths Black Dual VCF](erica-synths-black-dual-vcf.md), [Intellijel Audio Stereo Line Out Jacks 1U](intellijel-audio-stereo-line-out-jacks-1u.md), [Intellijel Quadratt 1U](intellijel-quadratt-1u.md), [Intellijel Stereo Line Out 1U](intellijel-stereo-line-out-1u.md), [Intellijel Stereo Mixer 1U](intellijel-stereo-mixer-1u.md), [Jake's Custom Shop Clock and Musical Divider](jakes-clock-and-musical-divider.md), [Tiptop Audio Forbidden Planet filter](tiptop-audio-forbidden-planet-filter.md), [Złob Fade LFO](zlob-fade-lfo.md)
-- **Cre8audio NiftyCASE**: [Behringer 961 Interface](behringer-961-interface.md), [Cre8audio Captain Big-O](cre8audio-captain-big-o.md), [Cre8audio Cellz](cre8audio-cellz.md), [Cre8audio Mr. PhilTer](cre8audio-mr-philter.md), [DDNIPRO qTone Eurorack Dual Channel Quantiser Module](ddnipro-qtone.md), [Erica Pico Mod](erica-pico-mod.md), [Moth Hunter Mods Razcalito](moth-hunter-mods-razcalito.md), [Synthrotek passive mult](synthrotek-passive-mult.md), [uGrids](ugrids.md)
+- **Cre8audio NiftyCASE**: [Behringer 961 Interface](behringer-961-interface.md), [Cre8audio Captain Big-O](cre8audio-captain-big-o.md), [Cre8audio Cellz](cre8audio-cellz.md), [Cre8audio Mr. PhilTer](cre8audio-mr-philter.md), [DDNIPRO qTone Eurorack Dual Channel Quantiser Module](ddnipro-qtone.md), [Erica Pico Mod](erica-pico-mod.md), [Moth Hunter Mods Razcalito](moth-hunter-mods-razcalito.md), [Synthrotek MIX](synthrotek-mix.md), [Synthrotek passive mult](synthrotek-passive-mult.md), [uGrids](ugrids.md)
 
-**Space:** Cre8audio NiftyCASE 3U: 82 of 84 HP; Custom Eurorack case (gutted Sony reel-to-reel) 1U: 60 of 84 HP; Custom Eurorack case (gutted Sony reel-to-reel) 3U: 141 of 168 HP. The custom case's 3U figure includes the 4 HP CP1A. 1U-format (Intellijel) modules use their own row, and their HP is as listed by ModularGrid.
+**Space:** Cre8audio NiftyCASE 3U: 84 of 84 HP; Custom Eurorack case (gutted Sony reel-to-reel) 1U: 60 of 84 HP; Custom Eurorack case (gutted Sony reel-to-reel) 3U: 141 of 168 HP. The custom case's 3U figure includes the 4 HP CP1A. 1U-format (Intellijel) modules use their own row, and their HP is as listed by ModularGrid.
 
 ## Per module
 
@@ -55,8 +55,9 @@ Load is draw as a share of capacity. A rail marked *lower bound* omits modules w
 | [Cre8audio Cellz](cre8audio-cellz.md) | Cre8audio NiftyCASE | 12 | 3 | 2 | 27 | single |
 | [Moth Hunter Mods Razcalito](moth-hunter-mods-razcalito.md) | Cre8audio NiftyCASE | 4 | 0 | 0 | 0 | inferred |
 | [Synthrotek passive mult](synthrotek-passive-mult.md) | Cre8audio NiftyCASE | 2 | 0 | 0 | 0 | inferred |
+| [Synthrotek MIX](synthrotek-mix.md) | Cre8audio NiftyCASE | 2 | 0 | 0 | 0 | override |
 | [Intellijel Audio Stereo Line Out Jacks 1U](intellijel-audio-stereo-line-out-jacks-1u.md) | Behringer CP1A power supply | 8 | - | - | - | missing |
 
 ## How much to trust it
 
-63 module draw figures feed these sums. **57 are attested correct by the owner**, who sourced the draw values from the manufacturers (see `eurorack/attestations.yaml`); the attestation is recorded separately and does not change each field's evidence status. 6 are zero-draw assumptions for passive modules; those were inferred, not sourced, and are labelled *inferred* on the module pages. Supply capacity figures are not covered by the attestation.
+66 module draw figures feed these sums. **57 are attested correct by the owner**, who sourced the draw values from the manufacturers (see `eurorack/attestations.yaml`); the attestation is recorded separately and does not change each field's evidence status. 6 are zero-draw assumptions for passive modules; those were inferred, not sourced, and are labelled *inferred* on the module pages. Supply capacity figures are not covered by the attestation.
