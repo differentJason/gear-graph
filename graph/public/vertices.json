@@ -293,6 +293,7 @@
  },
  {
   "category": "eurorack-module",
+  "format": "3U",
   "id": "item:behringer-cm1a-midi-to-cv",
   "in_use": false,
   "manufacturer": "Behringer",
@@ -682,6 +683,7 @@
  },
  {
   "category": "eurorack-module",
+  "format": "3U",
   "id": "item:jakes-kick-6hp",
   "in_use": false,
   "manufacturer": "Jake's Custom Shop",
@@ -692,6 +694,7 @@
  },
  {
   "category": "eurorack-module",
+  "format": "3U",
   "id": "item:jakes-snare-hats-6hp",
   "in_use": false,
   "manufacturer": "Jake's Custom Shop",
@@ -773,6 +776,7 @@
  },
  {
   "category": "eurorack-module",
+  "format": "1U",
   "id": "item:mosaic-quantizer",
   "in_use": false,
   "manufacturer": "Mosaic",
@@ -894,6 +898,7 @@
  },
  {
   "category": "eurorack-module",
+  "format": "3U",
   "id": "item:synthrotek-atari-punk-console-4hp",
   "in_use": false,
   "manufacturer": "Synthrotek",

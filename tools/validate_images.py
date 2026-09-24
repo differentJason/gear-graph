@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""Check tools/image_manifest.yaml against inventory.yaml and images/ (local-only, gitignored gear photos).
+"""Check tools/image_manifest.yaml against inventory.yaml and images/ (original illustrations, committed).
 
     .venv/bin/python tools/validate_images.py
 
-Errors : a manifest entry whose device is not in inventory.yaml, whose file does not exist under images/, or whose
-         photo_type is not official/retailer; an images/ file with no manifest entry (orphaned, undocumented).
-Warnings: an inventory item with no image at all (images/ is local-only, so this is expected until fetched, not a
-          failure).
+Errors : a manifest entry whose device is not in inventory.yaml, whose file/svg does not exist under images/, whose
+         photo_type is not 'original', or with no source; an images/ file with no manifest entry (orphaned).
+Warnings: an inventory item with no image at all (run tools/draw_devices.py).
 """
 import sys
 from pathlib import Path
@@ -14,7 +13,7 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-PHOTO_TYPES = {"official", "retailer"}
+PHOTO_TYPES = {"original"}   # drawn by tools/draw_devices.py; no product photos are kept
 
 
 def main():
@@ -24,7 +23,7 @@ def main():
     err, warn = errors.append, warnings.append
 
     if not images_dir.exists():
-        print("  not checked (images/ is local-only and not present)")
+        print("  not checked (images/ is missing: run tools/draw_devices.py)")
         print("checked 0 image_manifest.yaml entries: 0 error(s), 0 warning(s)")
         sys.exit(0)
 
@@ -44,8 +43,13 @@ def main():
             documented.add(f.name)
         if e.get("photo_type") not in PHOTO_TYPES:
             err(f"{tag}: photo_type {e.get('photo_type')!r} not one of {sorted(PHOTO_TYPES)}")
-        if not e.get("source_url"):
-            err(f"{tag}: no source_url recorded")
+        if e.get("svg"):
+            if Path(e["svg"]).name not in on_disk:
+                err(f"{tag}: svg {e['svg']!r} does not exist under images/")
+            else:
+                documented.add(Path(e["svg"]).name)
+        if not e.get("source"):
+            err(f"{tag}: no source (generator) recorded")
 
     for name in sorted(on_disk - documented):
         err(f"images/{name}: no image_manifest.yaml entry (orphaned, undocumented)")

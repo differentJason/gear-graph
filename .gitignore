@@ -1,6 +1,5 @@
 # --- copyrighted material and anything derived from it: never commit, never publish ---
 sources/
-images/
 docs/manuals/
 docs/topics/
 docs/devices/
@@ -34,3 +33,5 @@ private/
 
 # --- generated public site (rebuilt by CI). Anchored to the root: graph/public/ is a committed snapshot ---
 /public/
+
+# images/ IS committed: original illustrations from tools/draw_devices.py (no product photos; see tools/image_manifest.yaml)

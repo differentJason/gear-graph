@@ -16,7 +16,8 @@ All commands run from the repository root with the project's virtual environment
 .venv/bin/python tools/fetch_specs.py [id ...]      # Eurorack: fetch sources, extract numbers + raw lines
 .venv/bin/python tools/build_site.py                # inventory, devices, topics, Eurorack, budget, status, llms.txt, nav
 .venv/bin/python tools/validate.py                  # structure, tags, links, hashes
-.venv/bin/python tools/validate_images.py           # is image_manifest.yaml consistent with inventory.yaml and images/? (local-only, no Spark needed)
+.venv/bin/python tools/draw_devices.py            # redraw the original device illustrations -> images/<id>.svg + .jpg (needs Inkscape)
+.venv/bin/python tools/validate_images.py          # is image_manifest.yaml consistent with inventory.yaml and images/?
 .venv/bin/python tools/check_coverage.py            # did conversion lose text?
 .venv/bin/mkdocs build --strict                     # strict build; fails on broken links
 .venv/bin/mkdocs serve                              # preview at http://127.0.0.1:8000
@@ -134,5 +135,5 @@ Each of these happened at least once while building the project:
 
 `inventory.yaml` (gear) - `connections.yaml` (wiring) - `midi_channels.yaml` (intended MIDI channel settings) -
 `tools/` (all code) - `tools/manifest.yaml` (manual settings) - `VOCAB.yaml` (tags) -
-`sources/` (PDFs, ignored) - `images/` (gear photos, ignored) - `eurorack/{sources,overrides}.yaml`, `eurorack/evidence/` (spec inputs) -
+`sources/` (PDFs, ignored) - `images/` (original illustrations drawn by `tools/draw_devices.py`, committed; no product photos) - `eurorack/{sources,overrides}.yaml`, `eurorack/evidence/` (spec inputs) -
 `docs/` (the site; mostly generated) - `evals/golden.jsonl`, `evals/graph_golden.yaml` (test questions) - `mkdocs.yml` (generated).
