@@ -1,0 +1,5719 @@
+{
+ "generated_by": "tools/build_code_graph.py",
+ "inputs_sha256": "a382f7ff3ce1af771ff0855e004b01796cde6e116c6beed1e913fa28bae83616",
+ "inputs": [
+  "patchbay/README.md",
+  "patchbay/docs/user-guide.md",
+  "patchbay/tools/build_data.py",
+  "patchbay/tools/common.py",
+  "patchbay/tools/extract_ports.py",
+  "patchbay/tools/patchbay.py",
+  "patchbay/tools/trace_icons.py",
+  "patchbay/web/app.js",
+  "patchbay/web/faceplate.js",
+  "patchbay/web/index.html"
+ ],
+ "counts": {
+  "vertices": {
+   "app": 1,
+   "system": 2,
+   "dataset": 18,
+   "code_file": 7,
+   "function": 154,
+   "api_route": 7,
+   "ui_action": 34,
+   "doc_section": 21
+  },
+  "edges": {
+   "USES": 2,
+   "PART_OF": 18,
+   "CONTAINS": 28,
+   "DEFINES": 154,
+   "READS": 24,
+   "CALLS": 416,
+   "REQUESTS": 9,
+   "HANDLED_BY": 60,
+   "WRITES": 6,
+   "SERVED_BY": 12,
+   "DOCUMENTS": 57
+  }
+ },
+ "coverage": {
+  "collapse": [
+   "Arranging the canvas"
+  ],
+  "delete": [
+   "Arranging the canvas"
+  ],
+  "dup": [
+   "Arranging the canvas"
+  ],
+  "enter-rack": [
+   "The Eurorack rack"
+  ],
+  "exit-rack": [
+   "The Eurorack rack"
+  ],
+  "export-png": [
+   "Exporting a diagram"
+  ],
+  "export-svg": [
+   "Exporting a diagram"
+  ],
+  "field-add": [
+   "Device settings and start state"
+  ],
+  "field-del": [
+   "Device settings and start state"
+  ],
+  "fit": [
+   "Arranging the canvas"
+  ],
+  "jack-labels": [
+   "Arranging the canvas"
+  ],
+  "load-template": [
+   "Sessions and templates"
+  ],
+  "new": [
+   "Sessions and templates"
+  ],
+  "open": [
+   "Sessions and templates"
+  ],
+  "photos": [
+   "Faceplates, boxes and icons"
+  ],
+  "place-done": [
+   "Placing jacks on a panel"
+  ],
+  "place-jacks": [
+   "Placing jacks on a panel"
+  ],
+  "place-reset": [
+   "Placing jacks on a panel"
+  ],
+  "place-skip": [
+   "Placing jacks on a panel"
+  ],
+  "port-add": [
+   "Editing a device's jacks"
+  ],
+  "ports-cancel": [
+   "Editing a device's jacks"
+  ],
+  "ports-edit": [
+   "Editing a device's jacks"
+  ],
+  "ports-save": [
+   "Editing a device's jacks"
+  ],
+  "rack-add-all": [
+   "The Eurorack rack"
+  ],
+  "rack-arrange": [
+   "The Eurorack rack"
+  ],
+  "redo": [
+   "Arranging the canvas"
+  ],
+  "reverse": [
+   "Patching cables"
+  ],
+  "save": [
+   "Sessions and templates"
+  ],
+  "saveas": [
+   "Sessions and templates"
+  ],
+  "state-clear": [
+   "Device settings and start state"
+  ],
+  "state-kb": [
+   "Device settings and start state"
+  ],
+  "theme": [
+   "Faceplates, boxes and icons"
+  ],
+  "undo": [
+   "Arranging the canvas"
+  ],
+  "view-mode": [
+   "Faceplates, boxes and icons"
+  ]
+ },
+ "vertices": [
+  {
+   "id": "action:collapse",
+   "type": "ui_action",
+   "name": "collapse"
+  },
+  {
+   "id": "action:delete",
+   "type": "ui_action",
+   "name": "delete",
+   "label": "Delete cable | Remove from session"
+  },
+  {
+   "id": "action:dup",
+   "type": "ui_action",
+   "name": "dup",
+   "label": "Duplicate"
+  },
+  {
+   "id": "action:enter-rack",
+   "type": "ui_action",
+   "name": "enter-rack",
+   "label": "Open rack patch ▸"
+  },
+  {
+   "id": "action:exit-rack",
+   "type": "ui_action",
+   "name": "exit-rack",
+   "label": "Back to the session | ← | ← Back to session"
+  },
+  {
+   "id": "action:export-png",
+   "type": "ui_action",
+   "name": "export-png",
+   "label": "Download the diagram as PNG | PNG"
+  },
+  {
+   "id": "action:export-svg",
+   "type": "ui_action",
+   "name": "export-svg",
+   "label": "Download the diagram as SVG | SVG"
+  },
+  {
+   "id": "action:field-add",
+   "type": "ui_action",
+   "name": "field-add",
+   "label": "+ Add field"
+  },
+  {
+   "id": "action:field-del",
+   "type": "ui_action",
+   "name": "field-del",
+   "label": "Remove field | ✕"
+  },
+  {
+   "id": "action:fit",
+   "type": "ui_action",
+   "name": "fit",
+   "label": "Fit | Fit diagram to view"
+  },
+  {
+   "id": "action:jack-labels",
+   "type": "ui_action",
+   "name": "jack-labels",
+   "label": "jack names"
+  },
+  {
+   "id": "action:load-template",
+   "type": "ui_action",
+   "name": "load-template"
+  },
+  {
+   "id": "action:new",
+   "type": "ui_action",
+   "name": "new",
+   "label": "New | New session"
+  },
+  {
+   "id": "action:open",
+   "type": "ui_action",
+   "name": "open",
+   "label": "Open | Open a saved session"
+  },
+  {
+   "id": "action:photos",
+   "type": "ui_action",
+   "name": "photos",
+   "label": "Photos | Use the illustrated icons in the palette instead of the mini faceplates"
+  },
+  {
+   "id": "action:place-done",
+   "type": "ui_action",
+   "name": "place-done",
+   "label": "Done"
+  },
+  {
+   "id": "action:place-jacks",
+   "type": "ui_action",
+   "name": "place-jacks",
+   "label": "Place jacks… | Re-place all"
+  },
+  {
+   "id": "action:place-reset",
+   "type": "ui_action",
+   "name": "place-reset",
+   "label": "Reset"
+  },
+  {
+   "id": "action:place-skip",
+   "type": "ui_action",
+   "name": "place-skip",
+   "label": "Skip"
+  },
+  {
+   "id": "action:port-add",
+   "type": "ui_action",
+   "name": "port-add",
+   "label": "+ Jack"
+  },
+  {
+   "id": "action:ports-cancel",
+   "type": "ui_action",
+   "name": "ports-cancel",
+   "label": "Cancel"
+  },
+  {
+   "id": "action:ports-edit",
+   "type": "ui_action",
+   "name": "ports-edit",
+   "label": "Edit jacks…"
+  },
+  {
+   "id": "action:ports-save",
+   "type": "ui_action",
+   "name": "ports-save",
+   "label": "Save jacks"
+  },
+  {
+   "id": "action:rack-add-all",
+   "type": "ui_action",
+   "name": "rack-add-all",
+   "label": "Add installed modules"
+  },
+  {
+   "id": "action:rack-arrange",
+   "type": "ui_action",
+   "name": "rack-arrange",
+   "label": "Arrange by case"
+  },
+  {
+   "id": "action:redo",
+   "type": "ui_action",
+   "name": "redo",
+   "label": "Redo | ↷"
+  },
+  {
+   "id": "action:reverse",
+   "type": "ui_action",
+   "name": "reverse",
+   "label": "Reverse direction"
+  },
+  {
+   "id": "action:save",
+   "type": "ui_action",
+   "name": "save",
+   "label": "Save"
+  },
+  {
+   "id": "action:saveas",
+   "type": "ui_action",
+   "name": "saveas",
+   "label": "Save a copy under a new name | Save as"
+  },
+  {
+   "id": "action:state-clear",
+   "type": "ui_action",
+   "name": "state-clear",
+   "label": "Clear start state"
+  },
+  {
+   "id": "action:state-kb",
+   "type": "ui_action",
+   "name": "state-kb",
+   "label": "Fill empty fields that have a studio default recorded in gear-kb | Fill studio defaults"
+  },
+  {
+   "id": "action:theme",
+   "type": "ui_action",
+   "name": "theme",
+   "label": "Toggle light/dark | ◐"
+  },
+  {
+   "id": "action:undo",
+   "type": "ui_action",
+   "name": "undo",
+   "label": "Undo | ↶"
+  },
+  {
+   "id": "action:view-mode",
+   "type": "ui_action",
+   "name": "view-mode",
+   "label": "Boxes | Faceplates   or boxes | Switch between faceplates and boxes"
+  },
+  {
+   "id": "app:patchbay",
+   "type": "app",
+   "name": "Patchbay",
+   "path": "patchbay/"
+  },
+  {
+   "id": "data:connections.yaml",
+   "type": "dataset",
+   "name": "connections.yaml",
+   "system": "gear-kb"
+  },
+  {
+   "id": "data:docs/manuals",
+   "type": "dataset",
+   "name": "docs/manuals",
+   "system": "gear-kb"
+  },
+  {
+   "id": "data:graph/public/budget.json",
+   "type": "dataset",
+   "name": "graph/public/budget.json",
+   "system": "gear-kb"
+  },
+  {
+   "id": "data:graph/public/vertices.json",
+   "type": "dataset",
+   "name": "graph/public/vertices.json",
+   "system": "gear-kb"
+  },
+  {
+   "id": "data:images",
+   "type": "dataset",
+   "name": "images",
+   "system": "gear-kb"
+  },
+  {
+   "id": "data:inventory.yaml",
+   "type": "dataset",
+   "name": "inventory.yaml",
+   "system": "gear-kb"
+  },
+  {
+   "id": "data:midi_channels.yaml",
+   "type": "dataset",
+   "name": "midi_channels.yaml",
+   "system": "gear-kb"
+  },
+  {
+   "id": "data:patchbay/data/gear.json",
+   "type": "dataset",
+   "name": "patchbay/data/gear.json",
+   "system": "patchbay"
+  },
+  {
+   "id": "data:patchbay/data/ports.seed.yaml",
+   "type": "dataset",
+   "name": "patchbay/data/ports.seed.yaml",
+   "system": "patchbay"
+  },
+  {
+   "id": "data:patchbay/device_fields.yaml",
+   "type": "dataset",
+   "name": "patchbay/device_fields.yaml",
+   "system": "patchbay"
+  },
+  {
+   "id": "data:patchbay/icons",
+   "type": "dataset",
+   "name": "patchbay/icons",
+   "system": "patchbay"
+  },
+  {
+   "id": "data:patchbay/panels.yaml",
+   "type": "dataset",
+   "name": "patchbay/panels.yaml",
+   "system": "patchbay"
+  },
+  {
+   "id": "data:patchbay/ports.yaml",
+   "type": "dataset",
+   "name": "patchbay/ports.yaml",
+   "system": "patchbay"
+  },
+  {
+   "id": "data:patchbay/sessions",
+   "type": "dataset",
+   "name": "patchbay/sessions",
+   "system": "patchbay"
+  },
+  {
+   "id": "data:patchbay/templates.yaml",
+   "type": "dataset",
+   "name": "patchbay/templates.yaml",
+   "system": "patchbay"
+  },
+  {
+   "id": "data:sources/eurorack",
+   "type": "dataset",
+   "name": "sources/eurorack",
+   "system": "gear-kb"
+  },
+  {
+   "id": "data:tools/image_manifest.yaml",
+   "type": "dataset",
+   "name": "tools/image_manifest.yaml",
+   "system": "gear-kb"
+  },
+  {
+   "id": "data:tools/manifest.yaml",
+   "type": "dataset",
+   "name": "tools/manifest.yaml",
+   "system": "gear-kb"
+  },
+  {
+   "id": "doc:patchbay/README.md#eurorack",
+   "type": "doc_section",
+   "name": "Eurorack",
+   "doc": "patchbay/README.md",
+   "audience": "developer"
+  },
+  {
+   "id": "doc:patchbay/README.md#faceplates-our-own-vectors",
+   "type": "doc_section",
+   "name": "Faceplates (our own vectors)",
+   "doc": "patchbay/README.md",
+   "audience": "developer"
+  },
+  {
+   "id": "doc:patchbay/README.md#icons",
+   "type": "doc_section",
+   "name": "Icons",
+   "doc": "patchbay/README.md",
+   "audience": "developer"
+  },
+  {
+   "id": "doc:patchbay/README.md#layout",
+   "type": "doc_section",
+   "name": "Layout",
+   "doc": "patchbay/README.md",
+   "audience": "developer"
+  },
+  {
+   "id": "doc:patchbay/README.md#run-it",
+   "type": "doc_section",
+   "name": "Run it",
+   "doc": "patchbay/README.md",
+   "audience": "developer"
+  },
+  {
+   "id": "doc:patchbay/README.md#session-file-format",
+   "type": "doc_section",
+   "name": "Session file format",
+   "doc": "patchbay/README.md",
+   "audience": "developer"
+  },
+  {
+   "id": "doc:patchbay/README.md#tests",
+   "type": "doc_section",
+   "name": "Tests",
+   "doc": "patchbay/README.md",
+   "audience": "developer"
+  },
+  {
+   "id": "doc:patchbay/README.md#using-it",
+   "type": "doc_section",
+   "name": "Using it",
+   "doc": "patchbay/README.md",
+   "audience": "developer"
+  },
+  {
+   "id": "doc:patchbay/README.md#where-the-jacks-come-from",
+   "type": "doc_section",
+   "name": "Where the jacks come from",
+   "doc": "patchbay/README.md",
+   "audience": "developer"
+  },
+  {
+   "id": "doc:patchbay/docs/user-guide.md#adding-gear-from-the-palette",
+   "type": "doc_section",
+   "name": "Adding gear from the palette",
+   "doc": "patchbay/docs/user-guide.md",
+   "audience": "user"
+  },
+  {
+   "id": "doc:patchbay/docs/user-guide.md#arranging-the-canvas",
+   "type": "doc_section",
+   "name": "Arranging the canvas",
+   "doc": "patchbay/docs/user-guide.md",
+   "audience": "user"
+  },
+  {
+   "id": "doc:patchbay/docs/user-guide.md#checks",
+   "type": "doc_section",
+   "name": "Checks",
+   "doc": "patchbay/docs/user-guide.md",
+   "audience": "user"
+  },
+  {
+   "id": "doc:patchbay/docs/user-guide.md#device-settings-and-start-state",
+   "type": "doc_section",
+   "name": "Device settings and start state",
+   "doc": "patchbay/docs/user-guide.md",
+   "audience": "user"
+  },
+  {
+   "id": "doc:patchbay/docs/user-guide.md#editing-a-device-s-jacks",
+   "type": "doc_section",
+   "name": "Editing a device's jacks",
+   "doc": "patchbay/docs/user-guide.md",
+   "audience": "user"
+  },
+  {
+   "id": "doc:patchbay/docs/user-guide.md#exporting-a-diagram",
+   "type": "doc_section",
+   "name": "Exporting a diagram",
+   "doc": "patchbay/docs/user-guide.md",
+   "audience": "user"
+  },
+  {
+   "id": "doc:patchbay/docs/user-guide.md#faceplates-boxes-and-icons",
+   "type": "doc_section",
+   "name": "Faceplates, boxes and icons",
+   "doc": "patchbay/docs/user-guide.md",
+   "audience": "user"
+  },
+  {
+   "id": "doc:patchbay/docs/user-guide.md#getting-started",
+   "type": "doc_section",
+   "name": "Getting started",
+   "doc": "patchbay/docs/user-guide.md",
+   "audience": "user"
+  },
+  {
+   "id": "doc:patchbay/docs/user-guide.md#patching-cables",
+   "type": "doc_section",
+   "name": "Patching cables",
+   "doc": "patchbay/docs/user-guide.md",
+   "audience": "user"
+  },
+  {
+   "id": "doc:patchbay/docs/user-guide.md#placing-jacks-on-a-panel",
+   "type": "doc_section",
+   "name": "Placing jacks on a panel",
+   "doc": "patchbay/docs/user-guide.md",
+   "audience": "user"
+  },
+  {
+   "id": "doc:patchbay/docs/user-guide.md#sessions-and-templates",
+   "type": "doc_section",
+   "name": "Sessions and templates",
+   "doc": "patchbay/docs/user-guide.md",
+   "audience": "user"
+  },
+  {
+   "id": "doc:patchbay/docs/user-guide.md#the-eurorack-rack",
+   "type": "doc_section",
+   "name": "The Eurorack rack",
+   "doc": "patchbay/docs/user-guide.md",
+   "audience": "user"
+  },
+  {
+   "id": "file:patchbay/tools/build_data.py",
+   "type": "code_file",
+   "name": "patchbay/tools/build_data.py",
+   "language": "python"
+  },
+  {
+   "id": "file:patchbay/tools/common.py",
+   "type": "code_file",
+   "name": "patchbay/tools/common.py",
+   "language": "python"
+  },
+  {
+   "id": "file:patchbay/tools/extract_ports.py",
+   "type": "code_file",
+   "name": "patchbay/tools/extract_ports.py",
+   "language": "python"
+  },
+  {
+   "id": "file:patchbay/tools/patchbay.py",
+   "type": "code_file",
+   "name": "patchbay/tools/patchbay.py",
+   "language": "python"
+  },
+  {
+   "id": "file:patchbay/tools/trace_icons.py",
+   "type": "code_file",
+   "name": "patchbay/tools/trace_icons.py",
+   "language": "python"
+  },
+  {
+   "id": "file:patchbay/web/app.js",
+   "type": "code_file",
+   "name": "patchbay/web/app.js",
+   "language": "javascript"
+  },
+  {
+   "id": "file:patchbay/web/faceplate.js",
+   "type": "code_file",
+   "name": "patchbay/web/faceplate.js",
+   "language": "javascript"
+  },
+  {
+   "id": "fn:patchbay/tools/build_data.py:P",
+   "type": "function",
+   "name": "P",
+   "language": "python",
+   "line": 41
+  },
+  {
+   "id": "fn:patchbay/tools/build_data.py:build",
+   "type": "function",
+   "name": "build",
+   "language": "python",
+   "line": 265
+  },
+  {
+   "id": "fn:patchbay/tools/build_data.py:graph",
+   "type": "function",
+   "name": "graph",
+   "language": "python",
+   "line": 184
+  },
+  {
+   "id": "fn:patchbay/tools/build_data.py:group_of",
+   "type": "function",
+   "name": "group_of",
+   "language": "python",
+   "line": 72
+  },
+  {
+   "id": "fn:patchbay/tools/build_data.py:hp_of",
+   "type": "function",
+   "name": "hp_of",
+   "language": "python",
+   "line": 250
+  },
+  {
+   "id": "fn:patchbay/tools/build_data.py:kb_commit",
+   "type": "function",
+   "name": "kb_commit",
+   "language": "python",
+   "line": 239
+  },
+  {
+   "id": "fn:patchbay/tools/build_data.py:layout",
+   "type": "function",
+   "name": "layout",
+   "language": "python",
+   "line": 118
+  },
+  {
+   "id": "fn:patchbay/tools/build_data.py:make_template",
+   "type": "function",
+   "name": "make_template",
+   "language": "python",
+   "line": 210
+  },
+  {
+   "id": "fn:patchbay/tools/build_data.py:rack_graph",
+   "type": "function",
+   "name": "rack_graph",
+   "language": "python",
+   "line": 205
+  },
+  {
+   "id": "fn:patchbay/tools/build_data.py:resolve_links",
+   "type": "function",
+   "name": "resolve_links",
+   "language": "python",
+   "line": 94
+  },
+  {
+   "id": "fn:patchbay/tools/build_data.py:split_rack",
+   "type": "function",
+   "name": "split_rack",
+   "language": "python",
+   "line": 144
+  },
+  {
+   "id": "fn:patchbay/tools/build_data.py:unnamed_port",
+   "type": "function",
+   "name": "unnamed_port",
+   "language": "python",
+   "line": 79
+  },
+  {
+   "id": "fn:patchbay/tools/common.py:kb_path",
+   "type": "function",
+   "name": "kb_path",
+   "language": "python",
+   "line": 15
+  },
+  {
+   "id": "fn:patchbay/tools/common.py:load_yaml",
+   "type": "function",
+   "name": "load_yaml",
+   "language": "python",
+   "line": 10
+  },
+  {
+   "id": "fn:patchbay/tools/common.py:mirror_rack_io",
+   "type": "function",
+   "name": "mirror_rack_io",
+   "language": "python",
+   "line": 29
+  },
+  {
+   "id": "fn:patchbay/tools/extract_ports.py:classify",
+   "type": "function",
+   "name": "classify",
+   "language": "python",
+   "line": 41
+  },
+  {
+   "id": "fn:patchbay/tools/extract_ports.py:clean_label",
+   "type": "function",
+   "name": "clean_label",
+   "language": "python",
+   "line": 85
+  },
+  {
+   "id": "fn:patchbay/tools/extract_ports.py:from_connections",
+   "type": "function",
+   "name": "from_connections",
+   "language": "python",
+   "line": 181
+  },
+  {
+   "id": "fn:patchbay/tools/extract_ports.py:from_eurorack_pdfs",
+   "type": "function",
+   "name": "from_eurorack_pdfs",
+   "language": "python",
+   "line": 156
+  },
+  {
+   "id": "fn:patchbay/tools/extract_ports.py:from_markdown",
+   "type": "function",
+   "name": "from_markdown",
+   "language": "python",
+   "line": 124
+  },
+  {
+   "id": "fn:patchbay/tools/extract_ports.py:front_matter",
+   "type": "function",
+   "name": "front_matter",
+   "language": "python",
+   "line": 113
+  },
+  {
+   "id": "fn:patchbay/tools/extract_ports.py:is_port_label",
+   "type": "function",
+   "name": "is_port_label",
+   "language": "python",
+   "line": 98
+  },
+  {
+   "id": "fn:patchbay/tools/extract_ports.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 194
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:Handler.body",
+   "type": "function",
+   "name": "Handler.body",
+   "language": "python",
+   "line": 141
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:Handler.do_DELETE",
+   "type": "function",
+   "name": "Handler.do_DELETE",
+   "language": "python",
+   "line": 249
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:Handler.do_GET",
+   "type": "function",
+   "name": "Handler.do_GET",
+   "language": "python",
+   "line": 153
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:Handler.do_PUT",
+   "type": "function",
+   "name": "Handler.do_PUT",
+   "language": "python",
+   "line": 197
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:Handler.list_sessions",
+   "type": "function",
+   "name": "Handler.list_sessions",
+   "language": "python",
+   "line": 167
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:Handler.log_message",
+   "type": "function",
+   "name": "Handler.log_message",
+   "language": "python",
+   "line": 128
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:Handler.route",
+   "type": "function",
+   "name": "Handler.route",
+   "language": "python",
+   "line": 147
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:Handler.send",
+   "type": "function",
+   "name": "Handler.send",
+   "language": "python",
+   "line": 132
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:Handler.session_file",
+   "type": "function",
+   "name": "Handler.session_file",
+   "language": "python",
+   "line": 178
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:Handler.static",
+   "type": "function",
+   "name": "Handler.static",
+   "language": "python",
+   "line": 183
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:atomic_write",
+   "type": "function",
+   "name": "atomic_write",
+   "language": "python",
+   "line": 46
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:clean_ports",
+   "type": "function",
+   "name": "clean_ports",
+   "language": "python",
+   "line": 85
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:clean_session",
+   "type": "function",
+   "name": "clean_session",
+   "language": "python",
+   "line": 104
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:gear_payload",
+   "type": "function",
+   "name": "gear_payload",
+   "language": "python",
+   "line": 70
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 271
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:make_server",
+   "type": "function",
+   "name": "make_server",
+   "language": "python",
+   "line": 267
+  },
+  {
+   "id": "fn:patchbay/tools/patchbay.py:merge_ports",
+   "type": "function",
+   "name": "merge_ports",
+   "language": "python",
+   "line": 54
+  },
+  {
+   "id": "fn:patchbay/tools/trace_icons.py:as_icon",
+   "type": "function",
+   "name": "as_icon",
+   "language": "python",
+   "line": 40
+  },
+  {
+   "id": "fn:patchbay/tools/trace_icons.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 47
+  },
+  {
+   "id": "fn:patchbay/tools/trace_icons.py:write_glyphs",
+   "type": "function",
+   "name": "write_glyphs",
+   "language": "python",
+   "line": 33
+  },
+  {
+   "id": "fn:patchbay/web/app.js:G",
+   "type": "function",
+   "name": "G",
+   "language": "javascript",
+   "line": 132
+  },
+  {
+   "id": "fn:patchbay/web/app.js:addCable",
+   "type": "function",
+   "name": "addCable",
+   "language": "javascript",
+   "line": 772
+  },
+  {
+   "id": "fn:patchbay/web/app.js:addNode",
+   "type": "function",
+   "name": "addNode",
+   "language": "javascript",
+   "line": 739
+  },
+  {
+   "id": "fn:patchbay/web/app.js:api",
+   "type": "function",
+   "name": "api",
+   "language": "javascript",
+   "line": 55
+  },
+  {
+   "id": "fn:patchbay/web/app.js:applyView",
+   "type": "function",
+   "name": "applyView",
+   "language": "javascript",
+   "line": 212
+  },
+  {
+   "id": "fn:patchbay/web/app.js:arrangePanels",
+   "type": "function",
+   "name": "arrangePanels",
+   "language": "javascript",
+   "line": 534
+  },
+  {
+   "id": "fn:patchbay/web/app.js:arrangeRack",
+   "type": "function",
+   "name": "arrangeRack",
+   "language": "javascript",
+   "line": 611
+  },
+  {
+   "id": "fn:patchbay/web/app.js:ask",
+   "type": "function",
+   "name": "ask",
+   "language": "javascript",
+   "line": 940
+  },
+  {
+   "id": "fn:patchbay/web/app.js:autoPatch",
+   "type": "function",
+   "name": "autoPatch",
+   "language": "javascript",
+   "line": 753
+  },
+  {
+   "id": "fn:patchbay/web/app.js:autoPatchOn",
+   "type": "function",
+   "name": "autoPatchOn",
+   "language": "javascript",
+   "line": 750
+  },
+  {
+   "id": "fn:patchbay/web/app.js:bindTarget",
+   "type": "function",
+   "name": "bindTarget",
+   "language": "javascript",
+   "line": 808
+  },
+  {
+   "id": "fn:patchbay/web/app.js:blankSession",
+   "type": "function",
+   "name": "blankSession",
+   "language": "javascript",
+   "line": 76
+  },
+  {
+   "id": "fn:patchbay/web/app.js:boot",
+   "type": "function",
+   "name": "boot",
+   "language": "javascript",
+   "line": 1251
+  },
+  {
+   "id": "fn:patchbay/web/app.js:bounds",
+   "type": "function",
+   "name": "bounds",
+   "language": "javascript",
+   "line": 913
+  },
+  {
+   "id": "fn:patchbay/web/app.js:cableById",
+   "type": "function",
+   "name": "cableById",
+   "language": "javascript",
+   "line": 137
+  },
+  {
+   "id": "fn:patchbay/web/app.js:cableInspector",
+   "type": "function",
+   "name": "cableInspector",
+   "language": "javascript",
+   "line": 425
+  },
+  {
+   "id": "fn:patchbay/web/app.js:cableLabel",
+   "type": "function",
+   "name": "cableLabel",
+   "language": "javascript",
+   "line": 264
+  },
+  {
+   "id": "fn:patchbay/web/app.js:cablePath",
+   "type": "function",
+   "name": "cablePath",
+   "language": "javascript",
+   "line": 178
+  },
+  {
+   "id": "fn:patchbay/web/app.js:changed",
+   "type": "function",
+   "name": "changed",
+   "language": "javascript",
+   "line": 119
+  },
+  {
+   "id": "fn:patchbay/web/app.js:checkpoint",
+   "type": "function",
+   "name": "checkpoint",
+   "language": "javascript",
+   "line": 114
+  },
+  {
+   "id": "fn:patchbay/web/app.js:clearDraft",
+   "type": "function",
+   "name": "clearDraft",
+   "language": "javascript",
+   "line": 113
+  },
+  {
+   "id": "fn:patchbay/web/app.js:clone",
+   "type": "function",
+   "name": "clone",
+   "language": "javascript",
+   "line": 8
+  },
+  {
+   "id": "fn:patchbay/web/app.js:compatible",
+   "type": "function",
+   "name": "compatible",
+   "language": "javascript",
+   "line": 15
+  },
+  {
+   "id": "fn:patchbay/web/app.js:confirmBox",
+   "type": "function",
+   "name": "confirmBox",
+   "language": "javascript",
+   "line": 948
+  },
+  {
+   "id": "fn:patchbay/web/app.js:deleteSelection",
+   "type": "function",
+   "name": "deleteSelection",
+   "language": "javascript",
+   "line": 786
+  },
+  {
+   "id": "fn:patchbay/web/app.js:devOf",
+   "type": "function",
+   "name": "devOf",
+   "language": "javascript",
+   "line": 138
+  },
+  {
+   "id": "fn:patchbay/web/app.js:download",
+   "type": "function",
+   "name": "download",
+   "language": "javascript",
+   "line": 1041
+  },
+  {
+   "id": "fn:patchbay/web/app.js:duplicateNode",
+   "type": "function",
+   "name": "duplicateNode",
+   "language": "javascript",
+   "line": 796
+  },
+  {
+   "id": "fn:patchbay/web/app.js:ensurePanelPos",
+   "type": "function",
+   "name": "ensurePanelPos",
+   "language": "javascript",
+   "line": 458
+  },
+  {
+   "id": "fn:patchbay/web/app.js:enterRack",
+   "type": "function",
+   "name": "enterRack",
+   "language": "javascript",
+   "line": 591
+  },
+  {
+   "id": "fn:patchbay/web/app.js:esc",
+   "type": "function",
+   "name": "esc",
+   "language": "javascript",
+   "line": 6
+  },
+  {
+   "id": "fn:patchbay/web/app.js:exitRack",
+   "type": "function",
+   "name": "exitRack",
+   "language": "javascript",
+   "line": 603
+  },
+  {
+   "id": "fn:patchbay/web/app.js:exportFile",
+   "type": "function",
+   "name": "exportFile",
+   "language": "javascript",
+   "line": 1045
+  },
+  {
+   "id": "fn:patchbay/web/app.js:exportSVG",
+   "type": "function",
+   "name": "exportSVG",
+   "language": "javascript",
+   "line": 1012
+  },
+  {
+   "id": "fn:patchbay/web/app.js:faceOpts",
+   "type": "function",
+   "name": "faceOpts",
+   "language": "javascript",
+   "line": 446
+  },
+  {
+   "id": "fn:patchbay/web/app.js:facts",
+   "type": "function",
+   "name": "facts",
+   "language": "javascript",
+   "line": 362
+  },
+  {
+   "id": "fn:patchbay/web/app.js:field",
+   "type": "function",
+   "name": "field",
+   "language": "javascript",
+   "line": 316
+  },
+  {
+   "id": "fn:patchbay/web/app.js:fit",
+   "type": "function",
+   "name": "fit",
+   "language": "javascript",
+   "line": 924
+  },
+  {
+   "id": "fn:patchbay/web/app.js:fpOf",
+   "type": "function",
+   "name": "fpOf",
+   "language": "javascript",
+   "line": 452
+  },
+  {
+   "id": "fn:patchbay/web/app.js:homeChannelOptions",
+   "type": "function",
+   "name": "homeChannelOptions",
+   "language": "javascript",
+   "line": 649
+  },
+  {
+   "id": "fn:patchbay/web/app.js:iconHTML",
+   "type": "function",
+   "name": "iconHTML",
+   "language": "javascript",
+   "line": 453
+  },
+  {
+   "id": "fn:patchbay/web/app.js:inRack",
+   "type": "function",
+   "name": "inRack",
+   "language": "javascript",
+   "line": 133
+  },
+  {
+   "id": "fn:patchbay/web/app.js:init",
+   "type": "function",
+   "name": "init",
+   "language": "javascript",
+   "line": 1153
+  },
+  {
+   "id": "fn:patchbay/web/app.js:jackSpots",
+   "type": "function",
+   "name": "jackSpots",
+   "language": "javascript",
+   "line": 471
+  },
+  {
+   "id": "fn:patchbay/web/app.js:loadGear",
+   "type": "function",
+   "name": "loadGear",
+   "language": "javascript",
+   "line": 70
+  },
+  {
+   "id": "fn:patchbay/web/app.js:lsSessions",
+   "type": "function",
+   "name": "lsSessions",
+   "language": "javascript",
+   "line": 32
+  },
+  {
+   "id": "fn:patchbay/web/app.js:lsWrite",
+   "type": "function",
+   "name": "lsWrite",
+   "language": "javascript",
+   "line": 33
+  },
+  {
+   "id": "fn:patchbay/web/app.js:modal",
+   "type": "function",
+   "name": "modal",
+   "language": "javascript",
+   "line": 937
+  },
+  {
+   "id": "fn:patchbay/web/app.js:newDialog",
+   "type": "function",
+   "name": "newDialog",
+   "language": "javascript",
+   "line": 999
+  },
+  {
+   "id": "fn:patchbay/web/app.js:nodeById",
+   "type": "function",
+   "name": "nodeById",
+   "language": "javascript",
+   "line": 136
+  },
+  {
+   "id": "fn:patchbay/web/app.js:nodeGeom",
+   "type": "function",
+   "name": "nodeGeom",
+   "language": "javascript",
+   "line": 161
+  },
+  {
+   "id": "fn:patchbay/web/app.js:nodeInspector",
+   "type": "function",
+   "name": "nodeInspector",
+   "language": "javascript",
+   "line": 375
+  },
+  {
+   "id": "fn:patchbay/web/app.js:nodePorts",
+   "type": "function",
+   "name": "nodePorts",
+   "language": "javascript",
+   "line": 149
+  },
+  {
+   "id": "fn:patchbay/web/app.js:nodeSVG",
+   "type": "function",
+   "name": "nodeSVG",
+   "language": "javascript",
+   "line": 229
+  },
+  {
+   "id": "fn:patchbay/web/app.js:nodeSummary",
+   "type": "function",
+   "name": "nodeSummary",
+   "language": "javascript",
+   "line": 225
+  },
+  {
+   "id": "fn:patchbay/web/app.js:onAction",
+   "type": "function",
+   "name": "onAction",
+   "language": "javascript",
+   "line": 1084
+  },
+  {
+   "id": "fn:patchbay/web/app.js:onPointerDown",
+   "type": "function",
+   "name": "onPointerDown",
+   "language": "javascript",
+   "line": 821
+  },
+  {
+   "id": "fn:patchbay/web/app.js:onPointerMove",
+   "type": "function",
+   "name": "onPointerMove",
+   "language": "javascript",
+   "line": 863
+  },
+  {
+   "id": "fn:patchbay/web/app.js:onPointerUp",
+   "type": "function",
+   "name": "onPointerUp",
+   "language": "javascript",
+   "line": 889
+  },
+  {
+   "id": "fn:patchbay/web/app.js:onWheel",
+   "type": "function",
+   "name": "onWheel",
+   "language": "javascript",
+   "line": 905
+  },
+  {
+   "id": "fn:patchbay/web/app.js:openDialog",
+   "type": "function",
+   "name": "openDialog",
+   "language": "javascript",
+   "line": 974
+  },
+  {
+   "id": "fn:patchbay/web/app.js:panelAnchor",
+   "type": "function",
+   "name": "panelAnchor",
+   "language": "javascript",
+   "line": 517
+  },
+  {
+   "id": "fn:patchbay/web/app.js:panelMode",
+   "type": "function",
+   "name": "panelMode",
+   "language": "javascript",
+   "line": 442
+  },
+  {
+   "id": "fn:patchbay/web/app.js:panelSVG",
+   "type": "function",
+   "name": "panelSVG",
+   "language": "javascript",
+   "line": 494
+  },
+  {
+   "id": "fn:patchbay/web/app.js:panelSize",
+   "type": "function",
+   "name": "panelSize",
+   "language": "javascript",
+   "line": 464
+  },
+  {
+   "id": "fn:patchbay/web/app.js:placingBanner",
+   "type": "function",
+   "name": "placingBanner",
+   "language": "javascript",
+   "line": 578
+  },
+  {
+   "id": "fn:patchbay/web/app.js:portAnchor",
+   "type": "function",
+   "name": "portAnchor",
+   "language": "javascript",
+   "line": 172
+  },
+  {
+   "id": "fn:patchbay/web/app.js:portEditor",
+   "type": "function",
+   "name": "portEditor",
+   "language": "javascript",
+   "line": 405
+  },
+  {
+   "id": "fn:patchbay/web/app.js:rackAddAll",
+   "type": "function",
+   "name": "rackAddAll",
+   "language": "javascript",
+   "line": 632
+  },
+  {
+   "id": "fn:patchbay/web/app.js:rackInspector",
+   "type": "function",
+   "name": "rackInspector",
+   "language": "javascript",
+   "line": 330
+  },
+  {
+   "id": "fn:patchbay/web/app.js:rackPower",
+   "type": "function",
+   "name": "rackPower",
+   "language": "javascript",
+   "line": 344
+  },
+  {
+   "id": "fn:patchbay/web/app.js:redo",
+   "type": "function",
+   "name": "redo",
+   "language": "javascript",
+   "line": 124
+  },
+  {
+   "id": "fn:patchbay/web/app.js:renderAll",
+   "type": "function",
+   "name": "renderAll",
+   "language": "javascript",
+   "line": 195
+  },
+  {
+   "id": "fn:patchbay/web/app.js:renderCables",
+   "type": "function",
+   "name": "renderCables",
+   "language": "javascript",
+   "line": 272
+  },
+  {
+   "id": "fn:patchbay/web/app.js:renderCanvas",
+   "type": "function",
+   "name": "renderCanvas",
+   "language": "javascript",
+   "line": 217
+  },
+  {
+   "id": "fn:patchbay/web/app.js:renderChrome",
+   "type": "function",
+   "name": "renderChrome",
+   "language": "javascript",
+   "line": 196
+  },
+  {
+   "id": "fn:patchbay/web/app.js:renderInspector",
+   "type": "function",
+   "name": "renderInspector",
+   "language": "javascript",
+   "line": 324
+  },
+  {
+   "id": "fn:patchbay/web/app.js:renderLegend",
+   "type": "function",
+   "name": "renderLegend",
+   "language": "javascript",
+   "line": 290
+  },
+  {
+   "id": "fn:patchbay/web/app.js:renderNodes",
+   "type": "function",
+   "name": "renderNodes",
+   "language": "javascript",
+   "line": 259
+  },
+  {
+   "id": "fn:patchbay/web/app.js:renderPalette",
+   "type": "function",
+   "name": "renderPalette",
+   "language": "javascript",
+   "line": 296
+  },
+  {
+   "id": "fn:patchbay/web/app.js:renderRails",
+   "type": "function",
+   "name": "renderRails",
+   "language": "javascript",
+   "line": 527
+  },
+  {
+   "id": "fn:patchbay/web/app.js:sagPath",
+   "type": "function",
+   "name": "sagPath",
+   "language": "javascript",
+   "line": 523
+  },
+  {
+   "id": "fn:patchbay/web/app.js:save",
+   "type": "function",
+   "name": "save",
+   "language": "javascript",
+   "line": 954
+  },
+  {
+   "id": "fn:patchbay/web/app.js:saveDraft",
+   "type": "function",
+   "name": "saveDraft",
+   "language": "javascript",
+   "line": 107
+  },
+  {
+   "id": "fn:patchbay/web/app.js:savePanelPositions",
+   "type": "function",
+   "name": "savePanelPositions",
+   "language": "javascript",
+   "line": 573
+  },
+  {
+   "id": "fn:patchbay/web/app.js:savePorts",
+   "type": "function",
+   "name": "savePorts",
+   "language": "javascript",
+   "line": 1059
+  },
+  {
+   "id": "fn:patchbay/web/app.js:scopeNode",
+   "type": "function",
+   "name": "scopeNode",
+   "language": "javascript",
+   "line": 131
+  },
+  {
+   "id": "fn:patchbay/web/app.js:sessionInspector",
+   "type": "function",
+   "name": "sessionInspector",
+   "language": "javascript",
+   "line": 349
+  },
+  {
+   "id": "fn:patchbay/web/app.js:setDirty",
+   "type": "function",
+   "name": "setDirty",
+   "language": "javascript",
+   "line": 100
+  },
+  {
+   "id": "fn:patchbay/web/app.js:setPath",
+   "type": "function",
+   "name": "setPath",
+   "language": "javascript",
+   "line": 802
+  },
+  {
+   "id": "fn:patchbay/web/app.js:setSession",
+   "type": "function",
+   "name": "setSession",
+   "language": "javascript",
+   "line": 89
+  },
+  {
+   "id": "fn:patchbay/web/app.js:slugify",
+   "type": "function",
+   "name": "slugify",
+   "language": "javascript",
+   "line": 9
+  },
+  {
+   "id": "fn:patchbay/web/app.js:snapPanel",
+   "type": "function",
+   "name": "snapPanel",
+   "language": "javascript",
+   "line": 568
+  },
+  {
+   "id": "fn:patchbay/web/app.js:stateField",
+   "type": "function",
+   "name": "stateField",
+   "language": "javascript",
+   "line": 654
+  },
+  {
+   "id": "fn:patchbay/web/app.js:stateInspector",
+   "type": "function",
+   "name": "stateInspector",
+   "language": "javascript",
+   "line": 678
+  },
+  {
+   "id": "fn:patchbay/web/app.js:stateSummary",
+   "type": "function",
+   "name": "stateSummary",
+   "language": "javascript",
+   "line": 645
+  },
+  {
+   "id": "fn:patchbay/web/app.js:staticApi",
+   "type": "function",
+   "name": "staticApi",
+   "language": "javascript",
+   "line": 36
+  },
+  {
+   "id": "fn:patchbay/web/app.js:stopPlacing",
+   "type": "function",
+   "name": "stopPlacing",
+   "language": "javascript",
+   "line": 585
+  },
+  {
+   "id": "fn:patchbay/web/app.js:svg",
+   "type": "function",
+   "name": "svg",
+   "language": "javascript",
+   "line": 815
+  },
+  {
+   "id": "fn:patchbay/web/app.js:templateButtons",
+   "type": "function",
+   "name": "templateButtons",
+   "language": "javascript",
+   "line": 85
+  },
+  {
+   "id": "fn:patchbay/web/app.js:templateSession",
+   "type": "function",
+   "name": "templateSession",
+   "language": "javascript",
+   "line": 79
+  },
+  {
+   "id": "fn:patchbay/web/app.js:toWorld",
+   "type": "function",
+   "name": "toWorld",
+   "language": "javascript",
+   "line": 816
+  },
+  {
+   "id": "fn:patchbay/web/app.js:toast",
+   "type": "function",
+   "name": "toast",
+   "language": "javascript",
+   "line": 933
+  },
+  {
+   "id": "fn:patchbay/web/app.js:trunc",
+   "type": "function",
+   "name": "trunc",
+   "language": "javascript",
+   "line": 192
+  },
+  {
+   "id": "fn:patchbay/web/app.js:uid",
+   "type": "function",
+   "name": "uid",
+   "language": "javascript",
+   "line": 7
+  },
+  {
+   "id": "fn:patchbay/web/app.js:undo",
+   "type": "function",
+   "name": "undo",
+   "language": "javascript",
+   "line": 120
+  },
+  {
+   "id": "fn:patchbay/web/app.js:usePhoto",
+   "type": "function",
+   "name": "usePhoto",
+   "language": "javascript",
+   "line": 444
+  },
+  {
+   "id": "fn:patchbay/web/app.js:usedPorts",
+   "type": "function",
+   "name": "usedPorts",
+   "language": "javascript",
+   "line": 141
+  },
+  {
+   "id": "fn:patchbay/web/app.js:warnings",
+   "type": "function",
+   "name": "warnings",
+   "language": "javascript",
+   "line": 696
+  },
+  {
+   "id": "fn:patchbay/web/app.js:wrap",
+   "type": "function",
+   "name": "wrap",
+   "language": "javascript",
+   "line": 183
+  },
+  {
+   "id": "fn:patchbay/web/faceplate.js:Faceplate",
+   "type": "function",
+   "name": "Faceplate",
+   "language": "javascript",
+   "line": 7
+  },
+  {
+   "id": "route:DELETE /api/sessions/:id",
+   "type": "api_route",
+   "name": "DELETE /api/sessions/:id"
+  },
+  {
+   "id": "route:GET /api/gear",
+   "type": "api_route",
+   "name": "GET /api/gear"
+  },
+  {
+   "id": "route:GET /api/sessions",
+   "type": "api_route",
+   "name": "GET /api/sessions"
+  },
+  {
+   "id": "route:GET /api/sessions/:id",
+   "type": "api_route",
+   "name": "GET /api/sessions/:id"
+  },
+  {
+   "id": "route:PUT /api/panels/:id",
+   "type": "api_route",
+   "name": "PUT /api/panels/:id"
+  },
+  {
+   "id": "route:PUT /api/ports/:id",
+   "type": "api_route",
+   "name": "PUT /api/ports/:id"
+  },
+  {
+   "id": "route:PUT /api/sessions/:id",
+   "type": "api_route",
+   "name": "PUT /api/sessions/:id"
+  },
+  {
+   "id": "system:gear-kb",
+   "type": "system",
+   "name": "Gear knowledge base (this repository)"
+  },
+  {
+   "id": "system:patchbay",
+   "type": "system",
+   "name": "Patchbay app state"
+  }
+ ],
+ "edges": [
+  {
+   "src": "fn:patchbay/tools/build_data.py:build",
+   "dst": "fn:patchbay/tools/build_data.py:group_of",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/build_data.py:build",
+   "dst": "fn:patchbay/tools/build_data.py:hp_of",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/build_data.py:build",
+   "dst": "fn:patchbay/tools/build_data.py:kb_commit",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/build_data.py:build",
+   "dst": "fn:patchbay/tools/build_data.py:make_template",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/build_data.py:build",
+   "dst": "fn:patchbay/tools/build_data.py:rack_graph",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/build_data.py:build",
+   "dst": "fn:patchbay/tools/build_data.py:resolve_links",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/build_data.py:build",
+   "dst": "fn:patchbay/tools/build_data.py:split_rack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/build_data.py:build",
+   "dst": "fn:patchbay/tools/common.py:kb_path",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/build_data.py:build",
+   "dst": "fn:patchbay/tools/common.py:load_yaml",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/build_data.py:build",
+   "dst": "fn:patchbay/tools/common.py:mirror_rack_io",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/build_data.py:graph",
+   "dst": "fn:patchbay/tools/build_data.py:layout",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/build_data.py:make_template",
+   "dst": "fn:patchbay/tools/build_data.py:graph",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/build_data.py:make_template",
+   "dst": "fn:patchbay/tools/build_data.py:rack_graph",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/build_data.py:make_template",
+   "dst": "fn:patchbay/tools/build_data.py:unnamed_port",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/build_data.py:rack_graph",
+   "dst": "fn:patchbay/tools/build_data.py:graph",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/build_data.py:resolve_links",
+   "dst": "fn:patchbay/tools/build_data.py:unnamed_port",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/common.py:kb_path",
+   "dst": "fn:patchbay/tools/common.py:load_yaml",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/extract_ports.py:from_eurorack_pdfs",
+   "dst": "fn:patchbay/tools/extract_ports.py:classify",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/extract_ports.py:from_eurorack_pdfs",
+   "dst": "fn:patchbay/tools/extract_ports.py:clean_label",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/extract_ports.py:from_eurorack_pdfs",
+   "dst": "fn:patchbay/tools/extract_ports.py:is_port_label",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/extract_ports.py:from_markdown",
+   "dst": "fn:patchbay/tools/extract_ports.py:classify",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/extract_ports.py:from_markdown",
+   "dst": "fn:patchbay/tools/extract_ports.py:clean_label",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/extract_ports.py:from_markdown",
+   "dst": "fn:patchbay/tools/extract_ports.py:front_matter",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/extract_ports.py:from_markdown",
+   "dst": "fn:patchbay/tools/extract_ports.py:is_port_label",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/extract_ports.py:main",
+   "dst": "fn:patchbay/tools/common.py:kb_path",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/extract_ports.py:main",
+   "dst": "fn:patchbay/tools/common.py:load_yaml",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/extract_ports.py:main",
+   "dst": "fn:patchbay/tools/extract_ports.py:from_connections",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/extract_ports.py:main",
+   "dst": "fn:patchbay/tools/extract_ports.py:from_eurorack_pdfs",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/extract_ports.py:main",
+   "dst": "fn:patchbay/tools/extract_ports.py:from_markdown",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_DELETE",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.route",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_DELETE",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.send",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_DELETE",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.session_file",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_GET",
+   "dst": "fn:patchbay/tools/common.py:load_yaml",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_GET",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.list_sessions",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_GET",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.route",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_GET",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.send",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_GET",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.session_file",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_GET",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.static",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_GET",
+   "dst": "fn:patchbay/tools/patchbay.py:gear_payload",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_PUT",
+   "dst": "fn:patchbay/tools/common.py:load_yaml",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_PUT",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.body",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_PUT",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.route",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_PUT",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.send",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_PUT",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.session_file",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_PUT",
+   "dst": "fn:patchbay/tools/patchbay.py:atomic_write",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_PUT",
+   "dst": "fn:patchbay/tools/patchbay.py:clean_ports",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.do_PUT",
+   "dst": "fn:patchbay/tools/patchbay.py:clean_session",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.list_sessions",
+   "dst": "fn:patchbay/tools/common.py:load_yaml",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.log_message",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.log_message",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:Handler.static",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.send",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:gear_payload",
+   "dst": "fn:patchbay/tools/common.py:load_yaml",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:gear_payload",
+   "dst": "fn:patchbay/tools/common.py:mirror_rack_io",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:gear_payload",
+   "dst": "fn:patchbay/tools/patchbay.py:merge_ports",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:main",
+   "dst": "fn:patchbay/tools/common.py:load_yaml",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/patchbay.py:main",
+   "dst": "fn:patchbay/tools/patchbay.py:make_server",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/trace_icons.py:main",
+   "dst": "fn:patchbay/tools/common.py:kb_path",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/trace_icons.py:main",
+   "dst": "fn:patchbay/tools/common.py:load_yaml",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/trace_icons.py:main",
+   "dst": "fn:patchbay/tools/trace_icons.py:as_icon",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/tools/trace_icons.py:main",
+   "dst": "fn:patchbay/tools/trace_icons.py:write_glyphs",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addCable",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addCable",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addCable",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addCable",
+   "dst": "fn:patchbay/web/app.js:compatible",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addCable",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addCable",
+   "dst": "fn:patchbay/web/app.js:uid",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addNode",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addNode",
+   "dst": "fn:patchbay/web/app.js:autoPatch",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addNode",
+   "dst": "fn:patchbay/web/app.js:autoPatchOn",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addNode",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addNode",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addNode",
+   "dst": "fn:patchbay/web/app.js:panelMode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addNode",
+   "dst": "fn:patchbay/web/app.js:panelSize",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addNode",
+   "dst": "fn:patchbay/web/app.js:snapPanel",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addNode",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:addNode",
+   "dst": "fn:patchbay/web/app.js:uid",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:api",
+   "dst": "fn:patchbay/web/app.js:staticApi",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:arrangePanels",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:arrangePanels",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:arrangePanels",
+   "dst": "fn:patchbay/web/app.js:panelSize",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:arrangeRack",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:arrangeRack",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:arrangeRack",
+   "dst": "fn:patchbay/web/app.js:nodeGeom",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:ask",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:ask",
+   "dst": "fn:patchbay/web/app.js:modal",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:autoPatch",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:autoPatch",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:autoPatch",
+   "dst": "fn:patchbay/web/app.js:inRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:autoPatch",
+   "dst": "fn:patchbay/web/app.js:uid",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:bindTarget",
+   "dst": "fn:patchbay/web/app.js:cableById",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:bindTarget",
+   "dst": "fn:patchbay/web/app.js:nodeById",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:bindTarget",
+   "dst": "fn:patchbay/web/app.js:scopeNode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:boot",
+   "dst": "fn:patchbay/web/app.js:api",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:boot",
+   "dst": "fn:patchbay/web/app.js:blankSession",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:boot",
+   "dst": "fn:patchbay/web/app.js:clearDraft",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:boot",
+   "dst": "fn:patchbay/web/app.js:confirmBox",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:boot",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:boot",
+   "dst": "fn:patchbay/web/app.js:init",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:boot",
+   "dst": "fn:patchbay/web/app.js:loadGear",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:boot",
+   "dst": "fn:patchbay/web/app.js:renderLegend",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:boot",
+   "dst": "fn:patchbay/web/app.js:setDirty",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:boot",
+   "dst": "fn:patchbay/web/app.js:setSession",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:boot",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:bounds",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:bounds",
+   "dst": "fn:patchbay/web/app.js:nodeGeom",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:bounds",
+   "dst": "fn:patchbay/web/app.js:panelMode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:bounds",
+   "dst": "fn:patchbay/web/app.js:panelSize",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:cableInspector",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:cableInspector",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:cableInspector",
+   "dst": "fn:patchbay/web/app.js:field",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:cableInspector",
+   "dst": "fn:patchbay/web/app.js:nodeById",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:cableInspector",
+   "dst": "fn:patchbay/web/app.js:warnings",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:confirmBox",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:confirmBox",
+   "dst": "fn:patchbay/web/app.js:modal",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:deleteSelection",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:deleteSelection",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:deleteSelection",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:deleteSelection",
+   "dst": "fn:patchbay/web/app.js:nodeById",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:deleteSelection",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:duplicateNode",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:duplicateNode",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:duplicateNode",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:duplicateNode",
+   "dst": "fn:patchbay/web/app.js:nodeById",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:duplicateNode",
+   "dst": "fn:patchbay/web/app.js:panelSize",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:duplicateNode",
+   "dst": "fn:patchbay/web/app.js:uid",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:ensurePanelPos",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:ensurePanelPos",
+   "dst": "fn:patchbay/web/app.js:arrangePanels",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:ensurePanelPos",
+   "dst": "fn:patchbay/web/app.js:inRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:enterRack",
+   "dst": "fn:patchbay/web/app.js:arrangePanels",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:enterRack",
+   "dst": "fn:patchbay/web/app.js:fit",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:enterRack",
+   "dst": "fn:patchbay/web/app.js:panelMode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:enterRack",
+   "dst": "fn:patchbay/web/app.js:renderAll",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:enterRack",
+   "dst": "fn:patchbay/web/app.js:uid",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:exitRack",
+   "dst": "fn:patchbay/web/app.js:renderAll",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:exitRack",
+   "dst": "fn:patchbay/web/app.js:scopeNode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:exportFile",
+   "dst": "fn:patchbay/web/app.js:download",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:exportFile",
+   "dst": "fn:patchbay/web/app.js:exportSVG",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:exportFile",
+   "dst": "fn:patchbay/web/app.js:slugify",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:exportSVG",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:exportSVG",
+   "dst": "fn:patchbay/web/app.js:bounds",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:exportSVG",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:exportSVG",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:exportSVG",
+   "dst": "fn:patchbay/web/app.js:inRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:exportSVG",
+   "dst": "fn:patchbay/web/app.js:scopeNode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:exportSVG",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:faceOpts",
+   "dst": "fn:patchbay/web/app.js:inRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:facts",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:field",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:fit",
+   "dst": "fn:patchbay/web/app.js:applyView",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:fit",
+   "dst": "fn:patchbay/web/app.js:bounds",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:fit",
+   "dst": "fn:patchbay/web/app.js:inRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:fit",
+   "dst": "fn:patchbay/web/app.js:svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:iconHTML",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:iconHTML",
+   "dst": "fn:patchbay/web/app.js:faceOpts",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:addNode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:bindTarget",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:deleteSelection",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:duplicateNode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:enterRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:exitRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:fit",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:inRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:nodeById",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:onAction",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:redo",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:renderAll",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:renderCables",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:renderChrome",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:renderInspector",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:renderNodes",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:save",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:setDirty",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:setPath",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:stopPlacing",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:toWorld",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:init",
+   "dst": "fn:patchbay/web/app.js:undo",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:jackSpots",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:jackSpots",
+   "dst": "fn:patchbay/web/app.js:panelSize",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:jackSpots",
+   "dst": "fn:patchbay/web/app.js:usePhoto",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:loadGear",
+   "dst": "fn:patchbay/web/app.js:api",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:newDialog",
+   "dst": "fn:patchbay/web/app.js:blankSession",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:newDialog",
+   "dst": "fn:patchbay/web/app.js:clearDraft",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:newDialog",
+   "dst": "fn:patchbay/web/app.js:confirmBox",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:newDialog",
+   "dst": "fn:patchbay/web/app.js:modal",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:newDialog",
+   "dst": "fn:patchbay/web/app.js:setSession",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:newDialog",
+   "dst": "fn:patchbay/web/app.js:templateButtons",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:newDialog",
+   "dst": "fn:patchbay/web/app.js:templateSession",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeGeom",
+   "dst": "fn:patchbay/web/app.js:nodePorts",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeInspector",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeInspector",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeInspector",
+   "dst": "fn:patchbay/web/app.js:facts",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeInspector",
+   "dst": "fn:patchbay/web/app.js:field",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeInspector",
+   "dst": "fn:patchbay/web/app.js:iconHTML",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeInspector",
+   "dst": "fn:patchbay/web/app.js:panelMode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeInspector",
+   "dst": "fn:patchbay/web/app.js:portEditor",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeInspector",
+   "dst": "fn:patchbay/web/app.js:rackPower",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeInspector",
+   "dst": "fn:patchbay/web/app.js:stateInspector",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeInspector",
+   "dst": "fn:patchbay/web/app.js:usePhoto",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodePorts",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodePorts",
+   "dst": "fn:patchbay/web/app.js:usedPorts",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeSVG",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeSVG",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeSVG",
+   "dst": "fn:patchbay/web/app.js:faceOpts",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeSVG",
+   "dst": "fn:patchbay/web/app.js:nodeGeom",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeSVG",
+   "dst": "fn:patchbay/web/app.js:nodeSummary",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeSVG",
+   "dst": "fn:patchbay/web/app.js:trunc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeSVG",
+   "dst": "fn:patchbay/web/app.js:wrap",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:nodeSummary",
+   "dst": "fn:patchbay/web/app.js:stateSummary",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:arrangePanels",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:arrangeRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:cableById",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:deleteSelection",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:duplicateNode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:enterRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:exitRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:exportFile",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:fit",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:newDialog",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:nodeById",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:openDialog",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:panelMode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:placingBanner",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:rackAddAll",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:redo",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:renderAll",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:renderInspector",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:renderNodes",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:save",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:savePanelPositions",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:savePorts",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:setDirty",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:setSession",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:stopPlacing",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:templateSession",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onAction",
+   "dst": "fn:patchbay/web/app.js:undo",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:jackSpots",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:nodeById",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:nodeGeom",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:panelAnchor",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:panelMode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:panelSize",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:placingBanner",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:portAnchor",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:renderCables",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:renderInspector",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:renderNodes",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:stopPlacing",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:toWorld",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerDown",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerMove",
+   "dst": "fn:patchbay/web/app.js:applyView",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerMove",
+   "dst": "fn:patchbay/web/app.js:cablePath",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerMove",
+   "dst": "fn:patchbay/web/app.js:panelMode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerMove",
+   "dst": "fn:patchbay/web/app.js:renderCables",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerMove",
+   "dst": "fn:patchbay/web/app.js:sagPath",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerMove",
+   "dst": "fn:patchbay/web/app.js:snapPanel",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerMove",
+   "dst": "fn:patchbay/web/app.js:toWorld",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerUp",
+   "dst": "fn:patchbay/web/app.js:addCable",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerUp",
+   "dst": "fn:patchbay/web/app.js:jackSpots",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerUp",
+   "dst": "fn:patchbay/web/app.js:nodeById",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerUp",
+   "dst": "fn:patchbay/web/app.js:nodeGeom",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerUp",
+   "dst": "fn:patchbay/web/app.js:panelMode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerUp",
+   "dst": "fn:patchbay/web/app.js:renderCables",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerUp",
+   "dst": "fn:patchbay/web/app.js:renderChrome",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerUp",
+   "dst": "fn:patchbay/web/app.js:renderInspector",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerUp",
+   "dst": "fn:patchbay/web/app.js:renderNodes",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerUp",
+   "dst": "fn:patchbay/web/app.js:setDirty",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onPointerUp",
+   "dst": "fn:patchbay/web/app.js:svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onWheel",
+   "dst": "fn:patchbay/web/app.js:applyView",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:onWheel",
+   "dst": "fn:patchbay/web/app.js:svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:openDialog",
+   "dst": "fn:patchbay/web/app.js:api",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:openDialog",
+   "dst": "fn:patchbay/web/app.js:clearDraft",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:openDialog",
+   "dst": "fn:patchbay/web/app.js:confirmBox",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:openDialog",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:openDialog",
+   "dst": "fn:patchbay/web/app.js:modal",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:openDialog",
+   "dst": "fn:patchbay/web/app.js:setDirty",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:openDialog",
+   "dst": "fn:patchbay/web/app.js:setSession",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:openDialog",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelAnchor",
+   "dst": "fn:patchbay/web/app.js:jackSpots",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelAnchor",
+   "dst": "fn:patchbay/web/app.js:nodeById",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelAnchor",
+   "dst": "fn:patchbay/web/app.js:panelSize",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelSVG",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelSVG",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelSVG",
+   "dst": "fn:patchbay/web/app.js:faceOpts",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelSVG",
+   "dst": "fn:patchbay/web/app.js:fpOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelSVG",
+   "dst": "fn:patchbay/web/app.js:jackSpots",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelSVG",
+   "dst": "fn:patchbay/web/app.js:nodeSummary",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelSVG",
+   "dst": "fn:patchbay/web/app.js:panelSize",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelSVG",
+   "dst": "fn:patchbay/web/app.js:trunc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelSVG",
+   "dst": "fn:patchbay/web/app.js:usePhoto",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelSVG",
+   "dst": "fn:patchbay/web/app.js:usedPorts",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelSVG",
+   "dst": "fn:patchbay/web/app.js:wrap",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelSize",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelSize",
+   "dst": "fn:patchbay/web/app.js:faceOpts",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelSize",
+   "dst": "fn:patchbay/web/app.js:fpOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:panelSize",
+   "dst": "fn:patchbay/web/app.js:usePhoto",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:placingBanner",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:portAnchor",
+   "dst": "fn:patchbay/web/app.js:nodeById",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:portAnchor",
+   "dst": "fn:patchbay/web/app.js:nodeGeom",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:portEditor",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:portEditor",
+   "dst": "fn:patchbay/web/app.js:nodeGeom",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:portEditor",
+   "dst": "fn:patchbay/web/app.js:trunc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:rackAddAll",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:rackAddAll",
+   "dst": "fn:patchbay/web/app.js:arrangePanels",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:rackAddAll",
+   "dst": "fn:patchbay/web/app.js:arrangeRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:rackAddAll",
+   "dst": "fn:patchbay/web/app.js:autoPatch",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:rackAddAll",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:rackAddAll",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:rackAddAll",
+   "dst": "fn:patchbay/web/app.js:fit",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:rackAddAll",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:rackAddAll",
+   "dst": "fn:patchbay/web/app.js:uid",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:rackInspector",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:rackInspector",
+   "dst": "fn:patchbay/web/app.js:field",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:rackInspector",
+   "dst": "fn:patchbay/web/app.js:rackPower",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:rackInspector",
+   "dst": "fn:patchbay/web/app.js:scopeNode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:rackInspector",
+   "dst": "fn:patchbay/web/app.js:warnings",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:rackPower",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:redo",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:redo",
+   "dst": "fn:patchbay/web/app.js:scopeNode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderCables",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderCables",
+   "dst": "fn:patchbay/web/app.js:cableLabel",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderCables",
+   "dst": "fn:patchbay/web/app.js:cablePath",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderCables",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderCables",
+   "dst": "fn:patchbay/web/app.js:panelAnchor",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderCables",
+   "dst": "fn:patchbay/web/app.js:panelMode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderCables",
+   "dst": "fn:patchbay/web/app.js:portAnchor",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderCables",
+   "dst": "fn:patchbay/web/app.js:sagPath",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderCanvas",
+   "dst": "fn:patchbay/web/app.js:applyView",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderCanvas",
+   "dst": "fn:patchbay/web/app.js:ensurePanelPos",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderCanvas",
+   "dst": "fn:patchbay/web/app.js:panelMode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderCanvas",
+   "dst": "fn:patchbay/web/app.js:renderCables",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderCanvas",
+   "dst": "fn:patchbay/web/app.js:renderNodes",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderChrome",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderChrome",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderChrome",
+   "dst": "fn:patchbay/web/app.js:panelMode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderChrome",
+   "dst": "fn:patchbay/web/app.js:scopeNode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderChrome",
+   "dst": "fn:patchbay/web/app.js:templateButtons",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderInspector",
+   "dst": "fn:patchbay/web/app.js:cableById",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderInspector",
+   "dst": "fn:patchbay/web/app.js:cableInspector",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderInspector",
+   "dst": "fn:patchbay/web/app.js:inRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderInspector",
+   "dst": "fn:patchbay/web/app.js:nodeById",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderInspector",
+   "dst": "fn:patchbay/web/app.js:nodeInspector",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderInspector",
+   "dst": "fn:patchbay/web/app.js:rackInspector",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderInspector",
+   "dst": "fn:patchbay/web/app.js:sessionInspector",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderNodes",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderNodes",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderNodes",
+   "dst": "fn:patchbay/web/app.js:inRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderNodes",
+   "dst": "fn:patchbay/web/app.js:panelMode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderNodes",
+   "dst": "fn:patchbay/web/app.js:renderRails",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderPalette",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderPalette",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderPalette",
+   "dst": "fn:patchbay/web/app.js:iconHTML",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderPalette",
+   "dst": "fn:patchbay/web/app.js:inRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderRails",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:renderRails",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:save",
+   "dst": "fn:patchbay/web/app.js:api",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:save",
+   "dst": "fn:patchbay/web/app.js:ask",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:save",
+   "dst": "fn:patchbay/web/app.js:clearDraft",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:save",
+   "dst": "fn:patchbay/web/app.js:confirmBox",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:save",
+   "dst": "fn:patchbay/web/app.js:inRack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:save",
+   "dst": "fn:patchbay/web/app.js:renderAll",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:save",
+   "dst": "fn:patchbay/web/app.js:scopeNode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:save",
+   "dst": "fn:patchbay/web/app.js:setDirty",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:save",
+   "dst": "fn:patchbay/web/app.js:slugify",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:save",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:savePanelPositions",
+   "dst": "fn:patchbay/web/app.js:api",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:savePanelPositions",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:savePorts",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:savePorts",
+   "dst": "fn:patchbay/web/app.js:api",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:savePorts",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:savePorts",
+   "dst": "fn:patchbay/web/app.js:loadGear",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:savePorts",
+   "dst": "fn:patchbay/web/app.js:renderAll",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:savePorts",
+   "dst": "fn:patchbay/web/app.js:setDirty",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:savePorts",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:sessionInspector",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:sessionInspector",
+   "dst": "fn:patchbay/web/app.js:field",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:sessionInspector",
+   "dst": "fn:patchbay/web/app.js:warnings",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:setDirty",
+   "dst": "fn:patchbay/web/app.js:saveDraft",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:setSession",
+   "dst": "fn:patchbay/web/app.js:fit",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:setSession",
+   "dst": "fn:patchbay/web/app.js:renderAll",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:setSession",
+   "dst": "fn:patchbay/web/app.js:setDirty",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:setSession",
+   "dst": "fn:patchbay/web/app.js:uid",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:snapPanel",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:snapPanel",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:stateField",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:stateField",
+   "dst": "fn:patchbay/web/app.js:homeChannelOptions",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:stateInspector",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:stateInspector",
+   "dst": "fn:patchbay/web/app.js:stateField",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:staticApi",
+   "dst": "fn:patchbay/web/app.js:lsSessions",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:staticApi",
+   "dst": "fn:patchbay/web/app.js:lsWrite",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:stopPlacing",
+   "dst": "fn:patchbay/web/app.js:placingBanner",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:stopPlacing",
+   "dst": "fn:patchbay/web/app.js:renderCables",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:stopPlacing",
+   "dst": "fn:patchbay/web/app.js:renderNodes",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:stopPlacing",
+   "dst": "fn:patchbay/web/app.js:savePanelPositions",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:templateButtons",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:templateSession",
+   "dst": "fn:patchbay/web/app.js:clone",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:templateSession",
+   "dst": "fn:patchbay/web/app.js:uid",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:toWorld",
+   "dst": "fn:patchbay/web/app.js:svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:undo",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:undo",
+   "dst": "fn:patchbay/web/app.js:scopeNode",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:usedPorts",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:warnings",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:warnings",
+   "dst": "fn:patchbay/web/app.js:compatible",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:warnings",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:warnings",
+   "dst": "fn:patchbay/web/app.js:nodeById",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/faceplate.js:Faceplate",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/faceplate.js:Faceplate",
+   "dst": "fn:patchbay/web/app.js:trunc",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:patchbay/web/faceplate.js:Faceplate",
+   "dst": "fn:patchbay/web/app.js:wrap",
+   "rel": "CALLS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/README.md#eurorack",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/README.md#faceplates-our-own-vectors",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/README.md#icons",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/README.md#layout",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/README.md#run-it",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/README.md#session-file-format",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/README.md#tests",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/README.md#using-it",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/README.md#where-the-jacks-come-from",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/docs/user-guide.md#adding-gear-from-the-palette",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/docs/user-guide.md#arranging-the-canvas",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/docs/user-guide.md#checks",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/docs/user-guide.md#device-settings-and-start-state",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/docs/user-guide.md#editing-a-device-s-jacks",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/docs/user-guide.md#exporting-a-diagram",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/docs/user-guide.md#faceplates-boxes-and-icons",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/docs/user-guide.md#getting-started",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/docs/user-guide.md#patching-cables",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/docs/user-guide.md#placing-jacks-on-a-panel",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/docs/user-guide.md#sessions-and-templates",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "doc:patchbay/docs/user-guide.md#the-eurorack-rack",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "file:patchbay/tools/build_data.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "file:patchbay/tools/common.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "file:patchbay/tools/extract_ports.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "file:patchbay/tools/patchbay.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "file:patchbay/tools/trace_icons.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "file:patchbay/web/app.js",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "file:patchbay/web/faceplate.js",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "fn:patchbay/tools/build_data.py:P",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "fn:patchbay/tools/build_data.py:build",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "fn:patchbay/tools/build_data.py:graph",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "fn:patchbay/tools/build_data.py:group_of",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "fn:patchbay/tools/build_data.py:hp_of",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "fn:patchbay/tools/build_data.py:kb_commit",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "fn:patchbay/tools/build_data.py:layout",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "fn:patchbay/tools/build_data.py:make_template",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "fn:patchbay/tools/build_data.py:rack_graph",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "fn:patchbay/tools/build_data.py:resolve_links",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "fn:patchbay/tools/build_data.py:split_rack",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "fn:patchbay/tools/build_data.py:unnamed_port",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/common.py",
+   "dst": "fn:patchbay/tools/common.py:kb_path",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/common.py",
+   "dst": "fn:patchbay/tools/common.py:load_yaml",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/common.py",
+   "dst": "fn:patchbay/tools/common.py:mirror_rack_io",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "fn:patchbay/tools/extract_ports.py:classify",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "fn:patchbay/tools/extract_ports.py:clean_label",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "fn:patchbay/tools/extract_ports.py:from_connections",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "fn:patchbay/tools/extract_ports.py:from_eurorack_pdfs",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "fn:patchbay/tools/extract_ports.py:from_markdown",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "fn:patchbay/tools/extract_ports.py:front_matter",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "fn:patchbay/tools/extract_ports.py:is_port_label",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "fn:patchbay/tools/extract_ports.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.body",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.do_DELETE",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.do_GET",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.do_PUT",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.list_sessions",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.log_message",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.route",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.send",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.session_file",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.static",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:atomic_write",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:clean_ports",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:clean_session",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:gear_payload",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:make_server",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "fn:patchbay/tools/patchbay.py:merge_ports",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/trace_icons.py",
+   "dst": "fn:patchbay/tools/trace_icons.py:as_icon",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/trace_icons.py",
+   "dst": "fn:patchbay/tools/trace_icons.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/tools/trace_icons.py",
+   "dst": "fn:patchbay/tools/trace_icons.py:write_glyphs",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:G",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:addCable",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:addNode",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:api",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:applyView",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:arrangePanels",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:arrangeRack",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:ask",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:autoPatch",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:autoPatchOn",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:bindTarget",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:blankSession",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:boot",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:bounds",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:cableById",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:cableInspector",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:cableLabel",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:cablePath",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:clearDraft",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:clone",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:compatible",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:confirmBox",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:deleteSelection",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:download",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:duplicateNode",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:ensurePanelPos",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:enterRack",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:esc",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:exitRack",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:exportFile",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:exportSVG",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:faceOpts",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:facts",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:field",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:fit",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:fpOf",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:homeChannelOptions",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:iconHTML",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:inRack",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:init",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:jackSpots",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:loadGear",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:lsSessions",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:lsWrite",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:modal",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:newDialog",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:nodeById",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:nodeGeom",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:nodeInspector",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:nodePorts",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:nodeSVG",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:nodeSummary",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:onAction",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:onPointerDown",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:onPointerMove",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:onPointerUp",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:onWheel",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:openDialog",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:panelAnchor",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:panelMode",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:panelSVG",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:panelSize",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:placingBanner",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:portAnchor",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:portEditor",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:rackAddAll",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:rackInspector",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:rackPower",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:redo",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:renderAll",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:renderCables",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:renderCanvas",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:renderChrome",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:renderInspector",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:renderLegend",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:renderNodes",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:renderPalette",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:renderRails",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:sagPath",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:save",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:saveDraft",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:savePanelPositions",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:savePorts",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:scopeNode",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:sessionInspector",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:setDirty",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:setPath",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:setSession",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:slugify",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:snapPanel",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:stateField",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:stateInspector",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:stateSummary",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:staticApi",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:stopPlacing",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:svg",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:templateButtons",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:templateSession",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:toWorld",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:trunc",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:uid",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:undo",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:usePhoto",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:usedPorts",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:warnings",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "fn:patchbay/web/app.js:wrap",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:patchbay/web/faceplate.js",
+   "dst": "fn:patchbay/web/faceplate.js:Faceplate",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "doc:patchbay/README.md#faceplates-our-own-vectors",
+   "dst": "file:patchbay/web/faceplate.js",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/README.md#icons",
+   "dst": "file:patchbay/tools/trace_icons.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/README.md#where-the-jacks-come-from",
+   "dst": "file:patchbay/tools/extract_ports.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#adding-gear-from-the-palette",
+   "dst": "fn:patchbay/web/app.js:addNode",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#adding-gear-from-the-palette",
+   "dst": "fn:patchbay/web/app.js:autoPatch",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#adding-gear-from-the-palette",
+   "dst": "fn:patchbay/web/app.js:renderPalette",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#arranging-the-canvas",
+   "dst": "action:collapse",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#arranging-the-canvas",
+   "dst": "action:delete",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#arranging-the-canvas",
+   "dst": "action:dup",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#arranging-the-canvas",
+   "dst": "action:fit",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#arranging-the-canvas",
+   "dst": "action:jack-labels",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#arranging-the-canvas",
+   "dst": "action:redo",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#arranging-the-canvas",
+   "dst": "action:undo",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#checks",
+   "dst": "fn:patchbay/web/app.js:warnings",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#device-settings-and-start-state",
+   "dst": "action:field-add",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#device-settings-and-start-state",
+   "dst": "action:field-del",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#device-settings-and-start-state",
+   "dst": "action:state-clear",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#device-settings-and-start-state",
+   "dst": "action:state-kb",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#device-settings-and-start-state",
+   "dst": "fn:patchbay/web/app.js:homeChannelOptions",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#device-settings-and-start-state",
+   "dst": "fn:patchbay/web/app.js:stateInspector",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#editing-a-device-s-jacks",
+   "dst": "action:port-add",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#editing-a-device-s-jacks",
+   "dst": "action:ports-cancel",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#editing-a-device-s-jacks",
+   "dst": "action:ports-edit",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#editing-a-device-s-jacks",
+   "dst": "action:ports-save",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#editing-a-device-s-jacks",
+   "dst": "fn:patchbay/web/app.js:savePorts",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#exporting-a-diagram",
+   "dst": "action:export-png",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#exporting-a-diagram",
+   "dst": "action:export-svg",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#exporting-a-diagram",
+   "dst": "fn:patchbay/web/app.js:exportFile",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#faceplates-boxes-and-icons",
+   "dst": "action:photos",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#faceplates-boxes-and-icons",
+   "dst": "action:theme",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#faceplates-boxes-and-icons",
+   "dst": "action:view-mode",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#faceplates-boxes-and-icons",
+   "dst": "fn:patchbay/web/app.js:iconHTML",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#getting-started",
+   "dst": "fn:patchbay/web/app.js:api",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#getting-started",
+   "dst": "fn:patchbay/web/app.js:boot",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#getting-started",
+   "dst": "fn:patchbay/web/app.js:saveDraft",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#getting-started",
+   "dst": "fn:patchbay/web/app.js:staticApi",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#patching-cables",
+   "dst": "action:reverse",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#patching-cables",
+   "dst": "fn:patchbay/web/app.js:addCable",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#patching-cables",
+   "dst": "fn:patchbay/web/app.js:onPointerDown",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#patching-cables",
+   "dst": "fn:patchbay/web/app.js:renderLegend",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#placing-jacks-on-a-panel",
+   "dst": "action:place-done",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#placing-jacks-on-a-panel",
+   "dst": "action:place-jacks",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#placing-jacks-on-a-panel",
+   "dst": "action:place-reset",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#placing-jacks-on-a-panel",
+   "dst": "action:place-skip",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#sessions-and-templates",
+   "dst": "action:load-template",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#sessions-and-templates",
+   "dst": "action:new",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#sessions-and-templates",
+   "dst": "action:open",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#sessions-and-templates",
+   "dst": "action:save",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#sessions-and-templates",
+   "dst": "action:saveas",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#sessions-and-templates",
+   "dst": "fn:patchbay/web/app.js:openDialog",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#sessions-and-templates",
+   "dst": "fn:patchbay/web/app.js:sessionInspector",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#the-eurorack-rack",
+   "dst": "action:enter-rack",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#the-eurorack-rack",
+   "dst": "action:exit-rack",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#the-eurorack-rack",
+   "dst": "action:rack-add-all",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#the-eurorack-rack",
+   "dst": "action:rack-arrange",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#the-eurorack-rack",
+   "dst": "fn:patchbay/web/app.js:arrangePanels",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#the-eurorack-rack",
+   "dst": "fn:patchbay/web/app.js:rackPower",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "action:collapse",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:collapse",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:delete",
+   "dst": "fn:patchbay/web/app.js:deleteSelection",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:dup",
+   "dst": "fn:patchbay/web/app.js:duplicateNode",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:enter-rack",
+   "dst": "fn:patchbay/web/app.js:enterRack",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:exit-rack",
+   "dst": "fn:patchbay/web/app.js:exitRack",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:export-png",
+   "dst": "fn:patchbay/web/app.js:exportFile",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:export-svg",
+   "dst": "fn:patchbay/web/app.js:exportFile",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:field-add",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:field-add",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:field-del",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:field-del",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:fit",
+   "dst": "fn:patchbay/web/app.js:fit",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:jack-labels",
+   "dst": "fn:patchbay/web/app.js:renderAll",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:load-template",
+   "dst": "fn:patchbay/web/app.js:setDirty",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:load-template",
+   "dst": "fn:patchbay/web/app.js:setSession",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:load-template",
+   "dst": "fn:patchbay/web/app.js:templateSession",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:new",
+   "dst": "fn:patchbay/web/app.js:newDialog",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:open",
+   "dst": "fn:patchbay/web/app.js:openDialog",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:photos",
+   "dst": "fn:patchbay/web/app.js:renderAll",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:photos",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:place-done",
+   "dst": "fn:patchbay/web/app.js:stopPlacing",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:place-jacks",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:place-jacks",
+   "dst": "fn:patchbay/web/app.js:placingBanner",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:place-jacks",
+   "dst": "fn:patchbay/web/app.js:renderNodes",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:place-jacks",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:place-reset",
+   "dst": "fn:patchbay/web/app.js:renderAll",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:place-reset",
+   "dst": "fn:patchbay/web/app.js:savePanelPositions",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:place-skip",
+   "dst": "fn:patchbay/web/app.js:placingBanner",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:place-skip",
+   "dst": "fn:patchbay/web/app.js:renderNodes",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:place-skip",
+   "dst": "fn:patchbay/web/app.js:stopPlacing",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:port-add",
+   "dst": "fn:patchbay/web/app.js:renderInspector",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:ports-cancel",
+   "dst": "fn:patchbay/web/app.js:renderInspector",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:ports-edit",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:ports-edit",
+   "dst": "fn:patchbay/web/app.js:renderInspector",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:ports-save",
+   "dst": "fn:patchbay/web/app.js:savePorts",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:rack-add-all",
+   "dst": "fn:patchbay/web/app.js:rackAddAll",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:rack-arrange",
+   "dst": "fn:patchbay/web/app.js:arrangePanels",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:rack-arrange",
+   "dst": "fn:patchbay/web/app.js:arrangeRack",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:rack-arrange",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:rack-arrange",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:rack-arrange",
+   "dst": "fn:patchbay/web/app.js:fit",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:rack-arrange",
+   "dst": "fn:patchbay/web/app.js:panelMode",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:redo",
+   "dst": "fn:patchbay/web/app.js:redo",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:reverse",
+   "dst": "fn:patchbay/web/app.js:cableById",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:reverse",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:reverse",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:save",
+   "dst": "fn:patchbay/web/app.js:save",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:saveas",
+   "dst": "fn:patchbay/web/app.js:save",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:state-clear",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:state-clear",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:state-kb",
+   "dst": "fn:patchbay/web/app.js:changed",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:state-kb",
+   "dst": "fn:patchbay/web/app.js:checkpoint",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:state-kb",
+   "dst": "fn:patchbay/web/app.js:devOf",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:state-kb",
+   "dst": "fn:patchbay/web/app.js:toast",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:theme",
+   "dst": "fn:patchbay/web/app.js:onAction",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:undo",
+   "dst": "fn:patchbay/web/app.js:undo",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:view-mode",
+   "dst": "fn:patchbay/web/app.js:fit",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:view-mode",
+   "dst": "fn:patchbay/web/app.js:panelMode",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "action:view-mode",
+   "dst": "fn:patchbay/web/app.js:renderAll",
+   "rel": "HANDLED_BY"
+  },
+  {
+   "src": "data:connections.yaml",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:docs/manuals",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:graph/public/budget.json",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:graph/public/vertices.json",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:images",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:inventory.yaml",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:midi_channels.yaml",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:patchbay/data/gear.json",
+   "dst": "system:patchbay",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:patchbay/data/ports.seed.yaml",
+   "dst": "system:patchbay",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:patchbay/device_fields.yaml",
+   "dst": "system:patchbay",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:patchbay/icons",
+   "dst": "system:patchbay",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:patchbay/panels.yaml",
+   "dst": "system:patchbay",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:patchbay/ports.yaml",
+   "dst": "system:patchbay",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:patchbay/sessions",
+   "dst": "system:patchbay",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:patchbay/templates.yaml",
+   "dst": "system:patchbay",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:sources/eurorack",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:tools/image_manifest.yaml",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:tools/manifest.yaml",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "data:connections.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "data:graph/public/budget.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "data:graph/public/vertices.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "data:images",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "data:midi_channels.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "data:patchbay/data/ports.seed.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "data:patchbay/device_fields.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "data:patchbay/ports.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "data:patchbay/templates.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "data:tools/image_manifest.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/common.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/common.py",
+   "dst": "data:patchbay/ports.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "data:connections.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "data:docs/manuals",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "data:patchbay/ports.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "data:sources/eurorack",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "data:patchbay/data/gear.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "data:patchbay/data/ports.seed.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "data:patchbay/icons",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/trace_icons.py",
+   "dst": "data:images",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/tools/trace_icons.py",
+   "dst": "data:tools/image_manifest.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "data:patchbay/data/gear.json",
+   "rel": "READS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:boot",
+   "dst": "route:GET /api/sessions/:id",
+   "rel": "REQUESTS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:loadGear",
+   "dst": "route:GET /api/gear",
+   "rel": "REQUESTS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:openDialog",
+   "dst": "route:DELETE /api/sessions/:id",
+   "rel": "REQUESTS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:openDialog",
+   "dst": "route:GET /api/sessions",
+   "rel": "REQUESTS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:openDialog",
+   "dst": "route:GET /api/sessions/:id",
+   "rel": "REQUESTS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:save",
+   "dst": "route:GET /api/sessions",
+   "rel": "REQUESTS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:save",
+   "dst": "route:PUT /api/sessions/:id",
+   "rel": "REQUESTS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:savePanelPositions",
+   "dst": "route:PUT /api/panels/:id",
+   "rel": "REQUESTS"
+  },
+  {
+   "src": "fn:patchbay/web/app.js:savePorts",
+   "dst": "route:PUT /api/ports/:id",
+   "rel": "REQUESTS"
+  },
+  {
+   "src": "route:DELETE /api/sessions/:id",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.do_DELETE",
+   "rel": "SERVED_BY",
+   "mode": "local server"
+  },
+  {
+   "src": "route:DELETE /api/sessions/:id",
+   "dst": "fn:patchbay/web/app.js:staticApi",
+   "rel": "SERVED_BY",
+   "mode": "website (static)"
+  },
+  {
+   "src": "route:GET /api/gear",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.do_GET",
+   "rel": "SERVED_BY",
+   "mode": "local server"
+  },
+  {
+   "src": "route:GET /api/gear",
+   "dst": "fn:patchbay/web/app.js:staticApi",
+   "rel": "SERVED_BY",
+   "mode": "website (static)"
+  },
+  {
+   "src": "route:GET /api/sessions",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.do_GET",
+   "rel": "SERVED_BY",
+   "mode": "local server"
+  },
+  {
+   "src": "route:GET /api/sessions",
+   "dst": "fn:patchbay/web/app.js:staticApi",
+   "rel": "SERVED_BY",
+   "mode": "website (static)"
+  },
+  {
+   "src": "route:GET /api/sessions/:id",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.do_GET",
+   "rel": "SERVED_BY",
+   "mode": "local server"
+  },
+  {
+   "src": "route:GET /api/sessions/:id",
+   "dst": "fn:patchbay/web/app.js:staticApi",
+   "rel": "SERVED_BY",
+   "mode": "website (static)"
+  },
+  {
+   "src": "route:PUT /api/panels/:id",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.do_PUT",
+   "rel": "SERVED_BY",
+   "mode": "local server"
+  },
+  {
+   "src": "route:PUT /api/ports/:id",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.do_PUT",
+   "rel": "SERVED_BY",
+   "mode": "local server"
+  },
+  {
+   "src": "route:PUT /api/sessions/:id",
+   "dst": "fn:patchbay/tools/patchbay.py:Handler.do_PUT",
+   "rel": "SERVED_BY",
+   "mode": "local server"
+  },
+  {
+   "src": "route:PUT /api/sessions/:id",
+   "dst": "fn:patchbay/web/app.js:staticApi",
+   "rel": "SERVED_BY",
+   "mode": "website (static)"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "system:gear-kb",
+   "rel": "USES"
+  },
+  {
+   "src": "app:patchbay",
+   "dst": "system:patchbay",
+   "rel": "USES"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "data:patchbay/data/gear.json",
+   "rel": "WRITES"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "data:patchbay/data/ports.seed.yaml",
+   "rel": "WRITES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "data:patchbay/panels.yaml",
+   "rel": "WRITES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "data:patchbay/ports.yaml",
+   "rel": "WRITES"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "data:patchbay/sessions",
+   "rel": "WRITES"
+  },
+  {
+   "src": "file:patchbay/tools/trace_icons.py",
+   "dst": "data:patchbay/icons",
+   "rel": "WRITES"
+  }
+ ]
+}

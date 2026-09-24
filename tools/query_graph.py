@@ -11,6 +11,7 @@ Writes graph/public/answers.json (read by build_public.py for the site; carries 
 """
 import hashlib
 import json
+import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -260,6 +261,75 @@ def cross_unrecorded():
     return {k: sorted(v) for k, v in sorted(by.items())}
 
 
+# ---------- the Patchbay app: code <-> user docs <-> knowledge graph ----------
+def _code_edges(g, rels):
+    return [r.asDict() for r in g.edges.filter(F.col("rel").isin(rels)).select("src", "dst", "rel").collect()]
+
+
+def undocumented(g):
+    """UI actions that no USER-guide section documents (doc drift, seen from the graph)."""
+    v = {r["id"]: r.asDict() for r in g.vertices.filter("type IN ('ui_action', 'doc_section')").collect()}
+    documented = {e["dst"] for e in _code_edges(g, ["DOCUMENTS"]) if v.get(e["src"], {}).get("role") == "user"}
+    return sorted(v[a]["name"] for a in v if v[a]["type"] == "ui_action" and a not in documented)
+
+
+def doc_impact(g, route_prefix):
+    """User-guide sections to review if the API routes under `route_prefix` change: sections that document a function
+    requesting such a route, or a UI action handled by such a function. Direct links only (no transitive CALLS), so a
+    dispatcher that reaches everything does not flag every page."""
+    v = {r["id"]: r.asDict() for r in g.vertices.filter("type IN ('api_route', 'doc_section', 'function', 'ui_action')").collect()}
+    es = _code_edges(g, ["REQUESTS", "HANDLED_BY", "DOCUMENTS"])
+    routes = {i for i, x in v.items() if x["type"] == "api_route" and x["name"].split(" ", 1)[1].startswith(route_prefix)}
+    fns = {e["src"] for e in es if e["rel"] == "REQUESTS" and e["dst"] in routes}
+    acts = {e["src"] for e in es if e["rel"] == "HANDLED_BY" and e["dst"] in fns}
+    secs = {e["src"] for e in es if e["rel"] == "DOCUMENTS" and (e["dst"] in fns or e["dst"] in acts)
+            and v.get(e["src"], {}).get("role") == "user"}
+    return sorted(v[x]["name"] for x in secs), sorted(v[x]["name"] for x in fns), sorted(v[x]["name"] for x in acts)
+
+
+def kb_reach(g):
+    """For each knowledge-base dataset the Patchbay's code reads: how many knowledge-graph vertices it defines or
+    describes (public snapshot, so the private manual sections are not counted)."""
+    es = _code_edges(g, ["READS", "DEFINES", "DESCRIBES", "PART_OF"])
+    kb = {e["src"] for e in es if e["rel"] == "PART_OF" and e["dst"] == "system:gear-kb"}
+    read = {e["dst"] for e in es if e["rel"] == "READS" and e["src"].startswith("file:patchbay/")} & kb
+    out = {}
+    for d in sorted(read):
+        n = sum(1 for e in es if e["src"] == d and e["rel"] in ("DEFINES", "DESCRIBES"))
+        if n:
+            out[d.split(":", 1)[1]] = n
+    return out
+
+
+def cross_undocumented():
+    """From the raw files, not the graph: onAction's cases vs the user guide's covers notes."""
+    app = (ROOT / "patchbay" / "web" / "app.js").read_text(encoding="utf-8")
+    body = app[app.index("function onAction"):]
+    nxt = body.find("\nfunction ", 1)
+    body = body[:nxt] if nxt > 0 else body
+    acts = set(re.findall(r"case '([a-z-]+)':", body))
+    guide = (ROOT / "patchbay" / "docs" / "user-guide.md").read_text(encoding="utf-8")
+    covered = {t for c in re.findall(r"<!--\s*covers:(.*?)-->", guide, re.S) for t in c.split() if not t.startswith("fn:")}
+    return sorted(acts - covered)
+
+
+def cross_kb_reach():
+    """Counted from the YAML files directly."""
+    ids = {i["id"] for i in yaml.safe_load((ROOT / "inventory.yaml").read_text())["items"]}
+    c = yaml.safe_load((ROOT / "connections.yaml").read_text())
+    conn = {x for l in c["links"] for x in (l["from"], l["to"])} | {x for p in c["placements"] for x in (p["module"], p["case"], p["powered_by"])}
+    midi = {m["device"] for m in (yaml.safe_load((ROOT / "midi_channels.yaml").read_text()) or {}).get("channels", [])}
+    img = {e["device"] for e in yaml.safe_load((ROOT / "tools" / "image_manifest.yaml").read_text())["images"]}
+    man = yaml.safe_load((ROOT / "tools" / "manifest.yaml").read_text())["manuals"]
+    counts = {"connections.yaml": len(conn & ids), "inventory.yaml": len(ids), "midi_channels.yaml": len(midi & ids),
+              "tools/image_manifest.yaml": len(img & ids), "tools/manifest.yaml": len(man)}
+    # which of them the app reads, decided from its source text (not from the graph)
+    src = "".join(f.read_text(encoding="utf-8") for d in ("tools", "web") for f in (ROOT / "patchbay" / d).glob("*.[pj][ys]"))
+    named = {"connections.yaml": r"connections\.yaml", "inventory.yaml": r"inventory\.yaml", "midi_channels.yaml": r"midi_channels\.yaml",
+             "tools/image_manifest.yaml": r"image_manifest\.yaml", "tools/manifest.yaml": r"(?<!image_)manifest\.yaml"}
+    return {k: n for k, n in counts.items() if re.search(named[k], src)}
+
+
 # ------------------------------------------------------------------------------------------ run
 def main():
     golden = yaml.safe_load((ROOT / "evals" / "graph_golden.yaml").read_text())
@@ -329,6 +399,19 @@ def main():
             res, inherited = inherits(g, q["param"])
             lines = [f"{nm(it)}: {', '.join(v)}" for it, v in res.items()] + [f"counted through the hierarchy (narrower kinds): {', '.join(inherited)}"]
             record(qid, q["question"], res, lines, cross=cross_inherits(q["param"]), note=q.get("note"))
+        elif kind == "undocumented":
+            res = undocumented(g)
+            lines = [f"{len(res)} UI actions have no user-guide section" + (": " + ", ".join(res) if res else "")]
+            record(qid, q["question"], res, lines, expected=q.get("expected"), cross=cross_undocumented(), note=q.get("note"))
+        elif kind == "doc_impact":
+            secs, fns, acts = doc_impact(g, q["route_prefix"])
+            lines = [f"review: {', '.join(secs)}", f"because these functions call {q['route_prefix']}: {', '.join(fns)}",
+                     f"and these buttons are handled by them: {', '.join(acts) or 'none'}"]
+            record(qid, q["question"], secs, lines, expected=q["expected"], note=q.get("note"))
+        elif kind == "kb_reach":
+            res = kb_reach(g)
+            lines = [f"{d}: {n} knowledge-graph vertices" for d, n in res.items()]
+            record(qid, q["question"], res, lines, cross=cross_kb_reach(), note=q.get("note"))
         else:
             failures.append(f"{qid}: unknown query kind {kind!r}")
 

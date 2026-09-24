@@ -19,6 +19,7 @@ from midi_reference import markdown as midi_reference
 import viz
 import viz_graph
 import viz_terms
+import viz_code
 from site_theme import EXTRA_CSS, THEME, versioned
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -51,6 +52,148 @@ def fig(svg, note=""):
     return f'<div class="viz">{svg}</div>\n' + (f'\n<p class="viz-note">{note}</p>\n' if note else "")
 
 
+def code_graph_page(inv):
+    """The Patchbay's code <-> docs graph, tied to the knowledge graph, and the platform-scale reading of it."""
+    pub = ROOT / "graph" / "public"
+    code = json.loads((pub / "code.json").read_text())
+    edges = json.loads((pub / "edges.json").read_text())
+    ans = {a["id"]: a for a in json.loads((pub / "answers.json").read_text())["answers"]}
+    snap = json.loads((ROOT / "data" / "snapshot.json").read_text())
+    v = {x["id"]: x for x in code["vertices"]}
+    ds_edges = [e for e in edges if e["src"].startswith("data:") and e["rel"] in ("DEFINES", "DESCRIBES")]
+    kb = {"item": len(inv["items"]), "manual": len(snap["manuals"]), "section": sum(m["sections"] for m in snap["manuals"]),
+          "defines_item": sum(1 for e in ds_edges if e["rel"] == "DEFINES" and e["dst"].startswith("item:")),
+          "describes_item": sum(1 for e in ds_edges if e["rel"] == "DESCRIBES")}
+    how = {"CONTAINS": "parsed (files in patchbay/)", "DEFINES": "parsed (Python ast; JavaScript top-level functions)",
+           "CALLS": "parsed (a call to a known function in the body)", "HANDLED_BY": "parsed (the onAction switch)",
+           "REQUESTS": "parsed (api() calls)", "SERVED_BY": "parsed (server routes; the website's stand-in)",
+           "READS": "parsed (file names in the code)", "WRITES": "declared, then verified in the code",
+           "DOCUMENTS": "declared in the guide (covers notes); README paths parsed", "PART_OF": "declared",
+           "USES": "declared"}
+    rels = code["counts"]["edges"]
+    rel_rows = "\n".join(f"| {r} | {n} | {how.get(r, '')} |" for r, n in sorted(rels.items(), key=lambda kv: -kv[1]))
+    acts = {x["name"]: x.get("label", "") for x in code["vertices"] if x["type"] == "ui_action"}
+    cov_rows = []
+    for sec in [x for x in code["vertices"] if x["type"] == "doc_section" and x.get("audience") == "user"]:
+        outs = [e["dst"] for e in code["edges"] if e["src"] == sec["id"] and e["rel"] == "DOCUMENTS"]
+        buttons = [v[o]["name"] for o in outs if v[o]["type"] == "ui_action"]
+        fns = [v[o]["name"] for o in outs if v[o]["type"] == "function"]
+        cov_rows.append(f"| {sec['name']} | {', '.join(buttons) or '—'} | {', '.join(f'`{f}`' for f in fns) or '—'} |")
+    reads = {}
+    for e in code["edges"]:
+        if e["rel"] in ("READS", "WRITES") and v[e["dst"]]["type"] == "dataset":
+            reads.setdefault(e["dst"], {"READS": [], "WRITES": []})[e["rel"]].append(v[e["src"]]["name"].split("/")[-1])
+    ds_rows = []
+    for d, rw in sorted(reads.items(), key=lambda kv: (v[kv[0]].get("system") != "gear-kb", kv[0])):
+        n_kb = sum(1 for e in ds_edges if e["src"] == d)
+        if d == "data:docs/manuals":
+            n_kb = f"{kb['section']:,} manual sections (private, so not in the public graph)"
+        ds_rows.append(f"| `{v[d]['name']}` | {v[d].get('system')} | {', '.join(sorted(rw['READS'])) or '—'} | "
+                       f"{', '.join(sorted(rw['WRITES'])) or '—'} | {n_kb or '—'} |")
+    secs, fns, acts_hit = viz_code.impact(code, "/api/sessions")
+    qa = "\n".join(f"- **{ans[q]['question']}** " + "; ".join(ans[q]["answer"]) + ".  " +
+                   " ".join(f"`{k}: {s_}`" for k, s_ in ans[q]["checks"].items()) for q in ("q10", "q11", "q12") if q in ans)
+    n = code["counts"]["vertices"]
+    return f"""# Patchbay: code, docs and the knowledge graph
+
+The [Patchbay](patchbay-app.md) is small enough to read in an afternoon, which makes it a good place to show an idea
+that matters much more at scale: **documentation, code and data can be one graph**, built from the source on every
+change, so that questions like *"which pages go stale if this API changes?"* are answered by a query instead of by
+memory.
+
+`tools/build_code_graph.py` reads the app (its Python with the `ast` module, its JavaScript, its HTML buttons, its
+[user guide](patchbay-guide.md) and README) and writes `graph/public/code.json`: **{sum(n.values())} vertices** and
+**{sum(rels.values())} typed edges**. `tools/build_graph.py` merges that into the main knowledge graph, and the graph's
+question runner checks three questions about it against answers worked out without the graph.
+
+## One graph, from a guide page down to the gear
+
+{fig(viz_code.layer_diagram(code, kb), "Counts are computed from graph/public/code.json and the knowledge graph on every build. Manual sections stay private (copyright), so their edges never reach the public snapshot.")}
+
+| Relationship | Edges | How it is derived |
+|---|---|---|
+{rel_rows}
+
+Most edges are **parsed** from the code. The links from the user guide to the code are **declared**: each guide section
+ends with a hidden note such as `covers: save saveas fn:openDialog`. Declared links are then **checked**, so they cannot
+quietly rot. The build fails if a button has no guide section, if a note names a button or function that no longer
+exists, or if a section covers a button but never shows its on-screen label. It also fails if the README names a code
+file that is gone, if the client calls an API route that no server serves, or if a module claims to write a file it
+never writes. The first run of these checks caught two real drift bugs: the guide said "jack labels" where the button
+says "jack names", and the README pointed at a path that only exists one folder up.
+
+## Which guide section covers which button
+
+| Guide section | Buttons it documents | Functions it documents |
+|---|---|---|
+{chr(10).join(cov_rows)}
+
+## Worked example: what a change to the session API touches
+
+Only three functions call `/api/sessions`: {", ".join(f"`{f}`" for f in fns)}. The buttons they handle are
+{", ".join(f"**{a}**" for a in acts_hit)}. The guide sections that document either are
+{" and ".join(f"*{s_}*" for s_ in secs)}. The same routes are served twice: by the local server (`do_GET`,
+`do_PUT`, `do_DELETE`) and by the website's stand-in (`staticApi`), so a change has two implementations to keep in step.
+
+{fig(viz_code.impact_diagram(code, "/api/sessions", secs, fns, acts_hit), "Drawn from code.json with the same rule the graph question uses: direct links only, so the dispatcher that reaches every function does not flag every page.")}
+
+## Tied to the knowledge graph
+
+The app's datasets are the join. A knowledge-base file **defines** the vertices it is the source of record for
+(`inventory.yaml` → every item) and **describes** the ones it adds facts to (`connections.yaml` → the items it
+wires or mounts). The Patchbay's own files (sessions, jack edits) belong to the app, not the knowledge base.
+
+| Dataset | Belongs to | Read by | Written by | Knowledge-graph vertices it defines or describes (public) |
+|---|---|---|---|---|
+{chr(10).join(ds_rows)}
+
+Checked against the graph (each answer is also worked out without the graph):
+
+{qa}
+
+## Scaled out: the Patchbay as one app on a larger platform
+
+Picture the Patchbay as one of many applications and services on a shared platform, each with its own user docs and
+its own code, all built on shared data and shared APIs. The same relationships carry over unchanged, and they get
+more useful as the platform grows.
+
+{fig(viz_code.platform_diagram(), "Each app publishes the same small schema at build time. The graph is the union, joined on ids that several apps share.")}
+
+**The schema is small and stays the same.** Four families of relationship cover it: **documentation**
+(`DOCUMENTS`), **behaviour** (`HANDLED_BY`, `CALLS`, `REQUESTS`, `SERVED_BY`), **data lineage** (`READS`, `WRITES`,
+`DEFINES`, `DESCRIBES`) and **ownership** (`CONTAINS`, `PART_OF`, `USES`, and in a larger setting an `OWNED_BY` edge
+to a team). Every app's build emits its own slice in that schema, exactly as `build_code_graph.py` does here, and a
+central job merges the slices.
+
+**Apps join through what they share, not through each other.** Two apps never need to know about each other: they
+meet at a dataset both read, an API route one serves and another calls, or a domain entity (here, a piece of gear)
+their data defines. Those shared ids are what turn many small graphs into one.
+
+**The questions cross app boundaries.** With the slices merged, the same queries this page runs for one app run for
+all of them:
+
+- *Change impact:* "If this dataset's schema changes, which apps read it, which of their features use it, and which
+  user-guide pages must be reviewed?" (the worked example above, across every app at once)
+- *Documentation debt:* "Which user-facing features, in any app, have no documentation?" (question q10, platform-wide)
+- *Stale docs:* "Which pages document a button, route or function that no longer exists?" (caught at build time)
+- *Answer grounding:* a support or search question lands on a guide section; the graph walks from that section to the
+  feature, the code that implements it, the data it reads, and the domain entities involved, so an answer can cite
+  all of them. Graph neighbours also help rank search results.
+- *Ownership:* with `OWNED_BY` edges, "who owns every page affected by this change?"
+
+**What keeps it trustworthy at scale** is what keeps it trustworthy here: every edge says how it was derived (parsed,
+declared, or verified), declared links are checked on every build so drift fails the build rather than accumulating,
+inputs are hashed so a stale graph is refused, visibility rules keep private material out of what gets published (as
+the manual sections are kept out here), and each graph question is checked against an answer worked out without the
+graph.
+
+**Honest limits of this small version.** The JavaScript is read with patterns, not a full parser, so dynamic calls are
+missed; the guide-to-code links are hand-declared (checked, but written by a person); and the impact rule follows
+direct links only. A platform version would use proper parsers per language and would add service-level edges (queues,
+events, schemas) alongside the function-level ones shown here.
+"""
+
+
 def main():
     if OUT.exists():
         shutil.rmtree(OUT)
@@ -66,7 +209,7 @@ def main():
     shutil.copytree(ROOT / "docs" / "about", DOCS / "about")
     eu = build_eurorack.build(items, DOCS)
     (DOCS / "stylesheets").mkdir()
-    (DOCS / "stylesheets" / "viz.css").write_text(viz.CSS + viz_graph.CSS + viz_terms.CSS, encoding="utf-8")
+    (DOCS / "stylesheets" / "viz.css").write_text(viz.CSS + viz_graph.CSS + viz_terms.CSS + viz_code.CSS, encoding="utf-8")
     shutil.copy(ROOT / "docs" / "stylesheets" / "tni.css", DOCS / "stylesheets" / "tni.css")
 
     manual_devices = {m["device"] for m in man}
@@ -544,14 +687,22 @@ More: [evaluation](../about/evaluation.md). Questions that never found a page: {
              "**[Open the patchbay](patchbay/index.html)**\n\n"
              "On this website it runs without a server: sessions are saved in your browser only, and jack edits are "
              "off. The full app (saving session files, editing jacks) runs locally from the repository's `patchbay/` "
-             "folder with `make serve`. All faceplates and icons are drawn from data; no product photos are used.")
+             "folder with `make serve`. All faceplates and icons are drawn from data; no product photos are used.\n\n"
+             "- [User guide](patchbay-guide.md): every button and gesture, section by section.\n"
+             "- [Code, docs and the knowledge graph](patchbay-code-graph.md): how the guide is linked to the code, "
+             "and the code to the knowledge graph, as one graph, and how that scales to a platform of many apps.")
+        guide = (pb / "docs" / "user-guide.md").read_text(encoding="utf-8")
+        page("patchbay-guide.md", "Patchbay user guide", guide)
+        page("patchbay-code-graph.md", "Patchbay: code, docs and the knowledge graph", code_graph_page(inv))
 
     # ---------- config ----------
     nav = [{"Home": "index.md"},
            {"Visual explanations": [{"How the pipeline works": "visuals/pipeline.md"}, {"Inventory coverage": "visuals/coverage.md"},
                                     {"How well each spec is supported": "visuals/trust.md"}, {"Power budget": "visuals/power.md"}, {"Knowledge graph": "visuals/graph.md"}, {"Terminology": "visuals/terms.md"},
                                     {"What the checks caught": "visuals/checks.md"}, {"Retrieval results": "visuals/retrieval.md"}]},
-           {"Inventory": "inventory.md"}, {"MIDI channels": "midi-channels.md"}, {"Patchbay": "patchbay-app.md"}, {"Eurorack": eu["nav"]},
+           {"Inventory": "inventory.md"}, {"MIDI channels": "midi-channels.md"},
+           {"Patchbay": [{"Overview": "patchbay-app.md"}, {"User guide": "patchbay-guide.md"},
+                         {"Code, docs and the knowledge graph": "patchbay-code-graph.md"}]}, {"Eurorack": eu["nav"]},
            {"About the project": [{t: f"about/{f}"} for f, t in [("index.md", "Overview"), ("architecture.md", "Architecture"),
                                                                  ("verification.md", "How correctness is checked"), ("evaluation.md", "Retrieval evaluation"),
                                                                  ("decisions.md", "Decision log"), ("runbook.md", "Runbook"),

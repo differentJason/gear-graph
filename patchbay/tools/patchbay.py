@@ -34,7 +34,7 @@ SLUG = re.compile(r"^[a-z0-9][a-z0-9-]{0,79}$")
 DEVICE = re.compile(r"^[a-z0-9][a-z0-9-]{0,99}$")
 MEDIA = {"audio", "midi", "clock", "cv", "gate", "usb", "power"}
 DIRS = {"in", "out", "bidir"}
-STATIC = {"/icons/": ROOT / "icons", "/panels/": ROOT / "images", "/": ROOT / "web"}
+STATIC = {"/icons/": ROOT / "icons", "/": ROOT / "web"}
 LOCK = threading.Lock()
 MAX_BODY = 5_000_000
 

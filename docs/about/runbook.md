@@ -35,6 +35,7 @@ computed there and the site build only reads the result:
 .venv/bin/python tools/validate_connections.py       # is connections.yaml consistent with the inventory? (no Spark needed)
 .venv/bin/python tools/validate_midi.py              # is midi_channels.yaml consistent with the inventory and connections.yaml? (no Spark needed)
 .venv/bin/python tools/build_terms.py                # check TERMS.yaml and recount labels in the manuals (writes graph/public/terms.json)
+.venv/bin/python tools/build_code_graph.py           # Patchbay code <-> user-guide graph (writes graph/public/code.json; fails on doc drift)
 .venv-graph/bin/python tools/build_graph.py          # build the graph, write graph/public/*.json and the budget snapshot
 .venv/bin/python tools/build_site.py                 # renders the budget page from that snapshot
 ```
@@ -49,6 +50,8 @@ expectation or against separate code that reads the raw files, and it exits non-
 
 After editing `TERMS.yaml`, run `build_terms.py` first: `build_graph.py` and `build_public.py` stop with "terms.json is STALE"
 otherwise. `build_terms.py --check` checks the rules without the manuals but cannot recount.
+Likewise after changing anything in `patchbay/` (code, `docs/user-guide.md`, README): run `build_code_graph.py` before
+`build_graph.py`, which refuses a stale `code.json`. A new button needs a `covers:` note in the user guide or the build fails.
 
 Run `build_graph.py` **before** `build_site.py` whenever placements (`connections.yaml`), specs, overrides,
 `eurorack/attestations.yaml`, `midi_channels.yaml`, or an item's `in_use` flag change. If you forget, `build_site.py`

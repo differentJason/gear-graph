@@ -260,11 +260,6 @@ def hp_of(dev_id, spec, name="", id_fallback=True):
     return None
 
 
-def panel_of(dev_id):
-    for ext in ("jpg", "jpeg", "png", "webp"):
-        if (ROOT / "images" / f"{dev_id}.{ext}").is_file():
-            return f"panels/{dev_id}.{ext}"
-    return None
 
 
 def build():
@@ -323,7 +318,7 @@ def build():
             "hp": hp_of(dev_id, specs.get(dev_id, {}), "", id_fallback=False) or it.get("hp") or hp_of(dev_id, {}, it["name"]),
             "format": it.get("format") or (str(pl.get("row")) if pl and str(pl.get("row", "")).upper() in ("1U", "3U") else None)
                       or "3U",
-            "panel": panel_of(dev_id),
+            "panel": None,                  # photo panels were retired 2026-09-23 (kept for the session format)
             "supply_load": supply_load.get(dev_id),
             "midi": {k: ch[k] for k in ("in", "out", "role", "note") if k in ch} if ch else None,
             "ports": ports,

@@ -65,3 +65,22 @@ questions:
     param: cutoff
     note: "Ontology + taxonomy together: TERMS.yaml states 'LFO modulates cutoff' and 'envelope modulates cutoff'; ADSR inherits it
            because it is a narrower kind of envelope. Checked against TERMS.yaml + terms.json by separate code, not the graph."
+
+  # ---- the Patchbay app: code <-> user documentation <-> knowledge graph (graph/public/code.json) ----
+  - id: q10
+    question: "Which of the Patchbay's buttons have no section in its user guide?"
+    query: undocumented
+    expected: []
+    basis: "Every data-act case in patchbay/web/app.js onAction is named in a covers note of patchbay/docs/user-guide.md (checked by build_code_graph.py; cross-checked here from the raw files)."
+
+  - id: q11
+    question: "If the Patchbay's session API (/api/sessions) changed, which user-guide sections would need a review?"
+    query: doc_impact
+    route_prefix: /api/sessions
+    expected: ["Getting started", "Sessions and templates"]
+    basis: "Worked out by hand from the code: only boot(), openDialog() and save() call /api/sessions*; the buttons they handle are Open (openDialog) and Save / Save as (save); the guide covers boot in 'Getting started' and openDialog, open, save, saveas in 'Sessions and templates'."
+
+  - id: q12
+    question: "Which knowledge-base datasets does the Patchbay read, and how many knowledge-graph vertices does each one define or describe?"
+    query: kb_reach
+    note: "The join between the app graph and the knowledge graph: a change to one of these files reaches the app through these edges. Cross-checked by counting the YAML files directly."

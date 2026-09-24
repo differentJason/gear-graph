@@ -215,6 +215,39 @@ def collect():
         b.edge(f"item:{p['module']}", f"item:{p['case']}", "INSTALLED_IN", **common)
         if p["powered_by"] != p["module"]:               # a supply does not power itself
             b.edge(f"item:{p['module']}", f"item:{p['powered_by']}", "POWERED_BY", **common)
+
+    # ---- the Patchbay app's code <-> docs graph (graph/public/code.json from tools/build_code_graph.py), tied to the
+    # knowledge graph through the datasets it reads: a dataset DEFINES the vertices it is the source of record for
+    # and DESCRIBES the ones it adds facts about. That join is what lets one question run from a user-guide section,
+    # through the code, down to the gear. ----
+    from build_code_graph import inputs_digest
+    code_json = ROOT / "graph" / "public" / "code.json"
+    code = json.loads(code_json.read_text())
+    if code["inputs_sha256"] != inputs_digest():
+        raise SystemExit("graph/public/code.json is STALE for patchbay/. Run: .venv/bin/python tools/build_code_graph.py")
+    for v in code["vertices"]:
+        b.vertex(v["id"], v["type"], v["name"], category=v.get("system"), role=v.get("language") or v.get("audience"),
+                 alt=v.get("label"), url=v.get("path") or v.get("doc"),
+                 value=float(v["line"]) if v.get("line") is not None else None)
+    for e in code["edges"]:
+        b.edge(e["src"], e["dst"], e["rel"], note=e.get("mode"))
+    for i in inv:
+        b.edge("data:inventory.yaml", f"item:{i['id']}", "DEFINES")
+    for m in man:
+        if f"manual:{m['id']}" in b.V:
+            b.edge("data:tools/manifest.yaml", f"manual:{m['id']}", "DEFINES")
+    for vid, v in list(b.V.items()):
+        if v["type"] == "section":
+            b.edge("data:docs/manuals", vid, "DEFINES")          # private endpoint: stays out of the public snapshot
+    described = {"data:connections.yaml": {x for l in conn.get("links", []) for x in (l["from"], l["to"])}
+                 | {x for p in conn.get("placements", []) for x in (p["module"], p["case"], p["powered_by"])},
+                 "data:midi_channels.yaml": set(midi_by_device),
+                 "data:tools/image_manifest.yaml": {e["device"] for e in (yaml.safe_load(
+                     (ROOT / "tools" / "image_manifest.yaml").read_text()) or {}).get("images", [])}}
+    for ds, ids in described.items():
+        for x in sorted(ids):
+            if f"item:{x}" in b.V:
+                b.edge(ds, f"item:{x}", "DESCRIBES")
     b.finish()
     return b
 

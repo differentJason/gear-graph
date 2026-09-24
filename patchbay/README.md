@@ -6,7 +6,7 @@ channels, presets, levels and notes, and save the layout so you can recall it la
 Part of the gear knowledge base (this folder lives at `patchbay/` in the repository). It **reads** the KB one level up
 (inventory, recorded studio wiring, MIDI home channels, graph snapshot, manual jack labels, original device drawings) and
 **never writes to it**. No product or panel photos are used anywhere: icons are the KB's own drawings
-(`images/`, from `tools/draw_devices.py`) and faceplates are generated. Jack data cites the manual section it came from
+(`../images/`, from the KB's `../tools/draw_devices.py`) and faceplates are generated. Jack data cites the manual section it came from
 but never copies manual text.
 
 Two ways to run it:
@@ -121,7 +121,7 @@ used the old name show the jack struck through with a warning.
 ## Icons
 
 `tools/trace_icons.py` copies the KB's original drawings (`../images/<id>.svg`, made by the KB's
-`tools/draw_devices.py` from facts only) into `icons/`, minus their white page background. **To change an icon**,
+`../tools/draw_devices.py` from facts only) into `icons/`, minus their white page background. **To change an icon**,
 change the drawing in gear-kb and re-run `make icons`. Devices without a drawing get a simple line glyph.
 `icons/_sheet.html` is a contact sheet of every icon.
 
