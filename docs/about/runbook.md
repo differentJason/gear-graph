@@ -153,3 +153,8 @@ Each of these happened at least once while building the project:
 `tools/` (all code) - `tools/manifest.yaml` (manual settings) - `VOCAB.yaml` (tags) -
 `sources/` (PDFs, ignored) - `images/` (original illustrations drawn by `tools/draw_devices.py`, committed; no product photos) - `eurorack/{sources,overrides}.yaml`, `eurorack/evidence/` (spec inputs) -
 `docs/` (the site; mostly generated) - `evals/golden.jsonl`, `evals/graph_golden.yaml` (test questions) - `mkdocs.yml` (generated).
+
+Helpers the site builders import: `tools/viz_graph.py`, `tools/viz_terms.py` and `tools/viz_code.py` draw the inline
+SVG diagrams (knowledge graph, terminology, and the code/docs/terminology graph); `tools/midi_reference.py` renders the
+MIDI channels page from `midi_channels.yaml`; `tools/site_theme.py` holds the site theme and the CSS cache-busting.
+`tools/build_code_graph.py` lists any tool module no operator doc names, so this list stays complete.

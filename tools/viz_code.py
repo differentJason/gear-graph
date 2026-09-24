@@ -166,3 +166,42 @@ def platform_diagram():
     return _svg(880, 326, "One app among many on a platform",
                 "Several apps each publish a docs-to-code graph in the same schema; they join through shared datasets "
                 "and API contracts into one knowledge graph of domain entities, documentation, code and owners.", "".join(b))
+
+
+def patchbay_subgraph(code):
+    """The Patchbay's slice of code.json (the other apps share the file): its files, functions, docs, buttons, routes,
+    plus the datasets and systems they touch."""
+    keep = {v["id"] for v in code["vertices"] if "patchbay/" in v["id"] or v["type"] in ("ui_action", "api_route")
+            or v["id"] == "app:patchbay"}
+    keep |= {e["dst"] for e in code["edges"] if e["src"] in keep and e["rel"] in ("READS", "WRITES", "USES")}
+    keep |= {e["dst"] for e in code["edges"] if e["src"] in keep and e["rel"] == "PART_OF"}
+    vs = [v for v in code["vertices"] if v["id"] in keep]
+    es = [e for e in code["edges"] if e["src"] in keep and e["dst"] in keep]
+    counts = {"vertices": dict(Counter(v["type"] for v in vs)), "edges": dict(Counter(e["rel"] for e in es))}
+    return {**code, "vertices": vs, "edges": es, "counts": counts}
+
+
+def context_diagram(c):
+    """Many sources -> one shared vocabulary -> many uses. c: counts computed by the caller."""
+    b = [ARROW]
+    src = [(f"{c['manuals']} manuals", f"{c['makers']} manufacturers, {c['formats']} formats"),
+           (f"{c['app_docs']} app doc sections", f"{c['apps']} apps, incl. the docs site"),
+           (f"{c['code_files']} code files", "docstrings and comments"),
+           (f"{c['buttons']} UI labels", "what users click")]
+    for i, (a, s_) in enumerate(src):
+        y = 20 + i * 74
+        b.append(_box(10, y, 220, 56, [a, s_], "b-local" if i == 0 else "b-out" if i == 1 else "b-tool" if i == 2 else "b-act"))
+        b.append(_arrow(230, y + 28, 330, 150 + (i - 1.5) * 18))
+    b.append(_box(330, 110, 220, 90, ["Shared vocabulary", f"{c['concepts']} concepts, {c['labels']} labels",
+                                      f"{c['shared']} used by manuals and apps"], "b-data"))
+    b.append(_t(440, 222, f"USES_TERM {c['uses_term']:,} edges", "tiny", "middle"))
+    uses = ["Search and navigation", "Grounded answers (cite the sources)", "Change impact across apps", "Content gaps both ways"]
+    for i, u in enumerate(uses):
+        y = 30 + i * 66
+        b.append(_arrow(550, 155, 640, y + 22))
+        b.append(f'<rect x="640" y="{y}" width="230" height="44" rx="8" class="b-data"/>' + _t(755, y + 27, u, "bt", "middle"))
+    b.append(_t(10, 318, "Sources keep their own words; the vocabulary maps every word to one concept, so every use sees one graph.", "tm"))
+    return _svg(880, 330, "Many sources, one context graph",
+                "Manuals from many manufacturers, app documentation, code comments and UI labels are all read with one "
+                "label matcher into a shared vocabulary of concepts, which serves search, grounded answers, change impact "
+                "and gap analysis.", "".join(b))

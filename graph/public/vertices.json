@@ -236,6 +236,20 @@
   "visibility": "public"
  },
  {
+  "id": "app:docs-site",
+  "name": "Documentation site",
+  "type": "app",
+  "url": "docs/about/",
+  "visibility": "public"
+ },
+ {
+  "id": "app:kb-tools",
+  "name": "Knowledge-base build tools",
+  "type": "app",
+  "url": "tools/",
+  "visibility": "public"
+ },
+ {
   "id": "app:patchbay",
   "name": "Patchbay",
   "type": "app",
@@ -400,6 +414,20 @@
  },
  {
   "category": "gear-kb",
+  "id": "data:TERMS.yaml",
+  "name": "TERMS.yaml",
+  "type": "dataset",
+  "visibility": "public"
+ },
+ {
+  "category": "gear-kb",
+  "id": "data:VOCAB.yaml",
+  "name": "VOCAB.yaml",
+  "type": "dataset",
+  "visibility": "public"
+ },
+ {
+  "category": "gear-kb",
   "id": "data:connections.yaml",
   "name": "connections.yaml",
   "type": "dataset",
@@ -414,8 +442,43 @@
  },
  {
   "category": "gear-kb",
+  "id": "data:eurorack",
+  "name": "eurorack",
+  "type": "dataset",
+  "visibility": "public"
+ },
+ {
+  "category": "gear-kb",
+  "id": "data:graph/public/answers.json",
+  "name": "graph/public/answers.json",
+  "type": "dataset",
+  "visibility": "public"
+ },
+ {
+  "category": "gear-kb",
   "id": "data:graph/public/budget.json",
   "name": "graph/public/budget.json",
+  "type": "dataset",
+  "visibility": "public"
+ },
+ {
+  "category": "gear-kb",
+  "id": "data:graph/public/code.json",
+  "name": "graph/public/code.json",
+  "type": "dataset",
+  "visibility": "public"
+ },
+ {
+  "category": "gear-kb",
+  "id": "data:graph/public/edges.json",
+  "name": "graph/public/edges.json",
+  "type": "dataset",
+  "visibility": "public"
+ },
+ {
+  "category": "gear-kb",
+  "id": "data:graph/public/terms.json",
+  "name": "graph/public/terms.json",
   "type": "dataset",
   "visibility": "public"
  },
@@ -522,6 +585,358 @@
   "id": "data:tools/manifest.yaml",
   "name": "tools/manifest.yaml",
   "type": "dataset",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/architecture.md#components",
+  "name": "Components",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/architecture.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/architecture.md#data-model",
+  "name": "Data model",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/architecture.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/architecture.md#design-principles",
+  "name": "Design principles",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/architecture.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/architecture.md#lessons-from-the-design",
+  "name": "Lessons from the design",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/architecture.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/architecture.md#shape-of-the-system",
+  "name": "Shape of the system",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/architecture.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/decisions.md#choices-the-owner-made-that-changed-the-outcome",
+  "name": "Choices the owner made that changed the outcome",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/decisions.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/evaluation.md#method",
+  "name": "Method",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/evaluation.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/evaluation.md#not-yet-done",
+  "name": "Not yet done",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/evaluation.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/evaluation.md#pitfalls-in-measuring-retrieval",
+  "name": "Pitfalls in measuring retrieval",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/evaluation.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/evaluation.md#question-being-asked",
+  "name": "Question being asked",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/evaluation.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/evaluation.md#re-running",
+  "name": "Re-running",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/evaluation.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/evaluation.md#results-2026-09-20-17-answerable-questions",
+  "name": "Results (2026-09-20, 17 answerable questions)",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/evaluation.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/evaluation.md#what-the-results-say-and-do-not",
+  "name": "What the results say (and do not)",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/evaluation.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/index.md#how-it-was-built",
+  "name": "How it was built",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/index.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/index.md#using-this-project-to-learn-or-teach",
+  "name": "Using this project to learn or teach",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/index.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/index.md#what-it-deliberately-is-not",
+  "name": "What it deliberately is not",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/index.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/index.md#what-it-is",
+  "name": "What it is",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/index.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/index.md#why-it-exists",
+  "name": "Why it exists",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/index.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/limitations.md#content-coverage",
+  "name": "Content coverage",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/limitations.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/limitations.md#conversion-quality",
+  "name": "Conversion quality",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/limitations.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/limitations.md#eurorack-specifications",
+  "name": "Eurorack specifications",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/limitations.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/limitations.md#evaluation",
+  "name": "Evaluation",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/limitations.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/limitations.md#open-questions",
+  "name": "Open questions",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/limitations.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/limitations.md#process-and-legal",
+  "name": "Process and legal",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/limitations.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/limitations.md#terminology",
+  "name": "Terminology",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/limitations.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/runbook.md#add-a-eurorack-module-or-a-case-supply",
+  "name": "Add a Eurorack module (or a case / supply)",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/runbook.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/runbook.md#add-a-manual",
+  "name": "Add a manual",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/runbook.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/runbook.md#everyday-commands",
+  "name": "Everyday commands",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/runbook.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/runbook.md#file-map",
+  "name": "File map",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/runbook.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/runbook.md#mistakes-that-are-easy-to-make",
+  "name": "Mistakes that are easy to make",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/runbook.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/runbook.md#patchbay-app",
+  "name": "Patchbay app",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/runbook.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/runbook.md#publish-the-site",
+  "name": "Publish the site",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/runbook.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/runbook.md#the-knowledge-graph-and-the-power-budget",
+  "name": "The knowledge graph and the power budget",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/runbook.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/runbook.md#when-something-looks-wrong",
+  "name": "When something looks wrong",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/runbook.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/terminology.md#how-to-change-it",
+  "name": "How to change it",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/terminology.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/terminology.md#lessons-worth-keeping",
+  "name": "Lessons worth keeping",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/terminology.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/terminology.md#next-step-owner-review",
+  "name": "Next step: owner review",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/terminology.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+  "name": "Pitfalls, and what caught each",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/terminology.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/terminology.md#the-process-in-order",
+  "name": "The process, in order",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/terminology.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/terminology.md#what-was-built",
+  "name": "What was built",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/terminology.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/verification.md#failures-actually-found",
+  "name": "Failures actually found",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/verification.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/verification.md#patterns-in-these-failures",
+  "name": "Patterns in these failures",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/verification.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/verification.md#the-layers",
+  "name": "The layers",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/verification.md",
+  "visibility": "public"
+ },
+ {
+  "id": "doc:docs/about/verification.md#what-confirmed-means-in-the-eurorack-pages",
+  "name": "What \"confirmed\" means in the Eurorack pages",
+  "role": "operator",
+  "type": "doc_section",
+  "url": "docs/about/verification.md",
   "visibility": "public"
  },
  {
@@ -738,6 +1153,153 @@
   "id": "file:patchbay/web/faceplate.js",
   "name": "patchbay/web/faceplate.js",
   "role": "javascript",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/build_code_graph.py",
+  "name": "tools/build_code_graph.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/build_eurorack.py",
+  "name": "tools/build_eurorack.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/build_graph.py",
+  "name": "tools/build_graph.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/build_public.py",
+  "name": "tools/build_public.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/build_site.py",
+  "name": "tools/build_site.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/build_terms.py",
+  "name": "tools/build_terms.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/check_coverage.py",
+  "name": "tools/check_coverage.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/convert_manual.py",
+  "name": "tools/convert_manual.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/draw_devices.py",
+  "name": "tools/draw_devices.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/fetch_specs.py",
+  "name": "tools/fetch_specs.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/midi_reference.py",
+  "name": "tools/midi_reference.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/query_graph.py",
+  "name": "tools/query_graph.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/site_theme.py",
+  "name": "tools/site_theme.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/validate.py",
+  "name": "tools/validate.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/validate_connections.py",
+  "name": "tools/validate_connections.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/validate_images.py",
+  "name": "tools/validate_images.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/validate_midi.py",
+  "name": "tools/validate_midi.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/viz.py",
+  "name": "tools/viz.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/viz_code.py",
+  "name": "tools/viz_code.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/viz_graph.py",
+  "name": "tools/viz_graph.py",
+  "role": "python",
+  "type": "code_file",
+  "visibility": "public"
+ },
+ {
+  "id": "file:tools/viz_terms.py",
+  "name": "tools/viz_terms.py",
+  "role": "python",
   "type": "code_file",
   "visibility": "public"
  },
@@ -1971,6 +2533,1438 @@
   "role": "javascript",
   "type": "function",
   "value": 7,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:docs_site",
+  "name": "docs_site",
+  "role": "python",
+  "type": "function",
+  "value": 422,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:edge",
+  "name": "edge",
+  "role": "python",
+  "type": "function",
+  "value": 106,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:inputs",
+  "name": "inputs",
+  "role": "python",
+  "type": "function",
+  "value": 472,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:inputs_digest",
+  "name": "inputs_digest",
+  "role": "python",
+  "type": "function",
+  "value": 519,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:js_comments",
+  "name": "js_comments",
+  "role": "python",
+  "type": "function",
+  "value": 359,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:js_functions",
+  "name": "js_functions",
+  "role": "python",
+  "type": "function",
+  "value": 119,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:js_route",
+  "name": "js_route",
+  "role": "python",
+  "type": "function",
+  "value": 131,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:kb_tools",
+  "name": "kb_tools",
+  "role": "python",
+  "type": "function",
+  "value": 364,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:labels_from_html",
+  "name": "labels_from_html",
+  "role": "python",
+  "type": "function",
+  "value": 136,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:main",
+  "name": "main",
+  "role": "python",
+  "type": "function",
+  "value": 477,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:norm",
+  "name": "norm",
+  "role": "python",
+  "type": "function",
+  "value": 114,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:patchbay",
+  "name": "patchbay",
+  "role": "python",
+  "type": "function",
+  "value": 168,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:py_module",
+  "name": "py_module",
+  "role": "python",
+  "type": "function",
+  "value": 153,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:py_strings",
+  "name": "py_strings",
+  "role": "python",
+  "type": "function",
+  "value": 349,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:slug",
+  "name": "slug",
+  "role": "python",
+  "type": "function",
+  "value": 110,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:terminology",
+  "name": "terminology",
+  "role": "python",
+  "type": "function",
+  "value": 455,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:tracked",
+  "name": "tracked",
+  "role": "python",
+  "type": "function",
+  "value": 338,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_code_graph.py:vertex",
+  "name": "vertex",
+  "role": "python",
+  "type": "function",
+  "value": 100,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_eurorack.py:build",
+  "name": "build",
+  "role": "python",
+  "type": "function",
+  "value": 65,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_eurorack.py:inputs_digest",
+  "name": "inputs_digest",
+  "role": "python",
+  "type": "function",
+  "value": 23,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_eurorack.py:load_budget",
+  "name": "load_budget",
+  "role": "python",
+  "type": "function",
+  "value": 38,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_eurorack.py:resolve",
+  "name": "resolve",
+  "role": "python",
+  "type": "function",
+  "value": 50,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_graph.py:_coerce",
+  "name": "_coerce",
+  "role": "python",
+  "type": "function",
+  "value": 256,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_graph.py:check",
+  "name": "check",
+  "role": "python",
+  "type": "function",
+  "value": 269,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_graph.py:collect",
+  "name": "collect",
+  "role": "python",
+  "type": "function",
+  "value": 96,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_graph.py:dump_json",
+  "name": "dump_json",
+  "role": "python",
+  "type": "function",
+  "value": 321,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_graph.py:frontmatter",
+  "name": "frontmatter",
+  "role": "python",
+  "type": "function",
+  "value": 91,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_graph.py:leak_pattern",
+  "name": "leak_pattern",
+  "role": "python",
+  "type": "function",
+  "value": 42,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_graph.py:main",
+  "name": "main",
+  "role": "python",
+  "type": "function",
+  "value": 330,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_graph.py:power_budget",
+  "name": "power_budget",
+  "role": "python",
+  "type": "function",
+  "value": 286,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_graph.py:to_frames",
+  "name": "to_frames",
+  "role": "python",
+  "type": "function",
+  "value": 263,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_public.py:code_graph_page",
+  "name": "code_graph_page",
+  "role": "python",
+  "type": "function",
+  "value": 55,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_public.py:context_graph_page",
+  "name": "context_graph_page",
+  "role": "python",
+  "type": "function",
+  "value": 197,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_public.py:fig",
+  "name": "fig",
+  "role": "python",
+  "type": "function",
+  "value": 51,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_public.py:group_of",
+  "name": "group_of",
+  "role": "python",
+  "type": "function",
+  "value": 41,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_public.py:main",
+  "name": "main",
+  "role": "python",
+  "type": "function",
+  "value": 314,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_public.py:page",
+  "name": "page",
+  "role": "python",
+  "type": "function",
+  "value": 45,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_site.py:collect_sections",
+  "name": "collect_sections",
+  "role": "python",
+  "type": "function",
+  "value": 38,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_site.py:main",
+  "name": "main",
+  "role": "python",
+  "type": "function",
+  "value": 51,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_site.py:read_fm",
+  "name": "read_fm",
+  "role": "python",
+  "type": "function",
+  "value": 26,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_site.py:write",
+  "name": "write",
+  "role": "python",
+  "type": "function",
+  "value": 32,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_terms.py:check",
+  "name": "check",
+  "role": "python",
+  "type": "function",
+  "value": 63,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_terms.py:concepts_in",
+  "name": "concepts_in",
+  "role": "python",
+  "type": "function",
+  "value": 169,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_terms.py:count",
+  "name": "count",
+  "role": "python",
+  "type": "function",
+  "value": 180,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_terms.py:fold",
+  "name": "fold",
+  "role": "python",
+  "type": "function",
+  "value": 30,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_terms.py:is_short_acronym",
+  "name": "is_short_acronym",
+  "role": "python",
+  "type": "function",
+  "value": 36,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_terms.py:label_regex",
+  "name": "label_regex",
+  "role": "python",
+  "type": "function",
+  "value": 42,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_terms.py:labels_of",
+  "name": "labels_of",
+  "role": "python",
+  "type": "function",
+  "value": 59,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_terms.py:load",
+  "name": "load",
+  "role": "python",
+  "type": "function",
+  "value": 49,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_terms.py:main",
+  "name": "main",
+  "role": "python",
+  "type": "function",
+  "value": 197,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_terms.py:matcher",
+  "name": "matcher",
+  "role": "python",
+  "type": "function",
+  "value": 154,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/build_terms.py:section_text",
+  "name": "section_text",
+  "role": "python",
+  "type": "function",
+  "value": 147,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/check_coverage.py:body",
+  "name": "body",
+  "role": "python",
+  "type": "function",
+  "value": 22,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/check_coverage.py:main",
+  "name": "main",
+  "role": "python",
+  "type": "function",
+  "value": 27,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/convert_manual.py:_title_regex",
+  "name": "_title_regex",
+  "role": "python",
+  "type": "function",
+  "value": 99,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/convert_manual.py:auto_tags",
+  "name": "auto_tags",
+  "role": "python",
+  "type": "function",
+  "value": 174,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/convert_manual.py:clean_page",
+  "name": "clean_page",
+  "role": "python",
+  "type": "function",
+  "value": 50,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/convert_manual.py:describe",
+  "name": "describe",
+  "role": "python",
+  "type": "function",
+  "value": 166,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/convert_manual.py:figure_text",
+  "name": "figure_text",
+  "role": "python",
+  "type": "function",
+  "value": 37,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/convert_manual.py:find_heading",
+  "name": "find_heading",
+  "role": "python",
+  "type": "function",
+  "value": 106,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/convert_manual.py:load_pages",
+  "name": "load_pages",
+  "role": "python",
+  "type": "function",
+  "value": 62,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/convert_manual.py:main",
+  "name": "main",
+  "role": "python",
+  "type": "function",
+  "value": 267,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/convert_manual.py:norm",
+  "name": "norm",
+  "role": "python",
+  "type": "function",
+  "value": 26,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/convert_manual.py:sections_from_headings",
+  "name": "sections_from_headings",
+  "role": "python",
+  "type": "function",
+  "value": 147,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/convert_manual.py:sections_from_outline",
+  "name": "sections_from_outline",
+  "role": "python",
+  "type": "function",
+  "value": 124,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/convert_manual.py:slugify",
+  "name": "slugify",
+  "role": "python",
+  "type": "function",
+  "value": 31,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/convert_manual.py:write_manual",
+  "name": "write_manual",
+  "role": "python",
+  "type": "function",
+  "value": 184,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:art_cabinet",
+  "name": "art_cabinet",
+  "role": "python",
+  "type": "function",
+  "value": 217,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:art_computer",
+  "name": "art_computer",
+  "role": "python",
+  "type": "function",
+  "value": 285,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:art_for",
+  "name": "art_for",
+  "role": "python",
+  "type": "function",
+  "value": 322,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:art_headphones",
+  "name": "art_headphones",
+  "role": "python",
+  "type": "function",
+  "value": 256,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:art_keyboard",
+  "name": "art_keyboard",
+  "role": "python",
+  "type": "function",
+  "value": 174,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:art_pads",
+  "name": "art_pads",
+  "role": "python",
+  "type": "function",
+  "value": 189,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:art_rackcase",
+  "name": "art_rackcase",
+  "role": "python",
+  "type": "function",
+  "value": 305,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:art_software",
+  "name": "art_software",
+  "role": "python",
+  "type": "function",
+  "value": 293,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:art_stomp",
+  "name": "art_stomp",
+  "role": "python",
+  "type": "function",
+  "value": 203,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:art_string",
+  "name": "art_string",
+  "role": "python",
+  "type": "function",
+  "value": 266,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:art_strip",
+  "name": "art_strip",
+  "role": "python",
+  "type": "function",
+  "value": 236,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:card",
+  "name": "card",
+  "role": "python",
+  "type": "function",
+  "value": 152,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:case_drawing",
+  "name": "case_drawing",
+  "role": "python",
+  "type": "function",
+  "value": 334,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:euro",
+  "name": "euro",
+  "role": "python",
+  "type": "function",
+  "value": 109,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:finish",
+  "name": "finish",
+  "role": "python",
+  "type": "function",
+  "value": 49,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:h",
+  "name": "h",
+  "role": "python",
+  "type": "function",
+  "value": 36,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:jack",
+  "name": "jack",
+  "role": "python",
+  "type": "function",
+  "value": 92,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:knob",
+  "name": "knob",
+  "role": "python",
+  "type": "function",
+  "value": 83,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:load_specs",
+  "name": "load_specs",
+  "role": "python",
+  "type": "function",
+  "value": 374,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:main",
+  "name": "main",
+  "role": "python",
+  "type": "function",
+  "value": 395,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:panel_knobs",
+  "name": "panel_knobs",
+  "role": "python",
+  "type": "function",
+  "value": 167,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:render_jpg",
+  "name": "render_jpg",
+  "role": "python",
+  "type": "function",
+  "value": 385,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:screw",
+  "name": "screw",
+  "role": "python",
+  "type": "function",
+  "value": 78,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:short_name",
+  "name": "short_name",
+  "role": "python",
+  "type": "function",
+  "value": 54,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:svg",
+  "name": "svg",
+  "role": "python",
+  "type": "function",
+  "value": 102,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:text",
+  "name": "text",
+  "role": "python",
+  "type": "function",
+  "value": 73,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/draw_devices.py:wrap",
+  "name": "wrap",
+  "role": "python",
+  "type": "function",
+  "value": 59,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/fetch_specs.py:extract",
+  "name": "extract",
+  "role": "python",
+  "type": "function",
+  "value": 66,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/fetch_specs.py:fetch",
+  "name": "fetch",
+  "role": "python",
+  "type": "function",
+  "value": 41,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/fetch_specs.py:main",
+  "name": "main",
+  "role": "python",
+  "type": "function",
+  "value": 78,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/fetch_specs.py:to_text",
+  "name": "to_text",
+  "role": "python",
+  "type": "function",
+  "value": 54,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/midi_reference.py:markdown",
+  "name": "markdown",
+  "role": "python",
+  "type": "function",
+  "value": 14,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:_app_of",
+  "name": "_app_of",
+  "role": "python",
+  "type": "function",
+  "value": 345,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:_code_edges",
+  "name": "_code_edges",
+  "role": "python",
+  "type": "function",
+  "value": 265,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:_dominant",
+  "name": "_dominant",
+  "role": "python",
+  "type": "function",
+  "value": 133,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:_family",
+  "name": "_family",
+  "role": "python",
+  "type": "function",
+  "value": 334,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:_raw_app_of",
+  "name": "_raw_app_of",
+  "role": "python",
+  "type": "function",
+  "value": 413,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:_raw_context",
+  "name": "_raw_context",
+  "role": "python",
+  "type": "function",
+  "value": 396,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:_raw_family",
+  "name": "_raw_family",
+  "role": "python",
+  "type": "function",
+  "value": 403,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:bare",
+  "name": "bare",
+  "role": "python",
+  "type": "function",
+  "value": 43,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:concept_where",
+  "name": "concept_where",
+  "role": "python",
+  "type": "function",
+  "value": 351,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:cross_concept_where",
+  "name": "cross_concept_where",
+  "role": "python",
+  "type": "function",
+  "value": 418,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:cross_inherits",
+  "name": "cross_inherits",
+  "role": "python",
+  "type": "function",
+  "value": 176,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:cross_kb_reach",
+  "name": "cross_kb_reach",
+  "role": "python",
+  "type": "function",
+  "value": 316,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:cross_midi_conflicts",
+  "name": "cross_midi_conflicts",
+  "role": "python",
+  "type": "function",
+  "value": 219,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:cross_naming",
+  "name": "cross_naming",
+  "role": "python",
+  "type": "function",
+  "value": 167,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:cross_source_support",
+  "name": "cross_source_support",
+  "role": "python",
+  "type": "function",
+  "value": 201,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:cross_term_gaps",
+  "name": "cross_term_gaps",
+  "role": "python",
+  "type": "function",
+  "value": 455,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:cross_undocumented",
+  "name": "cross_undocumented",
+  "role": "python",
+  "type": "function",
+  "value": 304,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:cross_unrecorded",
+  "name": "cross_unrecorded",
+  "role": "python",
+  "type": "function",
+  "value": 246,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:cross_vocabulary",
+  "name": "cross_vocabulary",
+  "role": "python",
+  "type": "function",
+  "value": 434,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:doc_impact",
+  "name": "doc_impact",
+  "role": "python",
+  "type": "function",
+  "value": 276,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:feeds",
+  "name": "feeds",
+  "role": "python",
+  "type": "function",
+  "value": 48,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:inherits",
+  "name": "inherits",
+  "role": "python",
+  "type": "function",
+  "value": 147,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:kb_reach",
+  "name": "kb_reach",
+  "role": "python",
+  "type": "function",
+  "value": 290,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:load",
+  "name": "load",
+  "role": "python",
+  "type": "function",
+  "value": 37,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:main",
+  "name": "main",
+  "role": "python",
+  "type": "function",
+  "value": 464,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:midi_conflicts",
+  "name": "midi_conflicts",
+  "role": "python",
+  "type": "function",
+  "value": 83,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:naming",
+  "name": "naming",
+  "role": "python",
+  "type": "function",
+  "value": 122,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:reach",
+  "name": "reach",
+  "role": "python",
+  "type": "function",
+  "value": 58,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:snapshot_digest",
+  "name": "snapshot_digest",
+  "role": "python",
+  "type": "function",
+  "value": 33,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:source_support",
+  "name": "source_support",
+  "role": "python",
+  "type": "function",
+  "value": 67,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:term_gaps",
+  "name": "term_gaps",
+  "role": "python",
+  "type": "function",
+  "value": 386,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:undocumented",
+  "name": "undocumented",
+  "role": "python",
+  "type": "function",
+  "value": 269,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:unrecorded",
+  "name": "unrecorded",
+  "role": "python",
+  "type": "function",
+  "value": 109,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/query_graph.py:vocabulary",
+  "name": "vocabulary",
+  "role": "python",
+  "type": "function",
+  "value": 367,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/site_theme.py:versioned",
+  "name": "versioned",
+  "role": "python",
+  "type": "function",
+  "value": 16,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/validate.py:err",
+  "name": "err",
+  "role": "python",
+  "type": "function",
+  "value": 25,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/validate.py:main",
+  "name": "main",
+  "role": "python",
+  "type": "function",
+  "value": 29,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/validate.py:warn",
+  "name": "warn",
+  "role": "python",
+  "type": "function",
+  "value": 26,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/validate_connections.py:main",
+  "name": "main",
+  "role": "python",
+  "type": "function",
+  "value": 40,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/validate_connections.py:norm",
+  "name": "norm",
+  "role": "python",
+  "type": "function",
+  "value": 24,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/validate_connections.py:spec_hp",
+  "name": "spec_hp",
+  "role": "python",
+  "type": "function",
+  "value": 29,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/validate_images.py:main",
+  "name": "main",
+  "role": "python",
+  "type": "function",
+  "value": 19,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/validate_midi.py:main",
+  "name": "main",
+  "role": "python",
+  "type": "function",
+  "value": 28,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/validate_midi.py:norm",
+  "name": "norm",
+  "role": "python",
+  "type": "function",
+  "value": 24,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz.py:_svg",
+  "name": "_svg",
+  "role": "python",
+  "type": "function",
+  "value": 14,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz.py:_t",
+  "name": "_t",
+  "role": "python",
+  "type": "function",
+  "value": 19,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz.py:coverage_chart",
+  "name": "coverage_chart",
+  "role": "python",
+  "type": "function",
+  "value": 183,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz.py:failure_matrix",
+  "name": "failure_matrix",
+  "role": "python",
+  "type": "function",
+  "value": 132,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz.py:pipeline_diagram",
+  "name": "pipeline_diagram",
+  "role": "python",
+  "type": "function",
+  "value": 84,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz.py:power_chart",
+  "name": "power_chart",
+  "role": "python",
+  "type": "function",
+  "value": 23,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz.py:retrieval_chart",
+  "name": "retrieval_chart",
+  "role": "python",
+  "type": "function",
+  "value": 157,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz.py:trust_heatmap",
+  "name": "trust_heatmap",
+  "role": "python",
+  "type": "function",
+  "value": 56,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_code.py:_arrow",
+  "name": "_arrow",
+  "role": "python",
+  "type": "function",
+  "value": 21,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_code.py:_box",
+  "name": "_box",
+  "role": "python",
+  "type": "function",
+  "value": 14,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_code.py:context_diagram",
+  "name": "context_diagram",
+  "role": "python",
+  "type": "function",
+  "value": 184,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_code.py:impact",
+  "name": "impact",
+  "role": "python",
+  "type": "function",
+  "value": 35,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_code.py:impact_diagram",
+  "name": "impact_diagram",
+  "role": "python",
+  "type": "function",
+  "value": 98,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_code.py:layer_diagram",
+  "name": "layer_diagram",
+  "role": "python",
+  "type": "function",
+  "value": 52,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_code.py:patchbay_subgraph",
+  "name": "patchbay_subgraph",
+  "role": "python",
+  "type": "function",
+  "value": 171,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_code.py:platform_diagram",
+  "name": "platform_diagram",
+  "role": "python",
+  "type": "function",
+  "value": 148,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_code.py:rel_counts",
+  "name": "rel_counts",
+  "role": "python",
+  "type": "function",
+  "value": 46,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_graph.py:_fit",
+  "name": "_fit",
+  "role": "python",
+  "type": "function",
+  "value": 55,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_graph.py:_fit_words",
+  "name": "_fit_words",
+  "role": "python",
+  "type": "function",
+  "value": 59,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_graph.py:_natural",
+  "name": "_natural",
+  "role": "python",
+  "type": "function",
+  "value": 167,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_graph.py:_ramp",
+  "name": "_ramp",
+  "role": "python",
+  "type": "function",
+  "value": 342,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_graph.py:_reach_dist",
+  "name": "_reach_dist",
+  "role": "python",
+  "type": "function",
+  "value": 171,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_graph.py:_wrap",
+  "name": "_wrap",
+  "role": "python",
+  "type": "function",
+  "value": 71,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_graph.py:category_chart",
+  "name": "category_chart",
+  "role": "python",
+  "type": "function",
+  "value": 144,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_graph.py:rack_diagram",
+  "name": "rack_diagram",
+  "role": "python",
+  "type": "function",
+  "value": 360,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_graph.py:rack_modules",
+  "name": "rack_modules",
+  "role": "python",
+  "type": "function",
+  "value": 346,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_graph.py:routing_diagram",
+  "name": "routing_diagram",
+  "role": "python",
+  "type": "function",
+  "value": 188,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_graph.py:schema_diagram",
+  "name": "schema_diagram",
+  "role": "python",
+  "type": "function",
+  "value": 87,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_graph.py:short",
+  "name": "short",
+  "role": "python",
+  "type": "function",
+  "value": 47,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_terms.py:_arrowdefs",
+  "name": "_arrowdefs",
+  "role": "python",
+  "type": "function",
+  "value": 53,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_terms.py:maker_of_manual",
+  "name": "maker_of_manual",
+  "role": "python",
+  "type": "function",
+  "value": 242,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_terms.py:naming_heatmap",
+  "name": "naming_heatmap",
+  "role": "python",
+  "type": "function",
+  "value": 268,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_terms.py:naming_rows",
+  "name": "naming_rows",
+  "role": "python",
+  "type": "function",
+  "value": 247,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_terms.py:neighbourhood",
+  "name": "neighbourhood",
+  "role": "python",
+  "type": "function",
+  "value": 183,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_terms.py:ontology_diagram",
+  "name": "ontology_diagram",
+  "role": "python",
+  "type": "function",
+  "value": 138,
+  "visibility": "public"
+ },
+ {
+  "id": "fn:tools/viz_terms.py:taxonomy_tree",
+  "name": "taxonomy_tree",
+  "role": "python",
+  "type": "function",
+  "value": 61,
   "visibility": "public"
  },
  {

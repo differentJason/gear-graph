@@ -84,3 +84,19 @@ questions:
     question: "Which knowledge-base datasets does the Patchbay read, and how many knowledge-graph vertices does each one define or describe?"
     query: kb_reach
     note: "The join between the app graph and the knowledge graph: a change to one of these files reaches the app through these edges. Cross-checked by counting the YAML files directly."
+
+  # ---- one context graph: manuals from 25 makers, three apps' docs and code, joined by the shared terminology ----
+  - id: q13
+    question: "Where is clock and sync covered: how many manuals, which sections of each app's docs, and which code?"
+    query: concept_where
+    concept: sync-signal
+    note: "The concept and every narrower kind (MIDI clock, DIN sync, clock pulse). Cross-checked from terms.json, TERMS.yaml and code.json directly."
+  - id: q14
+    question: "Which words do the manufacturers use for clock and sync, and which words do our apps use?"
+    query: vocabulary
+    concept: sync-signal
+    note: "Different authors, different words, one concept: the case for a shared vocabulary. Cross-checked from the raw files."
+  - id: q15
+    question: "Which concepts do our apps use that no manual does, and how many manual concepts do our apps never mention?"
+    query: term_gaps
+    note: "Content gaps in both directions. Cross-checked from terms.json and code.json."

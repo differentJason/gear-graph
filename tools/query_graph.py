@@ -330,6 +330,136 @@ def cross_kb_reach():
     return {k: n for k, n in counts.items() if re.search(named[k], src)}
 
 
+# ---------- one context graph: manuals, app docs and code joined by the shared terminology ----------
+def _family(g, root):
+    """root concept plus every narrower concept (BROADER edges point child -> parent)."""
+    br = [(r["src"], r["dst"]) for r in g.edges.filter("rel = 'BROADER'").select("src", "dst").collect()]
+    fam, grew = {f"term:{root}"}, True
+    while grew:
+        new = {c for c, p_ in br if p_ in fam} - fam
+        fam |= new
+        grew = bool(new)
+    return fam
+
+
+def _app_of(g):
+    """doc/code vertex -> app name (CONTAINS)."""
+    names = {r["id"]: r["name"] for r in g.vertices.filter("type = 'app'").collect()}
+    return {r["dst"]: names[r["src"]] for r in g.edges.filter("rel = 'CONTAINS'").select("src", "dst").collect() if r["src"] in names}
+
+
+def concept_where(g, root):
+    fam = _family(g, root)
+    vt = {r["id"]: (r["type"], r["name"]) for r in g.vertices.filter("type IN ('manual', 'doc_section', 'code_file')").collect()}
+    ut = [r for r in g.edges.filter("rel = 'USES_TERM'").select("src", "dst").collect() if r["dst"] in fam and r["src"] in vt]
+    app = _app_of(g)
+    docs, code = {}, set()
+    for r in ut:
+        t, nm_ = vt[r["src"]]
+        if t == "doc_section":
+            docs.setdefault(app.get(r["src"], "?"), set()).add(nm_)
+        elif t == "code_file":
+            code.add(nm_)
+    return {"manuals": len({r["src"] for r in ut if vt[r["src"]][0] == "manual"}),
+            "doc_sections": {a: sorted(v) for a, v in sorted(docs.items())}, "code_files": sorted(code)}
+
+
+def vocabulary(g, root):
+    """Which words each manufacturer's manuals use for this concept family, and which words the apps use."""
+    fam = _family(g, root)
+    mfr = {r["src"]: r["dst"] for r in g.edges.filter("rel = 'MADE_BY'").select("src", "dst").collect()}
+    man_item = {r["dst"]: r["src"] for r in g.edges.filter("rel = 'HAS_MANUAL'").select("src", "dst").collect()}
+    mname = {r["id"]: r["name"] for r in g.vertices.filter("type = 'manufacturer'").collect()}
+    app = _app_of(g)
+    words_m, words_a = defaultdict(set), defaultdict(set)
+    for r in g.edges.filter("rel = 'USES_TERM'").select("src", "dst", "label").collect():
+        if r["dst"] not in fam or not r["label"]:
+            continue
+        for lab in r["label"].split("; "):
+            if r["src"].startswith("manual:") and man_item.get(r["src"]) in mfr:
+                words_m[lab.lower()].add(mname[mfr[man_item[r["src"]]]])
+            elif r["src"] in app:
+                words_a[lab.lower()].add(app[r["src"]])
+    return {"manufacturers": {w: sorted(v) for w, v in sorted(words_m.items())}, "apps": {w: sorted(v) for w, v in sorted(words_a.items())}}
+
+
+def term_gaps(g):
+    """Concepts the apps' docs and code use that no manual uses; and how many manual concepts no app mentions."""
+    ut = g.edges.filter("rel = 'USES_TERM'").select("src", "dst").collect()
+    app = _app_of(g)
+    in_man = {r["dst"] for r in ut if r["src"].startswith("manual:")}
+    in_app = {r["dst"] for r in ut if r["src"] in app}
+    return {"apps_only": sorted(t.split(":", 1)[1] for t in in_app - in_man), "manuals_only": len(in_man - in_app),
+            "shared": len(in_man & in_app)}
+
+
+def _raw_context():
+    """Raw inputs for the cross-checks: terms.json (manual label counts), TERMS.yaml (hierarchy), code.json (apps)."""
+    terms = json.loads((PUB / "terms.json").read_text())
+    code = json.loads((PUB / "code.json").read_text())
+    return terms, code
+
+
+def _raw_family(terms, root):
+    br = [(c["id"], p_) for c in terms["concepts"] for p_ in c.get("broader", [])]
+    fam, grew = {root}, True
+    while grew:
+        new = {c for c, p_ in br if p_ in fam} - fam
+        fam |= new
+        grew = bool(new)
+    return fam
+
+
+def _raw_app_of(code):
+    names = {v["id"]: v["name"] for v in code["vertices"] if v["type"] == "app"}
+    return {e["dst"]: names[e["src"]] for e in code["edges"] if e["rel"] == "CONTAINS" and e["src"] in names}
+
+
+def cross_concept_where(root):
+    terms, code = _raw_context()
+    fam = _raw_family(terms, root)
+    manuals = {mid for c in terms["concepts"] if c["id"] in fam for per in c["labels"].values() for mid in per}
+    v = {x["id"]: x for x in code["vertices"]}
+    app = _raw_app_of(code)
+    docs, files = defaultdict(set), set()
+    for e in code["edges"]:
+        if e["rel"] == "USES_TERM" and e["dst"].split(":", 1)[1] in fam:
+            if v[e["src"]]["type"] == "doc_section":
+                docs[app.get(e["src"], "?")].add(v[e["src"]]["name"])
+            elif v[e["src"]]["type"] == "code_file":
+                files.add(v[e["src"]]["name"])
+    return {"manuals": len(manuals), "doc_sections": {a: sorted(x) for a, x in sorted(docs.items())}, "code_files": sorted(files)}
+
+
+def cross_vocabulary(root):
+    terms, code = _raw_context()
+    fam = _raw_family(terms, root)
+    inv = {i["id"]: i for i in yaml.safe_load((ROOT / "inventory.yaml").read_text())["items"]}
+    dev = {m["id"]: m["device"] for m in yaml.safe_load((ROOT / "tools" / "manifest.yaml").read_text())["manuals"]}
+    words_m, words_a = defaultdict(set), defaultdict(set)
+    for c in terms["concepts"]:
+        if c["id"] in fam:
+            for lab, per in c["labels"].items():
+                for mid in per:
+                    mk = inv.get(dev.get(mid), {}).get("manufacturer")
+                    if mk:
+                        words_m[lab.lower()].add(mk)
+    app = _raw_app_of(code)
+    for e in code["edges"]:
+        if e["rel"] == "USES_TERM" and e["dst"].split(":", 1)[1] in fam and e["src"] in app:
+            for lab in e["label"].split("; "):
+                words_a[lab.lower()].add(app[e["src"]])
+    return {"manufacturers": {w: sorted(v) for w, v in sorted(words_m.items())}, "apps": {w: sorted(v) for w, v in sorted(words_a.items())}}
+
+
+def cross_term_gaps():
+    terms, code = _raw_context()
+    in_man = {c["id"] for c in terms["concepts"] if any(c["labels"].get(l) for l in c["labels"])}
+    app = _raw_app_of(code)
+    in_app = {e["dst"].split(":", 1)[1] for e in code["edges"] if e["rel"] == "USES_TERM" and e["src"] in app}
+    return {"apps_only": sorted(in_app - in_man), "manuals_only": len(in_man - in_app), "shared": len(in_man & in_app)}
+
+
 # ------------------------------------------------------------------------------------------ run
 def main():
     golden = yaml.safe_load((ROOT / "evals" / "graph_golden.yaml").read_text())
@@ -412,6 +542,22 @@ def main():
             res = kb_reach(g)
             lines = [f"{d}: {n} knowledge-graph vertices" for d, n in res.items()]
             record(qid, q["question"], res, lines, cross=cross_kb_reach(), note=q.get("note"))
+        elif kind == "concept_where":
+            res = concept_where(g, q["concept"])
+            lines = [f"{res['manuals']} manuals"] + [f"{a} docs: {', '.join(v)}" for a, v in res["doc_sections"].items()] + \
+                    [f"code: {', '.join(res['code_files']) or 'none'}"]
+            record(qid, q["question"], res, lines, cross=cross_concept_where(q["concept"]), note=q.get("note"))
+        elif kind == "vocabulary":
+            res = vocabulary(g, q["concept"])
+            lines = [f"'{w}': {', '.join(m)}" for w, m in res["manufacturers"].items()] + \
+                    [f"the apps say '{w}' ({', '.join(a)})" for w, a in res["apps"].items()]
+            record(qid, q["question"], res, lines, cross=cross_vocabulary(q["concept"]), note=q.get("note"))
+        elif kind == "term_gaps":
+            res = term_gaps(g)
+            lines = [f"{res['shared']} concepts are used by both the manuals and the apps",
+                     f"used only by the apps: {', '.join(res['apps_only']) or 'none'}",
+                     f"{res['manuals_only']} manual concepts are not mentioned by any app"]
+            record(qid, q["question"], res, lines, cross=cross_term_gaps(), note=q.get("note"))
         else:
             failures.append(f"{qid}: unknown query kind {kind!r}")
 

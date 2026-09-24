@@ -230,7 +230,8 @@ def collect():
                  alt=v.get("label"), url=v.get("path") or v.get("doc"),
                  value=float(v["line"]) if v.get("line") is not None else None)
     for e in code["edges"]:
-        b.edge(e["src"], e["dst"], e["rel"], note=e.get("mode"))
+        b.edge(e["src"], e["dst"], e["rel"], note=e.get("mode"), label=e.get("label"),
+               value=float(e["count"]) if e.get("count") is not None else None)
     for i in inv:
         b.edge("data:inventory.yaml", f"item:{i['id']}", "DEFINES")
     for m in man:

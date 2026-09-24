@@ -55,7 +55,7 @@ def fig(svg, note=""):
 def code_graph_page(inv):
     """The Patchbay's code <-> docs graph, tied to the knowledge graph, and the platform-scale reading of it."""
     pub = ROOT / "graph" / "public"
-    code = json.loads((pub / "code.json").read_text())
+    code = viz_code.patchbay_subgraph(json.loads((pub / "code.json").read_text()))   # this page is about the Patchbay
     edges = json.loads((pub / "edges.json").read_text())
     ans = {a["id"]: a for a in json.loads((pub / "answers.json").read_text())["answers"]}
     snap = json.loads((ROOT / "data" / "snapshot.json").read_text())
@@ -191,6 +191,123 @@ graph.
 missed; the guide-to-code links are hand-declared (checked, but written by a person); and the impact rule follows
 direct links only. A platform version would use proper parsers per language and would add service-level edges (queues,
 events, schemas) alongside the function-level ones shown here.
+"""
+
+
+def context_graph_page(inv):
+    """Three apps' docs and code plus the manuals of 25 makers, joined by one vocabulary: the whole idea on one page."""
+    pub = ROOT / "graph" / "public"
+    code = json.loads((pub / "code.json").read_text())
+    terms = json.loads((pub / "terms.json").read_text())
+    edges = json.loads((pub / "edges.json").read_text())
+    ans = {a["id"]: a for a in json.loads((pub / "answers.json").read_text())["answers"]}
+    man = yaml.safe_load((ROOT / "tools" / "manifest.yaml").read_text())["manuals"]
+    items = {i["id"]: i for i in inv["items"]}
+    vt = Counter(v["type"] for v in code["vertices"])
+    apps = sorted(v["name"] for v in code["vertices"] if v["type"] == "app")
+    in_man = {c["id"] for c in terms["concepts"] if any(c["labels"].values())}
+    app_of = {e["dst"] for e in code["edges"] if e["rel"] == "CONTAINS"}
+    in_app = {e["dst"].split(":", 1)[1] for e in code["edges"] if e["rel"] == "USES_TERM" and e["src"] in app_of}
+    c = {"manuals": len(man), "makers": len({items[m["device"]].get("manufacturer") for m in man if m["device"] in items}),
+         "formats": len({m["doc_type"] for m in man}), "app_docs": vt["doc_section"], "apps": len(apps),
+         "code_files": vt["code_file"], "buttons": vt["ui_action"],
+         "concepts": sum(1 for x in terms["concepts"] if not x.get("grouping")),
+         "labels": sum(1 + len(x.get("alt", [])) for x in terms["concepts"]),
+         "shared": len(in_man & in_app), "uses_term": sum(1 for e in edges if e["rel"] == "USES_TERM")}
+    ocr = sum(1 for m in man if str(m.get("pdf", "")).endswith(".ocr.pdf"))
+    n_secs = sum(m["sections"] for m in json.loads((ROOT / "data" / "snapshot.json").read_text())["manuals"])
+    fmt = Counter(m["doc_type"] for m in man)
+    fmt_line = ", ".join(f"{n} {k.replace('-', ' ')}{'s' if n != 1 else ''}" for k, n in fmt.most_common())
+    skipped = code.get("terminology", {}).get("skipped_matches", {})
+    joins = {}
+    for e in code["edges"]:
+        if e["rel"] == "READS":
+            joins.setdefault(e["dst"], set()).add(next(a for a in code["edges"] if a["rel"] == "CONTAINS" and a["dst"] == e["src"])["src"])
+    shared_ds = sorted(d.split(":", 1)[1] for d, a in joins.items() if len(a) >= 2)
+    qa = "\n".join(f"- **{ans[q]['question']}**  \n  " + "; ".join(ans[q]["answer"]) + ".  " +
+                   " ".join(f"`{k}: {s_}`" for k, s_ in ans[q]["checks"].items()) for q in ("q13", "q14", "q15") if q in ans)
+    return f"""# Many sources, one context graph
+
+This knowledge base started as a way to keep studio gear straight. Its real subject turned out to be a common problem:
+**content from many authors, in many formats, that uses different words for the same things**, and that has to be
+usable as one body of knowledge.
+
+The sources here are {c['manuals']} documents from {c['makers']} manufacturers ({fmt_line}; {ocr} of them scanned and
+OCR'd), plus three apps that each have code and documentation of their own: {", ".join(apps)}. The documentation site is
+treated as an app like the others. It has content, build code and data dependencies, and it publishes another app's
+user guide. Nothing here is rewritten to force the sources to agree. Each source keeps its own words, and a shared
+vocabulary maps those words onto one set of concepts.
+
+{fig(viz_code.context_diagram(c), "Every number is counted from the committed graph files on each build.")}
+
+## The layers, and how they join
+
+| Layer | What it links | Built by | Checked by |
+|---|---|---|---|
+| Inventory and wiring | gear, makers, cables, case positions, power | hand-kept YAML | validators; graph questions q1-q6 |
+| Manuals | {c['manuals']} documents, {n_secs:,} sections, provenance per section | `convert_manual.py` | coverage checks, strict build |
+| Terminology | {c['concepts']} concepts, {c['labels']} labels, typed relations | `TERMS.yaml`, `build_terms.py` | taxonomy rules; q7-q9 |
+| Code and docs | {c['apps']} apps, {vt['code_file']} code files, {vt['function']} functions, {vt['doc_section']} doc sections | `build_code_graph.py` | drift checks; q10-q12 |
+| One context graph | all of the above, joined | `build_graph.py` | q13-q15 below |
+
+The joins are ids that more than one source shares:
+
+- **Terminology.** A manual, a doc section, a code comment and a button label that name the same concept all get a
+  `USES_TERM` edge to it ({c['uses_term']:,} such edges). That's how a Roland manual's "sync" and the Patchbay's
+  "Clock/Sync" legend end up next to each other.
+- **Datasets.** Apps that read the same file are joined through it. The three apps here share
+  {len(shared_ds)} datasets (for example {", ".join(f"`{d}`" for d in shared_ds[:4])}).
+- **Domain entities.** A dataset *defines* or *describes* items and manuals, so code and docs reach the gear itself.
+
+## Asking across every source at once
+
+{qa}
+
+The second answer is the whole problem in one line: five different words for one idea, spread across the
+manufacturers, and the apps pick up three of them. Without the shared concept those would be five unrelated strings.
+
+## Same word, different meaning
+
+The matcher that reads the manuals reads the apps too, but some gear terms are also everyday English. In a sequencer
+manual *fill*, *pattern*, *chain* and *step* are features. In a developer's notes they are ordinary words ("fill the
+field", "a regex pattern"). So outside the manuals, {len(skipped)} such concepts are not matched
+({", ".join(f"{k} {n}" for k, n in skipped.items())} matches set aside). Content from different authors needs
+**source-aware** rules, not one global list, and the graph records which rule applied.
+
+## How this maps onto a larger content estate
+
+| Here | In a larger organization |
+|---|---|
+| {c['makers']} manufacturers, each with its own conventions | many teams and vendors, each with its own conventions |
+| full manuals, quick starts, datasheets, web pages, OCR'd scans | wikis, doc sites, tickets, specs, slide decks, scanned records |
+| "clock", "sync", "MIDI clock", "clock pulse" for one idea | different team names for one product, process or field |
+| `TERMS.yaml`: preferred and alternative labels, broader/narrower | a shared vocabulary or taxonomy, owned and reviewed |
+| three apps' code and docs graphs in one schema | an application catalogue, each system publishing its slice |
+| datasets several apps read | shared data products and API contracts |
+| gear items, manuals, placements | the business entities everyone talks about |
+| private manual sections kept out of the public graph | access rules carried on every vertex and edge |
+
+## What made it work
+
+- **Map, don't rewrite.** Sources keep their own words, and the vocabulary maps them to concepts. Nothing is lost,
+  and a disagreement shows up as a fact instead of being flattened.
+- **Provenance on everything.** Every section, spec value and edge says where it came from and how it was derived:
+  parsed, declared, or verified.
+- **Unknown stays unknown.** A missing fact is recorded as missing, never guessed. The graph questions tell "not
+  recorded" apart from "none".
+- **Documentation is an app.** It has content, build code, data inputs and outputs, and it is checked like any other
+  app.
+- **Checks on every build.** Drift, staleness and coverage are checked every time, so errors fail the build instead of
+  accumulating. Every graph answer is checked against a result worked out without the graph.
+- **Privacy as structure, not care.** Private material has its own visibility, git-ignored files never enter the
+  graph, and the published output is scanned before every commit.
+
+## What a consumer gets
+
+One graph that answers "what is this, where is it described, who uses it, and what breaks if it changes?" whatever
+the source. The Patchbay is itself a consumer: it reads the inventory, the wiring, the MIDI plan and the drawings from
+this graph to pre-patch a session. Search, question-answering that cites its sources, change-impact reviews and
+content-gap reports are all queries over the same edges.
 """
 
 
@@ -694,6 +811,7 @@ More: [evaluation](../about/evaluation.md). Questions that never found a page: {
         guide = (pb / "docs" / "user-guide.md").read_text(encoding="utf-8")
         page("patchbay-guide.md", "Patchbay user guide", guide)
         page("patchbay-code-graph.md", "Patchbay: code, docs and the knowledge graph", code_graph_page(inv))
+        page("context-graph.md", "Many sources, one context graph", context_graph_page(inv))
 
     # ---------- config ----------
     nav = [{"Home": "index.md"},
@@ -702,7 +820,8 @@ More: [evaluation](../about/evaluation.md). Questions that never found a page: {
                                     {"What the checks caught": "visuals/checks.md"}, {"Retrieval results": "visuals/retrieval.md"}]},
            {"Inventory": "inventory.md"}, {"MIDI channels": "midi-channels.md"},
            {"Patchbay": [{"Overview": "patchbay-app.md"}, {"User guide": "patchbay-guide.md"},
-                         {"Code, docs and the knowledge graph": "patchbay-code-graph.md"}]}, {"Eurorack": eu["nav"]},
+                         {"Code, docs and the knowledge graph": "patchbay-code-graph.md"}]},
+           {"One context graph": "context-graph.md"}, {"Eurorack": eu["nav"]},
            {"About the project": [{t: f"about/{f}"} for f, t in [("index.md", "Overview"), ("architecture.md", "Architecture"),
                                                                  ("verification.md", "How correctness is checked"), ("evaluation.md", "Retrieval evaluation"),
                                                                  ("decisions.md", "Decision log"), ("runbook.md", "Runbook"),

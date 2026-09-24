@@ -1,7 +1,17 @@
 {
  "generated_by": "tools/build_code_graph.py",
- "inputs_sha256": "a382f7ff3ce1af771ff0855e004b01796cde6e116c6beed1e913fa28bae83616",
+ "inputs_sha256": "265c22d75d59884a905ab6ae25e50af3b5ee96223ea4913cc452a9ac8839f308",
  "inputs": [
+  "TERMS.yaml",
+  "docs/about/architecture.md",
+  "docs/about/decisions.md",
+  "docs/about/evaluation.md",
+  "docs/about/index.md",
+  "docs/about/limitations.md",
+  "docs/about/runbook.md",
+  "docs/about/status.md",
+  "docs/about/terminology.md",
+  "docs/about/verification.md",
   "patchbay/README.md",
   "patchbay/docs/user-guide.md",
   "patchbay/tools/build_data.py",
@@ -11,31 +21,85 @@
   "patchbay/tools/trace_icons.py",
   "patchbay/web/app.js",
   "patchbay/web/faceplate.js",
-  "patchbay/web/index.html"
+  "patchbay/web/index.html",
+  "tools/build_code_graph.py",
+  "tools/build_eurorack.py",
+  "tools/build_graph.py",
+  "tools/build_public.py",
+  "tools/build_site.py",
+  "tools/build_terms.py",
+  "tools/check_coverage.py",
+  "tools/convert_manual.py",
+  "tools/draw_devices.py",
+  "tools/fetch_specs.py",
+  "tools/midi_reference.py",
+  "tools/query_graph.py",
+  "tools/site_theme.py",
+  "tools/validate.py",
+  "tools/validate_connections.py",
+  "tools/validate_images.py",
+  "tools/validate_midi.py",
+  "tools/viz.py",
+  "tools/viz_code.py",
+  "tools/viz_graph.py",
+  "tools/viz_terms.py"
  ],
+ "apps": [
+  "app:docs-site",
+  "app:kb-tools",
+  "app:patchbay"
+ ],
+ "tools_without_operator_docs": [],
+ "terminology": {
+  "ambiguous_outside_manuals": [
+   "accent",
+   "chain",
+   "fill",
+   "filter",
+   "pattern",
+   "project",
+   "song",
+   "step",
+   "tie"
+  ],
+  "skipped_matches": {
+   "accent": 3,
+   "chain": 6,
+   "fill": 17,
+   "filter": 6,
+   "pattern": 18,
+   "project": 10,
+   "song": 8,
+   "step": 17,
+   "tie": 15
+  }
+ },
  "counts": {
   "vertices": {
-   "app": 1,
    "system": 2,
-   "dataset": 18,
-   "code_file": 7,
-   "function": 154,
+   "dataset": 25,
+   "app": 3,
+   "code_file": 28,
+   "function": 333,
    "api_route": 7,
    "ui_action": 34,
-   "doc_section": 21
+   "doc_section": 65
   },
   "edges": {
-   "USES": 2,
-   "PART_OF": 18,
-   "CONTAINS": 28,
-   "DEFINES": 154,
-   "READS": 24,
-   "CALLS": 416,
+   "PART_OF": 25,
+   "USES": 4,
+   "CONTAINS": 93,
+   "DEFINES": 333,
+   "READS": 110,
+   "CALLS": 945,
    "REQUESTS": 9,
    "HANDLED_BY": 60,
-   "WRITES": 6,
+   "WRITES": 14,
    "SERVED_BY": 12,
-   "DOCUMENTS": 57
+   "DOCUMENTS": 112,
+   "BUILT_BY": 2,
+   "PUBLISHES": 12,
+   "USES_TERM": 106
   }
  },
  "coverage": {
@@ -346,10 +410,34 @@
    "label": "Boxes | Faceplates   or boxes | Switch between faceplates and boxes"
   },
   {
+   "id": "app:docs-site",
+   "type": "app",
+   "name": "Documentation site",
+   "path": "docs/about/"
+  },
+  {
+   "id": "app:kb-tools",
+   "type": "app",
+   "name": "Knowledge-base build tools",
+   "path": "tools/"
+  },
+  {
    "id": "app:patchbay",
    "type": "app",
    "name": "Patchbay",
    "path": "patchbay/"
+  },
+  {
+   "id": "data:TERMS.yaml",
+   "type": "dataset",
+   "name": "TERMS.yaml",
+   "system": "gear-kb"
+  },
+  {
+   "id": "data:VOCAB.yaml",
+   "type": "dataset",
+   "name": "VOCAB.yaml",
+   "system": "gear-kb"
   },
   {
    "id": "data:connections.yaml",
@@ -364,9 +452,39 @@
    "system": "gear-kb"
   },
   {
+   "id": "data:eurorack",
+   "type": "dataset",
+   "name": "eurorack",
+   "system": "gear-kb"
+  },
+  {
+   "id": "data:graph/public/answers.json",
+   "type": "dataset",
+   "name": "graph/public/answers.json",
+   "system": "gear-kb"
+  },
+  {
    "id": "data:graph/public/budget.json",
    "type": "dataset",
    "name": "graph/public/budget.json",
+   "system": "gear-kb"
+  },
+  {
+   "id": "data:graph/public/code.json",
+   "type": "dataset",
+   "name": "graph/public/code.json",
+   "system": "gear-kb"
+  },
+  {
+   "id": "data:graph/public/edges.json",
+   "type": "dataset",
+   "name": "graph/public/edges.json",
+   "system": "gear-kb"
+  },
+  {
+   "id": "data:graph/public/terms.json",
+   "type": "dataset",
+   "name": "graph/public/terms.json",
    "system": "gear-kb"
   },
   {
@@ -458,6 +576,314 @@
    "type": "dataset",
    "name": "tools/manifest.yaml",
    "system": "gear-kb"
+  },
+  {
+   "id": "doc:docs/about/architecture.md#components",
+   "type": "doc_section",
+   "name": "Components",
+   "doc": "docs/about/architecture.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/architecture.md#data-model",
+   "type": "doc_section",
+   "name": "Data model",
+   "doc": "docs/about/architecture.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/architecture.md#design-principles",
+   "type": "doc_section",
+   "name": "Design principles",
+   "doc": "docs/about/architecture.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/architecture.md#lessons-from-the-design",
+   "type": "doc_section",
+   "name": "Lessons from the design",
+   "doc": "docs/about/architecture.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/architecture.md#shape-of-the-system",
+   "type": "doc_section",
+   "name": "Shape of the system",
+   "doc": "docs/about/architecture.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/decisions.md#choices-the-owner-made-that-changed-the-outcome",
+   "type": "doc_section",
+   "name": "Choices the owner made that changed the outcome",
+   "doc": "docs/about/decisions.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/evaluation.md#method",
+   "type": "doc_section",
+   "name": "Method",
+   "doc": "docs/about/evaluation.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/evaluation.md#not-yet-done",
+   "type": "doc_section",
+   "name": "Not yet done",
+   "doc": "docs/about/evaluation.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/evaluation.md#pitfalls-in-measuring-retrieval",
+   "type": "doc_section",
+   "name": "Pitfalls in measuring retrieval",
+   "doc": "docs/about/evaluation.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/evaluation.md#question-being-asked",
+   "type": "doc_section",
+   "name": "Question being asked",
+   "doc": "docs/about/evaluation.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/evaluation.md#re-running",
+   "type": "doc_section",
+   "name": "Re-running",
+   "doc": "docs/about/evaluation.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/evaluation.md#results-2026-09-20-17-answerable-questions",
+   "type": "doc_section",
+   "name": "Results (2026-09-20, 17 answerable questions)",
+   "doc": "docs/about/evaluation.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/evaluation.md#what-the-results-say-and-do-not",
+   "type": "doc_section",
+   "name": "What the results say (and do not)",
+   "doc": "docs/about/evaluation.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/index.md#how-it-was-built",
+   "type": "doc_section",
+   "name": "How it was built",
+   "doc": "docs/about/index.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/index.md#using-this-project-to-learn-or-teach",
+   "type": "doc_section",
+   "name": "Using this project to learn or teach",
+   "doc": "docs/about/index.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/index.md#what-it-deliberately-is-not",
+   "type": "doc_section",
+   "name": "What it deliberately is not",
+   "doc": "docs/about/index.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/index.md#what-it-is",
+   "type": "doc_section",
+   "name": "What it is",
+   "doc": "docs/about/index.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/index.md#why-it-exists",
+   "type": "doc_section",
+   "name": "Why it exists",
+   "doc": "docs/about/index.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/limitations.md#content-coverage",
+   "type": "doc_section",
+   "name": "Content coverage",
+   "doc": "docs/about/limitations.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/limitations.md#conversion-quality",
+   "type": "doc_section",
+   "name": "Conversion quality",
+   "doc": "docs/about/limitations.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/limitations.md#eurorack-specifications",
+   "type": "doc_section",
+   "name": "Eurorack specifications",
+   "doc": "docs/about/limitations.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/limitations.md#evaluation",
+   "type": "doc_section",
+   "name": "Evaluation",
+   "doc": "docs/about/limitations.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/limitations.md#open-questions",
+   "type": "doc_section",
+   "name": "Open questions",
+   "doc": "docs/about/limitations.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/limitations.md#process-and-legal",
+   "type": "doc_section",
+   "name": "Process and legal",
+   "doc": "docs/about/limitations.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/limitations.md#terminology",
+   "type": "doc_section",
+   "name": "Terminology",
+   "doc": "docs/about/limitations.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/runbook.md#add-a-eurorack-module-or-a-case-supply",
+   "type": "doc_section",
+   "name": "Add a Eurorack module (or a case / supply)",
+   "doc": "docs/about/runbook.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/runbook.md#add-a-manual",
+   "type": "doc_section",
+   "name": "Add a manual",
+   "doc": "docs/about/runbook.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/runbook.md#everyday-commands",
+   "type": "doc_section",
+   "name": "Everyday commands",
+   "doc": "docs/about/runbook.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/runbook.md#file-map",
+   "type": "doc_section",
+   "name": "File map",
+   "doc": "docs/about/runbook.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/runbook.md#mistakes-that-are-easy-to-make",
+   "type": "doc_section",
+   "name": "Mistakes that are easy to make",
+   "doc": "docs/about/runbook.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/runbook.md#patchbay-app",
+   "type": "doc_section",
+   "name": "Patchbay app",
+   "doc": "docs/about/runbook.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/runbook.md#publish-the-site",
+   "type": "doc_section",
+   "name": "Publish the site",
+   "doc": "docs/about/runbook.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/runbook.md#the-knowledge-graph-and-the-power-budget",
+   "type": "doc_section",
+   "name": "The knowledge graph and the power budget",
+   "doc": "docs/about/runbook.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/runbook.md#when-something-looks-wrong",
+   "type": "doc_section",
+   "name": "When something looks wrong",
+   "doc": "docs/about/runbook.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/terminology.md#how-to-change-it",
+   "type": "doc_section",
+   "name": "How to change it",
+   "doc": "docs/about/terminology.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/terminology.md#lessons-worth-keeping",
+   "type": "doc_section",
+   "name": "Lessons worth keeping",
+   "doc": "docs/about/terminology.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/terminology.md#next-step-owner-review",
+   "type": "doc_section",
+   "name": "Next step: owner review",
+   "doc": "docs/about/terminology.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "type": "doc_section",
+   "name": "Pitfalls, and what caught each",
+   "doc": "docs/about/terminology.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/terminology.md#the-process-in-order",
+   "type": "doc_section",
+   "name": "The process, in order",
+   "doc": "docs/about/terminology.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/terminology.md#what-was-built",
+   "type": "doc_section",
+   "name": "What was built",
+   "doc": "docs/about/terminology.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/verification.md#failures-actually-found",
+   "type": "doc_section",
+   "name": "Failures actually found",
+   "doc": "docs/about/verification.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/verification.md#patterns-in-these-failures",
+   "type": "doc_section",
+   "name": "Patterns in these failures",
+   "doc": "docs/about/verification.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/verification.md#the-layers",
+   "type": "doc_section",
+   "name": "The layers",
+   "doc": "docs/about/verification.md",
+   "audience": "operator"
+  },
+  {
+   "id": "doc:docs/about/verification.md#what-confirmed-means-in-the-eurorack-pages",
+   "type": "doc_section",
+   "name": "What \"confirmed\" means in the Eurorack pages",
+   "doc": "docs/about/verification.md",
+   "audience": "operator"
   },
   {
    "id": "doc:patchbay/README.md#eurorack",
@@ -647,6 +1073,132 @@
    "type": "code_file",
    "name": "patchbay/web/faceplate.js",
    "language": "javascript"
+  },
+  {
+   "id": "file:tools/build_code_graph.py",
+   "type": "code_file",
+   "name": "tools/build_code_graph.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/build_eurorack.py",
+   "type": "code_file",
+   "name": "tools/build_eurorack.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/build_graph.py",
+   "type": "code_file",
+   "name": "tools/build_graph.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/build_public.py",
+   "type": "code_file",
+   "name": "tools/build_public.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/build_site.py",
+   "type": "code_file",
+   "name": "tools/build_site.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/build_terms.py",
+   "type": "code_file",
+   "name": "tools/build_terms.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/check_coverage.py",
+   "type": "code_file",
+   "name": "tools/check_coverage.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/convert_manual.py",
+   "type": "code_file",
+   "name": "tools/convert_manual.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/draw_devices.py",
+   "type": "code_file",
+   "name": "tools/draw_devices.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/fetch_specs.py",
+   "type": "code_file",
+   "name": "tools/fetch_specs.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/midi_reference.py",
+   "type": "code_file",
+   "name": "tools/midi_reference.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/query_graph.py",
+   "type": "code_file",
+   "name": "tools/query_graph.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/site_theme.py",
+   "type": "code_file",
+   "name": "tools/site_theme.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/validate.py",
+   "type": "code_file",
+   "name": "tools/validate.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/validate_connections.py",
+   "type": "code_file",
+   "name": "tools/validate_connections.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/validate_images.py",
+   "type": "code_file",
+   "name": "tools/validate_images.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/validate_midi.py",
+   "type": "code_file",
+   "name": "tools/validate_midi.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/viz.py",
+   "type": "code_file",
+   "name": "tools/viz.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/viz_code.py",
+   "type": "code_file",
+   "name": "tools/viz_code.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/viz_graph.py",
+   "type": "code_file",
+   "name": "tools/viz_graph.py",
+   "language": "python"
+  },
+  {
+   "id": "file:tools/viz_terms.py",
+   "type": "code_file",
+   "name": "tools/viz_terms.py",
+   "language": "python"
   },
   {
    "id": "fn:patchbay/tools/build_data.py:P",
@@ -1727,6 +2279,1259 @@
    "line": 7
   },
   {
+   "id": "fn:tools/build_code_graph.py:docs_site",
+   "type": "function",
+   "name": "docs_site",
+   "language": "python",
+   "line": 422
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:edge",
+   "type": "function",
+   "name": "edge",
+   "language": "python",
+   "line": 106
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:inputs",
+   "type": "function",
+   "name": "inputs",
+   "language": "python",
+   "line": 472
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:inputs_digest",
+   "type": "function",
+   "name": "inputs_digest",
+   "language": "python",
+   "line": 519
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:js_comments",
+   "type": "function",
+   "name": "js_comments",
+   "language": "python",
+   "line": 359
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:js_functions",
+   "type": "function",
+   "name": "js_functions",
+   "language": "python",
+   "line": 119
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:js_route",
+   "type": "function",
+   "name": "js_route",
+   "language": "python",
+   "line": 131
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:kb_tools",
+   "type": "function",
+   "name": "kb_tools",
+   "language": "python",
+   "line": 364
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:labels_from_html",
+   "type": "function",
+   "name": "labels_from_html",
+   "language": "python",
+   "line": 136
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 477
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:norm",
+   "type": "function",
+   "name": "norm",
+   "language": "python",
+   "line": 114
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:patchbay",
+   "type": "function",
+   "name": "patchbay",
+   "language": "python",
+   "line": 168
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:py_module",
+   "type": "function",
+   "name": "py_module",
+   "language": "python",
+   "line": 153
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:py_strings",
+   "type": "function",
+   "name": "py_strings",
+   "language": "python",
+   "line": 349
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:slug",
+   "type": "function",
+   "name": "slug",
+   "language": "python",
+   "line": 110
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:terminology",
+   "type": "function",
+   "name": "terminology",
+   "language": "python",
+   "line": 455
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:tracked",
+   "type": "function",
+   "name": "tracked",
+   "language": "python",
+   "line": 338
+  },
+  {
+   "id": "fn:tools/build_code_graph.py:vertex",
+   "type": "function",
+   "name": "vertex",
+   "language": "python",
+   "line": 100
+  },
+  {
+   "id": "fn:tools/build_eurorack.py:build",
+   "type": "function",
+   "name": "build",
+   "language": "python",
+   "line": 65
+  },
+  {
+   "id": "fn:tools/build_eurorack.py:inputs_digest",
+   "type": "function",
+   "name": "inputs_digest",
+   "language": "python",
+   "line": 23
+  },
+  {
+   "id": "fn:tools/build_eurorack.py:load_budget",
+   "type": "function",
+   "name": "load_budget",
+   "language": "python",
+   "line": 38
+  },
+  {
+   "id": "fn:tools/build_eurorack.py:resolve",
+   "type": "function",
+   "name": "resolve",
+   "language": "python",
+   "line": 50
+  },
+  {
+   "id": "fn:tools/build_graph.py:_coerce",
+   "type": "function",
+   "name": "_coerce",
+   "language": "python",
+   "line": 256
+  },
+  {
+   "id": "fn:tools/build_graph.py:check",
+   "type": "function",
+   "name": "check",
+   "language": "python",
+   "line": 269
+  },
+  {
+   "id": "fn:tools/build_graph.py:collect",
+   "type": "function",
+   "name": "collect",
+   "language": "python",
+   "line": 96
+  },
+  {
+   "id": "fn:tools/build_graph.py:dump_json",
+   "type": "function",
+   "name": "dump_json",
+   "language": "python",
+   "line": 321
+  },
+  {
+   "id": "fn:tools/build_graph.py:frontmatter",
+   "type": "function",
+   "name": "frontmatter",
+   "language": "python",
+   "line": 91
+  },
+  {
+   "id": "fn:tools/build_graph.py:leak_pattern",
+   "type": "function",
+   "name": "leak_pattern",
+   "language": "python",
+   "line": 42
+  },
+  {
+   "id": "fn:tools/build_graph.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 330
+  },
+  {
+   "id": "fn:tools/build_graph.py:power_budget",
+   "type": "function",
+   "name": "power_budget",
+   "language": "python",
+   "line": 286
+  },
+  {
+   "id": "fn:tools/build_graph.py:to_frames",
+   "type": "function",
+   "name": "to_frames",
+   "language": "python",
+   "line": 263
+  },
+  {
+   "id": "fn:tools/build_public.py:code_graph_page",
+   "type": "function",
+   "name": "code_graph_page",
+   "language": "python",
+   "line": 55
+  },
+  {
+   "id": "fn:tools/build_public.py:context_graph_page",
+   "type": "function",
+   "name": "context_graph_page",
+   "language": "python",
+   "line": 197
+  },
+  {
+   "id": "fn:tools/build_public.py:fig",
+   "type": "function",
+   "name": "fig",
+   "language": "python",
+   "line": 51
+  },
+  {
+   "id": "fn:tools/build_public.py:group_of",
+   "type": "function",
+   "name": "group_of",
+   "language": "python",
+   "line": 41
+  },
+  {
+   "id": "fn:tools/build_public.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 314
+  },
+  {
+   "id": "fn:tools/build_public.py:page",
+   "type": "function",
+   "name": "page",
+   "language": "python",
+   "line": 45
+  },
+  {
+   "id": "fn:tools/build_site.py:collect_sections",
+   "type": "function",
+   "name": "collect_sections",
+   "language": "python",
+   "line": 38
+  },
+  {
+   "id": "fn:tools/build_site.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 51
+  },
+  {
+   "id": "fn:tools/build_site.py:read_fm",
+   "type": "function",
+   "name": "read_fm",
+   "language": "python",
+   "line": 26
+  },
+  {
+   "id": "fn:tools/build_site.py:write",
+   "type": "function",
+   "name": "write",
+   "language": "python",
+   "line": 32
+  },
+  {
+   "id": "fn:tools/build_terms.py:check",
+   "type": "function",
+   "name": "check",
+   "language": "python",
+   "line": 63
+  },
+  {
+   "id": "fn:tools/build_terms.py:concepts_in",
+   "type": "function",
+   "name": "concepts_in",
+   "language": "python",
+   "line": 169
+  },
+  {
+   "id": "fn:tools/build_terms.py:count",
+   "type": "function",
+   "name": "count",
+   "language": "python",
+   "line": 180
+  },
+  {
+   "id": "fn:tools/build_terms.py:fold",
+   "type": "function",
+   "name": "fold",
+   "language": "python",
+   "line": 30
+  },
+  {
+   "id": "fn:tools/build_terms.py:is_short_acronym",
+   "type": "function",
+   "name": "is_short_acronym",
+   "language": "python",
+   "line": 36
+  },
+  {
+   "id": "fn:tools/build_terms.py:label_regex",
+   "type": "function",
+   "name": "label_regex",
+   "language": "python",
+   "line": 42
+  },
+  {
+   "id": "fn:tools/build_terms.py:labels_of",
+   "type": "function",
+   "name": "labels_of",
+   "language": "python",
+   "line": 59
+  },
+  {
+   "id": "fn:tools/build_terms.py:load",
+   "type": "function",
+   "name": "load",
+   "language": "python",
+   "line": 49
+  },
+  {
+   "id": "fn:tools/build_terms.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 197
+  },
+  {
+   "id": "fn:tools/build_terms.py:matcher",
+   "type": "function",
+   "name": "matcher",
+   "language": "python",
+   "line": 154
+  },
+  {
+   "id": "fn:tools/build_terms.py:section_text",
+   "type": "function",
+   "name": "section_text",
+   "language": "python",
+   "line": 147
+  },
+  {
+   "id": "fn:tools/check_coverage.py:body",
+   "type": "function",
+   "name": "body",
+   "language": "python",
+   "line": 22
+  },
+  {
+   "id": "fn:tools/check_coverage.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 27
+  },
+  {
+   "id": "fn:tools/convert_manual.py:_title_regex",
+   "type": "function",
+   "name": "_title_regex",
+   "language": "python",
+   "line": 99
+  },
+  {
+   "id": "fn:tools/convert_manual.py:auto_tags",
+   "type": "function",
+   "name": "auto_tags",
+   "language": "python",
+   "line": 174
+  },
+  {
+   "id": "fn:tools/convert_manual.py:clean_page",
+   "type": "function",
+   "name": "clean_page",
+   "language": "python",
+   "line": 50
+  },
+  {
+   "id": "fn:tools/convert_manual.py:describe",
+   "type": "function",
+   "name": "describe",
+   "language": "python",
+   "line": 166
+  },
+  {
+   "id": "fn:tools/convert_manual.py:figure_text",
+   "type": "function",
+   "name": "figure_text",
+   "language": "python",
+   "line": 37
+  },
+  {
+   "id": "fn:tools/convert_manual.py:find_heading",
+   "type": "function",
+   "name": "find_heading",
+   "language": "python",
+   "line": 106
+  },
+  {
+   "id": "fn:tools/convert_manual.py:load_pages",
+   "type": "function",
+   "name": "load_pages",
+   "language": "python",
+   "line": 62
+  },
+  {
+   "id": "fn:tools/convert_manual.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 267
+  },
+  {
+   "id": "fn:tools/convert_manual.py:norm",
+   "type": "function",
+   "name": "norm",
+   "language": "python",
+   "line": 26
+  },
+  {
+   "id": "fn:tools/convert_manual.py:sections_from_headings",
+   "type": "function",
+   "name": "sections_from_headings",
+   "language": "python",
+   "line": 147
+  },
+  {
+   "id": "fn:tools/convert_manual.py:sections_from_outline",
+   "type": "function",
+   "name": "sections_from_outline",
+   "language": "python",
+   "line": 124
+  },
+  {
+   "id": "fn:tools/convert_manual.py:slugify",
+   "type": "function",
+   "name": "slugify",
+   "language": "python",
+   "line": 31
+  },
+  {
+   "id": "fn:tools/convert_manual.py:write_manual",
+   "type": "function",
+   "name": "write_manual",
+   "language": "python",
+   "line": 184
+  },
+  {
+   "id": "fn:tools/draw_devices.py:art_cabinet",
+   "type": "function",
+   "name": "art_cabinet",
+   "language": "python",
+   "line": 217
+  },
+  {
+   "id": "fn:tools/draw_devices.py:art_computer",
+   "type": "function",
+   "name": "art_computer",
+   "language": "python",
+   "line": 285
+  },
+  {
+   "id": "fn:tools/draw_devices.py:art_for",
+   "type": "function",
+   "name": "art_for",
+   "language": "python",
+   "line": 322
+  },
+  {
+   "id": "fn:tools/draw_devices.py:art_headphones",
+   "type": "function",
+   "name": "art_headphones",
+   "language": "python",
+   "line": 256
+  },
+  {
+   "id": "fn:tools/draw_devices.py:art_keyboard",
+   "type": "function",
+   "name": "art_keyboard",
+   "language": "python",
+   "line": 174
+  },
+  {
+   "id": "fn:tools/draw_devices.py:art_pads",
+   "type": "function",
+   "name": "art_pads",
+   "language": "python",
+   "line": 189
+  },
+  {
+   "id": "fn:tools/draw_devices.py:art_rackcase",
+   "type": "function",
+   "name": "art_rackcase",
+   "language": "python",
+   "line": 305
+  },
+  {
+   "id": "fn:tools/draw_devices.py:art_software",
+   "type": "function",
+   "name": "art_software",
+   "language": "python",
+   "line": 293
+  },
+  {
+   "id": "fn:tools/draw_devices.py:art_stomp",
+   "type": "function",
+   "name": "art_stomp",
+   "language": "python",
+   "line": 203
+  },
+  {
+   "id": "fn:tools/draw_devices.py:art_string",
+   "type": "function",
+   "name": "art_string",
+   "language": "python",
+   "line": 266
+  },
+  {
+   "id": "fn:tools/draw_devices.py:art_strip",
+   "type": "function",
+   "name": "art_strip",
+   "language": "python",
+   "line": 236
+  },
+  {
+   "id": "fn:tools/draw_devices.py:card",
+   "type": "function",
+   "name": "card",
+   "language": "python",
+   "line": 152
+  },
+  {
+   "id": "fn:tools/draw_devices.py:case_drawing",
+   "type": "function",
+   "name": "case_drawing",
+   "language": "python",
+   "line": 334
+  },
+  {
+   "id": "fn:tools/draw_devices.py:euro",
+   "type": "function",
+   "name": "euro",
+   "language": "python",
+   "line": 109
+  },
+  {
+   "id": "fn:tools/draw_devices.py:finish",
+   "type": "function",
+   "name": "finish",
+   "language": "python",
+   "line": 49
+  },
+  {
+   "id": "fn:tools/draw_devices.py:h",
+   "type": "function",
+   "name": "h",
+   "language": "python",
+   "line": 36
+  },
+  {
+   "id": "fn:tools/draw_devices.py:jack",
+   "type": "function",
+   "name": "jack",
+   "language": "python",
+   "line": 92
+  },
+  {
+   "id": "fn:tools/draw_devices.py:knob",
+   "type": "function",
+   "name": "knob",
+   "language": "python",
+   "line": 83
+  },
+  {
+   "id": "fn:tools/draw_devices.py:load_specs",
+   "type": "function",
+   "name": "load_specs",
+   "language": "python",
+   "line": 374
+  },
+  {
+   "id": "fn:tools/draw_devices.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 395
+  },
+  {
+   "id": "fn:tools/draw_devices.py:panel_knobs",
+   "type": "function",
+   "name": "panel_knobs",
+   "language": "python",
+   "line": 167
+  },
+  {
+   "id": "fn:tools/draw_devices.py:render_jpg",
+   "type": "function",
+   "name": "render_jpg",
+   "language": "python",
+   "line": 385
+  },
+  {
+   "id": "fn:tools/draw_devices.py:screw",
+   "type": "function",
+   "name": "screw",
+   "language": "python",
+   "line": 78
+  },
+  {
+   "id": "fn:tools/draw_devices.py:short_name",
+   "type": "function",
+   "name": "short_name",
+   "language": "python",
+   "line": 54
+  },
+  {
+   "id": "fn:tools/draw_devices.py:svg",
+   "type": "function",
+   "name": "svg",
+   "language": "python",
+   "line": 102
+  },
+  {
+   "id": "fn:tools/draw_devices.py:text",
+   "type": "function",
+   "name": "text",
+   "language": "python",
+   "line": 73
+  },
+  {
+   "id": "fn:tools/draw_devices.py:wrap",
+   "type": "function",
+   "name": "wrap",
+   "language": "python",
+   "line": 59
+  },
+  {
+   "id": "fn:tools/fetch_specs.py:extract",
+   "type": "function",
+   "name": "extract",
+   "language": "python",
+   "line": 66
+  },
+  {
+   "id": "fn:tools/fetch_specs.py:fetch",
+   "type": "function",
+   "name": "fetch",
+   "language": "python",
+   "line": 41
+  },
+  {
+   "id": "fn:tools/fetch_specs.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 78
+  },
+  {
+   "id": "fn:tools/fetch_specs.py:to_text",
+   "type": "function",
+   "name": "to_text",
+   "language": "python",
+   "line": 54
+  },
+  {
+   "id": "fn:tools/midi_reference.py:markdown",
+   "type": "function",
+   "name": "markdown",
+   "language": "python",
+   "line": 14
+  },
+  {
+   "id": "fn:tools/query_graph.py:_app_of",
+   "type": "function",
+   "name": "_app_of",
+   "language": "python",
+   "line": 345
+  },
+  {
+   "id": "fn:tools/query_graph.py:_code_edges",
+   "type": "function",
+   "name": "_code_edges",
+   "language": "python",
+   "line": 265
+  },
+  {
+   "id": "fn:tools/query_graph.py:_dominant",
+   "type": "function",
+   "name": "_dominant",
+   "language": "python",
+   "line": 133
+  },
+  {
+   "id": "fn:tools/query_graph.py:_family",
+   "type": "function",
+   "name": "_family",
+   "language": "python",
+   "line": 334
+  },
+  {
+   "id": "fn:tools/query_graph.py:_raw_app_of",
+   "type": "function",
+   "name": "_raw_app_of",
+   "language": "python",
+   "line": 413
+  },
+  {
+   "id": "fn:tools/query_graph.py:_raw_context",
+   "type": "function",
+   "name": "_raw_context",
+   "language": "python",
+   "line": 396
+  },
+  {
+   "id": "fn:tools/query_graph.py:_raw_family",
+   "type": "function",
+   "name": "_raw_family",
+   "language": "python",
+   "line": 403
+  },
+  {
+   "id": "fn:tools/query_graph.py:bare",
+   "type": "function",
+   "name": "bare",
+   "language": "python",
+   "line": 43
+  },
+  {
+   "id": "fn:tools/query_graph.py:concept_where",
+   "type": "function",
+   "name": "concept_where",
+   "language": "python",
+   "line": 351
+  },
+  {
+   "id": "fn:tools/query_graph.py:cross_concept_where",
+   "type": "function",
+   "name": "cross_concept_where",
+   "language": "python",
+   "line": 418
+  },
+  {
+   "id": "fn:tools/query_graph.py:cross_inherits",
+   "type": "function",
+   "name": "cross_inherits",
+   "language": "python",
+   "line": 176
+  },
+  {
+   "id": "fn:tools/query_graph.py:cross_kb_reach",
+   "type": "function",
+   "name": "cross_kb_reach",
+   "language": "python",
+   "line": 316
+  },
+  {
+   "id": "fn:tools/query_graph.py:cross_midi_conflicts",
+   "type": "function",
+   "name": "cross_midi_conflicts",
+   "language": "python",
+   "line": 219
+  },
+  {
+   "id": "fn:tools/query_graph.py:cross_naming",
+   "type": "function",
+   "name": "cross_naming",
+   "language": "python",
+   "line": 167
+  },
+  {
+   "id": "fn:tools/query_graph.py:cross_source_support",
+   "type": "function",
+   "name": "cross_source_support",
+   "language": "python",
+   "line": 201
+  },
+  {
+   "id": "fn:tools/query_graph.py:cross_term_gaps",
+   "type": "function",
+   "name": "cross_term_gaps",
+   "language": "python",
+   "line": 455
+  },
+  {
+   "id": "fn:tools/query_graph.py:cross_undocumented",
+   "type": "function",
+   "name": "cross_undocumented",
+   "language": "python",
+   "line": 304
+  },
+  {
+   "id": "fn:tools/query_graph.py:cross_unrecorded",
+   "type": "function",
+   "name": "cross_unrecorded",
+   "language": "python",
+   "line": 246
+  },
+  {
+   "id": "fn:tools/query_graph.py:cross_vocabulary",
+   "type": "function",
+   "name": "cross_vocabulary",
+   "language": "python",
+   "line": 434
+  },
+  {
+   "id": "fn:tools/query_graph.py:doc_impact",
+   "type": "function",
+   "name": "doc_impact",
+   "language": "python",
+   "line": 276
+  },
+  {
+   "id": "fn:tools/query_graph.py:feeds",
+   "type": "function",
+   "name": "feeds",
+   "language": "python",
+   "line": 48
+  },
+  {
+   "id": "fn:tools/query_graph.py:inherits",
+   "type": "function",
+   "name": "inherits",
+   "language": "python",
+   "line": 147
+  },
+  {
+   "id": "fn:tools/query_graph.py:kb_reach",
+   "type": "function",
+   "name": "kb_reach",
+   "language": "python",
+   "line": 290
+  },
+  {
+   "id": "fn:tools/query_graph.py:load",
+   "type": "function",
+   "name": "load",
+   "language": "python",
+   "line": 37
+  },
+  {
+   "id": "fn:tools/query_graph.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 464
+  },
+  {
+   "id": "fn:tools/query_graph.py:midi_conflicts",
+   "type": "function",
+   "name": "midi_conflicts",
+   "language": "python",
+   "line": 83
+  },
+  {
+   "id": "fn:tools/query_graph.py:naming",
+   "type": "function",
+   "name": "naming",
+   "language": "python",
+   "line": 122
+  },
+  {
+   "id": "fn:tools/query_graph.py:reach",
+   "type": "function",
+   "name": "reach",
+   "language": "python",
+   "line": 58
+  },
+  {
+   "id": "fn:tools/query_graph.py:snapshot_digest",
+   "type": "function",
+   "name": "snapshot_digest",
+   "language": "python",
+   "line": 33
+  },
+  {
+   "id": "fn:tools/query_graph.py:source_support",
+   "type": "function",
+   "name": "source_support",
+   "language": "python",
+   "line": 67
+  },
+  {
+   "id": "fn:tools/query_graph.py:term_gaps",
+   "type": "function",
+   "name": "term_gaps",
+   "language": "python",
+   "line": 386
+  },
+  {
+   "id": "fn:tools/query_graph.py:undocumented",
+   "type": "function",
+   "name": "undocumented",
+   "language": "python",
+   "line": 269
+  },
+  {
+   "id": "fn:tools/query_graph.py:unrecorded",
+   "type": "function",
+   "name": "unrecorded",
+   "language": "python",
+   "line": 109
+  },
+  {
+   "id": "fn:tools/query_graph.py:vocabulary",
+   "type": "function",
+   "name": "vocabulary",
+   "language": "python",
+   "line": 367
+  },
+  {
+   "id": "fn:tools/site_theme.py:versioned",
+   "type": "function",
+   "name": "versioned",
+   "language": "python",
+   "line": 16
+  },
+  {
+   "id": "fn:tools/validate.py:err",
+   "type": "function",
+   "name": "err",
+   "language": "python",
+   "line": 25
+  },
+  {
+   "id": "fn:tools/validate.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 29
+  },
+  {
+   "id": "fn:tools/validate.py:warn",
+   "type": "function",
+   "name": "warn",
+   "language": "python",
+   "line": 26
+  },
+  {
+   "id": "fn:tools/validate_connections.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 40
+  },
+  {
+   "id": "fn:tools/validate_connections.py:norm",
+   "type": "function",
+   "name": "norm",
+   "language": "python",
+   "line": 24
+  },
+  {
+   "id": "fn:tools/validate_connections.py:spec_hp",
+   "type": "function",
+   "name": "spec_hp",
+   "language": "python",
+   "line": 29
+  },
+  {
+   "id": "fn:tools/validate_images.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 19
+  },
+  {
+   "id": "fn:tools/validate_midi.py:main",
+   "type": "function",
+   "name": "main",
+   "language": "python",
+   "line": 28
+  },
+  {
+   "id": "fn:tools/validate_midi.py:norm",
+   "type": "function",
+   "name": "norm",
+   "language": "python",
+   "line": 24
+  },
+  {
+   "id": "fn:tools/viz.py:_svg",
+   "type": "function",
+   "name": "_svg",
+   "language": "python",
+   "line": 14
+  },
+  {
+   "id": "fn:tools/viz.py:_t",
+   "type": "function",
+   "name": "_t",
+   "language": "python",
+   "line": 19
+  },
+  {
+   "id": "fn:tools/viz.py:coverage_chart",
+   "type": "function",
+   "name": "coverage_chart",
+   "language": "python",
+   "line": 183
+  },
+  {
+   "id": "fn:tools/viz.py:failure_matrix",
+   "type": "function",
+   "name": "failure_matrix",
+   "language": "python",
+   "line": 132
+  },
+  {
+   "id": "fn:tools/viz.py:pipeline_diagram",
+   "type": "function",
+   "name": "pipeline_diagram",
+   "language": "python",
+   "line": 84
+  },
+  {
+   "id": "fn:tools/viz.py:power_chart",
+   "type": "function",
+   "name": "power_chart",
+   "language": "python",
+   "line": 23
+  },
+  {
+   "id": "fn:tools/viz.py:retrieval_chart",
+   "type": "function",
+   "name": "retrieval_chart",
+   "language": "python",
+   "line": 157
+  },
+  {
+   "id": "fn:tools/viz.py:trust_heatmap",
+   "type": "function",
+   "name": "trust_heatmap",
+   "language": "python",
+   "line": 56
+  },
+  {
+   "id": "fn:tools/viz_code.py:_arrow",
+   "type": "function",
+   "name": "_arrow",
+   "language": "python",
+   "line": 21
+  },
+  {
+   "id": "fn:tools/viz_code.py:_box",
+   "type": "function",
+   "name": "_box",
+   "language": "python",
+   "line": 14
+  },
+  {
+   "id": "fn:tools/viz_code.py:context_diagram",
+   "type": "function",
+   "name": "context_diagram",
+   "language": "python",
+   "line": 184
+  },
+  {
+   "id": "fn:tools/viz_code.py:impact",
+   "type": "function",
+   "name": "impact",
+   "language": "python",
+   "line": 35
+  },
+  {
+   "id": "fn:tools/viz_code.py:impact_diagram",
+   "type": "function",
+   "name": "impact_diagram",
+   "language": "python",
+   "line": 98
+  },
+  {
+   "id": "fn:tools/viz_code.py:layer_diagram",
+   "type": "function",
+   "name": "layer_diagram",
+   "language": "python",
+   "line": 52
+  },
+  {
+   "id": "fn:tools/viz_code.py:patchbay_subgraph",
+   "type": "function",
+   "name": "patchbay_subgraph",
+   "language": "python",
+   "line": 171
+  },
+  {
+   "id": "fn:tools/viz_code.py:platform_diagram",
+   "type": "function",
+   "name": "platform_diagram",
+   "language": "python",
+   "line": 148
+  },
+  {
+   "id": "fn:tools/viz_code.py:rel_counts",
+   "type": "function",
+   "name": "rel_counts",
+   "language": "python",
+   "line": 46
+  },
+  {
+   "id": "fn:tools/viz_graph.py:_fit",
+   "type": "function",
+   "name": "_fit",
+   "language": "python",
+   "line": 55
+  },
+  {
+   "id": "fn:tools/viz_graph.py:_fit_words",
+   "type": "function",
+   "name": "_fit_words",
+   "language": "python",
+   "line": 59
+  },
+  {
+   "id": "fn:tools/viz_graph.py:_natural",
+   "type": "function",
+   "name": "_natural",
+   "language": "python",
+   "line": 167
+  },
+  {
+   "id": "fn:tools/viz_graph.py:_ramp",
+   "type": "function",
+   "name": "_ramp",
+   "language": "python",
+   "line": 342
+  },
+  {
+   "id": "fn:tools/viz_graph.py:_reach_dist",
+   "type": "function",
+   "name": "_reach_dist",
+   "language": "python",
+   "line": 171
+  },
+  {
+   "id": "fn:tools/viz_graph.py:_wrap",
+   "type": "function",
+   "name": "_wrap",
+   "language": "python",
+   "line": 71
+  },
+  {
+   "id": "fn:tools/viz_graph.py:category_chart",
+   "type": "function",
+   "name": "category_chart",
+   "language": "python",
+   "line": 144
+  },
+  {
+   "id": "fn:tools/viz_graph.py:rack_diagram",
+   "type": "function",
+   "name": "rack_diagram",
+   "language": "python",
+   "line": 360
+  },
+  {
+   "id": "fn:tools/viz_graph.py:rack_modules",
+   "type": "function",
+   "name": "rack_modules",
+   "language": "python",
+   "line": 346
+  },
+  {
+   "id": "fn:tools/viz_graph.py:routing_diagram",
+   "type": "function",
+   "name": "routing_diagram",
+   "language": "python",
+   "line": 188
+  },
+  {
+   "id": "fn:tools/viz_graph.py:schema_diagram",
+   "type": "function",
+   "name": "schema_diagram",
+   "language": "python",
+   "line": 87
+  },
+  {
+   "id": "fn:tools/viz_graph.py:short",
+   "type": "function",
+   "name": "short",
+   "language": "python",
+   "line": 47
+  },
+  {
+   "id": "fn:tools/viz_terms.py:_arrowdefs",
+   "type": "function",
+   "name": "_arrowdefs",
+   "language": "python",
+   "line": 53
+  },
+  {
+   "id": "fn:tools/viz_terms.py:maker_of_manual",
+   "type": "function",
+   "name": "maker_of_manual",
+   "language": "python",
+   "line": 242
+  },
+  {
+   "id": "fn:tools/viz_terms.py:naming_heatmap",
+   "type": "function",
+   "name": "naming_heatmap",
+   "language": "python",
+   "line": 268
+  },
+  {
+   "id": "fn:tools/viz_terms.py:naming_rows",
+   "type": "function",
+   "name": "naming_rows",
+   "language": "python",
+   "line": 247
+  },
+  {
+   "id": "fn:tools/viz_terms.py:neighbourhood",
+   "type": "function",
+   "name": "neighbourhood",
+   "language": "python",
+   "line": 183
+  },
+  {
+   "id": "fn:tools/viz_terms.py:ontology_diagram",
+   "type": "function",
+   "name": "ontology_diagram",
+   "language": "python",
+   "line": 138
+  },
+  {
+   "id": "fn:tools/viz_terms.py:taxonomy_tree",
+   "type": "function",
+   "name": "taxonomy_tree",
+   "language": "python",
+   "line": 61
+  },
+  {
    "id": "route:DELETE /api/sessions/:id",
    "type": "api_route",
    "name": "DELETE /api/sessions/:id"
@@ -1773,6 +3578,16 @@
   }
  ],
  "edges": [
+  {
+   "src": "app:docs-site",
+   "dst": "file:tools/build_public.py",
+   "rel": "BUILT_BY"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "file:tools/build_site.py",
+   "rel": "BUILT_BY"
+  },
   {
    "src": "fn:patchbay/tools/build_data.py:build",
    "dst": "fn:patchbay/tools/build_data.py:group_of",
@@ -3854,6 +5669,2976 @@
    "rel": "CALLS"
   },
   {
+   "src": "fn:tools/build_code_graph.py:docs_site",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:docs_site",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:docs_site",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:docs_site",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:docs_site",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:docs_site",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:docs_site",
+   "dst": "fn:tools/build_code_graph.py:slug",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:docs_site",
+   "dst": "fn:tools/build_code_graph.py:tracked",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:docs_site",
+   "dst": "fn:tools/build_code_graph.py:tracked",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:docs_site",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:docs_site",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:inputs",
+   "dst": "fn:tools/build_code_graph.py:tracked",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:inputs",
+   "dst": "fn:tools/build_code_graph.py:tracked",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:inputs",
+   "dst": "fn:tools/build_code_graph.py:tracked",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:inputs_digest",
+   "dst": "fn:tools/build_code_graph.py:inputs",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:kb_tools",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:kb_tools",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:kb_tools",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:kb_tools",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:kb_tools",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:kb_tools",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:kb_tools",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:kb_tools",
+   "dst": "fn:tools/build_code_graph.py:py_strings",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:kb_tools",
+   "dst": "fn:tools/build_code_graph.py:tracked",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:kb_tools",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:kb_tools",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:kb_tools",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:main",
+   "dst": "fn:tools/build_code_graph.py:docs_site",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:main",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:main",
+   "dst": "fn:tools/build_code_graph.py:inputs",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:main",
+   "dst": "fn:tools/build_code_graph.py:kb_tools",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:main",
+   "dst": "fn:tools/build_code_graph.py:patchbay",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:main",
+   "dst": "fn:tools/build_code_graph.py:terminology",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:main",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:main",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:js_comments",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:js_functions",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:js_route",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:js_route",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:labels_from_html",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:labels_from_html",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:py_module",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:py_strings",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:slug",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:tracked",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:patchbay",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:terminology",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:terminology",
+   "dst": "fn:tools/build_terms.py:concepts_in",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:terminology",
+   "dst": "fn:tools/build_terms.py:load",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_code_graph.py:terminology",
+   "dst": "fn:tools/build_terms.py:matcher",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_eurorack.py:build",
+   "dst": "fn:tools/build_eurorack.py:load_budget",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_eurorack.py:build",
+   "dst": "fn:tools/build_eurorack.py:resolve",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_eurorack.py:load_budget",
+   "dst": "fn:tools/build_eurorack.py:inputs_digest",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_graph.py:collect",
+   "dst": "fn:tools/build_code_graph.py:inputs_digest",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_graph.py:collect",
+   "dst": "fn:tools/build_eurorack.py:resolve",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_graph.py:collect",
+   "dst": "fn:tools/build_graph.py:frontmatter",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_graph.py:main",
+   "dst": "fn:tools/build_graph.py:check",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_graph.py:main",
+   "dst": "fn:tools/build_graph.py:collect",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_graph.py:main",
+   "dst": "fn:tools/build_graph.py:dump_json",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_graph.py:main",
+   "dst": "fn:tools/build_graph.py:dump_json",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_graph.py:main",
+   "dst": "fn:tools/build_graph.py:leak_pattern",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_graph.py:main",
+   "dst": "fn:tools/build_graph.py:power_budget",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_graph.py:main",
+   "dst": "fn:tools/build_graph.py:to_frames",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_graph.py:power_budget",
+   "dst": "fn:tools/build_eurorack.py:inputs_digest",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_graph.py:to_frames",
+   "dst": "fn:tools/build_graph.py:_coerce",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_graph.py:to_frames",
+   "dst": "fn:tools/build_graph.py:_coerce",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:code_graph_page",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:code_graph_page",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:code_graph_page",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:code_graph_page",
+   "dst": "fn:tools/viz_code.py:impact",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:code_graph_page",
+   "dst": "fn:tools/viz_code.py:impact_diagram",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:code_graph_page",
+   "dst": "fn:tools/viz_code.py:layer_diagram",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:code_graph_page",
+   "dst": "fn:tools/viz_code.py:patchbay_subgraph",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:code_graph_page",
+   "dst": "fn:tools/viz_code.py:platform_diagram",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:context_graph_page",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:context_graph_page",
+   "dst": "fn:tools/viz_code.py:context_diagram",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_eurorack.py:build",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:code_graph_page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:context_graph_page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:group_of",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:group_of",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/midi_reference.py:markdown",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/site_theme.py:versioned",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz.py:coverage_chart",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz.py:failure_matrix",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz.py:pipeline_diagram",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz.py:power_chart",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz.py:retrieval_chart",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz.py:trust_heatmap",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz_graph.py:category_chart",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz_graph.py:rack_diagram",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz_graph.py:rack_modules",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz_graph.py:routing_diagram",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz_graph.py:routing_diagram",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz_graph.py:routing_diagram",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz_graph.py:schema_diagram",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz_terms.py:naming_heatmap",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz_terms.py:neighbourhood",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz_terms.py:ontology_diagram",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_public.py:main",
+   "dst": "fn:tools/viz_terms.py:taxonomy_tree",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_site.py:collect_sections",
+   "dst": "fn:tools/build_site.py:read_fm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_site.py:main",
+   "dst": "fn:tools/build_eurorack.py:build",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_site.py:main",
+   "dst": "fn:tools/build_site.py:collect_sections",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_site.py:main",
+   "dst": "fn:tools/build_site.py:write",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_site.py:main",
+   "dst": "fn:tools/build_site.py:write",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_site.py:main",
+   "dst": "fn:tools/build_site.py:write",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_site.py:main",
+   "dst": "fn:tools/build_site.py:write",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_site.py:main",
+   "dst": "fn:tools/build_site.py:write",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_site.py:main",
+   "dst": "fn:tools/build_site.py:write",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_site.py:main",
+   "dst": "fn:tools/build_site.py:write",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_site.py:main",
+   "dst": "fn:tools/midi_reference.py:markdown",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_site.py:main",
+   "dst": "fn:tools/site_theme.py:versioned",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_terms.py:check",
+   "dst": "fn:tools/build_terms.py:fold",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_terms.py:check",
+   "dst": "fn:tools/build_terms.py:fold",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_terms.py:check",
+   "dst": "fn:tools/build_terms.py:fold",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_terms.py:check",
+   "dst": "fn:tools/build_terms.py:labels_of",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_terms.py:count",
+   "dst": "fn:tools/build_terms.py:matcher",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_terms.py:count",
+   "dst": "fn:tools/build_terms.py:section_text",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_terms.py:label_regex",
+   "dst": "fn:tools/build_terms.py:is_short_acronym",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_terms.py:main",
+   "dst": "fn:tools/build_terms.py:check",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_terms.py:main",
+   "dst": "fn:tools/build_terms.py:count",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_terms.py:main",
+   "dst": "fn:tools/build_terms.py:labels_of",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_terms.py:main",
+   "dst": "fn:tools/build_terms.py:labels_of",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_terms.py:main",
+   "dst": "fn:tools/build_terms.py:labels_of",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_terms.py:main",
+   "dst": "fn:tools/build_terms.py:load",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_terms.py:matcher",
+   "dst": "fn:tools/build_terms.py:label_regex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/build_terms.py:matcher",
+   "dst": "fn:tools/build_terms.py:labels_of",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/check_coverage.py:main",
+   "dst": "fn:tools/check_coverage.py:body",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:clean_page",
+   "dst": "fn:tools/convert_manual.py:figure_text",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:find_heading",
+   "dst": "fn:tools/convert_manual.py:_title_regex",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:load_pages",
+   "dst": "fn:tools/convert_manual.py:clean_page",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:main",
+   "dst": "fn:tools/convert_manual.py:write_manual",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:sections_from_headings",
+   "dst": "fn:tools/convert_manual.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:sections_from_headings",
+   "dst": "fn:tools/convert_manual.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:sections_from_headings",
+   "dst": "fn:tools/convert_manual.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:sections_from_headings",
+   "dst": "fn:tools/convert_manual.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:sections_from_headings",
+   "dst": "fn:tools/convert_manual.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:sections_from_outline",
+   "dst": "fn:tools/convert_manual.py:find_heading",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:sections_from_outline",
+   "dst": "fn:tools/convert_manual.py:find_heading",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:sections_from_outline",
+   "dst": "fn:tools/convert_manual.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:sections_from_outline",
+   "dst": "fn:tools/convert_manual.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:write_manual",
+   "dst": "fn:tools/convert_manual.py:auto_tags",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:write_manual",
+   "dst": "fn:tools/convert_manual.py:describe",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:write_manual",
+   "dst": "fn:tools/convert_manual.py:load_pages",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:write_manual",
+   "dst": "fn:tools/convert_manual.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:write_manual",
+   "dst": "fn:tools/convert_manual.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:write_manual",
+   "dst": "fn:tools/convert_manual.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:write_manual",
+   "dst": "fn:tools/convert_manual.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:write_manual",
+   "dst": "fn:tools/convert_manual.py:sections_from_headings",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:write_manual",
+   "dst": "fn:tools/convert_manual.py:sections_from_outline",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/convert_manual.py:write_manual",
+   "dst": "fn:tools/convert_manual.py:slugify",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:art_cabinet",
+   "dst": "fn:tools/draw_devices.py:panel_knobs",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:art_for",
+   "dst": "fn:tools/draw_devices.py:art_keyboard",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:art_for",
+   "dst": "fn:tools/draw_devices.py:art_pads",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:art_for",
+   "dst": "fn:tools/draw_devices.py:art_stomp",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:art_for",
+   "dst": "fn:tools/draw_devices.py:h",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:art_keyboard",
+   "dst": "fn:tools/draw_devices.py:panel_knobs",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:art_pads",
+   "dst": "fn:tools/draw_devices.py:panel_knobs",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:art_stomp",
+   "dst": "fn:tools/draw_devices.py:panel_knobs",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:art_strip",
+   "dst": "fn:tools/draw_devices.py:jack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:art_strip",
+   "dst": "fn:tools/draw_devices.py:knob",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:card",
+   "dst": "fn:tools/draw_devices.py:finish",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:card",
+   "dst": "fn:tools/draw_devices.py:short_name",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:card",
+   "dst": "fn:tools/draw_devices.py:svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:card",
+   "dst": "fn:tools/draw_devices.py:text",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:card",
+   "dst": "fn:tools/draw_devices.py:text",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:card",
+   "dst": "fn:tools/draw_devices.py:text",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:card",
+   "dst": "fn:tools/draw_devices.py:wrap",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:case_drawing",
+   "dst": "fn:tools/draw_devices.py:finish",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:case_drawing",
+   "dst": "fn:tools/draw_devices.py:finish",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:case_drawing",
+   "dst": "fn:tools/draw_devices.py:short_name",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:case_drawing",
+   "dst": "fn:tools/draw_devices.py:svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:case_drawing",
+   "dst": "fn:tools/draw_devices.py:text",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:case_drawing",
+   "dst": "fn:tools/draw_devices.py:text",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:case_drawing",
+   "dst": "fn:tools/draw_devices.py:text",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:case_drawing",
+   "dst": "fn:tools/draw_devices.py:text",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:case_drawing",
+   "dst": "fn:tools/draw_devices.py:text",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:euro",
+   "dst": "fn:tools/draw_devices.py:finish",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:euro",
+   "dst": "fn:tools/draw_devices.py:jack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:euro",
+   "dst": "fn:tools/draw_devices.py:jack",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:euro",
+   "dst": "fn:tools/draw_devices.py:knob",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:euro",
+   "dst": "fn:tools/draw_devices.py:knob",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:euro",
+   "dst": "fn:tools/draw_devices.py:screw",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:euro",
+   "dst": "fn:tools/draw_devices.py:screw",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:euro",
+   "dst": "fn:tools/draw_devices.py:screw",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:euro",
+   "dst": "fn:tools/draw_devices.py:screw",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:euro",
+   "dst": "fn:tools/draw_devices.py:short_name",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:euro",
+   "dst": "fn:tools/draw_devices.py:svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:euro",
+   "dst": "fn:tools/draw_devices.py:text",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:euro",
+   "dst": "fn:tools/draw_devices.py:text",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:euro",
+   "dst": "fn:tools/draw_devices.py:wrap",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:finish",
+   "dst": "fn:tools/draw_devices.py:h",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:finish",
+   "dst": "fn:tools/draw_devices.py:h",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:main",
+   "dst": "fn:tools/draw_devices.py:art_for",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:main",
+   "dst": "fn:tools/draw_devices.py:card",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:main",
+   "dst": "fn:tools/draw_devices.py:case_drawing",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:main",
+   "dst": "fn:tools/draw_devices.py:euro",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:main",
+   "dst": "fn:tools/draw_devices.py:load_specs",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:main",
+   "dst": "fn:tools/draw_devices.py:render_jpg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/draw_devices.py:panel_knobs",
+   "dst": "fn:tools/draw_devices.py:knob",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/fetch_specs.py:main",
+   "dst": "fn:tools/fetch_specs.py:extract",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/fetch_specs.py:main",
+   "dst": "fn:tools/fetch_specs.py:fetch",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/fetch_specs.py:main",
+   "dst": "fn:tools/fetch_specs.py:to_text",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:concept_where",
+   "dst": "fn:tools/query_graph.py:_app_of",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:concept_where",
+   "dst": "fn:tools/query_graph.py:_family",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:cross_concept_where",
+   "dst": "fn:tools/query_graph.py:_raw_app_of",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:cross_concept_where",
+   "dst": "fn:tools/query_graph.py:_raw_context",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:cross_concept_where",
+   "dst": "fn:tools/query_graph.py:_raw_family",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:cross_naming",
+   "dst": "fn:tools/query_graph.py:_dominant",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:cross_term_gaps",
+   "dst": "fn:tools/query_graph.py:_raw_app_of",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:cross_term_gaps",
+   "dst": "fn:tools/query_graph.py:_raw_context",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:cross_vocabulary",
+   "dst": "fn:tools/query_graph.py:_raw_app_of",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:cross_vocabulary",
+   "dst": "fn:tools/query_graph.py:_raw_context",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:cross_vocabulary",
+   "dst": "fn:tools/query_graph.py:_raw_family",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:doc_impact",
+   "dst": "fn:tools/query_graph.py:_code_edges",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:feeds",
+   "dst": "fn:tools/query_graph.py:bare",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:inherits",
+   "dst": "fn:tools/query_graph.py:bare",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:inherits",
+   "dst": "fn:tools/query_graph.py:bare",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:inherits",
+   "dst": "fn:tools/query_graph.py:bare",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:kb_reach",
+   "dst": "fn:tools/query_graph.py:_code_edges",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:bare",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:concept_where",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:cross_concept_where",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:cross_inherits",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:cross_kb_reach",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:cross_midi_conflicts",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:cross_naming",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:cross_source_support",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:cross_term_gaps",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:cross_undocumented",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:cross_unrecorded",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:cross_vocabulary",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:doc_impact",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:feeds",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:inherits",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:kb_reach",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:load",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:midi_conflicts",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:naming",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:reach",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:snapshot_digest",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:source_support",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:term_gaps",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:undocumented",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:unrecorded",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:main",
+   "dst": "fn:tools/query_graph.py:vocabulary",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:midi_conflicts",
+   "dst": "fn:tools/query_graph.py:bare",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:midi_conflicts",
+   "dst": "fn:tools/query_graph.py:bare",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:naming",
+   "dst": "fn:tools/query_graph.py:_dominant",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:naming",
+   "dst": "fn:tools/query_graph.py:bare",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:reach",
+   "dst": "fn:tools/query_graph.py:bare",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:term_gaps",
+   "dst": "fn:tools/query_graph.py:_app_of",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:undocumented",
+   "dst": "fn:tools/query_graph.py:_code_edges",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:unrecorded",
+   "dst": "fn:tools/query_graph.py:bare",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:vocabulary",
+   "dst": "fn:tools/query_graph.py:_app_of",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/query_graph.py:vocabulary",
+   "dst": "fn:tools/query_graph.py:_family",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate.py:main",
+   "dst": "fn:tools/validate.py:err",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate.py:main",
+   "dst": "fn:tools/validate.py:err",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate.py:main",
+   "dst": "fn:tools/validate.py:err",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate.py:main",
+   "dst": "fn:tools/validate.py:err",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate.py:main",
+   "dst": "fn:tools/validate.py:err",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate.py:main",
+   "dst": "fn:tools/validate.py:err",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate.py:main",
+   "dst": "fn:tools/validate.py:err",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate.py:main",
+   "dst": "fn:tools/validate.py:err",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate.py:main",
+   "dst": "fn:tools/validate.py:err",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate.py:main",
+   "dst": "fn:tools/validate.py:err",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate.py:main",
+   "dst": "fn:tools/validate.py:warn",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate.py:main",
+   "dst": "fn:tools/validate.py:warn",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate.py:main",
+   "dst": "fn:tools/validate.py:warn",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate.py:main",
+   "dst": "fn:tools/validate.py:warn",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate_connections.py:main",
+   "dst": "fn:tools/validate_connections.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate_connections.py:main",
+   "dst": "fn:tools/validate_connections.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate_connections.py:main",
+   "dst": "fn:tools/validate_connections.py:spec_hp",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/validate_midi.py:main",
+   "dst": "fn:tools/validate_midi.py:norm",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:coverage_chart",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:coverage_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:coverage_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:coverage_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:coverage_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:failure_matrix",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:failure_matrix",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:failure_matrix",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:failure_matrix",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:pipeline_diagram",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:pipeline_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:pipeline_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:pipeline_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:pipeline_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:pipeline_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:pipeline_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:pipeline_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:pipeline_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:power_chart",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:power_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:power_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:power_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:power_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:power_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:power_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:power_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:power_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:retrieval_chart",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:retrieval_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:retrieval_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:retrieval_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:retrieval_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:trust_heatmap",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:trust_heatmap",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:trust_heatmap",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:trust_heatmap",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:trust_heatmap",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:trust_heatmap",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz.py:trust_heatmap",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:_arrow",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:_box",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:context_diagram",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:context_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:context_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:context_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:context_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:context_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:context_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:context_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:impact_diagram",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:impact_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:impact_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:layer_diagram",
+   "dst": "fn:tools/viz_code.py:rel_counts",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_code.py:platform_diagram",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:category_chart",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:category_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:category_chart",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz_graph.py:_fit_words",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz_graph.py:_ramp",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz_graph.py:_ramp",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz_graph.py:_ramp",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz_graph.py:_wrap",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz_graph.py:rack_modules",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz_graph.py:rack_modules",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_diagram",
+   "dst": "fn:tools/viz_graph.py:rack_modules",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:rack_modules",
+   "dst": "fn:tools/viz_graph.py:short",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz_graph.py:_fit",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz_graph.py:_natural",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz_graph.py:_natural",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz_graph.py:_natural",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz_graph.py:_reach_dist",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz_graph.py:_wrap",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz_graph.py:short",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz_graph.py:short",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:routing_diagram",
+   "dst": "fn:tools/viz_graph.py:short",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:schema_diagram",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:schema_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:schema_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:schema_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:schema_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:schema_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:schema_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:schema_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:schema_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:schema_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_graph.py:schema_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:naming_heatmap",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:naming_heatmap",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:naming_heatmap",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:naming_heatmap",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:naming_heatmap",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:naming_heatmap",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:naming_heatmap",
+   "dst": "fn:tools/viz_graph.py:_fit",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:naming_heatmap",
+   "dst": "fn:tools/viz_graph.py:_fit",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:naming_heatmap",
+   "dst": "fn:tools/viz_graph.py:_fit",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:naming_heatmap",
+   "dst": "fn:tools/viz_graph.py:_ramp",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:naming_heatmap",
+   "dst": "fn:tools/viz_graph.py:_ramp",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:naming_heatmap",
+   "dst": "fn:tools/viz_graph.py:_ramp",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:naming_heatmap",
+   "dst": "fn:tools/viz_graph.py:_ramp",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:naming_heatmap",
+   "dst": "fn:tools/viz_terms.py:naming_rows",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:naming_rows",
+   "dst": "fn:tools/viz_terms.py:maker_of_manual",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:neighbourhood",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:neighbourhood",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:neighbourhood",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:neighbourhood",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:neighbourhood",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:neighbourhood",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:neighbourhood",
+   "dst": "fn:tools/viz_graph.py:_fit",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:neighbourhood",
+   "dst": "fn:tools/viz_terms.py:_arrowdefs",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:ontology_diagram",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:ontology_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:ontology_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:ontology_diagram",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:ontology_diagram",
+   "dst": "fn:tools/viz_graph.py:_fit",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:ontology_diagram",
+   "dst": "fn:tools/viz_terms.py:_arrowdefs",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:taxonomy_tree",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:taxonomy_tree",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:taxonomy_tree",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:taxonomy_tree",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:taxonomy_tree",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:taxonomy_tree",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:taxonomy_tree",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:taxonomy_tree",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "CALLS"
+  },
+  {
+   "src": "fn:tools/viz_terms.py:taxonomy_tree",
+   "dst": "fn:tools/viz_graph.py:_fit",
+   "rel": "CALLS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/architecture.md#components",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/architecture.md#data-model",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/architecture.md#design-principles",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/architecture.md#lessons-from-the-design",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/architecture.md#shape-of-the-system",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/decisions.md#choices-the-owner-made-that-changed-the-outcome",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/evaluation.md#method",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/evaluation.md#not-yet-done",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/evaluation.md#pitfalls-in-measuring-retrieval",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/evaluation.md#question-being-asked",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/evaluation.md#re-running",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/evaluation.md#results-2026-09-20-17-answerable-questions",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/evaluation.md#what-the-results-say-and-do-not",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/index.md#how-it-was-built",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/index.md#using-this-project-to-learn-or-teach",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/index.md#what-it-deliberately-is-not",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/index.md#what-it-is",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/index.md#why-it-exists",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/limitations.md#content-coverage",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/limitations.md#conversion-quality",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/limitations.md#eurorack-specifications",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/limitations.md#evaluation",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/limitations.md#open-questions",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/limitations.md#process-and-legal",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/limitations.md#terminology",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/runbook.md#add-a-eurorack-module-or-a-case-supply",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/runbook.md#add-a-manual",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/runbook.md#everyday-commands",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/runbook.md#file-map",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/runbook.md#mistakes-that-are-easy-to-make",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/runbook.md#patchbay-app",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/runbook.md#publish-the-site",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/runbook.md#the-knowledge-graph-and-the-power-budget",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/runbook.md#when-something-looks-wrong",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/terminology.md#how-to-change-it",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/terminology.md#lessons-worth-keeping",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/terminology.md#next-step-owner-review",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/terminology.md#the-process-in-order",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/terminology.md#what-was-built",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/verification.md#failures-actually-found",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/verification.md#patterns-in-these-failures",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/verification.md#the-layers",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:docs/about/verification.md#what-confirmed-means-in-the-eurorack-pages",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/build_code_graph.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/build_eurorack.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/build_graph.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/build_public.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/build_site.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/build_terms.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/check_coverage.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/convert_manual.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/draw_devices.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/fetch_specs.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/midi_reference.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/query_graph.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/site_theme.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/validate.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/validate_connections.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/validate_images.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/validate_midi.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/viz.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/viz_code.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/viz_graph.py",
+   "rel": "CONTAINS"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "file:tools/viz_terms.py",
+   "rel": "CONTAINS"
+  },
+  {
    "src": "app:patchbay",
    "dst": "doc:patchbay/README.md#eurorack",
    "rel": "CONTAINS"
@@ -4764,6 +9549,1176 @@
    "rel": "DEFINES"
   },
   {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:docs_site",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:edge",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:inputs",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:inputs_digest",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:js_comments",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:js_functions",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:js_route",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:kb_tools",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:labels_from_html",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:norm",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:patchbay",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:py_module",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:py_strings",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:slug",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:terminology",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:tracked",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "fn:tools/build_code_graph.py:vertex",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_eurorack.py",
+   "dst": "fn:tools/build_eurorack.py:build",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_eurorack.py",
+   "dst": "fn:tools/build_eurorack.py:inputs_digest",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_eurorack.py",
+   "dst": "fn:tools/build_eurorack.py:load_budget",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_eurorack.py",
+   "dst": "fn:tools/build_eurorack.py:resolve",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "fn:tools/build_graph.py:_coerce",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "fn:tools/build_graph.py:check",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "fn:tools/build_graph.py:collect",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "fn:tools/build_graph.py:dump_json",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "fn:tools/build_graph.py:frontmatter",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "fn:tools/build_graph.py:leak_pattern",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "fn:tools/build_graph.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "fn:tools/build_graph.py:power_budget",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "fn:tools/build_graph.py:to_frames",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "fn:tools/build_public.py:code_graph_page",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "fn:tools/build_public.py:context_graph_page",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "fn:tools/build_public.py:fig",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "fn:tools/build_public.py:group_of",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "fn:tools/build_public.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "fn:tools/build_public.py:page",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_site.py",
+   "dst": "fn:tools/build_site.py:collect_sections",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_site.py",
+   "dst": "fn:tools/build_site.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_site.py",
+   "dst": "fn:tools/build_site.py:read_fm",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_site.py",
+   "dst": "fn:tools/build_site.py:write",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "fn:tools/build_terms.py:check",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "fn:tools/build_terms.py:concepts_in",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "fn:tools/build_terms.py:count",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "fn:tools/build_terms.py:fold",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "fn:tools/build_terms.py:is_short_acronym",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "fn:tools/build_terms.py:label_regex",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "fn:tools/build_terms.py:labels_of",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "fn:tools/build_terms.py:load",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "fn:tools/build_terms.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "fn:tools/build_terms.py:matcher",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "fn:tools/build_terms.py:section_text",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/check_coverage.py",
+   "dst": "fn:tools/check_coverage.py:body",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/check_coverage.py",
+   "dst": "fn:tools/check_coverage.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "fn:tools/convert_manual.py:_title_regex",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "fn:tools/convert_manual.py:auto_tags",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "fn:tools/convert_manual.py:clean_page",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "fn:tools/convert_manual.py:describe",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "fn:tools/convert_manual.py:figure_text",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "fn:tools/convert_manual.py:find_heading",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "fn:tools/convert_manual.py:load_pages",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "fn:tools/convert_manual.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "fn:tools/convert_manual.py:norm",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "fn:tools/convert_manual.py:sections_from_headings",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "fn:tools/convert_manual.py:sections_from_outline",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "fn:tools/convert_manual.py:slugify",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "fn:tools/convert_manual.py:write_manual",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:art_cabinet",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:art_computer",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:art_for",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:art_headphones",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:art_keyboard",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:art_pads",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:art_rackcase",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:art_software",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:art_stomp",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:art_string",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:art_strip",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:card",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:case_drawing",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:euro",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:finish",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:h",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:jack",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:knob",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:load_specs",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:panel_knobs",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:render_jpg",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:screw",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:short_name",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:svg",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:text",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "fn:tools/draw_devices.py:wrap",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/fetch_specs.py",
+   "dst": "fn:tools/fetch_specs.py:extract",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/fetch_specs.py",
+   "dst": "fn:tools/fetch_specs.py:fetch",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/fetch_specs.py",
+   "dst": "fn:tools/fetch_specs.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/fetch_specs.py",
+   "dst": "fn:tools/fetch_specs.py:to_text",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/midi_reference.py",
+   "dst": "fn:tools/midi_reference.py:markdown",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:_app_of",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:_code_edges",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:_dominant",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:_family",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:_raw_app_of",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:_raw_context",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:_raw_family",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:bare",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:concept_where",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:cross_concept_where",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:cross_inherits",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:cross_kb_reach",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:cross_midi_conflicts",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:cross_naming",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:cross_source_support",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:cross_term_gaps",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:cross_undocumented",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:cross_unrecorded",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:cross_vocabulary",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:doc_impact",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:feeds",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:inherits",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:kb_reach",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:load",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:midi_conflicts",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:naming",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:reach",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:snapshot_digest",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:source_support",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:term_gaps",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:undocumented",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:unrecorded",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "fn:tools/query_graph.py:vocabulary",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/site_theme.py",
+   "dst": "fn:tools/site_theme.py:versioned",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/validate.py",
+   "dst": "fn:tools/validate.py:err",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/validate.py",
+   "dst": "fn:tools/validate.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/validate.py",
+   "dst": "fn:tools/validate.py:warn",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/validate_connections.py",
+   "dst": "fn:tools/validate_connections.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/validate_connections.py",
+   "dst": "fn:tools/validate_connections.py:norm",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/validate_connections.py",
+   "dst": "fn:tools/validate_connections.py:spec_hp",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/validate_images.py",
+   "dst": "fn:tools/validate_images.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/validate_midi.py",
+   "dst": "fn:tools/validate_midi.py:main",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/validate_midi.py",
+   "dst": "fn:tools/validate_midi.py:norm",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz.py",
+   "dst": "fn:tools/viz.py:_svg",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz.py",
+   "dst": "fn:tools/viz.py:_t",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz.py",
+   "dst": "fn:tools/viz.py:coverage_chart",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz.py",
+   "dst": "fn:tools/viz.py:failure_matrix",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz.py",
+   "dst": "fn:tools/viz.py:pipeline_diagram",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz.py",
+   "dst": "fn:tools/viz.py:power_chart",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz.py",
+   "dst": "fn:tools/viz.py:retrieval_chart",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz.py",
+   "dst": "fn:tools/viz.py:trust_heatmap",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_code.py",
+   "dst": "fn:tools/viz_code.py:_arrow",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_code.py",
+   "dst": "fn:tools/viz_code.py:_box",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_code.py",
+   "dst": "fn:tools/viz_code.py:context_diagram",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_code.py",
+   "dst": "fn:tools/viz_code.py:impact",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_code.py",
+   "dst": "fn:tools/viz_code.py:impact_diagram",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_code.py",
+   "dst": "fn:tools/viz_code.py:layer_diagram",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_code.py",
+   "dst": "fn:tools/viz_code.py:patchbay_subgraph",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_code.py",
+   "dst": "fn:tools/viz_code.py:platform_diagram",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_code.py",
+   "dst": "fn:tools/viz_code.py:rel_counts",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "fn:tools/viz_graph.py:_fit",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "fn:tools/viz_graph.py:_fit_words",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "fn:tools/viz_graph.py:_natural",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "fn:tools/viz_graph.py:_ramp",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "fn:tools/viz_graph.py:_reach_dist",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "fn:tools/viz_graph.py:_wrap",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "fn:tools/viz_graph.py:category_chart",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "fn:tools/viz_graph.py:rack_diagram",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "fn:tools/viz_graph.py:rack_modules",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "fn:tools/viz_graph.py:routing_diagram",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "fn:tools/viz_graph.py:schema_diagram",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "fn:tools/viz_graph.py:short",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_terms.py",
+   "dst": "fn:tools/viz_terms.py:_arrowdefs",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_terms.py",
+   "dst": "fn:tools/viz_terms.py:maker_of_manual",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_terms.py",
+   "dst": "fn:tools/viz_terms.py:naming_heatmap",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_terms.py",
+   "dst": "fn:tools/viz_terms.py:naming_rows",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_terms.py",
+   "dst": "fn:tools/viz_terms.py:neighbourhood",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_terms.py",
+   "dst": "fn:tools/viz_terms.py:ontology_diagram",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/viz_terms.py",
+   "dst": "fn:tools/viz_terms.py:taxonomy_tree",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "doc:docs/about/architecture.md#components",
+   "dst": "file:tools/build_eurorack.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/architecture.md#components",
+   "dst": "file:tools/build_site.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/architecture.md#components",
+   "dst": "file:tools/check_coverage.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/architecture.md#components",
+   "dst": "file:tools/convert_manual.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/architecture.md#components",
+   "dst": "file:tools/fetch_specs.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/architecture.md#components",
+   "dst": "file:tools/validate.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/architecture.md#shape-of-the-system",
+   "dst": "file:tools/build_eurorack.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/architecture.md#shape-of-the-system",
+   "dst": "file:tools/build_site.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/architecture.md#shape-of-the-system",
+   "dst": "file:tools/check_coverage.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/architecture.md#shape-of-the-system",
+   "dst": "file:tools/convert_manual.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/architecture.md#shape-of-the-system",
+   "dst": "file:tools/fetch_specs.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/architecture.md#shape-of-the-system",
+   "dst": "file:tools/validate.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#add-a-eurorack-module-or-a-case-supply",
+   "dst": "file:tools/build_site.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#add-a-eurorack-module-or-a-case-supply",
+   "dst": "file:tools/fetch_specs.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#add-a-manual",
+   "dst": "file:tools/check_coverage.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#add-a-manual",
+   "dst": "file:tools/convert_manual.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#everyday-commands",
+   "dst": "file:tools/build_site.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#everyday-commands",
+   "dst": "file:tools/check_coverage.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#everyday-commands",
+   "dst": "file:tools/convert_manual.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#everyday-commands",
+   "dst": "file:tools/draw_devices.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#everyday-commands",
+   "dst": "file:tools/fetch_specs.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#everyday-commands",
+   "dst": "file:tools/validate.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#everyday-commands",
+   "dst": "file:tools/validate_images.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#file-map",
+   "dst": "file:tools/build_code_graph.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#file-map",
+   "dst": "file:tools/draw_devices.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#file-map",
+   "dst": "file:tools/midi_reference.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#file-map",
+   "dst": "file:tools/site_theme.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#file-map",
+   "dst": "file:tools/viz_code.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#file-map",
+   "dst": "file:tools/viz_graph.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#file-map",
+   "dst": "file:tools/viz_terms.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#publish-the-site",
+   "dst": "file:tools/build_public.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#publish-the-site",
+   "dst": "file:tools/build_site.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#publish-the-site",
+   "dst": "file:tools/check_coverage.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#publish-the-site",
+   "dst": "file:tools/viz.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#the-knowledge-graph-and-the-power-budget",
+   "dst": "file:tools/build_code_graph.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#the-knowledge-graph-and-the-power-budget",
+   "dst": "file:tools/build_graph.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#the-knowledge-graph-and-the-power-budget",
+   "dst": "file:tools/build_public.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#the-knowledge-graph-and-the-power-budget",
+   "dst": "file:tools/build_site.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#the-knowledge-graph-and-the-power-budget",
+   "dst": "file:tools/build_terms.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#the-knowledge-graph-and-the-power-budget",
+   "dst": "file:tools/query_graph.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#the-knowledge-graph-and-the-power-budget",
+   "dst": "file:tools/validate_connections.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#the-knowledge-graph-and-the-power-budget",
+   "dst": "file:tools/validate_midi.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#how-to-change-it",
+   "dst": "file:tools/build_graph.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#how-to-change-it",
+   "dst": "file:tools/build_public.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#how-to-change-it",
+   "dst": "file:tools/build_site.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#how-to-change-it",
+   "dst": "file:tools/build_terms.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#how-to-change-it",
+   "dst": "file:tools/query_graph.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "file:tools/build_graph.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "file:tools/build_public.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#what-was-built",
+   "dst": "file:tools/build_graph.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#what-was-built",
+   "dst": "file:tools/build_terms.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#what-was-built",
+   "dst": "file:tools/query_graph.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#what-was-built",
+   "dst": "file:tools/viz_terms.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/verification.md#the-layers",
+   "dst": "file:tools/check_coverage.py",
+   "rel": "DOCUMENTS"
+  },
+  {
+   "src": "doc:docs/about/verification.md#the-layers",
+   "dst": "file:tools/validate.py",
+   "rel": "DOCUMENTS"
+  },
+  {
    "src": "doc:patchbay/README.md#faceplates-our-own-vectors",
    "dst": "file:patchbay/web/faceplate.js",
    "rel": "DOCUMENTS"
@@ -5349,6 +11304,16 @@
    "rel": "HANDLED_BY"
   },
   {
+   "src": "data:TERMS.yaml",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:VOCAB.yaml",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
    "src": "data:connections.yaml",
    "dst": "system:gear-kb",
    "rel": "PART_OF"
@@ -5359,7 +11324,32 @@
    "rel": "PART_OF"
   },
   {
+   "src": "data:eurorack",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:graph/public/answers.json",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
    "src": "data:graph/public/budget.json",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:graph/public/code.json",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:graph/public/edges.json",
+   "dst": "system:gear-kb",
+   "rel": "PART_OF"
+  },
+  {
+   "src": "data:graph/public/terms.json",
    "dst": "system:gear-kb",
    "rel": "PART_OF"
   },
@@ -5437,6 +11427,66 @@
    "src": "data:tools/manifest.yaml",
    "dst": "system:gear-kb",
    "rel": "PART_OF"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:patchbay/docs/user-guide.md#adding-gear-from-the-palette",
+   "rel": "PUBLISHES"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:patchbay/docs/user-guide.md#arranging-the-canvas",
+   "rel": "PUBLISHES"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:patchbay/docs/user-guide.md#checks",
+   "rel": "PUBLISHES"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:patchbay/docs/user-guide.md#device-settings-and-start-state",
+   "rel": "PUBLISHES"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:patchbay/docs/user-guide.md#editing-a-device-s-jacks",
+   "rel": "PUBLISHES"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:patchbay/docs/user-guide.md#exporting-a-diagram",
+   "rel": "PUBLISHES"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:patchbay/docs/user-guide.md#faceplates-boxes-and-icons",
+   "rel": "PUBLISHES"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:patchbay/docs/user-guide.md#getting-started",
+   "rel": "PUBLISHES"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:patchbay/docs/user-guide.md#patching-cables",
+   "rel": "PUBLISHES"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:patchbay/docs/user-guide.md#placing-jacks-on-a-panel",
+   "rel": "PUBLISHES"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:patchbay/docs/user-guide.md#sessions-and-templates",
+   "rel": "PUBLISHES"
+  },
+  {
+   "src": "app:docs-site",
+   "dst": "doc:patchbay/docs/user-guide.md#the-eurorack-rack",
+   "rel": "PUBLISHES"
   },
   {
    "src": "file:patchbay/tools/build_data.py",
@@ -5559,6 +11609,436 @@
    "rel": "READS"
   },
   {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "data:TERMS.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_eurorack.py",
+   "dst": "data:connections.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_eurorack.py",
+   "dst": "data:eurorack",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_eurorack.py",
+   "dst": "data:graph/public/budget.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_eurorack.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "data:TERMS.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "data:VOCAB.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "data:connections.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "data:docs/manuals",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "data:eurorack",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "data:graph/public/code.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "data:graph/public/terms.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "data:images",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "data:midi_channels.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "data:tools/image_manifest.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "data:tools/manifest.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "data:TERMS.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "data:connections.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "data:docs/manuals",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "data:graph/public/answers.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "data:graph/public/code.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "data:graph/public/edges.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "data:graph/public/terms.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "data:graph/public/vertices.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "data:patchbay/data/gear.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "data:patchbay/icons",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "data:tools/manifest.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_site.py",
+   "dst": "data:VOCAB.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_site.py",
+   "dst": "data:connections.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_site.py",
+   "dst": "data:docs/manuals",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_site.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_site.py",
+   "dst": "data:tools/manifest.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "data:TERMS.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "data:VOCAB.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "data:docs/manuals",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "data:tools/manifest.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/check_coverage.py",
+   "dst": "data:docs/manuals",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/check_coverage.py",
+   "dst": "data:tools/manifest.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "data:VOCAB.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "data:tools/manifest.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "data:connections.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/fetch_specs.py",
+   "dst": "data:eurorack",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/midi_reference.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/midi_reference.py",
+   "dst": "data:midi_channels.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "data:TERMS.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "data:connections.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "data:docs/manuals",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "data:eurorack",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "data:graph/public/code.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "data:graph/public/edges.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "data:graph/public/terms.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "data:graph/public/vertices.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "data:images",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "data:midi_channels.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "data:tools/image_manifest.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "data:tools/manifest.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate.py",
+   "dst": "data:VOCAB.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate.py",
+   "dst": "data:docs/manuals",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate.py",
+   "dst": "data:tools/manifest.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate_connections.py",
+   "dst": "data:connections.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate_connections.py",
+   "dst": "data:docs/manuals",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate_connections.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate_connections.py",
+   "dst": "data:tools/manifest.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate_images.py",
+   "dst": "data:images",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate_images.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate_images.py",
+   "dst": "data:tools/image_manifest.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate_midi.py",
+   "dst": "data:connections.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate_midi.py",
+   "dst": "data:docs/manuals",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate_midi.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate_midi.py",
+   "dst": "data:midi_channels.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/validate_midi.py",
+   "dst": "data:tools/manifest.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/viz.py",
+   "dst": "data:graph/public/budget.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/viz.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/viz_code.py",
+   "dst": "data:docs/manuals",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/viz_code.py",
+   "dst": "data:graph/public/code.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "data:graph/public/edges.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "data:graph/public/vertices.json",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "data:inventory.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/viz_terms.py",
+   "dst": "data:TERMS.yaml",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/viz_terms.py",
+   "dst": "data:docs/manuals",
+   "rel": "READS"
+  },
+  {
+   "src": "file:tools/viz_terms.py",
+   "dst": "data:graph/public/terms.json",
+   "rel": "READS"
+  },
+  {
    "src": "fn:patchbay/web/app.js:boot",
    "dst": "route:GET /api/sessions/:id",
    "rel": "REQUESTS"
@@ -5676,6 +12156,16 @@
    "mode": "website (static)"
   },
   {
+   "src": "app:docs-site",
+   "dst": "system:gear-kb",
+   "rel": "USES"
+  },
+  {
+   "src": "app:kb-tools",
+   "dst": "system:gear-kb",
+   "rel": "USES"
+  },
+  {
    "src": "app:patchbay",
    "dst": "system:gear-kb",
    "rel": "USES"
@@ -5684,6 +12174,748 @@
    "src": "app:patchbay",
    "dst": "system:patchbay",
    "rel": "USES"
+  },
+  {
+   "src": "doc:docs/about/decisions.md#choices-the-owner-made-that-changed-the-outcome",
+   "dst": "term:clock-pulse",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "clock"
+  },
+  {
+   "src": "doc:docs/about/evaluation.md#pitfalls-in-measuring-retrieval",
+   "dst": "term:envelope",
+   "rel": "USES_TERM",
+   "count": 2,
+   "label": "EG; envelope"
+  },
+  {
+   "src": "doc:docs/about/evaluation.md#pitfalls-in-measuring-retrieval",
+   "dst": "term:headphone-out",
+   "rel": "USES_TERM",
+   "count": 2,
+   "label": "headphone; phones"
+  },
+  {
+   "src": "doc:docs/about/evaluation.md#what-the-results-say-and-do-not",
+   "dst": "term:cv-out",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "CV output"
+  },
+  {
+   "src": "doc:docs/about/evaluation.md#what-the-results-say-and-do-not",
+   "dst": "term:velocity",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "velocity"
+  },
+  {
+   "src": "doc:docs/about/limitations.md#conversion-quality",
+   "dst": "term:sequencer",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "sequencer"
+  },
+  {
+   "src": "doc:docs/about/limitations.md#eurorack-specifications",
+   "dst": "term:lfo",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "LFO"
+  },
+  {
+   "src": "doc:docs/about/limitations.md#eurorack-specifications",
+   "dst": "term:vcf",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "VCF"
+  },
+  {
+   "src": "doc:docs/about/limitations.md#terminology",
+   "dst": "term:release",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "release"
+  },
+  {
+   "src": "doc:docs/about/limitations.md#terminology",
+   "dst": "term:trigger",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "trigger"
+  },
+  {
+   "src": "doc:docs/about/runbook.md#mistakes-that-are-easy-to-make",
+   "dst": "term:audio-in",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "line in"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#lessons-worth-keeping",
+   "dst": "term:amplifier",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "amplifier"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#lessons-worth-keeping",
+   "dst": "term:velocity",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "velocity"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#next-step-owner-review",
+   "dst": "term:automation",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "automation"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#next-step-owner-review",
+   "dst": "term:bpm",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "BPM"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#next-step-owner-review",
+   "dst": "term:flam",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "flam"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#next-step-owner-review",
+   "dst": "term:glide",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "glide"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#next-step-owner-review",
+   "dst": "term:parameter-lock",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "parameter lock"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#next-step-owner-review",
+   "dst": "term:probability",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "probability"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#next-step-owner-review",
+   "dst": "term:ratchet",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "ratchet"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#next-step-owner-review",
+   "dst": "term:retrig",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "retrig"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#next-step-owner-review",
+   "dst": "term:roll",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "roll"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#next-step-owner-review",
+   "dst": "term:slide",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "slide"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#next-step-owner-review",
+   "dst": "term:tempo",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "tempo"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#next-step-owner-review",
+   "dst": "term:trig",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "trig"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#next-step-owner-review",
+   "dst": "term:trig-condition",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "trig condition"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:amplifier",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "amplifier"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:bpm",
+   "rel": "USES_TERM",
+   "count": 2,
+   "label": "BPM"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:envelope",
+   "rel": "USES_TERM",
+   "count": 2,
+   "label": "EG; envelope generator"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:gate-length",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "gate length"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:gate-out",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "gate output"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:high-pass",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "high-pass"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:lfo",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "LFO"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:oscillator",
+   "rel": "USES_TERM",
+   "count": 3,
+   "label": "oscillator"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:release",
+   "rel": "USES_TERM",
+   "count": 3,
+   "label": "release"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:resonance",
+   "rel": "USES_TERM",
+   "count": 4,
+   "label": "emphasis; resonance"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:sub-oscillator",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "sub oscillator"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:tempo",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "tempo"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:trig",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "trig"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:trigger",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "trigger"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:vco",
+   "rel": "USES_TERM",
+   "count": 2,
+   "label": "VCO"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:velocity",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "velocity"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#pitfalls-and-what-caught-each",
+   "dst": "term:waveform",
+   "rel": "USES_TERM",
+   "count": 3,
+   "label": "wave; waveform"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#the-process-in-order",
+   "dst": "term:envelope",
+   "rel": "USES_TERM",
+   "count": 2,
+   "label": "EG; envelope"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#the-process-in-order",
+   "dst": "term:high-pass",
+   "rel": "USES_TERM",
+   "count": 2,
+   "label": "HPF; highpass"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#the-process-in-order",
+   "dst": "term:trig",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "trig"
+  },
+  {
+   "src": "doc:docs/about/terminology.md#what-was-built",
+   "dst": "term:cutoff",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "cutoff"
+  },
+  {
+   "src": "doc:docs/about/verification.md#failures-actually-found",
+   "dst": "term:bpm",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "BPM"
+  },
+  {
+   "src": "doc:docs/about/verification.md#failures-actually-found",
+   "dst": "term:gate-length",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "gate length"
+  },
+  {
+   "src": "doc:docs/about/verification.md#failures-actually-found",
+   "dst": "term:headphone-out",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "headphone output"
+  },
+  {
+   "src": "doc:patchbay/README.md#eurorack",
+   "dst": "term:clock-pulse",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "clock"
+  },
+  {
+   "src": "doc:patchbay/README.md#eurorack",
+   "dst": "term:control-voltage",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "CV"
+  },
+  {
+   "src": "doc:patchbay/README.md#eurorack",
+   "dst": "term:line-out",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "line out"
+  },
+  {
+   "src": "doc:patchbay/README.md#eurorack",
+   "dst": "term:sync-in",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "clock in"
+  },
+  {
+   "src": "doc:patchbay/README.md#eurorack",
+   "dst": "term:sync-out",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "sync out"
+  },
+  {
+   "src": "doc:patchbay/README.md#session-file-format",
+   "dst": "term:bpm",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "BPM"
+  },
+  {
+   "src": "doc:patchbay/README.md#session-file-format",
+   "dst": "term:clock-pulse",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "clock"
+  },
+  {
+   "src": "doc:patchbay/README.md#session-file-format",
+   "dst": "term:midi-in",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "MIDI IN"
+  },
+  {
+   "src": "doc:patchbay/README.md#session-file-format",
+   "dst": "term:midi-out",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "MIDI OUT"
+  },
+  {
+   "src": "doc:patchbay/README.md#session-file-format",
+   "dst": "term:preset",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "preset"
+  },
+  {
+   "src": "doc:patchbay/README.md#using-it",
+   "dst": "term:bank",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "bank"
+  },
+  {
+   "src": "doc:patchbay/README.md#using-it",
+   "dst": "term:bpm",
+   "rel": "USES_TERM",
+   "count": 2,
+   "label": "BPM"
+  },
+  {
+   "src": "doc:patchbay/README.md#using-it",
+   "dst": "term:clock-pulse",
+   "rel": "USES_TERM",
+   "count": 3,
+   "label": "clock"
+  },
+  {
+   "src": "doc:patchbay/README.md#using-it",
+   "dst": "term:control-voltage",
+   "rel": "USES_TERM",
+   "count": 3,
+   "label": "CV"
+  },
+  {
+   "src": "doc:patchbay/README.md#using-it",
+   "dst": "term:kit",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "kit"
+  },
+  {
+   "src": "doc:patchbay/README.md#using-it",
+   "dst": "term:midi-in",
+   "rel": "USES_TERM",
+   "count": 2,
+   "label": "MIDI IN"
+  },
+  {
+   "src": "doc:patchbay/README.md#using-it",
+   "dst": "term:mute",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "mute"
+  },
+  {
+   "src": "doc:patchbay/README.md#using-it",
+   "dst": "term:preset",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "preset"
+  },
+  {
+   "src": "doc:patchbay/README.md#using-it",
+   "dst": "term:tempo",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "tempo"
+  },
+  {
+   "src": "doc:patchbay/README.md#using-it",
+   "dst": "term:usb-port",
+   "rel": "USES_TERM",
+   "count": 3,
+   "label": "USB"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#device-settings-and-start-state",
+   "dst": "term:preset",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "preset"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#patching-cables",
+   "dst": "term:clock-pulse",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "clock"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#patching-cables",
+   "dst": "term:control-voltage",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "CV"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#patching-cables",
+   "dst": "term:sync-signal",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "sync"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#patching-cables",
+   "dst": "term:trigger",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "trigger"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#patching-cables",
+   "dst": "term:usb-port",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "USB"
+  },
+  {
+   "src": "doc:patchbay/docs/user-guide.md#sessions-and-templates",
+   "dst": "term:bpm",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "BPM"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "term:control-voltage",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "CV"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "term:midi-in",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "MIDI IN"
+  },
+  {
+   "src": "file:patchbay/tools/build_data.py",
+   "dst": "term:midi-thru",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "MIDI THRU"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "term:clock-pulse",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "clock"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "term:cv-in",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "CV in"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "term:gate-out",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "gate output"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "term:lfo",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "LFO"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "term:midi-out",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "MIDI OUT"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "term:pitch-cv",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "pitch CV"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "term:sync-in",
+   "rel": "USES_TERM",
+   "count": 3,
+   "label": "sync in"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "term:tempo",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "tempo"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "term:trig",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "trig"
+  },
+  {
+   "src": "file:patchbay/tools/extract_ports.py",
+   "dst": "term:trigger",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "trigger"
+  },
+  {
+   "src": "file:patchbay/tools/patchbay.py",
+   "dst": "term:bpm",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "BPM"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "term:clock-pulse",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "clock"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "term:control-voltage",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "CV"
+  },
+  {
+   "src": "file:patchbay/web/app.js",
+   "dst": "term:din-sync",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "DIN sync"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "term:sequencer",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "sequencer"
+  },
+  {
+   "src": "file:tools/build_public.py",
+   "dst": "term:clock-pulse",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "clock"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "term:control-change",
+   "rel": "USES_TERM",
+   "count": 3,
+   "label": "CC"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "term:control-voltage",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "CV"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "term:envelope",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "EG"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "term:ts",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "TS"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "term:keyboard",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "keyboard"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "term:keyboard",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "keyboard"
+  },
+  {
+   "src": "file:tools/validate_connections.py",
+   "dst": "term:main-out",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "main out"
+  },
+  {
+   "src": "file:tools/validate_midi.py",
+   "dst": "term:midi-thru",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "thru"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "term:clock-pulse",
+   "rel": "USES_TERM",
+   "count": 2,
+   "label": "clock"
+  },
+  {
+   "src": "file:tools/viz_graph.py",
+   "dst": "term:usb-port",
+   "rel": "USES_TERM",
+   "count": 2,
+   "label": "USB"
   },
   {
    "src": "file:patchbay/tools/build_data.py",
@@ -5713,6 +12945,46 @@
   {
    "src": "file:patchbay/tools/trace_icons.py",
    "dst": "data:patchbay/icons",
+   "rel": "WRITES"
+  },
+  {
+   "src": "file:tools/build_code_graph.py",
+   "dst": "data:graph/public/code.json",
+   "rel": "WRITES"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "data:graph/public/budget.json",
+   "rel": "WRITES"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "data:graph/public/edges.json",
+   "rel": "WRITES"
+  },
+  {
+   "src": "file:tools/build_graph.py",
+   "dst": "data:graph/public/vertices.json",
+   "rel": "WRITES"
+  },
+  {
+   "src": "file:tools/build_terms.py",
+   "dst": "data:graph/public/terms.json",
+   "rel": "WRITES"
+  },
+  {
+   "src": "file:tools/convert_manual.py",
+   "dst": "data:docs/manuals",
+   "rel": "WRITES"
+  },
+  {
+   "src": "file:tools/draw_devices.py",
+   "dst": "data:images",
+   "rel": "WRITES"
+  },
+  {
+   "src": "file:tools/query_graph.py",
+   "dst": "data:graph/public/answers.json",
    "rel": "WRITES"
   }
  ]

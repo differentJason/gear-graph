@@ -151,15 +151,37 @@ def section_text(manual_dir):
     return "\n".join(parts)
 
 
-def count(t, manuals):
-    """Per manual, per label: whole-word matches, leftmost-longest, so overlapping labels are never double-counted.
-    Case-insensitive except for all-capitals abbreviations. A stop phrase (a product feature's proper name, like the RD-9's
-    'Wave Designer') is matched like a label so that its words are consumed, and its count is thrown away."""
+def matcher(t):
+    """The one label matcher every source is read with (manuals here; app docs, UI labels and code strings in
+    build_code_graph.py): whole-word, leftmost-longest, case-insensitive except all-capitals abbreviations, homographs
+    and stop phrases consumed and discarded. Returns (compiled regex, group name -> label, label -> concept id or None)."""
     labels = ([(lab, c["id"]) for c in t["concepts"] for lab in labels_of(c)] + [(h["label"], None) for h in t.get("homographs", [])]
               + [(sp["phrase"], None) for sp in t.get("stop_phrases", [])])     # matched first when longer, then discarded
     labels.sort(key=lambda x: -len(x[0]))                         # longest first: the alternation tries them in order
     groups = {f"g{i}": lab for i, (lab, _) in enumerate(labels)}
     rx = re.compile("|".join(f"(?P<g{i}>{label_regex(lab)})" for i, (lab, _) in enumerate(labels)))
+    concept_of = {}
+    for lab, cid in labels:
+        concept_of.setdefault(lab, cid)
+    return rx, groups, concept_of
+
+
+def concepts_in(text, m):
+    """Counter of (concept id, label) found in text, using a matcher() result. Discarded matches are dropped."""
+    rx, groups, concept_of = m
+    out = Counter()
+    for hit in rx.finditer(text):
+        lab = groups[hit.lastgroup]
+        if concept_of.get(lab):
+            out[(concept_of[lab], lab)] += 1
+    return out
+
+
+def count(t, manuals):
+    """Per manual, per label: whole-word matches, leftmost-longest, so overlapping labels are never double-counted.
+    Case-insensitive except for all-capitals abbreviations. A stop phrase (a product feature's proper name, like the RD-9's
+    'Wave Designer') is matched like a label so that its words are consumed, and its count is thrown away."""
+    rx, groups, _ = matcher(t)
     counts, sizes = defaultdict(Counter), {}
     for m in manuals:
         d = ROOT / "docs" / "manuals" / m["id"]

@@ -1,17 +1,23 @@
 #!/usr/bin/env python3
-"""Graph the Patchbay app's CODE against its USER DOCUMENTATION and the knowledge-base DATA it reads/writes.
+"""Graph several apps' CODE against their DOCUMENTATION, the DATA they read/write, and the shared TERMINOLOGY.
 
     .venv/bin/python tools/build_code_graph.py          # writes graph/public/code.json; exit 1 on any ERROR
 
-Reads patchbay/ only (web/*.js, web/index.html, tools/*.py, docs/user-guide.md, README.md). Produces vertices and typed
-edges that tools/build_graph.py merges into the main knowledge graph, where each dataset vertex is tied to the
-knowledge-graph vertices it defines (inventory.yaml -> item:*, and so on).
+Apps (same schema for each): the Patchbay (patchbay/: web/*.js, web/index.html, tools/*.py, docs/user-guide.md,
+README.md) and the knowledge base's own build tools (tools/*.py, documented by docs/about/runbook.md and
+architecture.md). Produces vertices and typed edges that tools/build_graph.py merges into the main knowledge graph,
+where each dataset vertex is tied to the knowledge-graph vertices it defines (inventory.yaml -> item:*, and so on).
+The apps join each other where they share a dataset.
+
+Terminology: every doc section, button label and code file's string literals are read with the SAME label matcher the
+manuals are (build_terms.matcher), giving USES_TERM edges to the concepts of TERMS.yaml. Manuals from many makers, app
+docs and code then hang off one shared vocabulary.
 
 Vertices: app, code_file, function, ui_action, api_route, doc_section, dataset, system
 Edges   : CONTAINS (app->code_file, app->doc_section), DEFINES (code_file->function), CALLS (function->function),
           HANDLED_BY (ui_action->function), REQUESTS (function->api_route), SERVED_BY (api_route->function),
           READS / WRITES (code_file->dataset), DOCUMENTS (doc_section->ui_action|function|code_file),
-          PART_OF (dataset->system), USES (app->system)
+          PART_OF (dataset->system), USES (app->system), USES_TERM (doc_section|ui_action|code_file->term)
 
 How docs link to code: every user-guide section ends with an HTML comment `<!-- covers: save saveas fn:addNode -->`
 naming the buttons (data-act ids) and functions it documents. README sections link to the code files they name.
@@ -54,6 +60,13 @@ DATASETS = {
     "templates": ("data:patchbay/templates.yaml", "patchbay", r"templates\.yaml"),
     "device_fields": ("data:patchbay/device_fields.yaml", "patchbay", r"device_fields\.yaml"),
     "icons": ("data:patchbay/icons", "patchbay", r"ICONS|[\"']icons[\"']"),
+    "terms_yaml": ("data:TERMS.yaml", "gear-kb", r"TERMS\.yaml|[\"']TERMS"),
+    "vocab": ("data:VOCAB.yaml", "gear-kb", r"VOCAB\.yaml"),
+    "terms_json": ("data:graph/public/terms.json", "gear-kb", r"terms\.json"),
+    "code_json": ("data:graph/public/code.json", "gear-kb", r"code\.json"),
+    "graph_edges": ("data:graph/public/edges.json", "gear-kb", r"edges\.json"),
+    "answers": ("data:graph/public/answers.json", "gear-kb", r"answers\.json"),
+    "eurorack_yaml": ("data:eurorack", "gear-kb", r"[\"']eurorack[\"']\s*/\s*[\"'](overrides|sources|attestations)"),
 }
 # What each module WRITES (declared, then verified against the code: the dataset must appear AND a write call must).
 WRITES = {
@@ -63,7 +76,22 @@ WRITES = {
     "tools/patchbay.py": ["sessions", "ports_edits", "panels_edits"],
 }
 WRITE_CALLS = re.compile(r"write_text|atomic_write|\.dump\(|safe_dump|shutil\.(copy|move)|\.replace\(|rename\(")
+KB_WRITES = {   # the knowledge-base tools app, same rule
+    "tools/build_terms.py": ["terms_json"],
+    "tools/build_code_graph.py": ["code_json"],
+    "tools/build_graph.py": ["graph_vertices", "graph_edges", "graph_budget"],
+    "tools/query_graph.py": ["answers"],
+    "tools/draw_devices.py": ["drawings"],
+    "tools/convert_manual.py": ["manual_sections"],
+}
 SYSTEMS = {"gear-kb": "Gear knowledge base (this repository)", "patchbay": "Patchbay app state"}
+TEXT = {}                                                         # vertex id -> text read for terminology
+# Concepts whose label is also everyday English. In a sequencer manual "fill", "pattern", "chain", "song", "step" and
+# "project" are gear terms; in a developer's docs they are ordinary words ("fill the field", "a regex pattern", "this
+# project"; likewise "tie the graph back", a colour "accent", "type to filter the list"). So outside the manuals they are
+# not matched: the same word means different things to different authors.
+AMBIGUOUS_OUTSIDE_MANUALS = {"fill", "pattern", "project", "song", "chain", "step", "tie", "accent", "filter"}
+SKIPPED = {}
 
 errors, warnings = [], []
 V, E = {}, []
@@ -137,15 +165,10 @@ def py_module(rel):
     return src, funcs
 
 
-def main():
+def patchbay():
     app = vertex("app:patchbay", "app", "Patchbay", path="patchbay/")
-    for sid, name in SYSTEMS.items():
-        vertex(f"system:{sid}", "system", name)
     edge(app, "system:gear-kb", "USES")
     edge(app, "system:patchbay", "USES")
-    for key, (vid, system, _) in DATASETS.items():
-        vertex(vid, "dataset", vid.split(":", 1)[1], system=system)
-        edge(vid, f"system:{system}", "PART_OF")
 
     fn_ids = {}                                                   # bare name -> vertex id (JS and Python kept apart)
     # ---- JavaScript ----
@@ -160,6 +183,7 @@ def main():
             edge(fid, vid, "DEFINES")
             fn_ids[("js", name)] = vid
             js_funcs_all[name] = (rel, f)
+        TEXT[fid] = js_comments(text)
         for key, (vid, _, pat) in DATASETS.items():
             if key == "gear_json" and re.search(pat, text):
                 edge(fid, vid, "READS")                           # static mode loads gear.json beside the page
@@ -183,6 +207,7 @@ def main():
         act = m.group(1)
         lab = sorted(labels.get(act, []))
         aid = vertex(f"action:{act}", "ui_action", act, label=" | ".join(lab))
+        TEXT[aid] = " ".join(lab)
         actions[act] = lab
         handlers = sorted(set(re.findall(r"(?<![\w.])([A-Za-z_]\w*)\s*\(", seg)) & set(js_funcs_all))
         for h in handlers or ["onAction"]:
@@ -192,7 +217,7 @@ def main():
 
     # ---- Python ----
     py_all = {}
-    for p in sorted((APP / "tools").glob("*.py")):
+    for p in tracked("patchbay/tools/*.py"):
         rel = f"tools/{p.name}"
         src, funcs = py_module(rel)
         fid = vertex(f"file:patchbay/{rel}", "code_file", f"patchbay/{rel}", language="python")
@@ -202,6 +227,7 @@ def main():
             edge(fid, vid, "DEFINES")
             fn_ids[("py", rel, name)] = vid
         py_all[rel] = (src, funcs)
+        TEXT[fid] = py_strings(src)
         for key, (vid, _, pat) in DATASETS.items():
             if key == "gear_json" and rel == "tools/build_data.py":
                 continue                                          # build_data only WRITES gear.json
@@ -277,6 +303,7 @@ def main():
         for title, sec in zip(parts[1::2], parts[2::2]):
             did = vertex(f"doc:patchbay/{docrel}#{slug(title)}", "doc_section", title, doc=f"patchbay/{docrel}", audience=kind)
             edge(app, did, "CONTAINS")
+            TEXT[did] = re.sub(r"<!--.*?-->", "", title + "\n" + sec, flags=re.S)
             for c in re.findall(r"<!--\s*covers:(.*?)-->", sec, re.S):
                 for tok in c.split():
                     if tok.startswith("fn:"):
@@ -305,11 +332,163 @@ def main():
                         errors.append(f"README '{title}' names `{path}`, which does not exist")
     for act in sorted(set(actions) - set(covered)):
         errors.append(f"UI action '{act}' is not covered by any user-guide section")
+    return actions, covered
+
+
+def tracked(pattern):
+    """Only files git tracks: a git-ignored file (e.g. a private local-only helper) must never reach the public graph,
+    and the input digest must be the same on a fresh clone."""
+    import subprocess
+    try:
+        out = subprocess.run(["git", "ls-files", "--", pattern], cwd=ROOT, capture_output=True, text=True, check=True).stdout
+        return sorted(ROOT / f for f in out.split())
+    except (OSError, subprocess.CalledProcessError):
+        return sorted(ROOT.glob(pattern))
+
+
+def py_strings(src):
+    """What a Python module says about itself: docstrings and comments. Not other string literals: code strings are
+    mostly machinery (CSS 'fill', format keys), which would read as false terminology."""
+    tree = ast.parse(src)
+    docs = [ast.get_docstring(n) or "" for n in ast.walk(tree)
+            if isinstance(n, (ast.Module, ast.ClassDef, ast.FunctionDef, ast.AsyncFunctionDef))]
+    comments = re.findall(r"(?m)#\s?(.*)$", src)
+    return "\n".join(docs + comments)
+
+
+def js_comments(text):
+    """What a JavaScript file says about itself: its comments."""
+    return "\n".join(re.findall(r"/\*(.*?)\*/", text, re.S) + re.findall(r"(?m)(?<![:\"'])//\s?(.*)$", text))
+
+
+def kb_tools():
+    """Second app, same schema: the knowledge base's own build tools and their operator docs."""
+    app = vertex("app:kb-tools", "app", "Knowledge-base build tools", path="tools/")
+    edge(app, "system:gear-kb", "USES")
+    mods = {p.stem: p for p in tracked("tools/*.py")}
+    fn, trees = {}, {}
+    for stem, p in mods.items():
+        rel = f"tools/{p.name}"
+        src = p.read_text(encoding="utf-8")
+        tree = ast.parse(src)
+        trees[stem] = (rel, src, tree)
+        fid = vertex(f"file:{rel}", "code_file", rel, language="python")
+        edge(app, fid, "CONTAINS")
+        TEXT[fid] = py_strings(src)
+        for node in tree.body:
+            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                fn[(stem, node.name)] = vertex(f"fn:{rel}:{node.name}", "function", node.name, language="python", line=node.lineno)
+                edge(fid, fn[(stem, node.name)], "DEFINES")
+        if rel == "tools/build_code_graph.py":                  # its own source names every dataset pattern
+            edge(fid, DATASETS["terms_yaml"][0], "READS")
+            continue_scan = False
+        else:
+            continue_scan = True
+        for key, (vid, _, pat) in DATASETS.items():
+            if continue_scan and re.search(pat, src) and key not in KB_WRITES.get(rel, []):
+                edge(fid, vid, "READS")
+        for key in KB_WRITES.get(rel, []):
+            vid, _, pat = DATASETS[key]
+            if not (re.search(pat, src) and WRITE_CALLS.search(src)):
+                errors.append(f"{rel}: declared to write {vid} but the code shows no such write")
+            edge(fid, vid, "WRITES")
+    for stem, (rel, src, tree) in trees.items():
+        alias, names = {}, {}                                     # import build_eurorack as be / from viz import _svg
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Import):
+                for a in node.names:
+                    if a.name in mods:
+                        alias[a.asname or a.name] = a.name
+            elif isinstance(node, ast.ImportFrom) and node.module in mods:
+                for a in node.names:
+                    names[a.asname or a.name] = (node.module, a.name)
+        for node in tree.body:
+            if not isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                continue
+            for c in ast.walk(node):
+                if not isinstance(c, ast.Call):
+                    continue
+                f, tgt = c.func, None
+                if isinstance(f, ast.Name):
+                    tgt = fn.get((stem, f.id)) if f.id != node.name else None
+                    tgt = tgt or (fn.get(names[f.id]) if f.id in names else None)
+                elif isinstance(f, ast.Attribute) and isinstance(f.value, ast.Name) and f.value.id in alias:
+                    tgt = fn.get((alias[f.value.id], f.attr))
+                if tgt:
+                    edge(fn[(stem, node.name)], tgt, "CALLS")
+    return None
+
+
+def docs_site():
+    """Third app: the documentation site itself. It CONTAINS every docs/about page section, is BUILT_BY the site
+    builders (code of the kb-tools app), PUBLISHES the Patchbay's user guide, and its sections DOCUMENT the code of the
+    other apps. Documentation is one more app in the ecosystem, with the same edges as any other."""
+    app = vertex("app:docs-site", "app", "Documentation site", path="docs/about/")
+    edge(app, "system:gear-kb", "USES")
+    for b in ("tools/build_site.py", "tools/build_public.py"):
+        edge(app, f"file:{b}", "BUILT_BY")
+    for v in list(V.values()):
+        if v["type"] == "doc_section" and v.get("doc") == f"patchbay/{GUIDE}":
+            edge(app, v["id"], "PUBLISHES")
+    tools = {p.stem for p in tracked("tools/*.py")}
+    pb_files = {v["name"] for v in V.values() if v["type"] == "code_file" and v["name"].startswith("patchbay/")}
+    for page in tracked("docs/about/*.md"):
+        docrel = f"docs/about/{page.name}"
+        text = page.read_text(encoding="utf-8")
+        if "content_status: generated" in text[:400]:
+            continue                                              # generated pages (status.md) are outputs, not docs
+        parts = re.split(r"^## (.+)$", text, flags=re.M)
+        for title, sec in zip(parts[1::2], parts[2::2]):
+            did = vertex(f"doc:{docrel}#{slug(title)}", "doc_section", title, doc=docrel, audience="operator")
+            edge(app, did, "CONTAINS")
+            TEXT[did] = title + "\n" + sec
+            for name in sorted(set(re.findall(r"(?<![\w/])(?:tools/)?([a-z_]+)\.py\b", sec))):
+                if name in tools:
+                    edge(did, f"file:tools/{name}.py", "DOCUMENTS")
+            for path in sorted(set(re.findall(r"patchbay/(?:web|tools)/[\w.-]+", sec))):
+                if path in pb_files:
+                    edge(did, f"file:{path}", "DOCUMENTS")
+    tool_files = {f"tools/{t}.py" for t in tools}
+    return sorted(f for f in tool_files if not any(e["rel"] == "DOCUMENTS" and e["dst"] == f"file:{f}" for e in E))
+
+
+def terminology():
+    """USES_TERM edges from docs, button labels and code strings to TERMS.yaml concepts, with the manuals' matcher."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    import build_terms
+    m = build_terms.matcher(build_terms.load())
+    for vid, text in TEXT.items():
+        per = {}
+        for (cid, lab), n in build_terms.concepts_in(text, m).items():
+            if cid in AMBIGUOUS_OUTSIDE_MANUALS:
+                SKIPPED[cid] = SKIPPED.get(cid, 0) + n
+                continue
+            c, labs = per.get(cid, (0, set()))
+            per[cid] = (c + n, labs | {lab})
+        for cid, (n, labs) in sorted(per.items()):
+            edge(vid, f"term:{cid}", "USES_TERM", count=n, label="; ".join(sorted(labs)))
+
+
+def inputs():
+    return sorted([*(APP / r for r in JS_FILES), APP / "web/index.html", *tracked("patchbay/tools/*.py"), APP / GUIDE,
+                   APP / README, *tracked("tools/*.py"), *tracked("docs/about/*.md"), ROOT / "TERMS.yaml"])
+
+
+def main():
+    app = "app:patchbay"
+    for sid, name in SYSTEMS.items():
+        vertex(f"system:{sid}", "system", name)
+    for key, (vid, system, _) in DATASETS.items():
+        vertex(vid, "dataset", vid.split(":", 1)[1], system=system)
+        edge(vid, f"system:{system}", "PART_OF")
+    actions, covered = patchbay()
+    kb_tools()
+    undocumented_tools = docs_site()
+    terminology()
 
     # ---- output ----
-    inputs = sorted([*(APP / r for r in JS_FILES), APP / "web/index.html", *(APP / "tools").glob("*.py"),
-                     APP / GUIDE, APP / README])
-    digest = hashlib.sha256(b"".join(p.read_bytes() for p in inputs)).hexdigest()
+    ins = inputs()
+    digest = hashlib.sha256(b"".join(p.read_bytes() for p in ins)).hexdigest()
     counts = {}
     for v in V.values():
         counts[v["type"]] = counts.get(v["type"], 0) + 1
@@ -318,7 +497,10 @@ def main():
         rels[e["rel"]] = rels.get(e["rel"], 0) + 1
     OUT.write_text(json.dumps({
         "generated_by": "tools/build_code_graph.py", "inputs_sha256": digest,
-        "inputs": [str(p.relative_to(ROOT)) for p in inputs],
+        "inputs": [str(p.relative_to(ROOT)) for p in ins],
+        "apps": sorted(v["id"] for v in V.values() if v["type"] == "app"),
+        "tools_without_operator_docs": undocumented_tools,
+        "terminology": {"ambiguous_outside_manuals": sorted(AMBIGUOUS_OUTSIDE_MANUALS), "skipped_matches": dict(sorted(SKIPPED.items()))},
         "counts": {"vertices": counts, "edges": rels},
         "coverage": {a: covered.get(a, []) for a in sorted(actions)},
         "vertices": sorted(V.values(), key=lambda v: v["id"]),
@@ -329,15 +511,14 @@ def main():
     for e in errors:
         print("ERROR  ", e)
     print(f"code graph: {len(V)} vertices {dict(sorted(counts.items()))}, {len(E)} edges {dict(sorted(rels.items()))}")
-    print(f"{len(actions)} UI actions, {len(covered)} covered by the user guide; {len(errors)} error(s), {len(warnings)} warning(s)")
+    print(f"{len(actions)} UI actions, {len(covered)} covered by the user guide; tool modules without operator docs: "
+          f"{len(undocumented_tools)}; {len(errors)} error(s), {len(warnings)} warning(s)")
     sys.exit(1 if errors else 0)
 
 
 def inputs_digest():
     """Same digest main() writes, for build_graph.py's staleness check."""
-    inputs = sorted([*(APP / r for r in JS_FILES), APP / "web/index.html", *(APP / "tools").glob("*.py"),
-                     APP / GUIDE, APP / README])
-    return hashlib.sha256(b"".join(p.read_bytes() for p in inputs)).hexdigest()
+    return hashlib.sha256(b"".join(p.read_bytes() for p in inputs())).hexdigest()
 
 
 if __name__ == "__main__":

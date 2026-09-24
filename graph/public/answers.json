@@ -1,6 +1,6 @@
 {
  "generated_by": "tools/query_graph.py",
- "graph_sha256": "b578b6b2298638c2a3d57af6d349f317484ae912d44be396d0dcd0df38b6344b",
+ "graph_sha256": "034cd96342456dc181fb341545b2562c6e3efe2abd4bd4e334ada3e32fb3303f",
  "answers": [
   {
    "id": "q1",
@@ -186,6 +186,51 @@
     "cross": "pass"
    },
    "note": "The join between the app graph and the knowledge graph: a change to one of these files reaches the app through these edges. Cross-checked by counting the YAML files directly."
+  },
+  {
+   "id": "q13",
+   "question": "Where is clock and sync covered: how many manuals, which sections of each app's docs, and which code?",
+   "answer": [
+    "30 manuals",
+    "Documentation site docs: Choices the owner made that changed the outcome",
+    "Patchbay docs: Eurorack, Patching cables, Session file format, Using it",
+    "code: patchbay/tools/extract_ports.py, patchbay/web/app.js, tools/build_public.py, tools/viz_graph.py"
+   ],
+   "checks": {
+    "cross": "pass"
+   },
+   "note": "The concept and every narrower kind (MIDI clock, DIN sync, clock pulse). Cross-checked from terms.json, TERMS.yaml and code.json directly."
+  },
+  {
+   "id": "q14",
+   "question": "Which words do the manufacturers use for clock and sync, and which words do our apps use?",
+   "answer": [
+    "'clock': After Later Audio, Akai Professional, Antumbra, Arturia, Behringer, Cosmotronic, Cre8audio, Donner, Dreadbox, Electro-Harmonix, Elektron, Intellijel, Jake's Custom Shop, Korg, Roland, Sonicware, Tiptop Audio, Yamaha",
+    "'clock pulse': Arturia, Electro-Harmonix, Korg",
+    "'din sync': Arturia, Elektron",
+    "'midi clock': Akai Professional, Arturia, Behringer, Cre8audio, Dreadbox, Electro-Harmonix, Elektron, Korg, Roland, Sonicware",
+    "'sync': After Later Audio, Akai Professional, Arturia, Behringer, Cre8audio, Donner, Dreadbox, Electro-Harmonix, Elektron, Korg, Roland, Sonicware",
+    "the apps say 'clock' (Documentation site, Knowledge-base build tools, Patchbay)",
+    "the apps say 'din sync' (Patchbay)",
+    "the apps say 'sync' (Patchbay)"
+   ],
+   "checks": {
+    "cross": "pass"
+   },
+   "note": "Different authors, different words, one concept: the case for a shared vocabulary. Cross-checked from the raw files."
+  },
+  {
+   "id": "q15",
+   "question": "Which concepts do our apps use that no manual does, and how many manual concepts do our apps never mention?",
+   "answer": [
+    "54 concepts are used by both the manuals and the apps",
+    "used only by the apps: none",
+    "60 manual concepts are not mentioned by any app"
+   ],
+   "checks": {
+    "cross": "pass"
+   },
+   "note": "Content gaps in both directions. Cross-checked from terms.json and code.json."
   }
  ]
 }
