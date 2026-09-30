@@ -4411,6 +4411,16 @@
   "visibility": "public"
  },
  {
+  "category": "synth",
+  "id": "item:emu-proteus-mps",
+  "in_use": true,
+  "manufacturer": "E-mu Systems",
+  "name": "E-mu Proteus MPS",
+  "status": "owned",
+  "type": "item",
+  "visibility": "public"
+ },
+ {
   "category": "eurorack-module",
   "id": "item:erica-pico-mod",
   "in_use": true,
@@ -5110,6 +5120,14 @@
  },
  {
   "doc_type": "user-manual",
+  "id": "manual:emu-proteus-mps-manual",
+  "name": "Proteus Master Performance System Owner's Manual",
+  "type": "manual",
+  "version": "original owner's manual (merged PDF with text layer)",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
   "id": "manual:erica-black-dual-vcf-manual",
   "name": "Black Dual VCF Manual",
   "type": "manual",
@@ -5381,6 +5399,12 @@
  {
   "id": "mfr:Dreadbox",
   "name": "Dreadbox",
+  "type": "manufacturer",
+  "visibility": "public"
+ },
+ {
+  "id": "mfr:E-mu Systems",
+  "name": "E-mu Systems",
   "type": "manufacturer",
   "visibility": "public"
  },

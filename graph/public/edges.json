@@ -1110,6 +1110,12 @@
   "visibility": "public"
  },
  {
+  "dst": "item:behringer-umc404hd",
+  "rel": "DESCRIBES",
+  "src": "data:connections.yaml",
+  "visibility": "public"
+ },
+ {
   "dst": "item:cosmotronic-delta-v",
   "rel": "DESCRIBES",
   "src": "data:connections.yaml",
@@ -1176,6 +1182,12 @@
   "visibility": "public"
  },
  {
+  "dst": "item:emu-proteus-mps",
+  "rel": "DESCRIBES",
+  "src": "data:connections.yaml",
+  "visibility": "public"
+ },
+ {
   "dst": "item:erica-pico-mod",
   "rel": "DESCRIBES",
   "src": "data:connections.yaml",
@@ -1225,6 +1237,12 @@
  },
  {
   "dst": "item:korg-sq-64",
+  "rel": "DESCRIBES",
+  "src": "data:connections.yaml",
+  "visibility": "public"
+ },
+ {
+  "dst": "item:linux-workstation",
   "rel": "DESCRIBES",
   "src": "data:connections.yaml",
   "visibility": "public"
@@ -1579,6 +1597,12 @@
  },
  {
   "dst": "item:elektron-digitakt-mk1",
+  "rel": "DEFINES",
+  "src": "data:inventory.yaml",
+  "visibility": "public"
+ },
+ {
+  "dst": "item:emu-proteus-mps",
   "rel": "DEFINES",
   "src": "data:inventory.yaml",
   "visibility": "public"
@@ -2184,6 +2208,12 @@
   "visibility": "public"
  },
  {
+  "dst": "item:emu-proteus-mps",
+  "rel": "DESCRIBES",
+  "src": "data:tools/image_manifest.yaml",
+  "visibility": "public"
+ },
+ {
   "dst": "item:erica-pico-mod",
   "rel": "DESCRIBES",
   "src": "data:tools/image_manifest.yaml",
@@ -2641,6 +2671,12 @@
  },
  {
   "dst": "manual:elektron-digitakt-mk1-manual",
+  "rel": "DEFINES",
+  "src": "data:tools/manifest.yaml",
+  "visibility": "public"
+ },
+ {
+  "dst": "manual:emu-proteus-mps-manual",
   "rel": "DEFINES",
   "src": "data:tools/manifest.yaml",
   "visibility": "public"
@@ -13937,6 +13973,31 @@
   "visibility": "public"
  },
  {
+  "confirmed": "2026-09-30",
+  "dst": "item:emu-proteus-mps",
+  "from_port": "MIDI OUT",
+  "medium": "midi",
+  "note": "Lets the workstation send SysEx preset dumps and requests to the Proteus.",
+  "rel": "CONNECTS",
+  "setup": "umc404hd-rig",
+  "src": "item:behringer-umc404hd",
+  "status": "confirmed",
+  "to_port": "MIDI IN",
+  "visibility": "public"
+ },
+ {
+  "bidirectional": true,
+  "confirmed": "2026-09-30",
+  "dst": "item:linux-workstation",
+  "medium": "usb",
+  "note": "Owner-stated; also seen by ALSA on the workstation as 'UMC404HD 192k MIDI 1' the same day.",
+  "rel": "CONNECTS",
+  "setup": "umc404hd-rig",
+  "src": "item:behringer-umc404hd",
+  "status": "confirmed",
+  "visibility": "public"
+ },
+ {
   "dst": "manual:behringer-umc404hd-quick-start",
   "rel": "HAS_MANUAL",
   "src": "item:behringer-umc404hd",
@@ -14577,6 +14638,36 @@
   "dst": "mfr:Elektron",
   "rel": "MADE_BY",
   "src": "item:elektron-digitakt-mk1",
+  "visibility": "public"
+ },
+ {
+  "confirmed": "2026-09-30",
+  "dst": "item:behringer-umc404hd",
+  "from_port": "MIDI OUT",
+  "medium": "midi",
+  "rel": "CONNECTS",
+  "setup": "umc404hd-rig",
+  "src": "item:emu-proteus-mps",
+  "status": "confirmed",
+  "to_port": "MIDI IN",
+  "visibility": "public"
+ },
+ {
+  "dst": "manual:emu-proteus-mps-manual",
+  "rel": "HAS_MANUAL",
+  "src": "item:emu-proteus-mps",
+  "visibility": "public"
+ },
+ {
+  "dst": "cat:synth",
+  "rel": "IN_CATEGORY",
+  "src": "item:emu-proteus-mps",
+  "visibility": "public"
+ },
+ {
+  "dst": "mfr:E-mu Systems",
+  "rel": "MADE_BY",
+  "src": "item:emu-proteus-mps",
   "visibility": "public"
  },
  {
@@ -24149,6 +24240,486 @@
   "rel": "USES_TERM",
   "src": "manual:elektron-digitakt-mk1-manual",
   "value": 21,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:aftertouch",
+  "label": "aftertouch",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:amplifier",
+  "label": "amplifier",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:attack",
+  "label": "attack",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 43,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:audio-in",
+  "label": "line in",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:bank",
+  "label": "bank",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 38,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:chorus",
+  "label": "chorus",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 24,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:clock-pulse",
+  "label": "clock",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:decay",
+  "label": "decay",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 42,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay",
+  "label": "delay",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 123,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:delay-time",
+  "label": "delay time",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 29,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:detune",
+  "label": "detune",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:distortion",
+  "label": "distortion",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 62,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:envelope",
+  "label": "envelope generator",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:feedback",
+  "label": "feedback",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 23,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:filter",
+  "label": "filter",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 23,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:footswitch",
+  "label": "footswitch",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 39,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:headphone-out",
+  "label": "headphone output",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:keyboard",
+  "label": "keyboard",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 108,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:kit",
+  "label": "kit",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:lfo",
+  "label": "LFO",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 117,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:lfo",
+  "label": "low frequency oscillator",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "low-pass",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:low-pass",
+  "label": "lowpass",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:main-out",
+  "label": "main output",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-clock",
+  "label": "MIDI clock",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-in",
+  "label": "MIDI IN",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI data",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 30,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-message",
+  "label": "MIDI message",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-out",
+  "label": "MIDI OUT",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 14,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "MIDI THRU",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:midi-thru",
+  "label": "thru",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mod-wheel",
+  "label": "modulation wheel",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 14,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:modulation-source",
+  "label": "modulation source",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 21,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:mute",
+  "label": "mute",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note off",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:note-message",
+  "label": "note on",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:oscillator",
+  "label": "oscillator",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:overdrive",
+  "label": "overdrive",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pattern",
+  "label": "pattern",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:pitch-bend",
+  "label": "pitch bend",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 9,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:preset",
+  "label": "preset",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 448,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:program-change",
+  "label": "program change",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 39,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:release",
+  "label": "release",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 30,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:reverb",
+  "label": "reverb",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 69,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sample",
+  "label": "sample",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 17,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sawtooth",
+  "label": "sawtooth",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 8,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sequencer",
+  "label": "sequencer",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 22,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sine",
+  "label": "sine",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 10,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:song",
+  "label": "song",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 23,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:square",
+  "label": "square",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 3,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:step",
+  "label": "step",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 2,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:sustain",
+  "label": "sustain",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 18,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:tremolo",
+  "label": "tremolo",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:triangle",
+  "label": "triangle",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 4,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:trigger",
+  "label": "trigger",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 1,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:velocity",
+  "label": "velocity",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 53,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "wave",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 29,
+  "visibility": "public"
+ },
+ {
+  "dst": "term:waveform",
+  "label": "waveform",
+  "rel": "USES_TERM",
+  "src": "manual:emu-proteus-mps-manual",
+  "value": 22,
   "visibility": "public"
  },
  {

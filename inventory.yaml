@@ -33,6 +33,8 @@ items:
   - {id: roland-mc-303, slice: true, name: Roland MC-303, manufacturer: Roland, model: MC-303, category: groovebox, status: owned}
   - {id: akai-timbre-wolf, slice: true, name: Akai Timbre Wolf, manufacturer: Akai Professional, model: Timbre Wolf, category: synth, status: owned}
   - {id: sonicware-liven-texture-lab, slice: true, name: Sonicware Liven Texture Lab, manufacturer: Sonicware, model: Liven Texture Lab, category: synth, status: owned}
+  - {id: emu-proteus-mps, slice: true, name: E-mu Proteus MPS, manufacturer: E-mu Systems, model: Proteus MPS, category: synth, status: owned,
+     note: "Bought 2026-09-30. Proteus Master Performance System: 61-key sample-playback keyboard (Proteus sounds, onboard effects). Owner-supplied manual ingested 2026-09-30. MIDI IN/OUT currently wired to the UMC404HD (owner, 2026-09-30)."}
   # added 2026-09-20 while recording routing (mentioned by the owner, absent from Equipment List.md). Names as the owner gave them; not verified.
   - {id: dreadbox-typhon, slice: true, name: Dreadbox Typhon, manufacturer: Dreadbox, model: Typhon, category: synth, status: owned, note: "Added 2026-09-20 from the owner's routing answers; name as given, not verified."}
   - {id: behringer-k2, slice: true, name: Behringer K2, manufacturer: Behringer, model: K2, category: synth, status: owned, note: "Added 2026-09-20 from the owner's routing answers; name as given, not verified. Swaps with the Donner B1 in the MIDI chain."}

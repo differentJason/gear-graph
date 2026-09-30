@@ -1,6 +1,6 @@
 {
  "generated_by": "tools/query_graph.py",
- "graph_sha256": "034cd96342456dc181fb341545b2562c6e3efe2abd4bd4e334ada3e32fb3303f",
+ "graph_sha256": "cb4c8f93126b7e689ee7856db39b982f8aa80c8e75b1cf174dd61b6676a76b41",
  "answers": [
   {
    "id": "q1",
@@ -67,11 +67,9 @@
    "id": "q6",
    "question": "Which items have no recorded connection, by category?",
    "answer": [
-    "37 items have no confirmed connection, placement or supply link",
+    "35 items have no confirmed connection, placement or supply link",
     "amp: 3",
-    "audio-interface: 1",
     "bass: 1",
-    "computer: 1",
     "controller: 2",
     "di-preamp: 2",
     "drum-machine: 2",
@@ -111,12 +109,12 @@
    "id": "q8",
    "question": "Which concepts do different manufacturers name differently in their manuals?",
    "answer": [
-    "27 concepts are named differently by different manufacturers",
-    "envelope: 'EG' (Dreadbox, Korg); 'envelope' (After Later Audio, Akai Professional, Antumbra, Arturia, Behringer, Cosmotronic, Donner, EarthQuaker Devices, Elektron, Intellijel, Moth Hunter Mods, Roland, Tiptop Audio, maker not recorded); 'envelope = envelope generator (tie)' (Cre8audio); 'envelope generator' (Sonicware)",
+    "28 concepts are named differently by different manufacturers",
+    "envelope: 'EG' (Dreadbox, Korg); 'envelope' (After Later Audio, Akai Professional, Antumbra, Arturia, Behringer, Cosmotronic, Donner, E-mu Systems, EarthQuaker Devices, Elektron, Intellijel, Moth Hunter Mods, Roland, Tiptop Audio, maker not recorded); 'envelope = envelope generator (tie)' (Cre8audio); 'envelope generator' (Sonicware)",
     "high-pass: 'HPF' (Behringer, Electro-Harmonix, Sonicware); 'high-pass' (After Later Audio, Dreadbox, Roland); 'high-pass = highpass (tie)' (Tiptop Audio); 'highpass' (Elektron)",
     "control-change: 'CC' (Akai Professional, Antumbra, Arturia, Cre8audio, Dreadbox, Elektron, Roland); 'control change' (Electro-Harmonix, Korg, Sonicware)",
-    "waveform: 'wave' (Akai Professional, Cre8audio, Donner, Dreadbox, EarthQuaker Devices, Electro-Harmonix, Intellijel, Roland, Sonicware, Synthrotek, Tiptop Audio); 'wave = waveform (tie)' (Jake's Custom Shop); 'waveform' (After Later Audio, Antumbra, Behringer, Elektron, Korg, maker not recorded)",
-    "audio-in: 'audio in' (Behringer); 'audio input' (After Later Audio, Antumbra, Cosmotronic, Cre8audio, Dreadbox, Elektron, Erica Synths, Intellijel, Tiptop Audio, Yamaha); 'line in' (Sonicware)"
+    "waveform: 'wave' (Akai Professional, Cre8audio, Donner, Dreadbox, E-mu Systems, EarthQuaker Devices, Electro-Harmonix, Intellijel, Roland, Sonicware, Synthrotek, Tiptop Audio); 'wave = waveform (tie)' (Jake's Custom Shop); 'waveform' (After Later Audio, Antumbra, Behringer, Elektron, Korg, maker not recorded)",
+    "audio-in: 'audio in' (Behringer); 'audio input' (After Later Audio, Antumbra, Cosmotronic, Cre8audio, Dreadbox, Elektron, Erica Synths, Intellijel, Tiptop Audio, Yamaha); 'line in' (E-mu Systems, Sonicware)"
    ],
    "checks": {
     "cross": "pass"
@@ -177,10 +175,10 @@
    "id": "q12",
    "question": "Which knowledge-base datasets does the Patchbay read, and how many knowledge-graph vertices does each one define or describe?",
    "answer": [
-    "connections.yaml: 40 knowledge-graph vertices",
-    "inventory.yaml: 77 knowledge-graph vertices",
+    "connections.yaml: 43 knowledge-graph vertices",
+    "inventory.yaml: 78 knowledge-graph vertices",
     "midi_channels.yaml: 12 knowledge-graph vertices",
-    "tools/image_manifest.yaml: 77 knowledge-graph vertices"
+    "tools/image_manifest.yaml: 78 knowledge-graph vertices"
    ],
    "checks": {
     "cross": "pass"
@@ -191,7 +189,7 @@
    "id": "q13",
    "question": "Where is clock and sync covered: how many manuals, which sections of each app's docs, and which code?",
    "answer": [
-    "30 manuals",
+    "31 manuals",
     "Documentation site docs: Choices the owner made that changed the outcome",
     "Patchbay docs: Eurorack, Patching cables, Session file format, Using it",
     "code: patchbay/tools/extract_ports.py, patchbay/web/app.js, tools/build_public.py, tools/viz_graph.py"
@@ -205,10 +203,10 @@
    "id": "q14",
    "question": "Which words do the manufacturers use for clock and sync, and which words do our apps use?",
    "answer": [
-    "'clock': After Later Audio, Akai Professional, Antumbra, Arturia, Behringer, Cosmotronic, Cre8audio, Donner, Dreadbox, Electro-Harmonix, Elektron, Intellijel, Jake's Custom Shop, Korg, Roland, Sonicware, Tiptop Audio, Yamaha",
+    "'clock': After Later Audio, Akai Professional, Antumbra, Arturia, Behringer, Cosmotronic, Cre8audio, Donner, Dreadbox, E-mu Systems, Electro-Harmonix, Elektron, Intellijel, Jake's Custom Shop, Korg, Roland, Sonicware, Tiptop Audio, Yamaha",
     "'clock pulse': Arturia, Electro-Harmonix, Korg",
     "'din sync': Arturia, Elektron",
-    "'midi clock': Akai Professional, Arturia, Behringer, Cre8audio, Dreadbox, Electro-Harmonix, Elektron, Korg, Roland, Sonicware",
+    "'midi clock': Akai Professional, Arturia, Behringer, Cre8audio, Dreadbox, E-mu Systems, Electro-Harmonix, Elektron, Korg, Roland, Sonicware",
     "'sync': After Later Audio, Akai Professional, Arturia, Behringer, Cre8audio, Donner, Dreadbox, Electro-Harmonix, Elektron, Korg, Roland, Sonicware",
     "the apps say 'clock' (Documentation site, Knowledge-base build tools, Patchbay)",
     "the apps say 'din sync' (Patchbay)",

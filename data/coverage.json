@@ -308,5 +308,10 @@
   "id": "behringer-cp1a-quick-start",
   "unique_word_recall": 0.99505,
   "occurrence_recall": 0.978769
+ },
+ {
+  "id": "emu-proteus-mps-manual",
+  "unique_word_recall": 0.995493,
+  "occurrence_recall": 0.961441
  }
 ]

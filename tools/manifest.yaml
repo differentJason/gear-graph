@@ -1188,3 +1188,22 @@ manuals:
     split: headings
     heading_pattern: ^#{1,6}\s+
     applies_to: Behringer EURORACK RACK kit + CP1A power supply module, Quick Start Guide V 2.0. The owner has the 4 HP CP1A module (not the rack kit); rack-kit content is included only where it shares pages. English only.
+
+  - id: emu-proteus-mps-manual
+    device: emu-proteus-mps
+    manufacturer: E-mu Systems
+    model: Proteus MPS
+    title: Proteus Master Performance System Owner's Manual
+    doc_type: user-manual
+    doc_version: original owner's manual (merged PDF with text layer)
+    language: en
+    pdf: sources/emu-proteus-mps.pdf
+    source_url: https://www.polynominal.com/emu-proteus-mps/emu-proteus-mps-manual.pdf
+    source_note: "Supplied by the owner on 2026-09-30; byte-identical (sha256 c3d72a480d3f617c...) to the community-archive copy at source_url, verified 2026-09-30. E-mu no longer hosts it. Text layer, no outline. Printed page numbers drift from PDF pages (PDF 5 = p5, PDF 150 = p156)."
+    retrieved: '2026-09-30'
+    pages: [5, 152]               # intro through MIDI spec/preset list; contents (1-4), warranty and index excluded
+    split: headings
+    heading_pattern: '^#{1,6}\s+[A-Z0-9"][A-Z0-9 /&+.,()#"\x27-]{3,}$'   # whole-line ALL-CAPS heading = a feature; skips sidebars ("I MORE INFO ...") and prose headings
+    drop_lines:                   # running page headers: the chapter name repeated at the top of each page as a level-6 heading (the real chapter heading is level 3)
+      - '^######\s+(INTRODUCTION|BASIC OPERATION|MASTER EDIT MENU|PERFORMANCE EDIT MENU|PROGRAMMING BASICS|PRESET EDIT MENU|EFFECT PROGRAMMING|MIDI SPECIFICATIONS)$'
+    applies_to: "E-mu Proteus MPS (Master Performance System) keyboard, bought by the owner 2026-09-30. Not the Proteus/1 module or MPS Plus."

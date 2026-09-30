@@ -2,9 +2,9 @@
  "generated_by": "tools/build_terms.py",
  "terms_sha256": "d4a7e798eb5577167500b8b8b50422b9abdee17e6d0a2ea02286b79f3fc4d907",
  "corpus": {
-  "manuals": 64,
-  "sections": 1666,
-  "manufacturers": 27,
+  "manuals": 65,
+  "sections": 1889,
+  "manufacturers": 28,
   "manual_manufacturer": {
    "after-later-dice-marbles-manual": "Mutable Instruments",
    "after-later-dice-page": "After Later Audio",
@@ -46,6 +46,7 @@
    "electro-harmonix-modrex-manual": "Electro-Harmonix",
    "elektron-analog-four-mkii-manual": "Elektron",
    "elektron-digitakt-mk1-manual": "Elektron",
+   "emu-proteus-mps-manual": "E-mu Systems",
    "erica-black-dual-vcf-manual": "Erica Synths",
    "erica-pico-mod-manual": "Erica Synths",
    "intellijel-quadratt-1u-manual": "Intellijel",
@@ -275,6 +276,7 @@
      "electro-harmonix-modrex-manual": 2,
      "elektron-analog-four-mkii-manual": 4,
      "elektron-digitakt-mk1-manual": 3,
+     "emu-proteus-mps-manual": 3,
      "korg-m1-manual": 2,
      "korg-sq-64-manual": 23,
      "midi-thru5-manual": 7,
@@ -290,6 +292,7 @@
      "electro-harmonix-modrex-manual": 2,
      "elektron-analog-four-mkii-manual": 24,
      "elektron-digitakt-mk1-manual": 31,
+     "emu-proteus-mps-manual": 30,
      "korg-m1-manual": 11,
      "midi-thru5-manual": 4,
      "roland-mc-303-manual": 2,
@@ -324,6 +327,7 @@
      "dreadbox-typhon-manual": 1,
      "elektron-analog-four-mkii-manual": 10,
      "elektron-digitakt-mk1-manual": 8,
+     "emu-proteus-mps-manual": 2,
      "korg-m1-manual": 1,
      "roland-mc-303-manual": 24,
      "roland-tr-505-manual": 2,
@@ -336,6 +340,7 @@
      "cre8audio-niftycase-manual": 1,
      "elektron-analog-four-mkii-manual": 1,
      "elektron-digitakt-mk1-manual": 11,
+     "emu-proteus-mps-manual": 4,
      "korg-m1-manual": 1,
      "roland-mc-303-manual": 10,
      "sonicware-liven-texture-lab-manual": 1
@@ -419,6 +424,7 @@
      "electro-harmonix-modrex-manual": 2,
      "elektron-analog-four-mkii-manual": 11,
      "elektron-digitakt-mk1-manual": 14,
+     "emu-proteus-mps-manual": 39,
      "korg-m1-manual": 18,
      "korg-sq-64-manual": 7,
      "roland-mc-303-manual": 20,
@@ -447,6 +453,7 @@
      "dreadbox-typhon-manual": 1,
      "elektron-analog-four-mkii-manual": 4,
      "elektron-digitakt-mk1-manual": 4,
+     "emu-proteus-mps-manual": 9,
      "korg-m1-manual": 10,
      "roland-mc-303-manual": 21
     }
@@ -469,6 +476,7 @@
      "dreadbox-typhon-manual": 6,
      "elektron-analog-four-mkii-manual": 2,
      "elektron-digitakt-mk1-manual": 6,
+     "emu-proteus-mps-manual": 3,
      "korg-m1-manual": 9,
      "roland-mc-303-manual": 4
     }
@@ -532,6 +540,7 @@
      "electro-harmonix-modrex-manual": 7,
      "elektron-analog-four-mkii-manual": 5,
      "elektron-digitakt-mk1-manual": 3,
+     "emu-proteus-mps-manual": 1,
      "korg-m1-manual": 2,
      "midi-thru5-manual": 1,
      "roland-mc-303-manual": 10,
@@ -590,6 +599,7 @@
      "electro-harmonix-modrex-manual": 9,
      "elektron-analog-four-mkii-manual": 13,
      "elektron-digitakt-mk1-manual": 3,
+     "emu-proteus-mps-manual": 1,
      "intellijel-stereo-line-out-1u-manual": 3,
      "jakes-snare-hihat-datasheet": 1,
      "korg-m1-manual": 14,
@@ -739,6 +749,7 @@
      "dreadbox-typhon-manual": 4,
      "elektron-analog-four-mkii-manual": 4,
      "elektron-digitakt-mk1-manual": 8,
+     "emu-proteus-mps-manual": 1,
      "erica-pico-mod-manual": 2,
      "jakes-kick-drum-datasheet": 2,
      "jakes-snare-hihat-datasheet": 3,
@@ -800,6 +811,7 @@
      "electro-harmonix-modrex-manual": 3,
      "elektron-analog-four-mkii-manual": 13,
      "elektron-digitakt-mk1-manual": 15,
+     "emu-proteus-mps-manual": 8,
      "korg-m1-manual": 10,
      "korg-sq-64-manual": 7,
      "midi-thru5-manual": 8,
@@ -830,6 +842,7 @@
      "electro-harmonix-modrex-manual": 1,
      "elektron-analog-four-mkii-manual": 13,
      "elektron-digitakt-mk1-manual": 15,
+     "emu-proteus-mps-manual": 14,
      "korg-m1-manual": 7,
      "korg-sq-64-manual": 2,
      "midi-thru5-manual": 2,
@@ -862,6 +875,7 @@
      "cre8audio-niftycase-manual": 2,
      "elektron-analog-four-mkii-manual": 3,
      "elektron-digitakt-mk1-manual": 4,
+     "emu-proteus-mps-manual": 1,
      "korg-m1-manual": 1,
      "korg-sq-64-manual": 3,
      "midi-thru5-manual": 12
@@ -873,6 +887,7 @@
      "cre8audio-niftycase-manual": 3,
      "elektron-analog-four-mkii-manual": 2,
      "elektron-digitakt-mk1-manual": 2,
+     "emu-proteus-mps-manual": 4,
      "korg-m1-manual": 1,
      "midi-thru5-manual": 2,
      "roland-kc-100-manual": 3,
@@ -1146,7 +1161,8 @@
      "behringer-rd-9-manual": 3,
      "behringer-umc1820-quick-start": 2,
      "elektron-analog-four-mkii-manual": 10,
-     "elektron-digitakt-mk1-manual": 2
+     "elektron-digitakt-mk1-manual": 2,
+     "emu-proteus-mps-manual": 10
     }
    }
   },
@@ -1177,6 +1193,7 @@
      "dreadbox-typhon-manual": 1,
      "elektron-analog-four-mkii-manual": 5,
      "elektron-digitakt-mk1-manual": 7,
+     "emu-proteus-mps-manual": 3,
      "intellijel-stereo-line-out-1u-manual": 9,
      "intellijel-stereo-mixer-1u-manual": 10,
      "korg-m1-manual": 3,
@@ -1204,7 +1221,8 @@
     },
     "headphone output": {
      "behringer-umc1820-quick-start": 2,
-     "donner-b1-manual": 1
+     "donner-b1-manual": 1,
+     "emu-proteus-mps-manual": 2
     }
    }
   },
@@ -1280,6 +1298,7 @@
      "elektron-digitakt-mk1-manual": 1
     },
     "line in": {
+     "emu-proteus-mps-manual": 3,
      "sonicware-liven-texture-lab-manual": 10
     },
     "line input": {
@@ -1480,6 +1499,7 @@
      "dreadbox-typhon-manual": 7,
      "earthquaker-bit-commander-manual": 1,
      "elektron-analog-four-mkii-manual": 120,
+     "emu-proteus-mps-manual": 1,
      "intellijel-quadratt-1u-manual": 4,
      "korg-m1-manual": 68,
      "mosaic-quantizer-manual": 5,
@@ -1569,6 +1589,7 @@
      "electro-harmonix-modrex-manual": 41,
      "elektron-analog-four-mkii-manual": 144,
      "elektron-digitakt-mk1-manual": 86,
+     "emu-proteus-mps-manual": 23,
      "intellijel-quadratt-1u-manual": 6,
      "korg-m1-manual": 7,
      "roland-kc-150": 2,
@@ -1629,13 +1650,15 @@
      "electro-harmonix-modrex-manual": 3,
      "elektron-analog-four-mkii-manual": 1,
      "elektron-digitakt-mk1-manual": 5,
+     "emu-proteus-mps-manual": 1,
      "roland-mc-303-manual": 6,
      "tiptop-forbidden-planet-manual": 3
     },
     "lowpass": {
      "behringer-k2-quick-start": 3,
      "elektron-analog-four-mkii-manual": 11,
-     "elektron-digitakt-mk1-manual": 5
+     "elektron-digitakt-mk1-manual": 5,
+     "emu-proteus-mps-manual": 4
     },
     "LPF": {
      "behringer-rd-9-manual": 12,
@@ -1732,6 +1755,7 @@
      "cre8audio-mr-philter-page": 1,
      "elektron-analog-four-mkii-manual": 5,
      "elektron-digitakt-mk1-manual": 9,
+     "emu-proteus-mps-manual": 4,
      "intellijel-quadratt-1u-manual": 1,
      "intellijel-stereo-line-out-1u-manual": 1,
      "korg-m1-manual": 4,
@@ -1790,6 +1814,7 @@
      "behringer-k2-quick-start": 2,
      "dreadbox-typhon-manual": 9,
      "elektron-analog-four-mkii-manual": 1,
+     "emu-proteus-mps-manual": 21,
      "ugrids-grids-manual": 1
     }
    }
@@ -1826,6 +1851,7 @@
      "earthquaker-bit-commander-manual": 1,
      "elektron-analog-four-mkii-manual": 128,
      "elektron-digitakt-mk1-manual": 38,
+     "emu-proteus-mps-manual": 62,
      "erica-pico-mod-manual": 7,
      "intellijel-quadratt-1u-manual": 4,
      "korg-m1-manual": 1,
@@ -1851,6 +1877,7 @@
      "behringer-k2-quick-start": 20,
      "cre8audio-mr-philter-page": 2,
      "dreadbox-typhon-manual": 1,
+     "emu-proteus-mps-manual": 10,
      "erica-pico-mod-manual": 1,
      "sonicware-liven-texture-lab-manual": 2,
      "tiptop-forbidden-planet-manual": 1
@@ -1905,6 +1932,7 @@
      "electro-harmonix-modrex-manual": 21,
      "elektron-analog-four-mkii-manual": 71,
      "elektron-digitakt-mk1-manual": 87,
+     "emu-proteus-mps-manual": 117,
      "intellijel-quadratt-1u-manual": 7,
      "korg-m1-manual": 1,
      "mosaic-quantizer-manual": 1,
@@ -1917,6 +1945,7 @@
      "behringer-k2-quick-start": 1,
      "dreadbox-typhon-manual": 1,
      "elektron-digitakt-mk1-manual": 4,
+     "emu-proteus-mps-manual": 8,
      "roland-mc-303-manual": 1,
      "zlob-skew-fade-lfo-page": 1
     }
@@ -2049,6 +2078,7 @@
      "dreadbox-typhon-manual": 8,
      "elektron-analog-four-mkii-manual": 81,
      "elektron-digitakt-mk1-manual": 21,
+     "emu-proteus-mps-manual": 22,
      "jakes-kick-drum-datasheet": 1,
      "korg-m1-manual": 29,
      "roland-mc-303-manual": 6,
@@ -2075,6 +2105,7 @@
      "electro-harmonix-modrex-manual": 1,
      "elektron-analog-four-mkii-manual": 12,
      "elektron-digitakt-mk1-manual": 10,
+     "emu-proteus-mps-manual": 29,
      "intellijel-quadratt-1u-manual": 3,
      "intellijel-stereo-line-out-1u-manual": 2,
      "jakes-kick-drum-datasheet": 1,
@@ -2110,6 +2141,7 @@
      "electro-harmonix-modrex-manual": 7,
      "elektron-analog-four-mkii-manual": 9,
      "elektron-digitakt-mk1-manual": 2,
+     "emu-proteus-mps-manual": 8,
      "roland-mc-303-manual": 1,
      "sonicware-liven-texture-lab-manual": 2
     },
@@ -2157,6 +2189,7 @@
      "electro-harmonix-modrex-manual": 2,
      "elektron-analog-four-mkii-manual": 9,
      "elektron-digitakt-mk1-manual": 4,
+     "emu-proteus-mps-manual": 3,
      "intellijel-quadratt-1u-manual": 2,
      "jakes-kick-drum-datasheet": 1,
      "korg-m1-manual": 4,
@@ -2189,6 +2222,7 @@
      "electro-harmonix-modrex-manual": 3,
      "elektron-analog-four-mkii-manual": 7,
      "elektron-digitakt-mk1-manual": 2,
+     "emu-proteus-mps-manual": 4,
      "intellijel-quadratt-1u-manual": 1,
      "korg-m1-manual": 5,
      "roland-kc-100-manual": 3,
@@ -2220,6 +2254,7 @@
      "cre8audio-mr-philter-tuning": 2,
      "elektron-analog-four-mkii-manual": 2,
      "elektron-digitakt-mk1-manual": 2,
+     "emu-proteus-mps-manual": 10,
      "intellijel-stereo-line-out-1u-manual": 2,
      "korg-m1-manual": 1,
      "roland-mc-303-manual": 6,
@@ -2265,6 +2300,7 @@
    "labels": {
     "detune": {
      "elektron-analog-four-mkii-manual": 10,
+     "emu-proteus-mps-manual": 9,
      "korg-m1-manual": 14,
      "sonicware-liven-texture-lab-manual": 1
     }
@@ -2308,6 +2344,7 @@
      "dreadbox-typhon-manual": 3,
      "elektron-analog-four-mkii-manual": 25,
      "elektron-digitakt-mk1-manual": 18,
+     "emu-proteus-mps-manual": 43,
      "erica-pico-mod-manual": 2,
      "intellijel-quadratt-1u-manual": 1,
      "korg-m1-manual": 19,
@@ -2342,6 +2379,7 @@
      "dreadbox-typhon-manual": 5,
      "elektron-analog-four-mkii-manual": 30,
      "elektron-digitakt-mk1-manual": 18,
+     "emu-proteus-mps-manual": 42,
      "erica-pico-mod-manual": 2,
      "intellijel-quadratt-1u-manual": 2,
      "jakes-kick-drum-datasheet": 3,
@@ -2377,6 +2415,7 @@
      "earthquaker-bit-commander-manual": 1,
      "elektron-analog-four-mkii-manual": 15,
      "elektron-digitakt-mk1-manual": 4,
+     "emu-proteus-mps-manual": 18,
      "korg-m1-manual": 5,
      "roland-mc-303-manual": 5
     }
@@ -2410,6 +2449,7 @@
      "electro-harmonix-modrex-manual": 11,
      "elektron-analog-four-mkii-manual": 30,
      "elektron-digitakt-mk1-manual": 19,
+     "emu-proteus-mps-manual": 30,
      "erica-pico-mod-manual": 2,
      "intellijel-quadratt-1u-manual": 1,
      "korg-m1-manual": 21,
@@ -2477,6 +2517,7 @@
      "dreadbox-typhon-manual": 14,
      "elektron-analog-four-mkii-manual": 25,
      "elektron-digitakt-mk1-manual": 23,
+     "emu-proteus-mps-manual": 53,
      "korg-m1-manual": 63,
      "korg-sq-64-manual": 1,
      "roland-mc-303-manual": 61,
@@ -2676,6 +2717,7 @@
      "dreadbox-typhon-manual": 7,
      "elektron-analog-four-mkii-manual": 1,
      "elektron-digitakt-mk1-manual": 4,
+     "emu-proteus-mps-manual": 29,
      "korg-m1-manual": 2,
      "roland-mc-303-manual": 11,
      "sonicware-liven-texture-lab-manual": 1
@@ -2702,6 +2744,7 @@
      "electro-harmonix-modrex-manual": 6,
      "elektron-analog-four-mkii-manual": 14,
      "elektron-digitakt-mk1-manual": 3,
+     "emu-proteus-mps-manual": 23,
      "erica-black-dual-vcf-manual": 2,
      "erica-pico-mod-manual": 1,
      "korg-m1-manual": 28,
@@ -2748,6 +2791,7 @@
      "dreadbox-typhon-manual": 10,
      "elektron-analog-four-mkii-manual": 43,
      "elektron-digitakt-mk1-manual": 56,
+     "emu-proteus-mps-manual": 123,
      "korg-m1-manual": 65,
      "roland-mc-303-manual": 72,
      "sonicware-liven-texture-lab-manual": 2
@@ -2773,6 +2817,7 @@
      "dreadbox-typhon-manual": 16,
      "elektron-analog-four-mkii-manual": 35,
      "elektron-digitakt-mk1-manual": 45,
+     "emu-proteus-mps-manual": 69,
      "korg-m1-manual": 7,
      "roland-mc-303-manual": 83,
      "sonicware-liven-texture-lab-manual": 18
@@ -2815,6 +2860,7 @@
      "electro-harmonix-modrex-manual": 5,
      "elektron-analog-four-mkii-manual": 32,
      "elektron-digitakt-mk1-manual": 1,
+     "emu-proteus-mps-manual": 24,
      "korg-m1-manual": 22,
      "roland-mc-303-manual": 84
     }
@@ -2835,6 +2881,7 @@
     "tremolo": {
      "behringer-ultra-tremolo-manual": 8,
      "electro-harmonix-modrex-manual": 10,
+     "emu-proteus-mps-manual": 1,
      "korg-m1-manual": 10,
      "roland-mc-303-manual": 5
     }
@@ -2862,6 +2909,7 @@
      "dreadbox-typhon-manual": 6,
      "elektron-analog-four-mkii-manual": 3,
      "elektron-digitakt-mk1-manual": 1,
+     "emu-proteus-mps-manual": 3,
      "korg-m1-manual": 10,
      "roland-mc-303-manual": 1
     }
@@ -2887,6 +2935,7 @@
      "behringer-hell-babe-manual": 1,
      "elektron-analog-four-mkii-manual": 13,
      "elektron-digitakt-mk1-manual": 6,
+     "emu-proteus-mps-manual": 1,
      "intellijel-stereo-mixer-1u-manual": 1,
      "korg-m1-manual": 8
     }
@@ -2940,6 +2989,7 @@
      "electro-harmonix-modrex-manual": 1,
      "elektron-analog-four-mkii-manual": 113,
      "elektron-digitakt-mk1-manual": 89,
+     "emu-proteus-mps-manual": 22,
      "korg-m1-manual": 58,
      "korg-sq-64-manual": 13,
      "roland-kc-100-manual": 3,
@@ -3010,6 +3060,7 @@
      "dreadbox-typhon-manual": 4,
      "elektron-analog-four-mkii-manual": 358,
      "elektron-digitakt-mk1-manual": 348,
+     "emu-proteus-mps-manual": 1,
      "jakes-snare-hihat-datasheet": 1,
      "korg-m1-manual": 161,
      "korg-sq-64-manual": 40,
@@ -3055,6 +3106,7 @@
      "electro-harmonix-modrex-manual": 1,
      "elektron-analog-four-mkii-manual": 88,
      "elektron-digitakt-mk1-manual": 89,
+     "emu-proteus-mps-manual": 2,
      "korg-m1-manual": 85,
      "korg-sq-64-manual": 66,
      "midi-thru5-manual": 2,
@@ -3123,6 +3175,7 @@
      "electro-harmonix-modrex-manual": 2,
      "elektron-analog-four-mkii-manual": 150,
      "elektron-digitakt-mk1-manual": 129,
+     "emu-proteus-mps-manual": 23,
      "korg-m1-manual": 139,
      "roland-mc-303-manual": 177,
      "roland-tr-505-manual": 10,
@@ -3492,6 +3545,7 @@
      "donner-b1-manual": 4,
      "elektron-analog-four-mkii-manual": 50,
      "elektron-digitakt-mk1-manual": 57,
+     "emu-proteus-mps-manual": 2,
      "korg-m1-manual": 7,
      "korg-sq-64-manual": 3,
      "roland-mc-303-manual": 53,
@@ -3570,6 +3624,7 @@
      "electro-harmonix-modrex-manual": 7,
      "elektron-analog-four-mkii-manual": 46,
      "elektron-digitakt-mk1-manual": 68,
+     "emu-proteus-mps-manual": 38,
      "korg-m1-manual": 36,
      "midi-thru5-manual": 3,
      "roland-mc-303-manual": 66,
@@ -3598,6 +3653,7 @@
      "electro-harmonix-modrex-manual": 112,
      "elektron-analog-four-mkii-manual": 5,
      "elektron-digitakt-mk1-manual": 5,
+     "emu-proteus-mps-manual": 448,
      "korg-m1-manual": 6,
      "korg-sq-64-manual": 2,
      "roland-mc-303-manual": 30,
@@ -3623,6 +3679,7 @@
      "behringer-cp1a-quick-start": 2,
      "elektron-analog-four-mkii-manual": 165,
      "elektron-digitakt-mk1-manual": 19,
+     "emu-proteus-mps-manual": 1,
      "korg-m1-manual": 34,
      "roland-mc-303-manual": 3,
      "roland-tr-505-manual": 1,
@@ -3659,6 +3716,7 @@
      "dreadbox-typhon-manual": 1,
      "elektron-analog-four-mkii-manual": 2,
      "elektron-digitakt-mk1-manual": 311,
+     "emu-proteus-mps-manual": 17,
      "intellijel-quadratt-1u-manual": 1,
      "roland-mc-303-manual": 10,
      "roland-tr-505-manual": 2,
@@ -3696,6 +3754,7 @@
      "earthquaker-bit-commander-manual": 1,
      "elektron-analog-four-mkii-manual": 84,
      "elektron-digitakt-mk1-manual": 34,
+     "emu-proteus-mps-manual": 108,
      "korg-m1-manual": 46,
      "korg-sq-64-manual": 18,
      "midi-thru5-manual": 1,
@@ -3735,6 +3794,7 @@
      "dreadbox-typhon-manual": 2,
      "elektron-analog-four-mkii-manual": 2,
      "elektron-digitakt-mk1-manual": 1,
+     "emu-proteus-mps-manual": 14,
      "korg-m1-manual": 1
     }
    }
@@ -3780,6 +3840,7 @@
      "behringer-k2-quick-start": 2,
      "behringer-ultra-tremolo-manual": 1,
      "electro-harmonix-modrex-manual": 8,
+     "emu-proteus-mps-manual": 39,
      "korg-m1-manual": 26
     },
     "foot switch": {
@@ -4130,6 +4191,7 @@
     "cre8audio-niftycase-manual": 4,
     "dreadbox-typhon-manual": 1,
     "elektron-analog-four-mkii-manual": 2,
+    "emu-proteus-mps-manual": 18,
     "erica-black-dual-vcf-manual": 1,
     "erica-pico-mod-manual": 2,
     "intellijel-quadratt-1u-manual": 1,
@@ -4169,6 +4231,7 @@
     "electro-harmonix-modrex-manual": 2,
     "elektron-analog-four-mkii-manual": 362,
     "elektron-digitakt-mk1-manual": 321,
+    "emu-proteus-mps-manual": 176,
     "intellijel-quadratt-1u-manual": 2,
     "jakes-snare-hihat-datasheet": 1,
     "korg-m1-manual": 195,
@@ -4200,6 +4263,7 @@
     "behringer-umc404hd-quick-start": 3,
     "cre8audio-cellz-page": 2,
     "elektron-analog-four-mkii-manual": 20,
+    "emu-proteus-mps-manual": 10,
     "korg-sq-64-manual": 50,
     "roland-mc-303-manual": 176,
     "roland-tr-505-manual": 1,
@@ -4222,6 +4286,7 @@
     "behringer-space-fx-quick-start": 4,
     "electro-harmonix-modrex-manual": 2,
     "elektron-digitakt-mk1-manual": 4,
+    "emu-proteus-mps-manual": 43,
     "korg-m1-manual": 387,
     "korg-sq-64-manual": 3,
     "midi-thru5-manual": 1,

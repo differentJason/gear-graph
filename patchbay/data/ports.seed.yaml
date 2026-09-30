@@ -342,6 +342,17 @@ behringer-umc1820:
     evidence: connections.yaml (owner-stated)
     medium: midi
     source: connections
+behringer-umc404hd:
+  MIDI IN:
+    dir: in
+    evidence: connections.yaml (owner-stated)
+    medium: midi
+    source: connections
+  MIDI OUT:
+    dir: out
+    evidence: connections.yaml (owner-stated)
+    medium: midi
+    source: connections
 cosmotronic-delta-v:
   CHANNEL 1 OUTPUT:
     dir: out
@@ -548,6 +559,22 @@ elektron-digitakt-mk1:
     dir: out
     evidence: connections.yaml (owner-stated)
     medium: audio
+    source: connections
+emu-proteus-mps:
+  Effects Output Routing:
+    dir: out
+    evidence: emu-proteus-mps-manual/143-effects-output-routing.md (bold jack label; manual text is not copied)
+    medium: audio
+    source: manual
+  MIDI IN:
+    dir: in
+    evidence: connections.yaml (owner-stated)
+    medium: midi
+    source: connections
+  MIDI OUT:
+    dir: out
+    evidence: connections.yaml (owner-stated)
+    medium: midi
     source: connections
 erica-synths-black-dual-vcf:
   BP1 OUT:

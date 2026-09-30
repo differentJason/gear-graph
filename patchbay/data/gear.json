@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-23T21:22:21",
- "kb_commit": "aa466b2-dirty",
+ "generated": "2026-09-30T18:47:28",
+ "kb_commit": "61b1540-dirty",
  "media": [
   "audio",
   "midi",
@@ -186,6 +186,20 @@
    "midi": null,
    "ports": [
     {
+     "name": "MIDI IN",
+     "dir": "in",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "midi",
+     "source": "connections"
+    },
+    {
+     "name": "MIDI OUT",
+     "dir": "out",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "midi",
+     "source": "connections"
+    },
+    {
      "name": "Input 1",
      "dir": "in",
      "medium": "audio",
@@ -210,20 +224,6 @@
      "name": "Phones",
      "dir": "out",
      "medium": "audio",
-     "source": "default",
-     "evidence": "default for category 'audio-interface' (not found in the manual)"
-    },
-    {
-     "name": "MIDI In",
-     "dir": "in",
-     "medium": "midi",
-     "source": "default",
-     "evidence": "default for category 'audio-interface' (not found in the manual)"
-    },
-    {
-     "name": "MIDI Out",
-     "dir": "out",
-     "medium": "midi",
      "source": "default",
      "evidence": "default for category 'audio-interface' (not found in the manual)"
     },
@@ -1692,6 +1692,49 @@
      "medium": "midi",
      "source": "default",
      "evidence": "default for category 'synth' (not found in the manual)"
+    }
+   ]
+  },
+  {
+   "id": "emu-proteus-mps",
+   "name": "E-mu Proteus MPS",
+   "manufacturer": "E-mu Systems",
+   "model": "Proteus MPS",
+   "category": "synth",
+   "group": "Synths & drum machines",
+   "in_use": true,
+   "role": "",
+   "note": "Bought 2026-09-30. Proteus Master Performance System: 61-key sample-playback keyboard (Proteus sounds, onboard effects). Owner-supplied manual ingested 2026-09-30. MIDI IN/OUT currently wired to the UMC404HD (owner, 2026-09-30).",
+   "icon": "icons/emu-proteus-mps.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": null,
+   "ports": [
+    {
+     "name": "Effects Output Routing",
+     "dir": "out",
+     "evidence": "emu-proteus-mps-manual/143-effects-output-routing.md (bold jack label; manual text is not copied)",
+     "medium": "audio",
+     "source": "manual"
+    },
+    {
+     "name": "MIDI IN",
+     "dir": "in",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "midi",
+     "source": "connections"
+    },
+    {
+     "name": "MIDI OUT",
+     "dir": "out",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "midi",
+     "source": "connections"
     }
    ]
   },

@@ -31,6 +31,7 @@ images:
 - {device: roland-mc-303, file: images/roland-mc-303.jpg, svg: images/roland-mc-303.svg, photo_type: original, source: tools/draw_devices.py, generated: '2026-09-23'}
 - {device: akai-timbre-wolf, file: images/akai-timbre-wolf.jpg, svg: images/akai-timbre-wolf.svg, photo_type: original, source: tools/draw_devices.py, generated: '2026-09-23'}
 - {device: sonicware-liven-texture-lab, file: images/sonicware-liven-texture-lab.jpg, svg: images/sonicware-liven-texture-lab.svg, photo_type: original, source: tools/draw_devices.py, generated: '2026-09-23'}
+- {device: emu-proteus-mps, file: images/emu-proteus-mps.jpg, svg: images/emu-proteus-mps.svg, photo_type: original, source: tools/draw_devices.py, generated: '2026-09-30'}
 - {device: dreadbox-typhon, file: images/dreadbox-typhon.jpg, svg: images/dreadbox-typhon.svg, photo_type: original, source: tools/draw_devices.py, generated: '2026-09-23'}
 - {device: behringer-k2, file: images/behringer-k2.jpg, svg: images/behringer-k2.svg, photo_type: original, source: tools/draw_devices.py, generated: '2026-09-23'}
 - {device: korg-sq-64, file: images/korg-sq-64.jpg, svg: images/korg-sq-64.svg, photo_type: original, source: tools/draw_devices.py, generated: '2026-09-23'}

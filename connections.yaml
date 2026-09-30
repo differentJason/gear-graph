@@ -25,11 +25,13 @@
 #                   # Only FIXED facts are recorded (case, supply, row). Patch cables between modules change every session and are not recorded.
 
 schema_version: 1
-updated: 2026-09-23
+updated: 2026-09-30
 
 setups:
   - {id: main-studio, name: Main studio, interface: behringer-umc1820, status: confirmed, confirmed: 2026-09-20,
      note: "Recorded first. The alternate jam-location setup (UMC404HD) is a later pass."}
+  - {id: umc404hd-rig, name: UMC404HD rig (Linux workstation), interface: behringer-umc404hd, status: confirmed, confirmed: 2026-09-30,
+     note: "Started 2026-09-30 when the owner wired the new Proteus MPS's MIDI to the UMC404HD. Whether this is the same as the alternate jam-location setup has not been stated; only its MIDI/USB links are recorded so far."}
 
 links:
   # --- computer ---
@@ -45,6 +47,14 @@ links:
      status: confirmed, confirmed: 2026-09-20, note: "The owner: all Eurorack signals end up in the Intellijel outs, which send L and R balanced TRS to the interface."}
   - {setup: main-studio, from: elektron-digitakt-mk1, from_port: "main out (L/R)", to: behringer-umc1820, to_port: "Input 7/8", medium: audio,
      status: confirmed, confirmed: 2026-09-20, note: "Port name is the owner's wording ('main out'); the Digitakt manual is not ingested to check it."}
+
+  # --- UMC404HD rig (2026-09-30): the owner, "I have it attached midi in and out thru the UMC404HD which is attached via USB currently" ---
+  - {setup: umc404hd-rig, from: behringer-umc404hd, to: linux-workstation, medium: usb, bidirectional: true,
+     status: confirmed, confirmed: 2026-09-30, note: "Owner-stated; also seen by ALSA on the workstation as 'UMC404HD 192k MIDI 1' the same day."}
+  - {setup: umc404hd-rig, from: emu-proteus-mps, from_port: "MIDI OUT", to: behringer-umc404hd, to_port: "MIDI IN", medium: midi,
+     status: confirmed, confirmed: 2026-09-30}
+  - {setup: umc404hd-rig, from: behringer-umc404hd, from_port: "MIDI OUT", to: emu-proteus-mps, to_port: "MIDI IN", medium: midi,
+     status: confirmed, confirmed: 2026-09-30, note: "Lets the workstation send SysEx preset dumps and requests to the Proteus."}
 
   # --- inside the Eurorack ---
   - {setup: main-studio, from: intellijel-stereo-line-out-1u, to: intellijel-audio-stereo-line-out-jacks-1u, medium: audio,
