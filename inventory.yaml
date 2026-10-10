@@ -5,7 +5,7 @@
 #         assumed    = carried over from the Feb 2025 list and not re-confirmed
 # in_use: false marks gear the owner lists as UNUSED. question: an open question shown on the Inventory page.
 # slice: true => gets a device page and a manual in this first slice (studio signal chain).
-updated: 2026-09-20
+updated: 2026-10-10
 
 items:
   # --- computers & software ---
@@ -23,6 +23,9 @@ items:
   # --- controllers ---
   - {id: akai-mpk-mini-mk3, name: Akai MPK mini MK3, manufacturer: Akai Professional, model: MPK mini MK3, category: controller, status: owned, slice: true, note: "Manual is a 2-page Quickstart (v1.3) that says only 'MPK mini'; matched to the MK3 by content (display, Software Manager, no speaker). A Play mk3 guide was also downloaded and deliberately NOT ingested (different product)."}
   - {id: akai-apc20, name: Akai APC20, manufacturer: Akai Professional, model: APC20, category: controller, status: owned, slice: true}
+  - {id: behringer-fcb1010, slice: true, name: Behringer FCB1010, manufacturer: Behringer, model: FCB1010, category: controller, status: owned,
+     firmware: "EurekaPROM 3.x (replacement EPROM by EurekaSound), PP (Programmable) configuration",
+     note: "MIDI foot controller: 10 footswitches, UP/DOWN, two expression pedals (A/B), MIDI IN (merge) and OUT, two relay switch outputs. Added 2026-10-10. The owner replaced the stock EPROM with a EurekaPROM (identified by the owner 2026-10-10), so the Behringer manual's PRESET/GLOBAL programming chapters do NOT describe how this unit is programmed; the hardware chapters still apply. EurekaPROM docs are web pages at eurekasound.com/eurekaprom (not ingested). Pedal plan: docs/fcb1010.md."}
 
   # --- synths & samplers ---
   - {id: elektron-analog-four, name: Elektron Analog Four MKII, manufacturer: Elektron, model: Analog Four MKII, category: synth, status: owned, slice: true,
@@ -34,7 +37,7 @@ items:
   - {id: akai-timbre-wolf, slice: true, name: Akai Timbre Wolf, manufacturer: Akai Professional, model: Timbre Wolf, category: synth, status: owned}
   - {id: sonicware-liven-texture-lab, slice: true, name: Sonicware Liven Texture Lab, manufacturer: Sonicware, model: Liven Texture Lab, category: synth, status: owned}
   - {id: emu-proteus-mps, slice: true, name: E-mu Proteus MPS, manufacturer: E-mu Systems, model: Proteus MPS, category: synth, status: owned,
-     note: "Bought 2026-09-30. Proteus Master Performance System: 61-key sample-playback keyboard (Proteus sounds, onboard effects). Owner-supplied manual ingested 2026-09-30. MIDI IN/OUT currently wired to the UMC404HD (owner, 2026-09-30)."}
+     note: "Bought 2026-09-30. Proteus Master Performance System: 61-key sample-playback keyboard (Proteus sounds, onboard effects). Owner-supplied manual ingested 2026-09-30. MIDI IN/OUT wired to the UMC404HD (owner, 2026-09-30) for SysEx work; swapped into the main studio in place of the Korg M1 \"for now\" (owner, 2026-10-10)."}
   # added 2026-09-20 while recording routing (mentioned by the owner, absent from Equipment List.md). Names as the owner gave them; not verified.
   - {id: dreadbox-typhon, slice: true, name: Dreadbox Typhon, manufacturer: Dreadbox, model: Typhon, category: synth, status: owned, note: "Added 2026-09-20 from the owner's routing answers; name as given, not verified."}
   - {id: behringer-k2, slice: true, name: Behringer K2, manufacturer: Behringer, model: K2, category: synth, status: owned, note: "Added 2026-09-20 from the owner's routing answers; name as given, not verified. Swaps with the Donner B1 in the MIDI chain."}

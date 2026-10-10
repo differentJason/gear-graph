@@ -1,6 +1,6 @@
 {
  "generated_by": "tools/query_graph.py",
- "graph_sha256": "cb4c8f93126b7e689ee7856db39b982f8aa80c8e75b1cf174dd61b6676a76b41",
+ "graph_sha256": "a493267e2d14545c1d9e14eeb6771cc33e48081316207f96fdca2c79069ca9d5",
  "answers": [
   {
    "id": "q1",
@@ -8,7 +8,7 @@
    "answer": [
     "audio: Behringer UMC1820",
     "clock: Arturia KeyStep, Jake's Custom Shop Clock and Musical Divider, Korg SQ-64",
-    "midi: Elektron Digitakt Mk1"
+    "midi: Behringer FCB1010"
    ],
    "checks": {
     "hand": "pass"
@@ -18,9 +18,9 @@
    "id": "q2",
    "question": "Which devices receive clock or MIDI from the RD-9, directly or through other devices?",
    "answer": [
-    "11 devices",
-    "directly: Arturia KeyStep, Elektron Digitakt Mk1, Jake's Custom Shop Clock and Musical Divider, Korg SQ-64",
-    "through one other device: Elektron Analog Four MKII, MIDI Thru5"
+    "12 devices",
+    "directly: Arturia KeyStep, Behringer FCB1010, Jake's Custom Shop Clock and Musical Divider, Korg SQ-64",
+    "through one other device: Elektron Digitakt Mk1"
    ],
    "checks": {
     "hand": "pass"
@@ -67,7 +67,7 @@
    "id": "q6",
    "question": "Which items have no recorded connection, by category?",
    "answer": [
-    "35 items have no confirmed connection, placement or supply link",
+    "36 items have no confirmed connection, placement or supply link",
     "amp: 3",
     "bass: 1",
     "controller: 2",
@@ -86,7 +86,7 @@
     "pedal-utility: 1",
     "pedal-wah: 1",
     "software: 2",
-    "synth: 2"
+    "synth: 3"
    ],
    "checks": {
     "cross": "pass"
@@ -112,7 +112,7 @@
     "28 concepts are named differently by different manufacturers",
     "envelope: 'EG' (Dreadbox, Korg); 'envelope' (After Later Audio, Akai Professional, Antumbra, Arturia, Behringer, Cosmotronic, Donner, E-mu Systems, EarthQuaker Devices, Elektron, Intellijel, Moth Hunter Mods, Roland, Tiptop Audio, maker not recorded); 'envelope = envelope generator (tie)' (Cre8audio); 'envelope generator' (Sonicware)",
     "high-pass: 'HPF' (Behringer, Electro-Harmonix, Sonicware); 'high-pass' (After Later Audio, Dreadbox, Roland); 'high-pass = highpass (tie)' (Tiptop Audio); 'highpass' (Elektron)",
-    "control-change: 'CC' (Akai Professional, Antumbra, Arturia, Cre8audio, Dreadbox, Elektron, Roland); 'control change' (Electro-Harmonix, Korg, Sonicware)",
+    "control-change: 'CC' (Akai Professional, Antumbra, Arturia, Cre8audio, Dreadbox, Elektron, Roland); 'control change' (Behringer, Electro-Harmonix, Korg, Sonicware)",
     "waveform: 'wave' (Akai Professional, Cre8audio, Donner, Dreadbox, E-mu Systems, EarthQuaker Devices, Electro-Harmonix, Intellijel, Roland, Sonicware, Synthrotek, Tiptop Audio); 'wave = waveform (tie)' (Jake's Custom Shop); 'waveform' (After Later Audio, Antumbra, Behringer, Elektron, Korg, maker not recorded)",
     "audio-in: 'audio in' (Behringer); 'audio input' (After Later Audio, Antumbra, Cosmotronic, Cre8audio, Dreadbox, Elektron, Erica Synths, Intellijel, Tiptop Audio, Yamaha); 'line in' (E-mu Systems, Sonicware)"
    ],
@@ -176,9 +176,9 @@
    "question": "Which knowledge-base datasets does the Patchbay read, and how many knowledge-graph vertices does each one define or describe?",
    "answer": [
     "connections.yaml: 43 knowledge-graph vertices",
-    "inventory.yaml: 78 knowledge-graph vertices",
-    "midi_channels.yaml: 12 knowledge-graph vertices",
-    "tools/image_manifest.yaml: 78 knowledge-graph vertices"
+    "inventory.yaml: 79 knowledge-graph vertices",
+    "midi_channels.yaml: 14 knowledge-graph vertices",
+    "tools/image_manifest.yaml: 79 knowledge-graph vertices"
    ],
    "checks": {
     "cross": "pass"
@@ -189,7 +189,7 @@
    "id": "q13",
    "question": "Where is clock and sync covered: how many manuals, which sections of each app's docs, and which code?",
    "answer": [
-    "31 manuals",
+    "32 manuals",
     "Documentation site docs: Choices the owner made that changed the outcome",
     "Patchbay docs: Eurorack, Patching cables, Session file format, Using it",
     "code: patchbay/tools/extract_ports.py, patchbay/web/app.js, tools/build_public.py, tools/viz_graph.py"
@@ -221,9 +221,9 @@
    "id": "q15",
    "question": "Which concepts do our apps use that no manual does, and how many manual concepts do our apps never mention?",
    "answer": [
-    "54 concepts are used by both the manuals and the apps",
+    "55 concepts are used by both the manuals and the apps",
     "used only by the apps: none",
-    "60 manual concepts are not mentioned by any app"
+    "59 manual concepts are not mentioned by any app"
    ],
    "checks": {
     "cross": "pass"

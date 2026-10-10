@@ -1,6 +1,6 @@
 {
  "generated_by": "tools/build_code_graph.py",
- "inputs_sha256": "2190b4c17fac863dfc5d89dedf7ebb656201330bf3fc4539028d17dea6f1d759",
+ "inputs_sha256": "166cda62c43ba13e73e1b6b323cfeb280a06241499f73813bbdf43183dfc7393",
  "inputs": [
   "TERMS.yaml",
   "docs/about/architecture.md",
@@ -80,7 +80,7 @@
    "dataset": 25,
    "app": 3,
    "code_file": 28,
-   "function": 333,
+   "function": 334,
    "api_route": 7,
    "ui_action": 34,
    "doc_section": 65
@@ -89,9 +89,9 @@
    "PART_OF": 25,
    "USES": 4,
    "CONTAINS": 93,
-   "DEFINES": 333,
+   "DEFINES": 334,
    "READS": 110,
-   "CALLS": 945,
+   "CALLS": 946,
    "REQUESTS": 9,
    "HANDLED_BY": 60,
    "WRITES": 14,
@@ -99,7 +99,7 @@
    "DOCUMENTS": 112,
    "BUILT_BY": 2,
    "PUBLISHES": 12,
-   "USES_TERM": 106
+   "USES_TERM": 108
   }
  },
  "coverage": {
@@ -2965,6 +2965,13 @@
    "line": 54
   },
   {
+   "id": "fn:tools/midi_reference.py:controllers",
+   "type": "function",
+   "name": "controllers",
+   "language": "python",
+   "line": 59
+  },
+  {
    "id": "fn:tools/midi_reference.py:markdown",
    "type": "function",
    "name": "markdown",
@@ -2976,49 +2983,49 @@
    "type": "function",
    "name": "_app_of",
    "language": "python",
-   "line": 345
+   "line": 349
   },
   {
    "id": "fn:tools/query_graph.py:_code_edges",
    "type": "function",
    "name": "_code_edges",
    "language": "python",
-   "line": 265
+   "line": 269
   },
   {
    "id": "fn:tools/query_graph.py:_dominant",
    "type": "function",
    "name": "_dominant",
    "language": "python",
-   "line": 133
+   "line": 137
   },
   {
    "id": "fn:tools/query_graph.py:_family",
    "type": "function",
    "name": "_family",
    "language": "python",
-   "line": 334
+   "line": 338
   },
   {
    "id": "fn:tools/query_graph.py:_raw_app_of",
    "type": "function",
    "name": "_raw_app_of",
    "language": "python",
-   "line": 413
+   "line": 417
   },
   {
    "id": "fn:tools/query_graph.py:_raw_context",
    "type": "function",
    "name": "_raw_context",
    "language": "python",
-   "line": 396
+   "line": 400
   },
   {
    "id": "fn:tools/query_graph.py:_raw_family",
    "type": "function",
    "name": "_raw_family",
    "language": "python",
-   "line": 403
+   "line": 407
   },
   {
    "id": "fn:tools/query_graph.py:bare",
@@ -3032,84 +3039,84 @@
    "type": "function",
    "name": "concept_where",
    "language": "python",
-   "line": 351
+   "line": 355
   },
   {
    "id": "fn:tools/query_graph.py:cross_concept_where",
    "type": "function",
    "name": "cross_concept_where",
    "language": "python",
-   "line": 418
+   "line": 422
   },
   {
    "id": "fn:tools/query_graph.py:cross_inherits",
    "type": "function",
    "name": "cross_inherits",
    "language": "python",
-   "line": 176
+   "line": 180
   },
   {
    "id": "fn:tools/query_graph.py:cross_kb_reach",
    "type": "function",
    "name": "cross_kb_reach",
    "language": "python",
-   "line": 316
+   "line": 320
   },
   {
    "id": "fn:tools/query_graph.py:cross_midi_conflicts",
    "type": "function",
    "name": "cross_midi_conflicts",
    "language": "python",
-   "line": 219
+   "line": 223
   },
   {
    "id": "fn:tools/query_graph.py:cross_naming",
    "type": "function",
    "name": "cross_naming",
    "language": "python",
-   "line": 167
+   "line": 171
   },
   {
    "id": "fn:tools/query_graph.py:cross_source_support",
    "type": "function",
    "name": "cross_source_support",
    "language": "python",
-   "line": 201
+   "line": 205
   },
   {
    "id": "fn:tools/query_graph.py:cross_term_gaps",
    "type": "function",
    "name": "cross_term_gaps",
    "language": "python",
-   "line": 455
+   "line": 459
   },
   {
    "id": "fn:tools/query_graph.py:cross_undocumented",
    "type": "function",
    "name": "cross_undocumented",
    "language": "python",
-   "line": 304
+   "line": 308
   },
   {
    "id": "fn:tools/query_graph.py:cross_unrecorded",
    "type": "function",
    "name": "cross_unrecorded",
    "language": "python",
-   "line": 246
+   "line": 250
   },
   {
    "id": "fn:tools/query_graph.py:cross_vocabulary",
    "type": "function",
    "name": "cross_vocabulary",
    "language": "python",
-   "line": 434
+   "line": 438
   },
   {
    "id": "fn:tools/query_graph.py:doc_impact",
    "type": "function",
    "name": "doc_impact",
    "language": "python",
-   "line": 276
+   "line": 280
   },
   {
    "id": "fn:tools/query_graph.py:feeds",
@@ -3123,14 +3130,14 @@
    "type": "function",
    "name": "inherits",
    "language": "python",
-   "line": 147
+   "line": 151
   },
   {
    "id": "fn:tools/query_graph.py:kb_reach",
    "type": "function",
    "name": "kb_reach",
    "language": "python",
-   "line": 290
+   "line": 294
   },
   {
    "id": "fn:tools/query_graph.py:load",
@@ -3144,28 +3151,28 @@
    "type": "function",
    "name": "main",
    "language": "python",
-   "line": 464
+   "line": 468
   },
   {
    "id": "fn:tools/query_graph.py:midi_conflicts",
    "type": "function",
    "name": "midi_conflicts",
    "language": "python",
-   "line": 83
+   "line": 87
   },
   {
    "id": "fn:tools/query_graph.py:naming",
    "type": "function",
    "name": "naming",
    "language": "python",
-   "line": 122
+   "line": 126
   },
   {
    "id": "fn:tools/query_graph.py:reach",
    "type": "function",
    "name": "reach",
    "language": "python",
-   "line": 58
+   "line": 59
   },
   {
    "id": "fn:tools/query_graph.py:snapshot_digest",
@@ -3179,35 +3186,35 @@
    "type": "function",
    "name": "source_support",
    "language": "python",
-   "line": 67
+   "line": 71
   },
   {
    "id": "fn:tools/query_graph.py:term_gaps",
    "type": "function",
    "name": "term_gaps",
    "language": "python",
-   "line": 386
+   "line": 390
   },
   {
    "id": "fn:tools/query_graph.py:undocumented",
    "type": "function",
    "name": "undocumented",
    "language": "python",
-   "line": 269
+   "line": 273
   },
   {
    "id": "fn:tools/query_graph.py:unrecorded",
    "type": "function",
    "name": "unrecorded",
    "language": "python",
-   "line": 109
+   "line": 113
   },
   {
    "id": "fn:tools/query_graph.py:vocabulary",
    "type": "function",
    "name": "vocabulary",
    "language": "python",
-   "line": 367
+   "line": 371
   },
   {
    "id": "fn:tools/site_theme.py:versioned",
@@ -3270,14 +3277,14 @@
    "type": "function",
    "name": "main",
    "language": "python",
-   "line": 28
+   "line": 32
   },
   {
    "id": "fn:tools/validate_midi.py:norm",
    "type": "function",
    "name": "norm",
    "language": "python",
-   "line": 24
+   "line": 28
   },
   {
    "id": "fn:tools/viz.py:_svg",
@@ -6999,6 +7006,11 @@
    "rel": "CALLS"
   },
   {
+   "src": "fn:tools/midi_reference.py:markdown",
+   "dst": "fn:tools/midi_reference.py:controllers",
+   "rel": "CALLS"
+  },
+  {
    "src": "fn:tools/query_graph.py:concept_where",
    "dst": "fn:tools/query_graph.py:_app_of",
    "rel": "CALLS"
@@ -10040,6 +10052,11 @@
   },
   {
    "src": "file:tools/midi_reference.py",
+   "dst": "fn:tools/midi_reference.py:controllers",
+   "rel": "DEFINES"
+  },
+  {
+   "src": "file:tools/midi_reference.py",
    "dst": "fn:tools/midi_reference.py:markdown",
    "rel": "DEFINES"
   },
@@ -12898,10 +12915,24 @@
   },
   {
    "src": "file:tools/validate_midi.py",
+   "dst": "term:control-change",
+   "rel": "USES_TERM",
+   "count": 5,
+   "label": "CC"
+  },
+  {
+   "src": "file:tools/validate_midi.py",
    "dst": "term:midi-thru",
    "rel": "USES_TERM",
    "count": 1,
    "label": "thru"
+  },
+  {
+   "src": "file:tools/validate_midi.py",
+   "dst": "term:program-change",
+   "rel": "USES_TERM",
+   "count": 1,
+   "label": "program change"
   },
   {
    "src": "file:tools/viz_graph.py",

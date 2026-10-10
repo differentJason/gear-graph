@@ -24,6 +24,7 @@ images:
 - {device: akg-open-back-headphones, file: images/akg-open-back-headphones.jpg, svg: images/akg-open-back-headphones.svg, photo_type: original, source: tools/draw_devices.py, generated: '2026-09-23'}
 - {device: akai-mpk-mini-mk3, file: images/akai-mpk-mini-mk3.jpg, svg: images/akai-mpk-mini-mk3.svg, photo_type: original, source: tools/draw_devices.py, generated: '2026-09-23'}
 - {device: akai-apc20, file: images/akai-apc20.jpg, svg: images/akai-apc20.svg, photo_type: original, source: tools/draw_devices.py, generated: '2026-09-23'}
+- {device: behringer-fcb1010, file: images/behringer-fcb1010.jpg, svg: images/behringer-fcb1010.svg, photo_type: original, source: tools/draw_devices.py, generated: '2026-10-10'}
 - {device: elektron-analog-four, file: images/elektron-analog-four.jpg, svg: images/elektron-analog-four.svg, photo_type: original, source: tools/draw_devices.py, generated: '2026-09-23'}
 - {device: donner-b1, file: images/donner-b1.jpg, svg: images/donner-b1.svg, photo_type: original, source: tools/draw_devices.py, generated: '2026-09-23'}
 - {device: elektron-digitakt-mk1, file: images/elektron-digitakt-mk1.jpg, svg: images/elektron-digitakt-mk1.svg, photo_type: original, source: tools/draw_devices.py, generated: '2026-09-23'}

@@ -1,5 +1,5 @@
 """Render midi_channels.yaml as a one-page quick reference (a channel-by-channel table), shared by build_site.py and
-build_public.py. Reads only midi_channels.yaml + inventory.yaml; the channel plan itself lives in the YAML."""
+build_public.py. Reads only midi_channels.yaml, controller_maps.yaml and inventory.yaml; the plan itself lives in the YAML."""
 from pathlib import Path
 
 import yaml
@@ -52,4 +52,35 @@ def markdown(setup="main-studio"):
         out += ["", "**Not on a home channel of its own** (no settable channel; keep each on its own MIDI line)", ""]
         out += [f"- **{names.get(c['device'], c['device'])}** ({c.get('in') or c.get('role') or 'no channel'}): {c.get('note', '')}" for c in loose]
     out += ["", "Generated from `midi_channels.yaml`. Channel 10 is the RD-9's drums; nothing else listens on it."]
+    out += controllers(setup, names)
     return "\n".join(out)
+
+
+def controllers(setup, names):
+    """controller_maps.yaml -> a 'Foot controller' section: what each controller sends, on which channel, to whom."""
+    path = ROOT / "controller_maps.yaml"
+    maps = [m for m in (yaml.safe_load(path.read_text()) or {}).get("maps", []) if m.get("setup") == setup] if path.exists() else []
+    out = []
+    for m in maps:
+        nm = lambda d: names.get(d, d)
+        out += ["", f"## {nm(m['device'])}: what it sends", "",
+                f"Firmware: {m.get('firmware', 'not recorded')}." + ("" if m.get("status") == "confirmed" else
+                f" **Proposal ({m.get('proposed', 'undated')}), not yet confirmed by the owner.**"), ""]
+        pc = m.get("program_change")
+        if pc:
+            out += [f"**Pattern select:** program change on channel **{pc['channel']}**, heard by "
+                    + " and ".join(nm(t) for t in pc["targets"]) + ".", ""]
+            labels = {"mode": "Mode", "numbering": "Numbering", "behaviour": "Timing", "and_or": "One box or both"}
+            out += [f"- {label}: {pc[k]}" for k, label in labels.items() if pc.get(k)]
+        if m.get("pedals"):
+            out += ["", "| Pedal | Channel | CC | Target | Parameter |", "|---|---|---|---|---|"]
+            out += [f"| {p['pedal']} | {p['channel']} | {p['cc']} | {nm(p['target'])} | {p['parameter']} |" for p in m["pedals"]]
+        if m.get("alternatives"):
+            out += ["", "Other pedal targets (change the pedal's CC to swap one in): "
+                    + "; ".join(f"{nm(a['target'])} ch {a['channel']} CC {a['cc']} {a['parameter']}" for a in m["alternatives"]) + "."]
+        if m.get("not_targets"):
+            out += ["", "**Left out:**", ""] + [f"- **{nm(n['device'])}**: {n['reason']}" for n in m["not_targets"]]
+        if m.get("open_checks"):
+            out += ["", "**Check on the hardware:**", ""] + [f"- {c}" for c in m["open_checks"]]
+        out += ["", "Generated from `controller_maps.yaml`."]
+    return out

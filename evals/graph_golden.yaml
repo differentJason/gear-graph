@@ -6,21 +6,24 @@ questions:
     question: "What does the RD-9 feed directly, and by which medium?"
     query: feeds
     item: behringer-rd-9
-    expected: {audio: [behringer-umc1820], clock: [arturia-keystep, jakes-clock-and-musical-divider, korg-sq-64], midi: [elektron-digitakt-mk1]}
-    basis: "connections.yaml (2026-09-23): MONO -> UMC1820 input 1; SYNC OUT -> SQ-64, KeyStep, Jake's clock; MIDI OUT -> Digitakt MIDI IN (was -> MIDI Thru5 before the 2026-09-23 rewiring)."
+    setup: main-studio
+    expected: {audio: [behringer-umc1820], clock: [arturia-keystep, jakes-clock-and-musical-divider, korg-sq-64], midi: [behringer-fcb1010]}
+    basis: "connections.yaml (2026-10-10): MONO -> UMC1820 input 1; SYNC OUT -> SQ-64, KeyStep, Jake's clock; MIDI OUT -> FCB1010 MIDI IN (merge). Was -> Digitakt MIDI IN 2026-09-23 to 2026-10-10, and -> MIDI Thru5 before that."
 
   - id: q2
     question: "Which devices receive clock or MIDI from the RD-9, directly or through other devices?"
     query: reach
     item: behringer-rd-9
     media: [midi, clock]
-    expected: {arturia-keystep: 1, jakes-clock-and-musical-divider: 1, korg-sq-64: 1, elektron-digitakt-mk1: 1, midi-thru5: 2, elektron-analog-four: 2, behringer-k2: 3, donner-b1: 3, dreadbox-typhon: 3, korg-m1: 3, behringer-umc1820: 3}
-    basis: "connections.yaml (2026-09-23): RD-9 SYNC OUT -> SQ-64, KeyStep, Jake's clock and MIDI OUT -> Digitakt (1 hop); Digitakt OUT -> Thru5 and Digitakt THRU -> Analog Four (2 hops); Thru5 -> M1, Typhon, K2, B1, UMC1820 MIDI IN (3 hops)."
+    setup: main-studio
+    expected: {arturia-keystep: 1, jakes-clock-and-musical-divider: 1, korg-sq-64: 1, behringer-fcb1010: 1, elektron-digitakt-mk1: 2, midi-thru5: 3, elektron-analog-four: 3, behringer-k2: 4, donner-b1: 4, dreadbox-typhon: 4, emu-proteus-mps: 4, behringer-umc1820: 4}
+    basis: "connections.yaml (2026-10-10): RD-9 SYNC OUT -> SQ-64, KeyStep, Jake's clock and MIDI OUT -> FCB1010 (1 hop); FCB1010 -> Digitakt (2); Digitakt OUT -> Thru5 and THRU -> Analog Four (3); Thru5 -> Proteus MPS (in the M1's slot), Typhon, K2, B1, UMC1820 MIDI IN (4). Within main-studio only: without the setup filter the walk followed the Proteus's umc404hd-rig cable to the UMC404HD (hop 5), a bug found 2026-10-10."
 
   - id: q3
     question: "What does the Digitakt feed?"
     query: feeds
     item: elektron-digitakt-mk1
+    setup: main-studio
     expected: {audio: [behringer-umc1820], midi: [elektron-analog-four, midi-thru5]}
     basis: "connections.yaml (2026-09-23): audio out -> interface inputs 7/8; MIDI OUT -> Thru5; MIDI THRU -> Analog Four."
 

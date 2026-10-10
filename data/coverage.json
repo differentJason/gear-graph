@@ -20,6 +20,11 @@
   "occurrence_recall": 0.986592
  },
  {
+  "id": "behringer-fcb1010-manual",
+  "unique_word_recall": 0.991321,
+  "occurrence_recall": 0.984514
+ },
+ {
   "id": "behringer-umc404hd-quick-start",
   "unique_word_recall": 0.989189,
   "occurrence_recall": 0.960276

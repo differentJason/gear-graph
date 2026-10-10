@@ -2,8 +2,8 @@
  "generated_by": "tools/build_terms.py",
  "terms_sha256": "d4a7e798eb5577167500b8b8b50422b9abdee17e6d0a2ea02286b79f3fc4d907",
  "corpus": {
-  "manuals": 65,
-  "sections": 1889,
+  "manuals": 66,
+  "sections": 1930,
   "manufacturers": 28,
   "manual_manufacturer": {
    "after-later-dice-marbles-manual": "Mutable Instruments",
@@ -24,6 +24,7 @@
    "behringer-cm1a-quick-start": "Behringer",
    "behringer-cp1a-quick-start": "Behringer",
    "behringer-digital-delay-manual": "Behringer",
+   "behringer-fcb1010-manual": "Behringer",
    "behringer-four-play-quick-start": "Behringer",
    "behringer-gdi21-manual": "Behringer",
    "behringer-hell-babe-manual": "Behringer",
@@ -235,6 +236,7 @@
      "akai-timbre-wolf-manual": 1,
      "antumbra-atom-elements-manual": 1,
      "behringer-961-quick-start": 3,
+     "behringer-fcb1010-manual": 2,
      "behringer-k2-quick-start": 2,
      "behringer-rd-9-manual": 1,
      "behringer-umc404hd-quick-start": 3,
@@ -268,6 +270,7 @@
      "akai-rhythm-wolf-manual": 2,
      "akai-timbre-wolf-manual": 5,
      "arturia-keystep-manual": 3,
+     "behringer-fcb1010-manual": 6,
      "behringer-k2-quick-start": 1,
      "behringer-rd-9-manual": 2,
      "cre8audio-niftycase-manual": 2,
@@ -286,6 +289,7 @@
     "MIDI data": {
      "akai-apc20-quick-start": 1,
      "arturia-keystep-manual": 4,
+     "behringer-fcb1010-manual": 3,
      "behringer-k2-quick-start": 1,
      "behringer-rd-9-manual": 2,
      "donner-b1-manual": 1,
@@ -321,6 +325,7 @@
      "akai-mpk-mini-mk3-quick-start": 2,
      "akai-timbre-wolf-manual": 1,
      "arturia-keystep-manual": 6,
+     "behringer-fcb1010-manual": 16,
      "behringer-k2-quick-start": 3,
      "cre8audio-niftycase-manual": 1,
      "donner-b1-manual": 1,
@@ -336,6 +341,7 @@
     "note off": {
      "akai-timbre-wolf-manual": 1,
      "arturia-keystep-manual": 3,
+     "behringer-fcb1010-manual": 11,
      "behringer-k2-quick-start": 2,
      "cre8audio-niftycase-manual": 1,
      "elektron-analog-four-mkii-manual": 1,
@@ -362,6 +368,7 @@
    "grouping": false,
    "labels": {
     "control change": {
+     "behringer-fcb1010-manual": 7,
      "electro-harmonix-modrex-manual": 4,
      "elektron-digitakt-mk1-manual": 2,
      "korg-m1-manual": 12,
@@ -420,6 +427,7 @@
    "labels": {
     "program change": {
      "akai-mpk-mini-mk3-quick-start": 1,
+     "behringer-fcb1010-manual": 19,
      "dreadbox-typhon-manual": 2,
      "electro-harmonix-modrex-manual": 2,
      "elektron-analog-four-mkii-manual": 11,
@@ -590,6 +598,7 @@
      "akai-timbre-wolf-manual": 2,
      "antumbra-atom-elements-manual": 4,
      "arturia-keystep-manual": 35,
+     "behringer-fcb1010-manual": 1,
      "behringer-k2-quick-start": 1,
      "behringer-rd-9-manual": 23,
      "cosmotronic-delta-v-manual": 1,
@@ -738,6 +747,7 @@
      "behringer-1003-quick-start": 7,
      "behringer-961-quick-start": 11,
      "behringer-cm1a-quick-start": 1,
+     "behringer-fcb1010-manual": 2,
      "behringer-k2-quick-start": 15,
      "behringer-rd-9-manual": 44,
      "cosmotronic-delta-v-manual": 9,
@@ -803,6 +813,7 @@
      "akai-timbre-wolf-manual": 8,
      "arturia-keystep-manual": 1,
      "behringer-cm1a-quick-start": 3,
+     "behringer-fcb1010-manual": 15,
      "behringer-k2-quick-start": 8,
      "behringer-rd-9-manual": 14,
      "behringer-umc404hd-quick-start": 2,
@@ -836,6 +847,7 @@
     "MIDI OUT": {
      "akai-rhythm-wolf-manual": 11,
      "akai-timbre-wolf-manual": 7,
+     "behringer-fcb1010-manual": 20,
      "behringer-k2-quick-start": 4,
      "behringer-rd-9-manual": 9,
      "donner-b1-manual": 8,
@@ -870,6 +882,7 @@
      "akai-timbre-wolf-manual": 3,
      "arturia-keystep-manual": 3,
      "behringer-cm1a-quick-start": 2,
+     "behringer-fcb1010-manual": 1,
      "behringer-k2-quick-start": 4,
      "behringer-rd-9-manual": 3,
      "cre8audio-niftycase-manual": 2,
@@ -882,6 +895,7 @@
     },
     "thru": {
      "akai-rhythm-wolf-manual": 11,
+     "behringer-fcb1010-manual": 5,
      "behringer-k2-quick-start": 1,
      "behringer-rd-9-manual": 6,
      "cre8audio-niftycase-manual": 3,
@@ -1460,6 +1474,7 @@
    "labels": {
     "5-pin DIN": {
      "behringer-cm1a-quick-start": 1,
+     "behringer-fcb1010-manual": 1,
      "behringer-k2-quick-start": 3,
      "behringer-rd-9-manual": 2,
      "behringer-umc1820-quick-start": 1,
@@ -1750,6 +1765,7 @@
      "akai-rhythm-wolf-manual": 2,
      "akai-timbre-wolf-manual": 2,
      "arturia-keystep-manual": 2,
+     "behringer-fcb1010-manual": 6,
      "behringer-k2-quick-start": 2,
      "behringer-rd-9-manual": 1,
      "cre8audio-mr-philter-page": 1,
@@ -2215,6 +2231,7 @@
    "labels": {
     "triangle": {
      "after-later-pixie-plaits-manual": 3,
+     "behringer-fcb1010-manual": 1,
      "behringer-k2-quick-start": 4,
      "behringer-ultra-tremolo-manual": 1,
      "cre8audio-captain-big-o-page": 1,
@@ -2512,6 +2529,7 @@
      "akai-rhythm-wolf-manual": 13,
      "akai-timbre-wolf-manual": 13,
      "arturia-keystep-manual": 29,
+     "behringer-fcb1010-manual": 6,
      "behringer-rd-9-manual": 2,
      "donner-b1-manual": 6,
      "dreadbox-typhon-manual": 14,
@@ -2544,6 +2562,7 @@
      "akai-timbre-wolf-manual": 23,
      "arturia-keystep-manual": 33,
      "behringer-digital-delay-manual": 6,
+     "behringer-fcb1010-manual": 5,
      "behringer-rd-9-manual": 35,
      "donner-b1-manual": 19,
      "dreadbox-typhon-manual": 1,
@@ -2673,6 +2692,7 @@
    "grouping": false,
    "labels": {
     "bypass": {
+     "behringer-fcb1010-manual": 1,
      "behringer-gdi21-manual": 1,
      "behringer-hell-babe-manual": 3,
      "behringer-rd-9-manual": 1,
@@ -2712,6 +2732,7 @@
     "delay time": {
      "after-later-resonate-rings-manual": 1,
      "behringer-digital-delay-manual": 6,
+     "behringer-fcb1010-manual": 13,
      "behringer-k2-quick-start": 2,
      "donner-b1-manual": 2,
      "dreadbox-typhon-manual": 7,
@@ -2785,6 +2806,7 @@
     "delay": {
      "after-later-resonate-rings-manual": 2,
      "behringer-digital-delay-manual": 11,
+     "behringer-fcb1010-manual": 2,
      "behringer-rd-9-manual": 2,
      "behringer-umc404hd-quick-start": 1,
      "donner-b1-manual": 5,
@@ -2812,6 +2834,7 @@
    "labels": {
     "reverb": {
      "antumbra-atom-elements-manual": 1,
+     "behringer-fcb1010-manual": 1,
      "behringer-hell-babe-manual": 1,
      "behringer-rd-9-manual": 3,
      "dreadbox-typhon-manual": 16,
@@ -2931,6 +2954,7 @@
      "after-later-pixie-plaits-manual": 1,
      "akai-rhythm-wolf-manual": 1,
      "akai-timbre-wolf-manual": 1,
+     "behringer-fcb1010-manual": 1,
      "behringer-gdi21-manual": 1,
      "behringer-hell-babe-manual": 1,
      "elektron-analog-four-mkii-manual": 13,
@@ -2978,6 +3002,7 @@
      "akai-rhythm-wolf-manual": 4,
      "akai-timbre-wolf-manual": 17,
      "arturia-keystep-manual": 70,
+     "behringer-fcb1010-manual": 8,
      "behringer-k2-quick-start": 1,
      "behringer-rd-9-manual": 49,
      "cosmotronic-delta-v-manual": 1,
@@ -3055,6 +3080,7 @@
      "akai-timbre-wolf-manual": 69,
      "antumbra-atom-elements-manual": 1,
      "arturia-keystep-manual": 29,
+     "behringer-fcb1010-manual": 1,
      "behringer-rd-9-manual": 293,
      "donner-b1-manual": 50,
      "dreadbox-typhon-manual": 4,
@@ -3094,6 +3120,7 @@
      "behringer-1003-quick-start": 1,
      "behringer-961-quick-start": 1,
      "behringer-cm1a-quick-start": 1,
+     "behringer-fcb1010-manual": 18,
      "behringer-four-play-quick-start": 1,
      "behringer-k2-quick-start": 6,
      "behringer-rd-9-manual": 354,
@@ -3171,6 +3198,7 @@
    "grouping": false,
    "labels": {
     "song": {
+     "behringer-fcb1010-manual": 5,
      "behringer-rd-9-manual": 253,
      "electro-harmonix-modrex-manual": 2,
      "elektron-analog-four-mkii-manual": 150,
@@ -3618,6 +3646,7 @@
      "akai-apc20-quick-start": 2,
      "akai-mpk-mini-mk3-quick-start": 5,
      "antumbra-atom-elements-manual": 3,
+     "behringer-fcb1010-manual": 26,
      "behringer-rd-9-manual": 5,
      "dnipro-qtone-manual": 1,
      "dreadbox-typhon-manual": 12,
@@ -3648,6 +3677,7 @@
      "after-later-dice-marbles-manual": 1,
      "antumbra-atom-elements-manual": 1,
      "arturia-keystep-manual": 1,
+     "behringer-fcb1010-manual": 90,
      "donner-b1-manual": 2,
      "dreadbox-typhon-manual": 23,
      "electro-harmonix-modrex-manual": 112,
@@ -3745,6 +3775,7 @@
      "akai-timbre-wolf-manual": 22,
      "antumbra-atom-elements-manual": 4,
      "arturia-keystep-manual": 64,
+     "behringer-fcb1010-manual": 8,
      "behringer-k2-quick-start": 10,
      "behringer-rd-9-manual": 1,
      "behringer-umc404hd-quick-start": 1,
@@ -3812,6 +3843,7 @@
    "grouping": false,
    "labels": {
     "expression pedal": {
+     "behringer-fcb1010-manual": 25,
      "behringer-k2-quick-start": 2,
      "electro-harmonix-modrex-manual": 11,
      "elektron-analog-four-mkii-manual": 7,
@@ -3836,6 +3868,7 @@
     "footswitch": {
      "arturia-keystep-manual": 5,
      "behringer-digital-delay-manual": 4,
+     "behringer-fcb1010-manual": 58,
      "behringer-gdi21-manual": 1,
      "behringer-k2-quick-start": 2,
      "behringer-ultra-tremolo-manual": 1,
@@ -3844,6 +3877,7 @@
      "korg-m1-manual": 26
     },
     "foot switch": {
+     "behringer-fcb1010-manual": 2,
      "electro-harmonix-modrex-manual": 2
     }
    }
@@ -3864,6 +3898,7 @@
      "akai-mpk-mini-mk3-quick-start": 1,
      "arturia-keystep-manual": 5,
      "behringer-digital-delay-manual": 1,
+     "behringer-fcb1010-manual": 8,
      "donner-b1-manual": 1,
      "electro-harmonix-modrex-manual": 9,
      "elektron-analog-four-mkii-manual": 2,
@@ -4215,6 +4250,7 @@
     "antumbra-atom-elements-manual": 37,
     "arturia-keystep-manual": 10,
     "behringer-digital-delay-manual": 2,
+    "behringer-fcb1010-manual": 7,
     "behringer-gdi21-manual": 3,
     "behringer-hell-babe-manual": 3,
     "behringer-k2-quick-start": 6,
@@ -4282,6 +4318,7 @@
     "akai-apc20-quick-start": 1,
     "akai-mpk-mini-mk3-quick-start": 4,
     "arturia-keystep-manual": 4,
+    "behringer-fcb1010-manual": 15,
     "behringer-rd-9-manual": 5,
     "behringer-space-fx-quick-start": 4,
     "electro-harmonix-modrex-manual": 2,

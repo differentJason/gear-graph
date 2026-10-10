@@ -147,6 +147,22 @@ behringer-961-interface:
     evidence: behringer-961-interface.pdf (pdftotext)
     medium: gate
     source: manual
+behringer-fcb1010:
+  MIDI IN:
+    dir: in
+    evidence: connections.yaml (owner-stated)
+    medium: midi
+    source: connections
+  MIDI OUT:
+    dir: out
+    evidence: behringer-fcb1010-manual/34-midi-connections.md (bold jack label; manual text is not copied)
+    medium: midi
+    source: manual
+  MIDI OUT/THRU:
+    dir: out
+    evidence: connections.yaml (owner-stated)
+    medium: midi
+    source: connections
 behringer-four-play-vca:
   CV:
     dir: in

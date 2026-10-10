@@ -29,6 +29,13 @@
    "sections": 51
   },
   {
+   "id": "behringer-fcb1010-manual",
+   "title": "MIDI Foot Controller FCB1010 User Manual",
+   "doc_type": "user-manual",
+   "device": "behringer-fcb1010",
+   "sections": 41
+  },
+  {
    "id": "behringer-umc404hd-quick-start",
    "title": "U-PHORIA Quick Start Guide (UMC404HD family)",
    "doc_type": "quick-start",
@@ -456,5 +463,5 @@
    "sections": 223
   }
  ],
- "inventory_items": 78
+ "inventory_items": 79
 }

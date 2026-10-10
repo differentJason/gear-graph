@@ -31,7 +31,7 @@
 # the same way connections.yaml was filled in -- one device at a time, stating only what is actually true.
 
 schema_version: 1
-updated: 2026-09-23
+updated: 2026-10-10
 
 channels:
   # PERMANENT HOME CHANNELS (owner, 2026-09-23): every MIDI-capable instrument keeps one channel for good, whether or
@@ -40,8 +40,8 @@ channels:
   # what it replaced (connections.yaml open_statements). Channels were chosen by the assistant at the owner's request
   # and accepted by the owner ("I will set all as assigned"). Readable table: docs/midi-channels.md (generated).
   #
-  #  1 K2 | 2 Typhon | 3 M1 | 4 B1 | 5-8 Timbre Wolf (voice 1-4) | 9 Liven | 10 RD-9 | 11 TR-505 | 12 spare (MC-303 is omni; see its entry)
-  # 13 Analog Four | 14 Digitakt | 15 spare | 16 spare (Rhythm Wolf: fixed 10 + 1, see its entry)
+  #  1 K2 | 2 Typhon | 3 M1 | 4 B1 | 5-8 Timbre Wolf (voice 1-4) | 9 Liven | 10 RD-9 | 11 TR-505 | 12 Proteus MPS (2026-10-10)
+  # 13 Analog Four | 14 Digitakt | 15 FCB1010 pattern select (2026-10-10) | 16 spare (Rhythm Wolf: fixed 10 + 1; MC-303 omni)
   - {setup: main-studio, device: behringer-k2, in: 1, status: confirmed, confirmed: 2026-09-23,
      note: "Rear-panel MIDI channel switches. MIDI IN/THRU only, no MIDI OUT, so no out channel. Played by a Digitakt MIDI track set to 1."}
   - {setup: main-studio, device: donner-b1, in: 4, out: 4, status: confirmed, confirmed: 2026-09-23,
@@ -61,8 +61,12 @@ channels:
   - {setup: main-studio, device: roland-mc-303, in: omni, status: confirmed, confirmed: 2026-09-23, role: "normal mode: incoming notes go to the Part chosen with PART SELECT",
      note: "CORRECTION 2026-09-23 (from the OCR'd owner's manual): the MC-303 has no single settable MIDI channel, so the home channel 12 assigned earlier cannot be set. In normal mode it plays incoming MIDI on ANY channel into the Part selected with PART SELECT (effectively omni). In Sound Module mode each Part has a fixed receive channel (see MIDI Implementation). It TRANSMITS Parts 1-7 on channels 1-7 and the Rhythm Part on channel 10 (fixed). Practical rule: give it its own MIDI line, and don't merge its MIDI OUT into the RD-9/Digitakt chain. Channel 12 is free again. Accepted by the owner 2026-09-23."}
   - {setup: main-studio, device: elektron-analog-four, in: 13, out: 13, status: confirmed, confirmed: 2026-09-23, role: "MIDI CONFIG > CHANNELS > AUTO CHANNEL",
-     note: "Fed from the Digitakt THRU (raw RD-9 stream). SYNC: CLOCK + TRANSPORT RECEIVE on, SEND off. No synth-track channel may be 10."}
+     note: "Fed from the Digitakt THRU (raw RD-9 stream, plus the FCB1010 since 2026-10-10). SYNC: CLOCK + TRANSPORT RECEIVE on, SEND off. Since 2026-10-10 (owner accepted, see controller_maps.yaml): PRG CH RECEIVE on; CHANNELS: PROGRAM CHANGE IN CHANNEL = 15 (the FCB1010's pattern-select channel, shared with the Digitakt). No synth-track channel may be 10."}
   - {setup: main-studio, device: elektron-digitakt-mk1, in: 14, out: 14, status: confirmed, confirmed: 2026-09-23, role: "MIDI CONFIG > CHANNELS > AUTO CHANNEL",
-     note: "Middle of the chain: CLOCK + TRANSPORT RECEIVE on AND SEND on. PORT CONFIG: INPUT FROM = MIDI, OUTPUT TO = MIDI, OUT PORT FUNCTIONALITY = MIDI. Audio track channels: none on 10 (OFF if unused). MIDI tracks send on the home channel of whatever they play (1 K2, 2 Typhon, 3 M1, 4 B1, ...)."}
+     note: "Middle of the chain: CLOCK + TRANSPORT RECEIVE on AND SEND on. PORT CONFIG: INPUT FROM = MIDI, OUTPUT TO = MIDI, OUT PORT FUNCTIONALITY = MIDI. Audio track channels: none on 10 (OFF if unused). MIDI tracks send on the home channel of whatever they play (1 K2, 2 Typhon, 3 M1, 4 B1, 12 Proteus, ...). Since 2026-10-10 (owner accepted, see controller_maps.yaml): SYNC > PRG CH RECEIVE on; CHANNELS > PROGRAM CHG IN CH = 15 (FCB1010 pattern select, shared with the A4). Leave PRG CH SEND off: its OUT feeds the Thru5 synths, not the A4."}
   - {setup: main-studio, device: akai-rhythm-wolf, status: confirmed, confirmed: 2026-09-23, role: "fixed: drum voices on ch 10, bass synth on ch 1",
      note: "No settable channel. Akai's official MIDI implementation page (Akai Japan, dated 2014-12-24; archived copy at https://web.archive.org/web/20170729082239/http://www.akai-pro.jp:80/rhythm-wolf/data/midi.php, saved as sources/akai-rhythm-wolf-midi-implementation.pdf) lists fixed channels: KICK 36, SNARE 38, PERC 40, HH OPEN 42, HH CLOSE 44 on ch 10; BASS SYNTH note 36 on ch 1; velocities 0/42/84/127. So it CANNOT take home channel 15 (released). Its drums collide with the RD-9 (10) and its bass with the K2 (1): give it its own MIDI line, never the RD-9/Digitakt/Thru5 chain."}
+  - {setup: main-studio, device: emu-proteus-mps, in: 12, out: 12, status: confirmed, confirmed: 2026-10-10,
+     note: "Chosen 2026-10-10 by the assistant at the owner's request when the Proteus took the Korg M1's slot (12 was the spare); accepted by the owner the same day. Set the channel number at the top left of the main screen (basic channel; manual 'MIDI Channel Selection') and Master > MIDI MODE = Poly, so it answers only on 12 (Omni would also play the RD-9's ch 10 drums if those ever reach it). The M1 keeps 3. Point the Digitakt MIDI track that played the M1 at 12."}
+  - {setup: main-studio, device: behringer-fcb1010, out: 15, status: confirmed, confirmed: 2026-10-10, role: "EurekaPROM PP configuration, Pr (Presets) mode: the program-change channel",
+     note: "A control channel, not an instrument: a preset sends one program change on 15, and the Digitakt and Analog Four both listen for program changes on 15, so one stomp changes both patterns. Expression pedals send on the instruments' own AUTO channels (Ea -> 14 Digitakt, Eb -> 13 Analog Four). Pedal and preset plan: controller_maps.yaml."}

@@ -45,9 +45,10 @@ def bare(x):
 
 
 # ------------------------------------------------------------------------------------------ the queries
-def feeds(g, item):
-    """One hop: what does this item feed, by which medium? (confirmed links only)"""
-    rows = (g.find("(a)-[e]->(b)").filter(f"a.id = 'item:{item}' AND e.rel = 'CONNECTS' AND e.status = 'confirmed'")
+def feeds(g, item, setup=None):
+    """One hop: what does this item feed, by which medium? (confirmed links only; within one setup when given)"""
+    cond = f"a.id = 'item:{item}' AND e.rel = 'CONNECTS' AND e.status = 'confirmed'" + (f" AND e.setup = '{setup}'" if setup else "")
+    rows = (g.find("(a)-[e]->(b)").filter(cond)
             .select("e.medium", "b.id", "e.from_port", "e.to_port").collect())
     out = defaultdict(list)
     for r in rows:
@@ -55,10 +56,13 @@ def feeds(g, item):
     return {m: sorted(v) for m, v in sorted(out.items())}
 
 
-def reach(g, root, media):
+def reach(g, root, media, setup=None):
     """Everything that receives from `root` over these media, directly or through other devices.
-    Runs GraphFrames shortestPaths on the REVERSED confirmed-edge graph, so each vertex learns its distance back to the root."""
-    edges = (g.edges.filter(F.col("rel") == "CONNECTS").filter(F.col("status") == "confirmed").filter(F.col("medium").isin(media))
+    Runs GraphFrames shortestPaths on the REVERSED confirmed-edge graph, so each vertex learns its distance back to the root.
+    `setup` keeps the walk inside one physical arrangement: a device wired into two setups (the Proteus MPS is on the
+    main-studio Thru5 and on the UMC404HD rig) must not carry the walk across into the other one."""
+    edges = g.edges.filter(F.col("setup") == setup) if setup else g.edges
+    edges = (edges.filter(F.col("rel") == "CONNECTS").filter(F.col("status") == "confirmed").filter(F.col("medium").isin(media))
              .select(F.col("dst").alias("src"), F.col("src").alias("dst"), "rel"))
     dist = GraphFrame(g.vertices, edges).shortestPaths(landmarks=[f"item:{root}"]).select("id", "distances").collect()
     return {bare(r["id"]): r["distances"][f"item:{root}"] for r in dist if r["distances"] and r["id"] != f"item:{root}"}
@@ -486,11 +490,11 @@ def main():
     for q in golden["questions"]:
         kind, qid = q["query"], q["id"]
         if kind == "feeds":
-            res = feeds(g, q["item"])
+            res = feeds(g, q["item"], q.get("setup"))
             lines = [f"{m}: {', '.join(nm(x) for x in v)}" for m, v in res.items()] or ["nothing recorded (not the same as nothing connected)"]
             record(qid, q["question"], res, lines, expected=q["expected"], note=q.get("note"))
         elif kind == "reach":
-            res = reach(g, q["item"], q["media"])
+            res = reach(g, q["item"], q["media"], q.get("setup"))
             lines = [f"{len(res)} devices",
                      "directly: " + ", ".join(sorted(nm(k) for k, d in res.items() if d == 1)),
                      "through one other device: " + ", ".join(sorted(nm(k) for k, d in res.items() if d == 2))]

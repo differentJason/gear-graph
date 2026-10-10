@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-30T18:47:28",
- "kb_commit": "61b1540-dirty",
+ "generated": "2026-10-10T15:14:50",
+ "kb_commit": "f8d9af4-dirty",
  "media": [
   "audio",
   "midi",
@@ -494,6 +494,81 @@
    ]
   },
   {
+   "id": "behringer-fcb1010",
+   "name": "Behringer FCB1010",
+   "manufacturer": "Behringer",
+   "model": "FCB1010",
+   "category": "controller",
+   "group": "Controllers & sequencers",
+   "in_use": true,
+   "role": "",
+   "note": "MIDI foot controller: 10 footswitches, UP/DOWN, two expression pedals (A/B), MIDI IN (merge) and OUT, two relay switch outputs. Added 2026-10-10. The owner replaced the stock EPROM with a EurekaPROM (identified by the owner 2026-10-10), so the Behringer manual's PRESET/GLOBAL programming chapters do NOT describe how this unit is programmed; the hardware chapters still apply. EurekaPROM docs are web pages at eurekasound.com/eurekaprom (not ingested). Pedal plan: docs/fcb1010.md.",
+   "icon": "icons/behringer-fcb1010.svg",
+   "icon_kind": "drawn",
+   "specs": {},
+   "placement": null,
+   "hp": null,
+   "format": "3U",
+   "panel": null,
+   "supply_load": null,
+   "midi": {
+    "out": 15,
+    "role": "EurekaPROM PP configuration, Pr (Presets) mode: the program-change channel",
+    "note": "A control channel, not an instrument: a preset sends one program change on 15, and the Digitakt and Analog Four both listen for program changes on 15, so one stomp changes both patterns. Expression pedals send on the instruments' own AUTO channels (Ea -> 14 Digitakt, Eb -> 13 Analog Four). Pedal and preset plan: controller_maps.yaml."
+   },
+   "ports": [
+    {
+     "name": "MIDI IN",
+     "dir": "in",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "midi",
+     "source": "connections"
+    },
+    {
+     "name": "MIDI OUT",
+     "dir": "out",
+     "evidence": "behringer-fcb1010-manual/34-midi-connections.md (bold jack label; manual text is not copied)",
+     "medium": "midi",
+     "source": "manual"
+    },
+    {
+     "name": "MIDI OUT/THRU",
+     "dir": "out",
+     "evidence": "connections.yaml (owner-stated)",
+     "medium": "midi",
+     "source": "connections"
+    },
+    {
+     "name": "USB",
+     "dir": "bidir",
+     "medium": "usb",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    },
+    {
+     "name": "CV Out",
+     "dir": "out",
+     "medium": "cv",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    },
+    {
+     "name": "Gate Out",
+     "dir": "out",
+     "medium": "gate",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    },
+    {
+     "name": "Clock In",
+     "dir": "in",
+     "medium": "clock",
+     "source": "default",
+     "evidence": "default for category 'controller' (not found in the manual)"
+    }
+   ]
+  },
+  {
    "id": "elektron-analog-four",
    "name": "Elektron Analog Four MKII",
    "manufacturer": "Elektron",
@@ -515,7 +590,7 @@
     "in": 13,
     "out": 13,
     "role": "MIDI CONFIG > CHANNELS > AUTO CHANNEL",
-    "note": "Fed from the Digitakt THRU (raw RD-9 stream). SYNC: CLOCK + TRANSPORT RECEIVE on, SEND off. No synth-track channel may be 10."
+    "note": "Fed from the Digitakt THRU (raw RD-9 stream, plus the FCB1010 since 2026-10-10). SYNC: CLOCK + TRANSPORT RECEIVE on, SEND off. Since 2026-10-10 (owner accepted, see controller_maps.yaml): PRG CH RECEIVE on; CHANNELS: PROGRAM CHANGE IN CHANNEL = 15 (the FCB1010's pattern-select channel, shared with the Digitakt). No synth-track channel may be 10."
    },
    "ports": [
     {
@@ -1057,7 +1132,7 @@
     "in": 14,
     "out": 14,
     "role": "MIDI CONFIG > CHANNELS > AUTO CHANNEL",
-    "note": "Middle of the chain: CLOCK + TRANSPORT RECEIVE on AND SEND on. PORT CONFIG: INPUT FROM = MIDI, OUTPUT TO = MIDI, OUT PORT FUNCTIONALITY = MIDI. Audio track channels: none on 10 (OFF if unused). MIDI tracks send on the home channel of whatever they play (1 K2, 2 Typhon, 3 M1, 4 B1, ...)."
+    "note": "Middle of the chain: CLOCK + TRANSPORT RECEIVE on AND SEND on. PORT CONFIG: INPUT FROM = MIDI, OUTPUT TO = MIDI, OUT PORT FUNCTIONALITY = MIDI. Audio track channels: none on 10 (OFF if unused). MIDI tracks send on the home channel of whatever they play (1 K2, 2 Typhon, 3 M1, 4 B1, 12 Proteus, ...). Since 2026-10-10 (owner accepted, see controller_maps.yaml): SYNC > PRG CH RECEIVE on; CHANNELS > PROGRAM CHG IN CH = 15 (FCB1010 pattern select, shared with the A4). Leave PRG CH SEND off: its OUT feeds the Thru5 synths, not the A4."
    },
    "ports": [
     {
@@ -1704,7 +1779,7 @@
    "group": "Synths & drum machines",
    "in_use": true,
    "role": "",
-   "note": "Bought 2026-09-30. Proteus Master Performance System: 61-key sample-playback keyboard (Proteus sounds, onboard effects). Owner-supplied manual ingested 2026-09-30. MIDI IN/OUT currently wired to the UMC404HD (owner, 2026-09-30).",
+   "note": "Bought 2026-09-30. Proteus Master Performance System: 61-key sample-playback keyboard (Proteus sounds, onboard effects). Owner-supplied manual ingested 2026-09-30. MIDI IN/OUT wired to the UMC404HD (owner, 2026-09-30) for SysEx work; swapped into the main studio in place of the Korg M1 \"for now\" (owner, 2026-10-10).",
    "icon": "icons/emu-proteus-mps.svg",
    "icon_kind": "drawn",
    "specs": {},
@@ -1713,7 +1788,11 @@
    "format": "3U",
    "panel": null,
    "supply_load": null,
-   "midi": null,
+   "midi": {
+    "in": 12,
+    "out": 12,
+    "note": "Chosen 2026-10-10 by the assistant at the owner's request when the Proteus took the Korg M1's slot (12 was the spare); accepted by the owner the same day. Set the channel number at the top left of the main screen (basic channel; manual 'MIDI Channel Selection') and Master > MIDI MODE = Poly, so it answers only on 12 (Omni would also play the RD-9's ch 10 drums if those ever reach it). The M1 keeps 3. Point the Digitakt MIDI track that played the M1 at 12."
+   },
    "ports": [
     {
      "name": "Effects Output Routing",
@@ -6186,14 +6265,14 @@
     {
      "uid": "n-behringer-umc1820",
      "device": "behringer-umc1820",
-     "x": 960,
+     "x": 660,
      "y": 40,
      "settings": {}
     },
     {
      "uid": "n-mac-mini-m4",
      "device": "mac-mini-m4",
-     "x": 1260,
+     "x": 960,
      "y": 40,
      "settings": {
       "notes": "Logic Pro (recording sessions, per gear-kb inventory)."
@@ -6211,21 +6290,21 @@
     {
      "uid": "n-elektron-digitakt-mk1",
      "device": "elektron-digitakt-mk1",
-     "x": 360,
-     "y": 40,
+     "x": 60,
+     "y": 270,
      "settings": {}
     },
     {
      "uid": "n-elektron-analog-four",
      "device": "elektron-analog-four",
-     "x": 660,
+     "x": 360,
      "y": 40,
      "settings": {}
     },
     {
      "uid": "n-midi-thru5",
      "device": "midi-thru5",
-     "x": 660,
+     "x": 360,
      "y": 270,
      "settings": {}
     }
@@ -6282,18 +6361,6 @@
      "settings": {
       "notes": "Port name is the owner's wording ('main out'); the Digitakt manual is not ingested to check it."
      }
-    },
-    {
-     "from": {
-      "uid": "n-behringer-rd-9",
-      "port": "MIDI OUT"
-     },
-     "to": {
-      "uid": "n-elektron-digitakt-mk1",
-      "port": "MIDI IN"
-     },
-     "medium": "midi",
-     "settings": {}
     },
     {
      "from": {
@@ -6393,9 +6460,16 @@
      "settings": {}
     },
     {
+     "uid": "n-behringer-fcb1010",
+     "device": "behringer-fcb1010",
+     "x": 360,
+     "y": 270,
+     "settings": {}
+    },
+    {
      "uid": "n-behringer-k2",
      "device": "behringer-k2",
-     "x": 960,
+     "x": 1260,
      "y": 40,
      "settings": {}
     },
@@ -6409,42 +6483,42 @@
     {
      "uid": "n-behringer-umc1820",
      "device": "behringer-umc1820",
-     "x": 960,
+     "x": 1260,
      "y": 270,
      "settings": {}
     },
     {
      "uid": "n-donner-b1",
      "device": "donner-b1",
-     "x": 960,
+     "x": 1260,
      "y": 500,
      "settings": {}
     },
     {
      "uid": "n-dreadbox-typhon",
      "device": "dreadbox-typhon",
-     "x": 960,
+     "x": 1260,
      "y": 730,
      "settings": {}
     },
     {
      "uid": "n-elektron-analog-four",
      "device": "elektron-analog-four",
-     "x": 660,
+     "x": 960,
      "y": 40,
      "settings": {}
     },
     {
      "uid": "n-elektron-digitakt-mk1",
      "device": "elektron-digitakt-mk1",
-     "x": 360,
-     "y": 270,
+     "x": 660,
+     "y": 40,
      "settings": {}
     },
     {
-     "uid": "n-korg-m1",
-     "device": "korg-m1",
-     "x": 960,
+     "uid": "n-emu-proteus-mps",
+     "device": "emu-proteus-mps",
+     "x": 1260,
      "y": 960,
      "settings": {}
     },
@@ -6458,14 +6532,14 @@
     {
      "uid": "n-mac-mini-m4",
      "device": "mac-mini-m4",
-     "x": 1260,
+     "x": 1560,
      "y": 40,
      "settings": {}
     },
     {
      "uid": "n-midi-thru5",
      "device": "midi-thru5",
-     "x": 660,
+     "x": 960,
      "y": 270,
      "settings": {}
     },
@@ -6633,6 +6707,20 @@
       "port": "MIDI OUT"
      },
      "to": {
+      "uid": "n-behringer-fcb1010",
+      "port": "MIDI IN"
+     },
+     "medium": "midi",
+     "settings": {
+      "notes": "Merge must be on in the FCB1010 (EurekaPROM FAQ: MIDI thru is supported in the PP configuration). Whether MIDI clock passes through the EurekaPROM's merge cleanly is NOT verified: check the Digitakt/A4 still follow the RD-9's tempo before relying on it."
+     }
+    },
+    {
+     "from": {
+      "uid": "n-behringer-fcb1010",
+      "port": "MIDI OUT/THRU"
+     },
+     "to": {
       "uid": "n-elektron-digitakt-mk1",
       "port": "MIDI IN"
      },
@@ -6673,11 +6761,13 @@
       "port": "MIDI Out 1"
      },
      "to": {
-      "uid": "n-korg-m1",
-      "port": "MIDI In"
+      "uid": "n-emu-proteus-mps",
+      "port": "MIDI IN"
      },
      "medium": "midi",
-     "settings": {}
+     "settings": {
+      "notes": "Takes the Korg M1's Thru5 output (and, by the swap rule, the M1's interface input). The Proteus's own MIDI IN/OUT are recorded on the UMC404HD in the umc404hd-rig setup; it is one cable set or the other."
+     }
     },
     {
      "from": {
@@ -6833,6 +6923,17 @@
   {
    "from": "behringer-rd-9",
    "from_port": "MIDI OUT",
+   "to": "behringer-fcb1010",
+   "to_port": "MIDI IN",
+   "medium": "midi",
+   "bidirectional": false,
+   "confirmed": true,
+   "swappable": false,
+   "note": "Merge must be on in the FCB1010 (EurekaPROM FAQ: MIDI thru is supported in the PP configuration). Whether MIDI clock passes through the EurekaPROM's merge cleanly is NOT verified: check the Digitakt/A4 still follow the RD-9's tempo before relying on it."
+  },
+  {
+   "from": "behringer-fcb1010",
+   "from_port": "MIDI OUT/THRU",
    "to": "elektron-digitakt-mk1",
    "to_port": "MIDI IN",
    "medium": "midi",
@@ -6866,13 +6967,13 @@
   {
    "from": "midi-thru5",
    "from_port": "MIDI Out 1",
-   "to": "korg-m1",
-   "to_port": "MIDI In",
+   "to": "emu-proteus-mps",
+   "to_port": "MIDI IN",
    "medium": "midi",
    "bidirectional": false,
    "confirmed": true,
    "swappable": true,
-   "note": ""
+   "note": "Takes the Korg M1's Thru5 output (and, by the swap rule, the M1's interface input). The Proteus's own MIDI IN/OUT are recorded on the UMC404HD in the umc404hd-rig setup; it is one cable set or the other."
   },
   {
    "from": "midi-thru5",
@@ -7074,6 +7175,7 @@
   "The RD-9 is the master clock.",
   "The Mac receives MIDI through the UMC1820 MIDI IN (fed by a Thru5 output, i.e. the Digitakt's MIDI OUT stream). Nothing sends MIDI from the Mac to the gear. Replaces the 2026-09-20 statement 'Nothing sends MIDI back to the Mac.'",
   "Default UMC1820 inputs: 1 RD-9, 2 open, 3/4 Analog Four, 5/6 Eurorack, 7/8 Digitakt. Everything runs straight into the interface; main outs are used on everything, with TS or TRS cables as needed.",
+  "The E-mu Proteus MPS is swapped in for the Korg M1 for now (owner). The M1 is out of the chain until it is swapped back.",
   "Gear not in that default list (for example the Korg M1, Dreadbox Typhon, Behringer K2, Donner B1) is swapped in and out as needed. Where its audio goes when in use is not yet stated.",
   "Swap rule: gear swapped in takes the UMC1820 input(s) of the gear it replaces. MIDI does not follow the slot: each instrument keeps its own home channel (midi_channels.yaml), and the trigger source is re-pointed instead.",
   "The Analog Four's CV OUTPUTS A-D are sometimes used as CV tracks into the Eurorack. Which module inputs is not yet stated.",

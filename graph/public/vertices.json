@@ -3320,6 +3320,14 @@
   "visibility": "public"
  },
  {
+  "id": "fn:tools/midi_reference.py:controllers",
+  "name": "controllers",
+  "role": "python",
+  "type": "function",
+  "value": 59,
+  "visibility": "public"
+ },
+ {
   "id": "fn:tools/midi_reference.py:markdown",
   "name": "markdown",
   "role": "python",
@@ -3332,7 +3340,7 @@
   "name": "_app_of",
   "role": "python",
   "type": "function",
-  "value": 345,
+  "value": 349,
   "visibility": "public"
  },
  {
@@ -3340,7 +3348,7 @@
   "name": "_code_edges",
   "role": "python",
   "type": "function",
-  "value": 265,
+  "value": 269,
   "visibility": "public"
  },
  {
@@ -3348,7 +3356,7 @@
   "name": "_dominant",
   "role": "python",
   "type": "function",
-  "value": 133,
+  "value": 137,
   "visibility": "public"
  },
  {
@@ -3356,7 +3364,7 @@
   "name": "_family",
   "role": "python",
   "type": "function",
-  "value": 334,
+  "value": 338,
   "visibility": "public"
  },
  {
@@ -3364,7 +3372,7 @@
   "name": "_raw_app_of",
   "role": "python",
   "type": "function",
-  "value": 413,
+  "value": 417,
   "visibility": "public"
  },
  {
@@ -3372,7 +3380,7 @@
   "name": "_raw_context",
   "role": "python",
   "type": "function",
-  "value": 396,
+  "value": 400,
   "visibility": "public"
  },
  {
@@ -3380,7 +3388,7 @@
   "name": "_raw_family",
   "role": "python",
   "type": "function",
-  "value": 403,
+  "value": 407,
   "visibility": "public"
  },
  {
@@ -3396,7 +3404,7 @@
   "name": "concept_where",
   "role": "python",
   "type": "function",
-  "value": 351,
+  "value": 355,
   "visibility": "public"
  },
  {
@@ -3404,7 +3412,7 @@
   "name": "cross_concept_where",
   "role": "python",
   "type": "function",
-  "value": 418,
+  "value": 422,
   "visibility": "public"
  },
  {
@@ -3412,7 +3420,7 @@
   "name": "cross_inherits",
   "role": "python",
   "type": "function",
-  "value": 176,
+  "value": 180,
   "visibility": "public"
  },
  {
@@ -3420,7 +3428,7 @@
   "name": "cross_kb_reach",
   "role": "python",
   "type": "function",
-  "value": 316,
+  "value": 320,
   "visibility": "public"
  },
  {
@@ -3428,7 +3436,7 @@
   "name": "cross_midi_conflicts",
   "role": "python",
   "type": "function",
-  "value": 219,
+  "value": 223,
   "visibility": "public"
  },
  {
@@ -3436,7 +3444,7 @@
   "name": "cross_naming",
   "role": "python",
   "type": "function",
-  "value": 167,
+  "value": 171,
   "visibility": "public"
  },
  {
@@ -3444,7 +3452,7 @@
   "name": "cross_source_support",
   "role": "python",
   "type": "function",
-  "value": 201,
+  "value": 205,
   "visibility": "public"
  },
  {
@@ -3452,7 +3460,7 @@
   "name": "cross_term_gaps",
   "role": "python",
   "type": "function",
-  "value": 455,
+  "value": 459,
   "visibility": "public"
  },
  {
@@ -3460,7 +3468,7 @@
   "name": "cross_undocumented",
   "role": "python",
   "type": "function",
-  "value": 304,
+  "value": 308,
   "visibility": "public"
  },
  {
@@ -3468,7 +3476,7 @@
   "name": "cross_unrecorded",
   "role": "python",
   "type": "function",
-  "value": 246,
+  "value": 250,
   "visibility": "public"
  },
  {
@@ -3476,7 +3484,7 @@
   "name": "cross_vocabulary",
   "role": "python",
   "type": "function",
-  "value": 434,
+  "value": 438,
   "visibility": "public"
  },
  {
@@ -3484,7 +3492,7 @@
   "name": "doc_impact",
   "role": "python",
   "type": "function",
-  "value": 276,
+  "value": 280,
   "visibility": "public"
  },
  {
@@ -3500,7 +3508,7 @@
   "name": "inherits",
   "role": "python",
   "type": "function",
-  "value": 147,
+  "value": 151,
   "visibility": "public"
  },
  {
@@ -3508,7 +3516,7 @@
   "name": "kb_reach",
   "role": "python",
   "type": "function",
-  "value": 290,
+  "value": 294,
   "visibility": "public"
  },
  {
@@ -3524,7 +3532,7 @@
   "name": "main",
   "role": "python",
   "type": "function",
-  "value": 464,
+  "value": 468,
   "visibility": "public"
  },
  {
@@ -3532,7 +3540,7 @@
   "name": "midi_conflicts",
   "role": "python",
   "type": "function",
-  "value": 83,
+  "value": 87,
   "visibility": "public"
  },
  {
@@ -3540,7 +3548,7 @@
   "name": "naming",
   "role": "python",
   "type": "function",
-  "value": 122,
+  "value": 126,
   "visibility": "public"
  },
  {
@@ -3548,7 +3556,7 @@
   "name": "reach",
   "role": "python",
   "type": "function",
-  "value": 58,
+  "value": 59,
   "visibility": "public"
  },
  {
@@ -3564,7 +3572,7 @@
   "name": "source_support",
   "role": "python",
   "type": "function",
-  "value": 67,
+  "value": 71,
   "visibility": "public"
  },
  {
@@ -3572,7 +3580,7 @@
   "name": "term_gaps",
   "role": "python",
   "type": "function",
-  "value": 386,
+  "value": 390,
   "visibility": "public"
  },
  {
@@ -3580,7 +3588,7 @@
   "name": "undocumented",
   "role": "python",
   "type": "function",
-  "value": 269,
+  "value": 273,
   "visibility": "public"
  },
  {
@@ -3588,7 +3596,7 @@
   "name": "unrecorded",
   "role": "python",
   "type": "function",
-  "value": 109,
+  "value": 113,
   "visibility": "public"
  },
  {
@@ -3596,7 +3604,7 @@
   "name": "vocabulary",
   "role": "python",
   "type": "function",
-  "value": 367,
+  "value": 371,
   "visibility": "public"
  },
  {
@@ -3668,7 +3676,7 @@
   "name": "main",
   "role": "python",
   "type": "function",
-  "value": 28,
+  "value": 32,
   "visibility": "public"
  },
  {
@@ -3676,7 +3684,7 @@
   "name": "norm",
   "role": "python",
   "type": "function",
-  "value": 24,
+  "value": 28,
   "visibility": "public"
  },
  {
@@ -4136,6 +4144,19 @@
   "visibility": "public"
  },
  {
+  "category": "controller",
+  "id": "item:behringer-fcb1010",
+  "in_use": true,
+  "manufacturer": "Behringer",
+  "midi_confirmed": "2026-10-10",
+  "midi_out_ch": "15",
+  "midi_status": "confirmed",
+  "name": "Behringer FCB1010",
+  "status": "owned",
+  "type": "item",
+  "visibility": "public"
+ },
+ {
   "category": "eurorack-module",
   "id": "item:behringer-four-play-vca",
   "in_use": true,
@@ -4415,6 +4436,10 @@
   "id": "item:emu-proteus-mps",
   "in_use": true,
   "manufacturer": "E-mu Systems",
+  "midi_confirmed": "2026-10-10",
+  "midi_in_ch": "12",
+  "midi_out_ch": "12",
+  "midi_status": "confirmed",
   "name": "E-mu Proteus MPS",
   "status": "owned",
   "type": "item",
@@ -4940,6 +4965,14 @@
   "name": "Digital Delay DD400 Manual",
   "type": "manual",
   "version": "undated",
+  "visibility": "public"
+ },
+ {
+  "doc_type": "user-manual",
+  "id": "manual:behringer-fcb1010-manual",
+  "name": "MIDI Foot Controller FCB1010 User Manual",
+  "type": "manual",
+  "version": "English, 2013 InDesign build (PDF created 2013-03-12)",
   "visibility": "public"
  },
  {

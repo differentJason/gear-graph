@@ -25,7 +25,7 @@
 #                   # Only FIXED facts are recorded (case, supply, row). Patch cables between modules change every session and are not recorded.
 
 schema_version: 1
-updated: 2026-09-30
+updated: 2026-10-10
 
 setups:
   - {id: main-studio, name: Main studio, interface: behringer-umc1820, status: confirmed, confirmed: 2026-09-20,
@@ -65,15 +65,23 @@ links:
   # MIDI chain revised by the owner 2026-09-23: RD-9 -> Digitakt -> Thru5, Analog Four moved to the Digitakt's THRU,
   # freed Thru5 output feeds the UMC1820's MIDI IN (to Logic over the existing USB link). Replaces the 2026-09-20
   # RD-9 -> Thru5 fan-out, in which the Digitakt and Analog Four were on Thru5 outputs.
-  - {setup: main-studio, from: behringer-rd-9, from_port: "MIDI OUT", to: elektron-digitakt-mk1, to_port: "MIDI IN", medium: midi,
-     status: confirmed, confirmed: 2026-09-23}
+  # FCB1010 inserted 2026-10-10 (owner chose "merge before Digitakt"): RD-9 -> FCB1010 (MERGE) -> Digitakt. Replaces the
+  # 2026-09-23 RD-9 MIDI OUT -> Digitakt MIDI IN cable. The FCB1010 adds its program changes (pattern select) and
+  # expression-pedal CCs to the RD-9's clock/transport/ch 10 stream; the Digitakt THRU still hands all of it to the A4.
+  - {setup: main-studio, from: behringer-rd-9, from_port: "MIDI OUT", to: behringer-fcb1010, to_port: "MIDI IN", medium: midi,
+     status: confirmed, confirmed: 2026-10-10,
+     note: "Merge must be on in the FCB1010 (EurekaPROM FAQ: MIDI thru is supported in the PP configuration). Whether MIDI clock passes through the EurekaPROM's merge cleanly is NOT verified: check the Digitakt/A4 still follow the RD-9's tempo before relying on it."}
+  - {setup: main-studio, from: behringer-fcb1010, from_port: "MIDI OUT/THRU", to: elektron-digitakt-mk1, to_port: "MIDI IN", medium: midi,
+     status: confirmed, confirmed: 2026-10-10}
   - {setup: main-studio, from: elektron-digitakt-mk1, from_port: "MIDI OUT/SYNC A", to: midi-thru5, medium: midi,
      status: confirmed, confirmed: 2026-09-23,
      note: "OUT, not THRU: the Thru5 gets the Digitakt's own clock/transport (following the RD-9) plus its MIDI tracks. The RD-9's ch 10 notes stop at the Digitakt."}
   - {setup: main-studio, from: elektron-digitakt-mk1, from_port: "MIDI THRU/SYNC B", to: elektron-analog-four, medium: midi,
      status: confirmed, confirmed: 2026-09-23,
      note: "THRU forwards the RD-9's stream unchanged (clock, transport, ch 10 notes), so the Analog Four is clocked by the RD-9 one hop earlier than the Thru5 synths."}
-  - {setup: main-studio, from: midi-thru5, to: korg-m1, medium: midi, status: confirmed, confirmed: 2026-09-20, swappable: true}
+  # Korg M1 swapped out for the E-mu Proteus MPS "for now" (owner, 2026-10-10). The M1 keeps home channel 3 for when it returns.
+  - {setup: main-studio, from: midi-thru5, to: emu-proteus-mps, to_port: "MIDI IN", medium: midi, status: confirmed, confirmed: 2026-10-10, swappable: true,
+     note: "Takes the Korg M1's Thru5 output (and, by the swap rule, the M1's interface input). The Proteus's own MIDI IN/OUT are recorded on the UMC404HD in the umc404hd-rig setup; it is one cable set or the other."}
   - {setup: main-studio, from: midi-thru5, to: dreadbox-typhon, medium: midi, status: confirmed, confirmed: 2026-09-20, swappable: true}
   - {setup: main-studio, from: midi-thru5, to: behringer-k2, medium: midi, status: confirmed, confirmed: 2026-09-20, swappable: true,
      note: "Shares one Thru5 output with the Donner B1: one or the other."}
@@ -93,6 +101,7 @@ open_statements:
   - {setup: main-studio, confirmed: 2026-09-20, statement: "The RD-9 is the master clock."}
   - {setup: main-studio, confirmed: 2026-09-23, statement: "The Mac receives MIDI through the UMC1820 MIDI IN (fed by a Thru5 output, i.e. the Digitakt's MIDI OUT stream). Nothing sends MIDI from the Mac to the gear. Replaces the 2026-09-20 statement 'Nothing sends MIDI back to the Mac.'"}
   - {setup: main-studio, confirmed: 2026-09-20, statement: "Default UMC1820 inputs: 1 RD-9, 2 open, 3/4 Analog Four, 5/6 Eurorack, 7/8 Digitakt. Everything runs straight into the interface; main outs are used on everything, with TS or TRS cables as needed."}
+  - {setup: main-studio, confirmed: 2026-10-10, statement: "The E-mu Proteus MPS is swapped in for the Korg M1 for now (owner). The M1 is out of the chain until it is swapped back."}
   - {setup: main-studio, confirmed: 2026-09-20, statement: "Gear not in that default list (for example the Korg M1, Dreadbox Typhon, Behringer K2, Donner B1) is swapped in and out as needed. Where its audio goes when in use is not yet stated."}
   - {setup: main-studio, confirmed: 2026-09-23, statement: "Swap rule: gear swapped in takes the UMC1820 input(s) of the gear it replaces. MIDI does not follow the slot: each instrument keeps its own home channel (midi_channels.yaml), and the trigger source is re-pointed instead."}
   - {setup: main-studio, confirmed: 2026-09-20, statement: "The Analog Four's CV OUTPUTS A-D are sometimes used as CV tracks into the Eurorack. Which module inputs is not yet stated."}
