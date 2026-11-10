@@ -25,13 +25,15 @@
 #                   # Only FIXED facts are recorded (case, supply, row). Patch cables between modules change every session and are not recorded.
 
 schema_version: 1
-updated: 2026-10-10
+updated: 2026-11-10
 
 setups:
   - {id: main-studio, name: Main studio, interface: behringer-umc1820, status: confirmed, confirmed: 2026-09-20,
      note: "Recorded first. The alternate jam-location setup (UMC404HD) is a later pass."}
   - {id: umc404hd-rig, name: UMC404HD rig (Linux workstation), interface: behringer-umc404hd, status: confirmed, confirmed: 2026-09-30,
      note: "Started 2026-09-30 when the owner wired the new Proteus MPS's MIDI to the UMC404HD. Whether this is the same as the alternate jam-location setup has not been stated; only its MIDI/USB links are recorded so far."}
+  - {id: main-studio-overbridge, name: Main studio (Digitakt over Overbridge), interface: behringer-umc1820, status: confirmed, confirmed: 2026-11-10,
+     note: "Alternate routing of the main studio, stated by the owner 2026-11-10 for a Logic Pro template: the Digitakt's audio goes to the Mac over USB (Overbridge, all tracks), which frees UMC1820 Inputs 7/8. Only the audio/USB links the owner stated are recorded here; whether the MIDI, clock and Eurorack cables are the same as main-studio has not been stated."}
 
 links:
   # --- computer ---
@@ -47,6 +49,21 @@ links:
      status: confirmed, confirmed: 2026-09-20, note: "The owner: all Eurorack signals end up in the Intellijel outs, which send L and R balanced TRS to the interface."}
   - {setup: main-studio, from: elektron-digitakt-mk1, from_port: "main out (L/R)", to: behringer-umc1820, to_port: "Input 7/8", medium: audio,
      status: confirmed, confirmed: 2026-09-20, note: "Port name is the owner's wording ('main out'); the Digitakt manual is not ingested to check it."}
+
+  # --- main-studio-overbridge (2026-11-10): the owner, "I want my Digitakt to use audio over USB and overbridge tracks for all
+  #     channels. Audio tracks are 1-8: RD-9, Open, Analog Four L, Analog Four R, Keys Left, Keys Right, Eurorack Left Eurorack right."
+  #     Input 2 is open. Inputs 5/6 carry "Keys": which keyboard is not stated, so it is an open statement, not a link. ---
+  - {setup: main-studio-overbridge, from: behringer-umc1820, to: mac-mini-m4, medium: usb, bidirectional: true,
+     status: confirmed, confirmed: 2026-11-10, note: "Logic Pro on the Mac Mini M4 records Inputs 1-8. Ports not named."}
+  - {setup: main-studio-overbridge, from: elektron-digitakt-mk1, from_port: "USB", to: mac-mini-m4, medium: usb, bidirectional: true,
+     status: confirmed, confirmed: 2026-11-10,
+     note: "Overbridge: the Digitakt streams its 8 tracks, main L/R and input L/R to Logic over USB (12 inputs, seen by macOS as the 'Digitakt' audio device on 2026-11-10). Replaces its Input 7/8 cable in main-studio."}
+  - {setup: main-studio-overbridge, from: behringer-rd-9, from_port: "MONO", to: behringer-umc1820, to_port: "Input 1", medium: audio,
+     status: confirmed, confirmed: 2026-11-10}
+  - {setup: main-studio-overbridge, from: elektron-analog-four, from_port: "MAIN OUT L/R", to: behringer-umc1820, to_port: "Input 3/4", medium: audio,
+     status: confirmed, confirmed: 2026-11-10}
+  - {setup: main-studio-overbridge, from: intellijel-audio-stereo-line-out-jacks-1u, from_port: "L/R (balanced TRS)", to: behringer-umc1820, to_port: "Input 7/8", medium: audio,
+     status: confirmed, confirmed: 2026-11-10, note: "Moved from Input 5/6 (main-studio) to Input 7/8."}
 
   # --- UMC404HD rig (2026-09-30): the owner, "I have it attached midi in and out thru the UMC404HD which is attached via USB currently" ---
   - {setup: umc404hd-rig, from: behringer-umc404hd, to: linux-workstation, medium: usb, bidirectional: true,
@@ -98,6 +115,7 @@ links:
 # Statements by the owner that are not yet tied to a specific cable. Kept so they are not lost, and so nothing is inferred:
 # turning them into links needs both ends and the ports.
 open_statements:
+  - {setup: main-studio-overbridge, confirmed: 2026-11-10, statement: "UMC1820 inputs in this setup: 1 RD-9, 2 open, 3/4 Analog Four L/R, 5/6 Keys L/R, 7/8 Eurorack L/R; the Digitakt is on USB (Overbridge). Which keyboard 'Keys' means is not stated, so no Input 5/6 link is recorded."}
   - {setup: main-studio, confirmed: 2026-09-20, statement: "The RD-9 is the master clock."}
   - {setup: main-studio, confirmed: 2026-09-23, statement: "The Mac receives MIDI through the UMC1820 MIDI IN (fed by a Thru5 output, i.e. the Digitakt's MIDI OUT stream). Nothing sends MIDI from the Mac to the gear. Replaces the 2026-09-20 statement 'Nothing sends MIDI back to the Mac.'"}
   - {setup: main-studio, confirmed: 2026-09-20, statement: "Default UMC1820 inputs: 1 RD-9, 2 open, 3/4 Analog Four, 5/6 Eurorack, 7/8 Digitakt. Everything runs straight into the interface; main outs are used on everything, with TS or TRS cables as needed."}
