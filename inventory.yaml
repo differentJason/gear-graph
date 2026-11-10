@@ -5,7 +5,7 @@
 #         assumed    = carried over from the Feb 2025 list and not re-confirmed
 # in_use: false marks gear the owner lists as UNUSED. question: an open question shown on the Inventory page.
 # slice: true => gets a device page and a manual in this first slice (studio signal chain).
-updated: 2026-10-10
+updated: 2026-11-10
 
 items:
   # --- computers & software ---
@@ -17,6 +17,8 @@ items:
   # --- interface & monitoring ---
   - {id: behringer-umc404hd, name: Behringer U-PHORIA UMC404HD, manufacturer: Behringer, model: UMC404HD, category: audio-interface, status: owned, slice: true, role: "Alternate interface for another jamming location."}
   - {id: behringer-umc1820, slice: true, name: Behringer UMC1820, manufacturer: Behringer, model: UMC1820, category: audio-interface, status: owned, role: "Main interface."}
+  - {id: line-mixer-4ch, name: 4-channel line mixer, category: mixer, status: owned,
+     note: "Added 2026-11-10 from the owner's routing answer: the E-mu Proteus MPS and Korg M1 go through it into UMC1820 Input 5/6 (setup main-studio-overbridge). Make and model not stated."}
   - {id: yamaha-hs4, slice: true, name: Yamaha HS4 (pair), manufacturer: Yamaha, model: HS4, category: monitors, status: owned}
   - {id: akg-open-back-headphones, name: AKG open-back headphones, manufacturer: AKG, category: headphones, status: owned, note: "Model not specified."}
 
